@@ -9,7 +9,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 
 - **Vertical pressing:** overhead pressing, which loads the front delts alongside the triceps and upper chest.
 - **Abduction work:** raising the arm out to the side; the direct route to the side delts.
-- **Rear-delt work:** horizontal abduction and external rotation patterns that most pressing does not cover.
+- **Rear-delt work:** horizontal abduction, rowing, and external rotation patterns that most pressing does not cover.
 - **Rotator-cuff and control work:** light, controlled shoulder rotation. This is training, not treatment — symptoms need professional assessment.
 - **Scapular work:** serratus-focused movement that helps the shoulder blade travel well around the rib cage.
 
@@ -72,7 +72,31 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A routine has more pressing than pulling, or a user wants shoulder shape from the side and back.
 - **Less suitable when:** The elbows bend enough that the movement turns into a row.
 - **Complements:** Horizontal pulling and side-delt work.
-- **Overlaps:** Face pulls and rear-delt rows.
+- **Overlaps:** Face pulls, cable rear-delt rows, and single-arm rotational rear-delt rows.
+- **Status:** Draft.
+
+### Cable Rear-Delt Row
+
+- **Why this exists:** Driving the elbows up and wide instead of keeping them at the sides shifts a row's emphasis from the lats toward the rear delts and mid-traps, and lets rear-delt work be loaded like a row rather than a fly.
+- **Primary targets:** Posterior deltoids; mid-back and mid-trapezius contribute.
+- **Movement:** Shoulder horizontal abduction combined with elbow flexion.
+- **Coverage:** Isolation-oriented, bilateral, moderate setup.
+- **Best used when:** A user wants rear-delt work with more loadable progression than a fly typically allows.
+- **Less suitable when:** The elbows drop and stay close to the torso, which turns the movement into an ordinary seated row and shifts the emphasis back to the lats.
+- **Complements:** A rear-delt fly and a face pull, which cover a stretched isolation position and a rotation component the row does not.
+- **Overlaps:** Rear-delt fly, face pull, and seated cable row; distinguish by elbow height and path.
+- **Status:** Draft.
+
+### Single-Arm Rotational Rear-Delt Row
+
+- **Why this exists:** Pulling one arm into extension while the trunk counter-rotates lets the rear delt work through a longer, more natural range than a bilateral row against a fixed torso.
+- **Primary targets:** Posterior deltoids; mid-back and external rotators contribute.
+- **Movement:** Shoulder extension and horizontal abduction with trunk rotation.
+- **Coverage:** Unilateral, moderate-to-high skill demand, moderate setup on a low cable or plate-loaded arm.
+- **Best used when:** A user wants a rear-delt row with more range and rotation than the bilateral cable version, or wants to train each side independently.
+- **Less suitable when:** Trunk rotation replaces shoulder movement as the source of the range, or session time is short — unilateral work roughly doubles the sets.
+- **Complements:** A bilateral rear-delt row or fly.
+- **Overlaps:** Cable rear-delt row and face pull.
 - **Status:** Draft.
 
 ### Face Pull
@@ -84,7 +108,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A user wants rear-delt and shoulder-control work in a single low-cost movement.
 - **Less suitable when:** Load is heavy enough that the rotation is lost, or no cable or band is available.
 - **Complements:** Pressing work.
-- **Overlaps:** Rear-delt flies and external-rotation work.
+- **Overlaps:** Rear-delt flies, cable rear-delt rows, and external-rotation work.
 - **Status:** Draft.
 
 ### Cable or Band External Rotation
