@@ -37,7 +37,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Best used when:** A user wants one movement covering the back of the hips and legs, and can hold position under load.
 - **Less suitable when:** Lower-back fatigue is already high, or grip limits the working sets before the hips do.
 - **Complements:** A shortened-position movement such as the hip thrust.
-- **Overlaps:** Good mornings, 45° back extensions, and other hinge patterns; also recorded in the hamstrings module.
+- **Overlaps:** Good mornings, 45° back extensions, and other hinge patterns; also recorded in the hamstrings module. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
 - **Status:** Draft.
 
 ### Bulgarian Split Squat

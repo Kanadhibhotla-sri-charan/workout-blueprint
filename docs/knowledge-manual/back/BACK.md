@@ -12,6 +12,7 @@ The back module is organized around pulling directions and support roles, not a 
 - **Lat-focused single-joint work:** shoulder extension with a mostly straight elbow, useful when elbow flexors limit rowing and pulldown work.
 - **Upper-trap loading:** shrug-style work for users who want direct upper-trap volume.
 - **Spinal support work:** hip-hinge and extension patterns that load the spinal erectors under control.
+- **Maximal hip-hinge pulling:** loading the whole posterior chain from a dead stop on the floor, distinct from a hinge that starts from the top.
 
 ## Draft records
 
@@ -49,6 +50,54 @@ The back module is organized around pulling directions and support roles, not a 
 - **Less suitable when:** The bench or machine does not fit the user's torso length, or no supported option is available.
 - **Complements:** A vertical pull; a free-standing row only if it fills a different role.
 - **Overlaps:** Other rowing variations.
+- **Status:** Draft.
+
+### Barbell Bent-Over Row
+
+- **Why this exists:** The reference free-weight horizontal pull, loadable with small increments and useful when a user wants one row that also demands trunk and hip control.
+- **Primary targets:** Mid-back, lats, and rhomboids; spinal erectors and elbow flexors contribute.
+- **Movement:** Horizontal pull.
+- **Coverage:** Heavy compound, high stability and skill demand, high fatigue cost.
+- **Best used when:** A user wants a heavy, progressable row and can hold a hinged position under load.
+- **Less suitable when:** Lower-back fatigue is already high, or hinge technique is not yet reliable enough to load heavily.
+- **Complements:** A supported row or vertical pull that does not add further spinal loading.
+- **Overlaps:** T-bar row and other free-standing horizontal pulls.
+- **Status:** Draft.
+
+### Seated Cable Row
+
+- **Why this exists:** A horizontal pull with the trunk supported by the seated position, so effort goes into the pull rather than into holding a hinge.
+- **Primary targets:** Mid-back, rhomboids, and lats; elbow flexors contribute.
+- **Movement:** Horizontal pull.
+- **Coverage:** Stable compound, low-to-moderate setup, small load increments.
+- **Best used when:** A user wants a row without loading the lower back, or wants precise load control.
+- **Less suitable when:** No cable station is available, or the seat and chest pad do not fit the user's build.
+- **Complements:** A vertical pull and a free-standing row selected for a distinct role.
+- **Overlaps:** Chest-supported row and other machine rows.
+- **Status:** Draft.
+
+### T-Bar Row
+
+- **Why this exists:** A free-standing row with a fixed, close, mostly neutral grip, which changes the pull's path and torso demand from a barbell row.
+- **Primary targets:** Mid-back and lats; spinal erectors and elbow flexors contribute.
+- **Movement:** Horizontal pull.
+- **Coverage:** Heavy compound, moderate-to-high stability demand, moderate setup.
+- **Best used when:** A user wants a heavy row with a fixed bar path, or prefers a neutral grip over a barbell row's pronated grip.
+- **Less suitable when:** No landmine or T-bar setup is available, or the fixed handle position does not suit the individual.
+- **Complements:** A supported row or vertical pull.
+- **Overlaps:** Barbell bent-over row and chest-supported row.
+- **Status:** Draft.
+
+### Conventional Deadlift
+
+- **Why this exists:** Loads the entire posterior chain from a dead stop on the floor, which distinguishes it from hinges such as the Romanian deadlift that start from the top and never fully unload.
+- **Primary targets:** Spinal erectors, glutes, and hamstrings; lats, traps, and grip contribute to holding the position and the bar.
+- **Movement:** Hip hinge.
+- **Coverage:** Heavy compound, high skill and stability demand, very high fatigue cost.
+- **Best used when:** A user wants maximal posterior-chain strength and can recover from the systemic cost of the movement.
+- **Less suitable when:** Recovery is limited, technique is still developing, or a user wants posterior-chain work without the fatigue a floor pull brings.
+- **Complements:** A single-joint hamstring or glute movement that adds volume without the same systemic cost.
+- **Overlaps:** Romanian deadlift, recorded in the hips and hamstrings modules; both are hip hinges but start from a different position and load the range differently.
 - **Status:** Draft.
 
 ### Single-Arm Dumbbell Row

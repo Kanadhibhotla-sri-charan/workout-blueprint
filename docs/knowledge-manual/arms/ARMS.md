@@ -13,6 +13,8 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Neutral and pronated flexion:** grip positions that shift more work onto the brachialis and brachioradialis.
 - **Elbow extension, compound:** pressing patterns that load the triceps under heavy loads.
 - **Elbow extension, overhead and lengthened:** positions that load the triceps with the shoulder flexed.
+- **Elbow extension, lying and lengthened:** a free-weight lengthened position with the shoulder at roughly 90 degrees, distinct from the overhead position.
+- **Elbow extension, bodyweight compound:** a dip performed with an upright torso, which biases the triceps rather than the lower chest.
 - **Elbow extension, low fatigue:** cable work that adds triceps volume cheaply.
 
 ## Draft records
@@ -87,6 +89,30 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Less suitable when:** The overhead position is uncomfortable, or elbow tolerance is limiting.
 - **Complements:** A pressing movement or a pushdown.
 - **Overlaps:** Other overhead extension variations with dumbbell, cable, or rope.
+- **Status:** Draft.
+
+### Lying Triceps Extension (Skull Crusher)
+
+- **Why this exists:** Loads the triceps in a lengthened position with the shoulder at roughly 90 degrees, a different joint angle from the overhead extension.
+- **Primary targets:** Triceps.
+- **Movement:** Elbow extension.
+- **Coverage:** Isolation, lengthened-position emphasis, moderate skill demand.
+- **Best used when:** A user wants a free-weight lengthened-position option without the overhead shoulder position.
+- **Less suitable when:** Elbow tolerance is limiting, or bar path control near the head is a concern.
+- **Complements:** A pressing movement or a pushdown.
+- **Overlaps:** Overhead triceps extension; distinguish by shoulder position.
+- **Status:** Draft.
+
+### Dip (Triceps-Biased, Upright Torso)
+
+- **Why this exists:** With the torso kept upright, a dip shifts emphasis toward the triceps rather than the lower chest, letting one piece of equipment serve two different roles depending on execution.
+- **Primary targets:** Triceps; anterior deltoids contribute.
+- **Movement:** Elbow extension within a vertical-to-horizontal press.
+- **Coverage:** Heavy-for-bodyweight compound, high stability demand.
+- **Best used when:** Dip bars are available and a user wants triceps work that also loads them under a real compound movement.
+- **Less suitable when:** Shoulder tolerance limits a deep dip, or bodyweight is too heavy a starting load.
+- **Complements:** A pressing movement or a pushdown.
+- **Overlaps:** The chest-biased dip recorded in the chest module; torso angle is what separates the two.
 - **Status:** Draft.
 
 ### Cable Pushdown

@@ -11,6 +11,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Horizontal pressing:** general chest pressing with substantial triceps and anterior-deltoid contribution.
 - **Fly / adduction work:** an option that can be useful when a user wants lower-load, single-joint-style chest work.
 - **Lengthened and shortened context:** labels that describe where an exercise tends to feel most challenging, not a guarantee of a specific adaptation.
+- **Lower-chest dip pressing:** a forward-leaning dip that biases the lower chest more than flat or incline pressing.
 
 ## Draft records
 
@@ -38,6 +39,18 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Overlaps:** Incline dumbbell, barbell, and Smith presses.
 - **Status:** Draft.
 
+### Flat Barbell Bench Press
+
+- **Why this exists:** The reference horizontal chest press, loadable with small increments and the most common way to build and track chest pressing strength.
+- **Primary targets:** Chest; anterior deltoids and triceps contribute.
+- **Movement:** Horizontal press.
+- **Coverage:** Heavy compound, moderate stability demand, moderate setup.
+- **Best used when:** A user wants a progressable, heavily loadable chest press and has a bar and rack or a spotter.
+- **Less suitable when:** No rack or spotter is available at the loads a user wants to use, or shoulder tolerance favors a dumbbell path.
+- **Complements:** A fly variation or an incline press selected for a distinct role.
+- **Overlaps:** Flat dumbbell press and machine chest press.
+- **Status:** Draft.
+
 ### Flat Dumbbell Press
 
 - **Why this exists:** A general horizontal chest press with independently moving arms.
@@ -60,6 +73,18 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Less suitable when:** Cable access, setup, or shoulder comfort is limiting.
 - **Complements:** A pressing movement.
 - **Overlaps:** Other fly variations; distinguish by cable path and practical setup.
+- **Status:** Draft.
+
+### Dip (Chest-Biased, Forward Lean)
+
+- **Why this exists:** A bodyweight press that, with a forward torso lean, biases the lower chest more than flat or incline pressing does.
+- **Primary targets:** Lower chest; triceps and anterior deltoids contribute.
+- **Movement:** Horizontal-to-vertical press.
+- **Coverage:** Heavy-for-bodyweight compound, high stability and shoulder-mobility demand.
+- **Best used when:** Dip bars are available and a user wants the lower-chest role that flat and incline pressing do not directly cover.
+- **Less suitable when:** Shoulder range or tolerance limits a deep dip, or bodyweight is too heavy a starting load — an assisted-dip machine or band may fit better.
+- **Complements:** An incline press, which covers the opposite end of the chest.
+- **Overlaps:** The triceps-biased dip recorded in the arms module; torso angle is what separates the two.
 - **Status:** Draft.
 
 ### Push-Up

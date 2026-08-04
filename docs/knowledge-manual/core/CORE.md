@@ -12,6 +12,7 @@ Core work splits into moving the trunk and resisting it being moved. Most routin
 - **Anti-extension:** resisting the lower back arching under load.
 - **Anti-rotation:** resisting the trunk being twisted.
 - **Anti-lateral flexion:** resisting the trunk being pulled sideways.
+- **Rotation:** rotating the trunk against resistance, rather than resisting rotation.
 
 ## Draft records
 
@@ -85,6 +86,18 @@ Core work splits into moving the trunk and resisting it being moved. Most routin
 - **Less suitable when:** Space is limited, or grip fails long before the trunk does.
 - **Complements:** Anti-rotation and trunk-flexion work.
 - **Overlaps:** Side planks and farmer's carries.
+- **Status:** Draft.
+
+### Cable Woodchop
+
+- **Why this exists:** Trains trunk rotation through a range, the opposite job from the anti-rotation work above.
+- **Primary targets:** Obliques; rectus abdominis and hip musculature contribute.
+- **Movement:** Trunk rotation.
+- **Coverage:** Isolation-oriented, low fatigue cost, moderate setup with a cable.
+- **Best used when:** A user wants rotational trunk strength for sport or general capacity, alongside anti-rotation work rather than instead of it.
+- **Less suitable when:** No cable is available, or the movement is driven by the arms rather than the trunk.
+- **Complements:** The Pallof press and other anti-rotation work.
+- **Overlaps:** Russian twist and other loaded-rotation variations.
 - **Status:** Draft.
 
 ## Review checklist

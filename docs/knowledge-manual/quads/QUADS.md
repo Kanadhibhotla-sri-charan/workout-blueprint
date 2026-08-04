@@ -12,6 +12,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Unilateral knee-dominant work:** one leg at a time, at a fraction of the absolute load.
 - **Knee extension only:** single-joint work that removes the hip from the movement.
 - **Lengthened rectus femoris work:** positions where the hip is extended while the knee bends.
+- **Upright-torso squatting:** a bar or load position that keeps the torso more vertical and shifts more of the demand onto the quads.
+- **Low-equipment squatting:** an accessible squat pattern that scales with load, similar in role to the push-up in the chest module.
 
 ## Draft records
 
@@ -25,6 +27,18 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Less suitable when:** Recovery is limited, technique is still developing, or a user wants quad work without whole-body fatigue.
 - **Complements:** A single-joint knee-extension movement, or a stable machine pattern.
 - **Overlaps:** Front squats, hack squats, and leg presses.
+- **Status:** Draft.
+
+### Front Squat
+
+- **Why this exists:** The front-loaded bar position keeps the torso more upright than a back squat, which shifts more of the demand onto the quads and changes the technical and mobility requirements.
+- **Primary targets:** Quads; glutes and trunk musculature contribute.
+- **Movement:** Squat / knee-dominant.
+- **Coverage:** Heavy compound, high skill and mobility demand, high fatigue cost.
+- **Best used when:** A user wants a more quad-biased barbell squat, or a more upright torso suits their leverages or goals better than a back squat.
+- **Less suitable when:** Wrist or shoulder mobility cannot support the rack position, or recovery is already limited by other squatting.
+- **Complements:** A hinge pattern or a single-joint knee-extension movement.
+- **Overlaps:** Back squat and hack squat.
 - **Status:** Draft.
 
 ### Hack Squat
@@ -61,6 +75,18 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Less suitable when:** Balance limits the set before the legs do, or session time is short.
 - **Complements:** A bilateral squat or press.
 - **Overlaps:** Lunges, step-ups, and split squats; also recorded in the hips module.
+- **Status:** Draft.
+
+### Goblet Squat
+
+- **Why this exists:** An accessible squat pattern that needs only a single dumbbell or kettlebell, useful as a first loaded squat or for training at home.
+- **Primary targets:** Quads; glutes and trunk musculature contribute.
+- **Movement:** Squat / knee-dominant.
+- **Coverage:** Low equipment, low-to-moderate skill demand, self-limiting load.
+- **Best used when:** Equipment is limited, a user is learning the squat pattern, or a simple loaded squat is needed without a rack.
+- **Less suitable when:** The load a single dumbbell allows is no longer challenging enough for the user's goals.
+- **Complements:** A barbell squat or press where available.
+- **Overlaps:** Back squat, front squat, and other knee-dominant patterns.
 - **Status:** Draft.
 
 ### Leg Extension
