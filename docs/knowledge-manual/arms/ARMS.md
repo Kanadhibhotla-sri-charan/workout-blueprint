@@ -1,0 +1,111 @@
+# Arms — Draft Knowledge Module
+
+**Status:** Draft  
+**Purpose:** Define the first arm records in the canonical Blueprint format. These records are a starting dataset and must pass the review gate in [FOUNDATION.md](../FOUNDATION.md) before the status is changed to Reviewed.
+
+## Region map
+
+The arm module is organized by elbow function and by where in the range a movement tends to feel hardest. Grip and wrist work sit in the [forearms module](../forearms/FOREARMS.md).
+
+- **Elbow flexion, general:** loadable curling for overall biceps work.
+- **Elbow flexion, lengthened context:** curls with the upper arm behind the body, where the load feels hardest with the arm long.
+- **Elbow flexion, shortened context:** curls with the upper arm forward, where the load feels hardest nearer the top.
+- **Neutral and pronated flexion:** grip positions that shift more work onto the brachialis and brachioradialis.
+- **Elbow extension, compound:** pressing patterns that load the triceps under heavy loads.
+- **Elbow extension, overhead and lengthened:** positions that load the triceps with the shoulder flexed.
+- **Elbow extension, low fatigue:** cable work that adds triceps volume cheaply.
+
+## Draft records
+
+### Barbell or EZ-Bar Curl
+
+- **Why this exists:** The most straightforward loadable curl, with small load steps and an easy progression path.
+- **Primary targets:** Biceps; brachialis and forearms contribute.
+- **Movement:** Elbow flexion.
+- **Coverage:** Heavy-for-the-region isolation, low setup, low skill demand.
+- **Best used when:** A user wants one main curl and cares about tracking load over time.
+- **Less suitable when:** A straight bar irritates the wrists — an EZ bar or dumbbells may sit better.
+- **Complements:** A curl with a different arm position, or a neutral-grip curl.
+- **Overlaps:** Dumbbell and cable curl variations.
+- **Status:** Draft.
+
+### Incline Dumbbell Curl
+
+- **Why this exists:** Places the upper arm behind the body, so the load stays meaningful with the elbow near full extension.
+- **Primary targets:** Biceps.
+- **Movement:** Elbow flexion in a lengthened shoulder position.
+- **Coverage:** Isolation, lengthened-position emphasis, moderate setup.
+- **Best used when:** A user already has a general curl and wants a variation that changes where the set feels hardest.
+- **Less suitable when:** The shoulder position is uncomfortable, or no adjustable bench is free.
+- **Complements:** A shortened-position curl such as a preacher curl.
+- **Overlaps:** Other supinated curls; distinguish by arm position, not by equipment alone.
+- **Status:** Draft.
+
+### Preacher Curl
+
+- **Why this exists:** Fixes the upper arm forward on a pad, which removes swing and keeps tension nearer the top of the range.
+- **Primary targets:** Biceps; brachialis contributes.
+- **Movement:** Elbow flexion in a shortened shoulder position.
+- **Coverage:** Isolation, shortened-position emphasis, stable, low skill demand.
+- **Best used when:** A user tends to swing standing curls, or wants a strict option late in a session.
+- **Less suitable when:** The bottom of the range feels uncomfortable under load, or no preacher bench is available.
+- **Complements:** A lengthened-position curl such as an incline curl.
+- **Overlaps:** Machine and cable curls with the arm supported.
+- **Status:** Draft.
+
+### Hammer Curl
+
+- **Why this exists:** A neutral grip shifts work toward the brachialis and brachioradialis, which contribute to arm and forearm thickness.
+- **Primary targets:** Brachialis and brachioradialis; biceps contribute.
+- **Movement:** Elbow flexion with a neutral grip.
+- **Coverage:** Isolation, low setup, low skill demand.
+- **Best used when:** A user wants arm thickness rather than only supinated curling, or wants forearm involvement alongside the curl.
+- **Less suitable when:** The routine already contains enough elbow-flexion volume.
+- **Complements:** A supinated curl.
+- **Overlaps:** Reverse curls and rope cable curls.
+- **Status:** Draft.
+
+### Close-Grip Bench Press
+
+- **Why this exists:** Lets the triceps be trained under loads that single-joint extensions cannot reach.
+- **Primary targets:** Triceps; chest and anterior deltoids contribute.
+- **Movement:** Horizontal press.
+- **Coverage:** Heavy compound, moderate skill demand, moderate setup.
+- **Best used when:** A user wants triceps strength, or wants one movement covering pressing and triceps together.
+- **Less suitable when:** The elbows or wrists dislike the narrow grip, or the routine already has substantial pressing volume.
+- **Complements:** An overhead triceps extension, which loads a position pressing does not.
+- **Overlaps:** Dips and other horizontal presses.
+- **Status:** Draft.
+
+### Overhead Triceps Extension
+
+- **Why this exists:** Trains elbow extension with the shoulder flexed, a position that pressing movements do not load.
+- **Primary targets:** Triceps, with emphasis on the long head.
+- **Movement:** Elbow extension with the shoulder flexed.
+- **Coverage:** Isolation, lengthened-position emphasis, moderate setup.
+- **Best used when:** A user's triceps work is all pressing and pushdowns, and a different position is missing.
+- **Less suitable when:** The overhead position is uncomfortable, or elbow tolerance is limiting.
+- **Complements:** A pressing movement or a pushdown.
+- **Overlaps:** Other overhead extension variations with dumbbell, cable, or rope.
+- **Status:** Draft.
+
+### Cable Pushdown
+
+- **Why this exists:** A low-cost way to add triceps volume without another press, with easy load adjustment and a fast setup.
+- **Primary targets:** Triceps.
+- **Movement:** Elbow extension.
+- **Coverage:** Isolation, low fatigue cost, low skill demand.
+- **Best used when:** A user wants triceps work late in a session, or after pressing has already accumulated fatigue.
+- **Less suitable when:** Cable access is limited, or the routine needs a lengthened-position option instead.
+- **Complements:** An overhead extension, which loads a different position.
+- **Overlaps:** Other pushdown and kickback variations.
+- **Status:** Draft.
+
+## Review checklist
+
+Before changing a record to Reviewed:
+
+- Confirm the record answers "when would I choose this over an alternative?"
+- Add equipment, setup, fatigue, and relationship fields in the final data format.
+- Check terminology against the writing standard.
+- Add evidence notes for claims that require them.

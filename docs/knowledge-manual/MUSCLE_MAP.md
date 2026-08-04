@@ -64,6 +64,26 @@ A muscle name tells you where the work is happening. The exercise choice tells y
 
 - **Neck flexors, extensors, and side flexors:** Help control head position. Train cautiously and avoid loading through pain or symptoms.
 
+## Module index
+
+Each region has its own draft knowledge module containing exercise records in the canonical format.
+
+| Region | Module |
+|---|---|
+| Chest | [chest/CHEST.md](chest/CHEST.md) |
+| Back | [back/BACK.md](back/BACK.md) |
+| Shoulders | [shoulders/SHOULDERS.md](shoulders/SHOULDERS.md) |
+| Arms | [arms/ARMS.md](arms/ARMS.md) |
+| Forearms and grip | [forearms/FOREARMS.md](forearms/FOREARMS.md) |
+| Core | [core/CORE.md](core/CORE.md) |
+| Hips and glutes | [hips/HIPS.md](hips/HIPS.md) |
+| Quads | [quads/QUADS.md](quads/QUADS.md) |
+| Hamstrings | [hamstrings/HAMSTRINGS.md](hamstrings/HAMSTRINGS.md) |
+| Calves and lower leg | [calves/CALVES.md](calves/CALVES.md) |
+| Neck | [neck/NECK.md](neck/NECK.md) |
+
+Some movements appear in more than one module — the Romanian deadlift in hips and hamstrings, the Bulgarian split squat in hips and quads, the 45° back extension in back and hamstrings. That is recorded deliberately, and those records must be reconciled before any of them is marked Reviewed.
+
 ## Next data pass
 
 For every region above, add exercise records in groups rather than one at a time. Each record must include: why it exists, best time to use it, what it overlaps with, what it complements, equipment, setup effort, fatigue level, and a plain-language limitation.
