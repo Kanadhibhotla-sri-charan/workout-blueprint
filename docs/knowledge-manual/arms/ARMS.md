@@ -15,6 +15,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Neutral and pronated flexion:** grip positions that shift more work onto the brachialis and brachioradialis.
 - **Constant-tension flexion:** cable curling, where the resistance does not fall off anywhere in the range the way a free weight does.
 - **Behind-the-body bar path:** a bar dragged up along the torso with the elbows travelling behind the body, which removes shoulder swing from the movement.
+- **Combined grip rotation:** a curl that switches grip partway through the rep, training the biceps in one direction and the forearm in the other. Wrist and dedicated forearm work sit in the [forearms module](../forearms/FOREARMS.md); this record is here because its primary purpose is still the biceps curl.
 
 **Triceps and elbow-extensor roles**
 
@@ -123,6 +124,18 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Less suitable when:** No low cable pulley is available, or a user wants the heavier loading a barbell allows.
 - **Complements:** A standard cable or free-weight curl.
 - **Overlaps:** Drag curl (same path, free-weight loading) and cable curl (same equipment, standard path).
+- **Status:** Draft.
+
+### Zottman Curl
+
+- **Why this exists:** Curls up with a supinated grip like a standard curl, then rotates to a pronated grip at the top and lowers like a reverse curl, so one movement trains the biceps on the way up and the forearm extensors and brachioradialis on the way down.
+- **Primary targets:** Biceps on the concentric half; brachioradialis and wrist extensors on the eccentric half.
+- **Movement:** Elbow flexion with a grip rotation between supinated and pronated.
+- **Coverage:** Isolation, moderate skill demand, low setup with a pair of dumbbells.
+- **Best used when:** A user wants to combine biceps and forearm work in one movement rather than programming a curl and a reverse curl separately.
+- **Less suitable when:** The rotation at the top breaks down under heavier load, or a user wants to isolate just one half of the movement with more focused volume.
+- **Complements:** A standard curl or a reverse curl programmed on their own.
+- **Overlaps:** Barbell or EZ-bar curl on the concentric half, and reverse curl, recorded in the forearms module, on the eccentric half.
 - **Status:** Draft.
 
 **Triceps**

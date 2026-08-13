@@ -9,8 +9,9 @@ Forearm work covers wrist movement, forearm rotation, and holding on. These are 
 
 - **Wrist flexion:** the front of the forearm, worked when the palm curls toward the wrist.
 - **Wrist extension:** the back of the forearm, which most pulling work leaves short.
-- **Pronated elbow flexion:** curls with the palm down, which load the forearm extensors and brachioradialis together.
+- **Pronated elbow flexion:** curls with the palm down, which load the forearm extensors and brachioradialis together, whether loaded with a free weight or a cable.
 - **Rotation:** turning the palm up and down; a real function rather than a small-muscle extra.
+- **Combined rotation within a curl:** a curl that switches grip partway through, so one movement trains the biceps in one direction and the forearm in the other.
 - **Grip and holding:** carrying and holding loads, which limits many pulling movements before the back does.
 
 ## Draft records
@@ -45,10 +46,22 @@ Forearm work covers wrist movement, forearm rotation, and holding on. These are 
 - **Primary targets:** Brachioradialis and wrist extensors; biceps and brachialis contribute.
 - **Movement:** Elbow flexion with a pronated grip.
 - **Coverage:** Isolation, low setup, low skill demand.
-- **Best used when:** A user wants forearm work that also counts toward elbow-flexion volume.
+- **Best used when:** A user wants forearm work that also counts toward elbow-flexion volume. A barbell or EZ-bar allows the heaviest load on a fixed path; dumbbells allow independent arms and let each wrist find its own comfortable angle.
 - **Less suitable when:** Wrist comfort is limiting with a straight bar — an EZ bar may sit better.
 - **Complements:** A supinated curl and direct wrist work.
-- **Overlaps:** Hammer curls and reverse wrist curls.
+- **Overlaps:** Hammer curls, reverse wrist curls, cable reverse curl, and the Zottman curl recorded in the arms module.
+- **Status:** Draft.
+
+### Cable Reverse Curl
+
+- **Why this exists:** A cable keeps tension on the forearm extensors and brachioradialis through the whole range, including the top, where a barbell or dumbbell reverse curl loses load.
+- **Primary targets:** Brachioradialis and wrist extensors; biceps and brachialis contribute.
+- **Movement:** Elbow flexion with a pronated grip.
+- **Coverage:** Isolation, constant-tension resistance profile, low-to-moderate setup.
+- **Best used when:** A user wants a reverse curl that stays hard at the top of the range, or wants an option that is lighter on the elbows than a free-weight version.
+- **Less suitable when:** No cable station is available, or a user specifically wants the heavier loading a barbell allows.
+- **Complements:** A supinated curl and direct wrist work.
+- **Overlaps:** The free-weight reverse curl; distinguish by resistance profile, not by attachment choice.
 - **Status:** Draft.
 
 ### Farmer's Carry
