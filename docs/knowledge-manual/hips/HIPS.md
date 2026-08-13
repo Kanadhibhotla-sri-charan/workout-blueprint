@@ -37,7 +37,19 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Best used when:** A user wants one movement covering the back of the hips and legs, and can hold position under load.
 - **Less suitable when:** Lower-back fatigue is already high, or grip limits the working sets before the hips do.
 - **Complements:** A shortened-position movement such as the hip thrust.
-- **Overlaps:** Good mornings, 45° back extensions, and other hinge patterns; also recorded in the hamstrings module. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
+- **Overlaps:** Good mornings, 45° back extensions, the Smith machine version below, and other hinge patterns; also recorded in the hamstrings module. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
+- **Status:** Draft.
+
+### Smith Machine Romanian Deadlift
+
+- **Why this exists:** Fixing the bar to a vertical rail keeps it automatically close to the body through the hinge, which is the technical cue beginners most often struggle to hold with a free bar; this makes the pattern easier to groove before adding a free bar. Unlike a row, an RDL's correct bar path is already close to vertical, so the fixed rail helps rather than fights it.
+- **Primary targets:** Glutes and hamstrings; spinal erectors contribute.
+- **Movement:** Hip hinge.
+- **Coverage:** Stable compound, lengthened-position emphasis, low-to-moderate skill demand, moderate setup.
+- **Best used when:** A user is still learning to keep the bar close during a hinge, or wants the hinge pattern without also managing bar path.
+- **Less suitable when:** The fixed rail does not allow enough depth for a user's hip-to-torso proportions, or a user wants the bar to accommodate their individual leverages the way a free bar can.
+- **Complements:** A shortened-position movement such as the hip thrust.
+- **Overlaps:** The free-weight Romanian deadlift; distinguish by how much the setup controls the bar path.
 - **Status:** Draft.
 
 ### Bulgarian Split Squat

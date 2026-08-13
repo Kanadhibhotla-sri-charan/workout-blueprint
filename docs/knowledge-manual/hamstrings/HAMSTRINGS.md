@@ -23,7 +23,7 @@ The hamstrings both extend the hip and bend the knee, and a routine can cover on
 - **Best used when:** A user wants one movement covering the back of the hips and legs, and can hold position under load.
 - **Less suitable when:** Lower-back fatigue is already high, or grip limits the sets before the hamstrings do.
 - **Complements:** A leg-curl pattern, since a hinge alone leaves knee flexion untrained.
-- **Overlaps:** Good mornings, stiff-leg deadlifts, and 45° back extensions; also recorded in the hips module. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
+- **Overlaps:** Good mornings, stiff-leg deadlifts, and 45° back extensions; also recorded in the hips module, which also has the Smith machine version — the fixed rail keeps the bar close to the body automatically, which helps here since that is already the correct free-weight bar path. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
 - **Status:** Draft.
 
 ### Seated Leg Curl
