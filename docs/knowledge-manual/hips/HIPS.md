@@ -22,7 +22,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Gluteus maximus; hamstrings and quads contribute.
 - **Movement:** Hip extension in a shortened context.
 - **Coverage:** Heavy compound, shortened-position emphasis, higher setup cost.
-- **Best used when:** Glute work is a specific goal, or a user wants hip extension without loading the spine the way a hinge does.
+- **Best used when:** Glute work is a specific goal, or a user wants hip extension without loading the spine the way a hinge does. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine offers a fixed path and often a cam-adjusted resistance curve, which some find more comfortable than a barbell.
 - **Less suitable when:** Setup time is short, or no bench and padding are available.
 - **Complements:** A hinge pattern such as the Romanian deadlift.
 - **Overlaps:** Glute bridges and machine hip-thrust variations.
@@ -30,7 +30,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 
 ### Romanian Deadlift
 
-- **Why this exists:** Loads hip extension with the hip bent, so the glutes and hamstrings work in a lengthened position.
+- **Why this exists:** Loads hip extension with the hip bent, so the glutes and hamstrings work in a lengthened position. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
 - **Primary targets:** Glutes and hamstrings; spinal erectors contribute.
 - **Movement:** Hip hinge.
 - **Coverage:** Heavy compound, lengthened-position emphasis, moderate skill demand, high fatigue cost.

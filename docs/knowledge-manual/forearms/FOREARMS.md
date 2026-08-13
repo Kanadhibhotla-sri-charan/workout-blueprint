@@ -22,10 +22,10 @@ Forearm work covers wrist movement, forearm rotation, and holding on. These are 
 - **Primary targets:** Wrist flexors.
 - **Movement:** Wrist flexion.
 - **Coverage:** Isolation, low setup, low fatigue cost.
-- **Best used when:** A user wants forearm size, or wants wrist work that does not depend on grip endurance.
+- **Best used when:** A user wants forearm size, or wants wrist work that does not depend on grip endurance. A barbell allows the heaviest fixed-path load; dumbbells let each wrist move independently; a cable keeps tension through the whole range at the cost of a less natural wrist path.
 - **Less suitable when:** The wrists are already loaded by heavy pressing and pulling in the same session.
 - **Complements:** Wrist extension work, which balances the other side of the forearm.
-- **Overlaps:** Barbell, dumbbell, and cable wrist curl variations.
+- **Overlaps:** Reverse wrist curl.
 - **Status:** Draft.
 
 ### Reverse Wrist Curl
@@ -34,7 +34,7 @@ Forearm work covers wrist movement, forearm rotation, and holding on. These are 
 - **Primary targets:** Wrist extensors.
 - **Movement:** Wrist extension.
 - **Coverage:** Isolation, low setup, low fatigue cost.
-- **Best used when:** A user has plenty of gripping work and nothing training the back of the forearm.
+- **Best used when:** A user has plenty of gripping work and nothing training the back of the forearm. A barbell, dumbbells, or a cable all work the same way a wrist curl's equipment choice does.
 - **Less suitable when:** Elbow-region symptoms are present — pain is a stop-and-assess signal, not something to load through.
 - **Complements:** Wrist curls and grip work.
 - **Overlaps:** Reverse curls, which also load the extensors.

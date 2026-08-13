@@ -39,7 +39,19 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Best used when:** A user wants one main curl and cares about tracking load over time.
 - **Less suitable when:** A straight bar irritates the wrists — an EZ bar or dumbbells may sit better.
 - **Complements:** A curl with a different arm position, or a neutral-grip curl.
-- **Overlaps:** Dumbbell and cable curl variations.
+- **Overlaps:** Dumbbell curl and cable curl.
+- **Status:** Draft.
+
+### Dumbbell Curl
+
+- **Why this exists:** The same standing curl as the barbell version, but independent arms let each side move and rotate on its own path, which some find kinder on the wrists and elbows.
+- **Primary targets:** Biceps (both heads contribute roughly evenly at a neutral shoulder position); brachialis and forearms contribute.
+- **Movement:** Elbow flexion.
+- **Coverage:** Isolation, low setup, low skill demand.
+- **Best used when:** A user wants independent arms, a full supination path through the rep, or an easy way to spot side-to-side differences.
+- **Less suitable when:** A user specifically wants the heavier loading and fixed path a barbell allows.
+- **Complements:** A curl with a different arm position, or a neutral-grip curl.
+- **Overlaps:** Barbell or EZ-bar curl and cable curl; distinguish by equipment.
 - **Status:** Draft.
 
 ### Incline Dumbbell Curl
@@ -60,10 +72,22 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Primary targets:** Biceps, commonly cited as short-head-biased, since the flexed shoulder position shortens the long head; brachialis contributes.
 - **Movement:** Elbow flexion in a shortened shoulder position.
 - **Coverage:** Isolation, shortened-position emphasis, stable, low skill demand.
-- **Best used when:** A user tends to swing standing curls, or wants a strict option late in a session.
+- **Best used when:** A user tends to swing standing curls, or wants a strict option late in a session. A barbell, EZ-bar, or dumbbells all work on the same preacher bench; the choice is a grip and independent-arm preference rather than a different movement.
 - **Less suitable when:** The bottom of the range feels uncomfortable under load, or no preacher bench is available.
 - **Complements:** A lengthened-position curl such as an incline curl.
-- **Overlaps:** Machine and cable curls with the arm supported.
+- **Overlaps:** Preacher curl machine; distinguish by resistance profile.
+- **Status:** Draft.
+
+### Preacher Curl Machine
+
+- **Why this exists:** A fixed-path preacher curl that removes the need for a separate bench and free weight, and often adds a cam that adjusts resistance through the range.
+- **Primary targets:** Biceps, commonly cited as short-head-biased, since the flexed shoulder position shortens the long head; brachialis contributes.
+- **Movement:** Elbow flexion in a shortened shoulder position.
+- **Coverage:** Isolation, shortened-position emphasis, low skill demand, low setup where the machine is free.
+- **Best used when:** A user wants the preacher curl's strict, swing-free position without setting up a bench and free weight.
+- **Less suitable when:** The machine's pad or handle position does not suit the individual, or none is available.
+- **Complements:** A lengthened-position curl such as an incline curl.
+- **Overlaps:** Preacher curl; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Hammer Curl
@@ -75,7 +99,19 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Best used when:** A user wants arm thickness rather than only supinated curling, or wants forearm involvement alongside the curl.
 - **Less suitable when:** The routine already contains enough elbow-flexion volume.
 - **Complements:** A supinated curl.
-- **Overlaps:** Reverse curls and rope cable curls.
+- **Overlaps:** Reverse curls and cable hammer curl.
+- **Status:** Draft.
+
+### Cable Hammer Curl (Rope)
+
+- **Why this exists:** A rope attachment held in a neutral grip keeps tension on the brachialis and brachioradialis through the whole range, including the top, where a dumbbell hammer curl loses load.
+- **Primary targets:** Brachialis and brachioradialis; biceps contribute.
+- **Movement:** Elbow flexion with a neutral grip.
+- **Coverage:** Isolation, constant-tension resistance profile, low-to-moderate setup.
+- **Best used when:** A user wants a hammer curl that stays hard at the top of the range, or wants an option that is lighter on the elbows than a dumbbell version.
+- **Less suitable when:** No cable station is available, or a user specifically wants the heavier loading dumbbells allow at higher weights.
+- **Complements:** A supinated curl.
+- **Overlaps:** Dumbbell hammer curl and cross-body hammer curl; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Cross-Body Hammer Curl
@@ -197,7 +233,19 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Best used when:** A user wants triceps work late in a session, or after pressing has already accumulated fatigue. A straight bar, V-bar, or rope all work; the choice is a grip preference (pronated, neutral, or semi-free at the bottom) rather than a different movement, so it does not need its own record.
 - **Less suitable when:** Cable access is limited, or the routine needs a lengthened-position option instead.
 - **Complements:** An overhead extension, which loads a different position.
-- **Overlaps:** Triceps kickback and the cable overhead extension.
+- **Overlaps:** Triceps kickback, the cable overhead extension, and the machine triceps extension.
+- **Status:** Draft.
+
+### Machine Triceps Extension
+
+- **Why this exists:** A fixed-path elbow extension that removes the cable-height and attachment setup of a pushdown, often with a cam that adjusts resistance through the range.
+- **Primary targets:** Triceps, commonly cited as lateral-head-biased, similar to a pushdown, since the shoulder stays at the side rather than overhead.
+- **Movement:** Elbow extension.
+- **Coverage:** Isolation, low skill demand, low fatigue cost.
+- **Best used when:** A user wants triceps work with minimal setup and technique demand, or wants to train close to failure without bracing against a cable's pull.
+- **Less suitable when:** The machine's seat or handle position does not suit the individual, or none is available.
+- **Complements:** An overhead extension, which loads a different position.
+- **Overlaps:** Cable pushdown; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Triceps Kickback

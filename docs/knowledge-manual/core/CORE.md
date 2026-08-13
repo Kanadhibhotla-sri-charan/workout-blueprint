@@ -25,7 +25,19 @@ Core work splits into moving the trunk and resisting it being moved. Most routin
 - **Best used when:** A user wants progressive abdominal work rather than adding repetitions indefinitely.
 - **Less suitable when:** Cable access is limited, or the hips take over the movement.
 - **Complements:** An anti-rotation or anti-extension movement.
-- **Overlaps:** Machine crunches and weighted sit-up variations.
+- **Overlaps:** Machine crunch; distinguish by resistance profile.
+- **Status:** Draft.
+
+### Machine Crunch
+
+- **Why this exists:** A fixed-path trunk-flexion movement that removes the cable-height setup of a cable crunch, often with a cam that adjusts resistance through the range.
+- **Primary targets:** Rectus abdominis; obliques contribute.
+- **Movement:** Trunk flexion.
+- **Coverage:** Isolation, low skill demand, low fatigue cost.
+- **Best used when:** A user wants progressive abdominal work with minimal setup, or wants to train close to failure without bracing against a cable.
+- **Less suitable when:** The machine's pad position does not suit the individual, or none is available.
+- **Complements:** An anti-rotation or anti-extension movement.
+- **Overlaps:** Cable crunch; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Hanging Knee or Leg Raise
@@ -97,7 +109,19 @@ Core work splits into moving the trunk and resisting it being moved. Most routin
 - **Best used when:** A user wants rotational trunk strength for sport or general capacity, alongside anti-rotation work rather than instead of it.
 - **Less suitable when:** No cable is available, or the movement is driven by the arms rather than the trunk.
 - **Complements:** The Pallof press and other anti-rotation work.
-- **Overlaps:** Russian twist and other loaded-rotation variations.
+- **Overlaps:** Russian twist; distinguish by resistance profile.
+- **Status:** Draft.
+
+### Russian Twist
+
+- **Why this exists:** A free-weight rotation option; the load is hardest at the ends of the range and eases through the middle, the opposite feel from a cable woodchop's constant tension.
+- **Primary targets:** Obliques; rectus abdominis and hip musculature contribute.
+- **Movement:** Trunk rotation.
+- **Coverage:** Isolation-oriented, low fatigue cost, low setup with a dumbbell, plate, or medicine ball.
+- **Best used when:** No cable is available, or a user wants rotational work with a resistance profile that matches a free weight rather than a cable.
+- **Less suitable when:** The movement turns into fast, uncontrolled swinging rather than a controlled rotation.
+- **Complements:** The Pallof press and other anti-rotation work.
+- **Overlaps:** Cable woodchop; distinguish by resistance profile.
 - **Status:** Draft.
 
 ## Review checklist

@@ -26,7 +26,19 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Best used when:** A user wants leg strength, has a rack, and can hold position under load.
 - **Less suitable when:** Recovery is limited, technique is still developing, or a user wants quad work without whole-body fatigue.
 - **Complements:** A single-joint knee-extension movement, or a stable machine pattern.
-- **Overlaps:** Front squats, hack squats, and leg presses.
+- **Overlaps:** Front squats, hack squats, leg presses, and the Smith machine squat.
+- **Status:** Draft.
+
+### Smith Machine Squat
+
+- **Why this exists:** A fixed vertical bar path that removes the balance and bracing demand of a free barbell squat, letting a user train closer to failure without a spotter.
+- **Primary targets:** Quads and glutes; adductors contribute.
+- **Movement:** Squat / knee-dominant.
+- **Coverage:** Stable compound, low-to-moderate skill demand, moderate setup.
+- **Best used when:** A user wants close-to-failure squatting without a spotter, or wants less balance demand than a free barbell squat.
+- **Less suitable when:** The fixed vertical path does not match a user's natural squat path, which can feel awkward on the knees or lower back.
+- **Complements:** A single-joint knee-extension movement.
+- **Overlaps:** Back squat and hack squat.
 - **Status:** Draft.
 
 ### Front Squat

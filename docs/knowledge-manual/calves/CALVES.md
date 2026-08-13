@@ -20,7 +20,7 @@ The lower leg is organized around knee position, because knee angle decides whic
 - **Primary targets:** Gastrocnemius; soleus contributes.
 - **Movement:** Ankle plantarflexion with the knee straight.
 - **Coverage:** Isolation, low skill demand, low-to-moderate setup.
-- **Best used when:** A user wants calf work in the position where the gastrocnemius is most involved.
+- **Best used when:** A user wants calf work in the position where the gastrocnemius is most involved. A machine gives a fixed path and lets a user go close to failure alone; holding dumbbells while standing on a block or plate is the free-weight equivalent and needs no machine at all.
 - **Less suitable when:** Balance or the shoulder pads are the limiting factor rather than the calves.
 - **Complements:** A bent-knee raise, which covers the soleus.
 - **Overlaps:** Leg-press and single-leg calf raises.

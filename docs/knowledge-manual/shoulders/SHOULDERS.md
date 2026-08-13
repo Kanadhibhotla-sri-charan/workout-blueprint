@@ -7,9 +7,9 @@
 
 The shoulder module separates the three deltoid heads by the job they do in a routine, and keeps shoulder-control work in its own role rather than treating it as an optional extra.
 
-- **Vertical pressing:** overhead pressing, which loads the front delts alongside the triceps and upper chest.
-- **Abduction work:** raising the arm out to the side; the direct route to the side delts.
-- **Rear-delt work:** horizontal abduction, rowing, and external rotation patterns that most pressing does not cover.
+- **Vertical pressing:** overhead pressing, which loads the front delts alongside the triceps and upper chest. Barbell, dumbbell, machine, and cable each cover this role with a different resistance profile.
+- **Abduction work:** raising the arm out to the side; the direct route to the side delts. Dumbbell, cable, and machine each cover this role with a different resistance profile.
+- **Rear-delt work:** horizontal abduction, rowing, and external rotation patterns that most pressing does not cover. The fly version of this role is available as a dumbbell, cable, or machine movement.
 - **Rotator-cuff and control work:** light, controlled shoulder rotation. This is training, not treatment — symptoms need professional assessment.
 - **Scapular work:** serratus-focused movement that helps the shoulder blade travel well around the rib cage.
 
@@ -21,10 +21,22 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Anterior deltoids; triceps, upper chest, and trunk musculature contribute.
 - **Movement:** Vertical press.
 - **Coverage:** Heavy compound, high stability and skill demand when standing.
-- **Best used when:** Overhead strength is a goal, or a user wants one pressing movement that covers front delts and triceps together.
+- **Best used when:** Overhead strength is a goal, or a user wants one pressing movement that covers front delts and triceps together. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and a path each shoulder can find naturally, which many find kinder on the joint.
 - **Less suitable when:** Overhead range or shoulder tolerance is limiting, or the routine already contains a lot of pressing.
 - **Complements:** Side- and rear-delt work, which overhead pressing does not replace.
-- **Overlaps:** Machine and dumbbell shoulder presses.
+- **Overlaps:** Machine shoulder press and cable shoulder press.
+- **Status:** Draft.
+
+### Cable Shoulder Press
+
+- **Why this exists:** A standing cable press keeps constant tension through the range, unlike a free-weight press where the load is easiest at lockout, and lets the path converge in front of the body the way free weights and machines don't.
+- **Primary targets:** Anterior deltoids; triceps contribute.
+- **Movement:** Vertical press.
+- **Coverage:** Isolation-oriented compound, constant-tension resistance profile, moderate setup.
+- **Best used when:** A user wants an overhead press that stays hard at the top of the range, or wants a lower-fatigue finisher after a heavier press.
+- **Less suitable when:** No cable station tall enough for the path is available, or a user wants the heavier loading free weights allow.
+- **Complements:** A heavier barbell or dumbbell press.
+- **Overlaps:** Overhead press and seated machine shoulder press; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Seated Machine Shoulder Press
@@ -36,7 +48,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** Stability, repeatability, or close-to-failure work is the priority.
 - **Less suitable when:** The machine path or handle position feels poor for the individual.
 - **Complements:** Side- and rear-delt work.
-- **Overlaps:** Overhead and dumbbell presses.
+- **Overlaps:** Overhead press and cable shoulder press.
 - **Status:** Draft.
 
 ### Dumbbell Lateral Raise
@@ -48,7 +60,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A user wants side-delt work with minimal equipment and setup.
 - **Less suitable when:** Momentum takes over, or the load feels hardest only at the top of the range.
 - **Complements:** A vertical press and rear-delt work.
-- **Overlaps:** Cable and machine lateral raises.
+- **Overlaps:** Cable and machine lateral raises. A neutral, palms-in grip is standard for this movement; a pronated grip is sometimes used to bias the front delt slightly more, but this is a technique note rather than a separate record.
 - **Status:** Draft.
 
 ### Cable Lateral Raise
@@ -63,6 +75,18 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Overlaps:** Dumbbell and machine lateral raises.
 - **Status:** Draft.
 
+### Machine Lateral Raise
+
+- **Why this exists:** A fixed-path abduction option that removes the balance and momentum demand of a dumbbell raise, often with a cam that adjusts the resistance through the range.
+- **Primary targets:** Lateral deltoids.
+- **Movement:** Shoulder abduction.
+- **Coverage:** Isolation, low skill demand, low fatigue cost.
+- **Best used when:** A user wants side-delt work with minimal technique demand, or wants to train close to failure without momentum creeping in.
+- **Less suitable when:** The machine's pivot point or pad position does not suit the individual, or none is available.
+- **Complements:** A vertical press.
+- **Overlaps:** Dumbbell and cable lateral raises; distinguish by resistance profile.
+- **Status:** Draft.
+
 ### Rear-Delt Fly
 
 - **Why this exists:** Direct rear-delt work, which pressing-heavy routines commonly leave short.
@@ -72,7 +96,19 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A routine has more pressing than pulling, or a user wants shoulder shape from the side and back.
 - **Less suitable when:** The elbows bend enough that the movement turns into a row.
 - **Complements:** Horizontal pulling and side-delt work.
-- **Overlaps:** Face pulls, the cable rear delt builder, and the rear delt row.
+- **Overlaps:** Face pulls, the cable rear delt builder, the rear delt row, and the machine reverse fly.
+- **Status:** Draft.
+
+### Machine Reverse Fly
+
+- **Why this exists:** A fixed-path rear-delt fly that removes the balance demand of a dumbbell version, often with a cam that adjusts the resistance through the range.
+- **Primary targets:** Posterior deltoids; mid-back contributes.
+- **Movement:** Shoulder horizontal abduction.
+- **Coverage:** Isolation, low skill demand, low fatigue cost.
+- **Best used when:** A user wants rear-delt work with minimal technique demand, or wants to train close to failure without momentum creeping in.
+- **Less suitable when:** The machine's pivot point or pad position does not suit the individual, or none is available.
+- **Complements:** A vertical press and horizontal pulling.
+- **Overlaps:** Rear-delt fly; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Cable Rear Delt Builder

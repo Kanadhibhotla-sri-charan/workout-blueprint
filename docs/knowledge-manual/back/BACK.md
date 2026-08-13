@@ -169,7 +169,19 @@ The back module is organized around pulling directions and support roles, not a 
 - **Best used when:** A user wants lat work without adding another heavy pull, or grip and elbow flexors are the limiting factor.
 - **Less suitable when:** Cable access is limited, or the routine already has enough lat volume.
 - **Complements:** A vertical or horizontal pull.
-- **Overlaps:** Cable pullover variations; distinguish by cable path and body position.
+- **Overlaps:** Dumbbell pullover; distinguish by resistance profile.
+- **Status:** Draft.
+
+### Dumbbell Pullover
+
+- **Why this exists:** A free-weight lat-focused option with the elbow mostly fixed; the load is hardest overhead and eases as the weight comes back over the chest, the opposite feel from a cable pulldown.
+- **Primary targets:** Lats; chest and triceps contribute.
+- **Movement:** Shoulder extension.
+- **Coverage:** Isolation-oriented, moderate stability demand, low setup with a bench and one dumbbell.
+- **Best used when:** No cable station is available, or a user wants a lat-focused movement whose resistance profile matches a free-weight press.
+- **Less suitable when:** Shoulder comfort overhead is limiting, or a user wants tension held through the whole range the way a cable pulldown provides.
+- **Complements:** A vertical or horizontal pull.
+- **Overlaps:** Straight-arm pulldown; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Barbell / Dumbbell Shrug
@@ -178,7 +190,7 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Upper trapezius; grip and forearms contribute.
 - **Movement:** Scapular elevation.
 - **Coverage:** Isolation, low setup, low skill demand.
-- **Best used when:** A user specifically wants upper-trap size or has a visible shoulder-line goal.
+- **Best used when:** A user specifically wants upper-trap size or has a visible shoulder-line goal. A barbell or dumbbells both work; a cable version keeps constant tension if a station is free, but the movement and "why choose this" answer are the same across all three.
 - **Less suitable when:** Grip fails well before the traps, or the neck and upper back are already carrying a lot of weekly work.
 - **Complements:** Mid- and lower-trap work such as rows or face pulls.
 - **Overlaps:** Other shrug and carry variations.

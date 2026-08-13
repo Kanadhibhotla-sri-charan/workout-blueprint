@@ -16,7 +16,7 @@ The hamstrings both extend the hip and bend the knee, and a routine can cover on
 
 ### Romanian Deadlift
 
-- **Why this exists:** The main loadable hinge, and the most direct way to train the hamstrings in a lengthened position under heavy load.
+- **Why this exists:** The main loadable hinge, and the most direct way to train the hamstrings in a lengthened position under heavy load. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
 - **Primary targets:** Hamstrings and glutes; spinal erectors contribute.
 - **Movement:** Hip hinge.
 - **Coverage:** Heavy compound, lengthened-position emphasis, moderate skill demand, high fatigue cost.
