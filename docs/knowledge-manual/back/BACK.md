@@ -145,7 +145,19 @@ The back module is organized around pulling directions and support roles, not a 
 - **Best used when:** A user wants maximal posterior-chain strength and can recover from the systemic cost of the movement.
 - **Less suitable when:** Recovery is limited, technique is still developing, or a user wants posterior-chain work without the fatigue a floor pull brings.
 - **Complements:** A single-joint hamstring or glute movement that adds volume without the same systemic cost.
-- **Overlaps:** Romanian deadlift, recorded in the hips and hamstrings modules; both are hip hinges but start from a different position and load the range differently.
+- **Overlaps:** Romanian deadlift, recorded in the hips and hamstrings modules, and rack pull below; each starts from a different position and loads the range differently. A Smith machine is not a practical substitute here — the floor-level starting position and the coordinated hip-and-knee path a full pull needs don't fit a fixed vertical rail.
+- **Status:** Draft.
+
+### Rack Pull
+
+- **Why this exists:** Starting the pull from an elevated position removes the hardest, most technical part of a deadlift off the floor, which lets a user load significantly heavier weight and biases the top-of-pull musculature more than a full deadlift does.
+- **Primary targets:** Spinal erectors, upper and mid trapezius, and grip; glutes and hamstrings contribute less than in a full deadlift since the bottom range is removed.
+- **Movement:** Hip hinge, partial range.
+- **Coverage:** Heavy compound, moderate stability demand, moderate setup, partial range of motion.
+- **Best used when:** A user wants to overload the top-of-pull position, train grip and upper-back strength under heavy load, or has a reason to avoid pulling from the floor. Adjustable safety pins on a power rack or a Smith machine both work to set the starting height — the Smith's fixed vertical path is far less of an issue here than in a full deadlift, since the shortened range needs much less forward-and-back coordination.
+- **Less suitable when:** A user wants the full range and floor-level strength a conventional deadlift trains, or the heavier loads this movement allows exceed what the rest of the routine can absorb.
+- **Complements:** A full-range deadlift or Romanian deadlift, which covers the bottom-range work this movement skips.
+- **Overlaps:** Conventional deadlift; distinguish by range of motion and starting position.
 - **Status:** Draft.
 
 ### Single-Arm Dumbbell Row
