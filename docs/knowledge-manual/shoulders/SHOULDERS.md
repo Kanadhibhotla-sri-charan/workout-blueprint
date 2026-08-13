@@ -72,31 +72,31 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A routine has more pressing than pulling, or a user wants shoulder shape from the side and back.
 - **Less suitable when:** The elbows bend enough that the movement turns into a row.
 - **Complements:** Horizontal pulling and side-delt work.
-- **Overlaps:** Face pulls, cable rear-delt rows, and single-arm rotational rear-delt rows.
+- **Overlaps:** Face pulls, the cable rear delt builder, and the rear delt row.
 - **Status:** Draft.
 
-### Cable Rear-Delt Row
+### Cable Rear Delt Builder
 
-- **Why this exists:** Driving the elbows up and wide instead of keeping them at the sides shifts a row's emphasis from the lats toward the rear delts and mid-traps, and lets rear-delt work be loaded like a row rather than a fly.
-- **Primary targets:** Posterior deltoids; mid-back and mid-trapezius contribute.
+- **Why this exists:** A cable row that keeps the elbows slightly below the wrists all the way through the pull, which holds the resistance angle on the rear delt's specific action instead of letting the traps or rhomboids take over higher in the range.
+- **Primary targets:** Posterior deltoids; mid-back contributes.
 - **Movement:** Shoulder horizontal abduction combined with elbow flexion.
 - **Coverage:** Isolation-oriented, bilateral, moderate setup.
-- **Best used when:** A user wants rear-delt work with more loadable progression than a fly typically allows.
-- **Less suitable when:** The elbows drop and stay close to the torso, which turns the movement into an ordinary seated row and shifts the emphasis back to the lats.
+- **Best used when:** A user wants dedicated rear-delt loading with more range and load than a fly, without the elbows sneaking above the hands and shifting the work elsewhere.
+- **Less suitable when:** The elbows rise above the wrists at the top, which drifts the emphasis toward the traps and rhomboids.
 - **Complements:** A rear-delt fly and a face pull, which cover a stretched isolation position and a rotation component the row does not.
-- **Overlaps:** Rear-delt fly, face pull, and seated cable row; distinguish by elbow height and path.
+- **Overlaps:** Rear-delt fly, face pull, seated cable row, and the rear delt row; distinguish by elbow-to-wrist height and equipment.
 - **Status:** Draft.
 
-### Single-Arm Rotational Rear-Delt Row
+### Rear Delt Row
 
-- **Why this exists:** Pulling one arm into extension while the trunk counter-rotates lets the rear delt work through a longer, more natural range than a bilateral row against a fixed torso.
-- **Primary targets:** Posterior deltoids; mid-back and external rotators contribute.
-- **Movement:** Shoulder extension and horizontal abduction with trunk rotation.
-- **Coverage:** Unilateral, moderate-to-high skill demand, moderate setup on a low cable or plate-loaded arm.
-- **Best used when:** A user wants a rear-delt row with more range and rotation than the bilateral cable version, or wants to train each side independently.
-- **Less suitable when:** Trunk rotation replaces shoulder movement as the source of the range, or session time is short — unilateral work roughly doubles the sets.
-- **Complements:** A bilateral rear-delt row or fly.
-- **Overlaps:** Cable rear-delt row and face pull.
+- **Why this exists:** A seated dumbbell row that starts from a dead hang below the hamstrings and pulls back with the elbows staying down and the thumbs rotating slightly back and up, which drives the rear delts through extension rather than only horizontal abduction.
+- **Primary targets:** Posterior deltoids; mid-back contributes.
+- **Movement:** Shoulder extension and horizontal abduction with a slight external rotation at the top.
+- **Coverage:** Isolation-oriented, bilateral, low setup with a bench and a pair of dumbbells.
+- **Best used when:** A user wants free-weight rear-delt work without a cable station, and can hold a bent-over seated position under light-to-moderate load.
+- **Less suitable when:** The lower back rounds to hold the bent-over position, or the elbows flare up and out instead of staying down and back.
+- **Complements:** A rear-delt fly or a cable rear delt builder.
+- **Overlaps:** Cable rear delt builder and rear-delt fly; distinguish by the seated bent-over start position and the down-and-back elbow path.
 - **Status:** Draft.
 
 ### Face Pull
@@ -108,7 +108,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A user wants rear-delt and shoulder-control work in a single low-cost movement.
 - **Less suitable when:** Load is heavy enough that the rotation is lost, or no cable or band is available.
 - **Complements:** Pressing work.
-- **Overlaps:** Rear-delt flies, cable rear-delt rows, and external-rotation work.
+- **Overlaps:** Rear-delt flies, the cable rear delt builder, and external-rotation work.
 - **Status:** Draft.
 
 ### Cable or Band External Rotation
