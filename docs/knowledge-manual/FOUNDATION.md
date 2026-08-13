@@ -49,7 +49,7 @@ review_status: draft | reviewed | needs-review
 - Chest: clavicular/upper, sternal/mid, costal/lower.
 - Back: lats, mid-back, rhomboids, upper/mid/lower trapezius, spinal erectors.
 - Shoulders: anterior, lateral, posterior deltoid; rotator cuff; serratus anterior.
-- Arms: biceps, brachialis, brachioradialis, triceps.
+- Arms: biceps (long head, short head), brachialis, brachioradialis, triceps (long head, lateral head, medial head).
 - Forearms and grip: wrist flexors, wrist extensors, pronation, supination, grip/fingers.
 - Neck: flexors, extensors, lateral flexors.
 

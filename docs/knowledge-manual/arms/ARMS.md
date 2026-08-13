@@ -32,7 +32,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Barbell or EZ-Bar Curl
 
 - **Why this exists:** The most straightforward loadable curl, with small load steps and an easy progression path.
-- **Primary targets:** Biceps; brachialis and forearms contribute.
+- **Primary targets:** Biceps (both heads contribute roughly evenly at a neutral shoulder position); brachialis and forearms contribute.
 - **Movement:** Elbow flexion.
 - **Coverage:** Heavy-for-the-region isolation, low setup, low skill demand.
 - **Best used when:** A user wants one main curl and cares about tracking load over time.
@@ -44,7 +44,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Incline Dumbbell Curl
 
 - **Why this exists:** Places the upper arm behind the body, so the load stays meaningful with the elbow near full extension.
-- **Primary targets:** Biceps.
+- **Primary targets:** Biceps, commonly cited as long-head-biased, since the extended shoulder position stretches the long head further than a standing curl does.
 - **Movement:** Elbow flexion in a lengthened shoulder position.
 - **Coverage:** Isolation, lengthened-position emphasis, moderate setup.
 - **Best used when:** A user already has a general curl and wants a variation that changes where the set feels hardest.
@@ -56,7 +56,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Preacher Curl
 
 - **Why this exists:** Fixes the upper arm forward on a pad, which removes swing and keeps tension nearer the top of the range.
-- **Primary targets:** Biceps; brachialis contributes.
+- **Primary targets:** Biceps, commonly cited as short-head-biased, since the flexed shoulder position shortens the long head; brachialis contributes.
 - **Movement:** Elbow flexion in a shortened shoulder position.
 - **Coverage:** Isolation, shortened-position emphasis, stable, low skill demand.
 - **Best used when:** A user tends to swing standing curls, or wants a strict option late in a session.
@@ -92,7 +92,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Cable Curl
 
 - **Why this exists:** A cable keeps tension on the biceps through the whole range, including the top, where a dumbbell or barbell curl loses load.
-- **Primary targets:** Biceps; brachialis contributes.
+- **Primary targets:** Biceps (both heads); brachialis contributes.
 - **Movement:** Elbow flexion.
 - **Coverage:** Isolation, constant-tension resistance profile, low-to-moderate setup.
 - **Best used when:** A user wants a curl that stays hard at the top of the range, or wants an option that is lighter on the elbows than a free-weight curl.
@@ -104,13 +104,25 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Drag Curl
 
 - **Why this exists:** Dragging the bar up along the torso lets the elbows travel behind the body instead of staying pinned forward, which removes front-delt involvement and changes the biceps' loading path.
-- **Primary targets:** Biceps.
+- **Primary targets:** Biceps, commonly cited as short-head-biased.
 - **Movement:** Elbow flexion with the elbows drawn behind the torso.
 - **Coverage:** Isolation, moderate skill demand, low setup.
 - **Best used when:** A user wants a curl variation that strips out shoulder swing and isolates the elbow-flexion path more strictly.
 - **Less suitable when:** Shoulder mobility does not allow the elbows to travel back comfortably, or the bar drifts away from the body.
 - **Complements:** A standard barbell or dumbbell curl.
-- **Overlaps:** Barbell and EZ-bar curl; distinguish by the elbow-behind-body path.
+- **Overlaps:** Barbell and EZ-bar curl; distinguish by the elbow-behind-body path. The cable drag curl below is the same path with a different resistance profile.
+- **Status:** Draft.
+
+### Cable Drag Curl
+
+- **Why this exists:** Combines the drag curl's elbows-behind-the-body path with a cable's constant tension, so the set stays hard even at the top of the range instead of losing load the way a barbell drag curl does.
+- **Primary targets:** Biceps, commonly cited as short-head-biased.
+- **Movement:** Elbow flexion with the elbows drawn behind the torso.
+- **Coverage:** Isolation, constant-tension resistance profile, moderate skill demand.
+- **Best used when:** A user wants the drag curl's loading path without a barbell losing tension near the top, or wants a lighter option on the elbows.
+- **Less suitable when:** No low cable pulley is available, or a user wants the heavier loading a barbell allows.
+- **Complements:** A standard cable or free-weight curl.
+- **Overlaps:** Drag curl (same path, free-weight loading) and cable curl (same equipment, standard path).
 - **Status:** Draft.
 
 **Triceps**
@@ -118,7 +130,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Close-Grip Bench Press
 
 - **Why this exists:** Lets the triceps be trained under loads that single-joint extensions cannot reach.
-- **Primary targets:** Triceps; chest and anterior deltoids contribute.
+- **Primary targets:** Triceps, commonly cited as lateral- and medial-head-biased, since the shoulder stays extended rather than overhead; chest and anterior deltoids contribute.
 - **Movement:** Horizontal press.
 - **Coverage:** Heavy compound, moderate skill demand, moderate setup.
 - **Best used when:** A user wants triceps strength, or wants one movement covering pressing and triceps together.
@@ -130,7 +142,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Overhead Triceps Extension
 
 - **Why this exists:** Trains elbow extension with the shoulder flexed, a position that pressing movements do not load.
-- **Primary targets:** Triceps, with emphasis on the long head.
+- **Primary targets:** Triceps, commonly cited as long-head-biased, since the flexed shoulder position stretches the long head further than pressing or pushdowns do.
 - **Movement:** Elbow extension with the shoulder flexed.
 - **Coverage:** Isolation, lengthened-position emphasis, moderate setup.
 - **Best used when:** A user's triceps work is all pressing and pushdowns, and a different position is missing. A barbell or EZ-bar allows the heaviest load on a fixed path; a dumbbell in each hand allows independent arms and a path that can suit individual shoulder mobility better.
@@ -142,7 +154,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Lying Triceps Extension (Skull Crusher)
 
 - **Why this exists:** Loads the triceps in a lengthened position with the shoulder at roughly 90 degrees, a different joint angle from the overhead extension.
-- **Primary targets:** Triceps.
+- **Primary targets:** Triceps, with a partial long-head stretch from the roughly 90-degree shoulder position — less than a fully overhead extension, more than a pushdown.
 - **Movement:** Elbow extension.
 - **Coverage:** Isolation, lengthened-position emphasis, moderate skill demand.
 - **Best used when:** A user wants a free-weight lengthened-position option without the overhead shoulder position. A barbell or EZ-bar allows heavier loading on a fixed path; dumbbells allow independent arms and a neutral-grip option that may sit better on the elbows.
@@ -154,7 +166,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Dip (Triceps-Biased, Upright Torso)
 
 - **Why this exists:** With the torso kept upright, a dip shifts emphasis toward the triceps rather than the lower chest, letting one piece of equipment serve two different roles depending on execution.
-- **Primary targets:** Triceps; anterior deltoids contribute.
+- **Primary targets:** Triceps, commonly cited as lateral- and medial-head-biased, since the shoulder stays extended rather than overhead; anterior deltoids contribute.
 - **Movement:** Elbow extension within a vertical-to-horizontal press.
 - **Coverage:** Heavy-for-bodyweight compound, high stability demand.
 - **Best used when:** Dip bars are available and a user wants triceps work that also loads them under a real compound movement.
@@ -166,19 +178,19 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Cable Pushdown
 
 - **Why this exists:** A low-cost way to add triceps volume without another press, with easy load adjustment and a fast setup.
-- **Primary targets:** Triceps.
+- **Primary targets:** Triceps, commonly cited as lateral-head-biased, since the shoulder stays at the side rather than overhead.
 - **Movement:** Elbow extension.
 - **Coverage:** Isolation, low fatigue cost, low skill demand.
-- **Best used when:** A user wants triceps work late in a session, or after pressing has already accumulated fatigue.
+- **Best used when:** A user wants triceps work late in a session, or after pressing has already accumulated fatigue. A straight bar, V-bar, or rope all work; the choice is a grip preference (pronated, neutral, or semi-free at the bottom) rather than a different movement, so it does not need its own record.
 - **Less suitable when:** Cable access is limited, or the routine needs a lengthened-position option instead.
 - **Complements:** An overhead extension, which loads a different position.
-- **Overlaps:** Triceps kickback and other pushdown variations.
+- **Overlaps:** Triceps kickback and the cable overhead extension.
 - **Status:** Draft.
 
 ### Triceps Kickback
 
 - **Why this exists:** Holds the upper arm still and extends only the forearm against resistance, isolating the triceps at the end of the range where pressing and pushdowns are already easiest.
-- **Primary targets:** Triceps.
+- **Primary targets:** Triceps, commonly cited as lateral- and medial-head-biased, similar to a pushdown, since the shoulder stays extended rather than overhead.
 - **Movement:** Elbow extension with the shoulder held in extension.
 - **Coverage:** Isolation, low fatigue cost, unilateral, low setup with a dumbbell or cable.
 - **Best used when:** A user wants a light, low-fatigue finisher, or wants the triceps worked with the shoulder already extended rather than flexed.
@@ -190,7 +202,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 ### Cable Overhead Extension
 
 - **Why this exists:** Standing away from the stack and leaning into a cable keeps constant tension on the triceps overhead, unlike a free-weight overhead extension where the load is hardest only partway through the range.
-- **Primary targets:** Triceps, with emphasis on the long head.
+- **Primary targets:** Triceps, commonly cited as long-head-biased, since the flexed shoulder position stretches the long head further than pressing or pushdowns do.
 - **Movement:** Elbow extension with the shoulder flexed.
 - **Coverage:** Isolation, lengthened-position emphasis, constant-tension resistance profile, moderate setup.
 - **Best used when:** A user wants an overhead triceps position with cable-style constant tension rather than free-weight loading. A rope, straight bar, or V-bar attachment all work; the choice is a grip preference rather than a different movement.
@@ -207,3 +219,4 @@ Before changing a record to Reviewed:
 - Add equipment, setup, fatigue, and relationship fields in the final data format.
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
+- The biceps and triceps head-bias claims ("commonly cited as X-biased") reflect widely repeated coaching cues, not settled EMG consensus — each needs an evidence note or a softer framing before Reviewed.
