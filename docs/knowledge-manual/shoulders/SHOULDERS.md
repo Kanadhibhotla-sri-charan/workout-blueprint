@@ -24,7 +24,19 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** Overhead strength is a goal, or a user wants one pressing movement that covers front delts and triceps together. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and a path each shoulder can find naturally, which many find kinder on the joint.
 - **Less suitable when:** Overhead range or shoulder tolerance is limiting, or the routine already contains a lot of pressing.
 - **Complements:** Side- and rear-delt work, which overhead pressing does not replace.
-- **Overlaps:** Machine shoulder press and cable shoulder press.
+- **Overlaps:** Machine shoulder press, cable shoulder press, and Smith machine shoulder press.
+- **Status:** Draft.
+
+### Smith Machine Shoulder Press
+
+- **Why this exists:** A barbell constrained to a fixed vertical or near-vertical rail, which removes most of the balance and bracing demand of a standing or seated barbell overhead press while still allowing a fixed-bar loading path.
+- **Primary targets:** Anterior deltoids; triceps contribute.
+- **Movement:** Vertical press.
+- **Coverage:** Stable compound, low-to-moderate skill demand, moderate setup.
+- **Best used when:** A user wants to train a barbell-style overhead press close to failure without the stability demand of a free bar.
+- **Less suitable when:** The fixed rail's path does not match a user's natural press arc, which can feel awkward on the shoulders.
+- **Complements:** Side- and rear-delt work.
+- **Overlaps:** Overhead press, seated machine shoulder press, and cable shoulder press.
 - **Status:** Draft.
 
 ### Cable Shoulder Press
@@ -36,7 +48,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** A user wants an overhead press that stays hard at the top of the range, or wants a lower-fatigue finisher after a heavier press.
 - **Less suitable when:** No cable station tall enough for the path is available, or a user wants the heavier loading free weights allow.
 - **Complements:** A heavier barbell or dumbbell press.
-- **Overlaps:** Overhead press and seated machine shoulder press; distinguish by resistance profile.
+- **Overlaps:** Overhead press, seated machine shoulder press, and Smith machine shoulder press; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Seated Machine Shoulder Press
@@ -48,7 +60,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Best used when:** Stability, repeatability, or close-to-failure work is the priority.
 - **Less suitable when:** The machine path or handle position feels poor for the individual.
 - **Complements:** Side- and rear-delt work.
-- **Overlaps:** Overhead press and cable shoulder press.
+- **Overlaps:** Overhead press, cable shoulder press, and Smith machine shoulder press.
 - **Status:** Draft.
 
 ### Dumbbell Lateral Raise

@@ -182,7 +182,7 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Primary targets:** Triceps, commonly cited as lateral- and medial-head-biased, since the shoulder stays extended rather than overhead; chest and anterior deltoids contribute.
 - **Movement:** Horizontal press.
 - **Coverage:** Heavy compound, moderate skill demand, moderate setup.
-- **Best used when:** A user wants triceps strength, or wants one movement covering pressing and triceps together.
+- **Best used when:** A user wants triceps strength, or wants one movement covering pressing and triceps together. A Smith machine removes the need for a spotter, the same trade-off it offers a regular-grip bench press.
 - **Less suitable when:** The elbows or wrists dislike the narrow grip, or the routine already has substantial pressing volume.
 - **Complements:** An overhead triceps extension, which loads a position pressing does not.
 - **Overlaps:** Dips and other horizontal presses.

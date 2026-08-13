@@ -86,7 +86,19 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Best used when:** Loading is limited, or a user wants leg work without heavy spinal loading.
 - **Less suitable when:** Balance limits the set before the legs do, or session time is short.
 - **Complements:** A bilateral squat or press.
-- **Overlaps:** Lunges, step-ups, and split squats; also recorded in the hips module.
+- **Overlaps:** Lunges, step-ups, split squats, and the Smith machine version below; also recorded in the hips module.
+- **Status:** Draft.
+
+### Smith Machine Bulgarian Split Squat
+
+- **Why this exists:** Fixing the bar to a vertical rail removes most of the balance demand that otherwise limits a free-weight Bulgarian split squat, directly addressing the stability issue that makes the free version hard for many users.
+- **Primary targets:** Quads and glutes; adductors and hip stabilizers contribute.
+- **Movement:** Unilateral knee- and hip-dominant.
+- **Coverage:** Unilateral compound, low-to-moderate stability demand, moderate setup.
+- **Best used when:** Balance is the limiting factor in the free-weight version rather than leg strength, or a user wants to push closer to failure per leg.
+- **Less suitable when:** The fixed rail's path does not match a user's natural lunge arc, or no Smith machine is available.
+- **Complements:** A bilateral squat or press.
+- **Overlaps:** The free-weight Bulgarian split squat; distinguish by stability demand.
 - **Status:** Draft.
 
 ### Goblet Squat

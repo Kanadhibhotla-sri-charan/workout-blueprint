@@ -22,7 +22,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Gluteus maximus; hamstrings and quads contribute.
 - **Movement:** Hip extension in a shortened context.
 - **Coverage:** Heavy compound, shortened-position emphasis, higher setup cost.
-- **Best used when:** Glute work is a specific goal, or a user wants hip extension without loading the spine the way a hinge does. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine offers a fixed path and often a cam-adjusted resistance curve, which some find more comfortable than a barbell.
+- **Best used when:** Glute work is a specific goal, or a user wants hip extension without loading the spine the way a hinge does. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine or a Smith machine both offer a fixed path, which some find more comfortable than balancing a free barbell.
 - **Less suitable when:** Setup time is short, or no bench and padding are available.
 - **Complements:** A hinge pattern such as the Romanian deadlift.
 - **Overlaps:** Glute bridges and machine hip-thrust variations.
@@ -49,7 +49,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Best used when:** Loading is limited, side-to-side differences matter, or a user wants hip work without heavy spinal loading.
 - **Less suitable when:** Balance is the limiting factor, or session time is short — unilateral work doubles the sets.
 - **Complements:** A bilateral squat or hinge.
-- **Overlaps:** Lunges, step-ups, and split squats; also recorded in the quads module.
+- **Overlaps:** Lunges, step-ups, and split squats; also recorded in the quads module, which also has the Smith machine version — fixing the bar removes most of the balance demand that is the main limiter here.
 - **Status:** Draft.
 
 ### Cable Kickback

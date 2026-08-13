@@ -48,7 +48,19 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Best used when:** Stability, repeatability, or close-to-failure work is the priority.
 - **Less suitable when:** The machine path or handle position feels poor for the individual.
 - **Complements:** A fly variation or a free-weight press with a distinct role.
-- **Overlaps:** Incline dumbbell, barbell, and Smith presses.
+- **Overlaps:** Incline dumbbell, barbell, cable, and Smith presses.
+- **Status:** Draft.
+
+### Smith Machine Incline Press
+
+- **Why this exists:** A barbell constrained to a fixed vertical or near-vertical rail, which removes the need for a spotter and most of the balance demand of a free barbell incline press while still allowing a fixed-bar loading path.
+- **Primary targets:** Chest; anterior deltoids and triceps contribute.
+- **Movement:** Incline horizontal press.
+- **Coverage:** Stable compound, low-to-moderate skill demand, moderate setup.
+- **Best used when:** A user wants to train an incline barbell-style press close to failure without a spotter.
+- **Less suitable when:** The fixed rail's path does not match a user's natural press arc, which can feel awkward on the shoulders or wrists.
+- **Complements:** A fly variation or a free-weight press with a distinct role.
+- **Overlaps:** Incline dumbbell, barbell, machine, and cable presses.
 - **Status:** Draft.
 
 ### Incline Cable Press
@@ -72,7 +84,19 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Best used when:** A user wants a progressable, heavily loadable chest press and has a bar and rack or a spotter.
 - **Less suitable when:** No rack or spotter is available at the loads a user wants to use, or shoulder tolerance favors a dumbbell path.
 - **Complements:** A fly variation or an incline press selected for a distinct role.
-- **Overlaps:** Flat dumbbell press, machine chest press, and cable chest press.
+- **Overlaps:** Flat dumbbell press, machine chest press, cable chest press, and Smith machine bench press.
+- **Status:** Draft.
+
+### Smith Machine Bench Press
+
+- **Why this exists:** A barbell constrained to a fixed vertical or near-vertical rail, which removes the need for a spotter and most of the balance demand of a free barbell bench press while still allowing a fixed-bar loading path.
+- **Primary targets:** Chest; anterior deltoids and triceps contribute.
+- **Movement:** Horizontal press.
+- **Coverage:** Stable compound, low-to-moderate skill demand, moderate setup.
+- **Best used when:** A user wants to train a barbell-style press close to failure without a spotter.
+- **Less suitable when:** The fixed rail's path does not match a user's natural press arc, which can feel awkward on the shoulders or wrists.
+- **Complements:** A fly variation or an incline press selected for a distinct role.
+- **Overlaps:** Flat barbell, dumbbell, machine, and cable presses.
 - **Status:** Draft.
 
 ### Flat Dumbbell Press
@@ -96,7 +120,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Best used when:** Stability, repeatability, or close-to-failure work is the priority.
 - **Less suitable when:** The machine path or handle position feels poor for the individual.
 - **Complements:** A fly variation or a free-weight press with a distinct role.
-- **Overlaps:** Flat barbell and dumbbell presses.
+- **Overlaps:** Flat barbell, dumbbell, and Smith machine presses.
 - **Status:** Draft.
 
 ### Cable Chest Press
