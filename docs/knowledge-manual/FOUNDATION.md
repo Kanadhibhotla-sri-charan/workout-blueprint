@@ -62,7 +62,7 @@ review_status: draft | reviewed | needs-review
 
 - Quads: rectus femoris, vastus lateralis, vastus medialis, vastus intermedius.
 - Hamstrings: biceps femoris, semitendinosus, semimembranosus.
-- Lower leg: gastrocnemius, soleus, tibialis anterior.
+- Lower leg: gastrocnemius (medial/inner head, lateral/outer head), soleus, tibialis anterior.
 
 ## Movement Taxonomy
 

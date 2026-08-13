@@ -56,8 +56,8 @@ A muscle name tells you where the work is happening. The exercise choice tells y
 
 - **Quads:** Straighten the knee. Squats, leg presses, and leg extensions are common choices.
 - **Hamstrings:** Bend the knee and help extend the hip. A good plan usually includes both a hinge pattern and a leg-curl pattern.
-- **Calves — gastrocnemius:** Crosses the knee and ankle; standing calf raises are a common option.
-- **Calves — soleus:** Works strongly when the knee is bent; seated calf raises are a common option.
+- **Calves — gastrocnemius (inner and outer heads):** Crosses the knee and ankle and gives the calf its visible shape; standing calf raises are a common option.
+- **Calves — soleus:** Works strongly when the knee is bent and adds thickness lower on the leg; seated calf raises are a common option.
 - **Tibialis anterior:** Lifts the foot upward. Tibialis raises are a direct option.
 
 ## Neck
