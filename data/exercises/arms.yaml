@@ -1,0 +1,910 @@
+# Canonical exercise records for the arms module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+# Converted from docs/knowledge-manual/arms/ARMS.md.
+#
+# Note: every "commonly cited as X-biased" head-bias claim in
+# primary_targets/secondary_targets below reflects a widely repeated
+# coaching cue, not settled EMG consensus. evidence_notes are left empty
+# per ADR 0001's no-fabrication policy — each needs a real source or a
+# softer framing before review_status can move past draft.
+
+- id: barbell-ez-bar-curl
+  name: Barbell or EZ-Bar Curl
+  summary: >-
+    The most straightforward loadable curl, the primary mechanical-
+    tension, strength-building biceps movement.
+  why_this_exists: >-
+    The most straightforward loadable curl, with small load steps and an
+    easy progression path.
+  body_regions: [arms]
+  primary_targets: [biceps (both heads, roughly even at a neutral shoulder position)]
+  secondary_targets: [brachialis, forearms]
+  movement_patterns: [elbow flexion]
+  equipment: [barbell, ez-bar]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    Free-weight profile, fixed bar path.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The primary mechanical-tension, strength-building curl is wanted, to
+      progress load on over time.
+  less_suitable_when:
+    - A straight bar irritates the wrists — an EZ bar or dumbbells deliver
+      the same stimulus without that cost.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A curl with a different arm position, or a neutral-grip curl.
+  overlaps_with:
+    - dumbbell-curl
+    - cable-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: dumbbell-curl
+  name: Dumbbell Curl
+  summary: >-
+    The same standing curl as the barbell version, with independent arms
+    for a fuller supination path and a bit more stretch.
+  why_this_exists: >-
+    The same standing curl as the barbell version, but independent arms
+    let each side move and rotate on its own path, which some find kinder
+    on the wrists and elbows.
+  body_regions: [arms]
+  primary_targets: [biceps (both heads, roughly even at a neutral shoulder position)]
+  secondary_targets: [brachialis, forearms]
+  movement_patterns: [elbow flexion]
+  equipment: [dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    Free-weight profile, independent arms.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A full supination path through the rep is wanted for a bit more
+      range and stretch than a fixed bar allows, or side-to-side
+      differences need spotting.
+  less_suitable_when:
+    - The heavier loading and fixed path a barbell allows is wanted for a
+      stronger mechanical-tension stimulus.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A curl with a different arm position, or a neutral-grip curl.
+  overlaps_with:
+    - barbell-ez-bar-curl
+    - cable-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: incline-dumbbell-curl
+  name: Incline Dumbbell Curl
+  summary: >-
+    Places the upper arm behind the body for the strongest available
+    stretch-mediated biceps growth stimulus.
+  why_this_exists: >-
+    Places the upper arm behind the body, so the load stays meaningful
+    with the elbow near full extension.
+  body_regions: [arms]
+  primary_targets: [biceps (commonly cited as long-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow flexion in a lengthened shoulder position]
+  equipment: [dumbbell, incline bench]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile, hardest with the arm long, extended shoulder
+    position.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A strong stretch-mediated growth stimulus is wanted, which the
+      extended shoulder position delivers in a way a standing curl cannot
+      replicate.
+  less_suitable_when:
+    - The shoulder position is uncomfortable, capping how much of that
+      stretch can actually be used under load.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A shortened-position curl such as a preacher curl.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
+
+- id: preacher-curl
+  name: Preacher Curl
+  summary: >-
+    Fixes the upper arm forward on a pad, removing swing for a strict,
+    shortened-position biceps stimulus.
+  why_this_exists: >-
+    Fixes the upper arm forward on a pad, which removes swing and keeps
+    tension nearer the top of the range.
+  body_regions: [arms]
+  primary_targets: [biceps (commonly cited as short-head-biased)]
+  secondary_targets: [brachialis]
+  movement_patterns: [elbow flexion in a shortened shoulder position]
+  equipment: [barbell, ez-bar, dumbbell, preacher bench]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, shortened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile; barbell, EZ-bar, or dumbbells all work on the
+    same bench — a grip and independent-arm preference, not a different
+    movement.
+  stability_demand: low
+  skill_demand: low
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A strict, swing-free mechanical-tension stimulus is wanted late in a
+      session, when standing curls would start to rely on momentum.
+  less_suitable_when:
+    - The bottom of the range feels uncomfortable under load, which can
+      limit how much of the strict range actually gets used.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A lengthened-position curl such as an incline curl.
+  overlaps_with:
+    - preacher-curl-machine
+  evidence_notes: []
+  review_status: draft
+
+- id: preacher-curl-machine
+  name: Preacher Curl Machine
+  summary: >-
+    A fixed-path preacher curl, well suited to pushing the strict
+    shortened-position stimulus safely to true failure.
+  why_this_exists: >-
+    A fixed-path preacher curl that removes the need for a separate bench
+    and free weight, and often adds a cam that adjusts resistance through
+    the range.
+  body_regions: [arms]
+  primary_targets: [biceps (commonly cited as short-head-biased)]
+  secondary_targets: [brachialis]
+  movement_patterns: [elbow flexion in a shortened shoulder position]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, shortened-position-emphasis]
+  resistance_profile: >-
+    Fixed-path, often cam-adjusted through the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The preacher curl's strict, swing-free stimulus is wanted pushed
+      safely to true failure or a drop set, since the fixed path removes
+      any chance of the bar drifting to help.
+  less_suitable_when:
+    - The machine's pad or handle position doesn't suit the individual,
+      which can blunt the tension felt regardless of how heavy the stack
+      is loaded.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A lengthened-position curl such as an incline curl.
+  overlaps_with:
+    - preacher-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: hammer-curl
+  name: Hammer Curl
+  summary: >-
+    A neutral-grip curl shifting work toward the brachialis and
+    brachioradialis for arm thickness rather than biceps peak.
+  why_this_exists: >-
+    A neutral grip shifts work toward the brachialis and brachioradialis,
+    which contribute to arm and forearm thickness.
+  body_regions: [arms]
+  primary_targets: [brachialis, brachioradialis]
+  secondary_targets: [biceps]
+  movement_patterns: [elbow flexion with a neutral grip]
+  equipment: [dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    Free-weight profile, neutral grip.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - An arm-thickness stimulus is wanted that a supinated curl mostly
+      misses, since the neutral grip shifts real tension onto the
+      brachialis and brachioradialis instead of the biceps peak.
+  less_suitable_when:
+    - The routine already contains enough elbow-flexion volume, in which
+      case this adds fatigue without a distinct growth role.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A supinated curl.
+  overlaps_with:
+    - cable-hammer-curl-rope
+    - cross-body-hammer-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-hammer-curl-rope
+  name: Cable Hammer Curl (Rope)
+  summary: >-
+    A rope-attachment neutral-grip curl keeping constant tension on the
+    brachialis and brachioradialis, a pump-oriented arm-thickness
+    finisher.
+  why_this_exists: >-
+    A rope attachment held in a neutral grip keeps tension on the
+    brachialis and brachioradialis through the whole range, including the
+    top, where a dumbbell hammer curl loses load.
+  body_regions: [arms]
+  primary_targets: [brachialis, brachioradialis]
+  secondary_targets: [biceps]
+  movement_patterns: [elbow flexion with a neutral grip]
+  equipment: [cable, rope attachment]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Constant tension through the whole range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A pump-oriented arm-thickness finisher is wanted that stays hard at
+      the top of the range, where a dumbbell hammer curl goes slack.
+  less_suitable_when:
+    - The heavier loading dumbbells allow is wanted for a stronger
+      mechanical-tension stimulus.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A supinated curl.
+  overlaps_with:
+    - hammer-curl
+    - cross-body-hammer-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: cross-body-hammer-curl
+  name: Cross-Body Hammer Curl
+  summary: >-
+    A diagonal-path hammer curl variation toward the opposite shoulder,
+    for a different line of pull once straight hammer curls plateau.
+  why_this_exists: >-
+    Curling the dumbbell diagonally toward the opposite shoulder changes
+    the line of pull from a straight hammer curl, which shifts the demand
+    and gives a substitute when a neutral grip alone stops feeling
+    challenging.
+  body_regions: [arms]
+  primary_targets: [brachialis, brachioradialis]
+  secondary_targets: [biceps]
+  movement_patterns: [elbow flexion with a neutral grip and a diagonal path]
+  equipment: [dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    Free-weight profile, diagonal path.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Straight hammer curls are already established and a variation with a
+      different line of pull is wanted to keep progressing the same
+      arm-thickness stimulus.
+  less_suitable_when:
+    - The diagonal path turns into swinging, trading the growth stimulus
+      for momentum.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A straight hammer curl or a supinated curl.
+  overlaps_with:
+    - hammer-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-curl
+  name: Cable Curl
+  summary: >-
+    A curl with constant biceps tension through the whole range,
+    including the top, for a pump-oriented stimulus.
+  why_this_exists: >-
+    A cable keeps tension on the biceps through the whole range, including
+    the top, where a dumbbell or barbell curl loses load.
+  body_regions: [arms]
+  primary_targets: [biceps (both heads)]
+  secondary_targets: [brachialis]
+  movement_patterns: [elbow flexion]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Constant tension through the whole range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A pump-oriented curl is wanted that stays hard at the top of the
+      range, a metabolic-stress stimulus a free weight can't deliver
+      there.
+  less_suitable_when:
+    - The heavier loading a barbell allows is wanted for a stronger
+      mechanical-tension stimulus.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A free-weight curl with a different resistance profile.
+  overlaps_with:
+    - barbell-ez-bar-curl
+    - dumbbell-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: drag-curl
+  name: Drag Curl
+  summary: >-
+    Dragging the bar up along the torso lets the elbows travel behind
+    the body for a stricter, more isolated biceps stimulus.
+  why_this_exists: >-
+    Dragging the bar up along the torso lets the elbows travel behind the
+    body instead of staying pinned forward, which removes front-delt
+    involvement and changes the biceps' loading path.
+  body_regions: [arms]
+  primary_targets: [biceps (commonly cited as short-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow flexion with the elbows drawn behind the torso]
+  equipment: [barbell, ez-bar]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Free-weight profile, elbows-behind-body path.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A stricter, more isolated biceps stimulus is wanted that removes the
+      shoulder swing a standard curl can lean on.
+  less_suitable_when:
+    - Shoulder mobility doesn't allow the elbows to travel back
+      comfortably, limiting how strict the path can actually be kept.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A standard barbell or dumbbell curl.
+  overlaps_with:
+    - barbell-ez-bar-curl
+    - cable-drag-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-drag-curl
+  name: Cable Drag Curl
+  summary: >-
+    Combines the drag curl's elbows-behind-the-body path with constant
+    cable tension for a pump-oriented, strict biceps stimulus.
+  why_this_exists: >-
+    Combines the drag curl's elbows-behind-the-body path with a cable's
+    constant tension, so the set stays hard even at the top of the range
+    instead of losing load the way a barbell drag curl does.
+  body_regions: [arms]
+  primary_targets: [biceps (commonly cited as short-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow flexion with the elbows drawn behind the torso]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Constant tension through the whole range, elbows-behind-body path.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - The drag curl's strict path is wanted with a pump-oriented,
+      constant-tension stimulus instead of a free weight's fading
+      top-range load.
+  less_suitable_when:
+    - The heavier loading a barbell allows is wanted for a stronger
+      mechanical-tension stimulus.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A standard cable or free-weight curl.
+  overlaps_with:
+    - drag-curl
+    - cable-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: zottman-curl
+  name: Zottman Curl
+  summary: >-
+    Curls up supinated like a standard curl, then rotates pronated and
+    lowers like a reverse curl — one movement for biceps and forearm.
+  why_this_exists: >-
+    Curls up with a supinated grip like a standard curl, then rotates to a
+    pronated grip at the top and lowers like a reverse curl, so one
+    movement trains the biceps on the way up and the forearm extensors
+    and brachioradialis on the way down.
+  body_regions: [arms]
+  primary_targets: [biceps (concentric half)]
+  secondary_targets: [brachioradialis, wrist extensors (eccentric half)]
+  movement_patterns: [elbow flexion with a grip rotation between supinated and pronated]
+  equipment: [dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    Free-weight profile with a mid-rep grip rotation.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A combined biceps-and-forearm growth stimulus is wanted in one
+      movement, with the slow eccentric half adding real tension the
+      concentric-only lift of a standard curl skips.
+  less_suitable_when:
+    - The rotation at the top breaks down under heavier load, capping how
+      much weight can be used for either half of the stimulus.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A standard curl or a reverse curl programmed on their own for more
+      focused volume.
+  overlaps_with:
+    - barbell-ez-bar-curl
+    - "reverse-curl (forearms module) — the eccentric half of this
+      movement."
+  evidence_notes: []
+  review_status: draft
+
+- id: close-grip-bench-press
+  name: Close-Grip Bench Press
+  summary: >-
+    The heaviest, most mechanical-tension-driven triceps stimulus
+    available, under loads single-joint extensions cannot reach.
+  why_this_exists: >-
+    Lets the triceps be trained under loads that single-joint extensions
+    cannot reach.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as lateral- and medial-head-biased)]
+  secondary_targets: [chest, anterior deltoids]
+  movement_patterns: [horizontal press]
+  equipment: [barbell, smith machine]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound]
+  resistance_profile: >-
+    Free-weight profile; a Smith machine removes the spotter requirement,
+    the same trade-off it offers a regular-grip bench press.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: medium
+  best_used_when:
+    - The heaviest, most mechanical-tension-driven triceps stimulus
+      available is the goal, with chest and shoulder work coming along as
+      a secondary benefit.
+  less_suitable_when:
+    - The elbows or wrists dislike the narrow grip, or the routine already
+      has substantial pressing volume competing for the same recovery.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An overhead triceps extension, which loads a position pressing does
+      not.
+  overlaps_with:
+    - dip-triceps-biased
+  evidence_notes: []
+  review_status: draft
+
+- id: overhead-triceps-extension
+  name: Overhead Triceps Extension
+  summary: >-
+    Trains elbow extension with the shoulder flexed, commonly cited as
+    the strongest stretch-mediated stimulus for the triceps long head.
+  why_this_exists: >-
+    Trains elbow extension with the shoulder flexed, a position that
+    pressing movements do not load.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as long-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow extension with the shoulder flexed]
+  equipment: [barbell, ez-bar, dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile; barbell or EZ-bar allows the heaviest load on a
+    fixed path, dumbbells allow independent arms.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - Triceps work has all been pressing and pushdowns, and what's missing
+      is the long head's strongest stretch-mediated growth stimulus.
+  less_suitable_when:
+    - The overhead position is uncomfortable, capping how much of that
+      stretch can actually be loaded.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A pressing movement or a pushdown.
+  overlaps_with:
+    - cable-overhead-extension-leaning-forward
+    - lying-triceps-extension-skull-crusher
+  evidence_notes: []
+  review_status: draft
+
+- id: lying-triceps-extension-skull-crusher
+  name: Lying Triceps Extension (Skull Crusher)
+  summary: >-
+    Loads the triceps in a lengthened position with the shoulder at
+    roughly 90 degrees, a partial stretch distinct from the overhead
+    position.
+  why_this_exists: >-
+    Loads the triceps in a lengthened position with the shoulder at
+    roughly 90 degrees, a different joint angle from the overhead
+    extension.
+  body_regions: [arms]
+  primary_targets: [triceps (partial long-head stretch, less than overhead, more than a pushdown)]
+  secondary_targets: []
+  movement_patterns: [elbow extension]
+  equipment: [barbell, ez-bar, dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile; barbell or EZ-bar allows heavier loading on a
+    fixed path, dumbbells allow independent arms and a neutral-grip
+    option.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A free-weight stretch-mediated stimulus is wanted without the
+      overhead shoulder position's mobility demand.
+  less_suitable_when:
+    - Elbow tolerance is limiting, or bar path control near the head
+      becomes the limiting factor before the triceps are meaningfully
+      fatigued.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A pressing movement or a pushdown.
+  overlaps_with:
+    - overhead-triceps-extension
+  evidence_notes: []
+  review_status: draft
+
+- id: dip-triceps-biased
+  name: Dip (Triceps-Biased, Upright Torso)
+  summary: >-
+    An upright-torso dip shifting emphasis toward the triceps rather
+    than the lower chest, a heavy bodyweight compound stimulus.
+  why_this_exists: >-
+    With the torso kept upright, a dip shifts emphasis toward the triceps
+    rather than the lower chest, letting one piece of equipment serve two
+    different roles depending on execution.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as lateral- and medial-head-biased)]
+  secondary_targets: [anterior deltoids]
+  movement_patterns: [elbow extension within a vertical-to-horizontal press]
+  equipment: [dip bars, bodyweight]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound]
+  resistance_profile: >-
+    Bodyweight-scaled; loading capacity capped by bodyweight unless added
+    load or assistance is used.
+  stability_demand: high
+  skill_demand: high
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - A heavy, mechanical-tension-driven triceps stimulus is wanted under
+      a real compound movement rather than an isolation exercise.
+  less_suitable_when:
+    - Shoulder tolerance limits a deep dip, or bodyweight alone is too
+      heavy a starting load to complete a useful number of reps.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A pressing movement or a pushdown.
+  overlaps_with:
+    - "dip-chest-biased (chest module) — torso angle is what separates the
+      two."
+    - close-grip-bench-press
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-pushdown
+  name: Cable Pushdown
+  summary: >-
+    A low-cost, pump-oriented triceps finisher with easy load adjustment
+    and a fast setup.
+  why_this_exists: >-
+    A low-cost way to add triceps volume without another press, with easy
+    load adjustment and a fast setup.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as lateral-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow extension]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Constant tension; straight bar, V-bar, or rope are a grip preference
+    within this record, not a separate movement.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A pump-oriented triceps finisher is wanted late in a session, or
+      after pressing has already accumulated fatigue and a
+      lower-fatigue-cost stimulus is what's left to give.
+  less_suitable_when:
+    - A lengthened-position, stretch-mediated stimulus is the priority
+      instead — an overhead extension delivers that where a pushdown does
+      not.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An overhead extension, which loads a different position.
+  overlaps_with:
+    - triceps-kickback
+    - cable-overhead-extension-leaning-forward
+    - machine-triceps-extension
+  evidence_notes: []
+  review_status: draft
+
+- id: machine-triceps-extension
+  name: Machine Triceps Extension
+  summary: >-
+    A fixed-path elbow extension removing cable-height and attachment
+    setup, well suited to a triceps pump pushed to true failure.
+  why_this_exists: >-
+    A fixed-path elbow extension that removes the cable-height and
+    attachment setup of a pushdown, often with a cam that adjusts
+    resistance through the range.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as lateral-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow extension]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Fixed-path, often cam-adjusted through the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A triceps pump stimulus is wanted pushed safely to true failure
+      without bracing against a cable's pull to help stabilize the
+      movement.
+  less_suitable_when:
+    - The machine's seat or handle position doesn't suit the individual,
+      which can blunt the tension felt regardless of how heavy the stack
+      is loaded.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An overhead extension, which loads a different position.
+  overlaps_with:
+    - cable-pushdown
+  evidence_notes: []
+  review_status: draft
+
+- id: triceps-kickback
+  name: Triceps Kickback
+  summary: >-
+    Holds the upper arm still and extends only the forearm, a light,
+    low-fatigue mind-muscle-connection finisher.
+  why_this_exists: >-
+    Holds the upper arm still and extends only the forearm against
+    resistance, isolating the triceps at the end of the range where
+    pressing and pushdowns are already easiest.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as lateral- and medial-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow extension with the shoulder held in extension]
+  equipment: [dumbbell, cable]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Free weight or cable, light load.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A light, low-fatigue, mind-muscle-connection finisher is wanted
+      rather than a movement meant to add real mechanical tension.
+  less_suitable_when:
+    - The upper arm drops during the set, which turns the movement into a
+      shoulder exercise and loses the isolated triceps stimulus that's the
+      point of the kickback.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A pressing movement or a pushdown.
+  overlaps_with:
+    - cable-pushdown
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-overhead-extension-leaning-forward
+  name: Cable Overhead Extension (Leaning Forward)
+  summary: >-
+    Leaning forward away from the stack while extending overhead keeps
+    constant tension through the triceps long head's stretch.
+  why_this_exists: >-
+    Standing away from the stack, facing away from it, and leaning the
+    torso forward while extending overhead keeps constant tension on the
+    triceps through the stretch, unlike a free-weight overhead extension
+    where the load is hardest only partway through the range.
+  body_regions: [arms]
+  primary_targets: [triceps (commonly cited as long-head-biased)]
+  secondary_targets: []
+  movement_patterns: [elbow extension with the shoulder flexed, torso leaning forward away from the stack]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Constant tension through the whole range; rope, straight bar, or
+    V-bar attachment is a grip preference, not a separate movement.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - The long head's strongest stretch position is wanted combined with
+      pump-oriented constant tension, rather than a free weight's fading
+      top-range load.
+  less_suitable_when:
+    - The heaviest possible loading for a strength-driven stimulus is the
+      priority, which free weights deliver more of.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A pressing movement or a pushdown.
+  overlaps_with:
+    - overhead-triceps-extension
+    - cable-pushdown
+  evidence_notes: []
+  review_status: draft

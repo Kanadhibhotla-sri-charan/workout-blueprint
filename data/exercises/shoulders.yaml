@@ -1,0 +1,651 @@
+# Canonical exercise records for the shoulders module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+# Converted from docs/knowledge-manual/shoulders/SHOULDERS.md.
+
+- id: overhead-press
+  name: Overhead Press
+  summary: >-
+    The main loadable vertical press, the primary mechanical-tension
+    stimulus for the front delts and triceps together.
+  why_this_exists: >-
+    The main loadable vertical press, useful when a user wants overhead
+    pressing strength rather than only shoulder size.
+  body_regions: [shoulders]
+  primary_targets: [anterior deltoids]
+  secondary_targets: [triceps, upper chest, trunk musculature]
+  movement_patterns: [vertical press]
+  equipment: [barbell, dumbbell]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound]
+  resistance_profile: >-
+    Free-weight profile; barbell allows the heaviest fixed-path load,
+    dumbbells allow independent arms.
+  stability_demand: high
+  skill_demand: high
+  setup_time: medium
+  fatigue_cost: high
+  best_used_when:
+    - The primary mechanical-tension and strength-building stimulus for
+      the front delts is the goal, with the triceps and upper chest
+      sharing a meaningful part of the load.
+  less_suitable_when:
+    - The routine already has a heavy pressing movement covering
+      mechanical tension, and what's missing is a pump-oriented finisher
+      or dedicated side- and rear-delt work.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Side- and rear-delt work, which overhead pressing does not replace.
+  overlaps_with:
+    - smith-machine-shoulder-press
+    - cable-shoulder-press
+    - seated-machine-shoulder-press
+  evidence_notes: []
+  review_status: draft
+
+- id: smith-machine-shoulder-press
+  name: Smith Machine Shoulder Press
+  summary: >-
+    A barbell on a fixed vertical rail, removing most of the balance and
+    bracing demand of a standing or seated overhead press.
+  why_this_exists: >-
+    A barbell constrained to a fixed vertical or near-vertical rail, which
+    removes most of the balance and bracing demand of a standing or
+    seated barbell overhead press while still allowing a fixed-bar
+    loading path.
+  body_regions: [shoulders]
+  primary_targets: [anterior deltoids]
+  secondary_targets: [triceps]
+  movement_patterns: [vertical press]
+  equipment: [smith machine]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [stable-compound]
+  resistance_profile: >-
+    Fixed vertical/near-vertical rail path; free-weight-like load curve.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: medium
+  best_used_when:
+    - A front-delt set is wanted pushed closer to true failure than could
+      safely be handled unspotted with a free barbell.
+  less_suitable_when:
+    - The fixed rail's path doesn't match a user's natural press arc,
+      which can shift stress onto the joint rather than the muscle.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Side- and rear-delt work.
+  overlaps_with:
+    - overhead-press
+    - seated-machine-shoulder-press
+    - cable-shoulder-press
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-shoulder-press
+  name: Cable Shoulder Press
+  summary: >-
+    A standing cable press with constant tension through the range, for
+    a pump-oriented front-delt stimulus.
+  why_this_exists: >-
+    A standing cable press keeps constant tension through the range,
+    unlike a free-weight press where the load is easiest at lockout, and
+    lets the path converge in front of the body the way free weights and
+    machines don't.
+  body_regions: [shoulders]
+  primary_targets: [anterior deltoids]
+  secondary_targets: [triceps]
+  movement_patterns: [vertical press]
+  equipment: [cable]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Constant tension through the whole range.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - An overhead press that stays hard at the top of the range is wanted,
+      or a lower-fatigue finisher after a heavier press.
+  less_suitable_when:
+    - The priority is the heaviest possible loading for a strength-driven
+      stimulus, which free weights deliver more of.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A heavier barbell or dumbbell press.
+  overlaps_with:
+    - overhead-press
+    - seated-machine-shoulder-press
+    - smith-machine-shoulder-press
+  evidence_notes: []
+  review_status: draft
+
+- id: seated-machine-shoulder-press
+  name: Seated Machine Shoulder Press
+  summary: >-
+    A stable vertical press well suited to pushing a front-delt set to
+    true failure without managing balance or bar path.
+  why_this_exists: >-
+    A stable vertical press that lets the user push closer to failure
+    without managing balance or bar path.
+  body_regions: [shoulders]
+  primary_targets: [anterior deltoids]
+  secondary_targets: [triceps]
+  movement_patterns: [vertical press]
+  equipment: [machine]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [stable-compound]
+  resistance_profile: >-
+    Fixed-path, often cam-adjusted through the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - A front-delt set is wanted pushed to true failure, or into a drop
+      set — removing the balance demand means the last hard reps come from
+      the delts giving out, not a stabilizer losing control of the bar.
+  less_suitable_when:
+    - The machine path or handle position doesn't match a user's shoulder
+      mechanics, which can blunt the tension the delts actually feel
+      regardless of how heavy the stack is loaded.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Side- and rear-delt work.
+  overlaps_with:
+    - overhead-press
+    - cable-shoulder-press
+    - smith-machine-shoulder-press
+  evidence_notes: []
+  review_status: draft
+
+- id: dumbbell-lateral-raise
+  name: Dumbbell Lateral Raise
+  summary: >-
+    The most available direct side-delt option, a mechanical-tension and
+    pump stimulus that peaks near the top of the range.
+  why_this_exists: >-
+    The most available direct side-delt option, and the main way to add
+    shoulder width when pressing already covers the front delts.
+  body_regions: [shoulders]
+  primary_targets: [lateral deltoids]
+  secondary_targets: []
+  movement_patterns: [shoulder abduction]
+  equipment: [dumbbell]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    Free-weight profile, hardest near the top of the range (roughly
+    shoulder height), easiest at the bottom.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A side-delt-specific mechanical-tension and pump stimulus is wanted
+      that peaks near the top of the range, the position most people mean
+      when picturing lateral raise work.
+  less_suitable_when:
+    - Momentum takes over the rep — once the swing is doing the work, the
+      growth stimulus on the side delt mostly disappears even though the
+      weight is still moving.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A vertical press and rear-delt work.
+  overlaps_with:
+    - cable-lateral-raise
+    - machine-lateral-raise
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-lateral-raise
+  name: Cable Lateral Raise
+  summary: >-
+    A side-delt option whose resistance stays meaningful in the stretched
+    bottom position, unlike a dumbbell raise.
+  why_this_exists: >-
+    A side-delt option whose resistance stays meaningful lower in the
+    range than a dumbbell raise, which changes where the movement feels
+    hardest.
+  body_regions: [shoulders]
+  primary_targets: [lateral deltoids]
+  secondary_targets: []
+  movement_patterns: [shoulder abduction]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Constant tension through the whole range, meaningful even in the
+    stretched bottom position.
+  stability_demand: low
+  skill_demand: low
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A side-delt stimulus is wanted that stays under real tension in the
+      stretched, bottom position — where a dumbbell raise is easiest — for
+      a genuinely different growth emphasis, or to train one side at a
+      time.
+  less_suitable_when:
+    - The simplest possible setup for side-delt work is preferred, or
+      another movement already provides a stretched-position stimulus and
+      the top-loaded dumbbell profile is wanted instead.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A vertical press; may be run alongside dumbbell raises only if the
+      routine needs both profiles.
+  overlaps_with:
+    - dumbbell-lateral-raise
+    - machine-lateral-raise
+  evidence_notes: []
+  review_status: draft
+
+- id: machine-lateral-raise
+  name: Machine Lateral Raise
+  summary: >-
+    A fixed-path abduction option that removes balance and momentum,
+    well suited to pushing a side-delt set to true failure.
+  why_this_exists: >-
+    A fixed-path abduction option that removes the balance and momentum
+    demand of a dumbbell raise, often with a cam that adjusts the
+    resistance through the range.
+  body_regions: [shoulders]
+  primary_targets: [lateral deltoids]
+  secondary_targets: []
+  movement_patterns: [shoulder abduction]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Fixed-path, often cam-adjusted through the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A side-delt pump stimulus is wanted that's safe to push to true
+      failure or a drop set, since there's no momentum or balance
+      available to quietly take over the rep.
+  less_suitable_when:
+    - The machine's pivot point or pad position doesn't suit the
+      individual, which can blunt the tension actually felt regardless of
+      how heavy the stack is loaded.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A vertical press.
+  overlaps_with:
+    - dumbbell-lateral-raise
+    - cable-lateral-raise
+  evidence_notes: []
+  review_status: draft
+
+- id: rear-delt-fly
+  name: Rear-Delt Fly
+  summary: >-
+    Direct, stretch-mediated rear-delt work that pressing-heavy routines
+    commonly leave short.
+  why_this_exists: >-
+    Direct rear-delt work, which pressing-heavy routines commonly leave
+    short.
+  body_regions: [shoulders]
+  primary_targets: [posterior deltoids]
+  secondary_targets: [mid-back]
+  movement_patterns: [shoulder horizontal abduction]
+  equipment: [dumbbell, machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Free-weight or fixed-path machine, depending on equipment.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A stretch-mediated, isolated growth stimulus for the rear delts is
+      wanted without adding another heavy pull to the session.
+  less_suitable_when:
+    - The elbows bend enough that the movement turns into a row — the
+      stimulus shifts toward a more mechanical-tension, less isolated
+      rear-delt effect, which may or may not be what was wanted.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Horizontal pulling and side-delt work.
+  overlaps_with:
+    - face-pull
+    - cable-rear-delt-builder
+    - rear-delt-row
+    - machine-reverse-fly
+  evidence_notes: []
+  review_status: draft
+
+- id: machine-reverse-fly
+  name: Machine Reverse Fly
+  summary: >-
+    A fixed-path rear-delt fly that removes balance demand, well suited
+    to a rear-delt pump pushed to true failure.
+  why_this_exists: >-
+    A fixed-path rear-delt fly that removes the balance demand of a
+    dumbbell version, often with a cam that adjusts the resistance
+    through the range.
+  body_regions: [shoulders]
+  primary_targets: [posterior deltoids]
+  secondary_targets: [mid-back]
+  movement_patterns: [shoulder horizontal abduction]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Fixed-path, often cam-adjusted through the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A rear-delt pump stimulus is wanted that's safe to push to true
+      failure or a drop set, since there's no momentum available to take
+      over the rep.
+  less_suitable_when:
+    - The machine's pivot point or pad position doesn't suit the
+      individual, which can blunt the tension the rear delts actually
+      feel.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A vertical press and horizontal pulling.
+  overlaps_with:
+    - rear-delt-fly
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-rear-delt-builder
+  name: Cable Rear Delt Builder
+  summary: >-
+    A cable row keeping the elbows below the wrists throughout the pull,
+    holding the resistance angle specifically on the rear delt.
+  why_this_exists: >-
+    A cable row that keeps the elbows slightly below the wrists all the
+    way through the pull, which holds the resistance angle on the rear
+    delt's specific action instead of letting the traps or rhomboids take
+    over higher in the range.
+  body_regions: [shoulders]
+  primary_targets: [posterior deltoids]
+  secondary_targets: [mid-back]
+  movement_patterns: [shoulder horizontal abduction combined with elbow flexion]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Cable stack, constant tension.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A mechanical-tension rear-delt stimulus is wanted with more loadable
+      progression than a fly typically allows, while keeping the
+      resistance angled specifically at the rear delt rather than the
+      traps.
+  less_suitable_when:
+    - The elbows rise above the wrists at the top, which drifts the
+      stimulus toward the traps and rhomboids instead of the rear delts.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A rear-delt fly and a face pull, which cover a stretched isolation
+      position and a rotation component the row does not.
+  overlaps_with:
+    - rear-delt-fly
+    - face-pull
+    - seated-cable-row
+    - rear-delt-row
+  evidence_notes: []
+  review_status: draft
+
+- id: rear-delt-row
+  name: Rear Delt Row
+  summary: >-
+    A seated dumbbell row from a dead hang, elbows down and thumbs
+    rotating back and up, driving the rear delts through extension.
+  why_this_exists: >-
+    A seated dumbbell row that starts from a dead hang below the
+    hamstrings and pulls back with the elbows staying down and the
+    thumbs rotating slightly back and up, which drives the rear delts
+    through extension rather than only horizontal abduction.
+  body_regions: [shoulders]
+  primary_targets: [posterior deltoids]
+  secondary_targets: [mid-back]
+  movement_patterns: [shoulder extension and horizontal abduction with slight external rotation at the top]
+  equipment: [dumbbell, bench]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Free-weight profile, bent-over seated start position.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A free-weight, mechanical-tension rear-delt stimulus is wanted and a
+      bent-over seated position under light-to-moderate load can be held.
+  less_suitable_when:
+    - The lower back rounds to hold the bent-over position, or the elbows
+      flare up and out instead of staying down and back — both signal the
+      stimulus is drifting away from the rear delts.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A rear-delt fly or a cable rear delt builder.
+  overlaps_with:
+    - cable-rear-delt-builder
+    - rear-delt-fly
+  evidence_notes: []
+  review_status: draft
+
+- id: face-pull
+  name: Face Pull
+  summary: >-
+    Combines a moderate rear-delt stimulus with a shoulder-rotation,
+    joint-health component in one movement.
+  why_this_exists: >-
+    Combines rear-delt work with a shoulder-rotation component, so one
+    movement covers a growth role and a joint-health role together when
+    time is short.
+  body_regions: [shoulders]
+  primary_targets: [posterior deltoids, mid/lower trapezius]
+  secondary_targets: [external rotators]
+  movement_patterns: [shoulder horizontal abduction with external rotation]
+  equipment: [cable, band]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Cable or band, constant tension.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A moderate rear-delt stimulus is wanted alongside rotator-cuff and
+      shoulder-control work in a single movement, rather than programming
+      them separately.
+  less_suitable_when:
+    - Load is heavy enough that the rotation is lost — at that point it
+      functions more like a rear-delt row and loses the control-work half
+      of its value.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Pressing work.
+  overlaps_with:
+    - rear-delt-fly
+    - cable-rear-delt-builder
+    - cable-band-external-rotation
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-band-external-rotation
+  name: Cable or Band External Rotation
+  summary: >-
+    Isolates shoulder external rotation for joint durability, not a
+    primary size driver.
+  why_this_exists: >-
+    Isolates shoulder external rotation, which is difficult to load
+    meaningfully inside larger pressing and pulling movements.
+  body_regions: [shoulders]
+  primary_targets: [external rotators of the shoulder]
+  secondary_targets: []
+  movement_patterns: [shoulder external rotation]
+  equipment: [cable, band]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Cable or band, constant tension, light load.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Joint durability and controlled rotation strength are the goal as
+      part of general shoulder training — a health-and-resilience role,
+      not a primary size driver.
+  less_suitable_when:
+    - Loads are heavy enough to lose control of the movement. This is
+      general training work — shoulder pain or symptoms need professional
+      assessment rather than self-treatment.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Pressing and rear-delt work.
+  overlaps_with:
+    - face-pull
+  evidence_notes: []
+  review_status: draft
+
+- id: push-up-plus
+  name: Push-Up Plus
+  summary: >-
+    A low-equipment scapular-protraction drill, a durability and
+    movement-quality tool rather than a primary size driver.
+  why_this_exists: >-
+    A low-equipment way to train scapular protraction, which most
+    pressing and pulling does not load directly.
+  body_regions: [shoulders]
+  primary_targets: [serratus anterior]
+  secondary_targets: [chest, triceps]
+  movement_patterns: [scapular protraction within a horizontal press]
+  equipment: [bodyweight]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [low-setup, equipment-limited-substitute]
+  resistance_profile: >-
+    Bodyweight-scaled.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Scapular control and movement quality are wanted as part of a
+      warm-up or general shoulder health work — a durability role, not a
+      primary size driver.
+  less_suitable_when:
+    - The extra range at the top is skipped, which turns it back into an
+      ordinary push-up and loses the scapular-control value that's the
+      whole point of this variation.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Overhead pressing and horizontal pulling.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
