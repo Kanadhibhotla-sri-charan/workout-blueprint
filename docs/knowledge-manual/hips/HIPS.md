@@ -54,16 +54,16 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Overlaps:** The free-weight Romanian deadlift; distinguish by how much the setup controls the bar path.
 - **Status:** Draft.
 
-### Bulgarian Split Squat
+### Bulgarian Split Squat (Long-Stance, Hip-Dominant Execution)
 
-- **Why this exists:** A unilateral pattern that loads the hip through a long range with much less absolute load than a bilateral squat.
-- **Primary targets:** Glutes and quads; adductors and hip stabilizers contribute.
-- **Movement:** Unilateral knee- and hip-dominant.
+- **Why this exists:** A unilateral pattern that loads the hip through a long range with much less absolute load than a bilateral squat. Setting the front foot further out in front, keeping the torso upright, and letting the hips sink straight down and back — rather than letting the front knee travel forward — is what shifts this movement's emphasis onto the glutes and hamstrings specifically. This is the stance and execution this record describes; the quads module has the same exercise with a shorter stance for a different emphasis.
+- **Primary targets:** Glutes; hamstrings, quads, and adductors contribute, but the quads contribute less than with the shorter-stance, knee-dominant execution described in the quads module.
+- **Movement:** Unilateral hip-dominant, long-stance execution.
 - **Coverage:** Unilateral compound, high stability demand, moderate setup, high perceived effort.
-- **Best used when:** A user wants a strong per-side mechanical-tension and stretch stimulus without heavy spinal loading, or wants to close a side-to-side strength gap through focused per-leg volume.
-- **Less suitable when:** Balance limits the set before the hip and leg muscles are meaningfully fatigued, which caps how much of the intended stimulus the set can actually deliver.
+- **Best used when:** A user specifically wants a strong per-side, stretch-mediated stimulus for the glutes and hamstrings, or wants to close a side-to-side strength gap through focused per-leg volume.
+- **Less suitable when:** A user wants to bias the quads instead — a shorter stance with the knee traveling forward, described in the quads module's copy of this exercise, does that instead. Balance limiting the set before the target muscles are fatigued is also a sign to check load or stance before adding more.
 - **Complements:** A bilateral squat or hinge.
-- **Overlaps:** Lunges, step-ups, and split squats; also recorded in the quads module, which also has the Smith machine version — fixing the bar removes most of the balance demand that is the main limiter here.
+- **Overlaps:** Lunges, step-ups, and split squats; also recorded in the quads module, which uses a shorter stance and knee-dominant execution for a quad-biased emphasis, and which also has the Smith machine version — fixing the bar removes most of the balance demand that is the main limiter here.
 - **Status:** Draft.
 
 ### Cable Kickback

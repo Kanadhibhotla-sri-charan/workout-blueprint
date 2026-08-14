@@ -55,6 +55,18 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Overlaps:** Back squat and hack squat.
 - **Status:** Draft.
 
+### Sumo Squat
+
+- **Why this exists:** A wide stance with the toes turned out changes the joint angles at the hip and knee, bringing the adductors into the squat as a real mechanical-tension target rather than just a stabilizer, and often allows a more upright torso than a shoulder-width stance.
+- **Primary targets:** Quads and adductors; glutes contribute.
+- **Movement:** Squat / knee-dominant, wide stance.
+- **Coverage:** Heavy compound, high hip-mobility demand (external rotation), moderate setup.
+- **Best used when:** A user wants a squat variation that trains the adductors directly, or whose torso length or hip mobility makes a more upright squat more comfortable than a shoulder-width stance.
+- **Less suitable when:** Hip external-rotation mobility is limiting, which can push stress onto the knees or lower back instead of the intended muscles.
+- **Complements:** A narrower-stance squat, which trains the adductors less directly.
+- **Overlaps:** Back squat and other knee-dominant patterns; distinguish by stance width.
+- **Status:** Draft.
+
 ### Hack Squat
 
 - **Why this exists:** A guided squat path that biases the quads and needs far less balance and bracing than a barbell squat.
@@ -79,16 +91,16 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Overlaps:** Hack squats and back squats.
 - **Status:** Draft.
 
-### Bulgarian Split Squat
+### Bulgarian Split Squat (Short-Stance, Knee-Dominant Execution)
 
-- **Why this exists:** Loads one leg through a long range with a fraction of the absolute load, which suits limited equipment and reveals side-to-side differences.
-- **Primary targets:** Quads and glutes; adductors and hip stabilizers contribute.
-- **Movement:** Unilateral knee- and hip-dominant.
+- **Why this exists:** Loads one leg through a long range with a fraction of the absolute load, which suits limited equipment and reveals side-to-side differences. Setting the front foot closer under the torso and letting the knee travel forward over the toes — rather than sinking the hips straight down and back — is what shifts this movement's emphasis onto the quads specifically. This is the stance and execution this record describes; the hips module has the same exercise with a longer stance for a different emphasis.
+- **Primary targets:** Quads; glutes and adductors contribute, but less than with the longer-stance, hip-dominant execution described in the hips module.
+- **Movement:** Unilateral knee-dominant, short-stance execution.
 - **Coverage:** Unilateral compound, high stability demand, high perceived effort.
-- **Best used when:** A user wants a strong per-side mechanical-tension and stretch stimulus without heavy spinal loading, or wants to close a side-to-side strength gap.
-- **Less suitable when:** Balance limits the set before the legs are meaningfully fatigued, which caps how much of the intended stimulus the set can actually deliver.
+- **Best used when:** A user specifically wants a strong per-side, mechanical-tension stimulus for the quads, or wants to close a side-to-side strength gap.
+- **Less suitable when:** A user wants to bias the glutes and hamstrings instead — a longer stance with the hips sinking straight down and back, described in the hips module's copy of this exercise, does that instead. Balance limiting the set before the target muscles are fatigued is also a sign to check load or stance before adding more.
 - **Complements:** A bilateral squat or press.
-- **Overlaps:** Lunges, step-ups, split squats, and the Smith machine version below; also recorded in the hips module.
+- **Overlaps:** Lunges, step-ups, split squats, and the Smith machine version below; also recorded in the hips module, which uses a longer stance and hip-dominant execution for a glute-biased emphasis instead.
 - **Status:** Draft.
 
 ### Smith Machine Bulgarian Split Squat
@@ -113,6 +125,18 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Less suitable when:** The load a single dumbbell allows stops being challenging, at which point a barbell squat delivers a stronger mechanical-tension stimulus.
 - **Complements:** A barbell squat or press where available.
 - **Overlaps:** Back squat, front squat, and other knee-dominant patterns.
+- **Status:** Draft.
+
+### Dumbbell Squat (Sides)
+
+- **Why this exists:** Holding a dumbbell in each hand at the sides, rather than one held at the chest, removes the anti-flexion core-bracing demand a goblet squat adds and allows more total load, since two dumbbells split between two hands aren't limited by how much a single implement can be held at the chest.
+- **Primary targets:** Quads; glutes and adductors contribute.
+- **Movement:** Squat / knee-dominant.
+- **Coverage:** Low-to-moderate equipment, low-to-moderate skill demand, self-limiting load.
+- **Best used when:** A user wants a heavier loadable dumbbell squat than a goblet squat allows, without the front-loaded core-bracing demand.
+- **Less suitable when:** Grip becomes the limiting factor before the legs are meaningfully fatigued, which caps how much of the intended stimulus the set can actually deliver.
+- **Complements:** A barbell squat or a goblet squat, depending on what's available.
+- **Overlaps:** Goblet squat and other knee-dominant patterns; distinguish by dumbbell position and loading capacity.
 - **Status:** Draft.
 
 ### Leg Extension
