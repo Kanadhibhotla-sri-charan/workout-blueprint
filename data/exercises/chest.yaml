@@ -1,0 +1,175 @@
+# Canonical exercise records for the chest module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+#
+# STATUS: partial sample (3 of 19 chest records), not yet a full conversion.
+# Purpose: validate the schema mapping from the prose in
+# docs/knowledge-manual/chest/CHEST.md before converting the remaining 16
+# chest records and the other 10 modules the same way. Fields with no
+# source material in the prose (mirror_effect, advantages, limitations,
+# technique_cues, common_mistakes, programming_notes, alternatives,
+# evidence_notes) are left empty rather than fabricated — populating them
+# is separate follow-on work, not a byproduct of this conversion.
+#
+# Judgment calls made converting prose -> schema that weren't explicit in
+# the source and are worth a second look before this pattern is repeated
+# 121 more times:
+#   - stability_demand / skill_demand / setup_time / fatigue_cost are new
+#     discrete low/medium/high fields with no direct prose equivalent;
+#     values below are inferred from Coverage-field wording.
+#   - complements / overlaps_with reference other records by id where the
+#     target is in this same file; cross-module references (e.g. to the
+#     arms module's triceps-biased dip) are kept as plain text until that
+#     module is converted and a stable id exists to point to.
+
+- id: incline-dumbbell-press
+  name: Incline Dumbbell Press
+  summary: >-
+    A freely moving incline press for an upper-chest-biased mechanical-
+    tension and stretch stimulus, using independent dumbbells.
+  why_this_exists: >-
+    A freely moving incline press for users who want an incline-oriented
+    chest press and can control independent dumbbells.
+  body_regions: [chest]
+  primary_targets:
+    - chest (commonly cited as upper/clavicular-biased)
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  movement_patterns: [incline horizontal press]
+  equipment: [dumbbell, bench]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound, lengthened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile, hardest through the middle of the range; independent
+    arms allow a deeper bottom-range stretch than a fixed bar, at the cost of
+    a lower absolute load ceiling than a barbell press.
+  stability_demand: high
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: medium
+  best_used_when:
+    - A strong mechanical-tension stimulus for the upper chest is the goal.
+    - A deeper bottom-range stretch than a barbell allows is wanted, since
+      each arm can drop past where a fixed bar would stop.
+  less_suitable_when:
+    - The stability demand of controlling two independent dumbbells caps how
+      much weight can be used, limiting the mechanical-tension ceiling for a
+      stronger lifter.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - cable-fly
+    - A stable machine press, depending on the rest of the routine.
+  overlaps_with:
+    - incline-barbell-press
+    - incline-machine-press
+    - smith-machine-incline-press
+    - incline-cable-press
+  evidence_notes: []
+  review_status: draft
+
+- id: flat-dumbbell-fly
+  name: Flat Dumbbell Fly
+  summary: >-
+    A free-weight, mid-chest-biased adduction movement with a strong
+    bottom-range stretch stimulus, performed flat.
+  why_this_exists: >-
+    A free-weight chest adduction option performed flat; the load is
+    hardest around the mid-range and eases at the top, the opposite feel
+    from a cable fly.
+  body_regions: [chest]
+  primary_targets:
+    - chest (commonly cited as mid-biased)
+  secondary_targets: []
+  movement_patterns: [shoulder horizontal adduction]
+  equipment: [dumbbell, bench]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile, hardest at the bottom stretch, easing off as the
+    arms come together at the top — the opposite curve from a cable fly.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A strong stretch-mediated growth stimulus for the mid chest is the
+      goal — the resistance is hardest exactly where the muscle is most
+      lengthened, which a press does not replicate.
+  less_suitable_when:
+    - Tension held through the top of the range is wanted; a cable fly
+      holds that tension where this movement's resistance profile gives it
+      up as the arms come together.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A pressing movement.
+  overlaps_with:
+    - incline-dumbbell-fly
+    - decline-dumbbell-fly
+    - cable-fly
+    - machine-fly-pec-deck
+  evidence_notes: []
+  review_status: draft
+
+- id: dip-chest-biased
+  name: Dip (Chest-Biased, Forward Lean)
+  summary: >-
+    A bodyweight press that, with a forward torso lean, is one of the few
+    ways to load the lower chest heavily.
+  why_this_exists: >-
+    A bodyweight press that, with a forward torso lean, biases the lower
+    chest more than flat or incline pressing does.
+  body_regions: [chest]
+  primary_targets:
+    - chest (commonly cited as lower/costal-biased)
+  secondary_targets:
+    - triceps
+    - anterior deltoids
+  movement_patterns: [horizontal-to-vertical press]
+  equipment: [dip bars, bodyweight]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound, lengthened-position-emphasis]
+  resistance_profile: >-
+    Bodyweight-scaled, hardest at the bottom stretch; loading capacity is
+    capped by bodyweight unless added load or assistance is used.
+  stability_demand: high
+  skill_demand: high
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - One of the few genuinely heavy, mechanical-tension-driven options for
+      the lower chest is wanted, with a deep stretch at the bottom most
+      pressing angles don't reach.
+  less_suitable_when:
+    - Shoulder range or tolerance limits how deep the dip can go, which
+      caps the stretch that gives this movement its main growth value — a
+      shallow dip loses most of what makes it distinct from a flat press.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An incline press, which covers the opposite end of the chest.
+  overlaps_with:
+    - "The triceps-biased dip recorded in the arms module (id pending that
+      module's conversion); torso angle is what separates the two."
+  evidence_notes: []
+  review_status: draft

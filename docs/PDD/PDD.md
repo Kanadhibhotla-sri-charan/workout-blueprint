@@ -259,7 +259,7 @@ Quality is measured by better decisions, not exercise count.
 
 ## 12. Open Decisions
 
-- YAML, JSON, or TypeScript as the canonical exercise-record format.
+- ~~YAML, JSON, or TypeScript as the canonical exercise-record format.~~ Resolved: YAML. See [ADR 0001](../adr/0001-canonical-record-format.md).
 - The review threshold before a record can power a recommendation.
 - Relationship-strength representation without fake numerical precision.
 - Required evidence fields for introductory versus advanced content.
