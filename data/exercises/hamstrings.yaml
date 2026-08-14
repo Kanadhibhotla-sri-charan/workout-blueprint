@@ -1,0 +1,305 @@
+# Canonical exercise records for the hamstrings module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+# Converted from docs/knowledge-manual/hamstrings/HAMSTRINGS.md.
+#
+# Note: the first record, romanian-deadlift, is the canonical home for
+# that exercise per ADR 0001's dedup resolution — body_regions covers
+# both hips and hamstrings rather than physically duplicating the record
+# in hips.yaml. It was confirmed by audit to have no execution fork
+# between the two prose modules, unlike the 45-degree back extension and
+# Bulgarian split squat, which genuinely do and stay as separate records.
+
+- id: romanian-deadlift
+  name: Romanian Deadlift
+  summary: >-
+    The main loadable hinge, and the most direct way to train the
+    hamstrings and glutes together in a lengthened position under heavy
+    load.
+  why_this_exists: >-
+    The main loadable hinge, and the most direct way to train the
+    hamstrings in a lengthened position under heavy load.
+  body_regions: [hips, hamstrings]
+  primary_targets: [hamstrings, glutes]
+  secondary_targets: [spinal erectors]
+  movement_patterns: [hip hinge, moderate knee bend]
+  equipment: [barbell, dumbbell, smith machine]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound, lengthened-position-emphasis]
+  resistance_profile: >-
+    A barbell allows the heaviest fixed-path load; dumbbells allow
+    independent arms and are often the easier entry point for learning
+    the hinge; a Smith machine variant exists (see hips module) for
+    beginners still learning to control the bar path.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: high
+  best_used_when:
+    - The strongest available stretch-mediated growth stimulus for the
+      hamstrings and glutes together is wanted, in a lengthened position
+      no curl variation reaches.
+  less_suitable_when:
+    - Lower-back fatigue is already high, capping how much of the
+      lengthened-position load can safely be used.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: >-
+    Unlike the 45-degree back extension or Bulgarian split squat, an RDL
+    doesn't have a clean discrete technique switch that biases glutes vs.
+    hamstrings — the moderate knee bend trains both together by design
+    throughout the whole movement. For a more hamstring-isolated
+    stimulus, see stiff-leg-deadlift below. For a more glute-isolated,
+    shortened-position stimulus, see hip-thrust in the hips module.
+  alternatives: []
+  complements:
+    - A leg-curl pattern, since a hinge alone leaves knee flexion
+      untrained.
+  overlaps_with:
+    - stiff-leg-deadlift
+    - back-extension-45-hip-dominant
+    - "back-extension-45-spinal-dominant (back module)"
+    - "conventional-deadlift (back module) — related but distinct hinge
+      that starts from the floor."
+    - "smith-machine-romanian-deadlift (hips module)"
+  evidence_notes: []
+  review_status: draft
+
+- id: stiff-leg-deadlift
+  name: Stiff-Leg Deadlift
+  summary: >-
+    Keeping the knees much straighter than an RDL pushes nearly all the
+    stretch and tension onto the hamstrings specifically.
+  why_this_exists: >-
+    Keeping the knees much straighter than an RDL removes most of the
+    knee's contribution to the hinge, which pushes nearly all of the
+    stretch and tension onto the hamstrings specifically, at the cost of
+    the load capacity and lower-back sparing the RDL's knee bend
+    provides.
+  body_regions: [hamstrings]
+  primary_targets: [hamstrings]
+  secondary_targets: [glutes (less than an RDL)]
+  movement_patterns: [hip hinge, straight-leg execution]
+  equipment: [barbell, dumbbell]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [heavy-compound, lengthened-position-emphasis]
+  resistance_profile: >-
+    Free-weight profile, minimal knee bend.
+  stability_demand: medium
+  skill_demand: high
+  setup_time: medium
+  fatigue_cost: high
+  best_used_when:
+    - The most hamstring-isolated stretch-mediated stimulus this movement
+      family offers is specifically wanted, and the added lower-back
+      demand the straighter legs bring can be tolerated.
+  less_suitable_when:
+    - Lower-back fatigue or hamstring flexibility limits how straight the
+      legs can safely stay, or the RDL's higher load capacity and more
+      balanced glute-hamstring stimulus is wanted instead.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A knee-flexion-dominant leg curl or a shortened-position movement
+      such as the hip thrust.
+  overlaps_with:
+    - romanian-deadlift
+  evidence_notes: []
+  review_status: draft
+
+- id: seated-leg-curl
+  name: Seated Leg Curl
+  summary: >-
+    Trains knee flexion with the hip bent, a stretch-biased mechanical-
+    tension stimulus a hinge alone doesn't provide.
+  why_this_exists: >-
+    Trains knee flexion with the hip bent, so the hamstrings are longer
+    during the curl than in a lying version.
+  body_regions: [hamstrings]
+  primary_targets: [hamstrings]
+  secondary_targets: []
+  movement_patterns: [knee flexion with the hip flexed]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, lengthened-position-emphasis]
+  resistance_profile: >-
+    Fixed-path machine.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A stretch-biased, mechanical-tension knee-flexion stimulus is wanted
+      that a hinge alone doesn't provide, pushed safely close to failure
+      on a fixed path.
+  less_suitable_when:
+    - The hips lift off the pad during the set, which shortens the
+      hamstrings and trades away the stretch position that gives this
+      movement its distinct value.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A hinge pattern.
+  overlaps_with:
+    - lying-leg-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: lying-leg-curl
+  name: Lying Leg Curl
+  summary: >-
+    Trains knee flexion with the hip closer to straight, a distinct
+    growth emphasis from the seated version.
+  why_this_exists: >-
+    Trains knee flexion with the hip closer to straight, a different hip
+    position from the seated version.
+  body_regions: [hamstrings]
+  primary_targets: [hamstrings]
+  secondary_targets: [calves]
+  movement_patterns: [knee flexion with the hip extended]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Fixed-path machine.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A knee-flexion, mechanical-tension stimulus is wanted in a
+      shorter-hamstring position than the seated curl provides, for a
+      genuinely different growth emphasis.
+  less_suitable_when:
+    - The hips rise during the set, signaling the load has outrun what the
+      hamstrings alone can control.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A hinge pattern.
+  overlaps_with:
+    - seated-leg-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: nordic-hamstring-curl
+  name: Nordic Hamstring Curl
+  summary: >-
+    Produces high hamstring tension during the lowering phase with no
+    machine, commonly cited for growth and injury-resilience benefits.
+  why_this_exists: >-
+    Produces high hamstring tension during the lowering phase with no
+    machine, and scales through partner support, bands, or range.
+  body_regions: [hamstrings]
+  primary_targets: [hamstrings]
+  secondary_targets: []
+  movement_patterns: [knee flexion, eccentric emphasis]
+  equipment: [bodyweight, partner or anchor]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [low-setup, skill-coordination]
+  resistance_profile: >-
+    Bodyweight, eccentric-emphasis; scales through partner support, bands,
+    or range.
+  stability_demand: medium
+  skill_demand: high
+  setup_time: low
+  fatigue_cost: high
+  best_used_when:
+    - One of the most demanding eccentric-tension stimuli available for
+      the hamstrings is wanted, commonly cited for both growth and
+      injury-resilience benefits.
+  less_suitable_when:
+    - The descent can't yet be controlled at all, or a user is very sore
+      from prior hamstring work — start with a short range and build up
+      rather than loading the full eccentric immediately.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A hinge pattern.
+  overlaps_with:
+    - seated-leg-curl
+    - lying-leg-curl
+  evidence_notes: []
+  review_status: draft
+
+- id: back-extension-45-hip-dominant
+  name: 45° Back Extension (Hip-Hinge-Dominant Execution)
+  summary: >-
+    A loaded hip-extension pattern executed with bent knees and a
+    neutral lower back, biasing the hamstrings and glutes specifically.
+  why_this_exists: >-
+    Trains hip extension with far less setup and systemic cost than a
+    heavy hinge. Bending the knees slightly and driving the movement
+    from the hips — keeping the lower back neutral rather than actively
+    extending it — is what shifts this movement's emphasis onto the
+    hamstrings and glutes specifically. This is the execution this
+    record describes; the back module has the same equipment used with a
+    different execution for a different emphasis.
+  body_regions: [hamstrings]
+  primary_targets: [hamstrings, glutes]
+  secondary_targets: [spinal erectors (less than the spinal-extension-dominant execution)]
+  movement_patterns: [hip extension, hip-hinge-dominant execution]
+  equipment: [45-degree hyperextension bench]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [stable-compound, low-fatigue]
+  resistance_profile: >-
+    Bodyweight or lightly loaded.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A moderate mechanical-tension hip-extension stimulus specifically
+      for the hamstrings and glutes is wanted, easier to recover from than
+      a heavy hinge, or Romanian deadlifts are grip-limited before the
+      hamstrings are.
+  less_suitable_when:
+    - The spinal erectors need to be biased instead — keeping the legs
+      straighter and allowing controlled lumbar extension, described in
+      the back module's copy of this exercise, does that instead. Back
+      symptoms are a stop-and-assess signal either way, not something to
+      train through.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A leg-curl pattern.
+  overlaps_with:
+    - romanian-deadlift
+    - "back-extension-45-spinal-dominant (back module) — same equipment,
+      spinal-extension-dominant execution, erector bias instead."
+  evidence_notes: []
+  review_status: draft

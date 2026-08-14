@@ -1,0 +1,182 @@
+# Canonical exercise records for the neck module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+# Converted from docs/knowledge-manual/neck/NECK.md.
+#
+# Safety note carried from the prose module: load lightly, add load
+# slowly, keep movement controlled, and stop at symptoms. Neck pain,
+# headaches, dizziness, or any sensation travelling into the arms needs
+# professional assessment rather than continued training. For this
+# module, that safety framing takes priority over growth framing wherever
+# the two conflict.
+
+- id: isometric-neck-hold
+  name: Isometric Neck Hold
+  summary: >-
+    The lowest-barrier entry point to neck training, building tolerance
+    and control before loaded work.
+  why_this_exists: >-
+    The lowest-barrier entry point to neck training, with no equipment
+    and no head movement under load.
+  body_regions: [neck]
+  primary_targets: [neck flexors, neck extensors, neck lateral flexors]
+  secondary_targets: []
+  movement_patterns: [neck isometric]
+  equipment: [bodyweight, band, manual resistance]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [low-setup, equipment-limited-substitute]
+  resistance_profile: >-
+    Isometric, direction depends on which resistance is applied.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Initial tolerance and control are being built before loaded work —
+      this delivers a modest strength stimulus but is not a primary size
+      driver on its own.
+  less_suitable_when:
+    - Loaded work is already well tolerated and a clearer path to
+      progressive overload is wanted, which isometric holds are poorly
+      suited to track over time.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Loaded neck work introduced gradually afterward.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
+
+- id: neck-extension
+  name: Neck Extension
+  summary: >-
+    Loads the back of the neck, the region most responsible for visible
+    neck thickness.
+  why_this_exists: >-
+    Loads the back of the neck, which is what most neck-size goals are
+    actually about, and which sitting posture rarely trains.
+  body_regions: [neck]
+  primary_targets: [neck extensors]
+  secondary_targets: [upper trapezius]
+  movement_patterns: [neck extension]
+  equipment: [harness, plate, machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Harness, plate, or machine.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A genuine mechanical-tension growth stimulus is wanted for the area
+      most responsible for visible neck thickness, once control has
+      already been built through isometric work.
+  less_suitable_when:
+    - Load or range can't yet be controlled — a lighter load with a slower
+      tempo is the better next step, not a heavier one.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Neck flexion work, so the region is not trained in one direction
+      only.
+  overlaps_with:
+    - neck-flexion
+  evidence_notes: []
+  review_status: draft
+
+- id: neck-flexion
+  name: Neck Flexion
+  summary: >-
+    Loads the front of the neck, which shrugs, rows, and extension work
+    do not cover.
+  why_this_exists: >-
+    Loads the front of the neck, which shrugs, rows, and extension work
+    do not cover.
+  body_regions: [neck]
+  primary_targets: [neck flexors]
+  secondary_targets: []
+  movement_patterns: [neck flexion]
+  equipment: [plate, band]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue, low-setup]
+  resistance_profile: >-
+    Plate or band.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Neck extension is already trained and a balanced growth stimulus on
+      both sides of the neck is wanted rather than one direction only.
+  less_suitable_when:
+    - Range or load can't be controlled, or symptoms appear at any point
+      in the range — this is a stop signal, not something to push through
+      for more stimulus.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Neck extension work.
+  overlaps_with:
+    - neck-extension
+  evidence_notes: []
+  review_status: draft
+
+- id: lateral-neck-flexion
+  name: Lateral Neck Flexion
+  summary: >-
+    Covers side-to-side neck strength, which straight flexion and
+    extension leave out.
+  why_this_exists: >-
+    Covers side-to-side neck strength, which straight flexion and
+    extension leave out.
+  body_regions: [neck]
+  primary_targets: [lateral neck flexors]
+  secondary_targets: []
+  movement_patterns: [neck lateral flexion]
+  equipment: [bodyweight, band, manual resistance]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [isolation, low-fatigue, low-setup]
+  resistance_profile: >-
+    Bodyweight, band, or manual resistance.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Complete, symmetric neck development is wanted rather than only the
+      front-to-back directions, often for a sport-specific reason.
+  less_suitable_when:
+    - The basic front-to-back directions aren't yet trained comfortably,
+      or symptoms are present — those come first.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Flexion and extension work.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft

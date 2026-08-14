@@ -1,0 +1,232 @@
+# Canonical exercise records for the calves and lower leg module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+# Converted from docs/knowledge-manual/calves/CALVES.md.
+
+- id: standing-calf-raise
+  name: Standing Calf Raise
+  summary: >-
+    The straight-knee position lets the gastrocnemius contribute, the
+    raise most responsible for calf width and shape.
+  why_this_exists: >-
+    The straight-knee position lets the gastrocnemius contribute, which a
+    seated raise limits — this is the raise most responsible for calf
+    width and the diamond shape the muscle makes when flexed.
+  body_regions: [calves]
+  primary_targets: [gastrocnemius (inner/medial and outer/lateral heads)]
+  secondary_targets: [soleus]
+  movement_patterns: [ankle plantarflexion with the knee straight]
+  equipment: [machine, smith machine, dumbbell, block or plate]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-setup]
+  resistance_profile: >-
+    A dedicated machine or a barbell in a Smith machine both give a fixed
+    path; holding dumbbells while standing on a block or plate is the
+    free-weight equivalent and needs no machine at all.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A heavier, mechanical-tension-driven stimulus for the gastrocnemius
+      is wanted, with a full stretch at the bottom and a hard, paused
+      contraction at the top. Turning the toes slightly out or in shifts a
+      little more emphasis to the inner or outer head respectively.
+  less_suitable_when:
+    - The bottom stretch gets cut short by bouncing onto the toes quickly,
+      trading away most of the growth stimulus for rep count.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: >-
+    The toe-angle inner/outer head-bias cue is a widely repeated coaching
+    cue, not settled EMG consensus.
+  alternatives: []
+  complements:
+    - A bent-knee raise, which covers the soleus.
+  overlaps_with:
+    - leg-press-calf-raise
+    - single-leg-calf-raise
+  evidence_notes: []
+  review_status: draft
+
+- id: seated-calf-raise
+  name: Seated Calf Raise
+  summary: >-
+    The bent knee takes the gastrocnemius mostly out of play, so the
+    soleus carries the load — a soleus-specific stimulus.
+  why_this_exists: >-
+    The bent knee takes the gastrocnemius mostly out of play, so the
+    soleus — the muscle that adds fullness and thickness lower on the
+    leg — carries the load instead.
+  body_regions: [calves]
+  primary_targets: [soleus]
+  secondary_targets: [gastrocnemius (less than a straight-knee raise)]
+  movement_patterns: [ankle plantarflexion with the knee bent]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, stable-compound, low-fatigue]
+  resistance_profile: >-
+    Fixed-path machine.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A soleus-specific stimulus is wanted that a standing raise mostly
+      misses, or a higher-rep, pump-oriented finisher — the soleus is
+      commonly cited to tolerate and respond well to higher rep ranges and
+      shorter rest than the gastrocnemius.
+  less_suitable_when:
+    - Overall calf size is the goal and the gastrocnemius-dominant position
+      hasn't yet been covered in the same session.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A straight-knee raise.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
+
+- id: leg-press-calf-raise
+  name: Leg-Press Calf Raise
+  summary: >-
+    Lets calf work be tacked onto the end of a leg-press set at almost
+    no extra cost, for accumulating extra volume.
+  why_this_exists: >-
+    Lets calf work be tacked onto the end of a leg-press set at almost no
+    extra cost, which suits it to accumulating extra volume rather than
+    being a primary growth driver.
+  body_regions: [calves]
+  primary_targets: [gastrocnemius, soleus]
+  secondary_targets: []
+  movement_patterns: [ankle plantarflexion]
+  equipment: [leg press machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, stable-compound, low-setup]
+  resistance_profile: >-
+    Fixed-path machine; knee angle (straight vs. bent) determines
+    gastrocnemius vs. soleus emphasis.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Extra calf volume is wanted with minimal added fatigue tacked onto
+      an existing leg session, rather than a dedicated, high-intensity
+      calf-focused set.
+  less_suitable_when:
+    - The knee angle drifts between reps, blurring whether the
+      gastrocnemius or soleus is actually getting the stimulus and making
+      the work harder to progress deliberately.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A raise done in the other knee position.
+  overlaps_with:
+    - standing-calf-raise
+    - seated-calf-raise
+  evidence_notes: []
+  review_status: draft
+
+- id: single-leg-calf-raise
+  name: Single-Leg Calf Raise
+  summary: >-
+    Bodyweight on one leg is often load enough, and training one side at
+    a time closes side-to-side gaps a bilateral raise can hide.
+  why_this_exists: >-
+    Bodyweight on one leg is often load enough on its own, and training
+    one side at a time exposes and closes side-to-side gaps a bilateral
+    raise can hide.
+  body_regions: [calves]
+  primary_targets: [gastrocnemius]
+  secondary_targets: [soleus]
+  movement_patterns: [unilateral ankle plantarflexion]
+  equipment: [bodyweight]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [unilateral, low-setup, equipment-limited-substitute]
+  resistance_profile: >-
+    Bodyweight-scaled.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A deep-stretch, slow-eccentric stimulus is wanted that bodyweight
+      alone can deliver, or a lagging side needs to be brought level with
+      the other through focused per-side volume.
+  less_suitable_when:
+    - Balance becomes the limiting factor before the calf is meaningfully
+      fatigued, capping how much stimulus the set can actually deliver.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A seated raise for the soleus.
+  overlaps_with:
+    - standing-calf-raise
+  evidence_notes: []
+  review_status: draft
+
+- id: tibialis-raise
+  name: Tibialis Raise
+  summary: >-
+    Directly trains the front of the shin, which no common lower-body
+    lift loads, rounding out lower-leg development.
+  why_this_exists: >-
+    Directly trains the front of the shin, which no common lower-body
+    lift loads, rounding out lower-leg development rather than leaving
+    the front of the leg entirely untrained.
+  body_regions: [calves]
+  primary_targets: [tibialis anterior]
+  secondary_targets: []
+  movement_patterns: [ankle dorsiflexion]
+  equipment: [wall, band, dedicated device]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue, low-setup]
+  resistance_profile: >-
+    Bodyweight, band, or dedicated device.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Even lower-leg development and shin resilience are wanted alongside
+      calf size, rather than treating "calves" as only the muscles on the
+      back of the lower leg.
+  less_suitable_when:
+    - Calf size specifically is the goal — this movement does not load
+      the gastrocnemius or soleus and will not move that goal.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Plantarflexion work.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
