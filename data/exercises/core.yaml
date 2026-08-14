@@ -1,0 +1,397 @@
+# Canonical exercise records for the core module.
+# Format decided in docs/adr/0001-canonical-record-format.md.
+# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
+# Converted from docs/knowledge-manual/core/CORE.md.
+#
+# Note: plank, pallof-press, and suitcase-carry are primarily stability-
+# and-control tools, not hypertrophy drivers — see their best_used_when
+# fields, which say so explicitly.
+
+- id: cable-crunch
+  name: Cable Crunch
+  summary: >-
+    A trunk-flexion movement with adjustable load, the genuine
+    mechanical-tension growth stimulus for the abs.
+  why_this_exists: >-
+    A trunk-flexion movement with adjustable load, so abdominal work can
+    progress the way other lifts do.
+  body_regions: [core]
+  primary_targets: [rectus abdominis]
+  secondary_targets: [obliques]
+  movement_patterns: [trunk flexion]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation]
+  resistance_profile: >-
+    Small load increments via a cable stack.
+  stability_demand: low
+  skill_demand: low
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A genuine mechanical-tension growth stimulus for the abs is wanted,
+      progressing load over time rather than adding reps indefinitely.
+  less_suitable_when:
+    - The hips take over the movement, shifting the stimulus away from the
+      abs and toward hip flexion instead.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An anti-rotation or anti-extension movement.
+  overlaps_with:
+    - machine-crunch
+  evidence_notes: []
+  review_status: draft
+
+- id: machine-crunch
+  name: Machine Crunch
+  summary: >-
+    A fixed-path trunk-flexion movement, well suited to pushing an ab
+    mechanical-tension stimulus safely to true failure.
+  why_this_exists: >-
+    A fixed-path trunk-flexion movement that removes the cable-height
+    setup of a cable crunch, often with a cam that adjusts resistance
+    through the range.
+  body_regions: [core]
+  primary_targets: [rectus abdominis]
+  secondary_targets: [obliques]
+  movement_patterns: [trunk flexion]
+  equipment: [machine]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Fixed-path, often cam-adjusted through the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A mechanical-tension ab stimulus is wanted pushed safely to true
+      failure, since the fixed path removes any technique variability
+      that would otherwise limit the load.
+  less_suitable_when:
+    - The machine's pad position doesn't suit the individual, which can
+      blunt the tension felt regardless of how heavy the stack is loaded.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An anti-rotation or anti-extension movement.
+  overlaps_with:
+    - cable-crunch
+  evidence_notes: []
+  review_status: draft
+
+- id: hanging-knee-leg-raise
+  name: Hanging Knee or Leg Raise
+  summary: >-
+    Trains hip flexion with trunk control, scaling from bent knees to
+    straight legs without changing equipment.
+  why_this_exists: >-
+    Trains hip flexion with trunk control, and scales from bent knees to
+    straight legs without changing equipment.
+  body_regions: [core]
+  primary_targets: [hip flexors, rectus abdominis]
+  secondary_targets: [obliques, grip]
+  movement_patterns: [hip flexion with trunk flexion]
+  equipment: [pull-up bar]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories: [low-setup, skill-coordination]
+  resistance_profile: >-
+    Bodyweight-scaled, progresses through range and leg position.
+  stability_demand: medium
+  skill_demand: high
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - A hip-flexor-and-ab growth stimulus is wanted that scales purely
+      through range and leg position, without needing added load.
+  less_suitable_when:
+    - Grip fails first or the movement turns into swinging, both of which
+      drain the set of the controlled tension that gives it its growth
+      value.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A loaded trunk-flexion movement.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
+
+- id: plank
+  name: Plank
+  summary: >-
+    The lowest-barrier anti-extension option, a stability-and-endurance
+    tool rather than a growth stimulus.
+  why_this_exists: >-
+    The lowest-barrier anti-extension option, with no equipment and
+    almost no skill requirement to start.
+  body_regions: [core]
+  primary_targets: [rectus abdominis, transverse abdominis]
+  secondary_targets: [glutes, shoulders]
+  movement_patterns: [anti-extension isometric]
+  equipment: [bodyweight]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [low-setup, low-fatigue, equipment-limited-substitute]
+  resistance_profile: >-
+    Bodyweight isometric hold.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Trunk-bracing control and endurance are the goal rather than a
+      growth stimulus — this is a stability tool first, and a
+      beginner-friendly entry point into anti-extension work.
+  less_suitable_when:
+    - Hold times have grown long enough that the set is mostly endurance —
+      at that point the stimulus has plateaued, and a harder variation or
+      added load delivers more actual growth demand for the same time
+      spent.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - A loaded flexion movement and an anti-rotation movement.
+  overlaps_with:
+    - ab-wheel-rollout
+  evidence_notes: []
+  review_status: draft
+
+- id: ab-wheel-rollout
+  name: Ab Wheel Rollout
+  summary: >-
+    An anti-extension movement through range rather than a held
+    position, a real mechanical-tension and eccentric-control stimulus.
+  why_this_exists: >-
+    An anti-extension movement that moves through a range instead of
+    holding a position, and scales by how far the user rolls out.
+  body_regions: [core]
+  primary_targets: [rectus abdominis]
+  secondary_targets: [lats, hip flexors, shoulders]
+  movement_patterns: [anti-extension through range]
+  equipment: [ab wheel]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [low-setup, skill-coordination]
+  resistance_profile: >-
+    Bodyweight, scales by rollout distance.
+  stability_demand: high
+  skill_demand: high
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - A real mechanical-tension and eccentric-control stimulus is wanted
+      once planks have stopped delivering one, since moving through a
+      lengthening range under control is a much harder demand than
+      holding a static position.
+  less_suitable_when:
+    - The lower back arches during the rollout, or the range can't yet be
+      controlled — both signal the load has outrun what the trunk can
+      actually brace against.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An anti-rotation movement.
+  overlaps_with:
+    - plank
+  evidence_notes: []
+  review_status: draft
+
+- id: pallof-press
+  name: Pallof Press
+  summary: >-
+    Loads anti-rotation directly, a control-and-durability tool rather
+    than a primary hypertrophy driver.
+  why_this_exists: >-
+    Loads anti-rotation directly, a role that crunches and planks do not
+    cover.
+  body_regions: [core]
+  primary_targets: [obliques]
+  secondary_targets: [rectus abdominis, hip musculature]
+  movement_patterns: [anti-rotation isometric]
+  equipment: [band, cable]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [isolation, low-fatigue, low-setup]
+  resistance_profile: >-
+    Band or cable, isometric hold.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Trunk control and stability that transfers to standing, carrying,
+      and single-side loading are the goal — a control-and-durability
+      role more than a primary hypertrophy driver.
+  less_suitable_when:
+    - The hips rotate along with the load, which defeats the anti-rotation
+      demand that's the entire point of the movement.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Trunk flexion and anti-extension work.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: draft
+
+- id: suitcase-carry
+  name: Suitcase Carry
+  summary: >-
+    Loads one side at a time so the trunk resists lateral pull, while
+    also training grip — a stability-and-durability tool.
+  why_this_exists: >-
+    Loads one side at a time so the trunk resists being pulled sideways,
+    while also training grip.
+  body_regions: [core]
+  primary_targets: [obliques, quadratus lumborum]
+  secondary_targets: [grip, traps]
+  movement_patterns: [anti-lateral flexion under load]
+  equipment: [dumbbell, kettlebell]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [skill-coordination]
+  resistance_profile: >-
+    Free-weight, whole-body fatigue cost.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: high
+  best_used_when:
+    - Standing trunk-control work that carries over to real-world
+      single-side loading is the goal — a stability-and-durability role
+      more than a primary hypertrophy driver.
+  less_suitable_when:
+    - Grip fails long before the trunk does, ending the set before the
+      intended stimulus is really reached.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - Anti-rotation and trunk-flexion work.
+  overlaps_with:
+    - "farmers-carry (forearms module)"
+  evidence_notes: []
+  review_status: draft
+
+- id: cable-woodchop
+  name: Cable Woodchop
+  summary: >-
+    Trains trunk rotation through a range with constant tension, a
+    pump-oriented rotational stimulus for the obliques.
+  why_this_exists: >-
+    Trains trunk rotation through a range, the opposite job from the
+    anti-rotation work above.
+  body_regions: [core]
+  primary_targets: [obliques]
+  secondary_targets: [rectus abdominis, hip musculature]
+  movement_patterns: [trunk rotation]
+  equipment: [cable]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories: [isolation, low-fatigue]
+  resistance_profile: >-
+    Constant tension through the whole range.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: low
+  best_used_when:
+    - A pump-oriented, constant-tension rotational stimulus for the
+      obliques is wanted, alongside anti-rotation work rather than instead
+      of it.
+  less_suitable_when:
+    - The movement is driven by the arms rather than the trunk, which
+      shifts the stimulus away from the obliques entirely.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - The Pallof press and other anti-rotation work.
+  overlaps_with:
+    - russian-twist
+  evidence_notes: []
+  review_status: draft
+
+- id: russian-twist
+  name: Russian Twist
+  summary: >-
+    A free-weight rotation option loaded hardest at the ends of the
+    range, the opposite feel from a cable woodchop's constant tension.
+  why_this_exists: >-
+    A free-weight rotation option; the load is hardest at the ends of the
+    range and eases through the middle, the opposite feel from a cable
+    woodchop's constant tension.
+  body_regions: [core]
+  primary_targets: [obliques]
+  secondary_targets: [rectus abdominis, hip musculature]
+  movement_patterns: [trunk rotation]
+  equipment: [dumbbell, plate, medicine ball]
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories: [isolation, low-fatigue, low-setup]
+  resistance_profile: >-
+    Free-weight profile, hardest at the ends of the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A rotational stimulus loaded like a free weight is wanted, hardest
+      at the ends of the range rather than held constant like a cable.
+  less_suitable_when:
+    - The movement turns into fast, uncontrolled swinging rather than a
+      controlled rotation, trading the growth stimulus for momentum.
+  mirror_effect: ""
+  advantages: []
+  limitations: []
+  technique_cues: []
+  common_mistakes: []
+  programming_notes: []
+  alternatives: []
+  complements:
+    - The Pallof press and other anti-rotation work.
+  overlaps_with:
+    - cable-woodchop
+  evidence_notes: []
+  review_status: draft
