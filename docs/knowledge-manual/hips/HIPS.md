@@ -3,15 +3,17 @@
 **Status:** Draft  
 **Purpose:** Define the first hip and glute records in the canonical Blueprint format. These records are a starting dataset and must pass the review gate in [FOUNDATION.md](../FOUNDATION.md) before the status is changed to Reviewed.
 
+**A note on Best used when / Less suitable when:** these two fields describe training stimulus — growth demand, pump, intensity fit, and the practical result an exercise tends to produce — not equipment or time logistics. Setup and equipment details live in Coverage instead.
+
 ## Region map
 
 The hip module is organized by direction of hip movement and by where in the range the load feels hardest. Several records overlap with the [quads](../quads/QUADS.md) and [hamstrings](../hamstrings/HAMSTRINGS.md) modules; that overlap is intentional and should be recorded rather than duplicated silently.
 
-- **Hip extension, shortened context:** hardest near the top, with the hip already straight.
-- **Hip extension, lengthened context:** hardest with the hip bent and the muscles long.
-- **Unilateral hip work:** one leg at a time, which loads the side of the hip as well as the back of it.
-- **Abduction:** moving the leg away from the midline, and keeping the pelvis steady.
-- **Adduction:** bringing the leg toward the midline.
+- **Hip extension, shortened context:** hardest near the top, with the hip already straight — a strong mechanical-tension role for the glutes specifically.
+- **Hip extension, lengthened context:** hardest with the hip bent and the muscles long — a strong stretch-mediated growth role.
+- **Unilateral hip work:** one leg at a time, which loads the side of the hip as well as the back of it, and exposes side-to-side gaps.
+- **Abduction:** moving the leg away from the midline, and keeping the pelvis steady — an isolation, pump-oriented role for the glute medius and minimus.
+- **Adduction:** bringing the leg toward the midline — an isolation, pump-oriented role for the adductors.
 - **Hip flexion:** raising the thigh, which can be trained rather than only stretched.
 
 ## Draft records
@@ -22,20 +24,20 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Gluteus maximus; hamstrings and quads contribute.
 - **Movement:** Hip extension in a shortened context.
 - **Coverage:** Heavy compound, shortened-position emphasis, higher setup cost.
-- **Best used when:** Glute work is a specific goal, or a user wants hip extension without loading the spine the way a hinge does. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine or a Smith machine both offer a fixed path, which some find more comfortable than balancing a free barbell.
-- **Less suitable when:** Setup time is short, or no bench and padding are available.
+- **Best used when:** A user wants the strongest available shortened-position, mechanical-tension stimulus specifically for the glutes, without the spinal loading a hinge adds. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine or a Smith machine both offer a fixed path, which some find more comfortable than balancing a free barbell.
+- **Less suitable when:** A user's priority is a stretch-mediated stimulus instead — a hinge pattern loads the lengthened position this movement mostly skips.
 - **Complements:** A hinge pattern such as the Romanian deadlift.
 - **Overlaps:** Glute bridges and machine hip-thrust variations.
 - **Status:** Draft.
 
 ### Romanian Deadlift
 
-- **Why this exists:** Loads hip extension with the hip bent, so the glutes and hamstrings work in a lengthened position. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
+- **Why this exists:** Loads hip extension with the hip bent, so the glutes and hamstrings work in a lengthened position.
 - **Primary targets:** Glutes and hamstrings; spinal erectors contribute.
 - **Movement:** Hip hinge.
 - **Coverage:** Heavy compound, lengthened-position emphasis, moderate skill demand, high fatigue cost.
-- **Best used when:** A user wants one movement covering the back of the hips and legs, and can hold position under load.
-- **Less suitable when:** Lower-back fatigue is already high, or grip limits the working sets before the hips do.
+- **Best used when:** A user wants a strong stretch-mediated growth stimulus for the glutes and hamstrings together, in a lengthened position a hip thrust doesn't reach. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
+- **Less suitable when:** Lower-back fatigue is already high, which caps how much of the lengthened-position load can safely be used.
 - **Complements:** A shortened-position movement such as the hip thrust.
 - **Overlaps:** Good mornings, 45° back extensions, the Smith machine version below, and other hinge patterns; also recorded in the hamstrings module. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
 - **Status:** Draft.
@@ -46,8 +48,8 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Glutes and hamstrings; spinal erectors contribute.
 - **Movement:** Hip hinge.
 - **Coverage:** Stable compound, lengthened-position emphasis, low-to-moderate skill demand, moderate setup.
-- **Best used when:** A user is still learning to keep the bar close during a hinge, or wants the hinge pattern without also managing bar path.
-- **Less suitable when:** The fixed rail does not allow enough depth for a user's hip-to-torso proportions, or a user wants the bar to accommodate their individual leverages the way a free bar can.
+- **Best used when:** A user wants the RDL's stretch-mediated stimulus while still learning to control the hinge, since the fixed rail removes the bar-path variable that most often breaks technique down under load.
+- **Less suitable when:** A user's hip-to-torso proportions need more depth than the fixed rail allows, or wants the bar to accommodate individual leverages the way a free bar can.
 - **Complements:** A shortened-position movement such as the hip thrust.
 - **Overlaps:** The free-weight Romanian deadlift; distinguish by how much the setup controls the bar path.
 - **Status:** Draft.
@@ -58,8 +60,8 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Glutes and quads; adductors and hip stabilizers contribute.
 - **Movement:** Unilateral knee- and hip-dominant.
 - **Coverage:** Unilateral compound, high stability demand, moderate setup, high perceived effort.
-- **Best used when:** Loading is limited, side-to-side differences matter, or a user wants hip work without heavy spinal loading.
-- **Less suitable when:** Balance is the limiting factor, or session time is short — unilateral work doubles the sets.
+- **Best used when:** A user wants a strong per-side mechanical-tension and stretch stimulus without heavy spinal loading, or wants to close a side-to-side strength gap through focused per-leg volume.
+- **Less suitable when:** Balance limits the set before the hip and leg muscles are meaningfully fatigued, which caps how much of the intended stimulus the set can actually deliver.
 - **Complements:** A bilateral squat or hinge.
 - **Overlaps:** Lunges, step-ups, and split squats; also recorded in the quads module, which also has the Smith machine version — fixing the bar removes most of the balance demand that is the main limiter here.
 - **Status:** Draft.
@@ -70,8 +72,8 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Gluteus maximus.
 - **Movement:** Hip extension.
 - **Coverage:** Isolation, low fatigue cost, low skill demand, unilateral.
-- **Best used when:** A user wants extra glute volume late in a session, or heavy compound work is already limiting recovery.
-- **Less suitable when:** The lower back extends instead of the hip, or cable access is limited.
+- **Best used when:** A user wants a low-fatigue, pump-oriented glute finisher late in a session, when heavier compound work has already used up most of the available recovery budget.
+- **Less suitable when:** The lower back extends instead of the hip, which shifts the stimulus away from the glute and onto the spine.
 - **Complements:** A heavy hip-extension movement.
 - **Overlaps:** Glute-extension machines and banded kickbacks.
 - **Status:** Draft.
@@ -82,8 +84,8 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Gluteus medius and minimus; tensor fasciae latae contributes.
 - **Movement:** Hip abduction.
 - **Coverage:** Isolation, low fatigue cost, low setup on a machine or with a band.
-- **Best used when:** A routine is all bilateral front-to-back work, or a user wants hip-width and pelvic-stability work.
-- **Less suitable when:** The trunk leans to create the movement instead of the hip.
+- **Best used when:** A user wants a direct mechanical-tension and pump stimulus for hip width and pelvic stability, which bilateral front-to-back work only trains indirectly.
+- **Less suitable when:** The trunk leans to create the movement instead of the hip, which shifts the stimulus away from the target muscle.
 - **Complements:** Unilateral squatting patterns and adductor work.
 - **Overlaps:** Banded and machine abduction variations.
 - **Status:** Draft.
@@ -94,8 +96,8 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Adductors.
 - **Movement:** Hip adduction.
 - **Coverage:** Isolation, low fatigue cost, low skill demand on a machine.
-- **Best used when:** A user wants adductor work for leg development, or wants to balance a routine heavy in abduction work.
-- **Less suitable when:** No machine or cable is available, and free-weight options exceed current tolerance.
+- **Best used when:** A user wants a direct growth stimulus for the adductors that squatting patterns only provide as a side effect, or wants to balance a routine heavy in abduction work.
+- **Less suitable when:** No machine or cable is available, and free-weight adductor options exceed a user's current tolerance.
 - **Complements:** Abduction work and squatting patterns.
 - **Overlaps:** Copenhagen-style and cable adduction variations.
 - **Status:** Draft.
@@ -106,8 +108,8 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Hip flexors; rectus abdominis contributes.
 - **Movement:** Hip flexion.
 - **Coverage:** Isolation, low fatigue cost, unilateral, moderate setup.
-- **Best used when:** A user wants hip-flexor strength for running, kicking, or knee-raise work.
-- **Less suitable when:** Session priorities have not yet covered larger movements.
+- **Best used when:** A user wants hip-flexor strength and size for running, kicking, or knee-raise work — a specific, secondary role rather than a routine staple.
+- **Less suitable when:** Session priorities haven't yet covered the larger movements that deliver most of a lower-body routine's growth stimulus.
 - **Complements:** Hip-extension work and trunk anti-extension work.
 - **Overlaps:** Hanging knee raises, recorded in the core module.
 - **Status:** Draft.

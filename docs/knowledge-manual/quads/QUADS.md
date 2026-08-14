@@ -3,16 +3,18 @@
 **Status:** Draft  
 **Purpose:** Define the first quad records in the canonical Blueprint format. These records are a starting dataset and must pass the review gate in [FOUNDATION.md](../FOUNDATION.md) before the status is changed to Reviewed.
 
+**A note on Best used when / Less suitable when:** these two fields describe training stimulus — growth demand, pump, intensity fit, and the practical result an exercise tends to produce — not equipment or time logistics. Setup and equipment details live in Coverage instead.
+
 ## Region map
 
 The quad module is organized by how much balance and setup a movement asks for, and by whether the hip is involved at all. Several records also load the glutes; that overlap is recorded in the [hips module](../hips/HIPS.md).
 
-- **Free-weight knee-dominant work:** squatting patterns that also demand balance, bracing, and setup.
-- **Stable knee-dominant work:** machine and sled patterns that remove most of the balance demand.
-- **Unilateral knee-dominant work:** one leg at a time, at a fraction of the absolute load.
-- **Knee extension only:** single-joint work that removes the hip from the movement.
-- **Lengthened rectus femoris work:** positions where the hip is extended while the knee bends.
-- **Upright-torso squatting:** a bar or load position that keeps the torso more vertical and shifts more of the demand onto the quads.
+- **Free-weight knee-dominant work:** squatting patterns that deliver the heaviest mechanical-tension stimulus, but also demand balance, bracing, and setup.
+- **Stable knee-dominant work:** machine and sled patterns that remove most of the balance demand, trading some load ceiling for the ability to push closer to failure safely.
+- **Unilateral knee-dominant work:** one leg at a time, at a fraction of the absolute load, useful for per-side stimulus and symmetry.
+- **Knee extension only:** single-joint, mechanical-tension work that removes the hip from the movement — a targeted, low-systemic-cost quad stimulus.
+- **Lengthened rectus femoris work:** positions where the hip is extended while the knee bends, a strong stretch-mediated stimulus specific to that head.
+- **Upright-torso squatting:** a bar or load position that keeps the torso more vertical and shifts more of the demand onto the quads specifically.
 - **Low-equipment squatting:** an accessible squat pattern that scales with load, similar in role to the push-up in the chest module.
 
 ## Draft records
@@ -23,8 +25,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads and glutes; adductors, erectors, and trunk musculature contribute.
 - **Movement:** Squat / knee-dominant.
 - **Coverage:** Heavy compound, high skill and stability demand, high fatigue cost.
-- **Best used when:** A user wants leg strength, has a rack, and can hold position under load.
-- **Less suitable when:** Recovery is limited, technique is still developing, or a user wants quad work without whole-body fatigue.
+- **Best used when:** A user wants the single heaviest, most mechanical-tension-driven quad-and-glute stimulus available, with strength as a direct byproduct.
+- **Less suitable when:** Recovery is limited, or a user wants quad-specific volume without the whole-body systemic fatigue this movement brings.
 - **Complements:** A single-joint knee-extension movement, or a stable machine pattern.
 - **Overlaps:** Front squats, hack squats, leg presses, and the Smith machine squat.
 - **Status:** Draft.
@@ -35,8 +37,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads and glutes; adductors contribute.
 - **Movement:** Squat / knee-dominant.
 - **Coverage:** Stable compound, low-to-moderate skill demand, moderate setup.
-- **Best used when:** A user wants close-to-failure squatting without a spotter, or wants less balance demand than a free barbell squat.
-- **Less suitable when:** The fixed vertical path does not match a user's natural squat path, which can feel awkward on the knees or lower back.
+- **Best used when:** A user wants to push a quad-and-glute set closer to true failure than they could safely handle unspotted with a free barbell.
+- **Less suitable when:** The fixed vertical path doesn't match a user's natural squat path, which can shift stress onto the knees or lower back rather than the target muscles.
 - **Complements:** A single-joint knee-extension movement.
 - **Overlaps:** Back squat and hack squat.
 - **Status:** Draft.
@@ -47,8 +49,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads; glutes and trunk musculature contribute.
 - **Movement:** Squat / knee-dominant.
 - **Coverage:** Heavy compound, high skill and mobility demand, high fatigue cost.
-- **Best used when:** A user wants a more quad-biased barbell squat, or a more upright torso suits their leverages or goals better than a back squat.
-- **Less suitable when:** Wrist or shoulder mobility cannot support the rack position, or recovery is already limited by other squatting.
+- **Best used when:** A user wants a heavy, mechanical-tension squat stimulus with more of the load specifically directed at the quads than a back squat provides.
+- **Less suitable when:** Wrist or shoulder mobility can't support the rack position, which caps how much load can actually be used before form breaks down.
 - **Complements:** A hinge pattern or a single-joint knee-extension movement.
 - **Overlaps:** Back squat and hack squat.
 - **Status:** Draft.
@@ -59,8 +61,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads; glutes contribute.
 - **Movement:** Squat / knee-dominant.
 - **Coverage:** Stable compound, low skill demand, moderate setup, quad emphasis.
-- **Best used when:** A user wants close-to-failure quad work, or trains without a spotter.
-- **Less suitable when:** The machine's fixed path does not suit the individual, or none is available.
+- **Best used when:** A user wants a quad-biased mechanical-tension stimulus pushed close to failure, without a spotter and without the balance demand of a free squat competing for effort.
+- **Less suitable when:** The machine's fixed path doesn't suit the individual, which can blunt the tension felt regardless of how heavy the sled is loaded.
 - **Complements:** A hinge pattern, since the hack squat does little for the back of the legs.
 - **Overlaps:** Back squats, leg presses, and Smith-machine squats.
 - **Status:** Draft.
@@ -71,8 +73,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads and glutes; adductors contribute.
 - **Movement:** Knee- and hip-dominant press.
 - **Coverage:** Stable compound, low skill demand, low setup where the machine is free.
-- **Best used when:** Lower-back fatigue is a constraint, or a user wants leg volume without a heavy squat.
-- **Less suitable when:** The range used is short enough that the set stops being challenging where it matters.
+- **Best used when:** A user wants to accumulate heavy quad volume with much less systemic fatigue than a free squat, since the trunk and lower back aren't part of the stimulus.
+- **Less suitable when:** The range used is short enough that the set stops being challenging where the stretch and tension actually matter.
 - **Complements:** A unilateral pattern or single-joint knee extension.
 - **Overlaps:** Hack squats and back squats.
 - **Status:** Draft.
@@ -83,8 +85,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads and glutes; adductors and hip stabilizers contribute.
 - **Movement:** Unilateral knee- and hip-dominant.
 - **Coverage:** Unilateral compound, high stability demand, high perceived effort.
-- **Best used when:** Loading is limited, or a user wants leg work without heavy spinal loading.
-- **Less suitable when:** Balance limits the set before the legs do, or session time is short.
+- **Best used when:** A user wants a strong per-side mechanical-tension and stretch stimulus without heavy spinal loading, or wants to close a side-to-side strength gap.
+- **Less suitable when:** Balance limits the set before the legs are meaningfully fatigued, which caps how much of the intended stimulus the set can actually deliver.
 - **Complements:** A bilateral squat or press.
 - **Overlaps:** Lunges, step-ups, split squats, and the Smith machine version below; also recorded in the hips module.
 - **Status:** Draft.
@@ -95,8 +97,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads and glutes; adductors and hip stabilizers contribute.
 - **Movement:** Unilateral knee- and hip-dominant.
 - **Coverage:** Unilateral compound, low-to-moderate stability demand, moderate setup.
-- **Best used when:** Balance is the limiting factor in the free-weight version rather than leg strength, or a user wants to push closer to failure per leg.
-- **Less suitable when:** The fixed rail's path does not match a user's natural lunge arc, or no Smith machine is available.
+- **Best used when:** Balance, not leg strength, is what's limiting the free-weight version — fixing the bar path lets the actual growth stimulus reach the quads and glutes instead of being capped by wobble.
+- **Less suitable when:** The fixed rail's path doesn't match a user's natural lunge arc, which can feel awkward and shift stress away from the target muscles.
 - **Complements:** A bilateral squat or press.
 - **Overlaps:** The free-weight Bulgarian split squat; distinguish by stability demand.
 - **Status:** Draft.
@@ -107,8 +109,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads; glutes and trunk musculature contribute.
 - **Movement:** Squat / knee-dominant.
 - **Coverage:** Low equipment, low-to-moderate skill demand, self-limiting load.
-- **Best used when:** Equipment is limited, a user is learning the squat pattern, or a simple loaded squat is needed without a rack.
-- **Less suitable when:** The load a single dumbbell allows is no longer challenging enough for the user's goals.
+- **Best used when:** A user is learning the squat pattern, or wants a genuine loaded-squat mechanical-tension stimulus without a rack.
+- **Less suitable when:** The load a single dumbbell allows stops being challenging, at which point a barbell squat delivers a stronger mechanical-tension stimulus.
 - **Complements:** A barbell squat or press where available.
 - **Overlaps:** Back squat, front squat, and other knee-dominant patterns.
 - **Status:** Draft.
@@ -119,8 +121,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads.
 - **Movement:** Knee extension.
 - **Coverage:** Isolation, low fatigue cost, low skill demand, low setup.
-- **Best used when:** A user wants quad volume after squatting, or heavy compound work is limited by recovery, balance, or the lower back.
-- **Less suitable when:** No machine is available, or knee comfort is limiting under load.
+- **Best used when:** A user wants a targeted, pump-oriented quad finisher after squatting, or wants quad volume that heavy compound recovery limits don't allow.
+- **Less suitable when:** Knee comfort is limiting under load, which caps how much of the intended stimulus the set can safely deliver.
 - **Complements:** A squat or press pattern.
 - **Overlaps:** Sissy squats and other knee-extension-dominant work.
 - **Status:** Draft.
@@ -131,8 +133,8 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads, with emphasis on the rectus femoris.
 - **Movement:** Knee extension with the hip extended.
 - **Coverage:** Low equipment, high skill demand, lengthened-position emphasis.
-- **Best used when:** Training at home, or a user wants a position that machines and squats do not load.
-- **Less suitable when:** Knee tolerance is limiting, or the range cannot yet be controlled — this movement should be scaled gradually.
+- **Best used when:** A user wants a strong stretch-mediated stimulus specifically for the rectus femoris, in a position no common machine or squat variation reaches.
+- **Less suitable when:** Knee tolerance is limiting, or the range can't yet be controlled — this movement should be scaled gradually rather than loaded aggressively from the start.
 - **Complements:** A loadable squat or press pattern.
 - **Overlaps:** Sissy squats and leg extensions.
 - **Status:** Draft.

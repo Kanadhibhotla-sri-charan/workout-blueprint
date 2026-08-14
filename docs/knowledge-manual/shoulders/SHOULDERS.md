@@ -3,6 +3,8 @@
 **Status:** Draft  
 **Purpose:** Define the first shoulder records in the canonical Blueprint format. These records are a starting dataset and must pass the review gate in [FOUNDATION.md](../FOUNDATION.md) before the status is changed to Reviewed.
 
+**A note on Best used when / Less suitable when:** these two fields describe training stimulus — growth demand, pump, intensity fit, and the practical result an exercise tends to produce — not equipment or time logistics. Setup and equipment details live in Coverage instead. For the control-and-health records at the end of this module (rotator cuff, scapular work), "result" means joint durability and movement quality rather than a growth outcome.
+
 ## Region map
 
 The shoulder module separates the three deltoid heads by the job they do in a routine, and keeps shoulder-control work in its own role rather than treating it as an optional extra.
@@ -10,8 +12,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Vertical pressing:** overhead pressing, which loads the front delts alongside the triceps and upper chest. Barbell, dumbbell, machine, and cable each cover this role with a different resistance profile.
 - **Abduction work:** raising the arm out to the side; the direct route to the side delts. Dumbbell, cable, and machine each cover this role with a different resistance profile.
 - **Rear-delt work:** horizontal abduction, rowing, and external rotation patterns that most pressing does not cover. The fly version of this role is available as a dumbbell, cable, or machine movement.
-- **Rotator-cuff and control work:** light, controlled shoulder rotation. This is training, not treatment — symptoms need professional assessment.
-- **Scapular work:** serratus-focused movement that helps the shoulder blade travel well around the rib cage.
+- **Rotator-cuff and control work:** light, controlled shoulder rotation. This builds joint durability, not muscle size — and it's training, not treatment, so symptoms need professional assessment.
+- **Scapular work:** serratus-focused movement that helps the shoulder blade travel well around the rib cage, another durability-and-movement-quality role rather than a growth-focused one.
 
 ## Draft records
 
@@ -21,8 +23,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Anterior deltoids; triceps, upper chest, and trunk musculature contribute.
 - **Movement:** Vertical press.
 - **Coverage:** Heavy compound, high stability and skill demand when standing.
-- **Best used when:** Overhead strength is a goal, or a user wants one pressing movement that covers front delts and triceps together. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and a path each shoulder can find naturally, which many find kinder on the joint.
-- **Less suitable when:** Overhead range or shoulder tolerance is limiting, or the routine already contains a lot of pressing.
+- **Best used when:** A user wants the primary mechanical-tension and strength-building stimulus for the front delts, with the triceps and upper chest sharing a meaningful part of the load. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and a path each shoulder can find naturally, which many find kinder on the joint.
+- **Less suitable when:** The routine already has a heavy pressing movement covering mechanical tension, and what's actually missing is a pump-oriented finisher or dedicated side- and rear-delt work, which this movement does not provide on its own.
 - **Complements:** Side- and rear-delt work, which overhead pressing does not replace.
 - **Overlaps:** Machine shoulder press, cable shoulder press, and Smith machine shoulder press.
 - **Status:** Draft.
@@ -33,8 +35,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Anterior deltoids; triceps contribute.
 - **Movement:** Vertical press.
 - **Coverage:** Stable compound, low-to-moderate skill demand, moderate setup.
-- **Best used when:** A user wants to train a barbell-style overhead press close to failure without the stability demand of a free bar.
-- **Less suitable when:** The fixed rail's path does not match a user's natural press arc, which can feel awkward on the shoulders.
+- **Best used when:** A user wants to push a front-delt set closer to true failure than they could safely handle unspotted with a free barbell.
+- **Less suitable when:** The fixed rail's path doesn't match a user's natural press arc, which can shift stress onto the joint rather than the muscle.
 - **Complements:** Side- and rear-delt work.
 - **Overlaps:** Overhead press, seated machine shoulder press, and cable shoulder press.
 - **Status:** Draft.
@@ -45,8 +47,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Anterior deltoids; triceps contribute.
 - **Movement:** Vertical press.
 - **Coverage:** Isolation-oriented compound, constant-tension resistance profile, moderate setup.
-- **Best used when:** A user wants an overhead press that stays hard at the top of the range, or wants a lower-fatigue finisher after a heavier press.
-- **Less suitable when:** No cable station tall enough for the path is available, or a user wants the heavier loading free weights allow.
+- **Best used when:** A user wants a metabolic-stress, pump-oriented front-delt stimulus rather than raw mechanical tension — the constant cable tension keeps the muscle working hardest exactly where a free-weight press goes slack, near the top.
+- **Less suitable when:** A user's priority is the heaviest possible loading for a strength-driven stimulus, which free weights deliver more of.
 - **Complements:** A heavier barbell or dumbbell press.
 - **Overlaps:** Overhead press, seated machine shoulder press, and Smith machine shoulder press; distinguish by resistance profile.
 - **Status:** Draft.
@@ -57,8 +59,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Anterior deltoids; triceps contribute.
 - **Movement:** Vertical press.
 - **Coverage:** Stable compound, low skill demand, low setup where the machine is free.
-- **Best used when:** Stability, repeatability, or close-to-failure work is the priority.
-- **Less suitable when:** The machine path or handle position feels poor for the individual.
+- **Best used when:** A user wants to push a front-delt set to true failure, or into a drop set — removing the balance demand means the last hard reps come from the delts giving out, not a stabilizer losing control of the bar.
+- **Less suitable when:** The machine path or handle position doesn't match a user's shoulder mechanics, which can blunt the tension the delts actually feel regardless of how heavy the stack is loaded.
 - **Complements:** Side- and rear-delt work.
 - **Overlaps:** Overhead press, cable shoulder press, and Smith machine shoulder press.
 - **Status:** Draft.
@@ -69,8 +71,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Lateral deltoids.
 - **Movement:** Shoulder abduction.
 - **Coverage:** Isolation, low setup, low fatigue cost.
-- **Best used when:** A user wants side-delt work with minimal equipment and setup.
-- **Less suitable when:** Momentum takes over, or the load feels hardest only at the top of the range.
+- **Best used when:** A user wants a side-delt-specific mechanical-tension and pump stimulus that peaks near the top of the range, the position most people mean when picturing lateral raise work.
+- **Less suitable when:** Momentum takes over the rep — once the swing is doing the work, the growth stimulus on the side delt mostly disappears even though the weight is still moving.
 - **Complements:** A vertical press and rear-delt work.
 - **Overlaps:** Cable and machine lateral raises. A neutral, palms-in grip is standard for this movement; a pronated grip is sometimes used to bias the front delt slightly more, but this is a technique note rather than a separate record.
 - **Status:** Draft.
@@ -81,8 +83,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Lateral deltoids.
 - **Movement:** Shoulder abduction.
 - **Coverage:** Isolation, lengthened-position emphasis relative to a dumbbell raise, moderate setup.
-- **Best used when:** A user wants a different resistance profile from a dumbbell raise, or trains one side at a time.
-- **Less suitable when:** Cable access is limited, or the setup cost is not worth it for the sets planned.
+- **Best used when:** A user wants a side-delt stimulus that stays under real tension in the stretched, bottom position — where a dumbbell raise is easiest — for a genuinely different growth emphasis than the dumbbell version, or wants to train one side at a time.
+- **Less suitable when:** A user wants the simplest possible setup for side-delt work, or is already getting a stretched-position stimulus from another movement and wants the top-loaded profile a dumbbell raise offers instead.
 - **Complements:** A vertical press; may be run alongside dumbbell raises only if the routine needs both profiles.
 - **Overlaps:** Dumbbell and machine lateral raises.
 - **Status:** Draft.
@@ -93,8 +95,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Lateral deltoids.
 - **Movement:** Shoulder abduction.
 - **Coverage:** Isolation, low skill demand, low fatigue cost.
-- **Best used when:** A user wants side-delt work with minimal technique demand, or wants to train close to failure without momentum creeping in.
-- **Less suitable when:** The machine's pivot point or pad position does not suit the individual, or none is available.
+- **Best used when:** A user wants a side-delt pump stimulus that's safe to push to true failure or a drop set, since there's no momentum or balance available to quietly take over the rep.
+- **Less suitable when:** The machine's pivot point or pad position doesn't suit the individual, which can blunt the tension the delt actually feels regardless of how heavy the stack is loaded.
 - **Complements:** A vertical press.
 - **Overlaps:** Dumbbell and cable lateral raises; distinguish by resistance profile.
 - **Status:** Draft.
@@ -105,8 +107,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Posterior deltoids; mid-back contributes.
 - **Movement:** Shoulder horizontal abduction.
 - **Coverage:** Isolation, low fatigue cost, low skill demand on a machine.
-- **Best used when:** A routine has more pressing than pulling, or a user wants shoulder shape from the side and back.
-- **Less suitable when:** The elbows bend enough that the movement turns into a row.
+- **Best used when:** A user wants a stretch-mediated, isolated growth stimulus for the rear delts without adding another heavy pull to the session.
+- **Less suitable when:** The elbows bend enough that the movement turns into a row — the stimulus shifts toward a more mechanical-tension, less isolated rear-delt effect, which may or may not be what was actually wanted.
 - **Complements:** Horizontal pulling and side-delt work.
 - **Overlaps:** Face pulls, the cable rear delt builder, the rear delt row, and the machine reverse fly.
 - **Status:** Draft.
@@ -117,8 +119,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Posterior deltoids; mid-back contributes.
 - **Movement:** Shoulder horizontal abduction.
 - **Coverage:** Isolation, low skill demand, low fatigue cost.
-- **Best used when:** A user wants rear-delt work with minimal technique demand, or wants to train close to failure without momentum creeping in.
-- **Less suitable when:** The machine's pivot point or pad position does not suit the individual, or none is available.
+- **Best used when:** A user wants a rear-delt pump stimulus that's safe to push to true failure or a drop set, since there's no momentum available to take over the rep.
+- **Less suitable when:** The machine's pivot point or pad position doesn't suit the individual, which can blunt the tension the rear delts actually feel.
 - **Complements:** A vertical press and horizontal pulling.
 - **Overlaps:** Rear-delt fly; distinguish by resistance profile.
 - **Status:** Draft.
@@ -129,8 +131,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Posterior deltoids; mid-back contributes.
 - **Movement:** Shoulder horizontal abduction combined with elbow flexion.
 - **Coverage:** Isolation-oriented, bilateral, moderate setup.
-- **Best used when:** A user wants dedicated rear-delt loading with more range and load than a fly, without the elbows sneaking above the hands and shifting the work elsewhere.
-- **Less suitable when:** The elbows rise above the wrists at the top, which drifts the emphasis toward the traps and rhomboids.
+- **Best used when:** A user wants a mechanical-tension rear-delt stimulus with more loadable progression than a fly typically allows, while keeping the resistance angled specifically at the rear delt rather than the traps.
+- **Less suitable when:** The elbows rise above the wrists at the top, which drifts the stimulus toward the traps and rhomboids instead of the rear delts.
 - **Complements:** A rear-delt fly and a face pull, which cover a stretched isolation position and a rotation component the row does not.
 - **Overlaps:** Rear-delt fly, face pull, seated cable row, and the rear delt row; distinguish by elbow-to-wrist height and equipment.
 - **Status:** Draft.
@@ -141,20 +143,20 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Posterior deltoids; mid-back contributes.
 - **Movement:** Shoulder extension and horizontal abduction with a slight external rotation at the top.
 - **Coverage:** Isolation-oriented, bilateral, low setup with a bench and a pair of dumbbells.
-- **Best used when:** A user wants free-weight rear-delt work without a cable station, and can hold a bent-over seated position under light-to-moderate load.
-- **Less suitable when:** The lower back rounds to hold the bent-over position, or the elbows flare up and out instead of staying down and back.
+- **Best used when:** A user wants a free-weight, mechanical-tension rear-delt stimulus and can hold a bent-over seated position under light-to-moderate load.
+- **Less suitable when:** The lower back rounds to hold the bent-over position, or the elbows flare up and out instead of staying down and back — both signal the stimulus is drifting away from the rear delts.
 - **Complements:** A rear-delt fly or a cable rear delt builder.
 - **Overlaps:** Cable rear delt builder and rear-delt fly; distinguish by the seated bent-over start position and the down-and-back elbow path.
 - **Status:** Draft.
 
 ### Face Pull
 
-- **Why this exists:** Combines rear-delt work with a shoulder-rotation component, so one movement covers two roles when time is short.
+- **Why this exists:** Combines rear-delt work with a shoulder-rotation component, so one movement covers a growth role and a joint-health role together when time is short.
 - **Primary targets:** Posterior deltoids and mid/lower trapezius; external rotators contribute.
 - **Movement:** Shoulder horizontal abduction with external rotation.
 - **Coverage:** Isolation-oriented, low fatigue cost, moderate skill demand.
-- **Best used when:** A user wants rear-delt and shoulder-control work in a single low-cost movement.
-- **Less suitable when:** Load is heavy enough that the rotation is lost, or no cable or band is available.
+- **Best used when:** A user wants a moderate rear-delt stimulus alongside rotator-cuff and shoulder-control work in a single movement, rather than programming them separately.
+- **Less suitable when:** Load is heavy enough that the rotation is lost — at that point it functions more like a rear-delt row and loses the control-work half of its value.
 - **Complements:** Pressing work.
 - **Overlaps:** Rear-delt flies, the cable rear delt builder, and external-rotation work.
 - **Status:** Draft.
@@ -165,7 +167,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** External rotators of the shoulder.
 - **Movement:** Shoulder external rotation.
 - **Coverage:** Isolation, low fatigue cost, low setup with a band.
-- **Best used when:** A user wants controlled rotation work as part of general shoulder training.
+- **Best used when:** A user wants joint durability and controlled rotation strength as part of general shoulder training — this is a health-and-resilience role, not a primary size driver.
 - **Less suitable when:** Loads are heavy enough to lose control of the movement. This record is general training work — shoulder pain or symptoms need professional assessment rather than self-treatment.
 - **Complements:** Pressing and rear-delt work.
 - **Overlaps:** Face pulls, which include a rotation component.
@@ -177,8 +179,8 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Serratus anterior; chest and triceps contribute.
 - **Movement:** Scapular protraction within a horizontal press.
 - **Coverage:** Low equipment, low fatigue cost, moderate skill demand.
-- **Best used when:** A user wants scapular work at home or as part of a warm-up.
-- **Less suitable when:** The extra range at the top is skipped, which turns it back into an ordinary push-up.
+- **Best used when:** A user wants scapular control and movement quality as part of a warm-up or general shoulder health work — this is a durability role, not a primary size driver.
+- **Less suitable when:** The extra range at the top is skipped, which turns it back into an ordinary push-up and loses the scapular-control value that's the whole point of this variation.
 - **Complements:** Overhead pressing and horizontal pulling.
 - **Overlaps:** Wall slides and other scapular-control drills.
 - **Status:** Draft.

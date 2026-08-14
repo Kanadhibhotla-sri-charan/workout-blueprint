@@ -3,16 +3,18 @@
 **Status:** Draft  
 **Purpose:** Define the first back records in the canonical Blueprint format. These records are a starting dataset and must pass the review gate in [FOUNDATION.md](../FOUNDATION.md) before the status is changed to Reviewed.
 
+**A note on Best used when / Less suitable when:** these two fields describe training stimulus — growth demand, pump, intensity fit, and the practical result an exercise tends to produce — not equipment or time logistics. Setup and equipment details live in Coverage instead.
+
 ## Region map
 
 The back module is organized around pulling directions and support roles, not a claim that a given row or pulldown trains one muscle in isolation.
 
-- **Vertical pulling:** pulling from overhead toward the torso; the main lat-dominant family. Grip changes the emphasis: pronated (overhand) relies most on the lats and grip since the biceps contribute least; supinated (underhand) brings the biceps in more and is often the easiest grip to complete more reps with; neutral sits between the two and is usually kindest on the shoulders.
-- **Horizontal pulling:** rowing patterns that also load the mid-back, rhomboids, and mid/lower trapezius. Grip has a similar effect here: pronated (overhand) rows tend to flare the elbows wider and bias the upper back and rear delts; supinated (underhand) rows bring the lats and biceps in more, the same relationship a chin-up has to a pull-up; neutral sits between the two.
-- **Lat-focused single-joint work:** shoulder extension with a mostly straight elbow, useful when elbow flexors limit rowing and pulldown work.
-- **Upper-trap loading:** shrug-style work for users who want direct upper-trap volume.
-- **Spinal support work:** hip-hinge and extension patterns that load the spinal erectors under control.
-- **Maximal hip-hinge pulling:** loading the whole posterior chain from a dead stop on the floor, distinct from a hinge that starts from the top.
+- **Vertical pulling:** pulling from overhead toward the torso; the main lat-width family. Grip changes the emphasis: pronated (overhand) relies most on the lats and grip since the biceps contribute least; supinated (underhand) brings the biceps in more and is often the easiest grip to complete more reps with; neutral sits between the two and is usually kindest on the shoulders.
+- **Horizontal pulling:** rowing patterns that build back thickness by loading the mid-back, rhomboids, and mid/lower trapezius. Grip has a similar effect here: pronated (overhand) rows tend to flare the elbows wider and bias the upper back and rear delts; supinated (underhand) rows bring the lats and biceps in more, the same relationship a chin-up has to a pull-up; neutral sits between the two.
+- **Lat-focused single-joint work:** shoulder extension with a mostly straight elbow, a stretch-mediated, grip-independent stimulus useful when elbow flexors or grip limit rowing and pulldown work.
+- **Upper-trap loading:** shrug-style work for users who want direct upper-trap size.
+- **Spinal support work:** hip-hinge and extension patterns that load the spinal erectors under control, at a lower systemic cost than a heavy deadlift.
+- **Maximal hip-hinge pulling:** the heaviest possible mechanical-tension stimulus for the whole posterior chain, loading it from a dead stop on the floor.
 
 ## Draft records
 
@@ -22,8 +24,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats; mid-back and trunk musculature contribute; elbow flexors contribute less than in a chin-up.
 - **Movement:** Vertical pull, pronated grip.
 - **Coverage:** Heavy compound, low setup, skill and relative-strength demand.
-- **Best used when:** A user has a bar, wants a vertical pull that leans less on the biceps, and can perform or scale enough repetitions to be useful.
-- **Less suitable when:** The user cannot yet reach a workable repetition range, or bodyweight makes small load steps impractical.
+- **Best used when:** A user wants a heavy, bodyweight-scaled mechanical-tension stimulus for lat width, with grip and upper-back strength building alongside it — commonly cited as one of the strongest width-building movements available.
+- **Less suitable when:** Bodyweight is too much load to complete a useful number of reps, which caps how much growth stimulus the set can actually deliver until strength improves or assistance is added.
 - **Complements:** A horizontal row selected for a distinct role.
 - **Overlaps:** Chin-up and lat pulldown; the chin-up is the same pattern with a supinated grip and more elbow-flexor contribution.
 - **Status:** Draft.
@@ -34,8 +36,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats and elbow flexors; mid-back and trunk musculature contribute.
 - **Movement:** Vertical pull, supinated grip.
 - **Coverage:** Heavy compound, low setup, skill and relative-strength demand.
-- **Best used when:** A user wants a vertical pull that is more achievable early on, or wants biceps involvement alongside the lat work.
-- **Less suitable when:** A user specifically wants to minimize elbow-flexor contribution, or wrist/elbow tolerance favors a neutral or pronated grip.
+- **Best used when:** A user wants the same lat-width stimulus as a pull-up but with more biceps assistance, which often makes it easier to reach a growth-effective rep range while still building strength.
+- **Less suitable when:** A user specifically wants to isolate the lats away from the biceps — the biceps taking on more of the load means less of the set's tension lands on the back per rep.
 - **Complements:** A horizontal row selected for a distinct role.
 - **Overlaps:** Pull-up and lat pulldown; the pull-up is the same pattern with a pronated grip and less elbow-flexor contribution.
 - **Status:** Draft.
@@ -46,8 +48,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats; mid-back contributes; elbow flexors contribute less than a supinated grip.
 - **Movement:** Vertical pull, pronated grip.
 - **Coverage:** Stable compound, small load increments, moderate setup.
-- **Best used when:** Load needs to be dialled precisely, or pull-up repetitions are too few or too many to be practical.
-- **Less suitable when:** No cable stack is available, or the wide grip is uncomfortable on the shoulders.
+- **Best used when:** A user wants precise, progressive loading for lat-width growth without the all-or-nothing jumps bodyweight pulling forces, or wants to push a set closer to failure than a pull-up safely allows.
+- **Less suitable when:** A user has already built enough pulling strength that the stack's top loads stop being challenging, which caps how much mechanical tension the machine can still provide relative to a heavier bodyweight-plus-load pull-up.
 - **Complements:** A rowing pattern, and lat-focused single-joint work where elbow flexors limit the pull.
 - **Overlaps:** Pull-up, chin-up, reverse-grip lat pulldown, and neutral-grip lat pulldown.
 - **Status:** Draft.
@@ -58,8 +60,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats and elbow flexors; mid-back contributes.
 - **Movement:** Vertical pull, supinated grip.
 - **Coverage:** Stable compound, small load increments, moderate setup.
-- **Best used when:** A user wants the chin-up's biceps involvement but with precisely controllable load, or cannot yet do bodyweight chin-ups.
-- **Less suitable when:** A user specifically wants to minimize elbow-flexor contribution.
+- **Best used when:** A user wants the pulldown's precise, progressive loading with more biceps assistance, often making it easier to push a set closer to failure than the wide pronated version.
+- **Less suitable when:** A user wants to isolate the lats with minimal biceps fatigue — the wide pronated version does that more directly.
 - **Complements:** A rowing pattern.
 - **Overlaps:** Chin-up and the wide pronated lat pulldown.
 - **Status:** Draft.
@@ -70,8 +72,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats; mid-back and elbow flexors contribute, roughly between the pronated and supinated versions.
 - **Movement:** Vertical pull, neutral grip.
 - **Coverage:** Stable compound, small load increments, moderate setup.
-- **Best used when:** Shoulder or elbow tolerance limits the wide pronated grip, or a user wants a middle-ground grip.
-- **Less suitable when:** The attachment needed for a neutral grip is not available.
+- **Best used when:** Shoulder or elbow discomfort is what actually ends a set before the lats are meaningfully fatigued — the neutral grip removes that limiter and lets more of the set's effort go toward a lat-width stimulus.
+- **Less suitable when:** Shoulder and elbow comfort aren't limiting factors, in which case a pronated or supinated grip may deliver a more specific bias without a meaningful downside.
 - **Complements:** A rowing pattern.
 - **Overlaps:** The wide pronated and reverse-grip lat pulldowns.
 - **Status:** Draft.
@@ -82,8 +84,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Mid-back, rhomboids, and mid/lower trapezius; lats and elbow flexors contribute.
 - **Movement:** Horizontal pull.
 - **Coverage:** Stable compound, low fatigue cost relative to free-standing rows.
-- **Best used when:** Trunk fatigue, lower-back tolerance, or close-to-failure work is the priority. Most machines let a user choose a pronated, neutral, or supinated handle; that choice is a grip preference along the same axis as the barbell row's overhand-versus-underhand split, not a separate movement.
-- **Less suitable when:** The bench or machine does not fit the user's torso length, or no supported option is available.
+- **Best used when:** A user wants a strong mechanical-tension stimulus for back thickness while pushing close to failure — removing the trunk-stability demand means the set ends when the back gives out, not when the lower back does. Most machines let a user choose a pronated, neutral, or supinated handle; that choice is a grip preference along the same axis as the barbell row's overhand-versus-underhand split, not a separate movement.
+- **Less suitable when:** A user wants the hinge's added trunk and hip demand as part of the stimulus, which a supported row deliberately removes.
 - **Complements:** A vertical pull; a free-standing row only if it fills a different role.
 - **Overlaps:** Other rowing variations.
 - **Status:** Draft.
@@ -94,8 +96,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Mid-back and rhomboids; lats and elbow flexors contribute; spinal erectors hold the hinge.
 - **Movement:** Horizontal pull, pronated grip.
 - **Coverage:** Heavy compound, high stability and skill demand, high fatigue cost.
-- **Best used when:** A user wants a heavy, progressable row and can hold a hinged position under load.
-- **Less suitable when:** Lower-back fatigue is already high, or hinge technique is not yet reliable enough to load heavily.
+- **Best used when:** A user wants the heaviest, most mechanical-tension-driven back-thickness stimulus available, with the hinge itself adding a secondary training demand on the spinal erectors.
+- **Less suitable when:** Lower-back fatigue from other work already limits how much can safely be loaded, which caps the mechanical-tension ceiling this movement can actually deliver.
 - **Complements:** A supported row or vertical pull that does not add further spinal loading.
 - **Overlaps:** Reverse-grip barbell row, T-bar row, and other free-standing horizontal pulls.
 - **Status:** Draft.
@@ -106,8 +108,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats and elbow flexors; mid-back contributes; spinal erectors hold the hinge.
 - **Movement:** Horizontal pull, supinated grip.
 - **Coverage:** Heavy compound, high stability and skill demand, high fatigue cost.
-- **Best used when:** A user wants a heavy barbell row that leans more on the lats and biceps than the overhand version.
-- **Less suitable when:** Wrist or elbow comfort favors a pronated or neutral grip, or lower-back fatigue is already high.
+- **Best used when:** A user wants the same heavy, mechanical-tension-driven row as the overhand version, shifted more toward the lats and biceps.
+- **Less suitable when:** Wrist or elbow comfort favors a pronated or neutral grip, or lower-back fatigue already caps how heavy this can safely be loaded.
 - **Complements:** A supported row or vertical pull that does not add further spinal loading.
 - **Overlaps:** The pronated barbell bent-over row; grip is what separates the two.
 - **Status:** Draft.
@@ -118,8 +120,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Mid-back, rhomboids, and lats; elbow flexors contribute.
 - **Movement:** Horizontal pull.
 - **Coverage:** Stable compound, low-to-moderate setup, small load increments.
-- **Best used when:** A user wants a row without loading the lower back, or wants precise load control. A wide bar, close V-handle, or rope all work; wider and more pronated attachments bias the upper back and rear delts slightly more, closer and more neutral attachments bias the lats slightly more, but this is a grip preference within the same record rather than a separate movement.
-- **Less suitable when:** No cable station is available, or the seat and chest pad do not fit the user's build.
+- **Best used when:** A user wants a back-thickness stimulus without the hinge's spinal-stability demand competing for effort, letting a set be pushed closer to failure. A wide bar, close V-handle, or rope all work; wider and more pronated attachments bias the upper back and rear delts slightly more, closer and more neutral attachments bias the lats slightly more, but this is a grip preference within the same record rather than a separate movement.
+- **Less suitable when:** A user wants the hinge's added trunk and hip demand as part of the stimulus, which a seated row deliberately removes.
 - **Complements:** A vertical pull and a free-standing row selected for a distinct role.
 - **Overlaps:** Chest-supported row and other machine rows.
 - **Status:** Draft.
@@ -130,8 +132,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Mid-back and lats; spinal erectors and elbow flexors contribute.
 - **Movement:** Horizontal pull.
 - **Coverage:** Heavy compound, moderate-to-high stability demand, moderate setup.
-- **Best used when:** A user wants a heavy row with a fixed bar path, or prefers a neutral grip over a barbell row's pronated grip.
-- **Less suitable when:** No landmine or T-bar setup is available, or the fixed handle position does not suit the individual.
+- **Best used when:** A user wants a heavy, mechanical-tension-driven row with a fixed bar path, which can make it easier to push close to failure than a barbell row's grip-width and balance demands allow.
+- **Less suitable when:** A user's priority is the deepest possible range of motion, since the fixed handle position can shorten the pull compared to a barbell or dumbbell row.
 - **Complements:** A supported row or vertical pull.
 - **Overlaps:** Barbell bent-over row, reverse-grip barbell row, and chest-supported row.
 - **Status:** Draft.
@@ -142,8 +144,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Spinal erectors, glutes, and hamstrings; lats, traps, and grip contribute to holding the position and the bar.
 - **Movement:** Hip hinge.
 - **Coverage:** Heavy compound, high skill and stability demand, very high fatigue cost.
-- **Best used when:** A user wants maximal posterior-chain strength and can recover from the systemic cost of the movement.
-- **Less suitable when:** Recovery is limited, technique is still developing, or a user wants posterior-chain work without the fatigue a floor pull brings.
+- **Best used when:** A user wants the single heaviest, most mechanical-tension-driven stimulus available for the whole posterior chain, and can recover from the systemic cost that comes with it.
+- **Less suitable when:** Recovery is limited, or what a user actually needs is back-thickness or lat-width growth rather than raw whole-body strength — a rack pull or a compound row delivers a more targeted stimulus at far less systemic cost.
 - **Complements:** A single-joint hamstring or glute movement that adds volume without the same systemic cost.
 - **Overlaps:** Romanian deadlift, recorded in the hips and hamstrings modules, and rack pull below; each starts from a different position and loads the range differently. A Smith machine is not a practical substitute here — the floor-level starting position and the coordinated hip-and-knee path a full pull needs don't fit a fixed vertical rail.
 - **Status:** Draft.
@@ -154,8 +156,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Spinal erectors, upper and mid trapezius, and grip; glutes and hamstrings contribute less than in a full deadlift since the bottom range is removed.
 - **Movement:** Hip hinge, partial range.
 - **Coverage:** Heavy compound, moderate stability demand, moderate setup, partial range of motion.
-- **Best used when:** A user wants to overload the top-of-pull position, train grip and upper-back strength under heavy load, or has a reason to avoid pulling from the floor. Adjustable safety pins on a power rack or a Smith machine both work to set the starting height — the Smith's fixed vertical path is far less of an issue here than in a full deadlift, since the shortened range needs much less forward-and-back coordination.
-- **Less suitable when:** A user wants the full range and floor-level strength a conventional deadlift trains, or the heavier loads this movement allows exceed what the rest of the routine can absorb.
+- **Best used when:** A user wants to overload the top-of-pull position with more mechanical tension than a full deadlift allows, specifically training grip and upper-back strength under heavier-than-usual load. Adjustable safety pins on a power rack or a Smith machine both work to set the starting height — the Smith's fixed vertical path is far less of an issue here than in a full deadlift, since the shortened range needs much less forward-and-back coordination.
+- **Less suitable when:** A user wants the full-range, floor-level strength stimulus a conventional deadlift trains, since this movement skips that range entirely.
 - **Complements:** A full-range deadlift or Romanian deadlift, which covers the bottom-range work this movement skips.
 - **Overlaps:** Conventional deadlift; distinguish by range of motion and starting position.
 - **Status:** Draft.
@@ -166,8 +168,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats and mid-back; elbow flexors and trunk musculature contribute.
 - **Movement:** Horizontal pull.
 - **Coverage:** Unilateral compound, low equipment requirement, moderate setup.
-- **Best used when:** A user wants per-side work, has limited equipment, or wants a row without loading both sides of the spine at once. Dumbbells default to a neutral grip; the neutral grip is usually the most natural fit for this movement and does not need a pronated or supinated version to answer a distinct "why choose this."
-- **Less suitable when:** Session time is short, since unilateral work roughly doubles the working sets.
+- **Best used when:** A user wants a strong mechanical-tension stimulus per side, with the free arm and slight trunk rotation allowing a bit more range and stretch than a bilateral row, or wants to bring a lagging side level with the other. Dumbbells default to a neutral grip; the neutral grip is usually the most natural fit for this movement and does not need a pronated or supinated version to answer a distinct "why choose this."
+- **Less suitable when:** The extra per-side volume needed to match a bilateral row's total work makes this a less efficient way to accumulate back-thickness volume when session time or fatigue budget is tight.
 - **Complements:** A bilateral row or vertical pull.
 - **Overlaps:** Other rowing variations.
 - **Status:** Draft.
@@ -178,8 +180,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats.
 - **Movement:** Shoulder extension.
 - **Coverage:** Isolation-oriented, low fatigue cost when a cable station is available.
-- **Best used when:** A user wants lat work without adding another heavy pull, or grip and elbow flexors are the limiting factor.
-- **Less suitable when:** Cable access is limited, or the routine already has enough lat volume.
+- **Best used when:** A user wants a stretch-mediated, lat-isolated stimulus that doesn't depend on grip or biceps endurance, often used as a pre-exhaust warm-up or a finisher after heavier pulling.
+- **Less suitable when:** A user's back growth is currently limited by total heavy-pulling volume rather than needing more lat isolation — a compound pull delivers more overall stimulus per set.
 - **Complements:** A vertical or horizontal pull.
 - **Overlaps:** Dumbbell pullover; distinguish by resistance profile.
 - **Status:** Draft.
@@ -190,8 +192,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats; chest and triceps contribute.
 - **Movement:** Shoulder extension.
 - **Coverage:** Isolation-oriented, moderate stability demand, low setup with a bench and one dumbbell.
-- **Best used when:** No cable station is available, or a user wants a lat-focused movement whose resistance profile matches a free-weight press.
-- **Less suitable when:** Shoulder comfort overhead is limiting, or a user wants tension held through the whole range the way a cable pulldown provides.
+- **Best used when:** A user wants a stretch-mediated lat stimulus at the top of an overhead arc, a range compound pulling doesn't reach.
+- **Less suitable when:** A user wants tension held through the whole range, which a cable straight-arm pulldown provides and this movement's resistance profile does not.
 - **Complements:** A vertical or horizontal pull.
 - **Overlaps:** Straight-arm pulldown; distinguish by resistance profile. The chest-biased dumbbell pullover recorded in the chest module is the same arc with straighter arms — elbow bend is what separates the two.
 - **Status:** Draft.
@@ -202,8 +204,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Upper trapezius; grip and forearms contribute.
 - **Movement:** Scapular elevation.
 - **Coverage:** Isolation, low setup, low skill demand.
-- **Best used when:** A user specifically wants upper-trap size or has a visible shoulder-line goal. A barbell or dumbbells both work; a cable version keeps constant tension if a station is free, but the movement and "why choose this" answer are the same across all three.
-- **Less suitable when:** Grip fails well before the traps, or the neck and upper back are already carrying a lot of weekly work.
+- **Best used when:** A user wants a mechanical-tension, size-focused stimulus for the upper traps specifically, since rows and pulls only train them indirectly. A barbell or dumbbells both work; a cable version keeps constant tension if a station is free, but the movement and "why choose this" answer are the same across all three.
+- **Less suitable when:** Grip gives out well before the traps are meaningfully fatigued, which caps how much stimulus the set can actually deliver — straps or a different grip may be needed to keep training past that point.
 - **Complements:** Mid- and lower-trap work such as rows or face pulls.
 - **Overlaps:** Other shrug and carry variations.
 - **Status:** Draft.
@@ -214,8 +216,8 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Spinal erectors, glutes, and hamstrings, depending on how the movement is executed.
 - **Movement:** Hip extension and trunk extension.
 - **Coverage:** Stable compound, low-to-moderate fatigue cost, adjustable emphasis.
-- **Best used when:** A user wants erector or hip-extension work that is easier to recover from than heavy hinging.
-- **Less suitable when:** The bench is unavailable, or back symptoms are present — pain is a stop-and-assess signal, not something to train through.
+- **Best used when:** A user wants a moderate mechanical-tension stimulus for the spinal erectors, and glutes or hamstrings depending on execution, without the systemic fatigue cost of a heavy hinge.
+- **Less suitable when:** A user wants the heaviest possible loading for a maximal-strength stimulus, which a barbell hinge delivers more of. Back symptoms are a stop-and-assess signal, not something to train through.
 - **Complements:** A hinge pattern; see the hamstrings and hips modules for overlap.
 - **Overlaps:** Romanian deadlift and other hip-hinge patterns.
 - **Status:** Draft.
