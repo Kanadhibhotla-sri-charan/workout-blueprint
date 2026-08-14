@@ -33,13 +33,13 @@ The hip module is organized by direction of hip movement and by where in the ran
 ### Romanian Deadlift
 
 - **Why this exists:** Loads hip extension with the hip bent, so the glutes and hamstrings work in a lengthened position.
-- **Primary targets:** Glutes and hamstrings; spinal erectors contribute.
-- **Movement:** Hip hinge.
+- **Primary targets:** Glutes and hamstrings; spinal erectors contribute. Unlike the back extension or Bulgarian split squat, an RDL doesn't have a clean discrete technique switch that biases one over the other — the moderate knee bend trains both together by design throughout the whole movement. If a more glute-isolated, shortened-position stimulus is the goal, the hip thrust is the more direct option; for a more hamstring-isolated stimulus, see the stiff-leg deadlift recorded in the hamstrings module.
+- **Movement:** Hip hinge, moderate knee bend.
 - **Coverage:** Heavy compound, lengthened-position emphasis, moderate skill demand, high fatigue cost.
 - **Best used when:** A user wants a strong stretch-mediated growth stimulus for the glutes and hamstrings together, in a lengthened position a hip thrust doesn't reach. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
 - **Less suitable when:** Lower-back fatigue is already high, which caps how much of the lengthened-position load can safely be used.
 - **Complements:** A shortened-position movement such as the hip thrust.
-- **Overlaps:** Good mornings, 45° back extensions, the Smith machine version below, and other hinge patterns; also recorded in the hamstrings module. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
+- **Overlaps:** Good mornings, 45° back extensions, the Smith machine version below, and other hinge patterns; also recorded in the hamstrings module, which also has the stiff-leg deadlift. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
 - **Status:** Draft.
 
 ### Smith Machine Romanian Deadlift

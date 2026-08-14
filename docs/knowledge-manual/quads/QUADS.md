@@ -64,7 +64,19 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Best used when:** A user wants a squat variation that trains the adductors directly, or whose torso length or hip mobility makes a more upright squat more comfortable than a shoulder-width stance.
 - **Less suitable when:** Hip external-rotation mobility is limiting, which can push stress onto the knees or lower back instead of the intended muscles.
 - **Complements:** A narrower-stance squat, which trains the adductors less directly.
-- **Overlaps:** Back squat and other knee-dominant patterns; distinguish by stance width.
+- **Overlaps:** Back squat and other knee-dominant patterns; distinguish by stance width. The sumo deadlift below is the same wide-stance idea applied to a floor pull instead of a squat.
+- **Status:** Draft.
+
+### Sumo Deadlift
+
+- **Why this exists:** A wide stance with the toes turned out and the hands gripping inside the knees shortens the range of motion and keeps the torso more upright than a conventional deadlift, shifting the demand away from the lower back and toward the quads and adductors — enough that it's recorded here rather than with the conventional deadlift in the back module.
+- **Primary targets:** Quads and adductors; glutes and hamstrings contribute. Spinal erectors, lats, traps, and grip still work to hold the position and the bar, but contribute less than in a conventional deadlift because of the shorter range and more upright torso.
+- **Movement:** Hip hinge, wide stance.
+- **Coverage:** Heavy compound, high hip-mobility demand (external rotation), high skill demand, high fatigue cost.
+- **Best used when:** A user wants a maximal-load pull with real quad and adductor involvement and less lower-back range than a conventional deadlift, or whose torso length or arm length makes the conventional stance's range awkward.
+- **Less suitable when:** Hip external-rotation mobility is limiting, which can push stress onto the knees or hips instead of the intended muscles, or a user wants the fuller hip-hinge range and greater spinal-erector demand the conventional deadlift, recorded in the back module, provides.
+- **Complements:** A single-joint hamstring or glute movement.
+- **Overlaps:** Conventional deadlift, recorded in the back module; distinguish by stance width, torso angle, and range of motion. The sumo squat above is the same wide-stance idea applied to a squat instead of a floor pull.
 - **Status:** Draft.
 
 ### Hack Squat
@@ -113,6 +125,42 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Less suitable when:** The fixed rail's path doesn't match a user's natural lunge arc, which can feel awkward and shift stress away from the target muscles.
 - **Complements:** A bilateral squat or press.
 - **Overlaps:** The free-weight Bulgarian split squat; distinguish by stability demand.
+- **Status:** Draft.
+
+### Static Lunge
+
+- **Why this exists:** A fixed stance lunge performed in place, without stepping, which removes the coordination and balance demand of a walking or reverse lunge and lets effort go directly into the working leg.
+- **Primary targets:** Quads; glutes and adductors contribute.
+- **Movement:** Unilateral knee-dominant, stationary stance.
+- **Coverage:** Unilateral, moderate stability demand, low setup.
+- **Best used when:** A user wants a controlled, per-leg mechanical-tension stimulus without the extra coordination demand of moving between reps. A barbell on the back allows the heaviest load on a fixed path; dumbbells at the sides are a lighter, more accessible setup with independent arms; a shouldered sandbag — sometimes sold specifically as a "lunge bag," though naming for this varies — adds a shifting, unstable load that raises the trunk-bracing demand beyond either.
+- **Less suitable when:** A user wants the higher-coordination, more athletic carryover a walking lunge provides.
+- **Complements:** A bilateral squat or press.
+- **Overlaps:** Walking lunge and reverse lunge; distinguish by whether the feet reset or travel between reps.
+- **Status:** Draft.
+
+### Reverse Lunge
+
+- **Why this exists:** Stepping backward into the lunge, rather than forward, keeps the front knee from traveling far past the toes, which many find kinder on the front knee than a forward-stepping lunge.
+- **Primary targets:** Quads; glutes contribute, often slightly more than a forward-stepping lunge because of the slight forward lean the backward step allows.
+- **Movement:** Unilateral knee-dominant, stepping backward.
+- **Coverage:** Unilateral, moderate stability demand, low setup.
+- **Best used when:** A user wants a lunge pattern that's easier on the front knee, or an easier entry point into lunging than a walking lunge's continuous balance demand. A barbell on the back allows the heaviest load on a fixed path; dumbbells at the sides are a lighter, more accessible setup with independent arms; a shouldered sandbag — sometimes sold specifically as a "lunge bag," though naming for this varies — adds a shifting, unstable load that raises the trunk-bracing demand beyond either.
+- **Less suitable when:** A user wants the continuous, higher-coordination stimulus a walking lunge provides.
+- **Complements:** A bilateral squat or press.
+- **Overlaps:** Static lunge and walking lunge; distinguish by whether the feet reset or travel between reps.
+- **Status:** Draft.
+
+### Walking Lunge
+
+- **Why this exists:** Stepping forward continuously and alternating legs removes the reset between reps a static or reverse lunge has, adding a coordination and conditioning demand on top of the per-leg quad stimulus.
+- **Primary targets:** Quads; glutes contribute.
+- **Movement:** Unilateral knee-dominant, stepping forward continuously.
+- **Coverage:** Unilateral, high stability and coordination demand, needs floor space.
+- **Best used when:** A user wants a higher-rep, pump-and-conditioning-oriented per-leg stimulus with athletic carryover, rather than a controlled mechanical-tension set.
+- **Less suitable when:** Balance and coordination limit the load before the legs are meaningfully fatigued, which caps how much of the intended stimulus the set can deliver — a static or reverse lunge removes that limiter. A barbell on the back allows a fixed path but adds the most balance demand of the three loading options; dumbbells at the sides are the easier entry point; a shouldered sandbag — sometimes sold specifically as a "lunge bag," though naming for this varies — adds a shifting, unstable load on top of a movement that's already balance-demanding.
+- **Complements:** A bilateral squat or press.
+- **Overlaps:** Static lunge and reverse lunge; distinguish by whether the feet reset or travel between reps.
 - **Status:** Draft.
 
 ### Goblet Squat

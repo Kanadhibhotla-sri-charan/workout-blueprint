@@ -19,13 +19,25 @@ The hamstrings both extend the hip and bend the knee, and a routine can cover on
 ### Romanian Deadlift
 
 - **Why this exists:** The main loadable hinge, and the most direct way to train the hamstrings in a lengthened position under heavy load.
-- **Primary targets:** Hamstrings and glutes; spinal erectors contribute.
-- **Movement:** Hip hinge.
+- **Primary targets:** Hamstrings and glutes; spinal erectors contribute. Unlike the back extension or Bulgarian split squat, an RDL doesn't have a clean discrete technique switch that biases one over the other — the moderate knee bend trains both together by design throughout the whole movement. If a genuinely more hamstring-isolated stimulus is the goal, the stiff-leg deadlift below is the more direct option; for a more glute-isolated stimulus, see the hip thrust.
+- **Movement:** Hip hinge, moderate knee bend.
 - **Coverage:** Heavy compound, lengthened-position emphasis, moderate skill demand, high fatigue cost.
-- **Best used when:** A user wants the strongest available stretch-mediated growth stimulus for the hamstrings, in a lengthened position no curl variation reaches. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
+- **Best used when:** A user wants the strongest available stretch-mediated growth stimulus for the hamstrings and glutes together, in a lengthened position no curl variation reaches. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
 - **Less suitable when:** Lower-back fatigue is already high, which caps how much of the lengthened-position load can safely be used.
 - **Complements:** A leg-curl pattern, since a hinge alone leaves knee flexion untrained.
-- **Overlaps:** Good mornings, stiff-leg deadlifts, and 45° back extensions; also recorded in the hips module, which also has the Smith machine version — the fixed rail keeps the bar close to the body automatically, which helps here since that is already the correct free-weight bar path. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
+- **Overlaps:** Good mornings, the stiff-leg deadlift below, and 45° back extensions; also recorded in the hips module, which also has the Smith machine version — the fixed rail keeps the bar close to the body automatically, which helps here since that is already the correct free-weight bar path. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
+- **Status:** Draft.
+
+### Stiff-Leg Deadlift
+
+- **Why this exists:** Keeping the knees much straighter than an RDL removes most of the knee's contribution to the hinge, which pushes nearly all of the stretch and tension onto the hamstrings specifically, at the cost of the load capacity and lower-back sparing the RDL's knee bend provides.
+- **Primary targets:** Hamstrings; glutes contribute less than in an RDL, since less knee bend means less hip-extension drive from the glutes at lockout.
+- **Movement:** Hip hinge, straight-leg execution.
+- **Coverage:** Heavy compound, lengthened-position emphasis, high skill demand, high lower-back demand.
+- **Best used when:** A user specifically wants the most hamstring-isolated stretch-mediated stimulus this movement family offers, and can tolerate the added lower-back demand the straighter legs bring.
+- **Less suitable when:** Lower-back fatigue or hamstring flexibility limits how straight the legs can safely stay, or a user wants the RDL's higher load capacity and more balanced glute-hamstring stimulus instead.
+- **Complements:** A knee-flexion-dominant leg curl or a shortened-position movement such as the hip thrust.
+- **Overlaps:** Romanian deadlift; distinguish by knee bend and hamstring-versus-glute emphasis.
 - **Status:** Draft.
 
 ### Seated Leg Curl

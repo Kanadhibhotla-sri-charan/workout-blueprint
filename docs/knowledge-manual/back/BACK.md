@@ -147,19 +147,7 @@ The back module is organized around pulling directions and support roles, not a 
 - **Best used when:** A user wants the single heaviest, most mechanical-tension-driven stimulus available for the whole posterior chain, and can recover from the systemic cost that comes with it.
 - **Less suitable when:** Recovery is limited, or what a user actually needs is back-thickness or lat-width growth rather than raw whole-body strength — a rack pull or a compound row delivers a more targeted stimulus at far less systemic cost.
 - **Complements:** A single-joint hamstring or glute movement that adds volume without the same systemic cost.
-- **Overlaps:** Sumo deadlift below, and Romanian deadlift, recorded in the hips and hamstrings modules, and rack pull below; each starts from a different position, stance, or range and loads the pull differently. A Smith machine is not a practical substitute here — the floor-level starting position and the coordinated hip-and-knee path a full pull needs don't fit a fixed vertical rail.
-- **Status:** Draft.
-
-### Sumo Deadlift
-
-- **Why this exists:** A wide stance with the toes turned out and the hands gripping inside the knees shortens the range of motion and keeps the torso more upright than a conventional deadlift, shifting some of the demand from the lower back toward the quads and adductors.
-- **Primary targets:** Quads, adductors, glutes, and hamstrings; spinal erectors, lats, traps, and grip contribute, but less than in a conventional deadlift because of the shorter range and more upright torso.
-- **Movement:** Hip hinge, wide stance.
-- **Coverage:** Heavy compound, high hip-mobility demand (external rotation), high skill demand, high fatigue cost.
-- **Best used when:** A user wants a maximal-load pull with more quad and adductor involvement and less lower-back range than a conventional deadlift, or whose torso length or arm length makes the conventional stance's range awkward.
-- **Less suitable when:** Hip external-rotation mobility is limiting, which can push stress onto the knees or hips instead of the intended muscles, or a user wants the fuller hip-hinge range and greater spinal-erector demand a conventional deadlift provides.
-- **Complements:** A single-joint hamstring or glute movement.
-- **Overlaps:** Conventional deadlift; distinguish by stance width, torso angle, and range of motion.
+- **Overlaps:** Rack pull below, and Romanian deadlift, recorded in the hips and hamstrings modules; each starts from a different position or range and loads the pull differently. The sumo deadlift, recorded in the quads module, is a wide-stance version of this same floor pull — its primary emphasis shifts enough toward the quads and adductors that it's recorded there rather than duplicated here. A Smith machine is not a practical substitute for either stance — the floor-level starting position and the coordinated hip-and-knee path a full pull needs don't fit a fixed vertical rail.
 - **Status:** Draft.
 
 ### Rack Pull
