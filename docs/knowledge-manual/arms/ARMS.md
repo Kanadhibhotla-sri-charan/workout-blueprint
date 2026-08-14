@@ -262,11 +262,11 @@ The arm module is organized by elbow function and by where in the range a moveme
 - **Overlaps:** Cable pushdown; distinguish by shoulder position and the unilateral setup.
 - **Status:** Draft.
 
-### Cable Overhead Extension
+### Cable Overhead Extension (Leaning Forward)
 
-- **Why this exists:** Standing away from the stack and leaning into a cable keeps constant tension on the triceps overhead, unlike a free-weight overhead extension where the load is hardest only partway through the range.
+- **Why this exists:** Standing away from the stack, facing away from it, and leaning the torso forward while extending overhead keeps constant tension on the triceps through the stretch, unlike a free-weight overhead extension where the load is hardest only partway through the range.
 - **Primary targets:** Triceps, commonly cited as long-head-biased, since the flexed shoulder position stretches the long head further than pressing or pushdowns do.
-- **Movement:** Elbow extension with the shoulder flexed.
+- **Movement:** Elbow extension with the shoulder flexed, torso leaning forward away from the stack.
 - **Coverage:** Isolation, lengthened-position emphasis, constant-tension resistance profile, moderate setup.
 - **Best used when:** A user wants the long head's strongest stretch position combined with pump-oriented constant tension, rather than a free weight's fading top-range load. A rope, straight bar, or V-bar attachment all work; the choice is a grip preference rather than a different movement.
 - **Less suitable when:** A user's priority is the heaviest possible loading for a strength-driven stimulus, which free weights deliver more of.

@@ -64,16 +64,16 @@ The hamstrings both extend the hip and bend the knee, and a routine can cover on
 - **Overlaps:** Machine leg curls.
 - **Status:** Draft.
 
-### 45° Back Extension
+### 45° Back Extension (Hip-Hinge-Dominant Execution)
 
-- **Why this exists:** Trains hip extension with far less setup and systemic cost than a heavy hinge, and the emphasis can be shifted toward the hamstrings by execution.
-- **Primary targets:** Hamstrings, glutes, and spinal erectors, depending on execution.
-- **Movement:** Hip extension.
+- **Why this exists:** Trains hip extension with far less setup and systemic cost than a heavy hinge. Bending the knees slightly and driving the movement from the hips — keeping the lower back neutral rather than actively extending it — is what shifts this movement's emphasis onto the hamstrings and glutes specifically. This is the execution this record describes; the back module has the same equipment used with a different execution for a different emphasis.
+- **Primary targets:** Hamstrings and glutes; spinal erectors contribute, but less than with the spinal-extension-dominant execution described in the back module.
+- **Movement:** Hip extension, hip-hinge-dominant execution.
 - **Coverage:** Stable compound, low-to-moderate fatigue cost, low load requirement.
-- **Best used when:** A user wants a moderate mechanical-tension hip-extension stimulus that's easier to recover from than a heavy hinge, or whose Romanian deadlifts are grip-limited before the hamstrings are.
-- **Less suitable when:** A user wants the heaviest possible loading for a maximal stretch-and-strength stimulus, which a barbell hinge delivers more of. Back symptoms are a stop-and-assess signal, not something to train through.
+- **Best used when:** A user wants a moderate mechanical-tension hip-extension stimulus specifically for the hamstrings and glutes, easier to recover from than a heavy hinge, or whose Romanian deadlifts are grip-limited before the hamstrings are.
+- **Less suitable when:** A user wants to bias the spinal erectors instead — keeping the legs straighter and allowing controlled lumbar extension, described in the back module's copy of this exercise, does that instead. Back symptoms are a stop-and-assess signal either way, not something to train through.
 - **Complements:** A leg-curl pattern.
-- **Overlaps:** Romanian deadlifts and good mornings; also recorded in the back module.
+- **Overlaps:** Romanian deadlifts and good mornings. The back module's copy of this exercise uses a spinal-extension-dominant execution instead — same equipment, different technique, different emphasis.
 - **Status:** Draft.
 
 ## Review checklist

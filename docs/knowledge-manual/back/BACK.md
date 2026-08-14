@@ -210,16 +210,16 @@ The back module is organized around pulling directions and support roles, not a 
 - **Overlaps:** Other shrug and carry variations.
 - **Status:** Draft.
 
-### 45° Back Extension
+### 45° Back Extension (Spinal-Extension-Dominant Execution)
 
-- **Why this exists:** A loaded hip-extension and spinal-support pattern that can be trained without the setup and systemic cost of a heavy deadlift.
-- **Primary targets:** Spinal erectors, glutes, and hamstrings, depending on how the movement is executed.
-- **Movement:** Hip extension and trunk extension.
+- **Why this exists:** A loaded hip-extension and spinal-support pattern that can be trained without the setup and systemic cost of a heavy deadlift. Keeping the legs nearly straight and allowing a small, controlled amount of lumbar extension through the top of the rep — rather than hinging purely from the hip — is what shifts this movement's emphasis onto the spinal erectors specifically. This is the execution this record describes; the hamstrings module has the same equipment used with a different execution for a different emphasis.
+- **Primary targets:** Spinal erectors; glutes and hamstrings contribute, but less than with the hip-hinge-dominant execution described in the hamstrings module.
+- **Movement:** Trunk extension, spinal-extension-dominant execution.
 - **Coverage:** Stable compound, low-to-moderate fatigue cost, adjustable emphasis.
-- **Best used when:** A user wants a moderate mechanical-tension stimulus for the spinal erectors, and glutes or hamstrings depending on execution, without the systemic fatigue cost of a heavy hinge.
-- **Less suitable when:** A user wants the heaviest possible loading for a maximal-strength stimulus, which a barbell hinge delivers more of. Back symptoms are a stop-and-assess signal, not something to train through.
+- **Best used when:** A user specifically wants a moderate mechanical-tension stimulus for the spinal erectors, without the systemic fatigue cost of a heavy hinge.
+- **Less suitable when:** A user wants to bias the glutes and hamstrings instead — bending the knees more and driving the movement from the hips, described in the hamstrings module's copy of this exercise, does that instead. Back symptoms are a stop-and-assess signal either way, not something to train through.
 - **Complements:** A hinge pattern; see the hamstrings and hips modules for overlap.
-- **Overlaps:** Romanian deadlift and other hip-hinge patterns.
+- **Overlaps:** Romanian deadlift and other hip-hinge patterns. The hamstrings module's copy of this exercise uses a hip-hinge-dominant execution instead — same equipment, different technique, different emphasis.
 - **Status:** Draft.
 
 ## Review checklist
