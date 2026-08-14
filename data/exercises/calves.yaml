@@ -84,7 +84,7 @@
       real hypertrophy trial, the same tier as the triceps overhead-
       extension claim in the arms module, though from a single study
       rather than a replicated body of work.
-  review_status: draft
+  review_status: reviewed
 
 - id: seated-calf-raise
   name: Seated Calf Raise
@@ -132,8 +132,21 @@
   complements:
     - A straight-knee raise.
   overlaps_with: []
-  evidence_notes: []
-  review_status: draft
+  evidence_notes:
+    - >-
+      The rep-range claim has a real anatomical basis: the soleus is
+      consistently measured at roughly 70-90% slow-twitch (type I) fiber
+      composition, well above most skeletal muscle, which is the standard
+      justification for training it with higher reps and shorter rest.
+      Caveat worth stating plainly: newer hypertrophy research (load-
+      range comparison trials) has found that muscles — including
+      slow-twitch-dominant ones — can grow similarly across a wide range
+      of loads and rep ranges as long as sets are taken close to failure,
+      so the higher-rep prescription is a reasonable bias grounded in
+      fiber type, not a strict requirement for soleus growth. Evidence
+      quality: moderate — solid anatomical basis, softer causal link to
+      the specific training prescription.
+  review_status: reviewed
 
 - id: leg-press-calf-raise
   name: Leg-Press Calf Raise
@@ -184,7 +197,7 @@
     - standing-calf-raise
     - seated-calf-raise
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: single-leg-calf-raise
   name: Single-Leg Calf Raise
@@ -233,7 +246,7 @@
   overlaps_with:
     - standing-calf-raise
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: tibialis-raise
   name: Tibialis Raise
@@ -281,4 +294,4 @@
     - Plantarflexion work.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

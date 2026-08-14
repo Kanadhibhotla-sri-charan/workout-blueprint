@@ -36,7 +36,7 @@ Across every record in this module: load lightly, add load slowly, keep movement
 - **Primary targets:** Neck extensors; upper trapezius contributes.
 - **Movement:** Neck extension.
 - **Coverage:** Isolation, low fatigue cost, moderate setup with a harness or pad.
-- **Best used when:** A user wants a genuine mechanical-tension growth stimulus for the area most responsible for visible neck thickness, and has already built control through isometric work.
+- **Best used when:** A user wants a genuine mechanical-tension growth stimulus for the area most responsible for visible neck thickness, and has already built control through isometric work. This is a lower-stakes claim than the region-bias claims elsewhere in this project — it's standard anatomical description (the neck extensors and upper trapezius make up the visible bulk of the back and sides of the neck), not a contested hypertrophy finding.
 - **Less suitable when:** Load or range can't yet be controlled — a lighter load with a slower tempo is the better next step, not a heavier one.
 - **Complements:** Neck flexion work, so the region is not trained in one direction only.
 - **Overlaps:** Harness, plate, and machine extension variations.

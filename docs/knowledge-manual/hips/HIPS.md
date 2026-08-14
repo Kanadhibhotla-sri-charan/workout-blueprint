@@ -24,7 +24,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Gluteus maximus; hamstrings and quads contribute.
 - **Movement:** Hip extension in a shortened context.
 - **Coverage:** Heavy compound, shortened-position emphasis, higher setup cost.
-- **Best used when:** A user wants the strongest available shortened-position, mechanical-tension stimulus specifically for the glutes, without the spinal loading a hinge adds. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine or a Smith machine both offer a fixed path, which some find more comfortable than balancing a free barbell.
+- **Best used when:** A user wants the strongest available shortened-position stimulus specifically for the glutes — by EMG, not necessarily by measured growth — without the spinal loading a hinge adds. A barbell across the hips is the default loadable version; a dedicated hip-thrust machine or a Smith machine both offer a fixed path, which some find more comfortable than balancing a free barbell. Worth a real caveat: EMG shows the hip thrust produces roughly 2-3x the glute activation of a back squat at comparable loads, but a 2023 MRI hypertrophy trial found hip thrust and back squat training produced similar glute growth despite that EMG gap — a case of EMG and measured growth not correlating. See the canonical YAML record's evidence_notes for the full citation.
 - **Less suitable when:** A user's priority is a stretch-mediated stimulus instead — a hinge pattern loads the lengthened position this movement mostly skips.
 - **Complements:** A hinge pattern such as the Romanian deadlift.
 - **Overlaps:** Glute bridges and machine hip-thrust variations.

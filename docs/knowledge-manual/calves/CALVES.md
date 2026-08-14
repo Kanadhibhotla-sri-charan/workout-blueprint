@@ -35,7 +35,7 @@ The lower leg is organized around knee position, because knee angle decides whic
 - **Primary targets:** Soleus; gastrocnemius contributes less than in a straight-knee raise.
 - **Movement:** Ankle plantarflexion with the knee bent.
 - **Coverage:** Isolation, stable, low skill demand, low fatigue cost.
-- **Best used when:** A user wants a soleus-specific stimulus a standing raise mostly misses, or wants a higher-rep, pump-oriented finisher — the soleus is commonly cited to tolerate and respond well to higher rep ranges and shorter rest than the gastrocnemius.
+- **Best used when:** A user wants a soleus-specific stimulus a standing raise mostly misses, or wants a higher-rep, pump-oriented finisher — the soleus is commonly cited to tolerate and respond well to higher rep ranges and shorter rest than the gastrocnemius, which has a real anatomical basis (the soleus is roughly 70-90% slow-twitch fiber). Newer load-range hypertrophy research complicates this a little: muscles can grow similarly across a wide range of loads when sets are taken close to failure, so treat the higher-rep prescription as a reasonable bias, not a strict requirement. See the canonical YAML record's evidence_notes for the full citation.
 - **Less suitable when:** A user is chasing overall calf size and has not yet covered the gastrocnemius-dominant position in the same session.
 - **Complements:** A straight-knee raise.
 - **Overlaps:** Other bent-knee plantarflexion variations.

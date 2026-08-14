@@ -86,7 +86,7 @@
       Evidence quality: strong — a real hypertrophy trial plus consistent
       EMG, though still a single hypertrophy trial with an unusually large
       effect size that hasn't yet been replicated.
-  review_status: draft
+  review_status: reviewed
 
 - id: incline-barbell-press
   name: Incline Barbell Press
@@ -145,7 +145,7 @@
       2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
       incline angle is what the evidence is about, not the choice of
       barbell vs. dumbbell.
-  review_status: draft
+  review_status: reviewed
 
 - id: incline-machine-press
   name: Incline Machine Press
@@ -203,7 +203,7 @@
       Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
       2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
       incline angle is what the evidence is about, not the equipment.
-  review_status: draft
+  review_status: reviewed
 
 - id: smith-machine-incline-press
   name: Smith Machine Incline Press
@@ -259,7 +259,7 @@
       Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
       2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
       incline angle is what the evidence is about, not the fixed rail.
-  review_status: draft
+  review_status: reviewed
 
 - id: incline-cable-press
   name: Incline Cable Press
@@ -317,7 +317,7 @@
       2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
       incline angle is what the evidence is about, not the cable's constant
       tension.
-  review_status: draft
+  review_status: reviewed
 
 - id: flat-barbell-bench-press
   name: Flat Barbell Bench Press
@@ -385,7 +385,7 @@
       as well here as any other angle, though it doesn't isolate a flat-
       specific advantage the way the incline data isolates one for the
       upper chest.
-  review_status: draft
+  review_status: reviewed
 
 - id: smith-machine-bench-press
   name: Smith Machine Bench Press
@@ -441,7 +441,7 @@
     - >-
       Same mid-chest evidence as flat-barbell-bench-press — see that
       record's evidence_notes.
-  review_status: draft
+  review_status: reviewed
 
 - id: flat-dumbbell-press
   name: Flat Dumbbell Press
@@ -498,7 +498,7 @@
     - >-
       Same mid-chest evidence as flat-barbell-bench-press — see that
       record's evidence_notes.
-  review_status: draft
+  review_status: reviewed
 
 - id: machine-chest-press
   name: Machine Chest Press
@@ -555,7 +555,7 @@
     - >-
       Same mid-chest evidence as flat-barbell-bench-press — see that
       record's evidence_notes.
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-chest-press
   name: Cable Chest Press
@@ -611,7 +611,7 @@
     - >-
       Same mid-chest evidence as flat-barbell-bench-press — see that
       record's evidence_notes.
-  review_status: draft
+  review_status: reviewed
 
 - id: hex-press
   name: Hex Press
@@ -677,7 +677,7 @@
       the hex press's squeeze-adduction effect on regional hypertrophy was
       located. It's a widely repeated coaching cue based on where lifters
       report feeling the squeeze, not a settled finding.
-  review_status: draft
+  review_status: reviewed
 
 - id: flat-dumbbell-fly
   name: Flat Dumbbell Fly
@@ -752,7 +752,7 @@
       "strong" should be read as a well-supported direction, not a
       settled magnitude. This is a general principle, not a fly-specific
       finding.
-  review_status: draft
+  review_status: reviewed
 
 - id: incline-dumbbell-fly
   name: Incline Dumbbell Fly
@@ -814,7 +814,7 @@
       flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023,
       2025) — a general principle, not a fly-specific or incline-specific
       finding.
-  review_status: draft
+  review_status: reviewed
 
 - id: decline-dumbbell-fly
   name: Decline Dumbbell Fly
@@ -879,7 +879,7 @@
       flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023,
       2025) — a general principle, not a fly-specific or decline-specific
       finding.
-  review_status: draft
+  review_status: reviewed
 
 - id: machine-fly-pec-deck
   name: Machine Fly (Pec Deck)
@@ -936,7 +936,7 @@
       Same mid-chest evidence as flat-barbell-bench-press applies here —
       see that record's evidence_notes, and the same press-to-fly
       extrapolation caveat noted on flat-dumbbell-fly.
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-fly
   name: Cable Fly
@@ -1000,7 +1000,7 @@
       angles), but it hasn't been tested as a fly specifically. Treat it
       as a coaching cue, not a settled finding, until direct evidence
       turns up.
-  review_status: draft
+  review_status: reviewed
 
 - id: dumbbell-pullover-chest-biased
   name: Dumbbell Pullover (Chest-Biased)
@@ -1067,7 +1067,7 @@
       (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general
       principle about training a muscle at long length, not a
       pullover-specific finding.
-  review_status: draft
+  review_status: reviewed
 
 - id: dip-chest-biased
   name: Dip (Chest-Biased, Forward Lean)
@@ -1127,7 +1127,7 @@
       located, so this stays a moderate-confidence, EMG-only claim rather
       than the stronger hypertrophy-trial support the upper-chest claim
       has.
-  review_status: draft
+  review_status: reviewed
 
 - id: push-up-chest
   name: Push-Up
@@ -1184,4 +1184,4 @@
     - >-
       Same mid-chest evidence as flat-barbell-bench-press — see that
       record's evidence_notes.
-  review_status: draft
+  review_status: reviewed

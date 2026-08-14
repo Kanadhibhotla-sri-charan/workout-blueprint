@@ -53,7 +53,7 @@
     - leg-press
     - smith-machine-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: smith-machine-squat
   name: Smith Machine Squat
@@ -104,7 +104,7 @@
     - back-squat
     - hack-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: front-squat
   name: Front Squat
@@ -155,7 +155,7 @@
     - back-squat
     - hack-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: sumo-squat
   name: Sumo Squat
@@ -207,7 +207,7 @@
     - back-squat
     - sumo-deadlift
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: sumo-deadlift
   name: Sumo Deadlift
@@ -264,7 +264,7 @@
     - "conventional-deadlift (back module)"
     - sumo-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: hack-squat
   name: Hack Squat
@@ -315,7 +315,7 @@
     - leg-press
     - smith-machine-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: leg-press
   name: Leg Press
@@ -365,7 +365,7 @@
     - hack-squat
     - back-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: bulgarian-split-squat-knee-dominant
   name: Bulgarian Split Squat (Short-Stance, Knee-Dominant Execution)
@@ -425,7 +425,7 @@
     - reverse-lunge
     - walking-lunge
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: smith-machine-bulgarian-split-squat
   name: Smith Machine Bulgarian Split Squat
@@ -477,7 +477,7 @@
   overlaps_with:
     - bulgarian-split-squat-knee-dominant
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: static-lunge
   name: Static Lunge
@@ -530,7 +530,7 @@
     - walking-lunge
     - reverse-lunge
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: reverse-lunge
   name: Reverse Lunge
@@ -583,7 +583,7 @@
     - static-lunge
     - walking-lunge
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: walking-lunge
   name: Walking Lunge
@@ -637,7 +637,7 @@
     - static-lunge
     - reverse-lunge
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: goblet-squat
   name: Goblet Squat
@@ -688,7 +688,7 @@
     - front-squat
     - dumbbell-squat-sides
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: dumbbell-squat-sides
   name: Dumbbell Squat (Sides)
@@ -740,7 +740,7 @@
   overlaps_with:
     - goblet-squat
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: leg-extension
   name: Leg Extension
@@ -788,7 +788,7 @@
   overlaps_with:
     - reverse-nordic-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: reverse-nordic-curl
   name: Reverse Nordic Curl
@@ -860,4 +860,4 @@
       avoids the stretch, though a later trial (Wolf et al., 2025,
       PubMed 39959841) found the advantage over full ROM is smaller than
       earlier work suggested.
-  review_status: draft
+  review_status: reviewed

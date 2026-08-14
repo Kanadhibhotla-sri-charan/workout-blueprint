@@ -57,7 +57,7 @@
     - Loaded neck work introduced gradually afterward.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: neck-extension
   name: Neck Extension
@@ -106,8 +106,17 @@
       only.
   overlaps_with:
     - neck-flexion
-  evidence_notes: []
-  review_status: draft
+  evidence_notes:
+    - >-
+      This is a lower-stakes claim than the region-bias claims elsewhere
+      in this dataset — it's a claim about visible anatomy, not about
+      differential muscle recruitment or growth. The neck extensors and
+      upper trapezius make up the visible bulk of the back and sides of
+      the neck, which is standard anatomical description rather than a
+      contested hypertrophy finding, so it doesn't carry the same
+      evidence-quality caveats as the muscle-head-bias claims in the
+      arms, chest, and calves modules.
+  review_status: reviewed
 
 - id: neck-flexion
   name: Neck Flexion
@@ -155,7 +164,7 @@
   overlaps_with:
     - neck-extension
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: lateral-neck-flexion
   name: Lateral Neck Flexion
@@ -201,4 +210,4 @@
     - Flexion and extension work.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

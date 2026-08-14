@@ -53,7 +53,7 @@
   overlaps_with:
     - machine-crunch
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: machine-crunch
   name: Machine Crunch
@@ -102,7 +102,7 @@
   overlaps_with:
     - cable-crunch
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: hanging-knee-leg-raise
   name: Hanging Knee or Leg Raise
@@ -150,7 +150,7 @@
     - A loaded trunk-flexion movement.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: plank
   name: Plank
@@ -201,7 +201,7 @@
   overlaps_with:
     - ab-wheel-rollout
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: ab-wheel-rollout
   name: Ab Wheel Rollout
@@ -252,7 +252,7 @@
   overlaps_with:
     - plank
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: pallof-press
   name: Pallof Press
@@ -298,7 +298,7 @@
     - Trunk flexion and anti-extension work.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: suitcase-carry
   name: Suitcase Carry
@@ -347,7 +347,7 @@
   overlaps_with:
     - "farmers-carry (forearms module)"
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-woodchop
   name: Cable Woodchop
@@ -395,7 +395,7 @@
   overlaps_with:
     - russian-twist
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: russian-twist
   name: Russian Twist
@@ -444,4 +444,4 @@
   overlaps_with:
     - cable-woodchop
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

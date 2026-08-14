@@ -94,7 +94,7 @@
       was located — see seated-leg-curl's evidence_notes below for the
       closest direct hamstring-length hypertrophy trial found, which
       used a hip-flexed knee-flexion position rather than a hinge.
-  review_status: draft
+  review_status: reviewed
 
 - id: stiff-leg-deadlift
   name: Stiff-Leg Deadlift
@@ -155,7 +155,7 @@
       Same general stretch-mediated hypertrophy grounding as
       romanian-deadlift above — see that record's evidence_notes. No
       study specific to the stiff-leg deadlift was located.
-  review_status: draft
+  review_status: reviewed
 
 - id: seated-leg-curl
   name: Seated Leg Curl
@@ -231,7 +231,7 @@
       training that avoids the stretch, though a later trial (Wolf et
       al., 2025, PubMed 39959841) found the advantage over full ROM is
       smaller than earlier work suggested.
-  review_status: draft
+  review_status: reviewed
 
 - id: lying-leg-curl
   name: Lying Leg Curl
@@ -280,7 +280,7 @@
   overlaps_with:
     - seated-leg-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: nordic-hamstring-curl
   name: Nordic Hamstring Curl
@@ -351,7 +351,7 @@
       adaptations tied to injury resilience, which a leg curl doesn't
       replicate — not necessarily the largest hypertrophy stimulus
       available.
-  review_status: draft
+  review_status: reviewed
 
 - id: back-extension-45-hip-dominant
   name: 45° Back Extension (Hip-Hinge-Dominant Execution)
@@ -411,4 +411,4 @@
     - "back-extension-45-spinal-dominant (back module) — same equipment,
       spinal-extension-dominant execution, erector bias instead."
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

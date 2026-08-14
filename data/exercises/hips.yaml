@@ -36,9 +36,10 @@
   setup_time: high
   fatigue_cost: medium
   best_used_when:
-    - The strongest available shortened-position, mechanical-tension
-      stimulus specifically for the glutes is wanted, without the spinal
-      loading a hinge adds.
+    - The strongest available shortened-position stimulus specifically
+      for the glutes is wanted — by EMG, not necessarily by measured
+      growth (see evidence_notes) — without the spinal loading a hinge
+      adds.
   less_suitable_when:
     - A stretch-mediated stimulus is the priority instead — a hinge
       pattern loads the lengthened position this movement mostly skips.
@@ -61,8 +62,24 @@
   complements:
     - "romanian-deadlift (hamstrings module)"
   overlaps_with: []
-  evidence_notes: []
-  review_status: draft
+  evidence_notes:
+    - >-
+      The "strongest" framing needs a real caveat, not just a citation.
+      EMG support is strong: a comparison of the back squat and barbell
+      hip thrust (Contreras et al.-era EMG work) found the hip thrust
+      produced roughly 2-3x the gluteus maximus activation of a back
+      squat at comparable relative loads, consistent with the horizontal
+      load vector peaking exactly at full hip extension. But a 2023 MRI
+      hypertrophy trial (Plotkin et al., PMC10593473, bioRxiv/Sports
+      Medicine) training hip thrust vs. back squat at equated volume
+      found the two produced similar gluteal hypertrophy despite that
+      large EMG gap — squats even produced somewhat greater thigh
+      growth. This is a clear case of EMG and actual measured growth not
+      correlating, so "strongest" is fair to say about mechanical
+      tension/EMG in this specific shortened position, but should not be
+      read as "produces more glute growth than other patterns" — the
+      hypertrophy evidence doesn't support that stronger claim.
+  review_status: reviewed
 
 - id: smith-machine-romanian-deadlift
   name: Smith Machine Romanian Deadlift
@@ -123,7 +140,7 @@
       — see that record's evidence_notes for the general stretch-mediated
       hypertrophy literature. The fixed rail changes bar-path control, not
       the hip position the stretch claim is actually about.
-  review_status: draft
+  review_status: reviewed
 
 - id: bulgarian-split-squat-hip-dominant
   name: Bulgarian Split Squat (Long-Stance, Hip-Dominant Execution)
@@ -197,7 +214,7 @@
       smaller than earlier work suggested. The long-stance execution's
       hip-flexion depth is what the claim is actually about, not
       anything unique to this exercise's other properties.
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-kickback-glute
   name: Cable Kickback
@@ -245,7 +262,7 @@
     - A heavy hip-extension movement.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: hip-abduction
   name: Hip Abduction
@@ -294,7 +311,7 @@
   overlaps_with:
     - hip-adduction
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: hip-adduction
   name: Hip Adduction
@@ -343,7 +360,7 @@
   overlaps_with:
     - hip-abduction
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: standing-cable-hip-flexion
   name: Standing Cable Hip Flexion
@@ -391,4 +408,4 @@
   overlaps_with:
     - "hanging-knee-leg-raise (core module)"
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

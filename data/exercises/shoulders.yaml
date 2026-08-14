@@ -56,7 +56,7 @@
     - cable-shoulder-press
     - seated-machine-shoulder-press
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: smith-machine-shoulder-press
   name: Smith Machine Shoulder Press
@@ -107,7 +107,7 @@
     - seated-machine-shoulder-press
     - cable-shoulder-press
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-shoulder-press
   name: Cable Shoulder Press
@@ -158,7 +158,7 @@
     - seated-machine-shoulder-press
     - smith-machine-shoulder-press
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: seated-machine-shoulder-press
   name: Seated Machine Shoulder Press
@@ -209,7 +209,7 @@
     - cable-shoulder-press
     - smith-machine-shoulder-press
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: dumbbell-lateral-raise
   name: Dumbbell Lateral Raise
@@ -261,7 +261,7 @@
     - cable-lateral-raise
     - machine-lateral-raise
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-lateral-raise
   name: Cable Lateral Raise
@@ -316,7 +316,7 @@
     - dumbbell-lateral-raise
     - machine-lateral-raise
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: machine-lateral-raise
   name: Machine Lateral Raise
@@ -367,7 +367,7 @@
     - dumbbell-lateral-raise
     - cable-lateral-raise
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: rear-delt-fly
   name: Rear-Delt Fly
@@ -432,7 +432,7 @@
       2025, PubMed 39959841) found the general stretch advantage over
       full ROM is smaller than earlier work suggested, which further
       tempers how much weight this claim should carry.
-  review_status: draft
+  review_status: reviewed
 
 - id: machine-reverse-fly
   name: Machine Reverse Fly
@@ -482,7 +482,7 @@
   overlaps_with:
     - rear-delt-fly
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-rear-delt-builder
   name: Cable Rear Delt Builder
@@ -538,7 +538,7 @@
     - seated-cable-row
     - rear-delt-row
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: rear-delt-row
   name: Rear Delt Row
@@ -589,7 +589,7 @@
     - cable-rear-delt-builder
     - rear-delt-fly
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: face-pull
   name: Face Pull
@@ -642,7 +642,7 @@
     - cable-rear-delt-builder
     - cable-band-external-rotation
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-band-external-rotation
   name: Cable or Band External Rotation
@@ -692,7 +692,7 @@
   overlaps_with:
     - face-pull
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: push-up-plus
   name: Push-Up Plus
@@ -740,4 +740,4 @@
     - Overhead pressing and horizontal pulling.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

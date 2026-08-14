@@ -58,7 +58,7 @@
   overlaps_with:
     - reverse-wrist-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: reverse-wrist-curl
   name: Reverse Wrist Curl
@@ -108,7 +108,7 @@
     - wrist-curl
     - reverse-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: reverse-curl
   name: Reverse Curl
@@ -160,7 +160,7 @@
     - cable-reverse-curl
     - zottman-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: cable-reverse-curl
   name: Cable Reverse Curl
@@ -208,7 +208,7 @@
   overlaps_with:
     - reverse-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: farmers-carry
   name: Farmer's Carry
@@ -264,7 +264,7 @@
   overlaps_with:
     - "barbell-dumbbell-shrug (back module)"
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: pronation-supination-work
   name: Pronation and Supination Work
@@ -314,4 +314,4 @@
     - hammer-curl
     - reverse-curl
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed

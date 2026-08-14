@@ -58,7 +58,7 @@
     - chin-up-supinated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: chin-up-supinated
   name: Chin-Up (Supinated Grip)
@@ -109,7 +109,7 @@
     - pull-up-pronated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: lat-pulldown-wide-pronated
   name: Lat Pulldown (Wide, Pronated Grip)
@@ -164,7 +164,7 @@
     - reverse-grip-lat-pulldown
     - neutral-grip-lat-pulldown
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: reverse-grip-lat-pulldown
   name: Reverse-Grip Lat Pulldown
@@ -214,7 +214,7 @@
     - chin-up-supinated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: neutral-grip-lat-pulldown
   name: Neutral-Grip Lat Pulldown
@@ -265,7 +265,7 @@
     - lat-pulldown-wide-pronated
     - reverse-grip-lat-pulldown
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: chest-supported-row
   name: Chest-Supported Row
@@ -319,7 +319,7 @@
     - barbell-bent-over-row-pronated
     - t-bar-row
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: barbell-bent-over-row-pronated
   name: Barbell Bent-Over Row (Pronated Grip)
@@ -373,7 +373,7 @@
     - t-bar-row
     - chest-supported-row
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: reverse-grip-barbell-row
   name: Reverse-Grip (Underhand) Barbell Row
@@ -421,7 +421,7 @@
   overlaps_with:
     - barbell-bent-over-row-pronated
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: seated-cable-row
   name: Seated Cable Row
@@ -472,7 +472,7 @@
   overlaps_with:
     - chest-supported-row
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: t-bar-row
   name: T-Bar Row
@@ -523,7 +523,7 @@
     - reverse-grip-barbell-row
     - chest-supported-row
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: conventional-deadlift
   name: Conventional Deadlift
@@ -583,7 +583,7 @@
     - "sumo-deadlift (quads module) — same floor pull, wide stance,
       emphasis shifted toward quads and adductors."
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: rack-pull
   name: Rack Pull
@@ -636,7 +636,7 @@
   overlaps_with:
     - conventional-deadlift
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: single-arm-dumbbell-row
   name: Single-Arm Dumbbell Row
@@ -687,7 +687,7 @@
     - A bilateral row or vertical pull.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: straight-arm-pulldown
   name: Straight-Arm Pulldown
@@ -749,7 +749,7 @@
       lengthened partials produced hypertrophy similar to, not clearly
       greater than, full ROM — so this is a well-supported general
       direction, not a settled, exercise-specific magnitude claim.
-  review_status: draft
+  review_status: reviewed
 
 - id: dumbbell-pullover-lat-biased
   name: Dumbbell Pullover (Lat-Biased)
@@ -807,7 +807,7 @@
       straight-arm-pulldown above — see that record's evidence_notes. No
       study specific to the lat-biased pullover or lat length at the
       overhead position was located.
-  review_status: draft
+  review_status: reviewed
 
 - id: barbell-dumbbell-shrug
   name: Barbell / Dumbbell Shrug
@@ -855,7 +855,7 @@
     - Mid- and lower-trap work such as rows or face pulls.
   overlaps_with: []
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
 
 - id: back-extension-45-spinal-dominant
   name: 45° Back Extension (Spinal-Extension-Dominant Execution)
@@ -917,4 +917,4 @@
       equipment, hip-hinge-dominant execution, hamstring/glute bias
       instead."
   evidence_notes: []
-  review_status: draft
+  review_status: reviewed
