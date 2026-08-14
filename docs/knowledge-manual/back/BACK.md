@@ -193,7 +193,7 @@ The back module is organized around pulling directions and support roles, not a 
 - **Best used when:** No cable station is available, or a user wants a lat-focused movement whose resistance profile matches a free-weight press.
 - **Less suitable when:** Shoulder comfort overhead is limiting, or a user wants tension held through the whole range the way a cable pulldown provides.
 - **Complements:** A vertical or horizontal pull.
-- **Overlaps:** Straight-arm pulldown; distinguish by resistance profile.
+- **Overlaps:** Straight-arm pulldown; distinguish by resistance profile. The chest-biased dumbbell pullover recorded in the chest module is the same arc with straighter arms — elbow bend is what separates the two.
 - **Status:** Draft.
 
 ### Barbell / Dumbbell Shrug

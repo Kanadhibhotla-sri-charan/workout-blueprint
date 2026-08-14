@@ -84,7 +84,7 @@ Each region has its own draft knowledge module containing exercise records in th
 
 Some movements appear in more than one module — the Romanian deadlift in hips and hamstrings, the Bulgarian split squat in hips and quads, the 45° back extension in back and hamstrings. That is recorded deliberately, and those records must be reconciled before any of them is marked Reviewed.
 
-Some movements split into two records because torso or joint position changes which muscle takes the emphasis — the dip appears in chest (forward lean) and arms (upright torso), and the conventional deadlift (back) sits alongside the Romanian deadlift (hips, hamstrings) as a related but distinct hip hinge. These are separate variations under the separate-variation rule in the PDD, not duplicates.
+Some movements split into two records because torso or joint position changes which muscle takes the emphasis — the dip appears in chest (forward lean) and arms (upright torso), the dumbbell pullover appears in chest (straighter arm) and back (more elbow bend), and the conventional deadlift (back) sits alongside the Romanian deadlift (hips, hamstrings) as a related but distinct hip hinge. These are separate variations under the separate-variation rule in the PDD, not duplicates.
 
 ## Next data pass
 

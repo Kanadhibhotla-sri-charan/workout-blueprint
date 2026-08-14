@@ -11,7 +11,9 @@ The chest module is organized around practical exercise roles, not a claim that 
 
 - **Incline-oriented pressing:** commonly cited as upper/clavicular-biased. Barbell, dumbbell, machine, and cable all cover this role with different resistance profiles.
 - **Horizontal pressing:** commonly cited as mid/sternal-biased, with substantial triceps and anterior-deltoid contribution. Barbell, dumbbell, machine, and cable all cover this role with different resistance profiles.
-- **Fly / adduction work:** an option that can be useful when a user wants lower-load, single-joint-style chest work with a strong stretch component. Cable, dumbbell, and machine each offer a different resistance profile for the same role.
+- **Fly / adduction work:** an option that can be useful when a user wants lower-load, single-joint-style chest work with a strong stretch component. Cable, dumbbell, and machine each offer a different resistance profile for the same role; for dumbbell flies, bench angle shifts the bias the same way it does for presses.
+- **Squeeze / adduction-under-load pressing:** pressing while actively squeezing the hands or dumbbells together, which layers constant isometric adduction tension onto a normal press.
+- **Overhead-arc pullover work:** a shoulder-extension movement that reaches a range no press or fly does; how much the elbows bend decides whether it lands on the chest or the lats.
 - **Lengthened and shortened context:** labels that describe where an exercise tends to feel most challenging, not a guarantee of a specific adaptation.
 - **Lower-chest dip pressing:** a forward-leaning dip commonly cited as lower/costal-biased, one of the few ways to load that region heavily.
 
@@ -137,16 +139,52 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Overlaps:** Flat barbell, dumbbell, and machine presses; distinguish by resistance profile.
 - **Status:** Draft.
 
-### Dumbbell Fly
+### Hex Press
 
-- **Why this exists:** A free-weight chest adduction option; the load is hardest around the mid-range and eases at the top, the opposite feel from a cable fly.
-- **Primary targets:** Chest, commonly cited as mid-biased, though bench angle can shift emphasis toward the upper or lower fibers.
+- **Why this exists:** Pressing two dumbbells while actively squeezing them together adds constant isometric adduction tension throughout the rep, on top of the press itself — a stimulus most standard presses don't provide.
+- **Primary targets:** Chest, commonly cited as mid/sternal-biased with extra emphasis toward the inner chest from the squeeze; triceps and anterior deltoids contribute.
+- **Movement:** Horizontal press with continuous shoulder adduction.
+- **Coverage:** Isolation-oriented compound, low-to-moderate stability demand, low setup.
+- **Best used when:** A user wants a strong mind-muscle-connection and metabolic-stress, pump-oriented stimulus for the inner chest, often as a finisher after heavier pressing — the constant squeeze keeps real tension on the chest even near the top of the rep, where a standard press mostly hands the load off to the triceps and shoulders.
+- **Less suitable when:** A user's priority is maximal loading for a mechanical-tension stimulus — the squeeze demand caps how heavy this can realistically be loaded compared to a standard press.
+- **Complements:** A heavier press movement.
+- **Overlaps:** Flat dumbbell press and dumbbell fly; distinguish by the continuous squeeze.
+- **Status:** Draft.
+
+### Flat Dumbbell Fly
+
+- **Why this exists:** A free-weight chest adduction option performed flat; the load is hardest around the mid-range and eases at the top, the opposite feel from a cable fly.
+- **Primary targets:** Chest, commonly cited as mid-biased.
 - **Movement:** Shoulder horizontal adduction.
 - **Coverage:** Isolation-oriented, moderate-to-high stability demand, low setup.
-- **Best used when:** A user wants a strong stretch-mediated growth stimulus at the bottom of the range — the resistance loads the chest hardest exactly where the muscle is most lengthened, which a press does not replicate.
+- **Best used when:** A user wants a strong stretch-mediated growth stimulus for the mid chest at the bottom of the range — the resistance loads the chest hardest exactly where the muscle is most lengthened, which a press does not replicate.
 - **Less suitable when:** A user wants tension held through the top of the range too, which this movement's resistance profile gives up as the arms come together — a cable fly holds that tension where a dumbbell fly cannot.
 - **Complements:** A pressing movement.
-- **Overlaps:** Cable and machine fly variations; distinguish by resistance profile.
+- **Overlaps:** Incline and decline dumbbell fly, and cable and machine fly variations; distinguish by bench angle and resistance profile.
+- **Status:** Draft.
+
+### Incline Dumbbell Fly
+
+- **Why this exists:** Angling the bench up shifts a free-weight fly's stretch and tension toward the upper chest, the fly equivalent of what an incline press does for pressing.
+- **Primary targets:** Chest, commonly cited as upper/clavicular-biased; anterior deltoids contribute less than in a press.
+- **Movement:** Shoulder horizontal adduction on an incline.
+- **Coverage:** Isolation-oriented, moderate-to-high stability demand, low setup.
+- **Best used when:** A user wants a stretch-mediated growth stimulus specifically for the upper chest, rather than the mid-chest bias a flat fly delivers.
+- **Less suitable when:** Shoulder comfort at the bottom of the range is limiting, which shows up more often at steeper bench angles than on a flat fly.
+- **Complements:** An incline pressing movement.
+- **Overlaps:** Flat and decline dumbbell fly; distinguish by bench angle and which pec region is stretched hardest.
+- **Status:** Draft.
+
+### Decline Dumbbell Fly
+
+- **Why this exists:** Angling the bench down shifts a free-weight fly's stretch and tension toward the lower chest, a region most fly variations don't reach.
+- **Primary targets:** Chest, commonly cited as lower/costal-biased; anterior deltoids contribute less than in a press.
+- **Movement:** Shoulder horizontal adduction on a decline.
+- **Coverage:** Isolation-oriented, moderate-to-high stability demand, moderate setup.
+- **Best used when:** A user wants a stretch-mediated growth stimulus specifically for the lower chest, as an isolation-style complement to a heavier compound like the dip.
+- **Less suitable when:** Shoulder comfort in the decline position is limiting, or a user already has the dip covering lower-chest work and wants a distinct role instead of an overlapping one.
+- **Complements:** A dip or other lower-chest-biased movement.
+- **Overlaps:** Flat and incline dumbbell fly; distinguish by bench angle and which pec region is stretched hardest.
 - **Status:** Draft.
 
 ### Machine Fly (Pec Deck)
@@ -158,7 +196,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Best used when:** A user wants a pump-oriented finisher that's safe to push to true failure or into a drop set — there's no stability demand competing for effort, so every bit of output goes into the chest.
 - **Less suitable when:** A user wants the deep bottom-range stretch a dumbbell fly delivers, since the machine's arc and pad position usually stop short of that range.
 - **Complements:** A pressing movement.
-- **Overlaps:** Cable and dumbbell fly variations; distinguish by resistance profile.
+- **Overlaps:** Cable fly and the flat, incline, and decline dumbbell fly; distinguish by resistance profile.
 - **Status:** Draft.
 
 ### Cable Fly
@@ -170,7 +208,19 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Best used when:** A user wants constant tension through the whole range for a metabolic-stress, pump-oriented finisher, or wants to specifically target the upper or lower chest by adjusting pulley height in a way free-weight flies cannot.
 - **Less suitable when:** A user wants the single deepest stretch position a dumbbell fly's lower resistance point allows, or wants a movement that can be loaded as heavily as a press for raw mechanical tension.
 - **Complements:** A pressing movement.
-- **Overlaps:** Dumbbell fly and machine fly; distinguish by resistance profile and cable path.
+- **Overlaps:** Machine fly and the flat, incline, and decline dumbbell fly; distinguish by resistance profile and cable path.
+- **Status:** Draft.
+
+### Dumbbell Pullover (Chest-Biased)
+
+- **Why this exists:** A straight-to-slightly-bent-arm arc that extends overhead loads the chest in a shoulder-extension role that no press or fly reaches, and is commonly associated with rib-cage and serratus involvement as well.
+- **Primary targets:** Chest, commonly cited as general/costal-biased in this straighter-arm form; serratus anterior and the long head of the triceps contribute.
+- **Movement:** Shoulder extension through an overhead arc.
+- **Coverage:** Isolation-oriented, moderate stability demand, low setup with a bench and one dumbbell.
+- **Best used when:** A user wants a strong stretch-mediated stimulus at the top of an overhead arc, a range no press or fly reaches, or wants a chest movement that also brings the serratus into play.
+- **Less suitable when:** The elbows bend enough that the movement shifts toward a lat-dominant pullover instead — see the back module's version, which uses more elbow bend specifically to bias the lats.
+- **Complements:** A pressing movement.
+- **Overlaps:** The lat-biased dumbbell pullover recorded in the back module; elbow bend is what separates the two.
 - **Status:** Draft.
 
 ### Dip (Chest-Biased, Forward Lean)
