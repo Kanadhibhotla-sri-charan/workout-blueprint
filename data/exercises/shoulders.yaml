@@ -36,7 +36,15 @@
       or dedicated side- and rear-delt work.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder mobility limits are common and can cap how heavy or how deep
+      this can safely be loaded, well before the delts and triceps reach their
+      true strength ceiling.
+    - The trunk-bracing and stability demand is high, so a weak core or poor
+      bracing technique can become the limiting factor before the shoulders
+      are.
+    - Load progression is comparatively slow next to other big lifts, since the
+      muscles moving the bar are smaller than a squat or deadlift's.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -82,7 +90,12 @@
       which can shift stress onto the joint rather than the muscle.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed rail path doesn't match every lifter's natural press arc, and
+      pressing straight up rather than slightly forward can load the shoulder
+      joint uncomfortably for some.
+    - It removes the stabilizer training that a free-weight press provides, so
+      strength built here transfers only partially back to an unassisted press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -128,7 +141,12 @@
       stimulus, which free weights deliver more of.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Absolute load is capped well below what a barbell or heavy dumbbells
+      allow, so this isn't a strength-building substitute for a free-weight
+      press.
+    - Requires dual cable stations or a dedicated cable press setup, which
+      isn't available in every gym the way a barbell or dumbbells are.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -174,7 +192,12 @@
       regardless of how heavy the stack is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine handle position and pressing angle vary a lot between models, and
+      a poor fit can put more stress on the shoulder joint than the muscle.
+    - Removing the balance and bracing demand also removes the stabilizer
+      training a free-weight press provides, so the carryover to unassisted
+      pressing is only partial.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -221,7 +244,13 @@
       weight is still moving.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The load ceiling is low relative to how heavy it can feel — most lifters
+      plateau on usable weight quickly since the leverage at the top of the
+      range is poor.
+    - Trap and upper-shoulder involvement can creep in and take over the
+      movement, especially under fatigue, without an obvious change in how the
+      rep looks.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -269,7 +298,13 @@
       the top-loaded dumbbell profile is wanted instead.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Requires a low cable pulley and enough station space to stand at the
+      right distance and angle, which is a real setup constraint most gyms can
+      accommodate but not instantly.
+    - The line of pull only stays ideal for part of the range unless the pulley
+      height and standing position are tuned carefully, which takes more setup
+      attention than a dumbbell raise.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -316,7 +351,12 @@
       how heavy the stack is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine design varies significantly, and a poor pivot-point match for a
+      given torso size can create an uncomfortable pinch or a line of
+      resistance that never really loads the side delt well.
+    - Availability is a real constraint — this specific machine is less
+      universal in gyms than a cable station or a simple pair of dumbbells.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -360,7 +400,13 @@
       rear-delt effect, which may or may not be what was wanted.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Usable load is low since the posterior deltoid is a small muscle, and
+      it's easy to substitute momentum or trap involvement for real range
+      without noticing.
+    - Elbow bend tends to creep in as the weight gets heavier, sliding the
+      exercise toward a row and away from the isolated stimulus that's the
+      point of this record.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -421,7 +467,12 @@
       feel.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine pivot-point and pad fit vary a lot between models, and a poor
+      match can blunt the rear-delt tension regardless of how heavy the stack
+      is loaded.
+    - Availability is a real constraint — this specific machine isn't as
+      universal in gyms as a cable station or dumbbells.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -467,7 +518,13 @@
       stimulus toward the traps and rhomboids instead of the rear delts.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Keeping the elbows below the wrists throughout the pull takes real
+      technical attention — it's an easy cue to lose under fatigue, at which
+      point the movement drifts toward a standard row.
+    - Requires a cable station and some trial and error with the angle and
+      height to hold the resistance specifically on the rear delt, more setup
+      than a simple fly.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -516,7 +573,12 @@
       stimulus is drifting away from the rear delts.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The bent-over seated position places real demand on the lower back to
+      stay braced, which can become the limiting factor before the rear delts
+      are.
+    - It's easy to let the elbows flare up and out under fatigue, which shifts
+      the stimulus toward the upper back and traps instead of the rear delts.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -562,7 +624,13 @@
       of its value.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The rotation component that gives this movement its joint-health value is
+      the first thing to break down as load increases, so it stops delivering
+      its full intended benefit exactly when it's loaded hardest.
+    - The rear-delt stimulus on its own is moderate at best — this isn't a
+      substitute for dedicated rear-delt work when hypertrophy is the specific
+      goal.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -608,7 +676,13 @@
       assessment rather than self-treatment.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Usable load is very light — the external rotators are small and this is
+      not a movement that will ever feel heavy, which some lifters mistake for
+      it being ineffective.
+    - Technique is easy to get subtly wrong (letting the shoulder or trunk
+      compensate for the rotation), and doing so quietly defeats the purpose
+      without feeling obviously incorrect.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -652,7 +726,12 @@
       whole point of this variation.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The added protraction range is small and easy to skip without noticing,
+      at which point it's functionally just a regular push-up.
+    - As a durability and movement-quality drill, it contributes essentially
+      nothing to shoulder size or strength on its own — it isn't a substitute
+      for pressing volume.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

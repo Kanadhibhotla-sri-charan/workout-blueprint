@@ -42,7 +42,13 @@
       suited to track over time.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Without a load number or clear progression marker, it's genuinely hard to
+      tell whether the hold is actually getting more demanding over time or has
+      plateaued.
+    - The stimulus is inherently mild — this is a starting point for building
+      tolerance and control, not something that keeps producing meaningful
+      growth once loaded neck work is well tolerated.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -84,7 +90,13 @@
       tempo is the better next step, not a heavier one.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The neck is a small, structurally sensitive area — load has to increase
+      far more conservatively here than in almost any other muscle group, or
+      symptoms can appear well before a meaningful growth stimulus is reached.
+    - Equipment for loading neck extension directly (a harness or dedicated
+      machine) is uncommon in most gyms, which limits how heavily this can
+      realistically be progressed for many people.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -128,7 +140,12 @@
       for more stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Usable load is low relative to the effort involved, since the neck
+      flexors are comparatively weak and the safe range of motion is small.
+    - Plate or band positioning at the forehead is awkward to set up
+      consistently, which makes clean progressive overload harder to track than
+      with most other exercises.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -170,7 +187,12 @@
       or symptoms are present — those come first.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - This is a niche addition for most lifters — it targets a comparatively
+      minor muscle group and rarely drives visible neck-size goals compared to
+      extension and flexion work.
+    - Manual resistance (a training partner's hand) is inconsistent rep to rep,
+      which makes progressive overload harder to track than with a fixed load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

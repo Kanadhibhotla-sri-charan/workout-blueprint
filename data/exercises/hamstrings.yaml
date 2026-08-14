@@ -52,7 +52,16 @@
       lengthened-position load can safely be used.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Technical demand is real — hips-back, spine-neutral, bar-close-to-the-
+      legs all have to happen together, and it takes real practice to load
+      heavily without the lower back rounding.
+    - Grip often fails before the hamstrings do at heavier loads, capping the
+      set short of the target muscles' true limit unless straps or a mixed/hook
+      grip are used.
+    - Hamstring flexibility limits how deep the hinge can go while keeping the
+      back neutral, so a stiff lifter may not reach a meaningful stretch even
+      with good technique.
   technique_cues: []
   common_mistakes: []
   programming_notes: >-
@@ -122,7 +131,16 @@
       balanced glute-hamstring stimulus is wanted instead.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The near-straight knee removes most of the lower back's usual mechanical
+      advantage in a hinge, so lower-back load per pound lifted is higher than
+      an RDL's.
+    - Load capacity is meaningfully lower than an RDL's, since hamstring and
+      lower-back tolerance for the straighter-leg stretch position becomes the
+      limiting factor before the hamstrings' full strength does.
+    - Poor hamstring flexibility can force the back to round to reach depth,
+      which defeats the point of the exercise and adds spinal risk instead of
+      hamstring stimulus.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -171,7 +189,13 @@
       movement its distinct value.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine availability and design vary a lot — a poorly fitted thigh pad or
+      pivot point lets the hips creep up during the set, quietly trading away
+      the stretch position that makes this exercise distinct.
+    - The fixed pad position doesn't accommodate every body size well, which
+      can create uncomfortable pressure points before the hamstrings are
+      meaningfully fatigued.
   technique_cues: []
   common_mistakes: []
   programming_notes: >-
@@ -240,7 +264,13 @@
       hamstrings alone can control.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The hips have a strong tendency to rise off the pad as the load gets
+      heavy, which lets other muscles compensate and undercuts the isolation
+      this exercise is meant to provide.
+    - A prone position is uncomfortable or inaccessible for some body types and
+      for anyone with hip-flexor or lower-back sensitivity to being face-down
+      under load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -285,7 +315,16 @@
       rather than loading the full eccentric immediately.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The technical and strength floor is high — many lifters cannot control
+      any meaningful range at all without a partner or anchor, making it a poor
+      first hamstring exercise.
+    - Soreness after a hard set is often severe and can linger for days, which
+      makes the movement difficult to program frequently or stack with other
+      hamstring-heavy work.
+    - There's no simple way to add external load once bodyweight control is
+      mastered — progression relies on range, tempo, or band
+      assistance/resistance rather than a barbell-style load increase.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -354,7 +393,13 @@
       train through.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The bent-knee, hip-driven technique this record describes is easy to blur
+      into the straighter-leg, spinal-extension-dominant version without
+      deliberate cueing, muddying which muscles actually get trained.
+    - Loading options are limited on most equipment — a plate held to the chest
+      or a light barbell across the back is usually the ceiling before
+      stability becomes the limiting factor rather than the target muscles.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

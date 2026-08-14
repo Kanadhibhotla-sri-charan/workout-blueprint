@@ -42,7 +42,12 @@
       added.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Bodyweight is a large, all-or-nothing jump in load for anyone who can't
+      yet do a full rep, and there's no easy way to fine-tune the resistance
+      down without a band or assisted machine.
+    - Grip strength commonly runs out before the lats do, especially for
+      lifters who haven't built grip capacity separately.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -88,7 +93,12 @@
       back per rep.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The extra biceps involvement means some of each rep's tension lands on
+      the elbow flexors rather than the back, which understates how hard the
+      back itself is actually working.
+    - Same bodyweight-jump problem as the pull-up — there's no fine-grained way
+      to scale load down for a lifter who can't yet do a full rep.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -134,7 +144,13 @@
       bodyweight-plus-load pull-up.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - It's easy to lean back and use the trunk to help complete the pull once
+      the load gets heavy, which shifts some of the work away from the lats
+      without feeling like a technique breakdown.
+    - The seated, supported position removes core and grip demand a bodyweight
+      pull would add, so strength built here transfers only partially to a
+      pull-up.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -182,7 +198,12 @@
       pronated version does that more directly.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Same lean-back and momentum risk as the wide pronated version — the
+      seated position makes it easy to recruit the trunk once the load is
+      heavy.
+    - The closer grip and increased biceps involvement mean less of the pull's
+      tension is specifically isolated to the back muscles.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -228,7 +249,12 @@
       a meaningful downside.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Not every cable station has a neutral-grip attachment available, which
+      limits how consistently this specific grip can be programmed.
+    - The joint-friendlier angle comes at some cost to range of motion on
+      certain machines, depending on where the handle attachment sits relative
+      to the body.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -274,7 +300,13 @@
       stimulus, which a supported row deliberately removes.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The chest pad's angle and height often don't fit every torso length well,
+      and a poor fit can cap the row's range of motion regardless of how heavy
+      the load is.
+    - Removing the hinge also removes the trunk-and-hip training stimulus a
+      free-standing row provides, so strength here doesn't fully transfer to
+      unsupported pulling.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -324,7 +356,11 @@
       movement can deliver.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The bent-over hinge position places real demand on the lower back, which
+      can become the limiting factor before the target back muscles are.
+    - Technical demand is high — maintaining a neutral spine under load while
+      pulling takes real practice, and poor form here carries real injury risk.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -370,7 +406,11 @@
       lower-back fatigue already caps how heavy this can safely be loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Same lower-back and technical demands as the overhand version — the hinge
+      position doesn't get any easier or safer just because the grip changed.
+    - The underhand grip can aggravate elbow or bicep-tendon sensitivity in
+      some lifters at heavier loads.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -416,7 +456,13 @@
       stimulus, which a seated row deliberately removes.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The seated, foot-braced setup removes the hip-and-trunk training stimulus
+      a free-standing row provides, so it builds pulling strength somewhat in
+      isolation from that context.
+    - It's easy to round the lower back or lean too far forward and back to add
+      fake range, which can look like more range of motion without adding real
+      back-muscle tension.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -460,7 +506,12 @@
       dumbbell row.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed handle position means grip width and hand angle can't be
+      adjusted mid-set the way a barbell or dumbbell allows, which doesn't suit
+      every lifter's shoulder mechanics.
+    - Requires a dedicated T-bar station or a landmine attachment, which isn't
+      available in every gym the way a barbell is.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -508,7 +559,16 @@
       systemic cost.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The technical demand and injury stakes are higher than almost any other
+      lift in this dataset — poor bar path or a rounded back under heavy load
+      carries real risk.
+    - Recovery cost is high relative to most other back exercises, since the
+      whole posterior chain and central nervous system are taxed, not just the
+      back muscles.
+    - Grip is often the first thing to fail at heavy loads, which can end a set
+      before the back and legs reach their true strength limit unless straps or
+      a mixed grip are used.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -559,7 +619,13 @@
       entirely.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Skipping the floor-level range means it does not build pulling strength
+      or technique off the floor — it should not be mistaken for a full
+      deadlift substitute.
+    - The heavier loads this position allows can tempt lifters into using more
+      back rounding or momentum than they would with a full-range pull, since
+      the working range is shorter and the ego-load temptation is higher.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -606,7 +672,13 @@
       volume when session time or fatigue budget is tight.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Per-side volume needs to roughly double to match a bilateral row's total
+      work, which makes this a slower way to accumulate back-thickness volume
+      when time is limited.
+    - The free hand and knee typically brace on a bench, and a wobbly or poorly
+      positioned base can cap how much weight can be handled safely before the
+      target muscles are the limiter.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -649,7 +721,13 @@
       more overall stimulus per set.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Load ceiling is inherently modest — the fixed-elbow, straight-arm path is
+      a mechanically weaker position than a bent-arm pull, so this can't
+      substitute for a heavy compound pull's overall stimulus.
+    - It's easy for the shoulders to hike up or the movement to turn into a
+      shrug-like motion under fatigue, which shifts the stimulus away from the
+      lats.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -706,7 +784,13 @@
       profile does not.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder mobility limits how far overhead the weight can be lowered
+      safely, which caps the very stretch position that gives this exercise its
+      value for some lifters.
+    - Keeping the elbow bend consistent through the set takes real attention —
+      under fatigue it's easy to drift toward straighter arms, blurring the
+      line with the chest-biased version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -758,7 +842,11 @@
       different grip may be needed to keep training past that point.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The range of motion is small by nature, which limits how much mechanical
+      work each rep can do compared to a full joint-range movement.
+    - Grip commonly fails before the traps are meaningfully fatigued at heavier
+      loads, capping the achievable stimulus without straps or a hook grip.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -809,7 +897,14 @@
       train through.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The controlled lumbar extension this execution deliberately uses is
+      exactly the technique cue that's easy to overdo, so anyone new to the
+      movement should build up load and range gradually rather than starting
+      aggressively.
+    - Loading options are limited on most equipment — a plate held to the chest
+      or a light barbell across the back is usually the practical ceiling
+      before stability becomes the limiter.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

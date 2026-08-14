@@ -52,7 +52,12 @@
       stronger lifter.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder mobility and comfort at a steep bench angle can limit how deep
+      the stretch goes, capping the very stimulus this movement is chosen for.
+    - Controlling two independent dumbbells at an incline is a real stability
+      demand, and it caps the achievable load below what a barbell would allow
+      at the same effort level.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -118,7 +123,12 @@
       per rep.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed grip width and bar path mean the bottom-range stretch is
+      shallower than a dumbbell version allows, trading away some of the
+      incline's lengthened-position value.
+    - Unracking and re-racking at a steep incline angle is more awkward and has
+      a higher missed-rep risk than a flat bench press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -171,7 +181,12 @@
       heavy the stack is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine handle position and pressing angle vary a lot between models, and
+      a poor fit can shift stress onto the shoulder joint rather than the
+      chest.
+    - Removing free-weight balance demand also removes the stabilizer training
+      a barbell or dumbbell version provides.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -223,7 +238,11 @@
       can shift stress onto the shoulder joint rather than the chest.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed rail path doesn't match every lifter's natural press arc, and a
+      mismatch can load the shoulder joint rather than the chest.
+    - Setting the bench angle and rack height correctly takes more fiddling
+      than a standard incline bench, adding real setup time.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -276,7 +295,12 @@
       stimulus, which free weights deliver more of.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Absolute load is capped well below what a barbell or heavy dumbbells
+      allow, so this can't substitute for a heavy press's strength-building
+      role.
+    - Requires dual cable stations set at the right height and angle, which not
+      every gym has configured for this specific movement.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -329,7 +353,12 @@
       stretch-biased stimulus this movement does not provide.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - A spotter or safety bars are genuinely needed to train close to failure
+      safely, which limits how hard this can be pushed when training alone.
+    - Shoulder or elbow discomfort at a full range is common for some lifters,
+      and grip width or bar path often has to be individually adjusted to
+      manage it.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -391,7 +420,12 @@
       can shift stress onto the shoulder joint rather than the chest.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed rail path doesn't match every lifter's natural press arc, and a
+      mismatch can shift stress onto the shoulder joint rather than the chest.
+    - Removing free-weight balance demand also removes the stabilizer training
+      a barbell version provides, so strength here transfers only partially
+      back to a free bench press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -442,7 +476,13 @@
       for a stronger lifter.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Controlling two independent dumbbells caps the achievable load below what
+      a barbell allows, and getting a heavy pair into the starting position
+      takes real technique and, at high weights, help from a spotter.
+    - The higher stability demand can become the limiting factor before the
+      chest itself is meaningfully fatigued, especially for less experienced
+      lifters.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -495,7 +535,12 @@
       heavy the stack is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine handle position and pressing angle vary a lot between models, and
+      a poor fit can blunt the chest tension regardless of how heavy the stack
+      is loaded.
+    - Removing free-weight balance demand also removes the stabilizer training
+      a barbell or dumbbell press provides.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -546,7 +591,12 @@
       stimulus, which free weights deliver more of.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Absolute load is capped well below what a barbell or heavy dumbbells
+      allow, so this can't substitute for a heavy press's strength-building
+      role.
+    - Requires a cable station with the right pulley setup, which isn't as
+      universally available as a bench and barbell.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -601,7 +651,13 @@
       compared to a standard press.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The squeeze demand caps how heavy this can realistically be loaded
+      compared to a standard press, so it isn't a strong option for building
+      raw pressing strength.
+    - Maintaining the isometric squeeze through the whole rep is a coordination
+      demand that fatigues quickly and is easy to let slip without noticing
+      under fatigue.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -658,7 +714,13 @@
       up as the arms come together.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The shoulder joint is placed in a vulnerable, widely stretched position
+      at the bottom of the range, and going too heavy or too deep raises real
+      injury risk.
+    - Load progression is inherently limited — the stretched bottom position
+      caps how much weight can be handled safely well below what a press
+      allows.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -724,7 +786,11 @@
       up more often at steeper bench angles than on a flat fly.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Same shoulder-vulnerability concern as the flat version, and the steeper
+      angle can make the stretched bottom position even less forgiving.
+    - Load ceiling is low, similar to the flat fly, since the stretched
+      shoulder position is the limiting factor rather than chest strength.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -783,7 +849,11 @@
       instead of an overlapping one.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The decline bench setup is less common and more awkward to adjust than a
+      flat or incline bench, adding real setup time.
+    - Same shoulder-vulnerability concern as other free-weight flies — the
+      stretched bottom position caps safe loading regardless of decline angle.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -844,7 +914,12 @@
       range.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The machine's arc and pad position usually stop short of the deep stretch
+      a dumbbell fly delivers, so it trades away some of a fly's distinct value
+      for safety and stability.
+    - Availability and fit vary by gym and by individual torso size, and a poor
+      pad fit can blunt the tension felt regardless of load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -899,7 +974,11 @@
       as a press for raw mechanical tension is needed.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Requires a cable station with adjustable pulley height and, ideally, two
+      stations facing each other, which not every gym has set up conveniently.
+    - Standing balance and cable-path control add a coordination demand that a
+      bench-supported fly doesn't have.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -959,7 +1038,13 @@
       uses more elbow bend specifically to bias the lats.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder mobility limits how far overhead the weight can be lowered
+      safely, which caps the very stretch position that gives this exercise its
+      value for some lifters.
+    - Keeping the elbow position consistently straight through the set takes
+      real attention — under fatigue it's easy to drift toward more elbow bend,
+      blurring the line with the lat-biased version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1018,7 +1103,12 @@
       shallow dip loses most of what makes it distinct from a flat press.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder range and tolerance genuinely limit how deep the dip can go for
+      many lifters, and a shallow dip loses most of what makes this movement
+      distinct.
+    - The forward-lean, deep-stretch bottom position is demanding on the
+      shoulder joint, and going too heavy too soon carries real injury risk.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1074,7 +1164,13 @@
       the tension needed to drive further growth.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Bodyweight alone caps the achievable load, so this stops being a
+      meaningful mechanical-tension stimulus for a trained lifter without added
+      resistance.
+    - Adding load (a vest, band, or elevated feet) is needed to keep
+      progressing past a beginner level, and not every setting has that
+      equipment available.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

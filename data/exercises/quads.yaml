@@ -33,7 +33,14 @@
       whole-body systemic fatigue this movement brings.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Technical demand is high — bar position, depth, and bracing all have to
+      come together, and poor technique carries real injury risk at heavy
+      loads.
+    - Recovery cost is high relative to most other quad movements, since it
+      taxes the whole body and central nervous system, not just the legs.
+    - Ankle, hip, or thoracic mobility limits can cap usable depth or bar
+      position well before the quads reach their true strength limit.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -80,7 +87,13 @@
       target muscles.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed vertical path doesn't match every lifter's natural squat arc,
+      and a mismatch can shift stress onto the knees or lower back instead of
+      the target muscles.
+    - Removing the balance and bracing demand also removes the stabilizer
+      training a free-weight squat provides, so strength here transfers only
+      partially back to an unassisted squat.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -125,7 +138,13 @@
       how much load can actually be used before form breaks down.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The front-rack position demands real wrist, shoulder, and thoracic
+      mobility, and lifters who lack it often can't hold the position long
+      enough to complete a heavy set.
+    - Load capacity is meaningfully lower than a back squat's, since the front-
+      rack position and upright torso become the limiting factor before the
+      legs' full strength does.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -171,7 +190,13 @@
       onto the knees or lower back instead of the intended muscles.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Hip external-rotation mobility genuinely limits how wide and how deep the
+      stance can go, and forcing it without that mobility can push stress onto
+      the knees.
+    - The wide stance is a real technical departure from a standard squat, so
+      it takes its own practice rather than transferring automatically from
+      shoulder-width squatting experience.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -223,7 +248,12 @@
       conventional deadlift provides is wanted instead.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Hip mobility requirements are real and specific — a lifter without
+      adequate external rotation can't set up the stance properly no matter how
+      much they load the bar.
+    - The technical demand is high, and the wide stance plus close grip inside
+      the knees takes real practice to coordinate safely under heavy load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -267,7 +297,12 @@
       blunt the tension felt regardless of how heavy the sled is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed pad and shoulder-harness position doesn't accommodate every
+      body size or limb-length ratio well, and a poor fit can create discomfort
+      or awkward loading before the quads are the limiter.
+    - Availability is a real constraint — this specific machine isn't as
+      universal in gyms as a barbell squat rack or a leg press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -313,7 +348,13 @@
       where the stretch and tension actually matter.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - It's easy to shorten the range of motion, especially as the load gets
+      heavy, which quietly caps the stimulus without feeling like a technique
+      failure.
+    - The fixed foot-platform angle and seat position don't suit every lifter's
+      hip and knee mechanics, and a poor fit can put more stress on the knees
+      than intended.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -365,7 +406,12 @@
       sign to check load or stance before adding more.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Balance and stability demand is high, and for many lifters this becomes
+      the limiting factor before the quads are meaningfully fatigued.
+    - The rear-foot-elevated setup is awkward to get into and adjust
+      consistently, adding real setup time and a fall risk a bilateral squat
+      doesn't have.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -416,7 +462,12 @@
       muscles.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed rail path doesn't always match a lifter's natural lunge arc,
+      and a mismatch can feel awkward or shift stress away from the target
+      muscles.
+    - Removing the balance demand also removes some of the stabilizer and
+      coordination training the free-weight version provides.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -462,7 +513,13 @@
       provides is wanted instead.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The stationary stance still demands real hip and ankle mobility to keep
+      the front knee tracking well, and poor mobility can push stress onto the
+      knee joint.
+    - Load options are somewhat limited compared to a bilateral squat — grip
+      and trunk-bracing demand from a shouldered or side-held load cap how
+      heavy this can go before those become the limiter.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -510,7 +567,12 @@
       provides is wanted instead.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The step-back motion demands a level of balance and hip control that can
+      be a genuine barrier for less-coordinated or deconditioned lifters
+      starting out.
+    - It's easy to let the step-back distance vary between reps, which changes
+      the knee angle and muddies consistent progressive overload.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -559,7 +621,12 @@
       set can deliver — a static or reverse lunge removes that limiter.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The continuous, alternating-leg demand makes balance and coordination the
+      limiting factor for many lifters well before the quads are meaningfully
+      fatigued.
+    - Space requirements (a clear walking lane) make it harder to fit into a
+      typical gym session than a stationary lunge or squat variation.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -603,7 +670,13 @@
       stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - A single dumbbell or kettlebell caps the achievable load well below what
+      a barbell allows, so this stops being a strong mechanical-tension
+      stimulus for an intermediate or advanced lifter.
+    - Grip and the front-loaded core-bracing demand often become the limiting
+      factor before the legs are genuinely fatigued, especially at the top of
+      the weight range this setup allows.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -652,7 +725,12 @@
       actually deliver.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Grip strength commonly becomes the limiting factor before the legs do,
+      especially at heavier dumbbell weights, capping the achievable stimulus.
+    - Two heavy dumbbells are awkward to get into position at the start of a
+      set, and this setup cost adds up over multiple sets more than a barbell
+      rack does.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -695,7 +773,12 @@
       intended stimulus the set can safely deliver.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Some lifters feel knee discomfort under this loading pattern,
+      particularly at end-range extension, which can limit how heavily it's
+      used regardless of quad strength.
+    - As a single-joint, non-weight-bearing movement, it doesn't build the
+      balance, bracing, or multi-joint coordination that squatting patterns do.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -739,7 +822,15 @@
       aggressively from the start.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The knee experiences real end-range stress in this position, and lifters
+      with existing knee sensitivity may not tolerate it well even at a
+      controlled pace.
+    - There's a real skill floor — many lifters can't control any meaningful
+      range at all when starting out, and loading it too aggressively before
+      building control raises injury risk.
+    - There's no simple way to add external load once bodyweight control is
+      mastered, unlike a barbell-based leg exercise.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

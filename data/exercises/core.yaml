@@ -37,7 +37,13 @@
       abs and toward hip flexion instead.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The hips readily take over the movement once the load gets challenging,
+      and it isn't always obvious from how the rep feels that this has
+      happened.
+    - Cable-station setup and pulley height add real setup time compared to a
+      bodyweight ab movement, which matters if abs are being trained as a quick
+      add-on.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -81,7 +87,12 @@
       blunt the tension felt regardless of how heavy the stack is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Ab-specific machines vary widely in pad fit and pivot design; a poor fit
+      can put pressure across the hips or lower back before the abs are
+      meaningfully loaded.
+    - Equipment access is a real constraint — this specific machine isn't as
+      universally available as a cable station or bodyweight options.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -124,7 +135,13 @@
       value.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Grip endurance often runs out before the abs or hip flexors do for
+      lifters who haven't built grip capacity elsewhere, ending the set on the
+      wrong limiter.
+    - The skill and shoulder-stability demand of hanging control is nontrivial
+      — swinging is an easy failure mode that quietly drains the set of its
+      intended tension.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -168,7 +185,13 @@
       spent.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - It plateaus quickly for anyone with baseline trunk strength — once a hold
+      can be sustained for a couple of minutes, added hold time stops
+      translating into meaningful further adaptation.
+    - There's no clean way to add load within the exercise itself; progressing
+      past the beginner stage requires switching to a harder variation or a
+      different movement entirely.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -213,7 +236,13 @@
       actually brace against.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The skill and control demand is high, and the lower back is the first
+      thing to give out under too much rollout distance too soon, which is a
+      real injury risk if progressed carelessly.
+    - There's a real floor to entry — a lifter with a weak core often can't
+      control any useful range at all when starting out, unlike a plank which
+      scales down more gracefully.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -256,7 +285,11 @@
       demand that's the entire point of the movement.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The stimulus is inherently light — this is a control-and-durability tool,
+      not a movement that drives meaningful oblique hypertrophy on its own.
+    - Band or cable resistance is hard to load heavily in a way that keeps
+      adding real challenge over time, unlike a barbell-based progression.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -298,7 +331,13 @@
       intended stimulus is really reached.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Grip commonly fails well before the trunk musculature does, especially
+      without prior grip training, which can end the set before the intended
+      stimulus is reached.
+    - The whole-body fatigue cost is high relative to the trunk-specific
+      stimulus delivered, making it an inefficient choice if trunk growth alone
+      is the goal.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -341,7 +380,12 @@
       shifts the stimulus away from the obliques entirely.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - It's easy for the arms to do most of the work instead of the trunk,
+      especially as fatigue sets in, which shifts the stimulus away from the
+      obliques without an obvious form breakdown.
+    - Requires a cable station with adjustable pulley height, which limits
+      where this can be done compared to free-weight rotational options.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -384,7 +428,13 @@
       controlled rotation, trading the growth stimulus for momentum.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Momentum is an easy substitute for controlled rotation once the load or
+      pace increases, which trades the growth stimulus for speed without
+      feeling like a technique failure.
+    - The seated, often feet-elevated setup can aggravate lower-back or hip-
+      flexor sensitivity in some lifters, independent of the rotational work
+      itself.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

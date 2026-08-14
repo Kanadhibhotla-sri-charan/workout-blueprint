@@ -42,7 +42,16 @@
       trading away most of the growth stimulus for rep count.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Calf size is notoriously slow to respond even with consistent, well-
+      executed training — genetics set a large part of the ceiling here more
+      than with most muscle groups.
+    - The range of motion quietly shrinks under fatigue or heavy load, since
+      bouncing off the bottom stretch is an easy way to move more weight
+      without feeling like technique broke down.
+    - The dumbbell/block version caps load at what can be held and balanced on,
+      which limits the mechanical-tension ceiling well below what a loaded
+      machine allows.
   technique_cues: []
   common_mistakes: []
   programming_notes: >-
@@ -110,7 +119,12 @@
       hasn't yet been covered in the same session.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - How cleanly the gastrocnemius gets excluded depends on the machine's pad
+      and knee-angle design — a poorly built machine lets it creep back into
+      the movement.
+    - The seated position removes bodyweight as a loading option, so the
+      achievable stimulus is capped entirely by the machine's available load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -155,7 +169,11 @@
       the work harder to progress deliberately.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed foot platform limits how far the ankle can move into the bottom
+      stretch compared to a dedicated calf raise, capping the range of motion.
+    - Tacked onto the end of a leg-press set, technique quality tends to
+      degrade as leg fatigue from the main lift bleeds into the calf work.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -200,7 +218,12 @@
       fatigued, capping how much stimulus the set can actually deliver.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Bodyweight alone stops being an adequate stimulus for a well-trained
+      lifter well before the calf is genuinely challenged, and there's no easy
+      way to add load beyond holding a dumbbell.
+    - Balance demand can become the limiting factor before the calf itself is
+      meaningfully fatigued, especially for beginners.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -244,7 +267,12 @@
       the gastrocnemius or soleus and will not move that goal.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Loading options are limited without a dedicated device — bodyweight,
+      band, and wall variations all cap out at a fairly light stimulus for a
+      trained lifter.
+    - It's a narrow, single-joint movement with no meaningful carryover to
+      overall lower-body strength or size beyond the shin itself.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

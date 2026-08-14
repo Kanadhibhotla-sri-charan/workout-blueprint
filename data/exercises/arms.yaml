@@ -45,7 +45,13 @@
       the same stimulus without that cost.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed bar path doesn't let the wrists find their own natural rotation
+      through the rep, which is part of why a straight bar in particular
+      bothers some lifters' wrists and elbows.
+    - Momentum from the shoulders and lower back is an easy substitute for
+      elbow-flexor tension once the load gets heavy, and it's not always
+      obvious from the outside that this has happened.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -90,7 +96,12 @@
       stronger mechanical-tension stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Absolute load is capped somewhat below a barbell's, since each arm has to
+      stabilize its own dumbbell independently rather than sharing a single
+      fixed bar.
+    - Same momentum risk as the barbell version — body swing is an easy way to
+      move more weight without adding real biceps tension.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -135,7 +146,12 @@
       stretch can actually be used under load.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The extended shoulder position is genuinely uncomfortable for some
+      lifters, which caps how much of the intended stretch can actually be
+      loaded.
+    - Load ceiling is modest compared to a standing curl, since the stretched
+      shoulder position is the limiting factor rather than raw biceps strength.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -204,7 +220,12 @@
       limit how much of the strict range actually gets used.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The bottom of the range can feel uncomfortable at the elbow for some
+      lifters, especially near full extension under load, which can limit how
+      much of the strict range gets used.
+    - Requires a preacher bench, which isn't available in every gym or home
+      setup the way a standing curl is.
   technique_cues: []
   common_mistakes: []
   programming_notes: >-
@@ -260,7 +281,12 @@
       is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Pad and handle position vary between machines, and a poor fit can blunt
+      the tension felt or create elbow discomfort regardless of how heavy the
+      stack is loaded.
+    - Availability is a real constraint — this specific machine isn't as
+      universal in gyms as a barbell, dumbbells, or even a preacher bench.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -307,7 +333,13 @@
       case this adds fatigue without a distinct growth role.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Because it shifts emphasis away from the biceps peak, it's a weaker
+      choice than a supinated curl when biceps size specifically (rather than
+      overall arm thickness) is the goal.
+    - Same momentum-substitution risk as other standing curls — swinging is an
+      easy way to move more weight without adding real tension to the target
+      muscles.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -352,7 +384,11 @@
       mechanical-tension stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Absolute load is capped below what dumbbells allow, since the rope
+      attachment and cable setup aren't built for very heavy loading.
+    - Requires a cable station and rope attachment, which adds setup time and
+      equipment dependency a simple pair of dumbbells doesn't have.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -398,7 +434,13 @@
       for momentum.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The diagonal path is a coordination demand on top of the curl itself, and
+      it's easy for that path to degrade into swinging once the load or fatigue
+      increases.
+    - It's a variation on an already-established movement rather than a
+      distinct growth driver, so its main value is breaking a plateau, not
+      adding a new stimulus category.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -441,7 +483,11 @@
       mechanical-tension stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Absolute load is capped below what a barbell allows, so this isn't a
+      strong option for building maximal biceps strength.
+    - Requires a cable station and the right attachment, which is a real setup
+      dependency a barbell or dumbbells don't have.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -485,7 +531,13 @@
       comfortably, limiting how strict the path can actually be kept.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder mobility genuinely limits how far back the elbows can travel,
+      and forcing the position without that mobility defeats the strict path
+      that's the point of the exercise.
+    - It's a less intuitive movement pattern than a standard curl, and it takes
+      real practice to keep the bar dragging along the torso rather than
+      swinging forward.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -540,7 +592,11 @@
       mechanical-tension stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Same shoulder-mobility limitation as the free-weight drag curl — the
+      elbows-behind-body path isn't accessible to everyone without practice.
+    - Requires a cable station positioned appropriately for this path, which is
+      a more specific setup requirement than the barbell version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -590,7 +646,13 @@
       much weight can be used for either half of the stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The grip rotation at the top is a coordination demand that breaks down
+      under heavier load, which caps how much weight can be used for either
+      half of the movement.
+    - Because load is limited by the rotation, neither the concentric biceps
+      stimulus nor the eccentric forearm stimulus reaches the intensity a
+      dedicated single-purpose exercise could deliver.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -637,7 +699,12 @@
       has substantial pressing volume competing for the same recovery.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The narrow grip places real stress on the wrists and elbows, and some
+      lifters simply can't tolerate it even with otherwise good bench-press
+      technique.
+    - A spotter or safety bars are genuinely needed to train close to failure
+      safely, same as a regular-grip bench press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -697,7 +764,12 @@
       stretch can actually be loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The overhead shoulder position demands real mobility, and lifters without
+      it either can't reach the position safely or lose meaningful range
+      trying.
+    - Elbow stress at the bottom of the stretch is real, and load has to be
+      added conservatively compared to a pushdown or a compound press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -769,7 +841,11 @@
       fatigued.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Bar path control near the head is a genuine technical demand, and losing
+      control at the bottom of the range carries obvious risk.
+    - Elbow tolerance is often the limiting factor before the triceps are
+      meaningfully fatigued, especially at heavier loads or higher volume.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -822,7 +898,12 @@
       heavy a starting load to complete a useful number of reps.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Shoulder tolerance for a deep dip varies a lot between lifters, and
+      forcing depth without adequate mobility raises real injury risk.
+    - Bodyweight alone can be too much load to complete a useful number of reps
+      for a beginner, and adding assistance or reducing range both come with
+      their own setup complexity.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -873,7 +954,12 @@
       not.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Load ceiling is modest relative to a compound press, since a single-
+      joint, elbow-fixed movement can't move the same absolute weight.
+    - It's easy for the elbows to drift away from the torso as the load
+      increases, which brings the shoulders into the movement and dilutes the
+      intended triceps isolation.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -928,7 +1014,11 @@
       is loaded.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Seat and handle position vary between machines, and a poor fit can blunt
+      the tension felt regardless of how heavy the stack is loaded.
+    - Availability is a real constraint — this specific machine isn't as
+      universal in gyms as a cable station.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -976,7 +1066,13 @@
       point of the kickback.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The load ceiling is very low by design — this is not a movement that will
+      ever feel heavy, and using more than light weight usually means the upper
+      arm is dropping to help.
+    - Keeping the upper arm genuinely still takes real attention, and it's an
+      easy cue to lose without noticing once the light weight starts to feel
+      like real effort.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1029,7 +1125,12 @@
       priority, which free weights deliver more of.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Setting up the leaning-forward position away from the stack takes more
+      space and setup time than a standard pushdown or free-weight extension.
+    - Absolute load is capped below what a barbell or EZ-bar overhead extension
+      allows, so this can't fully substitute for that version's mechanical-
+      tension ceiling.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

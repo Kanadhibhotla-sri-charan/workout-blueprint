@@ -42,7 +42,13 @@
       stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The wrist's small range of motion caps how much mechanical work each rep
+      can do, so this exercise is inherently a slow-growth, high-volume tool
+      rather than a heavy-load one.
+    - Elbow-region tendons can take on real strain if load increases faster
+      than the tendons adapt, since the forearm musculature is small relative
+      to the loads gripping and pulling exercises expose it to.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -86,7 +92,12 @@
       signal, not something to load through.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The wrist extensors are considerably weaker than the flexors, so usable
+      load is low even for a lifter who is otherwise strong — the exercise can
+      feel trivial in weight compared to everything else in a session.
+    - This is a common site for elbow-tendon irritation (a lateral-elbow,
+      "tennis elbow"-type strain) if volume or load increases too quickly.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -131,7 +142,12 @@
       the same stimulus without that cost.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Usable load is capped well below a standard supinated curl's, since the
+      pronated grip is a mechanically weaker position for elbow flexion.
+    - Wrist discomfort with a straight bar is common at this grip angle, which
+      is part of why an EZ-bar or dumbbell version often has to substitute in
+      for it.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -177,7 +193,12 @@
       mechanical-tension stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Same load ceiling issue as the free-weight reverse curl — the pronated
+      grip is inherently weaker, so even with constant cable tension the
+      absolute stimulus stays modest.
+    - Requires a low pulley and enough cable-station availability, which is a
+      real setup constraint compared to the barbell or dumbbell version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -224,7 +245,16 @@
       cost.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The whole-body fatigue cost is disproportionate to the forearm-specific
+      stimulus it delivers, so it's an inefficient choice when forearm growth
+      alone is the goal.
+    - Grip and traps usually fatigue well before the rest of the body does, so
+      it doesn't double as meaningful leg or cardiovascular conditioning
+      despite the systemic fatigue it produces.
+    - Space and equipment requirements (a clear walking lane, loaded handles or
+      dumbbells) make it harder to fit into a typical gym session than most
+      forearm work.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -267,7 +297,13 @@
       is a low-priority addition rather than a growth-critical one.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The rotational range of motion is small and the muscles involved are
+      minor, so the achievable mechanical-tension stimulus is inherently
+      limited regardless of how it's loaded.
+    - It's easy to substitute wrist or shoulder rotation for true forearm
+      pronation/supination if the setup doesn't isolate the movement well,
+      diluting the intended stimulus.
   technique_cues: []
   common_mistakes: []
   programming_notes: []

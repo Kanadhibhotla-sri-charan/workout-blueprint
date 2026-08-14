@@ -44,7 +44,16 @@
       pattern loads the lengthened position this movement mostly skips.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Setup is genuinely awkward without a dedicated machine — rolling a loaded
+      barbell into position across the hips takes real practice and a pad to
+      avoid bruising.
+    - Barbell versions cap out at what the lifter's hip flexibility and bar
+      comfort allow before the movement breaks down, well before the glutes
+      reach their true strength limit for some lifters.
+    - The shortened top position that gives this exercise its value also means
+      the resistance is lightest at the bottom, so mechanical tension isn't
+      constant through the range.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -92,7 +101,13 @@
       bar can.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The fixed rail path doesn't match every lifter's natural hip-hinge arc,
+      which can force compensations at the knees or hips instead of removing
+      them.
+    - Once the bar-path-control training wheels are no longer needed, there's
+      little further benefit over the free-bar version, so it's mainly useful
+      as a stepping stone rather than a long-term staple.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -151,7 +166,16 @@
       before adding more.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Balance and stability demand is high, which for many lifters becomes the
+      limiting factor before the glutes or hamstrings are meaningfully
+      fatigued.
+    - The rear-foot-elevated setup is genuinely awkward to get into and adjust,
+      adding real setup time and a fall risk that a bilateral movement doesn't
+      have.
+    - Keeping the hip-dominant technique consistent under fatigue is harder
+      than it looks — the knee tends to drift forward late in a set, sliding
+      the emphasis toward the quads.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -206,7 +230,13 @@
       away from the glute and onto the spine.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The single-joint, unilateral setup means load per side is inherently
+      light — this isn't a movement that can substitute for a compound's
+      overall stimulus.
+    - It's very easy to substitute lower-back extension for hip extension,
+      especially as fatigue sets in, which shifts the stimulus away from the
+      target muscle without feeling obviously wrong.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -248,7 +278,13 @@
       shifts the stimulus away from the target muscle.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The gluteus medius and minimus are comparatively small muscles, so the
+      absolute loads involved — and therefore the mechanical-tension ceiling —
+      stay modest even with good technique.
+    - Trunk lean is an easy, often unconscious way to fake more range of
+      motion, which quietly shifts the stimulus away from the hip and reduces
+      the exercise's value.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -291,7 +327,13 @@
       exceed current tolerance.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - Machine availability is the main constraint — this movement is hard to
+      replicate well with free weights, so its accessibility depends entirely
+      on what a given gym has.
+    - The adductors are a comparatively small muscle group, so the achievable
+      loading and overall growth contribution stay modest next to a routine's
+      compound lifts.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -334,7 +376,12 @@
       deliver most of a lower-body routine's growth stimulus.
   mirror_effect: ""
   advantages: []
-  limitations: []
+  limitations:
+    - The hip flexors are a small muscle group relative to most compound lower-
+      body work, so this movement adds only a minor growth stimulus on its own.
+    - Anterior hip or lower-back symptoms can flare with hip-flexor-dominant
+      work in general, making this one to reduce or drop rather than push
+      through if that occurs.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
