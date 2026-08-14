@@ -107,7 +107,7 @@ The shoulder module separates the three deltoid heads by the job they do in a ro
 - **Primary targets:** Posterior deltoids; mid-back contributes.
 - **Movement:** Shoulder horizontal abduction.
 - **Coverage:** Isolation, low fatigue cost, low skill demand on a machine.
-- **Best used when:** A user wants a stretch-mediated, isolated growth stimulus for the rear delts without adding another heavy pull to the session.
+- **Best used when:** A user wants a stretch-mediated, isolated growth stimulus for the rear delts without adding another heavy pull to the session. This is a weaker claim than several other stretch-mediated claims in this dataset — no hypertrophy trial specific to the rear delt fly or posterior deltoid length was found; it's an inference from the general literature and from where this movement's resistance peaks. See the canonical YAML record's evidence_notes for the full caveat.
 - **Less suitable when:** The elbows bend enough that the movement turns into a row — the stimulus shifts toward a more mechanical-tension, less isolated rear-delt effect, which may or may not be what was actually wanted.
 - **Complements:** Horizontal pulling and side-delt work.
 - **Overlaps:** Face pulls, the cable rear delt builder, the rear delt row, and the machine reverse fly.
@@ -193,3 +193,4 @@ Before changing a record to Reviewed:
 - Add equipment, setup, fatigue, and relationship fields in the final data format.
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
+- The Rear-Delt Fly's stretch-mediated claim now carries an evidence note, but it's the weakest-evidenced of the stretch-mediated claims across the dataset (no direct study, general literature only) — see `data/exercises/shoulders.yaml`.

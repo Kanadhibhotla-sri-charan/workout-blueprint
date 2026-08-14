@@ -677,6 +677,19 @@
       specific to the fly (adduction) pattern rather than a press was
       located, so this is an extrapolation from press data to a fly, not
       a direct finding.
+    - >-
+      Separately, the "strong stretch-mediated growth stimulus" claim
+      draws on the broader stretch-mediated hypertrophy literature:
+      Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM
+      training tends to match or beat partial-ROM training that avoids
+      the stretch, and Wolf et al. (2023, International Journal of
+      Strength and Conditioning) found lengthened partial-ROM training
+      matched or exceeded full-ROM training. A later trial (Wolf et al.,
+      2025, PubMed 39959841) found lengthened partials produced
+      hypertrophy similar to, not clearly greater than, full ROM — so
+      "strong" should be read as a well-supported direction, not a
+      settled magnitude. This is a general principle, not a fly-specific
+      finding.
   review_status: draft
 
 - id: incline-dumbbell-fly
@@ -729,6 +742,12 @@
       studies, not fly studies specifically, so treat this as an
       extrapolation from the press data rather than a direct finding about
       flys.
+    - >-
+      The "stretch-mediated growth stimulus" framing draws on the same
+      general stretch-mediated hypertrophy literature cited on
+      flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023,
+      2025) — a general principle, not a fly-specific or incline-specific
+      finding.
   review_status: draft
 
 - id: decline-dumbbell-fly
@@ -784,6 +803,12 @@
       lower-chest growth effect was located — unlike the upper-chest
       claim, this one rests on EMG alone. Evidence quality: moderate,
       similar tier to the biceps head-bias claims in the arms module.
+    - >-
+      The "stretch-mediated growth stimulus" framing draws on the same
+      general stretch-mediated hypertrophy literature cited on
+      flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023,
+      2025) — a general principle, not a fly-specific or decline-specific
+      finding.
   review_status: draft
 
 - id: machine-fly-pec-deck
@@ -950,6 +975,13 @@
       specifically — the "general/costal-biased" framing is an inference
       from the movement's shoulder-extension arc, not a tested finding.
       Left as an open claim rather than asserted with confidence.
+    - >-
+      Separately, the "strong stretch-mediated stimulus" claim about the
+      overhead-arc range itself draws on the general stretch-mediated
+      hypertrophy literature cited on flat-dumbbell-fly in this same file
+      (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general
+      principle about training a muscle at long length, not a
+      pullover-specific finding.
   review_status: draft
 
 - id: dip-chest-biased

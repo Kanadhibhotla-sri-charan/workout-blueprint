@@ -658,7 +658,19 @@
     - A vertical or horizontal pull.
   overlaps_with:
     - dumbbell-pullover-lat-biased
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      No study specific to the straight-arm pulldown or lat length was
+      located. The "stretch-mediated" framing draws on the broader
+      stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020,
+      SAGE Open Medicine) found full/longer-ROM training tends to match
+      or beat partial-ROM training that avoids the stretch, and Wolf et
+      al. (2023, International Journal of Strength and Conditioning)
+      found lengthened partial-ROM training matched or exceeded full-ROM
+      training. A later trial (Wolf et al., 2025, PubMed 39959841) found
+      lengthened partials produced hypertrophy similar to, not clearly
+      greater than, full ROM — so this is a well-supported general
+      direction, not a settled, exercise-specific magnitude claim.
   review_status: draft
 
 - id: dumbbell-pullover-lat-biased
@@ -705,7 +717,12 @@
     - straight-arm-pulldown
     - "dumbbell-pullover-chest-biased (chest module) — same arc with
       straighter arms; elbow bend is what separates the two."
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same general stretch-mediated hypertrophy grounding as
+      straight-arm-pulldown above — see that record's evidence_notes. No
+      study specific to the lat-biased pullover or lat length at the
+      overhead position was located.
   review_status: draft
 
 - id: barbell-dumbbell-shrug

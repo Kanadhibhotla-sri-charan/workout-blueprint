@@ -157,7 +157,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Primary targets:** Chest, mid-biased — same evidence tier as Flat Barbell Bench Press above, extrapolated from press studies to a fly pattern since no fly-specific study was located.
 - **Movement:** Shoulder horizontal adduction.
 - **Coverage:** Isolation-oriented, moderate-to-high stability demand, low setup.
-- **Best used when:** A user wants a strong stretch-mediated growth stimulus for the mid chest at the bottom of the range — the resistance loads the chest hardest exactly where the muscle is most lengthened, which a press does not replicate.
+- **Best used when:** A user wants a strong stretch-mediated growth stimulus for the mid chest at the bottom of the range — the resistance loads the chest hardest exactly where the muscle is most lengthened, which a press does not replicate. This general framing is grounded in the broader stretch-mediated hypertrophy literature (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — see the canonical YAML record's evidence_notes for citations.
 - **Less suitable when:** A user wants tension held through the top of the range too, which this movement's resistance profile gives up as the arms come together — a cable fly holds that tension where a dumbbell fly cannot.
 - **Complements:** A pressing movement.
 - **Overlaps:** Incline and decline dumbbell fly, and cable and machine fly variations; distinguish by bench angle and resistance profile.
@@ -169,7 +169,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Primary targets:** Chest, upper/clavicular-biased — same evidence as Incline Dumbbell Press above, extrapolated from press studies to a fly pattern; anterior deltoids contribute less than in a press.
 - **Movement:** Shoulder horizontal adduction on an incline.
 - **Coverage:** Isolation-oriented, moderate-to-high stability demand, low setup.
-- **Best used when:** A user wants a stretch-mediated growth stimulus specifically for the upper chest, rather than the mid-chest bias a flat fly delivers.
+- **Best used when:** A user wants a stretch-mediated growth stimulus specifically for the upper chest, rather than the mid-chest bias a flat fly delivers. Same general stretch-mediated hypertrophy grounding as Flat Dumbbell Fly above.
 - **Less suitable when:** Shoulder comfort at the bottom of the range is limiting, which shows up more often at steeper bench angles than on a flat fly.
 - **Complements:** An incline pressing movement.
 - **Overlaps:** Flat and decline dumbbell fly; distinguish by bench angle and which pec region is stretched hardest.
@@ -181,7 +181,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Primary targets:** Chest, lower/costal-biased — weaker evidence than the upper-chest claim: EMG only (Rodríguez-Ridao et al., 2020; Barnett et al., 1995) found greater lower-pec activation during decline vs. incline/flat pressing, but no MRI or ultrasound hypertrophy trial isolating a decline-specific lower-chest growth effect was located; anterior deltoids contribute less than in a press.
 - **Movement:** Shoulder horizontal adduction on a decline.
 - **Coverage:** Isolation-oriented, moderate-to-high stability demand, moderate setup.
-- **Best used when:** A user wants a stretch-mediated growth stimulus specifically for the lower chest, as an isolation-style complement to a heavier compound like the dip.
+- **Best used when:** A user wants a stretch-mediated growth stimulus specifically for the lower chest, as an isolation-style complement to a heavier compound like the dip. Same general stretch-mediated hypertrophy grounding as Flat Dumbbell Fly above.
 - **Less suitable when:** Shoulder comfort in the decline position is limiting, or a user already has the dip covering lower-chest work and wants a distinct role instead of an overlapping one.
 - **Complements:** A dip or other lower-chest-biased movement.
 - **Overlaps:** Flat and incline dumbbell fly; distinguish by bench angle and which pec region is stretched hardest.
@@ -217,7 +217,7 @@ The chest module is organized around practical exercise roles, not a claim that 
 - **Primary targets:** Chest, general/costal-biased in this straighter-arm form — unresolved: no research was found on the pullover's regional pec bias specifically, so this is an inference from the movement's shoulder-extension arc rather than a tested finding; serratus anterior and the long head of the triceps contribute.
 - **Movement:** Shoulder extension through an overhead arc.
 - **Coverage:** Isolation-oriented, moderate stability demand, low setup with a bench and one dumbbell.
-- **Best used when:** A user wants a strong stretch-mediated stimulus at the top of an overhead arc, a range no press or fly reaches, or wants a chest movement that also brings the serratus into play.
+- **Best used when:** A user wants a strong stretch-mediated stimulus at the top of an overhead arc, a range no press or fly reaches, or wants a chest movement that also brings the serratus into play. Same general stretch-mediated hypertrophy grounding as Flat Dumbbell Fly above; no pullover-specific study was found.
 - **Less suitable when:** The elbows bend enough that the movement shifts toward a lat-dominant pullover instead — see the back module's version, which uses more elbow bend specifically to bias the lats.
 - **Complements:** A pressing movement.
 - **Overlaps:** The lat-biased dumbbell pullover recorded in the back module; elbow bend is what separates the two.
@@ -255,4 +255,5 @@ Before changing a record to Reviewed:
 - Add equipment, setup, fatigue, and relationship fields in the final data format.
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
+- The fly and pullover records' general "stretch-mediated growth stimulus" claims now carry evidence notes citing the broader stretch-mediated hypertrophy literature (see `data/exercises/chest.yaml`), on top of their region-bias-specific citations below.
 - Upper/mid/lower pec bias claims now carry real evidence notes (see the canonical YAML records in `data/exercises/chest.yaml` for full citations). Evidence quality differs by region: the upper-chest claim has strong support (an MRI hypertrophy trial plus EMG), the mid-chest claim is more circumstantial (it's the default region every press loads, not a bias a specific technique creates), and the lower-chest claim is EMG-only (no hypertrophy trial isolating that region was found). The cable fly's pulley-height claim and the pullover's general/costal claim remain unresolved coaching cues — flagged, not asserted.

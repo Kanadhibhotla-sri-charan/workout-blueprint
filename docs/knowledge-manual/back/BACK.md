@@ -180,7 +180,7 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats.
 - **Movement:** Shoulder extension.
 - **Coverage:** Isolation-oriented, low fatigue cost when a cable station is available.
-- **Best used when:** A user wants a stretch-mediated, lat-isolated stimulus that doesn't depend on grip or biceps endurance, often used as a pre-exhaust warm-up or a finisher after heavier pulling.
+- **Best used when:** A user wants a stretch-mediated, lat-isolated stimulus that doesn't depend on grip or biceps endurance, often used as a pre-exhaust warm-up or a finisher after heavier pulling. No study specific to this exercise was found; the claim draws on the general stretch-mediated hypertrophy literature (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — see the canonical YAML record's evidence_notes for citations.
 - **Less suitable when:** A user's back growth is currently limited by total heavy-pulling volume rather than needing more lat isolation — a compound pull delivers more overall stimulus per set.
 - **Complements:** A vertical or horizontal pull.
 - **Overlaps:** Dumbbell pullover; distinguish by resistance profile.
@@ -192,7 +192,7 @@ The back module is organized around pulling directions and support roles, not a 
 - **Primary targets:** Lats; chest and triceps contribute.
 - **Movement:** Shoulder extension.
 - **Coverage:** Isolation-oriented, moderate stability demand, low setup with a bench and one dumbbell.
-- **Best used when:** A user wants a stretch-mediated lat stimulus at the top of an overhead arc, a range compound pulling doesn't reach.
+- **Best used when:** A user wants a stretch-mediated lat stimulus at the top of an overhead arc, a range compound pulling doesn't reach. Same general evidence as Straight-Arm Pulldown above — see the canonical YAML record's evidence_notes.
 - **Less suitable when:** A user wants tension held through the whole range, which a cable straight-arm pulldown provides and this movement's resistance profile does not.
 - **Complements:** A vertical or horizontal pull.
 - **Overlaps:** Straight-arm pulldown; distinguish by resistance profile. The chest-biased dumbbell pullover recorded in the chest module is the same arc with straighter arms — elbow bend is what separates the two.
@@ -230,3 +230,4 @@ Before changing a record to Reviewed:
 - Add equipment, setup, fatigue, and relationship fields in the final data format.
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
+- The straight-arm pulldown and dumbbell pullover's stretch-mediated claims now carry evidence notes citing the general stretch-mediated hypertrophy literature (see `data/exercises/back.yaml`) — no exercise-specific study was found for either, so treat the claim as a well-supported general direction, not a settled magnitude.

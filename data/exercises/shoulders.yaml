@@ -372,7 +372,20 @@
     - cable-rear-delt-builder
     - rear-delt-row
     - machine-reverse-fly
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      No hypertrophy trial specific to the rear-delt fly or posterior
+      deltoid muscle length was located — this is a weaker claim than
+      several of the other stretch-mediated claims in this dataset. It's
+      an inference from the general stretch-mediated hypertrophy
+      literature (Schoenfeld & Grgic, 2020, SAGE Open Medicine; Wolf et
+      al., 2023, International Journal of Strength and Conditioning) and
+      from the mechanical fact that resistance peaks near the horizontally
+      abducted, stretched end of this movement's range, not a
+      posterior-deltoid-specific finding. A later trial (Wolf et al.,
+      2025, PubMed 39959841) found the general stretch advantage over
+      full ROM is smaller than earlier work suggested, which further
+      tempers how much weight this claim should carry.
   review_status: draft
 
 - id: machine-reverse-fly

@@ -36,7 +36,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Glutes and hamstrings; spinal erectors contribute. Unlike the back extension or Bulgarian split squat, an RDL doesn't have a clean discrete technique switch that biases one over the other — the moderate knee bend trains both together by design throughout the whole movement. If a more glute-isolated, shortened-position stimulus is the goal, the hip thrust is the more direct option; for a more hamstring-isolated stimulus, see the stiff-leg deadlift recorded in the hamstrings module.
 - **Movement:** Hip hinge, moderate knee bend.
 - **Coverage:** Heavy compound, lengthened-position emphasis, moderate skill demand, high fatigue cost.
-- **Best used when:** A user wants a strong stretch-mediated growth stimulus for the glutes and hamstrings together, in a lengthened position a hip thrust doesn't reach. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge.
+- **Best used when:** A user wants a strong stretch-mediated growth stimulus for the glutes and hamstrings together, in a lengthened position a hip thrust doesn't reach. A barbell allows the heaviest fixed-path load; dumbbells allow independent arms and are often the easier entry point for learning the hinge. No study specific to the RDL was found; the claim draws on the general stretch-mediated hypertrophy literature — see the canonical YAML record (`data/exercises/hamstrings.yaml`, id: romanian-deadlift) for citations.
 - **Less suitable when:** Lower-back fatigue is already high, which caps how much of the lengthened-position load can safely be used.
 - **Complements:** A shortened-position movement such as the hip thrust.
 - **Overlaps:** Good mornings, 45° back extensions, the Smith machine version below, and other hinge patterns; also recorded in the hamstrings module, which also has the stiff-leg deadlift. The conventional deadlift, recorded in the back module, is a related but distinct hinge that starts from the floor.
@@ -48,7 +48,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Glutes and hamstrings; spinal erectors contribute.
 - **Movement:** Hip hinge.
 - **Coverage:** Stable compound, lengthened-position emphasis, low-to-moderate skill demand, moderate setup.
-- **Best used when:** A user wants the RDL's stretch-mediated stimulus while still learning to control the hinge, since the fixed rail removes the bar-path variable that most often breaks technique down under load.
+- **Best used when:** A user wants the RDL's stretch-mediated stimulus while still learning to control the hinge, since the fixed rail removes the bar-path variable that most often breaks technique down under load. Same evidence as the free-bar Romanian Deadlift above.
 - **Less suitable when:** A user's hip-to-torso proportions need more depth than the fixed rail allows, or wants the bar to accommodate individual leverages the way a free bar can.
 - **Complements:** A shortened-position movement such as the hip thrust.
 - **Overlaps:** The free-weight Romanian deadlift; distinguish by how much the setup controls the bar path.
@@ -60,7 +60,7 @@ The hip module is organized by direction of hip movement and by where in the ran
 - **Primary targets:** Glutes; hamstrings, quads, and adductors contribute, but the quads contribute less than with the shorter-stance, knee-dominant execution described in the quads module.
 - **Movement:** Unilateral hip-dominant, long-stance execution.
 - **Coverage:** Unilateral compound, high stability demand, moderate setup, high perceived effort.
-- **Best used when:** A user specifically wants a strong per-side, stretch-mediated stimulus for the glutes and hamstrings, or wants to close a side-to-side strength gap through focused per-leg volume.
+- **Best used when:** A user specifically wants a strong per-side, stretch-mediated stimulus for the glutes and hamstrings, or wants to close a side-to-side strength gap through focused per-leg volume. No study specific to this exercise was found; the claim draws on the general stretch-mediated hypertrophy literature — see the canonical YAML record's evidence_notes for citations.
 - **Less suitable when:** A user wants to bias the quads instead — a shorter stance with the knee traveling forward, described in the quads module's copy of this exercise, does that instead. Balance limiting the set before the target muscles are fatigued is also a sign to check load or stance before adding more.
 - **Complements:** A bilateral squat or hinge.
 - **Overlaps:** Lunges, step-ups, and split squats; also recorded in the quads module, which uses a shorter stance and knee-dominant execution for a quad-biased emphasis, and which also has the Smith machine version — fixing the bar removes most of the balance demand that is the main limiter here.
@@ -122,4 +122,5 @@ Before changing a record to Reviewed:
 - Add equipment, setup, fatigue, and relationship fields in the final data format.
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
+- The stretch-mediated growth claims (RDL, Smith machine RDL, Bulgarian split squat) now carry evidence notes citing the general stretch-mediated hypertrophy literature — see `data/exercises/hamstrings.yaml` and `data/exercises/hips.yaml` for full citations.
 - Reconcile shared records with the quads and hamstrings modules so a movement is described consistently wherever it appears.

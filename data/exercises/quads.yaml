@@ -748,5 +748,25 @@
     - A loadable squat or press pattern.
   overlaps_with:
     - leg-extension
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      No study using this specific exercise was located, but the
+      underlying principle — that training the quads at a longer muscle
+      length (deep hip/knee flexion) drives more growth than training at
+      a shorter length — has direct support from squat-depth research.
+      Bloomquist et al. (2013) ran a 12-week controlled trial comparing
+      shallow squats (~60° knee flexion) against deep squats (~120° knee
+      flexion): the deep-squat group gained quadriceps cross-sectional
+      area across the entire thigh, while the shallow-squat group only
+      grew measurably in the upper thigh. This is a squat-depth finding,
+      not a reverse-Nordic-curl finding, but it's the same underlying
+      variable — how lengthened the quads get under load — that this
+      record's rectus-femoris claim rests on. It's also consistent with
+      the broader stretch-mediated hypertrophy literature: Schoenfeld &
+      Grgic (2020, SAGE Open Medicine) and Wolf et al. (2023,
+      International Journal of Strength and Conditioning) found training
+      at longer muscle length tends to match or beat training that
+      avoids the stretch, though a later trial (Wolf et al., 2025,
+      PubMed 39959841) found the advantage over full ROM is smaller than
+      earlier work suggested.
   review_status: draft

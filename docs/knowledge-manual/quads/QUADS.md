@@ -205,7 +205,7 @@ The quad module is organized by how much balance and setup a movement asks for, 
 - **Primary targets:** Quads, with emphasis on the rectus femoris.
 - **Movement:** Knee extension with the hip extended.
 - **Coverage:** Low equipment, high skill demand, lengthened-position emphasis.
-- **Best used when:** A user wants a strong stretch-mediated stimulus specifically for the rectus femoris, in a position no common machine or squat variation reaches.
+- **Best used when:** A user wants a strong stretch-mediated stimulus specifically for the rectus femoris, in a position no common machine or squat variation reaches. No study using this specific exercise was found, but the underlying principle has direct support from squat-depth research: Bloomquist et al. (2013) found deep squats (~120° knee flexion) produced quad growth across the whole thigh over 12 weeks, while shallow squats (~60°) only grew the upper thigh — the same "how lengthened do the quads get under load" variable this claim rests on. See the canonical YAML record's evidence_notes for the full citation.
 - **Less suitable when:** Knee tolerance is limiting, or the range can't yet be controlled — this movement should be scaled gradually rather than loaded aggressively from the start.
 - **Complements:** A loadable squat or press pattern.
 - **Overlaps:** Sissy squats and leg extensions.
@@ -220,3 +220,4 @@ Before changing a record to Reviewed:
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
 - Reconcile shared records with the hips and hamstrings modules so a movement is described consistently wherever it appears.
+- The Reverse Nordic Curl's stretch-mediated claim now carries an evidence note (squat-depth research, since no study used this specific exercise) — see `data/exercises/quads.yaml`.

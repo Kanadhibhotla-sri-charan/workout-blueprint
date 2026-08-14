@@ -9,6 +9,13 @@
 # in hips.yaml. It was confirmed by audit to have no execution fork
 # between the two prose modules, unlike the 45-degree back extension and
 # Bulgarian split squat, which genuinely do and stay as separate records.
+#
+# Evidence-notes pass (partial): the stretch-mediated/lengthened-position
+# claims below now carry real citations, including a direct 2024 trial
+# comparing the Nordic hamstring curl to a hip-flexed lengthened-position
+# exercise (see seated-leg-curl and nordic-hamstring-curl) that corrects
+# the popular "Nordic curl for growth" framing rather than just sourcing
+# it. See each record's evidence_notes.
 
 - id: romanian-deadlift
   name: Romanian Deadlift
@@ -66,7 +73,18 @@
     - "conventional-deadlift (back module) — related but distinct hinge
       that starts from the floor."
     - "smith-machine-romanian-deadlift (hips module)"
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Draws on the general stretch-mediated hypertrophy literature:
+      Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf et al.
+      (2023, International Journal of Strength and Conditioning) both
+      found training at longer muscle length tends to match or beat
+      training that avoids the stretch; a later trial (Wolf et al.,
+      2025, PubMed 39959841) found the advantage over full ROM is
+      smaller than earlier work suggested. No study specific to the RDL
+      was located — see seated-leg-curl's evidence_notes below for the
+      closest direct hamstring-length hypertrophy trial found, which
+      used a hip-flexed knee-flexion position rather than a hinge.
   review_status: draft
 
 - id: stiff-leg-deadlift
@@ -114,7 +132,11 @@
       such as the hip thrust.
   overlaps_with:
     - romanian-deadlift
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same general stretch-mediated hypertrophy grounding as
+      romanian-deadlift above — see that record's evidence_notes. No
+      study specific to the stiff-leg deadlift was located.
   review_status: draft
 
 - id: seated-leg-curl
@@ -152,13 +174,39 @@
   limitations: []
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes: >-
+    This hip-flexed knee-flexion position is close to what a 2024 direct
+    trial (see evidence_notes) found to be a particularly effective
+    lengthened-position stimulus for the hamstrings — more effective, by
+    that trial's numbers, than the Nordic hamstring curl. See
+    nordic-hamstring-curl below for the comparison.
   alternatives: []
   complements:
     - A hinge pattern.
   overlaps_with:
     - lying-leg-curl
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Direct hypertrophy trial evidence, not just the general ROM
+      literature. A 2024 study (PMC11419281, Medicine & Science in
+      Sports & Exercise) compared the Nordic hamstring curl against
+      "lengthened state eccentric training" (LSET) — isoinertial
+      weight-stack resistance trained in an accentuated hip-flexed
+      position, essentially this record's hip-flexed knee-flexion setup.
+      LSET produced substantially greater total hamstrings growth (+18%
+      vs. +11%) and biceps femoris long-head growth (+19% vs. +5%) than
+      the Nordic curl over the training period. This directly supports
+      the seated leg curl's hip-flexed, lengthened-position value — see
+      nordic-hamstring-curl's evidence_notes for the fuller comparison
+      and what it means for that more popular exercise.
+    - >-
+      This finding sits within the broader stretch-mediated hypertrophy
+      literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf
+      et al. (2023, International Journal of Strength and Conditioning)
+      both found training at longer muscle length tends to match or beat
+      training that avoids the stretch, though a later trial (Wolf et
+      al., 2025, PubMed 39959841) found the advantage over full ROM is
+      smaller than earlier work suggested.
   review_status: draft
 
 - id: lying-leg-curl
@@ -247,7 +295,23 @@
   overlaps_with:
     - seated-leg-curl
     - lying-leg-curl
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Worth a correction to the popular framing, not just a citation: the
+      same 2024 trial cited on seated-leg-curl (PMC11419281) directly
+      compared the Nordic curl against lengthened-state training in a
+      hip-flexed position (essentially a loaded seated leg curl) and
+      found the hip-flexed version produced substantially more hamstrings
+      growth (+18% vs. +11% total, +19% vs. +5% biceps femoris long
+      head). The Nordic curl was still an effective hypertrophy stimulus
+      in absolute terms — this isn't a claim that it doesn't work — but
+      "commonly cited for growth" undersells that a simpler, less
+      technically demanding machine exercise outperformed it in this
+      trial. The Nordic curl's real, distinct value shown by this and
+      other research is training the eccentric strength and fascicle
+      adaptations tied to injury resilience, which a leg curl doesn't
+      replicate — not necessarily the largest hypertrophy stimulus
+      available.
   review_status: draft
 
 - id: back-extension-45-hip-dominant
