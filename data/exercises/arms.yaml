@@ -3,11 +3,17 @@
 # Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
 # Converted from docs/knowledge-manual/arms/ARMS.md.
 #
-# Note: every "commonly cited as X-biased" head-bias claim in
-# primary_targets/secondary_targets below reflects a widely repeated
-# coaching cue, not settled EMG consensus. evidence_notes are left empty
-# per ADR 0001's no-fabrication policy — each needs a real source or a
-# softer framing before review_status can move past draft.
+# Evidence-notes pass (partial): the biceps incline/preacher long-vs-
+# short-head claims and the triceps overhead-vs-neutral long-head claim
+# now carry real citations in evidence_notes — see each record. The drag
+# curl / cable drag curl "short-head-biased" claim was corrected: the
+# elbows-behind-body position extends the shoulder, the same direction
+# incline curls use for their long-head bias, so the common "short head"
+# cue for drag curls actually contradicts the biomechanical logic the
+# incline-curl evidence supports. No direct research on drag curls was
+# found to resolve it either way — flagged as contested, not asserted.
+# Claims without an evidence_notes entry below are still unresolved
+# coaching cues per ADR 0001's no-fabrication policy.
 
 - id: barbell-ez-bar-curl
   name: Barbell or EZ-Bar Curl
@@ -106,7 +112,7 @@
     Places the upper arm behind the body, so the load stays meaningful
     with the elbow near full extension.
   body_regions: [arms]
-  primary_targets: [biceps (commonly cited as long-head-biased)]
+  primary_targets: [biceps (long-head-biased, EMG-supported)]
   secondary_targets: []
   movement_patterns: [elbow flexion in a lengthened shoulder position]
   equipment: [dumbbell, incline bench]
@@ -137,7 +143,18 @@
   complements:
     - A shortened-position curl such as a preacher curl.
   overlaps_with: []
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      EMG evidence supports a long-head bias in the shoulder-extended
+      position: incline curls maintain higher, more sustained biceps
+      brachii activation through the range than shoulder-flexed variants
+      (Lehman, 2005-era EMG shoulder-position studies). The clearest
+      direct hypertrophy evidence for this shoulder-position effect is
+      Kassiano et al. (2024, PMC11906226), which compared a shoulder-
+      flexed (preacher) vs. shoulder-extended (Bayesian cable curl)
+      position for regional hypertrophy. Evidence quality: moderate —
+      real EMG and one hypertrophy trial, not yet a large body of
+      literature.
   review_status: draft
 
 - id: preacher-curl
@@ -149,7 +166,7 @@
     Fixes the upper arm forward on a pad, which removes swing and keeps
     tension nearer the top of the range.
   body_regions: [arms]
-  primary_targets: [biceps (commonly cited as short-head-biased)]
+  primary_targets: [biceps (short-head-biased, EMG-supported)]
   secondary_targets: [brachialis]
   movement_patterns: [elbow flexion in a shortened shoulder position]
   equipment: [barbell, ez-bar, dumbbell, preacher bench]
@@ -175,13 +192,24 @@
   limitations: []
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes: >-
+    EMG shows preacher curls produce a short, bottom-loaded activation
+    window (high activation early in the concentric phase, dropping off
+    as the elbow flexes) compared to the sustained activation of an
+    incline curl through the whole range — consistent with, though not
+    conclusive proof of, a short-head bias.
   alternatives: []
   complements:
     - A lengthened-position curl such as an incline curl.
   overlaps_with:
     - preacher-curl-machine
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same shoulder-position evidence as the incline curl's long-head
+      claim, applied in reverse: shoulder flexion (preacher) vs. shoulder
+      extension (incline) is the mechanism cited. Kassiano et al. (2024,
+      PMC11906226) is the closest direct hypertrophy comparison. Evidence
+      quality: moderate.
   review_status: draft
 
 - id: preacher-curl-machine
@@ -194,7 +222,7 @@
     and free weight, and often adds a cam that adjusts resistance through
     the range.
   body_regions: [arms]
-  primary_targets: [biceps (commonly cited as short-head-biased)]
+  primary_targets: [biceps (short-head-biased, EMG-supported)]
   secondary_targets: [brachialis]
   movement_patterns: [elbow flexion in a shortened shoulder position]
   equipment: [machine]
@@ -226,7 +254,11 @@
     - A lengthened-position curl such as an incline curl.
   overlaps_with:
     - preacher-curl
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same shoulder-position evidence as the free-weight preacher curl
+      (this is the same shortened shoulder position on a fixed path).
+      See preacher-curl's evidence_notes. Evidence quality: moderate.
   review_status: draft
 
 - id: hammer-curl
@@ -417,7 +449,7 @@
     body instead of staying pinned forward, which removes front-delt
     involvement and changes the biceps' loading path.
   body_regions: [arms]
-  primary_targets: [biceps (commonly cited as short-head-biased)]
+  primary_targets: [biceps (head bias contested — see evidence_notes)]
   secondary_targets: []
   movement_patterns: [elbow flexion with the elbows drawn behind the torso]
   equipment: [barbell, ez-bar]
@@ -448,7 +480,17 @@
   overlaps_with:
     - barbell-ez-bar-curl
     - cable-drag-curl
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      The common coaching cue calls this short-head-biased, but that
+      contradicts the biomechanical principle the incline-curl evidence
+      supports: drawing the elbows behind the torso extends the
+      shoulder, the same direction incline curls use, which the EMG
+      evidence ties to a long-head bias, not short. No study specifically
+      testing drag curls was found to resolve the contradiction. Treat
+      the head-bias claim as unresolved rather than asserting either
+      side; the movement's real, better-supported value is the stricter,
+      swing-free path (see why_this_exists), not a specific head bias.
   review_status: draft
 
 - id: cable-drag-curl
@@ -461,7 +503,7 @@
     constant tension, so the set stays hard even at the top of the range
     instead of losing load the way a barbell drag curl does.
   body_regions: [arms]
-  primary_targets: [biceps (commonly cited as short-head-biased)]
+  primary_targets: [biceps (head bias contested — see evidence_notes)]
   secondary_targets: []
   movement_patterns: [elbow flexion with the elbows drawn behind the torso]
   equipment: [cable]
@@ -493,7 +535,11 @@
   overlaps_with:
     - drag-curl
     - cable-curl
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same unresolved head-bias question as the free-weight drag curl —
+      see drag-curl's evidence_notes. The cable's constant tension is a
+      resistance-profile difference, not new evidence on head bias.
   review_status: draft
 
 - id: zottman-curl
@@ -553,7 +599,7 @@
     Lets the triceps be trained under loads that single-joint extensions
     cannot reach.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as lateral- and medial-head-biased)]
+  primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: [chest, anterior deltoids]
   movement_patterns: [horizontal press]
   equipment: [barbell, smith machine]
@@ -586,7 +632,23 @@
       not.
   overlaps_with:
     - dip-triceps-biased
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      The "lateral- and medial-head-biased" claim carried by this record
+      (and by dip-triceps-biased, cable-pushdown, machine-triceps-
+      extension, and triceps-kickback below) is corrected here: it isn't
+      supported by the same kind of evidence as the long-head claim. The
+      long head crosses the shoulder joint, so its length — and therefore
+      its bias — changes with shoulder position, which is what Maeo et al.
+      (2023, see overhead-triceps-extension) actually measured. The
+      lateral and medial heads only cross the elbow, so shoulder position
+      does not change their length the same way, and no equivalent study
+      was found showing these two heads are differentially biased by
+      grip, shoulder-extension, or non-overhead elbow-extension movements
+      specifically. The safest claim these movements support is that they
+      train the triceps as a whole, with the long head under less stretch
+      than an overhead position provides — not a specific lateral/medial
+      split.
   review_status: draft
 
 - id: overhead-triceps-extension
@@ -598,7 +660,7 @@
     Trains elbow extension with the shoulder flexed, a position that
     pressing movements do not load.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as long-head-biased)]
+  primary_targets: [triceps (long-head-biased, strongly supported by hypertrophy research)]
   secondary_targets: []
   movement_patterns: [elbow extension with the shoulder flexed]
   equipment: [barbell, ez-bar, dumbbell]
@@ -630,7 +692,23 @@
   overlaps_with:
     - cable-overhead-extension-leaning-forward
     - lying-triceps-extension-skull-crusher
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Strong evidence, and stronger than the biceps head-bias claims above:
+      Maeo et al. (2023, European Journal of Sport Science) used MRI to
+      measure triceps long-head growth after 12 weeks of overhead extension
+      training vs. a non-overhead (arm-at-side) extension, at matched
+      volume. The overhead group gained roughly 28.5% long-head cross-
+      sectional area at the site closest to the shoulder vs. roughly 19.6%
+      for the non-overhead group, with the gap most pronounced proximally,
+      consistent with the long head being stretched at the shoulder in the
+      overhead position. This is direct MRI-measured hypertrophy data, not
+      just EMG, which is why this claim is stated more confidently than the
+      biceps incline/preacher claims. It only establishes the long head's
+      bias, not any lateral- or medial-head effect — see the notes on
+      close-grip-bench-press, dip-triceps-biased, cable-pushdown,
+      machine-triceps-extension, and triceps-kickback below for why those
+      heads' bias claims are treated differently.
   review_status: draft
 
 - id: lying-triceps-extension-skull-crusher
@@ -677,7 +755,16 @@
     - A pressing movement or a pushdown.
   overlaps_with:
     - overhead-triceps-extension
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Inferred, not directly tested. Maeo et al. (2023) — see
+      overhead-triceps-extension's evidence note — compared only two
+      endpoints: fully overhead vs. arm-at-side. No study located tests the
+      roughly 90-degree shoulder position a skull crusher uses, so this
+      record's "partial long-head stretch" claim is a reasonable
+      inference from where 90 degrees sits between those two tested
+      positions, not a finding from a study that actually used this
+      exercise.
   review_status: draft
 
 - id: dip-triceps-biased
@@ -690,7 +777,7 @@
     rather than the lower chest, letting one piece of equipment serve two
     different roles depending on execution.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as lateral- and medial-head-biased)]
+  primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: [anterior deltoids]
   movement_patterns: [elbow extension within a vertical-to-horizontal press]
   equipment: [dip bars, bodyweight]
@@ -723,7 +810,11 @@
     - "dip-chest-biased (chest module) — torso angle is what separates the
       two."
     - close-grip-bench-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same correction as close-grip-bench-press: no evidence found for a
+      differential lateral/medial-head bias here — see that record's
+      evidence_notes for the full reasoning.
   review_status: draft
 
 - id: cable-pushdown
@@ -735,7 +826,7 @@
     A low-cost way to add triceps volume without another press, with easy
     load adjustment and a fast setup.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as lateral-head-biased)]
+  primary_targets: [triceps (all three heads — no evidence of a lateral-head-specific bias; see evidence_notes)]
   secondary_targets: []
   movement_patterns: [elbow extension]
   equipment: [cable]
@@ -770,7 +861,15 @@
     - triceps-kickback
     - cable-overhead-extension-leaning-forward
     - machine-triceps-extension
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same correction as close-grip-bench-press: the "lateral-head-biased"
+      framing isn't supported by evidence of the same quality as the
+      overhead long-head claim — see that record's evidence_notes for the
+      full reasoning. A pushdown's elbow stays roughly at the torso
+      through the movement, so if anything it puts the long head in a
+      relatively neutral, unstretched position rather than biasing a
+      specific head.
   review_status: draft
 
 - id: machine-triceps-extension
@@ -783,7 +882,7 @@
     attachment setup of a pushdown, often with a cam that adjusts
     resistance through the range.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as lateral-head-biased)]
+  primary_targets: [triceps (all three heads — no evidence of a lateral-head-specific bias; see evidence_notes)]
   secondary_targets: []
   movement_patterns: [elbow extension]
   equipment: [machine]
@@ -815,7 +914,11 @@
     - An overhead extension, which loads a different position.
   overlaps_with:
     - cable-pushdown
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same correction as close-grip-bench-press: no evidence found for a
+      lateral-head-specific bias here — see that record's evidence_notes
+      for the full reasoning.
   review_status: draft
 
 - id: triceps-kickback
@@ -828,7 +931,7 @@
     resistance, isolating the triceps at the end of the range where
     pressing and pushdowns are already easiest.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as lateral- and medial-head-biased)]
+  primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: []
   movement_patterns: [elbow extension with the shoulder held in extension]
   equipment: [dumbbell, cable]
@@ -859,7 +962,14 @@
     - A pressing movement or a pushdown.
   overlaps_with:
     - cable-pushdown
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same correction as close-grip-bench-press: no evidence found for a
+      differential lateral/medial-head bias here — see that record's
+      evidence_notes for the full reasoning. The shoulder stays extended
+      and roughly still through a kickback, so this movement doesn't put
+      the long head through the stretched, shoulder-flexed position the
+      overhead-extension evidence is actually about either.
   review_status: draft
 
 - id: cable-overhead-extension-leaning-forward
@@ -873,7 +983,7 @@
     triceps through the stretch, unlike a free-weight overhead extension
     where the load is hardest only partway through the range.
   body_regions: [arms]
-  primary_targets: [triceps (commonly cited as long-head-biased)]
+  primary_targets: [triceps (long-head-biased, strongly supported by hypertrophy research)]
   secondary_targets: []
   movement_patterns: [elbow extension with the shoulder flexed, torso leaning forward away from the stack]
   equipment: [cable]
@@ -906,5 +1016,13 @@
   overlaps_with:
     - overhead-triceps-extension
     - cable-pushdown
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same long-head evidence as overhead-triceps-extension (Maeo et al.,
+      2023) — the shoulder is flexed here the same way, so the same MRI
+      hypertrophy finding applies. The leaning-forward, constant-tension
+      cable path changes the loading curve, not the shoulder position the
+      evidence is actually about, so it doesn't add new evidence either
+      for or against the bias claim beyond what the free-weight version
+      already has.
   review_status: draft

@@ -11,7 +11,7 @@ The lower leg is organized around knee position, because knee angle decides whic
 
 - **Straight-knee plantarflexion:** the gastrocnemius — the calf muscle that gives the leg its visible diamond shape, made of an inner (medial) head and an outer (lateral) head — crosses the knee, so it contributes most when the knee is straight.
 - **Bent-knee plantarflexion:** with the knee bent, the soleus — the flatter muscle underneath the gastrocnemius that adds thickness lower on the leg — does more of the work.
-- **Toe angle:** turning the toes out is commonly cited to bias the inner (medial) head slightly more; turning the toes in is commonly cited to bias the outer (lateral) head slightly more. This is a foot-position cue within an exercise, not a separate exercise.
+- **Toe angle:** turning the toes out biases the inner (medial) head slightly more; turning the toes in biases the outer (lateral) head slightly more. This now has real hypertrophy-trial support, not just a coaching cue — see Standing Calf Raise below. This is a foot-position cue within an exercise, not a separate exercise.
 - **Unilateral plantarflexion:** one leg at a time, useful for closing side-to-side gaps.
 - **Dorsiflexion:** lifting the foot upward; the tibialis anterior, which no common lift trains directly.
 
@@ -23,7 +23,7 @@ The lower leg is organized around knee position, because knee angle decides whic
 - **Primary targets:** Gastrocnemius (inner/medial and outer/lateral heads); soleus contributes.
 - **Movement:** Ankle plantarflexion with the knee straight.
 - **Coverage:** Isolation, low skill demand, low-to-moderate setup.
-- **Best used when:** A user wants a heavier, mechanical-tension-driven stimulus for the gastrocnemius, with a full stretch at the bottom and a hard, paused contraction at the top — the position most people mean when they picture calf training. Turning the toes slightly out or in shifts a little more emphasis to the inner or outer head respectively.
+- **Best used when:** A user wants a heavier, mechanical-tension-driven stimulus for the gastrocnemius, with a full stretch at the bottom and a hard, paused contraction at the top — the position most people mean when they picture calf training. Turning the toes slightly out or in shifts a little more emphasis to the inner or outer head respectively — a real hypertrophy trial supports this direction: Nunes et al. (2020, Journal of Strength and Conditioning Research, 34(8): 2347-2351) found foot-pointed-outward produced more medial-head growth and foot-pointed-inward produced more lateral-head growth over 9 weeks. It was tested on a seated leg-press calf raise, not this standing version, and the effect shifts emphasis rather than isolating one head. See the canonical YAML record's evidence_notes for the full citation.
 - **Less suitable when:** The bottom stretch gets cut short by bouncing onto the toes quickly, which trades away most of the growth stimulus for rep count.
 - **Complements:** A bent-knee raise, which covers the soleus.
 - **Overlaps:** Leg-press and single-leg calf raises.
@@ -85,4 +85,4 @@ Before changing a record to Reviewed:
 - Add equipment, setup, fatigue, and relationship fields in the final data format.
 - Check terminology against the writing standard.
 - Add evidence notes for claims that require them.
-- The toe-angle inner/outer head-bias claim is a widely repeated coaching cue, not settled EMG consensus — it needs an evidence note or softer framing before Reviewed, the same caveat the arms module carries for its head-bias claims.
+- The toe-angle inner/outer head-bias claim now carries a real evidence note — a direct 9-week hypertrophy trial (Nunes et al., 2020), not just a coaching cue. See the canonical YAML record's evidence_notes in `data/exercises/calves.yaml` for the full citation and caveats (single study, tested on a leg-press machine rather than a standing raise).

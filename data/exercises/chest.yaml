@@ -6,6 +6,16 @@
 # Fields with no source material in the prose (mirror_effect, advantages,
 # limitations, technique_cues, common_mistakes, programming_notes,
 # alternatives, evidence_notes) are left empty rather than fabricated.
+#
+# Evidence-notes pass (partial): the upper/clavicular-biased claim carried
+# by the incline family now has strong, direct support (an MRI hypertrophy
+# trial plus EMG), the mid/sternal-biased claim carried by the flat family
+# has real but more circumstantial support, and the lower/costal-biased
+# claim carried by the dip and decline fly has EMG support only — no
+# hypertrophy trial isolating that region was found. The cable fly's
+# pulley-height bias claim and the pullover's general/costal claim remain
+# unresolved coaching cues per ADR 0001's no-fabrication policy — flagged,
+# not asserted.
 
 - id: incline-dumbbell-press
   name: Incline Dumbbell Press
@@ -55,7 +65,22 @@
     - incline-machine-press
     - smith-machine-incline-press
     - incline-cable-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Strong evidence, among the best-supported region-bias claims in this
+      dataset. Chaves et al. (2020, International Journal of Exercise
+      Science, PMC7449336) trained untrained men on flat, 44-degree
+      incline, or a combination of both for 8 weeks and measured pec
+      thickness by ultrasound/MRI-style imaging: the incline group gained
+      upper-chest thickness far beyond the flat group (a very large,
+      outlier-sized effect — over 60% relative increase), while mid-chest
+      growth was similar across groups. This is direct regional-
+      hypertrophy data, not just EMG. It's backed by EMG evidence too:
+      Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head
+      activation rose with incline angle across five bench inclinations.
+      Evidence quality: strong — a real hypertrophy trial plus consistent
+      EMG, though still a single hypertrophy trial with an unusually large
+      effect size that hasn't yet been replicated.
   review_status: draft
 
 - id: incline-barbell-press
@@ -104,7 +129,12 @@
     - incline-dumbbell-press
     - incline-machine-press
     - incline-cable-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
+      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
+      incline angle is what the evidence is about, not the choice of
+      barbell vs. dumbbell.
   review_status: draft
 
 - id: incline-machine-press
@@ -153,7 +183,11 @@
     - incline-barbell-press
     - incline-cable-press
     - smith-machine-incline-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
+      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
+      incline angle is what the evidence is about, not the equipment.
   review_status: draft
 
 - id: smith-machine-incline-press
@@ -201,7 +235,11 @@
     - incline-barbell-press
     - incline-machine-press
     - incline-cable-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
+      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
+      incline angle is what the evidence is about, not the fixed rail.
   review_status: draft
 
 - id: incline-cable-press
@@ -249,7 +287,12 @@
     - incline-dumbbell-press
     - incline-barbell-press
     - incline-machine-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
+      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
+      incline angle is what the evidence is about, not the cable's constant
+      tension.
   review_status: draft
 
 - id: flat-barbell-bench-press
@@ -298,7 +341,21 @@
     - machine-chest-press
     - cable-chest-press
     - smith-machine-bench-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Weaker claim to make than it sounds, and supported more
+      circumstantially than the upper-chest claim: the sternocostal
+      (mid/lower-most) head is simply the largest portion of the
+      pectoralis major and the one every horizontal press loads by
+      default, rather than a bias any specific technique creates. EMG
+      support: Rodríguez-Ridao et al. (2020, PMC7579505) found the
+      sternocostal head was more active at 0° (flat) than at incline
+      angles. Hypertrophy support: in Chaves et al. (2020, PMC7449336),
+      mid-chest growth was statistically similar across the flat, incline,
+      and combined groups — consistent with flat pressing doing at least
+      as well here as any other angle, though it doesn't isolate a flat-
+      specific advantage the way the incline data isolates one for the
+      upper chest.
   review_status: draft
 
 - id: smith-machine-bench-press
@@ -346,7 +403,10 @@
     - flat-dumbbell-press
     - machine-chest-press
     - cable-chest-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press — see that
+      record's evidence_notes.
   review_status: draft
 
 - id: flat-dumbbell-press
@@ -394,7 +454,10 @@
     - machine-chest-press
     - cable-chest-press
     - smith-machine-bench-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press — see that
+      record's evidence_notes.
   review_status: draft
 
 - id: machine-chest-press
@@ -443,7 +506,10 @@
     - flat-barbell-bench-press
     - flat-dumbbell-press
     - smith-machine-bench-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press — see that
+      record's evidence_notes.
   review_status: draft
 
 - id: cable-chest-press
@@ -491,7 +557,10 @@
     - flat-barbell-bench-press
     - flat-dumbbell-press
     - machine-chest-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press — see that
+      record's evidence_notes.
   review_status: draft
 
 - id: hex-press
@@ -542,7 +611,16 @@
   overlaps_with:
     - flat-dumbbell-press
     - flat-dumbbell-fly
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      The mid/sternal-biased part carries the same evidence as
+      flat-barbell-bench-press — see that record's evidence_notes. The
+      "extra emphasis toward the inner chest" claim is separate and
+      unresolved: no research was found isolating an "inner chest" as a
+      distinct region within the sternocostal head, and no direct study of
+      the hex press's squeeze-adduction effect on regional hypertrophy was
+      located. It's a widely repeated coaching cue based on where lifters
+      report feeling the squeeze, not a settled finding.
   review_status: draft
 
 - id: flat-dumbbell-fly
@@ -592,7 +670,13 @@
     - decline-dumbbell-fly
     - cable-fly
     - machine-fly-pec-deck
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press applies to the
+      mid-bias claim here — see that record's evidence_notes. No study
+      specific to the fly (adduction) pattern rather than a press was
+      located, so this is an extrapolation from press data to a fly, not
+      a direct finding.
   review_status: draft
 
 - id: incline-dumbbell-fly
@@ -637,7 +721,14 @@
   overlaps_with:
     - flat-dumbbell-fly
     - decline-dumbbell-fly
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
+      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) applies
+      to the incline-angle claim here. That evidence comes from press
+      studies, not fly studies specifically, so treat this as an
+      extrapolation from the press data rather than a direct finding about
+      flys.
   review_status: draft
 
 - id: decline-dumbbell-fly
@@ -683,7 +774,16 @@
   overlaps_with:
     - flat-dumbbell-fly
     - incline-dumbbell-fly
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Weaker evidence than the upper-chest claim. EMG support only:
+      Rodríguez-Ridao et al. (2020, PMC7579505) and the earlier Barnett
+      et al. (1995, JSCR) both found greater lower/sternocostal-region
+      pectoral activation during decline pressing than incline or flat.
+      No MRI or ultrasound hypertrophy trial isolating a decline-specific
+      lower-chest growth effect was located — unlike the upper-chest
+      claim, this one rests on EMG alone. Evidence quality: moderate,
+      similar tier to the biceps head-bias claims in the arms module.
   review_status: draft
 
 - id: machine-fly-pec-deck
@@ -731,7 +831,11 @@
     - flat-dumbbell-fly
     - incline-dumbbell-fly
     - decline-dumbbell-fly
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press applies here —
+      see that record's evidence_notes, and the same press-to-fly
+      extrapolation caveat noted on flat-dumbbell-fly.
   review_status: draft
 
 - id: cable-fly
@@ -782,7 +886,16 @@
     - flat-dumbbell-fly
     - incline-dumbbell-fly
     - decline-dumbbell-fly
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      The low-to-high / high-to-low pulley-height bias claim is unresolved
+      — no study was found that directly tests cable-fly pulley height
+      against measured regional pec activation or growth. It's a
+      reasonable inference from the incline/decline press evidence (the
+      cable's line of pull at each height roughly mirrors those bench
+      angles), but it hasn't been tested as a fly specifically. Treat it
+      as a coaching cue, not a settled finding, until direct evidence
+      turns up.
   review_status: draft
 
 - id: dumbbell-pullover-chest-biased
@@ -831,7 +944,12 @@
   overlaps_with:
     - "dumbbell-pullover-lat-biased (back module) — elbow bend is what
       separates the two."
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      No research was found on the pullover's regional pec bias
+      specifically — the "general/costal-biased" framing is an inference
+      from the movement's shoulder-extension arc, not a tested finding.
+      Left as an open claim rather than asserted with confidence.
   review_status: draft
 
 - id: dip-chest-biased
@@ -878,7 +996,15 @@
   overlaps_with:
     - "dip-triceps-biased (arms module) — torso angle is what separates
       the two."
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same lower-chest evidence tier as decline-dumbbell-fly — see that
+      record's evidence_notes. EMG on dips specifically shows high
+      lower-pec activation with a forward lean, but no MRI or ultrasound
+      hypertrophy trial isolating the dip's lower-chest effect was
+      located, so this stays a moderate-confidence, EMG-only claim rather
+      than the stronger hypertrophy-trial support the upper-chest claim
+      has.
   review_status: draft
 
 - id: push-up-chest
@@ -926,5 +1052,8 @@
   overlaps_with:
     - flat-barbell-bench-press
     - flat-dumbbell-press
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Same mid-chest evidence as flat-barbell-bench-press — see that
+      record's evidence_notes.
   review_status: draft

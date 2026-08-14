@@ -2,6 +2,10 @@
 # Format decided in docs/adr/0001-canonical-record-format.md.
 # Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
 # Converted from docs/knowledge-manual/calves/CALVES.md.
+#
+# Evidence-notes pass (partial): the toe-angle inner/outer gastrocnemius-
+# head-bias claim on standing-calf-raise now carries a real citation — a
+# direct hypertrophy trial, not just EMG. See that record's evidence_notes.
 
 - id: standing-calf-raise
   name: Standing Calf Raise
@@ -42,15 +46,35 @@
   technique_cues: []
   common_mistakes: []
   programming_notes: >-
-    The toe-angle inner/outer head-bias cue is a widely repeated coaching
-    cue, not settled EMG consensus.
+    The toe-angle inner/outer head-bias cue now has real hypertrophy
+    evidence behind it — see evidence_notes — though it was only tested
+    with a machine calf raise, not this record's free-standing version.
   alternatives: []
   complements:
     - A bent-knee raise, which covers the soleus.
   overlaps_with:
     - leg-press-calf-raise
     - single-leg-calf-raise
-  evidence_notes: []
+  evidence_notes:
+    - >-
+      Direct hypertrophy trial evidence, stronger than a coaching cue:
+      Nunes et al. (2020, Journal of Strength and Conditioning Research,
+      34(8): 2347-2351) trained 22 men for 9 weeks on a seated
+      horizontal leg-press calf raise with the foot pointed outward,
+      inward, or forward. Foot-pointed-outward produced significantly
+      more medial (inner) gastrocnemius growth (+8.4% vs. +3.8% for
+      foot-pointed-inward); foot-pointed-inward produced significantly
+      more lateral (outer) growth (+9.1% vs. +5.5% for foot-pointed-
+      outward). This matches this record's toes-out-to-inner,
+      toes-in-to-outer framing. Caveats: it's one trial, in a leg-press
+      calf raise rather than the standing free-weight/machine version
+      this record describes, and the difference between conditions was
+      modest relative to the overall growth every condition produced —
+      the toe angle shifts emphasis, it doesn't isolate a head to the
+      exclusion of the other. Evidence quality: moderate-to-strong — a
+      real hypertrophy trial, the same tier as the triceps overhead-
+      extension claim in the arms module, though from a single study
+      rather than a replicated body of work.
   review_status: draft
 
 - id: seated-calf-raise
