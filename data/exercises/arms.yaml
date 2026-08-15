@@ -43,7 +43,10 @@
   less_suitable_when:
     - A straight bar irritates the wrists — an EZ bar or dumbbells deliver
       the same stimulus without that cost.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as overall biceps mass and peak when the arm is flexed,
+    viewed from the front — the classic "bigger arms" driver most people
+    picture, without emphasizing one part of the biceps over another.
   advantages: []
   limitations:
     - The fixed bar path doesn't let the wrists find their own natural rotation
@@ -94,7 +97,8 @@
   less_suitable_when:
     - The heavier loading and fixed path a barbell allows is wanted for a
       stronger mechanical-tension stimulus.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same overall biceps mass and peak direction as a barbell curl.
   advantages: []
   limitations:
     - Absolute load is capped somewhat below a barbell's, since each arm has to
@@ -144,7 +148,11 @@
   less_suitable_when:
     - The shoulder position is uncomfortable, capping how much of that
       stretch can actually be used under load.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to contribute more to biceps peak height specifically — the long head
+    runs along the outer side of the biceps and is what drives that peak when
+    flexed — rather than adding width at the base of the arm the way a preacher
+    curl does.
   advantages: []
   limitations:
     - The extended shoulder position is genuinely uncomfortable for some
@@ -218,7 +226,11 @@
   less_suitable_when:
     - The bottom of the range feels uncomfortable under load, which can
       limit how much of the strict range actually gets used.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to contribute more to fullness and width at the base of the biceps
+    near the elbow than to peak height, since the short head sits more toward
+    the inner arm — a different part of the biceps shape than an incline curl
+    emphasizes.
   advantages: []
   limitations:
     - The bottom of the range can feel uncomfortable at the elbow for some
@@ -279,7 +291,9 @@
     - The machine's pad or handle position doesn't suit the individual,
       which can blunt the tension felt regardless of how heavy the stack
       is loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same visible direction as the free-weight preacher curl — fullness and
+    width near the base of the biceps.
   advantages: []
   limitations:
     - Pad and handle position vary between machines, and a poor fit can blunt
@@ -331,7 +345,13 @@
   less_suitable_when:
     - The routine already contains enough elbow-flexion volume, in which
       case this adds fatigue without a distinct growth role.
-  mirror_effect: ""
+  mirror_effect: >-
+    Worth calling out directly for a "my arms look thin from the front"
+    complaint — the brachialis this targets sits underneath and to the side of
+    the biceps and pushes it upward, adding width to the arm between the
+    shoulder and elbow that's visible from the front independent of biceps
+    peak. This is often the more direct fix for front-view arm thinness than
+    more biceps curling.
   advantages: []
   limitations:
     - Because it shifts emphasis away from the biceps peak, it's a weaker
@@ -382,7 +402,9 @@
   less_suitable_when:
     - The heavier loading dumbbells allow is wanted for a stronger
       mechanical-tension stimulus.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same brachialis-driven, front-view arm-width effect as a dumbbell hammer
+    curl.
   advantages: []
   limitations:
     - Absolute load is capped below what dumbbells allow, since the rope
@@ -432,7 +454,9 @@
   less_suitable_when:
     - The diagonal path turns into swinging, trading the growth stimulus
       for momentum.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same brachialis-driven, front-view arm-width effect as a straight hammer
+    curl, from a different angle of pull.
   advantages: []
   limitations:
     - The diagonal path is a coordination demand on top of the curl itself, and
@@ -481,7 +505,9 @@
   less_suitable_when:
     - The heavier loading a barbell allows is wanted for a stronger
       mechanical-tension stimulus.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same overall biceps mass direction as a barbell or dumbbell curl, without a
+    specific peak-or-width bias.
   advantages: []
   limitations:
     - Absolute load is capped below what a barbell allows, so this isn't a
@@ -529,7 +555,11 @@
   less_suitable_when:
     - Shoulder mobility doesn't allow the elbows to travel back
       comfortably, limiting how strict the path can actually be kept.
-  mirror_effect: ""
+  mirror_effect: >-
+    General biceps mass contribution — no confident claim about a specific
+    peak-vs-width shape bias here, since the evidence for this movement's head
+    bias is genuinely unresolved (see evidence_notes). Its real value is the
+    strict path, not a distinct visible shape effect.
   advantages: []
   limitations:
     - Shoulder mobility genuinely limits how far back the elbows can travel,
@@ -590,7 +620,9 @@
   less_suitable_when:
     - The heavier loading a barbell allows is wanted for a stronger
       mechanical-tension stimulus.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same general biceps mass contribution as the free-weight drag curl, with
+    the same lack of a confident shape-specific claim.
   advantages: []
   limitations:
     - Same shoulder-mobility limitation as the free-weight drag curl — the
@@ -644,7 +676,10 @@
   less_suitable_when:
     - The rotation at the top breaks down under heavier load, capping how
       much weight can be used for either half of the stimulus.
-  mirror_effect: ""
+  mirror_effect: >-
+    Contributes to biceps mass on the way up and forearm/brachioradialis width
+    on the way down — a combined effect across two visible areas from one
+    movement, though each half is milder than a dedicated exercise for either.
   advantages: []
   limitations:
     - The grip rotation at the top is a coordination demand that breaks down
@@ -697,7 +732,11 @@
   less_suitable_when:
     - The elbows or wrists dislike the narrow grip, or the routine already
       has substantial pressing volume competing for the same recovery.
-  mirror_effect: ""
+  mirror_effect: >-
+    The triceps make up most of the upper arm's mass, so heavy compound work
+    like this tends to be a major contributor to overall arm size and
+    thickness, visible from the side and back more than dominating the front-
+    facing view a biceps exercise does.
   advantages: []
   limitations:
     - The narrow grip places real stress on the wrists and elbows, and some
@@ -762,7 +801,11 @@
   less_suitable_when:
     - The overhead position is uncomfortable, capping how much of that
       stretch can actually be loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to contribute specifically to the long head, which runs down the back
+    and inner side of the upper arm — this is the part most responsible for the
+    "horseshoe" shape and overall arm length when the arm hangs at the side,
+    viewed from behind.
   advantages: []
   limitations:
     - The overhead shoulder position demands real mobility, and lifters without
@@ -839,7 +882,10 @@
     - Elbow tolerance is limiting, or bar path control near the head
       becomes the limiting factor before the triceps are meaningfully
       fatigued.
-  mirror_effect: ""
+  mirror_effect: >-
+    Similar horseshoe-and-length visible direction to the overhead extension,
+    from a less stretched position, so the effect on that specific shape tends
+    to be milder.
   advantages: []
   limitations:
     - Bar path control near the head is a genuine technical demand, and losing
@@ -896,7 +942,10 @@
   less_suitable_when:
     - Shoulder tolerance limits a deep dip, or bodyweight alone is too
       heavy a starting load to complete a useful number of reps.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same overall triceps mass direction as close-grip bench press — a heavy
+    compound contributor to arm thickness, visible mostly from the side and
+    back.
   advantages: []
   limitations:
     - Shoulder tolerance for a deep dip varies a lot between lifters, and
@@ -952,7 +1001,10 @@
     - A lengthened-position, stretch-mediated stimulus is the priority
       instead — an overhead extension delivers that where a pushdown does
       not.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same general triceps mass and horseshoe-shape direction as other triceps
+    work, at a lighter, finishing-touch level rather than a primary size
+    driver.
   advantages: []
   limitations:
     - Load ceiling is modest relative to a compound press, since a single-
@@ -1012,7 +1064,9 @@
     - The machine's seat or handle position doesn't suit the individual,
       which can blunt the tension felt regardless of how heavy the stack
       is loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same general triceps mass and horseshoe-shape direction as a cable
+    pushdown.
   advantages: []
   limitations:
     - Seat and handle position vary between machines, and a poor fit can blunt
@@ -1064,7 +1118,10 @@
     - The upper arm drops during the set, which turns the movement into a
       shoulder exercise and loses the isolated triceps stimulus that's the
       point of the kickback.
-  mirror_effect: ""
+  mirror_effect: >-
+    A minor, finishing-touch contribution to triceps shape at best — the light
+    loading this movement uses isn't enough on its own to be a primary driver
+    of visible arm size.
   advantages: []
   limitations:
     - The load ceiling is very low by design — this is not a movement that will
@@ -1123,7 +1180,9 @@
   less_suitable_when:
     - The heaviest possible loading for a strength-driven stimulus is the
       priority, which free weights deliver more of.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same long-head, horseshoe-and-length visible direction as the free-weight
+    overhead extension, from the same stretched shoulder position.
   advantages: []
   limitations:
     - Setting up the leaning-forward position away from the stack takes more

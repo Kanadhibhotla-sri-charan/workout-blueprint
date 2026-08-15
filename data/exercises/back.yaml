@@ -40,7 +40,12 @@
     - Bodyweight is too much load to complete a useful number of reps,
       capping the growth stimulus until strength improves or assistance is
       added.
-  mirror_effect: ""
+  mirror_effect: >-
+    This is usually the actual answer to "my lats look narrow" — vertical
+    pulling like this is the primary driver of back width, the flare that shows
+    up under the arms and creates the V-taper look from behind. Rows build back
+    thickness, not width; if width specifically is the complaint, this family
+    of movements is where to look first.
   advantages: []
   limitations:
     - Bodyweight is a large, all-or-nothing jump in load for anyone who can't
@@ -91,7 +96,11 @@
     - The lats need to be isolated away from the biceps — the biceps taking
       on more of the load means less of the set's tension lands on the
       back per rep.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same width-building visible direction as the pull-up — the under-arm flare
+    that creates a V-taper from behind — though with more of each rep's tension
+    shared by the biceps, so the lat-specific stimulus per rep is somewhat less
+    isolated.
   advantages: []
   limitations:
     - The extra biceps involvement means some of each rep's tension lands on
@@ -142,7 +151,10 @@
     - Pulling strength has outgrown the stack's top loads, capping how much
       mechanical tension the machine can provide relative to a heavier
       bodyweight-plus-load pull-up.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same width-building visible direction as a pull-up — the under-arm flare
+    and V-taper viewed from behind — and the most common default choice for
+    training it, since load is adjustable in a way bodyweight pulling isn't.
   advantages: []
   limitations:
     - It's easy to lean back and use the trunk to help complete the pull once
@@ -196,7 +208,10 @@
   less_suitable_when:
     - The lats need to be isolated with minimal biceps fatigue — the wide
       pronated version does that more directly.
-  mirror_effect: ""
+  mirror_effect: >-
+    Similar width-building direction to the wide pronated pulldown, with more
+    biceps assistance diluting how isolated the lat-specific tension is per
+    rep.
   advantages: []
   limitations:
     - Same lean-back and momentum risk as the wide pronated version — the
@@ -247,7 +262,10 @@
     - Shoulder and elbow comfort aren't limiting factors, in which case a
       pronated or supinated grip may deliver a more specific bias without
       a meaningful downside.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same width-building visible direction as any lat pulldown — the grip is a
+    joint-comfort choice, not a change in which muscle or visible outcome is
+    being trained.
   advantages: []
   limitations:
     - Not every cable station has a neutral-grip attachment available, which
@@ -298,7 +316,11 @@
   less_suitable_when:
     - The hinge's added trunk and hip demand is wanted as part of the
       stimulus, which a supported row deliberately removes.
-  mirror_effect: ""
+  mirror_effect: >-
+    Rows build back thickness, not width — tends to show up as density and a
+    "3D" stacked look viewed from the side, filling out the back between the
+    spine and the shoulder blades, distinct from the under-arm flare vertical
+    pulling builds.
   advantages: []
   limitations:
     - The chest pad's angle and height often don't fit every torso length well,
@@ -354,7 +376,11 @@
     - Lower-back fatigue from other work already limits how much can
       safely be loaded, capping the mechanical-tension ceiling this
       movement can deliver.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same thickness-building visible direction as any row — mass and density
+    through the mid-back viewed from the side — and, being the heaviest
+    loadable row option, often the biggest single contributor to that
+    thickness.
   advantages: []
   limitations:
     - The bent-over hinge position places real demand on the lower back, which
@@ -404,7 +430,10 @@
   less_suitable_when:
     - Wrist or elbow comfort favors a pronated or neutral grip, or
       lower-back fatigue already caps how heavy this can safely be loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Similar thickness-building direction to a standard row, but the underhand
+    grip pulls the lats in more directly, so this leans a little toward
+    contributing to width as well as thickness rather than thickness alone.
   advantages: []
   limitations:
     - Same lower-back and technical demands as the overhand version — the hinge
@@ -454,7 +483,9 @@
   less_suitable_when:
     - The hinge's added trunk and hip demand is wanted as part of the
       stimulus, which a seated row deliberately removes.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same thickness-building visible direction as a free-standing row — density
+    through the mid-back viewed from the side.
   advantages: []
   limitations:
     - The seated, foot-braced setup removes the hip-and-trunk training stimulus
@@ -504,7 +535,9 @@
     - The deepest possible range of motion is the priority, since the
       fixed handle position can shorten the pull compared to a barbell or
       dumbbell row.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same thickness-building visible direction as a barbell row — mid-back mass
+    and density — at a heavier loadable ceiling than most machine row options.
   advantages: []
   limitations:
     - The fixed handle position means grip width and hand angle can't be
@@ -557,7 +590,11 @@
       lat-width growth rather than raw whole-body strength — a rack pull
       or a compound row delivers a more targeted stimulus at far less
       systemic cost.
-  mirror_effect: ""
+  mirror_effect: >-
+    Contributes to overall back thickness and density broadly — traps, upper
+    back, and especially the spinal erectors, which in a lean physique show up
+    as the "Christmas tree" lines running down either side of the spine. It's a
+    whole-posterior-chain effect, not a targeted width or shape tool.
   advantages: []
   limitations:
     - The technical demand and injury stakes are higher than almost any other
@@ -617,7 +654,10 @@
     - The full-range, floor-level strength stimulus a conventional
       deadlift trains is the goal, since this movement skips that range
       entirely.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up more in the traps and upper back than the lower-back
+    erector definition a full-range deadlift builds, since the partial range
+    biases the top-of-pull musculature specifically.
   advantages: []
   limitations:
     - Skipping the floor-level range means it does not build pulling strength
@@ -670,7 +710,10 @@
     - The extra per-side volume needed to match a bilateral row's total
       work makes this a less efficient way to accumulate back-thickness
       volume when session time or fatigue budget is tight.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same thickness-building visible direction as a bilateral row, trained and
+    visible one side at a time — useful for closing a visible left-right back-
+    thickness difference the bilateral versions can't target directly.
   advantages: []
   limitations:
     - Per-side volume needs to roughly double to match a bilateral row's total
@@ -719,7 +762,11 @@
     - Back growth is currently limited by total heavy-pulling volume
       rather than needing more lat isolation — a compound pull delivers
       more overall stimulus per set.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as fullness along the lower, outer edge of the lat — the
+    "sweep" that flares out near the sides of the torso — since that's the
+    stretched position this movement isolates, distinct from the more general
+    width a vertical pull builds.
   advantages: []
   limitations:
     - Load ceiling is inherently modest — the fixed-elbow, straight-arm path is
@@ -782,7 +829,10 @@
     - Tension held through the whole range is wanted, which a cable
       straight-arm pulldown provides and this movement's resistance
       profile does not.
-  mirror_effect: ""
+  mirror_effect: >-
+    Similar visible direction to the straight-arm pulldown — fullness at the
+    lower, outer lat and the flare near the sides of the torso — from working
+    the same stretched position with a different resistance curve.
   advantages: []
   limitations:
     - Shoulder mobility limits how far overhead the weight can be lowered
@@ -840,7 +890,11 @@
     - Grip gives out well before the traps are meaningfully fatigued,
       capping how much stimulus the set can deliver — straps or a
       different grip may be needed to keep training past that point.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as added height and mass at the top of the shoulders and
+    base of the neck — the "trap mountain" look, visible from both the front
+    and back, which changes the line from neck to shoulder more than it changes
+    back width or thickness.
   advantages: []
   limitations:
     - The range of motion is small by nature, which limits how much mechanical
@@ -895,7 +949,11 @@
       hamstrings module's copy of this exercise, does that instead. Back
       symptoms are a stop-and-assess signal either way, not something to
       train through.
-  mirror_effect: ""
+  mirror_effect: >-
+    Contributes to spinal-erector definition and thickness along either side of
+    the spine — the "Christmas tree" lines visible in a lean lower back — at a
+    lighter load ceiling than a full deadlift, so the effect tends to be more
+    modest unless it's adding volume on top of heavier hinge work.
   advantages: []
   limitations:
     - The controlled lumbar extension this execution deliberately uses is

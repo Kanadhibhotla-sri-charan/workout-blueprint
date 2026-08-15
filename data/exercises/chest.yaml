@@ -50,7 +50,11 @@
     - The stability demand of controlling two independent dumbbells caps how
       much weight can be used, limiting the mechanical-tension ceiling for a
       stronger lifter.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as the upper-chest shelf filling in — the area just below
+    the collarbone fills out, closing the gap between shoulder and chest and
+    reading as a squared-off top edge in a t-shirt or from the front, rather
+    than the chest looking like it starts lower down.
   advantages: []
   limitations:
     - Shoulder mobility and comfort at a steep bench angle can limit how deep
@@ -121,7 +125,10 @@
     - The fixed grip width and bar path cap the stretch at the bottom below
       what a dumbbell allows, delivering less lengthened-position stimulus
       per rep.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same upper-chest visible direction as an incline dumbbell press — the shelf
+    below the collarbone filling in — since it's the same incline angle driving
+    the effect, not the choice of barbell over dumbbells.
   advantages: []
   limitations:
     - The fixed grip width and bar path mean the bottom-range stretch is
@@ -179,7 +186,9 @@
     - The fixed cam path doesn't match a user's shoulder mechanics, which
       can blunt the tension the chest actually feels regardless of how
       heavy the stack is loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same upper-chest shelf effect as a free-weight incline press, from the same
+    incline angle.
   advantages: []
   limitations:
     - Machine handle position and pressing angle vary a lot between models, and
@@ -236,7 +245,9 @@
   less_suitable_when:
     - The fixed rail's path doesn't match a user's natural press arc, which
       can shift stress onto the shoulder joint rather than the chest.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same upper-chest shelf effect as a free-weight incline press, from the same
+    incline angle.
   advantages: []
   limitations:
     - The fixed rail path doesn't match every lifter's natural press arc, and a
@@ -293,7 +304,10 @@
   less_suitable_when:
     - The priority is the heaviest possible loading for a strength-driven
       stimulus, which free weights deliver more of.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same upper-chest shelf direction as any incline press, at a lighter load
+    ceiling — a supplementary contributor to that area rather than a primary
+    mass driver.
   advantages: []
   limitations:
     - Absolute load is capped well below what a barbell or heavy dumbbells
@@ -351,7 +365,12 @@
     - The routine already has a heavy pressing movement covering mechanical
       tension, and what's actually missing is a pump-oriented finisher or a
       stretch-biased stimulus this movement does not provide.
-  mirror_effect: ""
+  mirror_effect: >-
+    Over time, this tends to show up as overall chest mass and depth from the
+    side — the chest projects further off the ribcage and the mid-chest, the
+    bulk most people picture when they think "chest," fills in first. It's not
+    a shaping tool; it doesn't carve a line between the pecs or fill in any one
+    spot specifically, it just adds size to the region as a whole.
   advantages: []
   limitations:
     - A spotter or safety bars are genuinely needed to train close to failure
@@ -418,7 +437,10 @@
   less_suitable_when:
     - The fixed rail's path doesn't match a user's natural press arc, which
       can shift stress onto the shoulder joint rather than the chest.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same mid-chest mass and depth direction as a free-weight flat bench press,
+    since the fixed rail changes balance demand, not which muscle carries the
+    load.
   advantages: []
   limitations:
     - The fixed rail path doesn't match every lifter's natural press arc, and a
@@ -474,7 +496,9 @@
     - The stability demand of controlling two independent dumbbells caps
       how much weight can be used, limiting the mechanical-tension ceiling
       for a stronger lifter.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same mid-chest mass and depth direction as a barbell bench press, with a
+    bit more of a stretch at the bottom from the independent arms.
   advantages: []
   limitations:
     - Controlling two independent dumbbells caps the achievable load below what
@@ -533,7 +557,8 @@
     - The fixed cam path doesn't match a user's shoulder mechanics, which
       can blunt the tension the chest actually feels regardless of how
       heavy the stack is loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same mid-chest mass and depth direction as a barbell bench press.
   advantages: []
   limitations:
     - Machine handle position and pressing angle vary a lot between models, and
@@ -589,7 +614,10 @@
   less_suitable_when:
     - The priority is the heaviest possible loading for a strength-driven
       stimulus, which free weights deliver more of.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same mid-chest mass direction as a barbell bench press, at a lighter load
+    ceiling — a supplementary contributor rather than the primary mass driver a
+    heavy press is.
   advantages: []
   limitations:
     - Absolute load is capped well below what a barbell or heavy dumbbells
@@ -649,7 +677,12 @@
     - Maximal loading for a mechanical-tension stimulus is the priority —
       the squeeze demand caps how heavy this can realistically be loaded
       compared to a standard press.
-  mirror_effect: ""
+  mirror_effect: >-
+    Similar mid-chest mass direction to a standard flat press, with the added
+    squeeze contributing more to visible definition along the sternum line than
+    to a genuinely separate "inner chest" — there's no distinct inner-chest
+    muscle, so treat this as extra definition on the mid-chest, not a different
+    region filling in.
   advantages: []
   limitations:
     - The squeeze demand caps how heavy this can realistically be loaded
@@ -712,7 +745,11 @@
     - Tension held through the top of the range is wanted; a cable fly
       holds that tension where this movement's resistance profile gives it
       up as the arms come together.
-  mirror_effect: ""
+  mirror_effect: >-
+    Where a press adds bulk, a fly tends to show up as shape and separation — a
+    visible line down the sternum where the two sides meet, and a rounder sweep
+    out to the sides near the armpit, since the stretch position it's chosen
+    for pulls right along that outer edge.
   advantages: []
   limitations:
     - The shoulder joint is placed in a vulnerable, widely stretched position
@@ -784,7 +821,10 @@
   less_suitable_when:
     - Shoulder comfort at the bottom of the range is limiting, which shows
       up more often at steeper bench angles than on a flat fly.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same shape-and-separation effect as a flat fly, positioned at the upper
+    chest — defines and rounds out the shelf below the collarbone rather than
+    adding raw mass to it the way an incline press does.
   advantages: []
   limitations:
     - Same shoulder-vulnerability concern as the flat version, and the steeper
@@ -847,7 +887,10 @@
     - Shoulder comfort in the decline position is limiting, or the dip
       already covers lower-chest work and a distinct role is wanted
       instead of an overlapping one.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same shape-and-separation effect as a flat fly, positioned at the lower
+    chest — defines the line where the lower pec meets the ribs, an area few
+    other chest movements reach.
   advantages: []
   limitations:
     - The decline bench setup is less common and more awkward to adjust than a
@@ -912,7 +955,9 @@
     - The deep bottom-range stretch a dumbbell fly delivers is wanted,
       since the machine's arc and pad position usually stop short of that
       range.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same mid-chest shape-and-separation direction as a dumbbell fly — the
+    sternum line and outer sweep — delivered on a safer, more isolated path.
   advantages: []
   limitations:
     - The machine's arc and pad position usually stop short of the deep stretch
@@ -972,7 +1017,11 @@
     - The single deepest stretch position a dumbbell fly's lower resistance
       point allows is wanted, or a movement that can be loaded as heavily
       as a press for raw mechanical tension is needed.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same shape-and-separation visible direction as a dumbbell fly, with pulley
+    height shifting where that effect concentrates — higher toward the upper
+    chest, lower toward the lower chest — in a way a fixed-bench fly can't
+    adjust mid-program.
   advantages: []
   limitations:
     - Requires a cable station with adjustable pulley height and, ideally, two
@@ -1036,7 +1085,11 @@
     - The elbows bend enough that the movement shifts toward a
       lat-dominant pullover instead — see the back module's version, which
       uses more elbow bend specifically to bias the lats.
-  mirror_effect: ""
+  mirror_effect: >-
+    A subtler, different effect from a press or fly — tends to contribute to
+    fullness that wraps toward the lower, outer ribcage and the serratus
+    beneath the arm, rather than adding to the front-facing shelf a press
+    builds.
   advantages: []
   limitations:
     - Shoulder mobility limits how far overhead the weight can be lowered
@@ -1101,7 +1154,10 @@
     - Shoulder range or tolerance limits how deep the dip can go, which
       caps the stretch that gives this movement its main growth value — a
       shallow dip loses most of what makes it distinct from a flat press.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to fill in the lower chest specifically, the area just above where
+    the pec meets the ribs — one of the few ways to add real heavy mass there,
+    an area flat and incline pressing mostly miss.
   advantages: []
   limitations:
     - Shoulder range and tolerance genuinely limit how deep the dip can go for
@@ -1162,7 +1218,10 @@
     - A set can be done for very high reps without real difficulty, which
       signals the stimulus has dropped closer to muscular endurance than
       the tension needed to drive further growth.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same mid-chest visible direction as a flat bench press, but modest unless
+    loaded with a vest or band — bodyweight alone caps how much of a mass-
+    building effect this delivers for a trained lifter.
   advantages: []
   limitations:
     - Bodyweight alone caps the achievable load, so this stops being a

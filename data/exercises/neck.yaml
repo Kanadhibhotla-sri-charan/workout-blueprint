@@ -40,7 +40,10 @@
     - Loaded work is already well tolerated and a clearer path to
       progressive overload is wanted, which isometric holds are poorly
       suited to track over time.
-  mirror_effect: ""
+  mirror_effect: >-
+    Minimal visible effect on its own — this is a control-and-tolerance
+    builder, not a sizing tool, so don't expect a noticeably thicker neck from
+    holds alone before moving to loaded work.
   advantages: []
   limitations:
     - Without a load number or clear progression marker, it's genuinely hard to
@@ -88,7 +91,11 @@
   less_suitable_when:
     - Load or range can't yet be controlled — a lighter load with a slower
       tempo is the better next step, not a heavier one.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as width and thickness across the back and sides of the
+    neck, viewed from behind or the side — this is the region most responsible
+    for the "thick neck" look people are usually picturing when they say a neck
+    looks bigger.
   advantages: []
   limitations:
     - The neck is a small, structurally sensitive area — load has to increase
@@ -147,7 +154,11 @@
     - Range or load can't be controlled, or symptoms appear at any point
       in the range — this is a stop signal, not something to push through
       for more stimulus.
-  mirror_effect: ""
+  mirror_effect: >-
+    Less visually prominent than extension work, since the front-of-neck
+    muscles contribute less to overall neck bulk — the visible effect is more
+    about rounding out the front profile and avoiding a lopsided, extension-
+    only look than adding comparable size.
   advantages: []
   limitations:
     - Usable load is low relative to the effort involved, since the neck
@@ -194,7 +205,11 @@
   less_suitable_when:
     - The basic front-to-back directions aren't yet trained comfortably,
       or symptoms are present — those come first.
-  mirror_effect: ""
+  mirror_effect: >-
+    A minor, symmetry-oriented effect — some added width to the sides of the
+    neck, but not a primary driver of overall neck size the way extension work
+    is; most useful for a complete, even-looking neck rather than visible bulk
+    on its own.
   advantages: []
   limitations:
     - This is a niche addition for most lifters — it targets a comparatively

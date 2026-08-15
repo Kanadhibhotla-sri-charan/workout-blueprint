@@ -34,7 +34,11 @@
     - The routine already has a heavy pressing movement covering
       mechanical tension, and what's missing is a pump-oriented finisher
       or dedicated side- and rear-delt work.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as roundness and mass on the front of the shoulder,
+    contributing to overall shoulder size from the front — though front delts
+    already get heavy indirect work from chest pressing, so this often isn't
+    the missing piece if the front of the shoulder already looks developed.
   advantages: []
   limitations:
     - Shoulder mobility limits are common and can cap how heavy or how deep
@@ -88,7 +92,10 @@
   less_suitable_when:
     - The fixed rail's path doesn't match a user's natural press arc,
       which can shift stress onto the joint rather than the muscle.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same visible direction as the free-weight overhead press — front-delt
+    roundness and mass — since the fixed rail changes stability demand, not
+    which muscle ends up carrying the load.
   advantages: []
   limitations:
     - The fixed rail path doesn't match every lifter's natural press arc, and
@@ -139,7 +146,10 @@
   less_suitable_when:
     - The priority is the heaviest possible loading for a strength-driven
       stimulus, which free weights deliver more of.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same front-delt visible direction as a barbell or machine overhead press,
+    just at a lighter load ceiling — a supplementary contributor to front-
+    shoulder size rather than a primary one.
   advantages: []
   limitations:
     - Absolute load is capped well below what a barbell or heavy dumbbells
@@ -190,7 +200,9 @@
     - The machine path or handle position doesn't match a user's shoulder
       mechanics, which can blunt the tension the delts actually feel
       regardless of how heavy the stack is loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same front-delt visible direction as a free-weight overhead press — mass
+    and roundness on the front of the shoulder.
   advantages: []
   limitations:
     - Machine handle position and pressing angle vary a lot between models, and
@@ -242,7 +254,11 @@
     - Momentum takes over the rep — once the swing is doing the work, the
       growth stimulus on the side delt mostly disappears even though the
       weight is still moving.
-  mirror_effect: ""
+  mirror_effect: >-
+    This is usually the actual answer when someone wants "wider shoulders" —
+    tends to show up as width across the shoulders viewed from the front, since
+    the lateral deltoid is what creates that width independent of waist size,
+    more directly than front- or rear-delt work does.
   advantages: []
   limitations:
     - The load ceiling is low relative to how heavy it can feel — most lifters
@@ -296,7 +312,9 @@
     - The simplest possible setup for side-delt work is preferred, or
       another movement already provides a stretched-position stimulus and
       the top-loaded dumbbell profile is wanted instead.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same shoulder-width visible direction as a dumbbell lateral raise, since
+    it's the same lateral deltoid being trained.
   advantages: []
   limitations:
     - Requires a low cable pulley and enough station space to stand at the
@@ -349,7 +367,9 @@
     - The machine's pivot point or pad position doesn't suit the
       individual, which can blunt the tension actually felt regardless of
       how heavy the stack is loaded.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same shoulder-width visible direction as a dumbbell lateral raise, since
+    it's the same lateral deltoid being trained.
   advantages: []
   limitations:
     - Machine design varies significantly, and a poor pivot-point match for a
@@ -398,7 +418,11 @@
     - The elbows bend enough that the movement turns into a row — the
       stimulus shifts toward a more mechanical-tension, less isolated
       rear-delt effect, which may or may not be what was wanted.
-  mirror_effect: ""
+  mirror_effect: >-
+    Tends to show up as roundness on the back of the shoulder, most visible
+    from behind or the side — this fills out the shoulder's "3D" look rather
+    than adding to front-view width, which is what lateral-delt work does
+    instead.
   advantages: []
   limitations:
     - Usable load is low since the posterior deltoid is a small muscle, and
@@ -465,7 +489,9 @@
     - The machine's pivot point or pad position doesn't suit the
       individual, which can blunt the tension the rear delts actually
       feel.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same rear-delt visible direction as a dumbbell reverse fly — roundness on
+    the back of the shoulder, visible from behind or the side.
   advantages: []
   limitations:
     - Machine pivot-point and pad fit vary a lot between models, and a poor
@@ -516,7 +542,9 @@
   less_suitable_when:
     - The elbows rise above the wrists at the top, which drifts the
       stimulus toward the traps and rhomboids instead of the rear delts.
-  mirror_effect: ""
+  mirror_effect: >-
+    Same rear-delt visible direction as a fly — roundness on the back of the
+    shoulder — with more loadable progression than a fly typically allows.
   advantages: []
   limitations:
     - Keeping the elbows below the wrists throughout the pull takes real
@@ -571,7 +599,10 @@
     - The lower back rounds to hold the bent-over position, or the elbows
       flare up and out instead of staying down and back — both signal the
       stimulus is drifting away from the rear delts.
-  mirror_effect: ""
+  mirror_effect: >-
+    Similar rear-delt visible direction to a fly, plus some contribution to
+    upper-back thickness from the row pattern, so the effect reads as a bit
+    more "connected" to the back than an isolated fly does.
   advantages: []
   limitations:
     - The bent-over seated position places real demand on the lower back to
@@ -622,7 +653,10 @@
     - Load is heavy enough that the rotation is lost — at that point it
       functions more like a rear-delt row and loses the control-work half
       of its value.
-  mirror_effect: ""
+  mirror_effect: >-
+    Contributes some roundness to the back of the shoulder, but as a secondary
+    effect — its main role is joint health and rotation control, so it
+    shouldn't be relied on as the primary way to build visible rear-delt size.
   advantages: []
   limitations:
     - The rotation component that gives this movement its joint-health value is
@@ -674,7 +708,10 @@
     - Loads are heavy enough to lose control of the movement. This is
       general training work — shoulder pain or symptoms need professional
       assessment rather than self-treatment.
-  mirror_effect: ""
+  mirror_effect: >-
+    No meaningful visible effect — the rotator cuff muscles trained here are
+    small and deep, and this movement's role is joint durability, not anything
+    that changes shoulder appearance.
   advantages: []
   limitations:
     - Usable load is very light — the external rotators are small and this is
@@ -724,7 +761,11 @@
     - The extra range at the top is skipped, which turns it back into an
       ordinary push-up and loses the scapular-control value that's the
       whole point of this variation.
-  mirror_effect: ""
+  mirror_effect: >-
+    At the light loading this drill uses, any visible effect is minor — in a
+    lean physique, serratus anterior development shows as diagonal lines along
+    the side of the ribcage near the lat, but this durability drill alone isn't
+    enough volume to be the main driver of that look.
   advantages: []
   limitations:
     - The added protraction range is small and easy to skip without noticing,
