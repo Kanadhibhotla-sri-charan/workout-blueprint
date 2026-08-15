@@ -49,9 +49,9 @@ The user reviewed all four pending items directly. Resolutions below; the underl
 
 **Decision:** Keep `review_status: reviewed` on all 123 records as-is. **The user explicitly approved this** rather than requesting a rollback, given the framing above — logged here specifically so that if this decision is questioned in a design review, the record shows it was a user-approved call, not an unreviewed gap Claude introduced or glossed over. A reproducible promotion checklist is still owed as a future deliverable (Task D's acceptance criteria aren't fully closed by this decision — only the immediate rollback question is).
 
-### 2. `mirror_effect` pass resumes after Phase 1
+### 2. `mirror_effect` pass resumes, immediately after Task B and Task F
 
-Confirmed: the `mirror_effect` pass (populating the empty "practical, non-guaranteed outcome framing" field across all 123 records) is next, immediately after Phase 1 (Task B + Task F, this same day — see [Phase 1](PHASE-1-reconciliation-and-taxonomy.md)). Logging the sequencing decision here per the user's request.
+Confirmed: the `mirror_effect` pass (populating the empty "practical, non-guaranteed outcome framing" field across all 123 records) is next, right after Task B and Task F are done. In execution, this ran as one continuous phase rather than two — see [Phase 1](PHASE-1-reconciliation-and-taxonomy.md), which now covers Task B, Task F, and `mirror_effect` together, since they were requested and delivered as a single unit of work rather than separate ones.
 
 ### 3. Phase 1 scope: Task B, then Task F
 
