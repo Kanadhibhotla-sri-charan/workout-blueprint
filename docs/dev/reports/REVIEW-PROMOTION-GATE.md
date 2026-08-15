@@ -38,17 +38,11 @@ Every automatable item was actually run against all 123 records, not asserted fr
 
 **Two items did not pass universally:**
 
-### 1. "Advantages are meaningful" — 123/123 fail
+### 1. "Advantages are meaningful" — 123/123 fail, resolved by architect decision
 
-`advantages` is `[]` on every single record. This isn't a partial gap, it's total: the field has never been populated in any content pass this project has run (the `limitations`, `evidence_notes`, and `mirror_effect` passes each got dedicated sessions; `advantages` never did). Per [ADR 0002](../../adr/0002-empty-field-semantics.md), an empty (not `null`) optional field means "not yet established," not "not applicable" — so this can't be waved through as 123 deliberate N/A calls. It's a real, honestly-labeled content gap.
+`advantages` is `[]` on every single record. This isn't a partial gap, it's total: the field has never been populated in any content pass this project has run (the `limitations`, `evidence_notes`, and `mirror_effect` passes each got dedicated sessions; `advantages` never did). Per [ADR 0002](../../adr/0002-empty-field-semantics.md), an empty (not `null`) optional field means "not yet established," not "not applicable" — so this couldn't be waved through as 123 deliberate N/A calls without a real decision behind it.
 
-**This is not resolved in this phase.** Options, for the architect's or user's call:
-
-- **(a)** Treat this as a known, logged exception — keep `review_status: reviewed` on records that pass every other item, with this specific gap tracked openly (in the QA report, Task H, going forward) rather than blocking on it.
-- **(b)** Schedule a dedicated `advantages` content pass (the same shape of work as the `limitations` pass) before treating any record as fully gate-compliant.
-- **(c)** Formally mark `advantages: null` across the board as "not applicable to how this project currently scopes exercise records" — this would be a real, if slightly convenient, position: several exercises' genuine advantages already show up implicitly elsewhere (a machine variant's stability benefit is already in its `resistance_profile`/`limitations` framing, for instance), so a dedicated `advantages` field may be redundant with content that already exists elsewhere in each record. Worth deciding deliberately rather than defaulting into it.
-
-No option was chosen unilaterally here, consistent with how the equivalent question was handled in Phase 0 — this needs the same kind of explicit sign-off, not a silent pick.
+**Resolved:** per the architect's [Phase 2 Open Decisions](../../architecture/PHASE-2-OPEN-DECISIONS.md) memo — do not bulk-populate `advantages`; the information it would hold is already distributed across `why_this_exists`, `best_used_when`, `limitations`, `resistance_profile`, `stability_demand`, `skill_demand`, `mirror_effect`, `complements`, and `overlaps_with`. The field stays in the schema as a **candidate for eventual retirement** (removal requires its own schema-removal ADR, not an informal deletion), and **its emptiness does not block `reviewed` status** — this is now the Review Promotion Gate's permanent behavior for this item, not a temporary exception. `validate-data` already implements this (it never enforced this item — see `scripts/lib/validate.js`).
 
 ### 2. "Evidence notes exist where material claims require support" — 4/123 flagged, all verified false positives
 
@@ -56,4 +50,4 @@ The automated heuristic (matching claim-language like "biased") flagged `back-ex
 
 ## Conclusion
 
-21 of 22 records-wide checks pass cleanly with zero exceptions. One check (`advantages`) fails universally and needs a scoping decision before it can be called resolved either way. Until that decision is made, this project's honest position is: **`review_status: reviewed` remains in place** (per the Phase 0 precedent — a logged, deliberate call, not an oversight), **with the `advantages` gap tracked openly** rather than either fabricated shut or used to force a mass downgrade nobody asked for.
+21 of 22 records-wide checks pass cleanly with zero exceptions. The 22nd (`advantages`) is now resolved by architect decision, not left open: `review_status: reviewed` stays in place on all 123 records, the gate item is satisfied by design (an intentionally-unpopulated, retirement-candidate field never blocks it), and this is documented rather than silently accepted. See the "Advantages are meaningful" section above and [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../../architecture/PHASE-2-OPEN-DECISIONS.md) for the full decision.

@@ -162,8 +162,10 @@ function validate(records) {
       if (typeof record.mirror_effect !== 'string' || record.mirror_effect.trim() === '') {
         report(record, 'governance', `reviewed record fails Review Promotion Gate: "mirror_effect" must be present`);
       }
-      // "Advantages are meaningful" is a known, universal, logged exception —
-      // see docs/dev/reports/REVIEW-PROMOTION-GATE.md. Not enforced here.
+      // "Advantages are meaningful" is permanently not enforced, per the
+      // architect's Phase 2 Open Decisions memo (docs/architecture/
+      // PHASE-2-OPEN-DECISIONS.md): the field is a retirement candidate,
+      // not a content gap, and its emptiness must never block `reviewed`.
     }
   }
 

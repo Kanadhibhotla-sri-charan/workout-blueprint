@@ -16,4 +16,4 @@ Phases are numbered in the order they were actually worked, not necessarily in t
 |---|---|---|
 | [0](PHASE-0-plan-adoption.md) | Remediation plan adopted; current-state audit against Tasks A–J; four pending decisions raised and resolved | Complete |
 | [1](PHASE-1-reconciliation-and-taxonomy.md) | Task B (prose/YAML reconciliation), Task F (movement-pattern taxonomy normalization), and the `mirror_effect` content pass | Complete |
-| [2](PHASE-2-schema-and-data-governance.md) | Schema frozen (`SCHEMA.md`), Review Promotion Gate built and run, ADR 0002 (empty-field semantics), `validate-data`/`data-report` tooling, coverage-category evaluation, CI integration | Complete, 2 pending decisions |
+| [2](PHASE-2-schema-and-data-governance.md) | Schema frozen (`SCHEMA.md`), Review Promotion Gate built and run, ADR 0002 (empty-field semantics), `validate-data`/`data-report` tooling, coverage-category evaluation, CI integration, both pending decisions resolved by the architect's [Open Decisions memo](../architecture/PHASE-2-OPEN-DECISIONS.md) | **Architecturally closed** |

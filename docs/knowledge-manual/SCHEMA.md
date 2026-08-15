@@ -68,6 +68,7 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Modifiers:** free-form, not validated against a closed list — Phase 1 explicitly decided against forcing these into an enum (see [`docs/dev/reports/MOVEMENT-TAXONOMY-CLASSIFICATION.md`](../dev/reports/MOVEMENT-TAXONOMY-CLASSIFICATION.md)).
 - **Decision-making impact:** yes, the first item is; modifiers are supplementary detail
 - **Required for `reviewed`:** yes, first item must be a recognized fundamental pattern
+- **Future architecture consideration, not a Phase 2 change:** the classification report above already surfaced a distinct third case beyond "one pattern" and "pattern + modifier" — some exercises genuinely combine **two independent movement patterns** rather than a pattern and a positional modifier (e.g. `face-pull`: shoulder horizontal abduction *and* external rotation, both genuine movements — contrast with `incline-dumbbell-curl`: elbow flexion *plus* a lengthened-shoulder-position modifier, one movement). Per the architect's [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md) memo, this may eventually justify a richer `primary movement` / `secondary movement(s)` / `modifiers` structure, but it is explicitly deferred — no schema change here, and no records are being modified for this reason alone. Revisit only when application/decision-engine work demonstrates a concrete need.
 
 ### `equipment`
 - **Type:** list of strings
@@ -135,9 +136,10 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 
 ### `advantages`
 - **Type:** list of strings
-- **Required:** no — currently `[]` on every record in the dataset (see Task D below for what this means and doesn't mean).
-- **Decision-making impact:** low currently, since it's unpopulated dataset-wide
-- **Required for `reviewed`:** no, per current practice — see the Task D empty-field-semantics ADR for the governance reasoning
+- **Required:** no — currently `[]` on every record in the dataset.
+- **Status: decided, candidate for eventual retirement.** Per the architect's [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md) memo: the field is **not** being bulk-populated to satisfy the review gate — the information it would hold is already captured, distributed across `why_this_exists`, `best_used_when`, `limitations`, `resistance_profile`, `stability_demand`, `skill_demand`, `mirror_effect`, `complements`, and `overlaps_with`. The field stays in the schema for now so its removal is a controlled, deliberate step rather than a silent one; it will only be deleted through a proper schema-removal ADR, once it's confirmed nothing depends on it.
+- **Decision-making impact:** none currently, and none expected — this field is not planned to carry unique information going forward.
+- **Required for `reviewed`:** no. Its emptiness explicitly must **not** block `reviewed` status — this is a final decision, not a placeholder pending further review.
 
 ### `limitations`
 - **Type:** list of strings
@@ -162,22 +164,34 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Note:** Phase 2's schema audit found and fixed 4 records where this had drifted to a scalar string instead of a list (`preacher-curl`, `standing-calf-raise`, `romanian-deadlift`, `seated-leg-curl`) — exactly the kind of type violation `validate-data` now catches automatically.
 - **Required for `reviewed`:** no
 
+### The three relationship fields, defined precisely
+
+Per the architect's [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md) memo, the three relationship fields have distinct, non-overlapping meanings — this is the authoritative definition going forward, replacing any looser prior framing:
+
+- **`alternative`** = another exercise that can fill approximately the **same programming role** if the current one can't or shouldn't be used (equipment unavailable, joint intolerance, preference).
+- **`complement`** = an exercise that adds a **materially different stimulus or coverage** alongside the current one — not a substitute, a pairing.
+- **`overlaps_with`** = another exercise that already **covers substantially similar ground** to the current one.
+
+Worked example from the architect's memo — Incline Dumbbell Press: *alternative* = Incline Smith Press (same role, different equipment); *complement* = Cable Fly (different stimulus, pairs well); *overlap* = another incline press with substantially similar role.
+
 ### `alternatives`
 - **Type:** list of strings
 - **Required:** no
-- **Current state — flagged, not silently accepted:** `alternatives` is `[]` on **all 123 records**, dataset-wide, with zero exceptions. In practice, every "swap this for X" or "pair this with Y" relationship that got written went into `complements` instead (as prose, not IDs — see below). This isn't necessarily wrong — it may mean `alternatives` and `complements` were redundant as designed and only one ended up used — but it's worth a real decision rather than leaving an entirely-unused schema field unexamined. Not resolved in this phase; flagged for the architect.
-- **Required for `reviewed`:** no, per current (all-empty) practice
+- **Status: decided — keep the field, do not bulk-populate.** `alternatives` is `[]` on all 123 records today. Per the architect's decision, this is **not** being retroactively filled across the dataset — use it selectively going forward, only when a genuine substitution relationship exists (see the definition above), and revisit more systematically during a future relationship/decision-engine phase. If later analysis proves it genuinely redundant with `complements`, it gets retired through an ADR, not deleted informally.
+- **Required for `reviewed`:** no
 
 ### `complements`
 - **Type:** list of strings
 - **Required:** yes, non-empty on nearly every record (a handful of niche records reasonably have none)
 - **Format — this is prose by convention, not IDs:** unlike `overlaps_with`, `complements` entries are almost entirely descriptive phrases ("A leg-curl pattern, since a hinge alone leaves knee flexion untrained"), not exercise-ID references. Only 3 of 236 entries dataset-wide happen to reference another record by ID (`hip-thrust`, `smith-machine-romanian-deadlift`, and one `cable-fly` reference in `chest.yaml`), and in each of those cases the ID still resolves. **`validate-data` treats `complements` as free text and does not require its entries to resolve as IDs** — that would be validating against the field's actual, intentional design, not a bug in it.
+- **Meaning:** a materially *different* stimulus/coverage paired alongside this exercise — not a substitute. See the relationship-field definitions above.
 - **Required for `reviewed`:** yes
 
 ### `overlaps_with`
 - **Type:** list of strings
 - **Required:** no — `[]` is valid and common (a genuinely standalone record with nothing that overlaps it).
 - **Format — this is the actual ID-reference field:** same-file references are bare `id` strings (e.g. `chin-up-supinated`); cross-file references are quoted strings with a parenthetical module note (e.g. `"hammer-curl (arms module)"`), per the convention established and enforced in Phase 1's reconciliation pass. 233 of 233 non-empty entries in the current dataset are ID-like; this is a field where 100% resolvability is enforced by `validate-data`.
+- **Meaning:** substantially similar ground already covered — distinct from `alternatives` (same role, used *instead*) and `complements` (different stimulus, used *alongside*). See the relationship-field definitions above.
 - **Decision-making impact:** yes — this is the field a future "here's what else covers similar ground" or gap-detection feature reads.
 - **Required for `reviewed`:** conditionally — required to resolve cleanly when non-empty; empty is fine.
 
@@ -220,18 +234,25 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 | `best_used_when` | list | yes | — | yes | yes |
 | `less_suitable_when` | list | conditional | — | yes | conditional |
 | `mirror_effect` | string | yes | — | yes | yes |
-| `advantages` | list | no | — | no (unused) | no |
+| `advantages` | list | no | — | no (retirement candidate) | no |
 | `limitations` | list | yes | — | yes | yes |
 | `technique_cues` | list | no | — | no (unused) | no |
 | `common_mistakes` | list | no | — | no (unused) | no |
 | `programming_notes` | list | no | — | some | no |
-| `alternatives` | list | no | — | **flagged, unused** | no |
+| `alternatives` | list | no | — | yes (use selectively, not bulk) | no |
 | `complements` | list | yes | free text by design | yes | yes |
 | `overlaps_with` | list | no | IDs, must resolve | yes | conditional |
 | `evidence_notes` | list | conditional | — | yes | conditional |
 | `review_status` | string | yes | closed (3) | yes (definitional) | N/A |
 
-## Open items from this audit
+## Resolved items (Phase 2 Open Decisions, architect-approved)
 
-- **`alternatives` is entirely unused (0/123 records).** Either retire it (ADR required, since removing a field is a schema change) or start actually using it distinctly from `complements`. Not decided in this phase.
-- **`advantages`, `technique_cues`, `common_mistakes` are entirely unused (0/123 records).** These are not required for `reviewed` under current practice, per Task D's empty-field-semantics decision — see [`docs/adr/0002-empty-field-semantics.md`](../adr/0002-empty-field-semantics.md).
+Both items below were open questions from the Phase 2 completion report; both are now decided per [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../architecture/PHASE-2-OPEN-DECISIONS.md) — see that document and the field entries above for the full reasoning.
+
+- **`advantages`** stays in the schema as a retirement candidate. Not bulk-populated (its content is already distributed across other fields), and its emptiness does not block `reviewed` status. Removal, if it happens, goes through a schema-removal ADR.
+- **`alternatives`** stays in the schema, is now precisely defined (see "The three relationship fields, defined precisely" above), and will be populated selectively — only where a genuine substitution relationship exists — rather than bulk-filled. Revisit more systematically in a future relationship/decision-engine phase.
+
+## Open items still outstanding
+
+- **`technique_cues`, `common_mistakes` are entirely unused (0/123 records).** Not addressed by the Phase 2 Open Decisions memo, which only covered `advantages` and `alternatives`. These remain not required for `reviewed`, per [ADR 0002](../adr/0002-empty-field-semantics.md).
+- **Multiple genuine movement patterns vs. pattern + modifier** (e.g. `face-pull` vs. `incline-dumbbell-curl`) — recorded as a future architecture consideration in the `movement_patterns` entry above, explicitly deferred past Phase 2.

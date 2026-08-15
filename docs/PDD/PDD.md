@@ -263,11 +263,12 @@ Quality is measured by better decisions, not exercise count.
 ## 12. Open Decisions
 
 - ~~YAML, JSON, or TypeScript as the canonical exercise-record format.~~ Resolved: YAML. See [ADR 0001](../adr/0001-canonical-record-format.md).
-- ~~The review threshold before a record can power a recommendation.~~ Resolved in mechanism: the [Review Promotion Gate](../dev/reports/REVIEW-PROMOTION-GATE.md) defines and automates the threshold. One sub-item remains open within it — whether `advantages` must be populated to pass — tracked in that document, not blocking the gate's existence.
+- ~~The review threshold before a record can power a recommendation.~~ Resolved: the [Review Promotion Gate](../dev/reports/REVIEW-PROMOTION-GATE.md) defines and automates the threshold, including the `advantages` question — see [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md).
 - Relationship-strength representation without fake numerical precision.
 - Required evidence fields for introductory versus advanced content.
 - Minimum reviewed starter set for the first public release.
-- Whether `alternatives` is a distinct field from `complements` or should be retired — flagged in [`SCHEMA.md`](../knowledge-manual/SCHEMA.md#alternatives), unused across the entire current dataset.
+- ~~Whether `alternatives` is a distinct field from `complements` or should be retired.~~ Resolved: kept, precisely defined against `complements` and `overlaps_with`, populated selectively rather than bulk-filled. See [`SCHEMA.md`](../knowledge-manual/SCHEMA.md#the-three-relationship-fields-defined-precisely) and [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md).
+- Whether `movement_patterns` should eventually distinguish multiple genuine co-occurring patterns (e.g. face pull) from a pattern-plus-modifier (e.g. incline curl) with a richer structure — deferred, see `SCHEMA.md`'s `movement_patterns` entry.
 
 ---
 

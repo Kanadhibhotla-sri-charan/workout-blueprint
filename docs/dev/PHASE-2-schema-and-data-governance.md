@@ -17,7 +17,7 @@
 [`docs/dev/reports/REVIEW-PROMOTION-GATE.md`](reports/REVIEW-PROMOTION-GATE.md) is the reproducible checklist owed since Phase 0 (when `review_status: reviewed` was kept via a one-time self-audit, not a re-runnable gate). Ran it against all 123 records:
 
 - **21 of 22 applicable checks: 123/123 pass, zero exceptions.**
-- **"Advantages are meaningful": 123/123 fail.** `advantages` has never been populated in any pass this project has run. This is a real, honestly-labeled gap — not resolved in this phase, three options laid out for the architect/user's call (see that document).
+- **"Advantages are meaningful": 123/123 fail.** `advantages` has never been populated in any pass this project has run. This was a real, honestly-labeled gap at the time this phase's audit ran — not resolved in this phase, three options laid out for the architect/user's call. **Resolved after this phase closed**, by the architect's [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md) memo: do not bulk-populate, keep the field as a retirement candidate, its emptiness never blocks `reviewed`. See `REVIEW-PROMOTION-GATE.md` for the updated gate text.
 - **"Evidence notes exist where material claims require support": 4 records flagged, all verified false positives** on manual check (mechanical/equipment-geometry claims like "hack squat is quad-biased," not contested empirical claims needing citation).
 
 ### Task D — ADR 0002: empty-field semantics
@@ -59,10 +59,30 @@ New `package.json` (first executable code in this repo — previously pure docs/
 
 `npm run validate-data`: **PASS, 0 issues, 123/123 records.** `npm run data-report`: regenerates cleanly.
 
-## Pending decisions
+## Pending decisions — resolved, see closure below
+
+At the time this phase's task list was executed, two decisions were left open for the architect's call:
 
 1. **`advantages` scoping** (Task C) — keep as a logged exception, schedule a content pass, or formally mark `null` dataset-wide. See `REVIEW-PROMOTION-GATE.md`.
 2. **`alternatives` vs. `complements`** (Task A/B audit finding) — `alternatives` has never been used; either retire it (ADR required) or start using it distinctly. See `SCHEMA.md`'s "Open items."
+
+Both are now resolved — see "Phase 2 closure" below.
+
+## Phase 2 closure
+
+**Date:** 2026-08-15
+**Trigger:** Architect-supplied [Phase 2 Open Decisions](../architecture/PHASE-2-OPEN-DECISIONS.md) memo, resolving the two pending decisions above.
+
+- **`advantages`** — do not bulk-populate; the field's information is already distributed across `why_this_exists`, `best_used_when`, `limitations`, `resistance_profile`, `stability_demand`, `skill_demand`, `mirror_effect`, `complements`, and `overlaps_with`; kept in the schema as a candidate for eventual retirement via a future schema-removal ADR; its emptiness must never block `reviewed`.
+- **`alternatives`** — kept, not retired; precisely defined against `complements` and `overlaps_with` (alternative = same-role substitute, complement = materially different stimulus paired alongside, overlap = substantially similar ground already covered); populated selectively when a genuine substitution exists, not bulk-filled; revisit in a future relationship/decision-engine phase.
+- **Movement patterns** — the memo also flagged a future-only consideration (distinguishing multi-pattern exercises like face pull from pattern-plus-modifier exercises like incline curl). No Phase 2 schema change; recorded in `SCHEMA.md` and `PDD.md` as a deferred future consideration.
+- **Empty/null semantics** — ADR 0002's `null` = not applicable, `[]` = not yet established convention is confirmed as-is; no sentinel strings.
+
+Docs updated to record these resolutions: `SCHEMA.md` (advantages section rewritten as decided/retirement-candidate; alternatives/complements/overlaps_with replaced with the architect's precise three-field definitions; movement_patterns future-consideration note added; "Open items" restructured into "Resolved items" + "Open items still outstanding"), `REVIEW-PROMOTION-GATE.md` (advantages section and Conclusion rewritten to reflect resolution), `PDD.md` §12 (review-threshold and alternatives items marked resolved; new open item added for movement_patterns' future structure), `scripts/lib/validate.js` (comment updated to cite the memo as the reason `advantages` emptiness is never enforced — no logic change, the validator already behaved this way).
+
+Per the memo's explicit closure checklist: no additional Phase 2 content passes were started, no exercises were added, `advantages`/`alternatives` were not bulk-populated, and no data files were touched — this closure is documentation-only.
+
+**Phase 2 is architecturally closed.** Per the memo: "Await the Phase 3 specification from the architect." No Phase 3 work has started.
 
 ---
 
@@ -79,8 +99,9 @@ Relationships:
 PASS
 
 Review governance:
-PASS (21/22 checklist items; "Advantages are meaningful" is a known,
-      logged, universal exception — see REVIEW-PROMOTION-GATE.md)
+PASS (21/22 checklist items; "Advantages are meaningful" is a
+      permanent, architect-approved non-enforcement — see
+      REVIEW-PROMOTION-GATE.md and PHASE-2-OPEN-DECISIONS.md)
 
 Automated validation:
 PASS (npm run validate-data — 0 issues, 123/123 records; verified
@@ -95,20 +116,17 @@ PASS (.github/workflows/validate-data.yml, runs on push to main and
       on PRs touching data/exercises, scripts, or package files)
 
 Outstanding issues:
-- advantages field: 0/123 populated, scoping decision needed (see
-  pending decisions above)
-- alternatives field: 0/123 populated, ever; retire-or-use decision
-  needed
+- advantages field: 0/123 populated, by design — see
+  PHASE-2-OPEN-DECISIONS.md (retirement candidate, not a content gap)
+- alternatives field: 0/123 populated — by design, use selectively
+  going forward rather than bulk-filled; see
+  PHASE-2-OPEN-DECISIONS.md
 
-Architect decisions requiring review:
-- Whether the "Advantages are meaningful" gate item should block
-  reviewed status dataset-wide, or stay a logged exception
-- Whether alternatives should be retired or distinguished from
-  complements going forward
-- Confirm the ADR 0002 null-vs-empty convention is the intended
-  resolution of Task D, since it was decided by inference from the
-  spec's wording ("prefer a schema-level solution over ad-hoc
-  sentinel strings") rather than an explicit instruction
+Architect decisions requiring review: none outstanding — both items
+above and the ADR 0002 null-vs-empty convention were confirmed by
+the architect's Phase 2 Open Decisions memo
+(docs/architecture/PHASE-2-OPEN-DECISIONS.md). Phase 2 is
+architecturally closed.
 
 Files changed:
 - data/exercises/arms.yaml, calves.yaml, hamstrings.yaml (programming_notes type fix)
@@ -123,4 +141,11 @@ Files changed:
 - .gitignore (new)
 - scripts/validate-data.js, scripts/data-report.js, scripts/lib/*.js (new)
 - .github/workflows/validate-data.yml (new)
+
+Closure pass (see "Phase 2 closure" above):
+- docs/architecture/PHASE-2-OPEN-DECISIONS.md (new)
+- docs/knowledge-manual/SCHEMA.md (updated)
+- docs/dev/reports/REVIEW-PROMOTION-GATE.md (updated)
+- docs/PDD/PDD.md (updated)
+- scripts/lib/validate.js (comment only)
 ```
