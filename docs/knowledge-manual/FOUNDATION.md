@@ -1,5 +1,7 @@
 # Knowledge Foundation
 
+**Schema status:** Frozen as of Phase 2. This document is the quick-reference summary; [`SCHEMA.md`](SCHEMA.md) is the authoritative, field-by-field reference (type, required/optional, controlled vocabulary, decision-making impact, `reviewed`-status requirement) — if the two ever disagree, `SCHEMA.md` wins and this document needs fixing.
+
 ## Canonical Exercise Record
 
 ~~~yaml
@@ -81,3 +83,5 @@ review_status: draft | reviewed | needs-review
 ## Review Gate
 
 Before an entry becomes Reviewed, it must have a complete schema, a clear purpose, realistic limitations, a meaningful alternative or complement where relevant, and evidence notes for material claims.
+
+The full, reproducible checklist this summary refers to is the [Review Promotion Gate](../dev/reports/REVIEW-PROMOTION-GATE.md), run automatically wherever possible by `npm run validate-data` (see `scripts/validate-data.js`). That document also records the one known, open exception across the current dataset (the `advantages` field) rather than letting it pass silently.

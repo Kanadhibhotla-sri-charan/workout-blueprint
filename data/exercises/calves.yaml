@@ -60,10 +60,11 @@
       machine allows.
   technique_cues: []
   common_mistakes: []
-  programming_notes: >-
-    The toe-angle inner/outer head-bias cue now has real hypertrophy
-    evidence behind it — see evidence_notes — though it was only tested
-    with a machine calf raise, not this record's free-standing version.
+  programming_notes:
+    - >-
+      The toe-angle inner/outer head-bias cue now has real hypertrophy
+      evidence behind it — see evidence_notes — though it was only tested
+      with a machine calf raise, not this record's free-standing version.
   alternatives: []
   complements:
     - A bent-knee raise, which covers the soleus.

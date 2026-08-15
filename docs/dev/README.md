@@ -1,6 +1,6 @@
 # Dev Log
 
-Tracks execution of [`docs/architecture/KNOWLEDGE-INTEGRITY-REMEDIATION.md`](../architecture/KNOWLEDGE-INTEGRITY-REMEDIATION.md) phase by phase.
+Tracks execution of the architecture specs in `docs/architecture/` phase by phase: [`KNOWLEDGE-INTEGRITY-REMEDIATION.md`](../architecture/KNOWLEDGE-INTEGRITY-REMEDIATION.md) (Phases 0–1) and [`PHASE-2-SCHEMA-AND-DATA-GOVERNANCE.md`](../architecture/PHASE-2-SCHEMA-AND-DATA-GOVERNANCE.md) (Phase 2 onward).
 
 Each phase file records, for that phase only:
 
@@ -16,3 +16,4 @@ Phases are numbered in the order they were actually worked, not necessarily in t
 |---|---|---|
 | [0](PHASE-0-plan-adoption.md) | Remediation plan adopted; current-state audit against Tasks A–J; four pending decisions raised and resolved | Complete |
 | [1](PHASE-1-reconciliation-and-taxonomy.md) | Task B (prose/YAML reconciliation), Task F (movement-pattern taxonomy normalization), and the `mirror_effect` content pass | Complete |
+| [2](PHASE-2-schema-and-data-governance.md) | Schema frozen (`SCHEMA.md`), Review Promotion Gate built and run, ADR 0002 (empty-field semantics), `validate-data`/`data-report` tooling, coverage-category evaluation, CI integration | Complete, 2 pending decisions |

@@ -1,0 +1,13 @@
+{
+  "name": "physique-blueprint",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Data validation and QA tooling for the Physique Blueprint canonical exercise dataset.",
+  "scripts": {
+    "validate-data": "node scripts/validate-data.js",
+    "data-report": "node scripts/data-report.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

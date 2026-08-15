@@ -1,0 +1,32 @@
+name: Validate exercise data
+
+# Blocks invalid canonical data from entering main, per Task L of
+# docs/architecture/PHASE-2-SCHEMA-AND-DATA-GOVERNANCE.md — "Do not
+# allow invalid canonical data to silently enter the main branch."
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/exercises/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+  pull_request:
+    paths:
+      - 'data/exercises/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run validate-data

@@ -240,12 +240,13 @@
       setup the way a standing curl is.
   technique_cues: []
   common_mistakes: []
-  programming_notes: >-
-    EMG shows preacher curls produce a short, bottom-loaded activation
-    window (high activation early in the concentric phase, dropping off
-    as the elbow flexes) compared to the sustained activation of an
-    incline curl through the whole range — consistent with, though not
-    conclusive proof of, a short-head bias.
+  programming_notes:
+    - >-
+      EMG shows preacher curls produce a short, bottom-loaded activation
+      window (high activation early in the concentric phase, dropping off
+      as the elbow flexes) compared to the sustained activation of an
+      incline curl through the whole range — consistent with, though not
+      conclusive proof of, a short-head bias.
   alternatives: []
   complements:
     - A lengthened-position curl such as an incline curl.

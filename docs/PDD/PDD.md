@@ -217,6 +217,9 @@ Exercise card order:
 - Record uncertainty and disagreement honestly.
 - Material architecture or schema decisions require an ADR.
 - Release changes use semantic versioning: patch for clarification, minor for compatible expansion, major for breaking philosophy or schema changes.
+- **The full field-by-field schema, including which fields are required, controlled-vocabulary, and required for `reviewed` status, is documented in [`SCHEMA.md`](../knowledge-manual/SCHEMA.md)** — this document's §6 record block is the quick-reference summary, `SCHEMA.md` is authoritative for field semantics.
+- Promotion to `reviewed` follows the reproducible [Review Promotion Gate](../dev/reports/REVIEW-PROMOTION-GATE.md), not an ad hoc judgment call.
+- `npm run validate-data` enforces schema, taxonomy, relationship, and review-governance rules automatically and runs in CI on every change to `data/exercises/`; `npm run data-report` regenerates a point-in-time [Knowledge QA report](../dev/KNOWLEDGE-QA.md). See [ADR 0002](../adr/0002-empty-field-semantics.md) for how optional fields distinguish "not applicable" from "not yet established."
 
 ## 10. Roadmap
 
@@ -260,10 +263,11 @@ Quality is measured by better decisions, not exercise count.
 ## 12. Open Decisions
 
 - ~~YAML, JSON, or TypeScript as the canonical exercise-record format.~~ Resolved: YAML. See [ADR 0001](../adr/0001-canonical-record-format.md).
-- The review threshold before a record can power a recommendation.
+- ~~The review threshold before a record can power a recommendation.~~ Resolved in mechanism: the [Review Promotion Gate](../dev/reports/REVIEW-PROMOTION-GATE.md) defines and automates the threshold. One sub-item remains open within it — whether `advantages` must be populated to pass — tracked in that document, not blocking the gate's existence.
 - Relationship-strength representation without fake numerical precision.
 - Required evidence fields for introductory versus advanced content.
 - Minimum reviewed starter set for the first public release.
+- Whether `alternatives` is a distinct field from `complements` or should be retired — flagged in [`SCHEMA.md`](../knowledge-manual/SCHEMA.md#alternatives), unused across the entire current dataset.
 
 ---
 

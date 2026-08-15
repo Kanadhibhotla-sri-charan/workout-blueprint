@@ -68,13 +68,14 @@
       with good technique.
   technique_cues: []
   common_mistakes: []
-  programming_notes: >-
-    Unlike the 45-degree back extension or Bulgarian split squat, an RDL
-    doesn't have a clean discrete technique switch that biases glutes vs.
-    hamstrings — the moderate knee bend trains both together by design
-    throughout the whole movement. For a more hamstring-isolated
-    stimulus, see stiff-leg-deadlift below. For a more glute-isolated,
-    shortened-position stimulus, see hip-thrust in the hips module.
+  programming_notes:
+    - >-
+      Unlike the 45-degree back extension or Bulgarian split squat, an RDL
+      doesn't have a clean discrete technique switch that biases glutes vs.
+      hamstrings — the moderate knee bend trains both together by design
+      throughout the whole movement. For a more hamstring-isolated
+      stimulus, see stiff-leg-deadlift below. For a more glute-isolated,
+      shortened-position stimulus, see hip-thrust in the hips module.
   alternatives: []
   complements:
     - A leg-curl pattern, since a hinge alone leaves knee flexion
@@ -210,12 +211,13 @@
       meaningfully fatigued.
   technique_cues: []
   common_mistakes: []
-  programming_notes: >-
-    This hip-flexed knee-flexion position is close to what a 2024 direct
-    trial (see evidence_notes) found to be a particularly effective
-    lengthened-position stimulus for the hamstrings — more effective, by
-    that trial's numbers, than the Nordic hamstring curl. See
-    nordic-hamstring-curl below for the comparison.
+  programming_notes:
+    - >-
+      This hip-flexed knee-flexion position is close to what a 2024 direct
+      trial (see evidence_notes) found to be a particularly effective
+      lengthened-position stimulus for the hamstrings — more effective, by
+      that trial's numbers, than the Nordic hamstring curl. See
+      nordic-hamstring-curl below for the comparison.
   alternatives: []
   complements:
     - A hinge pattern.
