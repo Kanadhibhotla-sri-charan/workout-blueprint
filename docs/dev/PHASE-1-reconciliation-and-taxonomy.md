@@ -39,3 +39,16 @@ None new from this phase. Task E's ADR (empty-field convention) remains open fro
 ## Next
 
 `mirror_effect` content pass resumes (paused at end of Phase 0), per the user's decision logged in [Phase 0](PHASE-0-plan-adoption.md#decisions-resolved-2026-08-15-same-day).
+
+### What `mirror_effect` is and why it's being populated now
+
+`mirror_effect` is not a new field — it has been part of the canonical schema since `FOUNDATION.md` was written (defined there as *"practical, non-guaranteed outcome framing"*), but it has sat empty (`""`) on all 123 records through every prior pass, including the `limitations` pass and the review-status promotion in the previous session. This work fills it in for the first time.
+
+**What problem it addresses.** Every other populated field in this dataset answers a mechanism-level question — which muscle, which head, which position, which resistance curve. Nobody training actually queries at that level. The user's own framing: a real query looks like *"my arms look thin from the front"* or *"my lats are narrow despite volume,"* not *"give me a stretch-mediated hamstring exercise."* `mirror_effect` is the field that answers the visible-outcome question directly on each record, so that a future symptom-driven lookup (aesthetic complaint → likely cause → exercise) has something concrete to match against, instead of requiring that translation to happen ad hoc every time.
+
+**How it's derived, and the evidence-honesty line being drawn.** Each record's `mirror_effect` is written from what the record *already* documents — its `resistance_profile` (where in the range it's hardest), `primary_targets` (which region/head is emphasized), and `movement_patterns` (now cleanly split per Task F, which makes this derivation easier than it would have been before this phase). This is a translation of existing, already-cited mechanics into plain "what you'd see in the mirror" language — not new research. Two evidence tiers apply, matching how `limitations` was already handled:
+
+- Where the underlying region/head bias already carries a real citation in `evidence_notes` (e.g. the chest upper/mid/lower split, the biceps long/short-head split), the `mirror_effect` description can lean on that citation's confidence level.
+- Where no such citation exists — which is most exercises — `mirror_effect` is written as reasoned, mechanics-grounded description, explicitly not dressed up as evidence-backed. This is exactly what "non-guaranteed outcome framing" in the original schema definition already asks for; this pass is honoring that phrase, not overriding it.
+
+**Scope guardrail.** This is additional detail on the 123 existing records, not new exercises, so it stays inside Task J's "no expansion" boundary. It is being done in parallel with remediation rather than strictly after it (per the sequencing decision in Phase 0), because it touches no schema and adds no records — the two conditions the user and Claude agreed made it safe to interleave.
