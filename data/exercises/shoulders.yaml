@@ -497,7 +497,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids]
   secondary_targets: [mid-back]
-  movement_patterns: [shoulder horizontal abduction combined with elbow flexion]
+  movement_patterns: [shoulder horizontal abduction, elbow flexion]
   equipment: [cable]
   exercise_type: isolation
   laterality: bilateral
@@ -535,7 +535,7 @@
   overlaps_with:
     - rear-delt-fly
     - face-pull
-    - seated-cable-row
+    - "seated-cable-row (back module)"
     - rear-delt-row
   evidence_notes: []
   review_status: reviewed
@@ -553,7 +553,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids]
   secondary_targets: [mid-back]
-  movement_patterns: [shoulder extension and horizontal abduction with slight external rotation at the top]
+  movement_patterns: [shoulder extension, horizontal abduction, external rotation at the top]
   equipment: [dumbbell, bench]
   exercise_type: isolation
   laterality: bilateral
@@ -603,7 +603,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids, mid/lower trapezius]
   secondary_targets: [external rotators]
-  movement_patterns: [shoulder horizontal abduction with external rotation]
+  movement_patterns: [shoulder horizontal abduction, external rotation]
   equipment: [cable, band]
   exercise_type: isolation
   laterality: bilateral

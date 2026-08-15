@@ -38,3 +38,27 @@ No exercise data, schema, or prose was changed in this phase. This phase is docu
 2. **Sequencing vs. the paused `mirror_effect` work.** The plan's required order puts A → B → C → D → reconciliation before new content work. Do you want that order followed strictly (finish the remediation tasks first, resume `mirror_effect` after), or is `mirror_effect` low-risk enough (no new exercises, no schema change) to interleave alongside remediation?
 3. **Where to start.** The plan's sequence starts at Task A, which is already satisfied — so the real starting point is Task B (write the reconciliation report) or Task F (movement-taxonomy normalization, since it's now confirmed and quantified). Which should Phase 1 tackle, or should it cover both since they don't conflict?
 4. **Task E's schema convention.** The plan asks for one consistent convention distinguishing "not applicable" from "not yet researched," proposed through an ADR before implementation. No proposal has been drafted yet — flagging that this ADR is a prerequisite for a clean Task E fix, not something to improvise field-by-field.
+
+## Decisions resolved (2026-08-15, same day)
+
+The user reviewed all four pending items directly. Resolutions below; the underlying reasoning for #1 and #4 is included because the user's question surfaced that both needed a clearer explanation than the original phrasing gave.
+
+### 1. Review-status: kept as `reviewed`, with explicit user approval on record
+
+**This was not a "lack of research on the exercises" problem — worth being precise about that distinction, since it's not what Task D actually flags.** The evidence notes and limitations written into all 123 records are real, individually researched content (citations, caveats, honest hedging where evidence was weak or absent) — nothing was invented to pass a gate. What Task D actually objects to is *process*: the promotion to `reviewed` was a one-time self-audit against `FOUNDATION.md`'s gate, not a fixed, written, reproducible checklist that a third party — an architect reviewing this later, or a different engineer — could independently re-run against any record and get the same answer. "Reproducible" is the operative word in Task D's acceptance criteria; it's a governance-process gap, not a content gap.
+
+**Decision:** Keep `review_status: reviewed` on all 123 records as-is. **The user explicitly approved this** rather than requesting a rollback, given the framing above — logged here specifically so that if this decision is questioned in a design review, the record shows it was a user-approved call, not an unreviewed gap Claude introduced or glossed over. A reproducible promotion checklist is still owed as a future deliverable (Task D's acceptance criteria aren't fully closed by this decision — only the immediate rollback question is).
+
+### 2. `mirror_effect` pass resumes after Phase 1
+
+Confirmed: the `mirror_effect` pass (populating the empty "practical, non-guaranteed outcome framing" field across all 123 records) is next, immediately after Phase 1 (Task B + Task F, this same day — see [Phase 1](PHASE-1-reconciliation-and-taxonomy.md)). Logging the sequencing decision here per the user's request.
+
+### 3. Phase 1 scope: Task B, then Task F
+
+Confirmed and executed — see [Phase 1](PHASE-1-reconciliation-and-taxonomy.md) for the reconciliation report and taxonomy classification/normalization produced.
+
+### 4. Task E, explained
+
+Plain-language version of what Task E is actually asking: several fields on every record — `advantages`, `technique_cues`, `common_mistakes`, `alternatives`, `programming_notes`, `mirror_effect` — are currently empty (`[]` or `""`) on most records. Right now there's no way to tell, just by looking at an empty field, whether that's because (a) this specific exercise genuinely has nothing distinct to say there, or (b) nobody has researched or written it yet. Both look identical. Task E wants those two cases distinguishable, so that a record can't quietly claim `reviewed` status while actually just being unresearched in a field that looks intentionally empty.
+
+**Decision-in-principle:** the user picked a sentinel-style convention (a literal marker for "not applicable," true emptiness still means "not yet done"). Worth flagging honestly: the plan's own Task E text says to *"prefer a schema-level solution over ad-hoc sentinel strings,"* which reads as a mild caution against exactly the sentinel-string approach. The likely reconciliation — a **single, formally-specified** sentinel (e.g. always exactly `"not applicable"`, documented in `FOUNDATION.md`, checked by the future validator) — probably satisfies the plan's actual concern, since "ad-hoc" is doing the work in that sentence, not "sentinel" itself; an alternative reading would use YAML's native `null` vs. empty-list/string distinction instead of a string sentinel, which is closer to what "schema-level" likely means. **Not resolved yet** — this needs its own short ADR before implementation, per the plan's explicit requirement, and that ADR is deferred to whenever Task E itself is scheduled, not drafted in this phase.

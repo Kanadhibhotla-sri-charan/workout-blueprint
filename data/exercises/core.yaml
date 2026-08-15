@@ -115,7 +115,7 @@
   body_regions: [core]
   primary_targets: [hip flexors, rectus abdominis]
   secondary_targets: [obliques, grip]
-  movement_patterns: [hip flexion with trunk flexion]
+  movement_patterns: [hip flexion, trunk flexion]
   equipment: [pull-up bar]
   exercise_type: compound
   laterality: bilateral

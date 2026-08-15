@@ -22,7 +22,7 @@
   body_regions: [hips]
   primary_targets: [gluteus maximus]
   secondary_targets: [hamstrings, quads]
-  movement_patterns: [hip extension in a shortened context]
+  movement_patterns: [hip extension, shortened range (hip fully extended)]
   equipment: [barbell, bench, hip-thrust machine, smith machine]
   exercise_type: compound
   laterality: bilateral

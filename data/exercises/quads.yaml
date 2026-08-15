@@ -801,7 +801,7 @@
   body_regions: [quads]
   primary_targets: [quads (emphasis on the rectus femoris)]
   secondary_targets: []
-  movement_patterns: [knee extension with the hip extended]
+  movement_patterns: [knee extension, hip extended]
   equipment: [bodyweight]
   exercise_type: isolation
   laterality: bilateral

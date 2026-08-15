@@ -183,10 +183,10 @@ The back module is organized around pulling directions and support roles, not a 
 - **Best used when:** A user wants a stretch-mediated, lat-isolated stimulus that doesn't depend on grip or biceps endurance, often used as a pre-exhaust warm-up or a finisher after heavier pulling. No study specific to this exercise was found; the claim draws on the general stretch-mediated hypertrophy literature (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — see the canonical YAML record's evidence_notes for citations.
 - **Less suitable when:** A user's back growth is currently limited by total heavy-pulling volume rather than needing more lat isolation — a compound pull delivers more overall stimulus per set.
 - **Complements:** A vertical or horizontal pull.
-- **Overlaps:** Dumbbell pullover; distinguish by resistance profile.
+- **Overlaps:** Dumbbell pullover (lat-biased); distinguish by resistance profile.
 - **Status:** Draft.
 
-### Dumbbell Pullover
+### Dumbbell Pullover (Lat-Biased)
 
 - **Why this exists:** A free-weight lat-focused option with the elbow mostly fixed; the load is hardest overhead and eases as the weight comes back over the chest, the opposite feel from a cable pulldown.
 - **Primary targets:** Lats; chest and triceps contribute.

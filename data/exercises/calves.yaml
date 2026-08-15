@@ -19,7 +19,7 @@
   body_regions: [calves]
   primary_targets: [gastrocnemius (inner/medial and outer/lateral heads)]
   secondary_targets: [soleus]
-  movement_patterns: [ankle plantarflexion with the knee straight]
+  movement_patterns: [ankle plantarflexion, knee straight]
   equipment: [machine, smith machine, dumbbell, block or plate]
   exercise_type: isolation
   laterality: bilateral
@@ -98,7 +98,7 @@
   body_regions: [calves]
   primary_targets: [soleus]
   secondary_targets: [gastrocnemius (less than a straight-knee raise)]
-  movement_patterns: [ankle plantarflexion with the knee bent]
+  movement_patterns: [ankle plantarflexion, knee bent]
   equipment: [machine]
   exercise_type: isolation
   laterality: bilateral

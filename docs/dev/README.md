@@ -14,4 +14,5 @@ Phases are numbered in the order they were actually worked, not necessarily in t
 
 | Phase | Summary | Status |
 |---|---|---|
-| [0](PHASE-0-plan-adoption.md) | Remediation plan adopted; current-state audit against Tasks A–J | Complete |
+| [0](PHASE-0-plan-adoption.md) | Remediation plan adopted; current-state audit against Tasks A–J; four pending decisions raised and resolved | Complete |
+| [1](PHASE-1-reconciliation-and-taxonomy.md) | Task B (prose/YAML reconciliation) and Task F (movement-pattern taxonomy normalization) | Complete |

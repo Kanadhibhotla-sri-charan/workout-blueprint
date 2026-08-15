@@ -125,7 +125,7 @@
   body_regions: [arms]
   primary_targets: [biceps (long-head-biased, EMG-supported)]
   secondary_targets: []
-  movement_patterns: [elbow flexion in a lengthened shoulder position]
+  movement_patterns: [elbow flexion, lengthened shoulder position]
   equipment: [dumbbell, incline bench]
   exercise_type: isolation
   laterality: bilateral
@@ -199,7 +199,7 @@
   body_regions: [arms]
   primary_targets: [biceps (short-head-biased, EMG-supported)]
   secondary_targets: [brachialis]
-  movement_patterns: [elbow flexion in a shortened shoulder position]
+  movement_patterns: [elbow flexion, shortened shoulder position]
   equipment: [barbell, ez-bar, dumbbell, preacher bench]
   exercise_type: isolation
   laterality: bilateral
@@ -260,7 +260,7 @@
   body_regions: [arms]
   primary_targets: [biceps (short-head-biased, EMG-supported)]
   secondary_targets: [brachialis]
-  movement_patterns: [elbow flexion in a shortened shoulder position]
+  movement_patterns: [elbow flexion, shortened shoulder position]
   equipment: [machine]
   exercise_type: isolation
   laterality: bilateral
@@ -313,7 +313,7 @@
   body_regions: [arms]
   primary_targets: [brachialis, brachioradialis]
   secondary_targets: [biceps]
-  movement_patterns: [elbow flexion with a neutral grip]
+  movement_patterns: [elbow flexion, neutral grip]
   equipment: [dumbbell]
   exercise_type: isolation
   laterality: bilateral
@@ -365,7 +365,7 @@
   body_regions: [arms]
   primary_targets: [brachialis, brachioradialis]
   secondary_targets: [biceps]
-  movement_patterns: [elbow flexion with a neutral grip]
+  movement_patterns: [elbow flexion, neutral grip]
   equipment: [cable, rope attachment]
   exercise_type: isolation
   laterality: bilateral
@@ -414,7 +414,7 @@
   body_regions: [arms]
   primary_targets: [brachialis, brachioradialis]
   secondary_targets: [biceps]
-  movement_patterns: [elbow flexion with a neutral grip and a diagonal path]
+  movement_patterns: [elbow flexion, neutral grip, diagonal path]
   equipment: [dumbbell]
   exercise_type: isolation
   laterality: bilateral
@@ -512,7 +512,7 @@
   body_regions: [arms]
   primary_targets: [biceps (head bias contested — see evidence_notes)]
   secondary_targets: []
-  movement_patterns: [elbow flexion with the elbows drawn behind the torso]
+  movement_patterns: [elbow flexion, elbows drawn behind the torso]
   equipment: [barbell, ez-bar]
   exercise_type: isolation
   laterality: bilateral
@@ -572,7 +572,7 @@
   body_regions: [arms]
   primary_targets: [biceps (head bias contested — see evidence_notes)]
   secondary_targets: []
-  movement_patterns: [elbow flexion with the elbows drawn behind the torso]
+  movement_patterns: [elbow flexion, elbows drawn behind the torso]
   equipment: [cable]
   exercise_type: isolation
   laterality: bilateral
@@ -626,7 +626,7 @@
   body_regions: [arms]
   primary_targets: [biceps (concentric half)]
   secondary_targets: [brachioradialis, wrist extensors (eccentric half)]
-  movement_patterns: [elbow flexion with a grip rotation between supinated and pronated]
+  movement_patterns: [elbow flexion, grip rotation from supinated to pronated]
   equipment: [dumbbell]
   exercise_type: isolation
   laterality: bilateral
@@ -744,7 +744,7 @@
   body_regions: [arms]
   primary_targets: [triceps (long-head-biased, strongly supported by hypertrophy research)]
   secondary_targets: []
-  movement_patterns: [elbow extension with the shoulder flexed]
+  movement_patterns: [elbow extension, shoulder flexed (overhead)]
   equipment: [barbell, ez-bar, dumbbell]
   exercise_type: isolation
   laterality: bilateral
@@ -1046,7 +1046,7 @@
   body_regions: [arms]
   primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: []
-  movement_patterns: [elbow extension with the shoulder held in extension]
+  movement_patterns: [elbow extension, shoulder held in extension]
   equipment: [dumbbell, cable]
   exercise_type: isolation
   laterality: unilateral
@@ -1104,7 +1104,7 @@
   body_regions: [arms]
   primary_targets: [triceps (long-head-biased, strongly supported by hypertrophy research)]
   secondary_targets: []
-  movement_patterns: [elbow extension with the shoulder flexed, torso leaning forward away from the stack]
+  movement_patterns: [elbow extension, shoulder flexed (overhead), torso leaning forward away from the stack]
   equipment: [cable]
   exercise_type: isolation
   laterality: bilateral

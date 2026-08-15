@@ -121,7 +121,7 @@
   body_regions: [forearms]
   primary_targets: [brachioradialis, wrist extensors]
   secondary_targets: [biceps, brachialis]
-  movement_patterns: [elbow flexion with a pronated grip]
+  movement_patterns: [elbow flexion, pronated grip]
   equipment: [barbell, ez-bar, dumbbell]
   exercise_type: isolation
   laterality: bilateral
@@ -155,10 +155,10 @@
   complements:
     - A supinated curl and direct wrist work.
   overlaps_with:
-    - hammer-curl
+    - "hammer-curl (arms module)"
     - reverse-wrist-curl
     - cable-reverse-curl
-    - zottman-curl
+    - "zottman-curl (arms module)"
   evidence_notes: []
   review_status: reviewed
 
@@ -174,7 +174,7 @@
   body_regions: [forearms]
   primary_targets: [brachioradialis, wrist extensors]
   secondary_targets: [biceps, brachialis]
-  movement_patterns: [elbow flexion with a pronated grip]
+  movement_patterns: [elbow flexion, pronated grip]
   equipment: [cable]
   exercise_type: isolation
   laterality: bilateral
@@ -311,7 +311,7 @@
   complements:
     - Wrist curls, reverse wrist curls, and grip work.
   overlaps_with:
-    - hammer-curl
+    - "hammer-curl (arms module)"
     - reverse-curl
   evidence_notes: []
   review_status: reviewed

@@ -168,7 +168,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings]
   secondary_targets: []
-  movement_patterns: [knee flexion with the hip flexed]
+  movement_patterns: [knee flexion, hip flexed]
   equipment: [machine]
   exercise_type: isolation
   laterality: bilateral
@@ -244,7 +244,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings]
   secondary_targets: [calves]
-  movement_patterns: [knee flexion with the hip extended]
+  movement_patterns: [knee flexion, hip extended]
   equipment: [machine]
   exercise_type: isolation
   laterality: bilateral
