@@ -72,4 +72,32 @@ None from this checkpoint.
 
 ## 3C — Knowledge Explorer
 
+**Date:** 2026-08-16
+
+### What changed
+
+- **Home page** (`src/pages/HomePage.tsx`): title, one-line product tagline, two primary actions ("Explore Exercises" → `/exercises`, "Make a Decision" → `/decide`), and a body-region grid (all 11 regions, humanized labels, each showing its exercise count, linking to `/exercises?region=<region>`) — matches spec §8's recommended layout. Kept deliberately uncrowded: no analytics, no secondary content.
+- **Exercise List page** (`src/pages/ExerciseListPage.tsx`): reads `region` from the URL query string (`useSearchParams`) rather than local component state, so a region view is a real shareable/bookmarkable/back-button-able URL, not just in-memory UI state — this also sets up 3E's search/filter params to compose the same way without a rewrite. Shows "All Exercises" (123) with no param, a region-filtered view with an "All regions" clear link when a valid region is present, and a graceful fallback (shows all exercises + an explanatory message, doesn't crash or blank-page) for an unrecognized region value.
+- **`ExerciseCard`** (`src/components/ExerciseCard.tsx`): the list-card content spec §9 recommends — name, primary targets, exercise type, up to two coverage-category tags, and a truncated `mirror_effect` preview — linking to the (still-placeholder) detail route. Everything rendered is a direct field value; nothing is invented or reworded, per §4's "renderer, not a second knowledge base" rule. `utils/format.ts` adds two purely presentational helpers (`humanize` for kebab-case→readable-label, `truncate` for the mirror-effect preview) — reformatting, not content generation.
+- `src/index.css` — real styles for all of the above (buttons, region grid, exercise grid/cards, tag chips), mobile-first (single-column exercise grid below 560px, two-column region grid below 480px), built on the touch-target/token foundation from 3A.
+
+### Verified
+
+- `npx tsc -b` and `npm run build` both clean.
+- **Visually verified in a real browser** at a 390×844 mobile viewport (Playwright screenshots, not just build success): Home page renders all 11 regions with correct counts; `/exercises?region=chest` shows 19 correctly filtered cards with working tags/mirror-effect previews; `/exercises` with no param shows all 123; `/exercises?region=bogus` falls back to all exercises with a visible explanatory message instead of crashing or blanking — confirms the §23 error-handling requirement for unrecognized input, not just the happy path.
+- `npm run build`'s output is one JS chunk over Vite's 500kB advisory warning (the bundled 123-record dataset is the bulk of it) — not an error, and §21 explicitly says a client-side MVP is fine at this dataset size; noted here rather than silently ignored, revisit only if it becomes a real problem (e.g. via code-splitting the generated JSON) — no action taken now, consistent with the spec's "don't prematurely build sophisticated infrastructure" instruction.
+
+### Decisions made
+
+- **Filter/search state lives in the URL (`useSearchParams`), not component state** — the region filter today, search and the composable filters from §12 next in 3E, all as query params on the same `/exercises` route. Chosen now, at the first page that needs it, rather than retrofitted in 3E, since switching state ownership after building UI against it would mean redoing the page.
+- **"Search" is not yet on the Home page's primary actions**, though §8 recommends three (Explore, Decide, Search). A search entry that doesn't search anything yet would be a dead control, so it's added in 3E alongside the actual search implementation rather than stubbed now — a sequencing choice, not a scope cut; §8's three actions will all be present once 3E lands.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3D — Exercise Detail page
+
 *Not yet started.*
