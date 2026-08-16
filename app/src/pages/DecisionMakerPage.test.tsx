@@ -117,4 +117,71 @@ describe('DecisionMakerPage', () => {
     // reasoning from).
     expect(screen.getByText(/alongside Incline Dumbbell Press/i)).toBeInTheDocument();
   });
+
+  // The revised Phase 4 spec's primary acceptance test (§36): the aesthetic
+  // outcome selector — not the direct target dropdown — must resolve
+  // "Chest looks flat from the side" all the way through to the same
+  // already-validated Upper Pec engine chain (Incline Dumbbell Press ->
+  // Cable Fly, full programming). This is the actual required golden slice;
+  // the test above exercises the same chain via the direct target picker,
+  // which the aesthetic layer sits on top of without disturbing.
+  it('golden slice: the aesthetic-outcome entry point ("Chest looks flat from the side") resolves through Upper Pec', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area \(by appearance\)/i), 'chest');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'chest-side-projection'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'complement-current'
+    );
+    await user.selectOptions(screen.getByLabelText(/current exercise/i), 'incline-dumbbell-press');
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    // The aesthetic-outcome block itself: what the user said they wanted to
+    // change, shown ahead of the technical target.
+    await screen.findByRole('heading', { name: /what you're trying to change/i });
+    const outcomeName = document.querySelector('.decision-result-outcome .decision-result-name');
+    expect(outcomeName?.textContent).toBe('Chest looks flat from the side');
+    expect(screen.getByText(/lacks depth or projection/i)).toBeInTheDocument();
+
+    // It resolved to the same Upper Pec target the direct-picker golden
+    // test validates, not a fabricated or generic chest pick.
+    const targetName = document.querySelector('.decision-result-target .decision-result-name');
+    expect(targetName?.textContent).toBe('Upper Pec');
+    expect(screen.getByText(/upper chest shelf/i)).toBeInTheDocument();
+
+    // Same complement-selection and programming guarantees as the direct
+    // golden test.
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink).toBeDefined();
+    expect(bestFitLink?.textContent).not.toBe('Incline Dumbbell Press');
+    expect(screen.getByText('Reps')).toBeInTheDocument();
+    expect(screen.getByText('RIR')).toBeInTheDocument();
+    expect(screen.getByText(/alongside Incline Dumbbell Press/i)).toBeInTheDocument();
+  });
+
+  it('editing question 1 directly after using the appearance selector clears the stale "what you\'re trying to change" block', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area \(by appearance\)/i), 'chest');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'chest-side-projection'
+    );
+    // Override question 1 directly, away from the aesthetic pick.
+    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'build-base'
+    );
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    expect(await screen.findByText(/best fit/i)).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /what you're trying to change/i })).not.toBeInTheDocument();
+  });
 });

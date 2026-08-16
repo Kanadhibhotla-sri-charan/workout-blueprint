@@ -123,3 +123,60 @@ None from this checkpoint.
 ### Pending decisions
 
 None from this checkpoint. Taxonomy now covers every target on the architect's approved expansion list.
+
+---
+
+# Revision — Aesthetic Outcome layer
+
+**Trigger:** Architect-supplied [revised Phase 4 spec](../architecture/PHASE-4-REVISED-AESTHETIC-OUTCOME.md), inserting a new first-class Aesthetic Outcome layer above the physique-target layer (Aesthetic Outcome → Physique Target → Anatomy → Stimulus → Exercise → Programming → Progression). Explicit process gate (§35/§43): a full-body taxonomy audit (4A) and architect review of the proposed taxonomy (4B) must happen before any canonical `aesthetic-outcomes.yaml` data is written, and the entire taxonomy must not be implemented before the first vertical slice validates.
+
+**Sequencing directive:** 4A (audit) → 4B (architect review) → **stop, do not write canonical data until approved** → 4C–4G (first golden slice only) → 4H (second golden slice) → 4I (full taxonomy expansion) → 4J–4L.
+
+## 4A/4B — Full-body taxonomy audit + architect review
+
+**Date:** 2026-08-16
+
+Read all 123 exercise records across all 11 `data/exercises/*.yaml` files, focused on the `mirror_effect` field, to derive a candidate aesthetic-outcomes taxonomy grounded in real data rather than the spec's own illustrative examples (the spec explicitly warns against just implementing its examples and calling the taxonomy complete). Findings and proposal written to [`docs/dev/reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md`](reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md): ~24 candidate outcomes across all 11 regions, 9 new physique targets proposed for the 6 previously-untagged regions (calves, forearms, hamstrings, hips/glutes, neck, quads), functional-only exercises explicitly identified and kept out of the aesthetic list, and two outcomes flagged as lower-confidence (quad-sweep-separation: single-exercise support; neck-thickness: the data's own "niche" framing) rather than silently included at full confidence.
+
+**Architect review outcome:** both flagged outcomes approved for inclusion — full ~24-outcome / 9-target taxonomy approved as proposed.
+
+## 4C/4D — Canonical aesthetic-outcomes.yaml + pipeline wiring
+
+**Date:** 2026-08-16
+
+### What changed
+
+- **`data/programming/aesthetic-outcomes.yaml`** (new) — populated with only the two outcomes required for the two golden vertical slices (§36/§37): `chest-side-projection` (→ `upper-pec`, `lower-pec`) and `triceps-back-depth` (→ `triceps`, `triceps-long-head`). Both resolve entirely to physique targets that already existed from the first Phase 4 pass, so this introduces zero new taxonomy risk. The remaining ~22 architect-approved outcomes and the 9 new physique targets are deliberately deferred to 4I, per the spec's explicit "do not implement the entire taxonomy before validating the first vertical slice" instruction — same discipline as building Upper-Pec-only before the original taxonomy expansion.
+- **`scripts/lib/load-programming.js`** — `loadAestheticOutcomes()`, same treatment as `loadPhysiqueTargets()`.
+- **`scripts/lib/validate.js`** — loads aesthetic outcomes once at module scope; validates required fields (`id`, `display_name`, `region`, `viewpoint`, `visual_description`) and that every `physique_targets` entry resolves to a real id in `physique-targets.yaml`. Verified by injecting a bad reference (`bogus-target-id-xyz`), confirming `npm run validate-data` caught it and exited non-zero, then restoring and re-confirming a clean pass — same discipline used for every validator check this project has added.
+- **`app/scripts/generate-data.mjs`** — bundles `aesthetic-outcomes.yaml` into `programming.generated.json` as `aestheticOutcomes`.
+- **`app/src/types/programming.ts`** — new `AestheticOutcome` interface, added to `ProgrammingData`.
+- **`app/src/data/index.ts`** — `aestheticOutcomes` export, `getAestheticOutcomeById()`, `getAestheticOutcomesByRegion()`.
+- **`app/src/data/aesthetic-outcomes.test.ts`** (new) — generic taxonomy-integrity tests (same pattern as `physique-targets.test.ts`): every outcome resolves with non-empty required fields; every mapped physique target resolves to a real target; region filtering only returns matching outcomes; both golden-slice outcomes map to the expected targets.
+
+## 4E/4F/4G — Chest-side-projection vertical slice (Appearance entry point + drill-down)
+
+**Date:** 2026-08-16
+
+### What changed
+
+- **`app/src/pages/DecisionMakerPage.tsx`** — added an "Appearance" entry point above the existing question 1: a region select filtered to regions with aesthetic outcomes, then a dependent outcome select. Picking an outcome resolves to its first mapped physique target (`outcome.physique_targets[0]`) and that target's `parent_region`, writing into the exact same `physiqueTarget`/`bodyRegion` state the existing direct target-picker already used — purely additive, the previously-validated direct-picker flow and its tests are untouched. Editing question 1 directly afterward clears the aesthetic-outcome state, so the result view doesn't show a stale "what you're trying to change" block for an outcome the user has since moved away from.
+- **Result view** — new "👀 What you're trying to change" block, shown only when the recommendation came from the appearance entry point, displaying the outcome's `display_name` and `visual_description`, with the optional `technical_explanation` behind a native `<details>`/`<summary>` progressive-disclosure toggle (§14's "user should be able to stop at the simple answer or expand into deeper technical material" — no new UI dependency, reuses the browser's own disclosure widget). Placed ahead of the existing 🎯 Target block, matching the spec's hierarchy (aesthetic outcome → physique target → anatomy → stimulus → exercise).
+- **`app/src/index.css`** — minor styling: the appearance entry point gets a dashed border to read as an alternate front door rather than a required step; the outcome block shares the accent treatment the "Best fit" block already uses, since it's the other half of the "headline answer."
+- **`app/src/pages/DecisionMakerPage.test.tsx`** — two new tests: the actual required golden-slice acceptance test (§36) — going through the appearance selector itself, not the direct target dropdown, and asserting it resolves to the same already-validated Upper Pec → Incline Dumbbell Press → Cable Fly chain with full programming present — plus a regression test confirming a direct edit to question 1 clears the stale outcome block.
+
+### Decisions made
+
+- **An outcome's engine input is its first listed physique target, not a fuzzy blend of all of them.** `chest-side-projection` maps to `[upper-pec, lower-pec]`; using the first (`upper-pec`) reproduces the exact, already-validated golden chain from the original Phase 4 pass rather than requiring new engine logic to combine multiple targets. The full mapped-target list is still shown in the technical drill-down, so nothing about the outcome's actual scope is hidden — only which target drives candidate selection is simplified. If this proves inadequate for a future outcome, it's revisitable without a data-model change.
+- **No engine or `DecisionInput`/`DecisionResult` type changes.** The aesthetic-outcome layer is UI-only: it resolves to the exact same `physiqueTarget`/`bodyRegion` inputs the engine already accepted and validated. This kept 4F ("programming knowledge integration") a verification step, not new work — the golden-slice test's Reps/RIR/programming assertions confirm the existing programming engine is unaffected.
+
+### Verified
+
+- `npm run validate-data`: PASS, 123/123 records, 0 issues.
+- Aesthetic-outcomes validator check confirmed to actually catch a violation (deliberately injected, caught, reverted).
+- `npx tsc --noEmit`: clean.
+- `npm run test`: **82 tests across 13 files**, all passing (up from 80 after 4C/4D, up from 75 before this revision) — including the required golden-slice test through the actual appearance-selector UI.
+
+### Pending
+
+4H (second golden slice: triceps-back-depth) is next — the outcome data already exists in `aesthetic-outcomes.yaml` from 4C, so this is primarily a validation step (a golden-slice test through the same UI, proving the architecture isn't chest-only), not new data or engine work, unless a triceps-specific issue surfaces.

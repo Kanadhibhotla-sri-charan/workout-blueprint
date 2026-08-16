@@ -1,9 +1,18 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { bodyRegions, equipmentOptions, exercises, physiqueTargets } from '../data';
+import {
+  aestheticOutcomes,
+  bodyRegions,
+  equipmentOptions,
+  exercises,
+  getAestheticOutcomeById,
+  getAestheticOutcomesByRegion,
+  physiqueTargets,
+} from '../data';
 import { makeRecommendation } from '../engine/decisionEngine';
 import { GOAL_LABELS, GOALS, GOALS_REQUIRING_CURRENT_EXERCISE } from '../engine/types';
 import type { DecisionInput, DecisionResult, DemandLevel, Goal } from '../engine/types';
+import type { AestheticOutcome } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 
@@ -29,11 +38,23 @@ export function DecisionMakerPage() {
   const [maxSkillDemand, setMaxSkillDemand] = useState<DemandChoice>('');
   const [currentExerciseId, setCurrentExerciseId] = useState('');
   const [result, setResult] = useState<DecisionResult | null>(null);
+  // Appearance entry point (revised Phase 4, §13): "region -> aesthetic
+  // outcome" is a friendlier front door onto the same bodyRegion/
+  // physiqueTarget state question 1 already answers. Kept separate from
+  // physiqueTarget/bodyRegion themselves so this is purely additive — it
+  // only ever writes into the existing state, never replaces it, so the
+  // already-validated target-select flow (and its tests) are untouched.
+  const [appearanceRegion, setAppearanceRegion] = useState('');
+  const [aestheticOutcomeId, setAestheticOutcomeId] = useState('');
+  const [resultAestheticOutcome, setResultAestheticOutcome] = useState<AestheticOutcome | null>(null);
 
   const goalNeedsCurrentExercise = goal !== '' && GOALS_REQUIRING_CURRENT_EXERCISE.includes(goal);
   const currentExerciseOptions = bodyRegion
     ? exercises.filter((exercise) => exercise.body_regions.includes(bodyRegion))
     : exercises;
+
+  const aestheticRegions = [...new Set(aestheticOutcomes.map((o) => o.region))].sort();
+  const outcomesInAppearanceRegion = appearanceRegion ? getAestheticOutcomesByRegion(appearanceRegion) : [];
 
   // "region:<name>" for a broad body-region pick, "target:<id>" for a
   // specific physique target — combined into one select, grouped by
@@ -43,6 +64,11 @@ export function DecisionMakerPage() {
   const targetSelectValue = physiqueTarget ? `target:${physiqueTarget}` : bodyRegion ? `region:${bodyRegion}` : '';
 
   function handleTargetSelectChange(value: string) {
+    // A direct edit to question 1 overrides whatever the appearance
+    // selector had resolved, so the result view doesn't keep showing a
+    // stale "what you're trying to change" block for an outcome the user
+    // has since moved away from.
+    setAestheticOutcomeId('');
     if (value.startsWith('target:')) {
       const id = value.slice('target:'.length);
       const target = physiqueTargets.find((t) => t.id === id);
@@ -52,6 +78,26 @@ export function DecisionMakerPage() {
       setPhysiqueTarget('');
       setBodyRegion(value.slice('region:'.length));
     }
+  }
+
+  function handleAppearanceRegionChange(region: string) {
+    setAppearanceRegion(region);
+    setAestheticOutcomeId('');
+  }
+
+  function handleAestheticOutcomeChange(outcomeId: string) {
+    setAestheticOutcomeId(outcomeId);
+    const outcome = getAestheticOutcomeById(outcomeId);
+    if (!outcome) return;
+    // An outcome may map to more than one physique target (§11: "a single
+    // aesthetic outcome may depend on multiple physique targets"). The
+    // first in the list drives exercise selection, matching the order the
+    // taxonomy proposal listed them in; the full mapped set is still shown
+    // in the result view's technical drill-down.
+    const primaryTargetId = outcome.physique_targets[0];
+    const target = physiqueTargets.find((t) => t.id === primaryTargetId);
+    setPhysiqueTarget(primaryTargetId);
+    if (target) setBodyRegion(target.parent_region);
   }
 
   function handleSubmit(event: FormEvent) {
@@ -70,6 +116,7 @@ export function DecisionMakerPage() {
       currentExerciseId: currentExerciseId || null,
     };
     setResult(makeRecommendation(input, exercises));
+    setResultAestheticOutcome(getAestheticOutcomeById(aestheticOutcomeId) ?? null);
   }
 
   return (
@@ -81,6 +128,45 @@ export function DecisionMakerPage() {
       </p>
 
       <form onSubmit={handleSubmit} className="decision-form">
+        <div className="filter-field appearance-entry">
+          <p className="field-hint">
+            <span aria-hidden="true">👀</span> Not sure which target? Start from what you want to
+            look like — it fills in question 1 for you, and you can still adjust it directly.
+          </p>
+          <label htmlFor="dm-appearance-region">Body area (by appearance)</label>
+          <select
+            id="dm-appearance-region"
+            value={appearanceRegion}
+            onChange={(event) => handleAppearanceRegionChange(event.target.value)}
+          >
+            <option value="">— none —</option>
+            {aestheticRegions.map((region) => (
+              <option key={region} value={region}>
+                {humanize(region)}
+              </option>
+            ))}
+          </select>
+          {appearanceRegion && (
+            <>
+              <label htmlFor="dm-appearance-outcome">How do you want it to look?</label>
+              <select
+                id="dm-appearance-outcome"
+                value={aestheticOutcomeId}
+                onChange={(event) => handleAestheticOutcomeChange(event.target.value)}
+              >
+                <option value="" disabled>
+                  Select what you're trying to change…
+                </option>
+                {outcomesInAppearanceRegion.map((outcome) => (
+                  <option key={outcome.id} value={outcome.id}>
+                    {outcome.display_name}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
+        </div>
+
         <div className="filter-field">
           <label htmlFor="dm-target">1. What do you want to improve?</label>
           <select
@@ -256,12 +342,18 @@ export function DecisionMakerPage() {
         </button>
       </form>
 
-      {result && <DecisionResultView result={result} />}
+      {result && <DecisionResultView result={result} aestheticOutcome={resultAestheticOutcome} />}
     </div>
   );
 }
 
-function DecisionResultView({ result }: { result: DecisionResult }) {
+function DecisionResultView({
+  result,
+  aestheticOutcome,
+}: {
+  result: DecisionResult;
+  aestheticOutcome: AestheticOutcome | null;
+}) {
   if (result.status === 'missing-current-exercise' || result.status === 'no-candidates') {
     return (
       <div className="decision-result decision-result-empty">
@@ -274,8 +366,24 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
 
   return (
     <div className="decision-result">
+      {aestheticOutcome && (
+        <div className="decision-result-block decision-result-outcome">
+          <h2>
+            <span aria-hidden="true">👀</span> What you&apos;re trying to change
+          </h2>
+          <p className="decision-result-name">{aestheticOutcome.display_name}</p>
+          <p>{aestheticOutcome.visual_description}</p>
+          {aestheticOutcome.technical_explanation && (
+            <details>
+              <summary>Technical explanation</summary>
+              <p>{aestheticOutcome.technical_explanation}</p>
+            </details>
+          )}
+        </div>
+      )}
+
       {result.target && (
-        <div className="decision-result-block">
+        <div className="decision-result-block decision-result-target">
           <h2>
             <span aria-hidden="true">🎯</span> Target
           </h2>

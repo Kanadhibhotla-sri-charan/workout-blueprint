@@ -584,9 +584,16 @@ select {
   margin-top: 0;
 }
 
-.decision-result-best {
+.decision-result-best,
+.decision-result-outcome {
   border-color: var(--accent);
   background: var(--accent-bg);
+}
+
+.appearance-entry {
+  padding: var(--space-4);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
 }
 
 .decision-result-name {
