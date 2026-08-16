@@ -100,4 +100,35 @@ None from this checkpoint.
 
 ## 3D — Exercise Detail page
 
+**Date:** 2026-08-16
+
+### What changed
+
+- `src/pages/ExerciseDetailPage.tsx` — the full nine-part hierarchy from spec §10: name/summary/why-this-exists/targets (§10.1), a visually prominent "What you'll see" callout for `mirror_effect` (§10.2), a Decision Context section (`best_used_when`, `less_suitable_when`, `limitations`, then a demand grid — type, laterality, movement pattern, equipment, setup time, fatigue cost, stability demand, skill demand) (§10.3), a Related Exercises section covering all three relationship fields (§10.4), and a collapsible Technical Details section (resistance profile, technique cues, common mistakes, programming notes, evidence notes) using a native `<details>`/`<summary>` element for progressive disclosure — no custom JS, keyboard-accessible by default (§10.5, §20). A not-found state (§23) renders when the route `id` doesn't resolve to a real record, with a link back rather than a crash or blank page.
+- `src/utils/relationships.ts` — `parseRelationshipEntry()`, matching the exact two id-reference shapes `scripts/lib/validate.js` already validates against the live data (bare id for same-file references; `"id (module name) — trailing note"` for cross-file references). Anything that doesn't match either shape (most `complements` entries, which are prose by design per the Phase 2 audit) is left unresolved and rendered as plain text rather than a broken link.
+- `src/components/RelationshipList.tsx` — renders one relationship field, resolving parseable entries to real `Link`s (via `getExerciseById`) and falling back to plain text for prose or (should it ever occur) an unresolvable id. Hides itself entirely when the field is empty or null, same rule as `OptionalList`.
+- `src/components/OptionalList.tsx` — small shared component for the several fields that are simple bullet lists and must hide gracefully when empty (§23) instead of showing an empty heading.
+
+### Verified
+
+- `npx tsc -b` and `npm run build` both clean.
+- **Visually verified with full-page Playwright screenshots** at 390×844 for two records with meaningfully different relationship shapes:
+  - `incline-dumbbell-press` — matches the architect's own worked example almost exactly: `complements` resolved "Cable Fly" as a working link (the spec's example complement), `overlaps_with` resolved four same-file incline-press variants as links, `alternatives` correctly rendered nothing (the field is empty per the Phase 2 architect decision, and the whole Related Exercises section still renders correctly with just the two populated subsections).
+  - `standing-calf-raise` — confirms **cross-file relationship resolution**: its `overlaps_with` entries (`leg-press-calf-raise`, `single-leg-calf-raise`) live in a different YAML file and resolved to correct links anyway, since `getExerciseById` searches the whole dataset, not just the current file. Its `complements` entry ("A bent-knee raise, which covers the soleus.") is prose and correctly rendered as plain text, not a broken link.
+  - An invalid id (`/exercises/not-a-real-id`) renders the not-found state cleanly instead of crashing.
+- Did not screenshot-verify the `<details>` open/close interaction specifically — it's a native HTML element with standard, well-established browser behavior, not custom code this project wrote, so the same bar applied to hand-written interactive logic wasn't applied here.
+
+### Decisions made
+
+- **Equipment, laterality, and movement pattern were added to the Decision Context "Demands" grid** even though spec §10.3's explicit field list only names `best_used_when`/`less_suitable_when`/exercise type/movement pattern/setup time/fatigue cost/stability demand/skill demand — re-reading that list, movement pattern *is* named, but equipment and laterality are not. Included both anyway: equipment because "what does it demand" is incomplete without it (you can't decide whether an exercise fits your situation without knowing what it needs), laterality because it's a genuine execution/decision input already exposed as a filter dimension in §12. Treated as filling a real gap in the spec's own list rather than a deviation from it.
+- **Relationship-entry resolution reuses the exact id-shape convention `validate.js` already enforces**, rather than inventing a separate parser — if the root validator considers an entry a resolvable reference, the app resolves it the same way; if the validator would flag it, the app doesn't try to link it either.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3E — Search + Filters
+
 *Not yet started.*
