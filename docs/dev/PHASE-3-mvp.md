@@ -266,4 +266,28 @@ None from this checkpoint.
 
 ## 3I — MVP validation
 
-*Not yet started.*
+**Date:** 2026-08-16
+
+### What changed
+
+- **[`docs/dev/reports/PHASE-3-DEFINITION-OF-DONE.md`](reports/PHASE-3-DEFINITION-OF-DONE.md)** — every item in spec §25's checklist checked against the actual state of `app/`, each with a specific verification method cited (a test file, a screenshot, or a grep result) rather than checked from memory or copied from the plan.
+- Filled the remaining §24 testing gaps that 3F/3G's tests didn't already cover: `src/data/index.test.ts` (data integration — record count, no duplicate ids, all 11 regions present), `src/utils/search.test.ts` (exact/partial/field-level matching), `src/utils/filters.test.ts` (individual filters, the exact §12 composed-filter worked example, no-result state), and two new component tests — `src/components/OptionalList.test.tsx` and `src/components/RelationshipList.test.tsx` — that exercise the "missing optional metadata doesn't break the UI" requirement directly with synthetic null/empty props, rather than relying only on whichever real records happen to be sparse.
+- Test suite grew from 26 tests (end of 3G) to **50 tests across 10 files**.
+
+### Verified
+
+- **Two real test bugs found and fixed while writing this checkpoint's tests, not just passed on the first try**:
+  1. `RelationshipList.test.tsx` and `OptionalList.test.tsx` initially lacked the `afterEach(cleanup)` pattern 3G's `DecisionMakerPage.test.tsx` had already established — without it, `RelationshipList`'s "unresolvable prose entry" test found a leftover `<a>` element from an earlier test in the same file (undismissed DOM from a prior `render()` call), not the actual component behavior. Fixed by applying the same explicit-cleanup pattern (this project doesn't use vitest's `globals: true`, so Testing Library's automatic cleanup registration doesn't fire).
+  2. `search.test.ts`'s "target/movement search" test originally asserted that *every* result of a "hip hinge" query would have `movement_patterns[0] === 'hip hinge'` exactly — a wrong assumption, since the search function (correctly, by design) matches across many fields at once, not just movement pattern. Fixed the test to assert the specific record the field-level match was meant to prove (`romanian-deadlift`) is included, rather than over-constraining every result.
+- `npx tsc -b`, `npm run test` (50/50), and `npm run build` all clean.
+- `npm run validate-data` re-run at the repo root: **PASS, 123/123 records, 0 issues** — confirms no Phase 3 checkpoint touched any data file, cross-checked with the standard Python 30-field/no-duplicate-id script.
+- Went through spec §25's 20-item Definition of Done list one item at a time against what was actually built — see the linked report. All 20 pass.
+
+### Decisions made
+
+- **Wrote the DoD report as its own document** (`reports/PHASE-3-DEFINITION-OF-DONE.md`), following this project's established convention (`REVIEW-PROMOTION-GATE.md`, `COVERAGE-CATEGORY-EVALUATION.md`) of a standalone, cite-your-evidence report rather than a checklist embedded only in this log.
+- **Test bugs are logged as bugs, not silently fixed and forgotten** — same discipline the project has applied to every other self-caught error this phase (the 3F rules-doc correction, the 3G complements-cap bug): stating what was wrong and why, not just landing the fix.
+
+## Phase 3 status
+
+**All nine checkpoints (3A–3I) complete.** The Blueprint MVP — Knowledge Explorer (browse, search, filter), Exercise Detail, and a deterministic Decision Maker — runs locally from `app/` against the same canonical YAML dataset the rest of this project validates, with no backend, database, or LLM dependency, per the spec's explicit constraints. 50 automated tests pass; `npm run validate-data` at the repo root is unaffected. See [`PHASE-3-DEFINITION-OF-DONE.md`](reports/PHASE-3-DEFINITION-OF-DONE.md) for the itemized sign-off.
