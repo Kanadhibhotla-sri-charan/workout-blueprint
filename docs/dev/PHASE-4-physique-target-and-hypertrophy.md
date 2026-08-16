@@ -180,3 +180,20 @@ Read all 123 exercise records across all 11 `data/exercises/*.yaml` files, focus
 ### Pending
 
 4H (second golden slice: triceps-back-depth) is next — the outcome data already exists in `aesthetic-outcomes.yaml` from 4C, so this is primarily a validation step (a golden-slice test through the same UI, proving the architecture isn't chest-only), not new data or engine work, unless a triceps-specific issue surfaces.
+
+## 4H — Second vertical slice: triceps-back-depth (STOP-gate validation)
+
+**Date:** 2026-08-16
+
+As expected, 4H required no new data or engine work — `triceps-back-depth` was already in `aesthetic-outcomes.yaml` from 4C. Validated end to end through the actual UI: Arms → "Triceps have no depth from behind" → complement-current against Cable Pushdown → resolves to Triceps target, Close-Grip Bench Press as the best fit (a genuinely different movement — heavy-compound horizontal press vs. Cable Pushdown's isolated elbow extension), full programming guidance present.
+
+Two test-assertion collisions surfaced while writing the test (not product bugs): the target's `physique_outcome` and the aesthetic outcome's `technical_explanation` independently paraphrase the same "triceps ≈ two-thirds of upper-arm size" fact from the same source data, so a couple of substrings appeared in both blocks' text — `screen.getByText` failed with "multiple elements found." Fixed by scoping those specific assertions to the relevant result block (`.decision-result-best`, `.decision-result-target`) rather than a bare global text query, same disambiguation pattern already used elsewhere in this test file.
+
+### Verified
+
+- `npm run test`: **83 tests across 13 files**, all passing.
+- Both required golden vertical slices (§36 chest-side-projection, §37 triceps-back-depth) now pass through the actual product UI, confirming the aesthetic-outcome architecture generalizes beyond chest — the explicit purpose of requiring a second slice before any taxonomy expansion.
+
+### STOP-gate status
+
+Both golden slices pass. Per the spec's own implementation order (§43), 4I (expand the taxonomy to the full architect-approved ~24 outcomes / 9 new physique targets from the 4A/4B proposal) is next, but is a substantial expansion — checking in with the architect before proceeding, same discipline used before the original taxonomy expansion in the first Phase 4 pass.

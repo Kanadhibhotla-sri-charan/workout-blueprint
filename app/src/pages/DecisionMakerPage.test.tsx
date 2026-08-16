@@ -164,6 +164,49 @@ describe('DecisionMakerPage', () => {
     expect(screen.getByText(/alongside Incline Dumbbell Press/i)).toBeInTheDocument();
   });
 
+  // Second required golden slice (spec §37): proves the aesthetic-outcome
+  // architecture isn't accidentally chest-only, by resolving a completely
+  // different region/target (arms/triceps) through the same UI path.
+  it('golden slice: the aesthetic-outcome entry point ("Triceps have no depth from behind") resolves through Triceps', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area \(by appearance\)/i), 'arms');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'triceps-back-depth'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'complement-current'
+    );
+    await user.selectOptions(screen.getByLabelText(/current exercise/i), 'cable-pushdown');
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    await screen.findByRole('heading', { name: /what you're trying to change/i });
+    const outcomeName = document.querySelector('.decision-result-outcome .decision-result-name');
+    expect(outcomeName?.textContent).toBe('Triceps have no depth from behind');
+    expect(screen.getByText(/looks flat or thin when viewed from behind/i)).toBeInTheDocument();
+
+    const targetBlock = document.querySelector('.decision-result-target');
+    expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Triceps');
+    // The visual-objective text ("...outsized effect on overall arm
+    // thickness...") is distinct enough from the outcome's own
+    // technical_explanation not to collide with it.
+    expect(screen.getByText(/outsized effect on overall arm thickness/i)).toBeInTheDocument();
+
+    // A genuinely different movement from the current exercise, not the
+    // same one restated.
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink).toBeDefined();
+    expect(bestFitLink?.textContent).not.toBe('Cable Pushdown');
+    expect(screen.getByText('Reps')).toBeInTheDocument();
+    expect(screen.getByText('RIR')).toBeInTheDocument();
+    // "alongside Cable Pushdown" also appears in the alternative's own
+    // explanation, so scope this check to the Best Fit block specifically.
+    expect(document.querySelector('.decision-result-best')?.textContent).toMatch(/alongside Cable Pushdown/i);
+  });
+
   it('editing question 1 directly after using the appearance selector clears the stale "what you\'re trying to change" block', async () => {
     const user = userEvent.setup();
     renderPage();
