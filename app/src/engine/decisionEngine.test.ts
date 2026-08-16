@@ -90,6 +90,19 @@ describe('makeRecommendation — §24 representative scenarios', () => {
   });
 });
 
+describe('makeRecommendation — complements cap', () => {
+  it('never returns more than 3 complements, even when many structurally qualify (§16)', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, goal: 'replace-exercise', currentExerciseId: 'incline-dumbbell-press' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.complements.length).toBeLessThanOrEqual(3);
+    }
+  });
+});
+
 describe('makeRecommendation — goal requiring a current exercise, none given', () => {
   it('returns a missing-current-exercise status rather than guessing', () => {
     const result = makeRecommendation({ ...BASE_INPUT, goal: 'replace-exercise' }, exercises);

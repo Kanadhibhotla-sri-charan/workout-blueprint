@@ -1,5 +1,5 @@
 import type { Exercise } from '../types/exercise';
-import type { DecisionInput, DecisionResult, Goal } from './types';
+import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal } from './types';
 import { isEquipmentFeasible } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
@@ -7,11 +7,7 @@ import { resolveComplements } from './complements';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 
-const GOALS_REQUIRING_CURRENT_EXERCISE: Goal[] = [
-  'different-stimulus',
-  'complement-current',
-  'replace-exercise',
-];
+const MAX_COMPLEMENTS_SHOWN = 3;
 
 // Rule-based candidate pipeline per PHASE-3-MVP.md §18 (filter by region ->
 // goal/target -> equipment -> unsuitable -> current-exercise overlap/
@@ -50,7 +46,7 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
   if (GOALS_REQUIRING_CURRENT_EXERCISE.includes(input.goal) && !currentExercise) {
     return {
       status: 'missing-current-exercise',
-      reason: `The "${goalLabel(input.goal)}" goal needs you to specify the exercise you're already doing.`,
+      reason: `The "${GOAL_LABELS[input.goal]}" goal needs you to specify the exercise you're already doing.`,
     };
   }
 
@@ -116,21 +112,12 @@ function buildResultFromRanked(
     alternative: alt ?? null,
     alternativeWhy: alt ? `A close second under the same constraints: ${explainBest(alt)}` : null,
     watchOut: buildWatchOut(bestFit),
-    complements: resolveComplements(bestFit, allExercises, equipmentAvailable),
+    // Capped per §16 ("do not overwhelm the user with ten recommendations")
+    // — the structural fallback in resolveComplements can return many
+    // eligible matches; a curated `complements` field (when present) is
+    // usually 1-2 entries already and is unaffected by this cap in practice.
+    complements: resolveComplements(bestFit, allExercises, equipmentAvailable).slice(0, MAX_COMPLEMENTS_SHOWN),
   };
-}
-
-function goalLabel(goal: Goal): string {
-  const labels: Record<Goal, string> = {
-    'build-base': 'Build the main training base',
-    'different-stimulus': 'Add a different stimulus',
-    'visual-area': 'Improve a specific visual area',
-    'low-fatigue': 'Train with low fatigue',
-    'limited-equipment': 'Train with limited equipment',
-    'replace-exercise': 'Replace an exercise',
-    'complement-current': 'Add something that complements my current exercise',
-  };
-  return labels[goal];
 }
 
 // Deterministic fixed-priority key per goal, ascending (lower = ranked

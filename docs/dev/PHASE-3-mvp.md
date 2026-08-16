@@ -198,4 +198,38 @@ None from this checkpoint.
 
 ## 3G — Decision Maker UI
 
+**Date:** 2026-08-16
+
+### What changed
+
+- `src/pages/DecisionMakerPage.tsx` — a single-page form (not a paginated multi-screen wizard; §13's four "steps" are presented as four labeled sections on one scrollable page, which keeps the flow simple without extra navigation state) covering §13 exactly:
+  1. Body region select (required).
+  2. Goal select (required), options and labels pulled from the `GOALS`/`GOAL_LABELS` constants 3F's refactor centralized — the same source the engine itself uses for its own explanatory text.
+  3. Constraints, kept small per §13's own instruction: an equipment checkbox that reveals a multi-select only when engaged (explicitly distinguishing "no constraint" (`null`) from "I have nothing" (`[]`) — reusing this project's null-vs-empty convention rather than conflating them), plus four "up to low/medium/high" tolerance selects (setup, fatigue, stability, skill) that map directly to `constraints.ts`'s `meetsMaxDemand`.
+  4. An optional current-exercise select, filtered to the chosen region when one is set; the label switches to "(required for this goal)" for the three goals that need it, but the actual enforcement is the engine's own `missing-current-exercise` status, not duplicated client-side validation — one source of truth for "can this be answered."
+- Result rendering matches §16's four-part output exactly: 🥇 Best Fit (linked to the exercise detail page), 🥈 Alternative (when present), ⚠️ Watch Out (bulleted), 🔄 Complements (linked list). A `missing-current-exercise` or `no-candidates` status renders the engine's own reason text plainly instead of a fabricated pick.
+- **Found and fixed a real spec-conformance bug via the new test, not by inspection**: the structural-complement fallback (3F) has no natural size limit — for `incline-dumbbell-press` it returned all 10 structurally-eligible complements. §16 explicitly says "do not overwhelm the user with ten recommendations," so `decisionEngine.ts` now caps `complements` at 3 (`MAX_COMPLEMENTS_SHOWN`), applied only at the decision-result layer — the general-purpose `resolveComplements()` utility itself is untouched, since a future consumer (e.g. showing complements on the exercise detail page) may reasonably want the full ranked list.
+- Added `@testing-library/react`, `@testing-library/user-event`, `@testing-library/jest-dom`, and `jsdom` as dev dependencies — the first component-level (not just pure-function) tests in the app. `src/pages/DecisionMakerPage.test.tsx` drives the actual form (select region, select goal, check the equipment checkbox, submit) rather than only asserting on the engine directly, so a wiring mistake between the form state and `makeRecommendation()`'s input shape would be caught even if the engine itself were correct.
+
+### Verified
+
+- `npx tsc -b`, `npm run build`, and `npm run test` (26 tests, 5 files) all clean.
+- **The complements-cap bug above was caught by a failing assertion during manual verification of the "replace exercise" scenario**, not spotted by re-reading the spec — the first version of the new component test asserted on exact link text and hit a "found multiple elements" error (an ambiguity between the `<select>`'s `<option>Incline Barbell Press</option>` and the result's link, both matching the same text — a test-precision bug, fixed by asserting on `getByRole('link', ...)` instead) which, in the course of debugging it, surfaced the *actual* product bug (10 unbounded complements) sitting in the debug DOM dump. Fixed both: the test's over-broad selector, and the real cap the spec requires.
+- **Visually verified with a full-page Playwright screenshot at 390×1400** (mobile viewport): all four form sections render correctly, the equipment multi-select stays hidden until its checkbox is checked, and layout matches the rest of the app's established mobile-first components (filter-field labels, button styles).
+- Component tests cover: a goal-only submission producing a "Best fit" result; a goal requiring a current exercise submitted without one, rendering the engine's own explanatory message; the equipment multi-select's reveal/hide behavior; and a full replace-exercise flow (region + goal + current exercise selected) resolving to the exact `incline-barbell-press` result the 3F engine tests already established independently — confirming the UI's form-to-`DecisionInput` wiring, not just the engine in isolation.
+
+### Decisions made
+
+- **Single-page form over a literal multi-screen wizard** — §13 describes four conceptual steps, not four separate screens; a single scrollable form avoids adding client-side step/navigation state for no functional benefit at this dataset size and question count, consistent with §18's "don't prematurely build a sophisticated scoring framework" spirit applied to UI complexity as well.
+- **No client-side duplicate of the engine's own validation** — the "current exercise required for this goal" case is enforced once, inside `makeRecommendation()`, and the UI just displays whatever status comes back. Two implementations of "is this answerable" would risk drifting apart exactly the way `DECISION-ENGINE-RULES.md`'s opening paragraph warns against for the matching rules themselves.
+- **Component tests added now, not deferred to 3I** — same reasoning as 3F's Vitest addition: proving the wizard actually produces the right recommendation end-to-end is a claim about behavior, and it caught a real bug (the complements cap) that a purely visual check would likely have missed, since ten complements still *renders*, it just violates the spec's explicit instruction not to.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3H — Mobile / usability pass
+
 *Not yet started.*

@@ -16,6 +16,35 @@ export type Goal =
   | 'replace-exercise'
   | 'complement-current';
 
+// Single source of truth for goal display labels — used by the engine's
+// own explanatory text (decisionEngine.ts) and by the Decision Maker UI's
+// goal picker (3G), so the two can't drift apart.
+export const GOAL_LABELS: Record<Goal, string> = {
+  'build-base': 'Build the main training base',
+  'different-stimulus': 'Add a different stimulus',
+  'visual-area': 'Improve a specific visual area',
+  'low-fatigue': 'Train with low fatigue',
+  'limited-equipment': 'Train with limited equipment',
+  'replace-exercise': 'Replace an exercise',
+  'complement-current': 'Add something that complements my current exercise',
+};
+
+export const GOALS: Goal[] = [
+  'build-base',
+  'different-stimulus',
+  'visual-area',
+  'low-fatigue',
+  'limited-equipment',
+  'replace-exercise',
+  'complement-current',
+];
+
+export const GOALS_REQUIRING_CURRENT_EXERCISE: Goal[] = [
+  'different-stimulus',
+  'complement-current',
+  'replace-exercise',
+];
+
 export interface DecisionInput {
   bodyRegion: string;
   goal: Goal;
