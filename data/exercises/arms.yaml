@@ -24,7 +24,7 @@
     The most straightforward loadable curl, with small load steps and an
     easy progression path.
   body_regions: [arms]
-  primary_targets: [biceps (both heads, roughly even at a neutral shoulder position)]
+  primary_targets: ["biceps (both heads, roughly even at a neutral shoulder position)"]
   secondary_targets: [brachialis, forearms]
   movement_patterns: [elbow flexion]
   equipment: [barbell, ez-bar]
@@ -77,7 +77,7 @@
     let each side move and rotate on its own path, which some find kinder
     on the wrists and elbows.
   body_regions: [arms]
-  primary_targets: [biceps (both heads, roughly even at a neutral shoulder position)]
+  primary_targets: ["biceps (both heads, roughly even at a neutral shoulder position)"]
   secondary_targets: [brachialis, forearms]
   movement_patterns: [elbow flexion]
   equipment: [dumbbell]
@@ -127,7 +127,7 @@
     Places the upper arm behind the body, so the load stays meaningful
     with the elbow near full extension.
   body_regions: [arms]
-  primary_targets: [biceps (long-head-biased, EMG-supported)]
+  primary_targets: ["biceps (long-head-biased, EMG-supported)"]
   secondary_targets: []
   movement_patterns: [elbow flexion, lengthened shoulder position]
   equipment: [dumbbell, incline bench]
@@ -205,7 +205,7 @@
     Fixes the upper arm forward on a pad, which removes swing and keeps
     tension nearer the top of the range.
   body_regions: [arms]
-  primary_targets: [biceps (short-head-biased, EMG-supported)]
+  primary_targets: ["biceps (short-head-biased, EMG-supported)"]
   secondary_targets: [brachialis]
   movement_patterns: [elbow flexion, shortened shoulder position]
   equipment: [barbell, ez-bar, dumbbell, preacher bench]
@@ -271,7 +271,7 @@
     and free weight, and often adds a cam that adjusts resistance through
     the range.
   body_regions: [arms]
-  primary_targets: [biceps (short-head-biased, EMG-supported)]
+  primary_targets: ["biceps (short-head-biased, EMG-supported)"]
   secondary_targets: [brachialis]
   movement_patterns: [elbow flexion, shortened shoulder position]
   equipment: [machine]
@@ -782,7 +782,7 @@
     Trains elbow extension with the shoulder flexed, a position that
     pressing movements do not load.
   body_regions: [arms]
-  primary_targets: [triceps (long-head-biased, strongly supported by hypertrophy research)]
+  primary_targets: ["triceps (long-head-biased, strongly supported by hypertrophy research)"]
   secondary_targets: []
   movement_patterns: [elbow extension, shoulder flexed (overhead)]
   equipment: [barbell, ez-bar, dumbbell]
@@ -861,7 +861,7 @@
     roughly 90 degrees, a different joint angle from the overhead
     extension.
   body_regions: [arms]
-  primary_targets: [triceps (partial long-head stretch, less than overhead, more than a pushdown)]
+  primary_targets: ["triceps (partial long-head stretch, less than overhead, more than a pushdown)"]
   secondary_targets: []
   movement_patterns: [elbow extension]
   equipment: [barbell, ez-bar, dumbbell]
@@ -1160,7 +1160,7 @@
     triceps through the stretch, unlike a free-weight overhead extension
     where the load is hardest only partway through the range.
   body_regions: [arms]
-  primary_targets: [triceps (long-head-biased, strongly supported by hypertrophy research)]
+  primary_targets: ["triceps (long-head-biased, strongly supported by hypertrophy research)"]
   secondary_targets: []
   movement_patterns: [elbow extension, shoulder flexed (overhead), torso leaning forward away from the stack]
   equipment: [cable]
