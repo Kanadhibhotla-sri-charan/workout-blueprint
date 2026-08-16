@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-Opens at `http://localhost:5173` by default. `npm run build` produces a static production build in `app/dist/`; `npm run preview` serves that build locally. No backend, database, or network access is required — the app runs entirely from the repository's local YAML data.
+Opens at `http://localhost:5173` by default. `npm run build` produces a static production build in `app/dist/`; `npm run preview` serves that build locally. `npm run test` runs the Vitest suite (engine correctness, including the deterministic decision-engine rules documented in [`docs/dev/reports/DECISION-ENGINE-RULES.md`](../docs/dev/reports/DECISION-ENGINE-RULES.md)). No backend, database, or network access is required — the app runs entirely from the repository's local YAML data.
 
 ## Data
 
@@ -24,7 +24,8 @@ Opens at `http://localhost:5173` by default. `npm run build` produces a static p
 src/
 ├── types/       canonical Exercise type (mirrors the 30-field schema)
 ├── data/        generated JSON + typed loader
-├── engine/      deterministic decision engine (pure functions, no UI)
+├── engine/      deterministic decision engine (pure functions, no UI) — see
+│                ../docs/dev/reports/DECISION-ENGINE-RULES.md for the rules
 ├── components/  shared UI pieces
 ├── pages/       Home, Exercise List, Exercise Detail, Decision Maker
 └── utils/       search/filter helpers

@@ -160,4 +160,42 @@ None from this checkpoint.
 
 ## 3F — Decision Engine v0.1
 
+**Date:** 2026-08-16
+
+**Trigger:** the user's Phase 3 approval was explicit that this checkpoint had to start with written rules, not code: *"Before implementation of the decision engine, explicitly define deterministic structural-alternative matching rules and equipment-feasibility rules. Do not use vague/fuzzy matching."*
+
+### What changed
+
+- **[`docs/dev/reports/DECISION-ENGINE-RULES.md`](reports/DECISION-ENGINE-RULES.md) written first, before any engine code**, exactly as instructed. It defines three deterministic rules precisely enough that engine code implements them 1:1, not an approximation:
+  1. **Equipment feasibility** — `null` means the constraint wasn't engaged (no filtering); otherwise strict subset test, exact string match only, no normalization.
+  2. **Structural alternative matching** (needed because `alternatives` is 0/123 populated by the architect's own Phase 2 decision) — a two-stage rule: Stage 1 strict eligibility (same `movement_patterns[0]`, same `exercise_type`, shared `body_regions`, not `draft`, equipment-feasible), Stage 2 a fixed-priority tiebreak (shared `primary_targets` count, then shared `coverage_categories` count, then alphabetical id) — never a blended score.
+  3. **Structural complement matching** — discovered mid-checkpoint, not anticipated when the plan was approved: `complements` turned out to be **124 entries dataset-wide, only 2 bare-id-shaped** (resolvable), far sparser than assumed. The same two-stage pattern applies, with the defining difference from alternatives being a *different* `movement_patterns[0]` (not the same one) and the coverage-category tiebreak direction reversed (fewer shared categories ranks higher — more different stimulus is the point of a complement).
+- Every worked example in that document is **hand-computed against the live dataset and then asserted as an automated test**, not just traced by hand and taken on faith — see "Verified" below.
+- `app/src/engine/equipment.ts`, `alternatives.ts`, `complements.ts`, `constraints.ts` (the low/medium/high "at most" tolerance comparison), `types.ts` (`Goal`, `DecisionInput`, `DecisionResult`), and `decisionEngine.ts` (`makeRecommendation()`, the rule-based pipeline from §18: filter by region → drop `draft` records → equipment → tolerance constraints → goal-specific ranking/current-exercise logic → explain).
+- Seven goals from §13 Step 2's example list, each mapped to structured fields only — no goal exists that the schema can't back, per §13's "do not create unsupported recommendation categories": `build-base` (ranks by `heavy-compound` > `stable-compound` > other), `visual-area` (ranks by lengthened/shortened-position-emphasis categories, explanation is the record's own `mirror_effect`), `low-fatigue` (ranks by `fatigue_cost` ascending), `limited-equipment` (ranks by equipment-list length ascending), `replace-exercise` and `different-stimulus`/`complement-current` (require a current exercise; call into the structural-alternative/complement rules respectively).
+- `DecisionResult` is a tagged union (`'ok' | 'missing-current-exercise' | 'no-candidates'`) rather than a type that's always "successful" — per §17, the engine states when it can't confidently recommend instead of forcing an answer. A goal needing a current exercise with none supplied, or a constraint combination with zero survivors, both return an honest explanatory status rather than a best-effort guess.
+- Added Vitest (`npm run test`, `pretest` regenerates data first) — the first automated test suite in the app, added specifically because hand-tracing a "no vague matching" requirement isn't the same as proving it holds.
+
+### Verified
+
+- **Corrected a wrong assumption before it shipped**: an early draft of the rules doc claimed the alternative-matching rule would surface `smith-machine-incline-press` for `incline-dumbbell-press`, matching the architect's own worked example in `PHASE-2-OPEN-DECISIONS.md` §2. Hand-computing the actual Stage 2 ranking against the real data showed the *unconstrained* winner is `incline-barbell-press` instead (a real, defensible tiebreak outcome — see the rules doc §4 for why), and `smith-machine-incline-press` only wins once an equipment constraint narrows the field to just it. Rewrote the doc to state the computed result honestly rather than leave the false claim in — this is exactly the kind of error that a "define the rule, then verify against real data" discipline is supposed to catch.
+- Same discipline applied to the complement rule: didn't assume it would reproduce `cable-fly` (the one entry `incline-dumbbell-press` happens to have curated in prose) — computed the actual ranking, got `incline-dumbbell-fly` (a different but equally defensible complement), and documented that honestly rather than picking a rule that would coincidentally match the one curated example.
+- `npx tsc -b` and `npm run build` both clean.
+- **21 automated tests across 4 files, all passing** (`npm run test`): equipment feasibility (including a deliberate near-miss-string case proving no fuzzy matching), the two hand-computed alternative-matching scenarios from the rules doc (unconstrained → `incline-barbell-press`; constrained to `[smith machine, bench]` → `smith-machine-incline-press`), a general invariant check across 30 records (every returned alternative genuinely shares movement pattern/exercise type/region with its target), the structural-complement ranking, and all **six representative Decision Maker scenarios from spec §24** run directly against `makeRecommendation()` (goal-only, equipment-restricted, low-fatigue-constrained, complement-of-current, replace/alternative-of-current, and a deliberately impossible constraint combination correctly returning `no-candidates` rather than a fabricated pick).
+
+### Decisions made
+
+- **Wrote the rules document first and treated it as authoritative** — the engine code has a comment on each rule pointing back to the specific section of `DECISION-ENGINE-RULES.md` it implements, so the two can't silently drift apart the way the doc explicitly warns against in its own opening paragraph.
+- **Added a structural-complement rule that wasn't in the original plan**, once the actual `complements` field sparsity (2/124 resolvable) was discovered — the plan only called out the `alternatives` field as needing a structural fallback, on the assumption `complements`/`overlaps_with` were "usable directly" (true for display on the detail page in 3D, not true for the engine's need to always have a same-region pick to offer). Documented as a rules-doc addition rather than silently expanding scope.
+- **`DecisionResult` can represent "I don't know" as a first-class outcome** rather than only ever returning a best-effort exercise — directly required by §17's "if the dataset cannot support a recommendation confidently, the engine should say so," and testable (scenario 6 above) rather than just asserted.
+- **Vitest added now, not deferred to 3I** — the user's "no vague/fuzzy matching" instruction is a claim about *behavior*, and hand-tracing one or two cases (as the rules doc's worked examples do) doesn't scale to proving it holds generally; automated tests do. 3I's testing scope narrows to what's left: search, filters, component smoke tests, and the UI-level scenarios once 3G exists.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3G — Decision Maker UI
+
 *Not yet started.*
