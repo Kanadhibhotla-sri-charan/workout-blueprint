@@ -131,8 +131,8 @@ function main() {
   add();
   add('## Known, logged exceptions (not bugs — see the linked reasoning)');
   add();
-  add('- **`advantages` is empty on all 123 records.** Flagged and awaiting a scoping decision — see [`docs/dev/reports/REVIEW-PROMOTION-GATE.md`](reports/REVIEW-PROMOTION-GATE.md).');
-  add('- **`alternatives` is empty on all 123 records.** Flagged in [`SCHEMA.md`](../knowledge-manual/SCHEMA.md#alternatives) — likely redundant with `complements` as currently used, not yet decided.');
+  add('- **`advantages` is empty on all 123 records.** Resolved by architect decision, not a gap: kept as a retirement candidate, deliberately not bulk-populated, its emptiness never blocks `reviewed` — see [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../architecture/PHASE-2-OPEN-DECISIONS.md) and [`docs/dev/reports/REVIEW-PROMOTION-GATE.md`](reports/REVIEW-PROMOTION-GATE.md).');
+  add('- **`alternatives` is empty on all 123 records.** Resolved by architect decision: the field is kept (not retired) and precisely defined against `complements`/`overlaps_with`, to be populated selectively when a genuine substitution exists rather than bulk-filled — see [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../architecture/PHASE-2-OPEN-DECISIONS.md) and [`SCHEMA.md`](../knowledge-manual/SCHEMA.md#the-three-relationship-fields-defined-precisely).');
   add();
 
   fs.writeFileSync(OUTPUT_PATH, lines.join('\n') + '\n');
