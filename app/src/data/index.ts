@@ -1,5 +1,5 @@
 import type { Exercise } from '../types/exercise';
-import type { PhysiqueTarget, ProgrammingData } from '../types/programming';
+import type { AestheticOutcome, PhysiqueTarget, ProgrammingData } from '../types/programming';
 import generated from './exercises.generated.json';
 import generatedProgramming from './programming.generated.json';
 
@@ -32,6 +32,16 @@ export function getExercisesByPhysiqueTarget(targetId: string): Exercise[] {
 }
 
 export const physiqueTargets: PhysiqueTarget[] = programming.physiqueTargets;
+
+export const aestheticOutcomes: AestheticOutcome[] = programming.aestheticOutcomes;
+
+export function getAestheticOutcomeById(id: string): AestheticOutcome | undefined {
+  return aestheticOutcomes.find((outcome) => outcome.id === id);
+}
+
+export function getAestheticOutcomesByRegion(region: string): AestheticOutcome[] {
+  return aestheticOutcomes.filter((outcome) => outcome.region === region);
+}
 
 function uniqueSorted(values: string[]): string[] {
   return [...new Set(values)].sort();

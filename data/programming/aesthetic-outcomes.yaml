@@ -1,0 +1,79 @@
+# Canonical aesthetic-outcomes taxonomy (Phase 4, revised). Per the revised
+# Phase 4 spec (docs/architecture/PHASE-4-REVISED-AESTHETIC-OUTCOME.md, §28),
+# this file is the authoritative definition of the aesthetic-outcome layer —
+# canonical, first-class entities representing a visual/mirror-recognizable
+# characteristic, not exercise-attached text or muscle-name synonyms.
+#
+# Each outcome maps downstream to one or more `data/programming/
+# physique-targets.yaml` ids — it does NOT redefine what a physique target
+# means (same "one canonical definition per entity" rule ADR 0003
+# established for the exercise/physique-target relationship) and it does
+# NOT duplicate exercise knowledge (§28).
+#
+# 4A's full-body audit and proposed taxonomy is
+# docs/dev/reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md (architect-
+# approved, including the two flagged/lower-confidence outcomes). Per the
+# spec's own implementation order (§43) and its explicit instruction not to
+# implement the entire taxonomy before validating the first vertical slice,
+# this file currently carries only the two outcomes required for the two
+# golden vertical slices (§36/§37) — chest-side-projection and
+# triceps-back-depth — both of which resolve entirely to physique targets
+# that already exist, so no new taxonomy risk is introduced here. The
+# remaining ~22 approved outcomes (and the 9 new physique targets six of
+# them depend on) are added in the taxonomy-expansion pass (4I), after both
+# golden slices pass.
+
+outcomes:
+  - id: chest-side-projection
+    display_name: "Chest looks flat from the side"
+    region: chest
+    viewpoint: side
+    visual_description: >-
+      The chest lacks depth or projection when viewed from the side —
+      it doesn't stand out from the torso the way a fuller chest does,
+      even if it looks reasonably full from straight on.
+    physique_targets:
+      - upper-pec
+      - lower-pec
+    technical_explanation: >-
+      Side-view chest projection comes from how much pectoral mass sits
+      forward of the ribcage across the chest's vertical span, not from
+      any single spot. The upper-chest shelf (just below the collarbone)
+      and the lower-chest/rib transition are the two regions most
+      responsible for that forward profile — the mid-chest mainly adds
+      front-on width and thickness rather than side-view depth.
+    anatomical_targets:
+      - pectoralis major, clavicular (upper) head
+      - pectoralis major, costal (lower) head
+    common_user_phrasings:
+      - "My chest looks flat from the side."
+      - "My chest doesn't stick out enough."
+      - "My chest has no depth."
+
+  - id: triceps-back-depth
+    display_name: "Triceps have no depth from behind"
+    region: arms
+    viewpoint: back
+    visual_description: >-
+      The back of the upper arm looks flat or thin when viewed from
+      behind, rather than showing visible mass and shape — even if the
+      arm looks reasonably full from the front (biceps side).
+    physique_targets:
+      - triceps
+      - triceps-long-head
+    technical_explanation: >-
+      The triceps brachii makes up roughly two-thirds of upper-arm
+      size, more than the biceps, so its development has an outsized
+      effect on how the arm looks from behind. The long head in
+      particular runs along the inner/rear portion of the upper arm and
+      is the part most easily under-trained by exercises that never
+      take the shoulder into an overhead position — it's the head most
+      responsible for the visible "horseshoe" shape some lifters lack
+      when they describe the back of the arm as having no depth.
+    anatomical_targets:
+      - triceps brachii, long head
+      - triceps brachii, lateral and medial heads
+    common_user_phrasings:
+      - "My triceps have no depth from behind."
+      - "My arms look thin from behind even though they look okay from the front."
+      - "The back of my arm looks flat."

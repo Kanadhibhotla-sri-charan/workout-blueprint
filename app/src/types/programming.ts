@@ -77,9 +77,22 @@ export interface IntensityTechnique {
   suitable_when_fatigue_cost_at_most: 'low' | 'medium' | 'high';
 }
 
+export interface AestheticOutcome {
+  id: string;
+  display_name: string;
+  region: string;
+  viewpoint: string;
+  visual_description: string;
+  physique_targets: string[];
+  technical_explanation?: string;
+  anatomical_targets?: string[];
+  common_user_phrasings?: string[];
+}
+
 export interface ProgrammingData {
   physiqueTargets: PhysiqueTarget[];
   globalPrinciples: GlobalPrinciples;
   repRanges: RepRanges;
   intensityTechniques: IntensityTechnique[];
+  aestheticOutcomes: AestheticOutcome[];
 }

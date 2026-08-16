@@ -11,12 +11,19 @@ const {
   REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
 } = require('./taxonomy');
-const { loadPhysiqueTargets } = require('./load-programming');
+const { loadPhysiqueTargets, loadAestheticOutcomes } = require('./load-programming');
 
 // Loaded once at module scope, same treatment as taxonomy.js's constants —
 // data/programming/physique-targets.yaml is the authoritative taxonomy per
 // ADR 0003, so every exercise's physique_targets entries must resolve here.
 const { targetIds: PHYSIQUE_TARGET_IDS, fileErrors: PHYSIQUE_TARGET_FILE_ERRORS } = loadPhysiqueTargets();
+
+// data/programming/aesthetic-outcomes.yaml (revised Phase 4, §28-29) is the
+// authoritative aesthetic-outcome taxonomy. Each outcome's physique_targets
+// must resolve to a real id in physique-targets.yaml — the aesthetic layer
+// references targets, it does not redefine them.
+const { outcomes: AESTHETIC_OUTCOMES, fileErrors: AESTHETIC_OUTCOME_FILE_ERRORS } = loadAestheticOutcomes();
+const AESTHETIC_OUTCOME_REQUIRED_STRING_FIELDS = ['id', 'display_name', 'region', 'viewpoint', 'visual_description'];
 
 const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -52,6 +59,46 @@ function validate(records) {
       message: `data/programming/physique-targets.yaml :: ${fileError}`,
     });
   }
+
+  for (const fileError of AESTHETIC_OUTCOME_FILE_ERRORS) {
+    issues.push({
+      record: null,
+      category: 'programming-data',
+      message: `data/programming/aesthetic-outcomes.yaml :: ${fileError}`,
+    });
+  }
+
+  // --- Aesthetic outcomes: required fields + physique_targets referential
+  // integrity (§28-29 of the revised Phase 4 spec). Not tied to any one
+  // exercise record, so reported standalone like the physique-targets file
+  // errors above.
+  AESTHETIC_OUTCOMES.forEach((outcome, index) => {
+    const label = outcome && typeof outcome.id === 'string' ? outcome.id : `index ${index}`;
+    const reportOutcome = (message) => {
+      issues.push({
+        record: null,
+        category: 'programming-data',
+        message: `data/programming/aesthetic-outcomes.yaml :: ${label} :: ${message}`,
+      });
+    };
+
+    for (const field of AESTHETIC_OUTCOME_REQUIRED_STRING_FIELDS) {
+      const value = outcome ? outcome[field] : undefined;
+      if (typeof value !== 'string' || value.trim() === '') {
+        reportOutcome(`"${field}" must be a non-empty string, got ${JSON.stringify(value)}`);
+      }
+    }
+
+    if (!isNonEmptyList(outcome && outcome.physique_targets)) {
+      reportOutcome(`"physique_targets" is required and must be a non-empty list, got ${JSON.stringify(outcome && outcome.physique_targets)}`);
+    } else {
+      for (const targetId of outcome.physique_targets) {
+        if (typeof targetId !== 'string' || !PHYSIQUE_TARGET_IDS.has(targetId)) {
+          reportOutcome(`"physique_targets" references unknown target id ${JSON.stringify(targetId)} — not defined in data/programming/physique-targets.yaml`);
+        }
+      }
+    }
+  });
 
   const allIds = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
   const idCounts = new Map();

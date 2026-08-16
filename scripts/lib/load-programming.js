@@ -45,4 +45,35 @@ function loadPhysiqueTargets() {
   return { targetIds, fileErrors };
 }
 
-module.exports = { loadPhysiqueTargets, PROGRAMMING_DIR };
+// Loads data/programming/aesthetic-outcomes.yaml. Same treatment as
+// loadPhysiqueTargets above — the root validator needs each outcome's id
+// (for future exercise/UI cross-references) and its physique_targets list,
+// to check referential integrity against physique-targets.yaml (§29 of the
+// revised Phase 4 spec: aesthetic outcomes reference targets, they don't
+// redefine them).
+function loadAestheticOutcomes() {
+  const file = path.join(PROGRAMMING_DIR, 'aesthetic-outcomes.yaml');
+  const relFile = path.relative(process.cwd(), file);
+
+  if (!fs.existsSync(file)) {
+    return { outcomes: [], fileErrors: [`${relFile}: file not found`] };
+  }
+
+  let data;
+  try {
+    data = yaml.load(fs.readFileSync(file, 'utf8'));
+  } catch (err) {
+    return { outcomes: [], fileErrors: [`${relFile}: malformed YAML — ${err.message}`] };
+  }
+
+  if (!data || !Array.isArray(data.outcomes)) {
+    return {
+      outcomes: [],
+      fileErrors: [`${relFile}: expected a top-level "outcomes" list`],
+    };
+  }
+
+  return { outcomes: data.outcomes, fileErrors: [] };
+}
+
+module.exports = { loadPhysiqueTargets, loadAestheticOutcomes, PROGRAMMING_DIR };

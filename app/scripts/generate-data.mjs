@@ -65,6 +65,7 @@ function main() {
     globalPrinciples: loadYaml('global-principles.yaml'),
     repRanges: loadYaml('rep-ranges.yaml'),
     intensityTechniques: loadYaml('intensity-techniques.yaml').techniques,
+    aestheticOutcomes: loadYaml('aesthetic-outcomes.yaml').outcomes,
   };
 
   mkdirSync(OUTPUT_DIR, { recursive: true });
