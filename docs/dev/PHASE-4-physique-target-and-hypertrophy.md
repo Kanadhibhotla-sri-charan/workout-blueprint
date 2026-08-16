@@ -86,4 +86,40 @@ None from this checkpoint.
 
 ## Expand taxonomy to remaining defensible targets
 
-*Not yet started.*
+**Date:** 2026-08-16
+
+**Trigger:** golden test case passed; architect's explicit instruction to proceed with the pre-approved target list once it did.
+
+### What changed
+
+- **`data/programming/physique-targets.yaml`** — 14 new target definitions added (15 total with Upper Pec), covering exactly the architect-approved list and nothing beyond it:
+  - Chest: `mid-pec`, `lower-pec` (Upper Pec already existed)
+  - Shoulders: `front-delt`, `side-delt`, `rear-delt`
+  - Back: `lat-width`, `back-thickness`, `upper-traps`
+  - Arms: `biceps`, `brachialis-arm-thickness`, `triceps`, `triceps-long-head` (a sub-target of `triceps` — the data explicitly supports it via `evidence_notes` calling the long-head bias "strongly supported by hypertrophy research" on two records, distinct from the weaker "partial stretch" case on a third that stays general-triceps-only)
+  - Core: `obliques`, `rectus-abdominis` — **`lower-abs` deliberately not added**, per the architect's explicit exclusion (ADR 0003).
+  - No targets added for quads, hamstrings, calves, hips, forearms, or neck — not on the approved list, and adding them would be the scope creep the spec's final guardrail warns against.
+- **69 exercise records tagged** with `physique_targets` across `chest.yaml` (13), `shoulders.yaml` (12), `back.yaml` (15), `arms.yaml` (20 — every record in the file), and `core.yaml` (9 — every record in the file), re-deriving each mapping from the same real-data audit method used for Upper Pec (primary_targets annotations, not invented). Two genuine multi-target cases preserved, per the architect's explicit instruction not to collapse them:
+  - `seated-cable-row`, `t-bar-row`, `single-arm-dumbbell-row` → both `lat-width` and `back-thickness` (their own `primary_targets` list both `lats` and `mid-back`/`rhomboids`).
+  - `cable-fly` → all three chest targets (`upper-pec`, `mid-pec`, `lower-pec`) — its own record already states the bias is pulley-height-adjustable across all three, so tagging it narrowly would have been less accurate than the multi-tag.
+- **`app/src/data/physique-targets.test.ts`** (new) — generic, taxonomy-size-independent integrity tests: every defined target resolves and has non-empty content; every exercise's `physique_targets` entries resolve to a real target; every tagged exercise's target shares the target's parent region; every target has at least one exercise; `lower-abs` is confirmed absent; the two multi-target cases above are confirmed preserved.
+- Added 3 more `decisionEngine.test.ts` cases exercising a newly-expanded target end-to-end (not just data integrity): `side-delt` goal-only, `biceps` replace-exercise (stays within `elbow flexion`), and confirming `back-thickness` vs. `lat-width` resolve to genuinely different candidate pools.
+
+### Verified
+
+- Every tagging insertion applied via a scripted, backup-and-diff-verified pass (same discipline as the arms.yaml bug fix and the original Upper Pec tagging) — `diff` against a pre-edit backup for all 5 touched files confirmed only the intended `physique_targets` lines were added, nothing else changed.
+- `npm run validate-data`: PASS, 123/123 records, 0 issues — every one of the 69 new tags resolves against the expanded `physique-targets.yaml`.
+- Python cross-check: 123 unique ids, no duplicates, no unexpected keys; confirms 75/123 records now carry `physique_targets` (6 from the Upper Pec slice + 69 from this pass).
+- `npx tsc -b`, `npm run build`, and `npm run test`: all clean — **75 tests across 12 files** (up from 64 after the Upper Pec slice).
+- Root `npm run validate-data` re-confirmed after the app-side test run, matching the project's standard pre-commit discipline.
+
+### Decisions made
+
+- **`triceps-long-head` added as a sub-target of `triceps`, not a standalone target** — matches the spec's own taxonomy sketch (`Triceps → Long-head emphasis` as a nested item) and is directly grounded in existing `evidence_notes`, not invented. Every record tagged `triceps-long-head` is also tagged plain `triceps` (verified by test) — a long-head-emphasis exercise is still a triceps exercise, just a more specific one.
+- **No equivalent biceps head-bias sub-targets added**, even though the data has the same long-/short-head annotation pattern for biceps that motivated `triceps-long-head`. The architect's approved list named head emphasis explicitly for triceps only ("Triceps / relevant head emphasis where supported") and just "Biceps" with no qualifier — followed the approved list literally rather than extending it by analogy, per the final guardrail against unrequested scope expansion.
+- **cable-band-external-rotation and push-up-plus (shoulders) were left untagged** — their primary targets (external rotators, serratus anterior) aren't physique-visible targets in the sense the spec's taxonomy names (they're stability/scapular-mechanics exercises), and no target on the approved list fits them. Left as body-region-only, same as before this checkpoint.
+- **conventional-deadlift and back-extension-45-spinal-dominant (back) were left untagged** — spinal erectors isn't one of the approved back targets (lat width, back thickness, upper traps); tagging them would mean inventing a target the architect didn't approve.
+
+### Pending decisions
+
+None from this checkpoint. Taxonomy now covers every target on the architect's approved expansion list.

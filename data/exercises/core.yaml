@@ -18,6 +18,7 @@
   body_regions: [core]
   primary_targets: [rectus abdominis]
   secondary_targets: [obliques]
+  physique_targets: [rectus-abdominis]
   movement_patterns: [trunk flexion]
   equipment: [cable]
   exercise_type: isolation
@@ -72,6 +73,7 @@
   body_regions: [core]
   primary_targets: [rectus abdominis]
   secondary_targets: [obliques]
+  physique_targets: [rectus-abdominis]
   movement_patterns: [trunk flexion]
   equipment: [machine]
   exercise_type: isolation
@@ -123,6 +125,7 @@
   body_regions: [core]
   primary_targets: [hip flexors, rectus abdominis]
   secondary_targets: [obliques, grip]
+  physique_targets: [rectus-abdominis]
   movement_patterns: [hip flexion, trunk flexion]
   equipment: [pull-up bar]
   exercise_type: compound
@@ -177,6 +180,7 @@
   body_regions: [core]
   primary_targets: [rectus abdominis, transverse abdominis]
   secondary_targets: [glutes, shoulders]
+  physique_targets: [rectus-abdominis]
   movement_patterns: [anti-extension isometric]
   equipment: [bodyweight]
   exercise_type: isolation
@@ -231,6 +235,7 @@
   body_regions: [core]
   primary_targets: [rectus abdominis]
   secondary_targets: [lats, hip flexors, shoulders]
+  physique_targets: [rectus-abdominis]
   movement_patterns: [anti-extension through range]
   equipment: [ab wheel]
   exercise_type: isolation
@@ -286,6 +291,7 @@
   body_regions: [core]
   primary_targets: [obliques]
   secondary_targets: [rectus abdominis, hip musculature]
+  physique_targets: [obliques]
   movement_patterns: [anti-rotation isometric]
   equipment: [band, cable]
   exercise_type: isolation
@@ -335,6 +341,7 @@
   body_regions: [core]
   primary_targets: [obliques, quadratus lumborum]
   secondary_targets: [grip, traps]
+  physique_targets: [obliques]
   movement_patterns: [anti-lateral flexion under load]
   equipment: [dumbbell, kettlebell]
   exercise_type: isolation
@@ -389,6 +396,7 @@
   body_regions: [core]
   primary_targets: [obliques]
   secondary_targets: [rectus abdominis, hip musculature]
+  physique_targets: [obliques]
   movement_patterns: [trunk rotation]
   equipment: [cable]
   exercise_type: isolation
@@ -442,6 +450,7 @@
   body_regions: [core]
   primary_targets: [obliques]
   secondary_targets: [rectus abdominis, hip musculature]
+  physique_targets: [obliques]
   movement_patterns: [trunk rotation]
   equipment: [dumbbell, plate, medicine ball]
   exercise_type: isolation

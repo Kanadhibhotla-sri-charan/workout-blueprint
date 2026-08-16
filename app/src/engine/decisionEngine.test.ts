@@ -164,3 +164,53 @@ describe('makeRecommendation — Phase 4 physique-target awareness', () => {
     }
   });
 });
+
+describe('makeRecommendation — taxonomy expansion beyond Upper Pec', () => {
+  it('side-delt (a newly expanded target) resolves and stays within the shoulders region', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'shoulders', physiqueTarget: 'side-delt', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('side-delt');
+      expect(result.bestFit.physique_targets).toContain('side-delt');
+    }
+  });
+
+  it('replace-exercise for a biceps target stays within the same movement pattern', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        bodyRegion: 'arms',
+        physiqueTarget: 'biceps',
+        goal: 'replace-exercise',
+        currentExerciseId: 'dumbbell-curl',
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('biceps');
+      expect(result.bestFit.id).not.toBe('dumbbell-curl');
+      expect(result.bestFit.movement_patterns[0]).toBe('elbow flexion');
+    }
+  });
+
+  it('back-thickness and lat-width are distinct targets that narrow to different candidate pools', () => {
+    const thickness = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'back', physiqueTarget: 'back-thickness', goal: 'build-base' },
+      exercises
+    );
+    const width = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'back', physiqueTarget: 'lat-width', goal: 'build-base' },
+      exercises
+    );
+    expect(thickness.status).toBe('ok');
+    expect(width.status).toBe('ok');
+    if (thickness.status === 'ok' && width.status === 'ok') {
+      expect(thickness.bestFit.physique_targets).toContain('back-thickness');
+      expect(width.bestFit.physique_targets).toContain('lat-width');
+    }
+  });
+});

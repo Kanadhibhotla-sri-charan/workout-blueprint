@@ -7,16 +7,21 @@
 # ids defined here. Keeping the two directions separate avoids a second,
 # independently-drifting taxonomy — see ADR 0003 for the full rationale.
 #
-# Populated incrementally by taxonomy expansion, not all at once. Per the
-# architect's Phase 4 approval memo: Upper Pec only for the 4A/4B/4D/4E/4F
-# vertical slice; the remaining derived targets (chest's other two, front/
-# side/rear delts, lat width, back thickness, upper traps, biceps,
-# brachialis/arm thickness, triceps head emphasis, core targets actually
-# supported by data) are added only after the Upper Pec golden test case
-# (docs/dev/PHASE-4-physique-target-and-hypertrophy.md) passes. Lower Abs
-# is explicitly excluded from v1 — the data does not support a defensible
-# upper/lower rectus-abdominis split (see ADR 0003) — and is not to be
-# added without a future evidence pass establishing one.
+# Populated incrementally by taxonomy expansion. The Upper Pec-only vertical
+# slice (4A/4B/4D/4E/4F) passed its golden test case
+# (docs/dev/reports/PHASE-4-GOLDEN-TEST-CASE.md); this file now carries the
+# rest of the targets the architect approved for expansion: the other two
+# chest targets, front/side/rear delts, lat width, back thickness, upper
+# traps, biceps, brachialis/arm thickness, triceps (plus a long-head-
+# emphasis sub-target the data explicitly supports via evidence_notes), and
+# the two core targets the data actually supports. Lower Abs remains
+# explicitly excluded — the data does not support a defensible upper/lower
+# rectus-abdominis split (see ADR 0003) — and is not to be added without a
+# future evidence pass establishing one. Quads, hamstrings, calves, hips,
+# forearms, and neck are not represented here; the architect's approved
+# expansion list didn't include them, and adding targets beyond what was
+# approved would be exactly the scope creep the Phase 4 spec's final
+# guardrail warns against.
 
 targets:
   - id: upper-pec
@@ -30,3 +35,167 @@ targets:
       just below the collarbone that closes the gap between shoulder and
       chest, producing a squared-off upper-chest line in a t-shirt or from
       the front, rather than the chest appearing to start lower down.
+
+  - id: mid-pec
+    name: Mid Chest
+    parent_region: chest
+    definition: >-
+      The sternocostal (mid) portion of the pectoralis major — the largest
+      portion of the muscle, and the part loaded by default in a flat-angle
+      press.
+    physique_outcome: >-
+      Visually, this is the main slab of chest mass and depth seen from the
+      front — the bulk of what makes the chest look "full" and thick in a
+      flat-on view, distinct from the upper-chest shelf or the lower/outer
+      sweep near the armpit.
+
+  - id: lower-pec
+    name: Lower Pec
+    parent_region: chest
+    definition: >-
+      The lower/costal portion of the pectoralis major, most commonly
+      biased via a decline angle or a forward-leaning dip.
+    physique_outcome: >-
+      Visually, this shows up as definition along the lower border of the
+      chest and the transition line into the ribs — most visible from the
+      side or in a lower/decline-angle view, distinct from the upper-chest
+      shelf.
+
+  - id: front-delt
+    name: Front Delt
+    parent_region: shoulders
+    definition: >-
+      The anterior (front) head of the deltoid, the primary driver of
+      overhead and forward-pressing movements.
+    physique_outcome: >-
+      Visually, this adds roundness to the front of the shoulder viewed
+      from the front — though it's already heavily worked by most chest
+      pressing, so it's rarely the limiting factor in shoulder development.
+
+  - id: side-delt
+    name: Side Delt
+    parent_region: shoulders
+    definition: >-
+      The lateral (side) head of the deltoid, trained through abduction
+      movements like a lateral raise.
+    physique_outcome: >-
+      Visually, this is the single biggest lever for apparent shoulder
+      width — the "cap" that makes shoulders look wide from the front and
+      creates the visual taper from shoulder to waist.
+
+  - id: rear-delt
+    name: Rear Delt
+    parent_region: shoulders
+    definition: >-
+      The posterior (rear) head of the deltoid, trained through
+      horizontal-abduction/reverse-fly-style movements.
+    physique_outcome: >-
+      Visually, this adds width and roundness to the shoulder as seen from
+      behind or the side, and contributes to a balanced, three-dimensional
+      shoulder shape rather than a front-heavy look.
+
+  - id: lat-width
+    name: Lat Width
+    parent_region: back
+    definition: >-
+      The latissimus dorsi, trained primarily through vertical-pull
+      (pull-up/pulldown) movements and some horizontal-pull movements.
+    physique_outcome: >-
+      Visually, this is the primary driver of back width — the V-taper
+      look from the shoulders down to the waist, most visible from behind
+      or in a relaxed-arm front pose.
+
+  - id: back-thickness
+    name: Back Thickness
+    parent_region: back
+    definition: >-
+      The mid-back musculature — rhomboids and mid/lower trapezius —
+      trained primarily through horizontal-pull (row) movements.
+    physique_outcome: >-
+      Visually, this adds depth and thickness to the back as seen from the
+      side, and definition between the shoulder blades from behind —
+      distinct from lat width, which is about the outline rather than the
+      depth.
+
+  - id: upper-traps
+    name: Upper Traps
+    parent_region: back
+    definition: >-
+      The upper trapezius, trained through shrugging and
+      shoulder-elevation movements.
+    physique_outcome: >-
+      Visually, this adds height and slope to the trapezius where the neck
+      meets the shoulders, contributing to a thicker-necked, more filled-
+      out upper-back silhouette from the front and behind.
+
+  - id: biceps
+    name: Biceps
+    parent_region: arms
+    definition: >-
+      The biceps brachii, trained through elbow-flexion movements with the
+      forearm supinated or neutral.
+    physique_outcome: >-
+      Visually, this is the classic "arm flex" muscle — peak height and
+      overall mass on the front of the upper arm, most visible with the
+      elbow bent.
+
+  - id: brachialis-arm-thickness
+    name: Brachialis / Arm Thickness
+    parent_region: arms
+    definition: >-
+      The brachialis (and brachioradialis), trained through neutral-grip
+      elbow-flexion movements like a hammer curl.
+    physique_outcome: >-
+      Visually, this sits underneath the biceps and pushes it outward,
+      adding to overall arm thickness as seen from the side — distinct
+      from biceps peak, which is about the front-on flex.
+
+  - id: triceps
+    name: Triceps
+    parent_region: arms
+    definition: >-
+      The triceps brachii (all three heads), trained through
+      elbow-extension movements.
+    physique_outcome: >-
+      Visually, the triceps make up roughly two-thirds of upper-arm size —
+      more than the biceps — so triceps development has an outsized effect
+      on overall arm thickness, most visible from the side and back of the
+      arm.
+
+  - id: triceps-long-head
+    name: Triceps — Long-Head Emphasis
+    parent_region: arms
+    definition: >-
+      The long head of the triceps specifically, which crosses the
+      shoulder joint and is more directly loaded when the arm is trained
+      in an overhead position, not just extended at the side.
+    physique_outcome: >-
+      Visually, the long head makes up the largest share of triceps mass,
+      running along the inner/rear portion of the upper arm — the part
+      most responsible for the "horseshoe" shape some lifters emphasize,
+      and the part most easily under-trained by exercises that never take
+      the shoulder into an overhead position.
+
+  - id: obliques
+    name: Obliques
+    parent_region: core
+    definition: >-
+      The internal and external obliques, trained through anti-rotation,
+      rotation, and lateral-flexion-resisting movements.
+    physique_outcome: >-
+      Visually, developed obliques add definition to the sides of the
+      waist — visible as the diagonal lines framing the abdomen — though
+      this is also strongly influenced by body-fat level, not training
+      alone.
+
+  - id: rectus-abdominis
+    name: Abs (Rectus Abdominis)
+    parent_region: core
+    definition: >-
+      The rectus abdominis, the muscle responsible for the "six-pack"
+      look, trained through spinal- and hip-flexion movements that
+      shorten the distance between the ribcage and pelvis.
+    physique_outcome: >-
+      Visually, this is the classic six-pack definition down the front of
+      the midline — though, like obliques, visibility depends heavily on
+      body-fat level, not just how developed the muscle is.

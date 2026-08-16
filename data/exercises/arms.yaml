@@ -26,6 +26,7 @@
   body_regions: [arms]
   primary_targets: ["biceps (both heads, roughly even at a neutral shoulder position)"]
   secondary_targets: [brachialis, forearms]
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion]
   equipment: [barbell, ez-bar]
   exercise_type: isolation
@@ -79,6 +80,7 @@
   body_regions: [arms]
   primary_targets: ["biceps (both heads, roughly even at a neutral shoulder position)"]
   secondary_targets: [brachialis, forearms]
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion]
   equipment: [dumbbell]
   exercise_type: isolation
@@ -129,6 +131,7 @@
   body_regions: [arms]
   primary_targets: ["biceps (long-head-biased, EMG-supported)"]
   secondary_targets: []
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion, lengthened shoulder position]
   equipment: [dumbbell, incline bench]
   exercise_type: isolation
@@ -207,6 +210,7 @@
   body_regions: [arms]
   primary_targets: ["biceps (short-head-biased, EMG-supported)"]
   secondary_targets: [brachialis]
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion, shortened shoulder position]
   equipment: [barbell, ez-bar, dumbbell, preacher bench]
   exercise_type: isolation
@@ -273,6 +277,7 @@
   body_regions: [arms]
   primary_targets: ["biceps (short-head-biased, EMG-supported)"]
   secondary_targets: [brachialis]
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion, shortened shoulder position]
   equipment: [machine]
   exercise_type: isolation
@@ -328,6 +333,7 @@
   body_regions: [arms]
   primary_targets: [brachialis, brachioradialis]
   secondary_targets: [biceps]
+  physique_targets: [brachialis-arm-thickness]
   movement_patterns: [elbow flexion, neutral grip]
   equipment: [dumbbell]
   exercise_type: isolation
@@ -386,6 +392,7 @@
   body_regions: [arms]
   primary_targets: [brachialis, brachioradialis]
   secondary_targets: [biceps]
+  physique_targets: [brachialis-arm-thickness]
   movement_patterns: [elbow flexion, neutral grip]
   equipment: [cable, rope attachment]
   exercise_type: isolation
@@ -437,6 +444,7 @@
   body_regions: [arms]
   primary_targets: [brachialis, brachioradialis]
   secondary_targets: [biceps]
+  physique_targets: [brachialis-arm-thickness]
   movement_patterns: [elbow flexion, neutral grip, diagonal path]
   equipment: [dumbbell]
   exercise_type: isolation
@@ -488,6 +496,7 @@
   body_regions: [arms]
   primary_targets: [biceps (both heads)]
   secondary_targets: [brachialis]
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion]
   equipment: [cable]
   exercise_type: isolation
@@ -539,6 +548,7 @@
   body_regions: [arms]
   primary_targets: [biceps (head bias contested — see evidence_notes)]
   secondary_targets: []
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion, elbows drawn behind the torso]
   equipment: [barbell, ez-bar]
   exercise_type: isolation
@@ -603,6 +613,7 @@
   body_regions: [arms]
   primary_targets: [biceps (head bias contested — see evidence_notes)]
   secondary_targets: []
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion, elbows drawn behind the torso]
   equipment: [cable]
   exercise_type: isolation
@@ -659,6 +670,7 @@
   body_regions: [arms]
   primary_targets: [biceps (concentric half)]
   secondary_targets: [brachioradialis, wrist extensors (eccentric half)]
+  physique_targets: [biceps]
   movement_patterns: [elbow flexion, grip rotation from supinated to pronated]
   equipment: [dumbbell]
   exercise_type: isolation
@@ -714,6 +726,7 @@
   body_regions: [arms]
   primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: [chest, anterior deltoids]
+  physique_targets: [triceps]
   movement_patterns: [horizontal press]
   equipment: [barbell, smith machine]
   exercise_type: compound
@@ -784,6 +797,7 @@
   body_regions: [arms]
   primary_targets: ["triceps (long-head-biased, strongly supported by hypertrophy research)"]
   secondary_targets: []
+  physique_targets: [triceps, triceps-long-head]
   movement_patterns: [elbow extension, shoulder flexed (overhead)]
   equipment: [barbell, ez-bar, dumbbell]
   exercise_type: isolation
@@ -863,6 +877,7 @@
   body_regions: [arms]
   primary_targets: ["triceps (partial long-head stretch, less than overhead, more than a pushdown)"]
   secondary_targets: []
+  physique_targets: [triceps]
   movement_patterns: [elbow extension]
   equipment: [barbell, ez-bar, dumbbell]
   exercise_type: isolation
@@ -925,6 +940,7 @@
   body_regions: [arms]
   primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: [anterior deltoids]
+  physique_targets: [triceps]
   movement_patterns: [elbow extension within a vertical-to-horizontal press]
   equipment: [dip bars, bodyweight]
   exercise_type: compound
@@ -982,6 +998,7 @@
   body_regions: [arms]
   primary_targets: [triceps (all three heads — no evidence of a lateral-head-specific bias; see evidence_notes)]
   secondary_targets: []
+  physique_targets: [triceps]
   movement_patterns: [elbow extension]
   equipment: [cable]
   exercise_type: isolation
@@ -1046,6 +1063,7 @@
   body_regions: [arms]
   primary_targets: [triceps (all three heads — no evidence of a lateral-head-specific bias; see evidence_notes)]
   secondary_targets: []
+  physique_targets: [triceps]
   movement_patterns: [elbow extension]
   equipment: [machine]
   exercise_type: isolation
@@ -1101,6 +1119,7 @@
   body_regions: [arms]
   primary_targets: [triceps (all three heads — no evidence of a differential lateral/medial bias; see evidence_notes)]
   secondary_targets: []
+  physique_targets: [triceps]
   movement_patterns: [elbow extension, shoulder held in extension]
   equipment: [dumbbell, cable]
   exercise_type: isolation
@@ -1162,6 +1181,7 @@
   body_regions: [arms]
   primary_targets: ["triceps (long-head-biased, strongly supported by hypertrophy research)"]
   secondary_targets: []
+  physique_targets: [triceps, triceps-long-head]
   movement_patterns: [elbow extension, shoulder flexed (overhead), torso leaning forward away from the stack]
   equipment: [cable]
   exercise_type: isolation

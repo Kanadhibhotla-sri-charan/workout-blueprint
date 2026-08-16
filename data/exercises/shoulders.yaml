@@ -14,6 +14,7 @@
   body_regions: [shoulders]
   primary_targets: [anterior deltoids]
   secondary_targets: [triceps, upper chest, trunk musculature]
+  physique_targets: [front-delt]
   movement_patterns: [vertical press]
   equipment: [barbell, dumbbell]
   exercise_type: compound
@@ -75,6 +76,7 @@
   body_regions: [shoulders]
   primary_targets: [anterior deltoids]
   secondary_targets: [triceps]
+  physique_targets: [front-delt]
   movement_patterns: [vertical press]
   equipment: [smith machine]
   exercise_type: compound
@@ -129,6 +131,7 @@
   body_regions: [shoulders]
   primary_targets: [anterior deltoids]
   secondary_targets: [triceps]
+  physique_targets: [front-delt]
   movement_patterns: [vertical press]
   equipment: [cable]
   exercise_type: compound
@@ -181,6 +184,7 @@
   body_regions: [shoulders]
   primary_targets: [anterior deltoids]
   secondary_targets: [triceps]
+  physique_targets: [front-delt]
   movement_patterns: [vertical press]
   equipment: [machine]
   exercise_type: compound
@@ -234,6 +238,7 @@
   body_regions: [shoulders]
   primary_targets: [lateral deltoids]
   secondary_targets: []
+  physique_targets: [side-delt]
   movement_patterns: [shoulder abduction]
   equipment: [dumbbell]
   exercise_type: isolation
@@ -291,6 +296,7 @@
   body_regions: [shoulders]
   primary_targets: [lateral deltoids]
   secondary_targets: []
+  physique_targets: [side-delt]
   movement_patterns: [shoulder abduction]
   equipment: [cable]
   exercise_type: isolation
@@ -348,6 +354,7 @@
   body_regions: [shoulders]
   primary_targets: [lateral deltoids]
   secondary_targets: []
+  physique_targets: [side-delt]
   movement_patterns: [shoulder abduction]
   equipment: [machine]
   exercise_type: isolation
@@ -400,6 +407,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids]
   secondary_targets: [mid-back]
+  physique_targets: [rear-delt]
   movement_patterns: [shoulder horizontal abduction]
   equipment: [dumbbell, machine]
   exercise_type: isolation
@@ -470,6 +478,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids]
   secondary_targets: [mid-back]
+  physique_targets: [rear-delt]
   movement_patterns: [shoulder horizontal abduction]
   equipment: [machine]
   exercise_type: isolation
@@ -523,6 +532,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids]
   secondary_targets: [mid-back]
+  physique_targets: [rear-delt]
   movement_patterns: [shoulder horizontal abduction, elbow flexion]
   equipment: [cable]
   exercise_type: isolation
@@ -581,6 +591,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids]
   secondary_targets: [mid-back]
+  physique_targets: [rear-delt]
   movement_patterns: [shoulder extension, horizontal abduction, external rotation at the top]
   equipment: [dumbbell, bench]
   exercise_type: isolation
@@ -634,6 +645,7 @@
   body_regions: [shoulders]
   primary_targets: [posterior deltoids, mid/lower trapezius]
   secondary_targets: [external rotators]
+  physique_targets: [rear-delt]
   movement_patterns: [shoulder horizontal abduction, external rotation]
   equipment: [cable, band]
   exercise_type: isolation
