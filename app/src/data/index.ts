@@ -15,4 +15,18 @@ export function getExercisesByBodyRegion(region: string): Exercise[] {
   return exercises.filter((exercise) => exercise.body_regions.includes(region));
 }
 
-export const bodyRegions: string[] = [...new Set(exercises.flatMap((e) => e.body_regions))].sort();
+function uniqueSorted(values: string[]): string[] {
+  return [...new Set(values)].sort();
+}
+
+export const bodyRegions: string[] = uniqueSorted(exercises.flatMap((e) => e.body_regions));
+
+// Filter/search option lists, derived from the live dataset rather than a
+// separately hand-maintained vocabulary — if the data changes, the filters
+// available in the UI change with it automatically.
+export const equipmentOptions: string[] = uniqueSorted(exercises.flatMap((e) => e.equipment));
+export const coverageCategoryOptions: string[] = uniqueSorted(
+  exercises.flatMap((e) => e.coverage_categories)
+);
+export const exerciseTypeOptions: string[] = uniqueSorted(exercises.map((e) => e.exercise_type));
+export const lateralityOptions: string[] = uniqueSorted(exercises.map((e) => e.laterality));

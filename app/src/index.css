@@ -193,6 +193,27 @@ select {
   margin-top: var(--space-2);
 }
 
+.home-search {
+  margin-bottom: var(--space-6);
+  max-width: 480px;
+}
+
+.home-search label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.home-search-row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.home-search-row input {
+  flex: 1;
+  min-width: 0;
+}
+
 .region-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -243,6 +264,54 @@ select {
 .empty-state {
   color: var(--text-muted);
   padding: var(--space-4) 0;
+}
+
+/* Search + filters (Exercise List page) */
+
+input[type='search'],
+input[type='text'],
+select {
+  width: 100%;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--text);
+}
+
+.search-box {
+  margin-bottom: var(--space-4);
+}
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  align-items: end;
+}
+
+@media (min-width: 640px) {
+  .filter-bar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.filter-field label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.filter-clear {
+  align-self: end;
 }
 
 .exercise-grid {

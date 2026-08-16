@@ -131,4 +131,33 @@ None from this checkpoint.
 
 ## 3E — Search + Filters
 
+**Date:** 2026-08-16
+
+### What changed
+
+- `src/utils/search.ts` — `searchExercises()`: plain substring matching (no semantic/fuzzy AI, per spec §11's explicit instruction) across exactly the fields §11 lists (name, summary, why this exists, body regions, primary/secondary targets, movement patterns, mirror effect, best-used-when, equipment). Every whitespace-separated term in the query must appear somewhere in that concatenated, lowercased text — not necessarily adjacent — so a two-word query like "upper chest" matches text that only has "upper-chest-biased" (hyphenated, not a literal substring of "upper chest") as well as text with the words apart.
+- `src/utils/filters.ts` — `applyFilters()`: the seven composable filter dimensions from §12 (region, equipment, exercise type, laterality, setup time, fatigue cost, coverage category), AND-combined, each a strict equality/membership predicate against a real field — no filter exists that doesn't map to one. `DEMAND_LEVELS` fixes the low/medium/high *display order* for the three-level fields (the one place an app-side constant was justified — it's schema structure, not exercise content).
+- `src/data/index.ts` extended with `equipmentOptions`, `coverageCategoryOptions`, `exerciseTypeOptions`, `lateralityOptions` — all derived from the live dataset (unique values actually present), same pattern as `bodyRegions` from 3C, so filter dropdowns can never drift from what the data actually contains.
+- `src/components/FilterBar.tsx` and `src/components/SearchBox.tsx` — the UI controls, native `<select>`/`<input type="search">` (semantic, keyboard-accessible without extra work, satisfying §20 baseline). `FilterBar` shows an active-filter count and a clear-all button once any filter is set.
+- `src/pages/ExerciseListPage.tsx` rebuilt to compose region, search text (`q`), and all seven filters entirely through URL query parameters (`useSearchParams`, `{ replace: true }` so typing in the search box doesn't flood browser history) — updates apply immediately on change, no submit step, matching §12's "the result should update immediately." A composed query updates the page heading, result count, and (per §23) a distinct empty-state message when a combination matches nothing, separate from the invalid-region fallback message from 3C.
+- `src/pages/HomePage.tsx` gets its third primary action — a real search box that navigates to `/exercises?q=...` — completing §8's three recommended actions (Explore, Decide, Search), deferred from 3C specifically until search existed to back it.
+
+### Verified
+
+- `npx tsc -b` and `npm run build` both clean.
+- **Visually verified with Playwright screenshots at 390×900** (mobile viewport): the empty filter bar; a text search for "upper chest" narrowing 123→9 results including `cable-fly` (matched via its "upper-biased" mirror-effect text, confirming the hyphen-insensitive multi-term matching works, not just literal-phrase matches); a **composed** filter — Region=Chest + Equipment=Cable + Type=Isolation + Fatigue=Low — narrowing to exactly **one** result, Cable Fly, which is the exact scenario spec §12's own example describes ("Chest + Cable + Isolation + Low fatigue"); the Home page's new search box; and a genuine no-results state (nonsense query) rendering a clear empty message instead of a blank page.
+
+### Decisions made
+
+- **Filter/search state lives entirely in the URL**, continuing the choice made in 3C rather than introducing component state now that there's more to track — every view in this checkpoint (a search, a single filter, a four-way composed filter) is a shareable, bookmarkable, back-button-able link with no extra work.
+- **AND-of-terms substring search over exact literal-phrase matching** — chosen because the dataset's own writing style hyphenates multi-word descriptors ("upper-chest-biased") in a way literal-phrase matching would miss for a natural two-word query. Still zero semantic/fuzzy logic, per the spec's explicit "does not need semantic AI" and per the user's Phase 3 approval note to keep matching deterministic, not vague/fuzzy — this is substring matching on structured text, not similarity scoring.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3F — Decision Engine v0.1
+
 *Not yet started.*
