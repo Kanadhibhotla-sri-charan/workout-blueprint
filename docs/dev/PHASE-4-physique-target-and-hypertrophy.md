@@ -46,4 +46,44 @@ None from this checkpoint.
 
 ## 4D/4E/4F — Upper Pec engine + UI slice
 
+**Date:** 2026-08-16
+
+### What changed
+
+- **App data pipeline extended** (`app/scripts/generate-data.mjs`): now also loads and bundles `data/programming/*.yaml` into `app/src/data/programming.generated.json`, alongside the existing exercises bundle — same mechanical-transform, validate-before-bundling discipline as Phase 3's 3B. New types (`app/src/types/programming.ts`) mirror the YAML shapes exactly; `Exercise` gains `physique_targets`.
+- **`app/src/engine/programmingEngine.ts`** — `resolveRepRange()` (default-plus-override lookup, exactly the architecture the architect approved in item 3), `buildProgramming()` (combines rep range, global RIR/frequency/progression, and intensity-technique selection into one result), with the fatigue-constraint interaction from approval memo item 5 implemented as a direct, deterministic rule: `maxFatigueCost === 'low'` moves weekly volume to its starting-point (lower) range, collapses frequency to its lower bound, and suppresses intensity-technique suggestions entirely.
+- **`engine/types.ts`**: `DecisionInput` gains `physiqueTarget: string | null` as an *additive* field (not a replacement for `bodyRegion`) — Phase 3's body-region-only selection keeps working unchanged when it's null. `DecisionResult`'s `'ok'` variant gains `target`, `visualObjective`, `stimulus`, and `programming`.
+- **`engine/decisionEngine.ts`**: Step 1 now resolves a physique target when given and falls back to body-region matching when the target has no curated exercises yet (taxonomy still expanding) — this is what lets the golden test case work today with only Upper Pec populated. `target`/`visualObjective` are populated based on whether the target genuinely drove candidate selection (see "decisions made" below, this was corrected mid-checkpoint), not on whether the specific final pick happens to carry that exact tag.
+- **`DecisionMakerPage.tsx`**: Step 1 becomes "What do you want to improve?" — a single select, grouped by region via `<optgroup>`, offering "All \<Region\>" plus any specific targets defined for that region. Generalizes automatically as the taxonomy grows; today only Chest's group has a second option (Upper Pec). Result view reordered to match spec §25 exactly: 🎯 Target → 👀 Visual objective → 🥇 Best fit/Why → 🧬 Stimulus → 📊 Programming → ⚡ Optional technique → 🥈 Alternative → ⚠️ Watch out → 🔄 Complements.
+- **Two real bugs found and fixed while building this, not just at test time:**
+  1. **Declared-complement validation was over-constrained.** `resolveComplements()`'s result was filtered against the narrow, target-tagged candidate pool — so Incline Dumbbell Press's own curated complement, Cable Fly, got silently discarded because Cable Fly isn't (yet) tagged `upper-pec`, even though it's a real, useful, data-grounded complement (its own record notes its bias is pulley-height-adjustable toward upper-chest). Fixed by validating declared complements/alternatives against a separate, broader region-level constraint pool (`regionCandidates` — equipment/fatigue/draft-filtered, but not target-narrowed) instead of the narrow target-matched `candidates`. Caught by building the actual golden scenario, not by inspection.
+  2. **Target/visualObjective were tied to the wrong thing.** The first implementation only populated `target`/`visualObjective` when the *specific recommended exercise* itself carried the target tag — which meant the golden scenario's own correct recommendation (Cable Fly, untagged) silently hid the "🎯 Target: Upper Pec" block the user had explicitly asked for. Fixed by tying `target`/`visualObjective` to whether the target *genuinely drove candidate selection* (had at least one curated exercise) rather than the final pick's own tags — matching spec §25's actual definition ("what the user is actually trying to improve"), not a stricter reading that happened to be easier to implement.
+
+### Verified
+
+- `npx tsc -b`, `npm run build`, and `npm run test` all clean — **64 tests across 11 files** (up from 50 at the end of Phase 3), including new `programmingEngine.test.ts` (rep-range bucketing per exercise characteristics, fatigue-constraint interaction, intensity-technique suppression) and new "Phase 4 physique-target awareness" cases in `decisionEngine.test.ts` and `DecisionMakerPage.test.tsx`.
+- **Visually verified** the new target-selection dropdown (grouped by region, Upper Pec nested under Chest) and confirmed the Explorer and Exercise Detail pages render identically to before this checkpoint — no Phase 3 regression, per the Definition of Done's explicit requirement.
+- Root `npm run validate-data`: still PASS, 123/123 records, 0 issues — no data files touched in this checkpoint beyond what 4A/4B already committed.
+- **The golden test case itself is documented and verified separately** — see [`docs/dev/reports/PHASE-4-GOLDEN-TEST-CASE.md`](reports/PHASE-4-GOLDEN-TEST-CASE.md), the architect-required acceptance gate before taxonomy expansion.
+
+### Decisions made
+
+- **`physiqueTarget` is additive to `DecisionInput`, never replacing `bodyRegion`** — the only way to satisfy "existing Phase 3 exercise selection still works" as a hard requirement rather than a best-effort goal; every existing Phase 3 test still passes completely unmodified in behavior (only the object literals needed a new field added to satisfy TypeScript).
+- **Target-tag narrowing applies to which exercises can be a *new* pick, not to whether a current exercise's own curated relationship is honored** — the two bugs above are really one underlying lesson: a physique target should narrow *what the engine searches from scratch*, but must not retroactively invalidate an already-curated, already-correct relationship (a `complements`/`alternatives` entry) just because the taxonomy hasn't tagged the other side of that relationship yet.
+- **Single-page form with a grouped `<optgroup>` select, not a separate target-drill-down screen** — same reasoning as 3G's single-page-form decision: the conceptual "browse a region, then optionally pick a specific target" flow from spec §6 doesn't require separate screens or extra navigation state, and the grouped-select approach scales cleanly as more targets are added without a UI rewrite.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## Golden test case — STOP gate
+
+**Result: PASS.** See [`docs/dev/reports/PHASE-4-GOLDEN-TEST-CASE.md`](reports/PHASE-4-GOLDEN-TEST-CASE.md) for the full scenario, real (not illustrative) engine output, and a checklist confirming all 8 required behaviors from the architect's approval memo. Per the architect's explicit instruction, taxonomy expansion beyond Upper Pec may now proceed.
+
+---
+
+## Expand taxonomy to remaining defensible targets
+
 *Not yet started.*

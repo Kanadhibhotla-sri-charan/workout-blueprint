@@ -12,10 +12,12 @@ dist
 dist-ssr
 *.local
 
-# Generated from data/exercises/*.yaml at build time (scripts/generate-data.mjs).
-# Never hand-edit — it's a mechanical transform of the canonical YAML, not a
-# second authored copy, and committing it would let it silently drift.
+# Generated from data/exercises/*.yaml and data/programming/*.yaml at build
+# time (scripts/generate-data.mjs). Never hand-edit — it's a mechanical
+# transform of the canonical YAML, not a second authored copy, and
+# committing it would let it silently drift.
 src/data/exercises.generated.json
+src/data/programming.generated.json
 
 # Editor directories and files
 .vscode/*

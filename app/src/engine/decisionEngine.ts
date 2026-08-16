@@ -4,6 +4,9 @@ import { isEquipmentFeasible } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
+import { buildProgramming } from './programmingEngine';
+import { getPhysiqueTargetById } from '../data';
+import type { PhysiqueTarget } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 
@@ -17,8 +20,23 @@ const MAX_COMPLEMENTS_SHOWN = 3;
 // structural-matching rules defined in DECISION-ENGINE-RULES.md before
 // this file was written.
 export function makeRecommendation(input: DecisionInput, allExercises: Exercise[]): DecisionResult {
-  // Step 1: filter by body region.
-  let candidates = allExercises.filter((exercise) => exercise.body_regions.includes(input.bodyRegion));
+  // Step 1: filter by physique target when given and it has curated
+  // exercises; otherwise (or when not given) fall back to body region —
+  // this is what keeps Phase 3's body-region-only selection working
+  // unchanged while the taxonomy is still being expanded target by target.
+  const resolvedTarget = input.physiqueTarget ? (getPhysiqueTargetById(input.physiqueTarget) ?? null) : null;
+  const targetMatches = resolvedTarget
+    ? allExercises.filter((exercise) => exercise.physique_targets?.includes(resolvedTarget.id))
+    : [];
+  // Only treated as "genuinely used" when it actually has curated
+  // exercises — a target with zero matches falls back to body-region
+  // selection (below) and must not claim target-awareness it didn't have
+  // (see buildResultFromRanked's target/visualObjective handling).
+  const target = targetMatches.length > 0 ? resolvedTarget : null;
+  let candidates =
+    targetMatches.length > 0
+      ? targetMatches
+      : allExercises.filter((exercise) => exercise.body_regions.includes(input.bodyRegion));
 
   // Step 4: remove records not ready to recommend (see
   // DECISION-ENGINE-RULES.md §2 rule 5 — same "not draft" gate used by the
@@ -31,13 +49,27 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
 
   // Step 6: setup/fatigue/stability/skill tolerance constraints ("at most"
   // the stated level — see constraints.ts).
-  candidates = candidates.filter(
-    (exercise) =>
-      meetsMaxDemand(exercise.setup_time, input.maxSetupTime) &&
-      meetsMaxDemand(exercise.fatigue_cost, input.maxFatigueCost) &&
-      meetsMaxDemand(exercise.stability_demand, input.maxStabilityDemand) &&
-      meetsMaxDemand(exercise.skill_demand, input.maxSkillDemand)
-  );
+  const meetsConstraints = (exercise: Exercise) =>
+    meetsMaxDemand(exercise.setup_time, input.maxSetupTime) &&
+    meetsMaxDemand(exercise.fatigue_cost, input.maxFatigueCost) &&
+    meetsMaxDemand(exercise.stability_demand, input.maxStabilityDemand) &&
+    meetsMaxDemand(exercise.skill_demand, input.maxSkillDemand);
+  candidates = candidates.filter(meetsConstraints);
+
+  // A separate, broader (region-only, never target-narrowed) constraint-
+  // filtered pool, used only to validate a *declared* complement/
+  // alternative a current exercise already points to. A curated
+  // `complements` entry (e.g. incline-dumbbell-press -> cable-fly) can
+  // legitimately sit outside a narrow physique-target tag — cable-fly
+  // isn't (yet) tagged upper-pec even though it's a real, useful upper-
+  // chest-relevant complement — so validating it against the narrow
+  // target-matched `candidates` would wrongly discard a real curated
+  // relationship just because the taxonomy hasn't caught up to it.
+  const regionCandidates = allExercises
+    .filter((exercise) => exercise.body_regions.includes(input.bodyRegion))
+    .filter((exercise) => exercise.review_status !== 'draft')
+    .filter((exercise) => isEquipmentFeasible(exercise, input.equipmentAvailable))
+    .filter(meetsConstraints);
 
   const currentExercise = input.currentExerciseId
     ? (allExercises.find((exercise) => exercise.id === input.currentExerciseId) ?? null)
@@ -66,13 +98,14 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
         `Fills approximately the same role as ${currentExercise!.name} — same ${exercise.movement_patterns[0]} movement, same ${humanize(exercise.exercise_type)} classification.`,
       () => `${currentExercise!.name} has no substitute meeting your constraints in this region.`,
       allExercises,
-      input.equipmentAvailable
+      input,
+      target
     );
   }
 
   if (input.goal === 'different-stimulus' || input.goal === 'complement-current') {
     const resolved = resolveComplements(currentExercise!, allExercises, input.equipmentAvailable).filter(
-      (exercise) => candidates.some((candidate) => candidate.id === exercise.id)
+      (exercise) => regionCandidates.some((candidate) => candidate.id === exercise.id)
     );
     return buildResultFromRanked(
       resolved,
@@ -80,7 +113,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
         `Adds a different stimulus alongside ${currentExercise!.name} — a ${exercise.movement_patterns[0]} movement rather than ${currentExercise!.name}'s ${currentExercise!.movement_patterns[0]}.`,
       () => `No exercise complementing ${currentExercise!.name} meets your constraints in this region.`,
       allExercises,
-      input.equipmentAvailable
+      input,
+      target
     );
   }
 
@@ -90,7 +124,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     (exercise) => explainGoalPick(input.goal, exercise),
     () => 'No exercise in this region meets every constraint you gave.',
     allExercises,
-    input.equipmentAvailable
+    input,
+    target
   );
 }
 
@@ -99,16 +134,28 @@ function buildResultFromRanked(
   explainBest: (exercise: Exercise) => string,
   noCandidatesReason: () => string,
   allExercises: Exercise[],
-  equipmentAvailable: string[] | null
+  input: DecisionInput,
+  target: PhysiqueTarget | null
 ): DecisionResult {
   const [bestFit, alt] = ranked;
   if (!bestFit) {
     return { status: 'no-candidates', reason: noCandidatesReason() };
   }
+  // The Target/Visual-objective block reflects what the user asked to
+  // improve (per spec §25: "what the user is actually trying to improve"),
+  // not whether this specific pick already carries that exact taxonomy
+  // tag — a genuinely relevant complement (e.g. Cable Fly, whose bias is
+  // setup-dependent) can be the right recommendation for a target before
+  // the taxonomy has caught up to tagging it. `target` is only non-null
+  // here when it actually drove candidate selection (see Step 1).
   return {
     status: 'ok',
+    target: target,
+    visualObjective: target ? target.physique_outcome : null,
     bestFit,
     why: explainBest(bestFit),
+    stimulus: bestFit.resistance_profile,
+    programming: buildProgramming(bestFit, input.maxFatigueCost),
     alternative: alt ?? null,
     alternativeWhy: alt ? `A close second under the same constraints: ${explainBest(alt)}` : null,
     watchOut: buildWatchOut(bestFit),
@@ -116,7 +163,7 @@ function buildResultFromRanked(
     // — the structural fallback in resolveComplements can return many
     // eligible matches; a curated `complements` field (when present) is
     // usually 1-2 entries already and is unaffected by this cap in practice.
-    complements: resolveComplements(bestFit, allExercises, equipmentAvailable).slice(0, MAX_COMPLEMENTS_SHOWN),
+    complements: resolveComplements(bestFit, allExercises, input.equipmentAvailable).slice(0, MAX_COMPLEMENTS_SHOWN),
   };
 }
 

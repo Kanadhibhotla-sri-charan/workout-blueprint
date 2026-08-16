@@ -5,6 +5,7 @@ import type { DecisionInput } from './types';
 
 const BASE_INPUT: DecisionInput = {
   bodyRegion: 'chest',
+  physiqueTarget: null,
   goal: 'build-base',
   equipmentAvailable: null,
   maxSetupTime: null,
@@ -107,5 +108,59 @@ describe('makeRecommendation — goal requiring a current exercise, none given',
   it('returns a missing-current-exercise status rather than guessing', () => {
     const result = makeRecommendation({ ...BASE_INPUT, goal: 'replace-exercise' }, exercises);
     expect(result.status).toBe('missing-current-exercise');
+  });
+});
+
+describe('makeRecommendation — Phase 4 physique-target awareness', () => {
+  it('a resolved target with curated exercises narrows candidates and populates target/visualObjective', () => {
+    const result = makeRecommendation({ ...BASE_INPUT, physiqueTarget: 'upper-pec' }, exercises);
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('upper-pec');
+      expect(result.visualObjective).toContain('upper chest shelf');
+      expect(result.bestFit.physique_targets).toContain('upper-pec');
+    }
+  });
+
+  it('an unknown target id falls back to body-region selection without target/visualObjective', () => {
+    const result = makeRecommendation({ ...BASE_INPUT, physiqueTarget: 'not-a-real-target' }, exercises);
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target).toBeNull();
+      expect(result.visualObjective).toBeNull();
+      expect(result.bestFit.body_regions).toContain('chest');
+    }
+  });
+
+  it('the golden test case: Upper Pec + Incline Dumbbell Press + complement-current resolves a genuinely different, relevant movement', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        physiqueTarget: 'upper-pec',
+        goal: 'complement-current',
+        currentExerciseId: 'incline-dumbbell-press',
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      // Target recognition survives even though the chosen complement
+      // (Cable Fly) isn't itself tagged upper-pec yet — see
+      // decisionEngine.ts's buildResultFromRanked comment for why.
+      expect(result.target?.id).toBe('upper-pec');
+      expect(result.bestFit.id).toBe('cable-fly');
+      expect(result.bestFit.movement_patterns[0]).not.toBe('incline horizontal press');
+      expect(result.programming.repRange.primaryRange).toEqual([10, 20]);
+      expect(result.programming.intensityTechnique?.id).toBe('drop-set');
+    }
+  });
+
+  it('every "ok" result includes programming guidance', () => {
+    const result = makeRecommendation(BASE_INPUT, exercises);
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.programming.repRange.primaryRange.length).toBe(2);
+      expect(result.programming.rirTypicalRange.length).toBe(2);
+    }
   });
 });

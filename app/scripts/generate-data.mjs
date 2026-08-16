@@ -1,5 +1,6 @@
-// Build-time transform: canonical YAML (../../data/exercises/*.yaml) ->
-// a typed JSON snapshot the app bundles (../src/data/exercises.generated.json).
+// Build-time transform: canonical YAML (../../data/exercises/*.yaml and
+// ../../data/programming/*.yaml) -> typed JSON snapshots the app bundles
+// (../src/data/exercises.generated.json, ../src/data/programming.generated.json).
 //
 // This is a mechanical transform, not a second authored copy of the
 // knowledge base — per PHASE-3-MVP.md §4, the UI must never hand-duplicate
@@ -9,20 +10,27 @@
 //
 // Run automatically via the "predev"/"prebuild" npm scripts — never invoke
 // this expecting the output to be hand-editable afterward; regenerate
-// instead of patching src/data/exercises.generated.json.
+// instead of patching src/data/*.generated.json.
 
 import { createRequire } from 'node:module';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const require = createRequire(import.meta.url);
 const { loadAllRecords } = require('../../scripts/lib/load-records.js');
 const { validate } = require('../../scripts/lib/validate.js');
+const yaml = require('js-yaml');
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_DIR = join(__dirname, '..', 'src', 'data');
-const OUTPUT_PATH = join(OUTPUT_DIR, 'exercises.generated.json');
+const EXERCISES_OUTPUT_PATH = join(OUTPUT_DIR, 'exercises.generated.json');
+const PROGRAMMING_OUTPUT_PATH = join(OUTPUT_DIR, 'programming.generated.json');
+const PROGRAMMING_DIR = join(__dirname, '..', '..', 'data', 'programming');
+
+function loadYaml(filename) {
+  return yaml.load(readFileSync(join(PROGRAMMING_DIR, filename), 'utf8'));
+}
 
 function main() {
   const { records, fileErrors } = loadAllRecords();
@@ -52,9 +60,18 @@ function main() {
     .map((record) => ({ ...record, _file: basename(record._file) }))
     .sort((a, b) => a.id.localeCompare(b.id));
 
+  const programming = {
+    physiqueTargets: loadYaml('physique-targets.yaml').targets,
+    globalPrinciples: loadYaml('global-principles.yaml'),
+    repRanges: loadYaml('rep-ranges.yaml'),
+    intensityTechniques: loadYaml('intensity-techniques.yaml').techniques,
+  };
+
   mkdirSync(OUTPUT_DIR, { recursive: true });
-  writeFileSync(OUTPUT_PATH, JSON.stringify(exercises, null, 2) + '\n');
-  console.log(`Generated ${OUTPUT_PATH} from ${exercises.length} validated records.`);
+  writeFileSync(EXERCISES_OUTPUT_PATH, JSON.stringify(exercises, null, 2) + '\n');
+  writeFileSync(PROGRAMMING_OUTPUT_PATH, JSON.stringify(programming, null, 2) + '\n');
+  console.log(`Generated ${EXERCISES_OUTPUT_PATH} from ${exercises.length} validated records.`);
+  console.log(`Generated ${PROGRAMMING_OUTPUT_PATH} from data/programming/*.yaml.`);
 }
 
 main();

@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { bodyRegions, equipmentOptions, exercises } from '../data';
+import { bodyRegions, equipmentOptions, exercises, physiqueTargets } from '../data';
 import { makeRecommendation } from '../engine/decisionEngine';
 import { GOAL_LABELS, GOALS, GOALS_REQUIRING_CURRENT_EXERCISE } from '../engine/types';
 import type { DecisionInput, DecisionResult, DemandLevel, Goal } from '../engine/types';
@@ -13,8 +13,13 @@ function toDemandLevel(value: DemandChoice): DemandLevel | null {
   return value === '' ? null : value;
 }
 
+function formatRange([low, high]: [number, number]): string {
+  return low === high ? `${low}` : `${low}–${high}`;
+}
+
 export function DecisionMakerPage() {
   const [bodyRegion, setBodyRegion] = useState('');
+  const [physiqueTarget, setPhysiqueTarget] = useState('');
   const [goal, setGoal] = useState<Goal | ''>('');
   const [restrictEquipment, setRestrictEquipment] = useState(false);
   const [equipmentAvailable, setEquipmentAvailable] = useState<string[]>([]);
@@ -30,12 +35,32 @@ export function DecisionMakerPage() {
     ? exercises.filter((exercise) => exercise.body_regions.includes(bodyRegion))
     : exercises;
 
+  // "region:<name>" for a broad body-region pick, "target:<id>" for a
+  // specific physique target — combined into one select, grouped by
+  // region, per PHASE-4 §6's "browse a region, then optionally drill into
+  // a specific target" flow. Generalizes automatically as more targets
+  // are added to the taxonomy without needing UI rework.
+  const targetSelectValue = physiqueTarget ? `target:${physiqueTarget}` : bodyRegion ? `region:${bodyRegion}` : '';
+
+  function handleTargetSelectChange(value: string) {
+    if (value.startsWith('target:')) {
+      const id = value.slice('target:'.length);
+      const target = physiqueTargets.find((t) => t.id === id);
+      setPhysiqueTarget(id);
+      if (target) setBodyRegion(target.parent_region);
+    } else if (value.startsWith('region:')) {
+      setPhysiqueTarget('');
+      setBodyRegion(value.slice('region:'.length));
+    }
+  }
+
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if (!bodyRegion || !goal) return;
 
     const input: DecisionInput = {
       bodyRegion,
+      physiqueTarget: physiqueTarget || null,
       goal,
       equipmentAvailable: restrictEquipment ? equipmentAvailable : null,
       maxSetupTime: toDemandLevel(maxSetupTime),
@@ -57,21 +82,29 @@ export function DecisionMakerPage() {
 
       <form onSubmit={handleSubmit} className="decision-form">
         <div className="filter-field">
-          <label htmlFor="dm-region">1. What are you training?</label>
+          <label htmlFor="dm-target">1. What do you want to improve?</label>
           <select
-            id="dm-region"
-            value={bodyRegion}
-            onChange={(event) => setBodyRegion(event.target.value)}
+            id="dm-target"
+            value={targetSelectValue}
+            onChange={(event) => handleTargetSelectChange(event.target.value)}
             required
           >
             <option value="" disabled>
-              Select a body region…
+              Select a region or a specific target…
             </option>
-            {bodyRegions.map((region) => (
-              <option key={region} value={region}>
-                {humanize(region)}
-              </option>
-            ))}
+            {bodyRegions.map((region) => {
+              const targetsInRegion = physiqueTargets.filter((t) => t.parent_region === region);
+              return (
+                <optgroup key={region} label={humanize(region)}>
+                  <option value={`region:${region}`}>All {humanize(region)}</option>
+                  {targetsInRegion.map((target) => (
+                    <option key={target.id} value={`target:${target.id}`}>
+                      {target.name}
+                    </option>
+                  ))}
+                </optgroup>
+              );
+            })}
           </select>
         </div>
 
@@ -161,6 +194,10 @@ export function DecisionMakerPage() {
                 </option>
               ))}
             </select>
+            <p className="field-hint">
+              Capping fatigue tolerance at low also trims volume/frequency guidance toward its
+              lower end and turns off optional intensity-technique suggestions.
+            </p>
           </div>
 
           <div className="filter-field">
@@ -233,8 +270,29 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
     );
   }
 
+  const { programming } = result;
+
   return (
     <div className="decision-result">
+      {result.target && (
+        <div className="decision-result-block">
+          <h2>
+            <span aria-hidden="true">🎯</span> Target
+          </h2>
+          <p className="decision-result-name">{result.target.name}</p>
+          <p>{result.target.definition}</p>
+        </div>
+      )}
+
+      {result.visualObjective && (
+        <div className="decision-result-block">
+          <h2>
+            <span aria-hidden="true">👀</span> Visual objective
+          </h2>
+          <p>{result.visualObjective}</p>
+        </div>
+      )}
+
       <div className="decision-result-block decision-result-best">
         <h2>
           <span aria-hidden="true">🥇</span> Best fit
@@ -244,6 +302,50 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
         </Link>
         <p>{result.why}</p>
       </div>
+
+      <div className="decision-result-block">
+        <h2>
+          <span aria-hidden="true">🧬</span> Stimulus
+        </h2>
+        <p>{result.stimulus}</p>
+      </div>
+
+      <div className="decision-result-block">
+        <h2>
+          <span aria-hidden="true">📊</span> Programming
+        </h2>
+        <dl className="demand-grid">
+          <div>
+            <dt>Reps</dt>
+            <dd>{formatRange(programming.repRange.primaryRange)}</dd>
+          </div>
+          <div>
+            <dt>RIR</dt>
+            <dd>{formatRange(programming.rirTypicalRange)}</dd>
+          </div>
+          <div>
+            <dt>Weekly sets</dt>
+            <dd>{formatRange(programming.weeklyVolumeSets)}</dd>
+          </div>
+          <div>
+            <dt>Frequency</dt>
+            <dd>{formatRange(programming.frequencyPerWeek)}/week</dd>
+          </div>
+        </dl>
+        <p className="field-hint">{programming.repRange.reason}</p>
+        <p className="field-hint">{programming.rirGuidance}</p>
+        <p className="field-hint">{programming.progressionExplanation}</p>
+      </div>
+
+      {programming.intensityTechnique && (
+        <div className="decision-result-block">
+          <h2>
+            <span aria-hidden="true">⚡</span> Optional: {programming.intensityTechnique.name}
+          </h2>
+          <p>{programming.intensityTechnique.when_it_may_help}</p>
+          <p className="field-hint">{programming.intensityTechnique.when_not_to_use}</p>
+        </div>
+      )}
 
       {result.alternative && (
         <div className="decision-result-block">

@@ -25,7 +25,7 @@ describe('DecisionMakerPage', () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what are you training/i), 'chest');
+    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'build-base'
@@ -39,7 +39,7 @@ describe('DecisionMakerPage', () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what are you training/i), 'chest');
+    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'replace-exercise'
@@ -62,7 +62,7 @@ describe('DecisionMakerPage', () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what are you training/i), 'chest');
+    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'replace-exercise'
@@ -74,5 +74,47 @@ describe('DecisionMakerPage', () => {
     await user.click(screen.getByRole('button', { name: /get recommendation/i }));
 
     expect(await screen.findByRole('link', { name: 'Incline Barbell Press' })).toBeInTheDocument();
+  });
+
+  // The Phase 4 golden test case (architect approval memo item 5): Upper
+  // Pec + Incline Dumbbell Press + "more growth / low redundancy" must
+  // demonstrate the complete vertical slice through the actual UI, not
+  // just the engine directly — this is the acceptance gate before the
+  // taxonomy expands past Upper Pec.
+  it('golden test case: Upper Pec + Incline Dumbbell Press + complement goal', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'target:upper-pec');
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'complement-current'
+    );
+    await user.selectOptions(screen.getByLabelText(/current exercise/i), 'incline-dumbbell-press');
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    // Specific physique target recognition — disambiguated from the
+    // select's own "Upper Pec" option text via the result block specifically.
+    await screen.findByRole('heading', { name: /stimulus/i });
+    const targetName = document.querySelector('.decision-result-block .decision-result-name');
+    expect(targetName?.textContent).toBe('Upper Pec');
+    // Visual objective (the target's physique_outcome).
+    expect(screen.getByText(/upper chest shelf/i)).toBeInTheDocument();
+    // Current-exercise context + overlap avoidance + complementary
+    // selection: the recommendation must be a genuinely different
+    // movement, not the same exercise the user is already doing.
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink).toBeDefined();
+    expect(bestFitLink?.textContent).not.toBe('Incline Dumbbell Press');
+    // Sets/reps/RIR/frequency/progression all present.
+    expect(screen.getByText('Reps')).toBeInTheDocument();
+    expect(screen.getByText('RIR')).toBeInTheDocument();
+    expect(screen.getByText('Weekly sets')).toBeInTheDocument();
+    expect(screen.getByText('Frequency')).toBeInTheDocument();
+    expect(screen.getByText(/increase the load slightly/i)).toBeInTheDocument();
+    // Clear explanation of why this exercise was recommended (not just a
+    // bare name — the explanation must reference the current exercise it's
+    // reasoning from).
+    expect(screen.getByText(/alongside Incline Dumbbell Press/i)).toBeInTheDocument();
   });
 });

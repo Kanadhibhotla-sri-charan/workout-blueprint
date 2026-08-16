@@ -1,5 +1,7 @@
 import type { Exercise } from '../types/exercise';
+import type { PhysiqueTarget } from '../types/programming';
 import type { DEMAND_LEVELS } from '../utils/filters';
+import type { Programming } from './programmingEngine';
 
 export type DemandLevel = (typeof DEMAND_LEVELS)[number];
 
@@ -47,6 +49,15 @@ export const GOALS_REQUIRING_CURRENT_EXERCISE: Goal[] = [
 
 export interface DecisionInput {
   bodyRegion: string;
+  /**
+   * Optional specific physique target (Phase 4), e.g. "upper-pec". When set
+   * and at least one exercise maps to it, candidate selection uses this
+   * instead of bodyRegion; falls back to bodyRegion when the target has no
+   * curated exercise mapping yet (taxonomy still expanding). `bodyRegion`
+   * remains required so Phase 3-style body-region-only selection keeps
+   * working unchanged when this is null.
+   */
+  physiqueTarget: string | null;
   goal: Goal;
   equipmentAvailable: string[] | null;
   maxSetupTime: DemandLevel | null;
@@ -59,8 +70,15 @@ export interface DecisionInput {
 export type DecisionResult =
   | {
       status: 'ok';
+      /** The resolved physique target, when physiqueTarget was set and matched real exercises. */
+      target: PhysiqueTarget | null;
+      /** Target's physique_outcome — "what you should expect to see" — when a target resolved. */
+      visualObjective: string | null;
       bestFit: Exercise;
       why: string;
+      /** Why the movement itself is mechanically relevant — the exercise's own resistance_profile. */
+      stimulus: string;
+      programming: Programming;
       alternative: Exercise | null;
       alternativeWhy: string | null;
       watchOut: string[];

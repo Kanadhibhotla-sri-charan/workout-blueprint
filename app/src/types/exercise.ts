@@ -17,6 +17,8 @@ export interface Exercise {
   body_regions: string[];
   primary_targets: string[];
   secondary_targets: string[] | null;
+  /** Canonical target ids resolving against data/programming/physique-targets.yaml — see ADR 0003. */
+  physique_targets: string[] | null;
   movement_patterns: string[];
   equipment: string[];
   exercise_type: ExerciseType;
