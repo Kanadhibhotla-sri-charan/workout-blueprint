@@ -29,6 +29,7 @@
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
+  physique_targets: [upper-pec]
   movement_patterns: [incline horizontal press]
   equipment: [dumbbell, bench]
   exercise_type: compound
@@ -105,6 +106,7 @@
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
+  physique_targets: [upper-pec]
   movement_patterns: [incline horizontal press]
   equipment: [barbell, bench, rack]
   exercise_type: compound
@@ -166,6 +168,7 @@
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
+  physique_targets: [upper-pec]
   movement_patterns: [incline horizontal press]
   equipment: [machine]
   exercise_type: compound
@@ -227,6 +230,7 @@
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
+  physique_targets: [upper-pec]
   movement_patterns: [incline horizontal press]
   equipment: [smith machine, bench]
   exercise_type: compound
@@ -285,6 +289,7 @@
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
+  physique_targets: [upper-pec]
   movement_patterns: [incline horizontal press]
   equipment: [cable]
   exercise_type: compound
@@ -804,6 +809,7 @@
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids]
+  physique_targets: [upper-pec]
   movement_patterns: [shoulder horizontal adduction on an incline]
   equipment: [dumbbell, bench]
   exercise_type: isolation

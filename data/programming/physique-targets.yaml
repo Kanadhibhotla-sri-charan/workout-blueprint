@@ -1,0 +1,32 @@
+# Canonical physique-target taxonomy. Per ADR 0003, this file is the single
+# authoritative definition of what a physique target *means* — id, display
+# name, parent body region, anatomical/functional definition, and the
+# visible outcome it maps to. It does NOT list which exercises belong to a
+# target; that relationship lives on the exercise records' own
+# `physique_targets` field (data/exercises/*.yaml), pointing back at the
+# ids defined here. Keeping the two directions separate avoids a second,
+# independently-drifting taxonomy — see ADR 0003 for the full rationale.
+#
+# Populated incrementally by taxonomy expansion, not all at once. Per the
+# architect's Phase 4 approval memo: Upper Pec only for the 4A/4B/4D/4E/4F
+# vertical slice; the remaining derived targets (chest's other two, front/
+# side/rear delts, lat width, back thickness, upper traps, biceps,
+# brachialis/arm thickness, triceps head emphasis, core targets actually
+# supported by data) are added only after the Upper Pec golden test case
+# (docs/dev/PHASE-4-physique-target-and-hypertrophy.md) passes. Lower Abs
+# is explicitly excluded from v1 — the data does not support a defensible
+# upper/lower rectus-abdominis split (see ADR 0003) — and is not to be
+# added without a future evidence pass establishing one.
+
+targets:
+  - id: upper-pec
+    name: Upper Pec
+    parent_region: chest
+    definition: >-
+      The clavicular (upper) portion of the pectoralis major — the part of
+      the chest closest to the collarbone.
+    physique_outcome: >-
+      Visually, this reads as the "upper chest shelf" filling in: fullness
+      just below the collarbone that closes the gap between shoulder and
+      chest, producing a squared-off upper-chest line in a t-shirt or from
+      the front, rather than the chest appearing to start lower down.

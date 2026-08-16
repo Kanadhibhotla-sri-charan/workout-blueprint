@@ -1,0 +1,90 @@
+# Optional intensity-technique catalog, per Phase 4 architecture spec §16.
+# These are tools with real tradeoffs, not mandatory hypertrophy
+# multipliers (architect Guardrail 6) — the engine only ever suggests one
+# when it has a clear, deterministic reason (see suitability_rule below),
+# and never claims a technique is automatically superior for growth.
+#
+# Catalog kept to the three simplest, most broadly-applicable techniques
+# for the Phase 4 v1 slice, per the "keep Phase 4 fast, build one vertical
+# slice first" instruction — the remaining techniques the spec names
+# (lengthened partials, mechanical drop sets, supersets) can be added in
+# 4H without an architecture change, once the engine's suggestion rule is
+# proven on this smaller set.
+
+techniques:
+  - id: drop-set
+    name: Drop Set
+    what: >-
+      After reaching the target rep range (or a hard stopping point),
+      immediately reduce the weight and continue the set for
+      additional reps.
+    when_it_may_help: >-
+      Useful for increasing work density on an isolation movement
+      without adding a full additional working set — for example, when
+      time efficiency matters, or a muscle needs more stimulus but
+      there isn't room in the session for another complete set.
+    when_not_to_use: >-
+      On technically demanding or heavy compound movements, where form
+      can break down under the accumulated fatigue of the drop, or
+      when overall session or weekly fatigue is already high — a drop
+      set adds meaningful local fatigue for comparatively little extra
+      time, so it competes with recovery budget.
+    fatigue_time_implications: >-
+      Adds noticeable local fatigue relative to the small amount of
+      extra time it costs; low equipment-changeover overhead on
+      machines/cables where the weight adjusts quickly, more overhead
+      when it requires reloading a barbell.
+    suitable_exercise_types: [isolation]
+    suitable_when_fatigue_cost_at_most: medium
+
+  - id: rest-pause
+    name: Rest-Pause
+    what: >-
+      After reaching a hard stopping point, rest a short period (commonly
+      a range around 10-20 seconds), then perform additional reps at the
+      same weight. May repeat for one or two further short clusters.
+    when_it_may_help: >-
+      A way to accumulate additional quality reps at a given load without
+      loading and unloading equipment, useful when a drop set isn't
+      practical (e.g. a barbell movement without easy load changes) but
+      more work at the same weight is wanted.
+    when_not_to_use: >-
+      On movements where a brief rest doesn't meaningfully restore the
+      ability to produce more quality reps, or when it would push total
+      session fatigue higher than a constrained schedule or recovery
+      state can accommodate.
+    fatigue_time_implications: >-
+      Similar local fatigue cost to a drop set; costs some session time
+      for the rest periods, though less than a fully separate set.
+    suitable_exercise_types: [isolation, compound]
+    suitable_when_fatigue_cost_at_most: medium
+
+  - id: myo-reps
+    name: Myo-Reps
+    what: >-
+      One activation set taken close to failure, followed by several
+      short clusters of a few reps each, separated by very brief rests,
+      continued until the clusters stop producing quality reps.
+    when_it_may_help: >-
+      A way to get a substantial amount of near-failure stimulus from a
+      single extended set, useful for isolation work under real time
+      constraints.
+    when_not_to_use: >-
+      On heavy or technically demanding compound movements, or when the
+      trainee is not already comfortable judging proximity to failure
+      accurately — the technique depends on that judgment more than most.
+    fatigue_time_implications: >-
+      Meaningfully reduces total time versus several traditional sets at
+      a similar stimulus, at the cost of higher per-set effort and local
+      fatigue.
+    suitable_exercise_types: [isolation]
+    suitable_when_fatigue_cost_at_most: low
+
+# Deterministic v1 suggestion rule (implemented in
+# app/src/engine/programmingEngine.ts): suggest exactly one technique —
+# drop-set, the simplest and most broadly applicable of the three — when
+# the chosen exercise is isolation, its fatigue_cost is low or medium, and
+# no active user fatigue constraint (maxFatigueCost) would be exceeded by
+# adding it. Otherwise suggest none. This is a strict predicate, not a
+# ranked choice among the three catalog entries — expanding to a real
+# choice among techniques is 4H scope, not v1.

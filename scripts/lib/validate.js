@@ -11,6 +11,12 @@ const {
   REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
 } = require('./taxonomy');
+const { loadPhysiqueTargets } = require('./load-programming');
+
+// Loaded once at module scope, same treatment as taxonomy.js's constants —
+// data/programming/physique-targets.yaml is the authoritative taxonomy per
+// ADR 0003, so every exercise's physique_targets entries must resolve here.
+const { targetIds: PHYSIQUE_TARGET_IDS, fileErrors: PHYSIQUE_TARGET_FILE_ERRORS } = loadPhysiqueTargets();
 
 const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -36,6 +42,16 @@ function validate(records) {
       message: `${record._file} :: ${record.id || '(missing id)'} :: ${message}`,
     });
   };
+
+  // Programming-data file itself failing to load is a project-wide problem,
+  // not tied to any one exercise record — report it once, up front.
+  for (const fileError of PHYSIQUE_TARGET_FILE_ERRORS) {
+    issues.push({
+      record: null,
+      category: 'programming-data',
+      message: `data/programming/physique-targets.yaml :: ${fileError}`,
+    });
+  }
 
   const allIds = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
   const idCounts = new Map();
@@ -86,6 +102,22 @@ function validate(records) {
         report(record, 'schema', `"${field}" must be a list, or null (ADR 0002 "not applicable"), got ${JSON.stringify(value)}`);
       } else if (Array.isArray(value) && !value.every((v) => typeof v === 'string')) {
         report(record, 'schema', `"${field}" must be a list of strings`);
+      }
+    }
+
+    // --- Taxonomy: physique_targets must resolve to a real id in
+    // data/programming/physique-targets.yaml (ADR 0003) — same
+    // referential-integrity discipline as overlaps_with resolving to a
+    // real exercise id.
+    if (Array.isArray(record.physique_targets)) {
+      for (const targetId of record.physique_targets) {
+        if (typeof targetId === 'string' && !PHYSIQUE_TARGET_IDS.has(targetId)) {
+          report(
+            record,
+            'taxonomy',
+            `"physique_targets" references unknown target id "${targetId}" — not defined in data/programming/physique-targets.yaml`
+          );
+        }
       }
     }
 

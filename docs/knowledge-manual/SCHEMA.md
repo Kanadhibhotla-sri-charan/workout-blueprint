@@ -59,6 +59,15 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** yes, but secondary to `primary_targets`
 - **Required for `reviewed`:** conditionally — required to be accurate when non-empty, but an empty list is not itself a gate failure.
 
+### `physique_targets`
+- **Type:** list of strings, or `null`
+- **Required:** no. Per [ADR 0002](../adr/0002-empty-field-semantics.md), `null` means "doesn't map to a physique target in the current taxonomy" — true for the great majority of records, since this field is populated incrementally by taxonomy expansion (see [ADR 0003](../adr/0003-physique-targets-field.md)), not all at once. In practice most records simply omit this field entirely rather than writing it out as `null` on every record — validation treats an absent field the same as `null` for optional fields.
+- **Format:** each entry must be an id defined in [`data/programming/physique-targets.yaml`](../../data/programming/physique-targets.yaml), which is the **authoritative** definition of what a physique target means (name, parent region, anatomical definition, visible outcome). This field only establishes the relationship — which target(s) this exercise serves — it does not define the target itself. `npm run validate-data` rejects any entry that doesn't resolve to a real id there, the same referential-integrity treatment `overlaps_with` gets against exercise ids.
+- **Multi-value case:** an exercise legitimately serving more than one physique target (e.g. a row hitting both lat width and back thickness) lists both — this is preserved deliberately, not collapsed to one, per the architect's Phase 4 approval memo.
+- **No synonyms:** `upper-chest`, `upper-pec`, and `clavicular-pec` are the same canonical target and must resolve to one id (`upper-pec`). `physique-targets.yaml` is the single enforcement point for this — see ADR 0003.
+- **Decision-making impact:** yes — this is what the Phase 4 Decision Maker's target-selection flow reads first, ahead of `primary_targets`.
+- **Required for `reviewed`:** no. A record can be fully reviewed and still carry no `physique_targets` value if its target hasn't been added to the taxonomy yet.
+
 ### `movement_patterns`
 - **Type:** list of strings
 - **Required:** yes, non-empty
@@ -221,6 +230,7 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 | `body_regions` | list | yes | closed (11) | yes | yes |
 | `primary_targets` | list | yes | open | yes | yes |
 | `secondary_targets` | list | no | open | yes | conditional |
+| `physique_targets` | list | no | IDs, must resolve to `data/programming/physique-targets.yaml` | yes | no |
 | `movement_patterns` | list | yes | first item closed (49), rest open | yes | yes |
 | `equipment` | list | yes | open | yes | yes |
 | `exercise_type` | string | yes | closed (2) | yes | yes |
