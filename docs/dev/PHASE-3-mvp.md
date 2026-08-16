@@ -232,4 +232,38 @@ None from this checkpoint.
 
 ## 3H — Mobile / usability pass
 
+**Date:** 2026-08-16
+
+Since 3A–3G already built mobile-first (44px touch targets and responsive breakpoints from 3A onward, `<details>`/native form controls chosen specifically for keyboard access in 3D–3G), this checkpoint's job was to **audit** what was already there against §19/§20's explicit checklists, not build it from scratch — and fix what the audit actually found rather than restate what was already true.
+
+### What was checked, and what changed
+
+- **Text contrast (§20)** — computed WCAG contrast ratios (relative-luminance formula, not eyeballed) for every text/background pairing in both themes: light mode ranges 5.01–16.6:1, dark mode 6.4–16.8:1. All comfortably clear the 4.5:1 AA threshold for normal text, including the lowest pairs (`text-muted` on `bg`/`bg-raised` in both themes, `accent` on `accent-bg` for tag chips). No color changes needed.
+- **Keyboard accessibility / semantic controls (§20)** — audited: every interactive element in the app is a native `<a>` (via `Link`), `<button>`, `<select>`, or `<input>`; there is no custom div-based clickable anything anywhere in the codebase. This was true by construction from 3C onward, not something this checkpoint had to add — confirmed by grep rather than assumed.
+- **Visible focus states (§20)** — a global `:focus-visible` outline rule has existed since 3A (`src/index.css`); confirmed no later checkpoint added an override that removes it.
+- **No hover-only interaction (§20)** — audited: nothing in the app's CSS or components gates functionality behind `:hover` (only cosmetic, non-required states, and even those are minimal). True by construction, not added now.
+- **Accessible labels for icons (§20)** — found a real gap: the Decision Maker's result headings (🥇🥈⚠️🔄, added in 3G) put a decorative emoji directly in heading text, which some screen readers announce by their Unicode name ("trophy medal Best fit"), adding noise. Fixed by wrapping each emoji in `<span aria-hidden="true">`, leaving the heading text itself unchanged.
+- **Header wrap at narrow widths** — found a real, if minor, layout issue: "Physique Blueprint" wrapped to two lines in the sticky header at common phone widths (skims more vertical space than needed on every page). Reduced the brand's font-size and the header's horizontal padding at ≤420px via a media query — chose a font-size reduction over `white-space: nowrap`, since `nowrap` on a flex child risks horizontal overflow on the narrowest supported widths if the two flex items (brand + nav) together exceed the viewport, where a smaller font that can still wrap as a fallback cannot overflow. Verified at 320px (worst case) that it still wraps safely with zero horizontal overflow, and at 390px (the viewport used throughout this phase's screenshots) it now fits on one line.
+- **Desktop/tablet layout** — not explicitly required by §19 (mobile-first, not mobile-only), but checked anyway since the app is a normal responsive web page: screenshotted at 768px and 1280px. Initially looked mis-centered in a screenshot; recomputed the actual pixel math (max-width 720px, `margin: 0 auto`, viewport 1280px → (1280-720)/2 = 280px + 16px padding = 296px each side) and confirmed the layout is correctly centered — a false alarm caught by checking the arithmetic rather than trusting a visual impression.
+- **Dark mode** — screenshotted Home, Exercise Detail, and Decision Maker in `--color-scheme dark`. Renders correctly throughout; native form controls (`<select>`, checkboxes) automatically theme correctly because of the `color-scheme: light dark` declaration set on `:root` since 3A.
+
+### Verified
+
+- Contrast ratios computed with a standalone script implementing the actual WCAG relative-luminance formula, not estimated.
+- `npx tsc -b`, `npm run test` (26/26), and `npm run build` all clean after the CSS/JSX changes.
+- **Visually re-verified with Playwright screenshots** at 320px (smallest realistically supported width), 390px, 768px, and 1280px, in both light and dark color schemes, across Home, Exercise List (with the filter bar), Exercise Detail, and Decision Maker — specifically checking for horizontal overflow at the narrowest width, which the header fix could plausibly have introduced; confirmed none.
+
+### Decisions made
+
+- **Audited against the checklist rather than re-describing already-built work as new** — most of §19/§20 was already satisfied by decisions made in earlier checkpoints (mobile-first CSS from 3A, semantic native controls from 3C onward, `<details>` for progressive disclosure in 3D). This checkpoint's log only claims what it actually changed: the two real fixes (icon labels, header wrap) plus the audit findings that required no change.
+- **Font-size reduction over `nowrap` for the header fix** — explicitly chose the option that degrades safely (wraps) over the option that could overflow, and verified that choice at the narrowest supported width rather than assuming it.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3I — MVP validation
+
 *Not yet started.*

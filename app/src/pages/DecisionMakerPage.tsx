@@ -236,7 +236,9 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
   return (
     <div className="decision-result">
       <div className="decision-result-block decision-result-best">
-        <h2>🥇 Best fit</h2>
+        <h2>
+          <span aria-hidden="true">🥇</span> Best fit
+        </h2>
         <Link to={`/exercises/${result.bestFit.id}`} className="decision-result-name">
           {result.bestFit.name}
         </Link>
@@ -245,7 +247,9 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
 
       {result.alternative && (
         <div className="decision-result-block">
-          <h2>🥈 Alternative</h2>
+          <h2>
+            <span aria-hidden="true">🥈</span> Alternative
+          </h2>
           <Link to={`/exercises/${result.alternative.id}`} className="decision-result-name">
             {result.alternative.name}
           </Link>
@@ -255,7 +259,9 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
 
       {result.watchOut.length > 0 && (
         <div className="decision-result-block">
-          <h2>⚠️ Watch out</h2>
+          <h2>
+            <span aria-hidden="true">⚠️</span> Watch out
+          </h2>
           <ul>
             {result.watchOut.map((note) => (
               <li key={note}>{note}</li>
@@ -266,7 +272,9 @@ function DecisionResultView({ result }: { result: DecisionResult }) {
 
       {result.complements.length > 0 && (
         <div className="decision-result-block">
-          <h2>🔄 Complements</h2>
+          <h2>
+            <span aria-hidden="true">🔄</span> Complements
+          </h2>
           <ul className="relationship-list">
             {result.complements.map((exercise) => (
               <li key={exercise.id}>
