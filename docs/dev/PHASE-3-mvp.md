@@ -40,4 +40,36 @@ None from this checkpoint.
 
 ## 3B — Load canonical data
 
+**Date:** 2026-08-16
+
+### What changed
+
+- `app/scripts/generate-data.mjs` — the build-time YAML→JSON generator described in the approved plan. It `require`s (via `node:module`'s `createRequire`, since the script is ESM and `scripts/lib/*.js` is CommonJS) the *existing* `scripts/lib/load-records.js` and `scripts/lib/validate.js` from the repo root — no data-loading or validation logic is duplicated between the app and the root tooling. Runs the exact same validation `npm run validate-data` runs; if the dataset fails (schema, taxonomy, relationship, or governance violations, or a file load error), the script exits non-zero with the failing issues printed, and does not write output. Normalizes each record's generator-added `_file` field down to a plain basename (`chest.yaml`, not a cwd-relative path) and sorts by `id` for a stable diff-friendly output. Writes `app/src/data/exercises.generated.json`.
+- Wired as `predev` and `prebuild` in `app/package.json`, plus a standalone `generate-data` script for manual runs — the data is always regenerated from current YAML before the app runs or builds, never hand-maintained.
+- `app/src/data/index.ts` — the typed loader every page/component/engine module will import from. Exposes `exercises: Exercise[]`, `getExerciseById()`, `getExercisesByBodyRegion()`, and a derived `bodyRegions` list. This is the *only* file in the app that touches the generated JSON directly.
+- `app/tsconfig.app.json` — added `resolveJsonModule: true` so the generated JSON can be imported and typed directly.
+- `app/.gitignore` (already added in 3A) covers `src/data/exercises.generated.json` — confirmed it's correctly excluded from `git status` after generation.
+
+### Verified
+
+- `npm run generate-data` (from a clean state, output file deleted first): succeeds, produces 123 records, matches the root validator's count exactly.
+- **Confirmed the validation gate actually blocks bad data, not just passes on clean data** — same discipline as the Phase 2 validator check: made a plain-copy backup of `calves.yaml`, injected an invalid `exercise_type: bogus-type`, ran `npm run generate-data`, confirmed it printed the exact violation and exited 1 without writing output, then restored the file from the backup and confirmed `git diff --stat` showed zero changes and generation succeeded again with all 123 records.
+- Full pipeline end-to-end: deleted the generated file, ran `npm run build` from scratch — the `prebuild` hook regenerated it automatically before `vite build` ran, and the build succeeded.
+- **Visually verified in a real browser**, not just asserted from build output: temporarily rendered `exercises.length` and `bodyRegions` on the Home page, started the dev server, and took a Playwright screenshot confirming "123 exercises across arms, back, calves, chest, core, forearms, hamstrings, hips, neck, quads, shoulders" rendered correctly. Reverted the Home page to its 3A placeholder afterward — real Home page content is 3C's job, not 3B's.
+- `npm run validate-data` at the repo root still passes (123/123, 0 issues) — confirming the calves.yaml test edit left no trace.
+- `npx tsc -b` and `npm run build` both clean after the revert.
+
+### Decisions made
+
+- **Generated JSON is gitignored, not committed** — per the plan, it's a mechanical transform of `data/`, and committing it would let it silently drift from the YAML between commits. This does mean a fresh clone must run `npm install && npm run dev` (or `build`) at least once before the data exists, which is documented in `app/README.md`.
+- **Reused `scripts/lib/` via `createRequire` rather than rewriting loading/validation in TypeScript** — keeps a single implementation of "what makes a record valid" for the whole repo (root CLI tooling and the app both call the same code), so the two can never silently diverge on what counts as a violation, which was the exact failure mode Phase 2's `validate-data`/`data-report` split was designed to avoid.
+
+### Pending decisions
+
+None from this checkpoint.
+
+---
+
+## 3C — Knowledge Explorer
+
 *Not yet started.*
