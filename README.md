@@ -9,7 +9,7 @@ Physique Blueprint helps people answer **what exercise should I choose, and why?
 - [Product Design Document](docs/PDD/PDD.md) — vision, decision logic, UX, governance, and roadmap.
 - [Knowledge Manual](docs/knowledge-manual/) — the user-facing source of truth for muscles, movements, and exercises.
 - [Decision Records](docs/adr/) — durable rationale for consequential product and data decisions.
-- app/ — future application implementation.
+- [app/](app/README.md) — the Blueprint MVP application (React/TypeScript/Vite), in progress per [Phase 3](docs/architecture/PHASE-3-MVP.md).
 
 ## Foundation workflow
 
