@@ -152,7 +152,10 @@ describe('makeRecommendation — Phase 4 physique-target awareness', () => {
       expect(result.target?.id).toBe('upper-pec');
       expect(result.bestFit.id).toBe('cable-fly');
       expect(result.bestFit.movement_patterns[0]).not.toBe('incline horizontal press');
-      expect(result.programming.repRange.primaryRange).toEqual([10, 20]);
+      // Cable Fly's medium stability_demand classifies it as
+      // elevated-stability-isolation (Phase 4B §10-11), not the generic
+      // isolation bucket — see programmingEngine.test.ts.
+      expect(result.programming.repRange.primaryRange).toEqual([8, 15]);
       expect(result.programming.intensityTechnique?.id).toBe('drop-set');
     }
   });

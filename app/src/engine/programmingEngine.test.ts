@@ -1,31 +1,85 @@
 import { describe, expect, it } from 'vitest';
-import { resolveRepRange } from './programmingEngine';
-import { buildProgramming } from './programmingEngine';
-import { getExerciseById } from '../data';
+import { buildProgramming, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
+import { exercises, getExerciseById } from '../data';
+
+describe('resolveProgrammingProfile — Phase 4B §10-11', () => {
+  it('a heavy-compound exercise classifies as heavy-free-weight-compound regardless of exercise_type', () => {
+    const exercise = getExerciseById('incline-dumbbell-press')!; // heavy-compound
+    expect(resolveProgrammingProfile(exercise).id).toBe('heavy-free-weight-compound');
+  });
+
+  it('a stable-compound exercise classifies as stable-compound', () => {
+    const exercise = getExerciseById('incline-machine-press')!; // stable-compound
+    expect(resolveProgrammingProfile(exercise).id).toBe('stable-compound');
+  });
+
+  it('an isolation exercise with elevated stability demand classifies as elevated-stability-isolation, not the generic isolation bucket', () => {
+    const exercise = getExerciseById('cable-fly')!; // isolation, stability_demand: medium
+    expect(exercise.stability_demand).toBe('medium');
+    expect(resolveProgrammingProfile(exercise).id).toBe('elevated-stability-isolation');
+  });
+
+  it('a lengthened-position-emphasis isolation exercise classifies distinctly from a plain isolation exercise', () => {
+    const lengthened = getExerciseById('incline-dumbbell-curl')!; // isolation, lengthened-position-emphasis, stability: low
+    const plain = getExerciseById('cable-hammer-curl-rope')!; // isolation, no distinguishing tag, stability: low
+    expect(resolveProgrammingProfile(lengthened).id).toBe('lengthened-position-isolation');
+    expect(resolveProgrammingProfile(plain).id).toBe('moderate-hypertrophy-isolation');
+  });
+});
 
 describe('resolveRepRange', () => {
   it('heavy-compound exercises get the lower rep-range bucket', () => {
     const exercise = getExerciseById('incline-dumbbell-press')!; // heavy-compound
-    const result = resolveRepRange(exercise);
+    const result = resolveRepRange(exercise, resolveProgrammingProfile(exercise));
     expect(result.primaryRange).toEqual([6, 12]);
   });
 
-  it('isolation exercises get the wider rep-range bucket', () => {
-    const exercise = getExerciseById('cable-fly')!; // isolation
-    const result = resolveRepRange(exercise);
+  it('a plain isolation exercise gets the wider rep-range bucket', () => {
+    const exercise = getExerciseById('cable-hammer-curl-rope')!; // moderate-hypertrophy-isolation
+    const result = resolveRepRange(exercise, resolveProgrammingProfile(exercise));
     expect(result.primaryRange).toEqual([10, 20]);
   });
 
   it('stable-compound exercises get the moderate rep-range bucket', () => {
     const exercise = getExerciseById('incline-machine-press')!; // stable-compound
-    const result = resolveRepRange(exercise);
+    const result = resolveRepRange(exercise, resolveProgrammingProfile(exercise));
     expect(result.primaryRange).toEqual([8, 15]);
   });
 
   it('every result includes a non-empty reason', () => {
     for (const id of ['incline-dumbbell-press', 'cable-fly', 'incline-machine-press']) {
-      const result = resolveRepRange(getExerciseById(id)!);
+      const exercise = getExerciseById(id)!;
+      const result = resolveRepRange(exercise, resolveProgrammingProfile(exercise));
       expect(result.reason.length).toBeGreaterThan(0);
+    }
+  });
+});
+
+// Phase 4B §25 Test C: exercises of materially different characteristics
+// must not blindly receive identical programming guidance.
+describe('buildProgramming — Programming Profile differentiation (Phase 4B §25 Test C)', () => {
+  it('a heavy-compound and a plain isolation exercise get different rep ranges and different profile guidance notes', () => {
+    const compound = buildProgramming(getExerciseById('incline-dumbbell-press')!, null);
+    const isolation = buildProgramming(getExerciseById('cable-hammer-curl-rope')!, null);
+    expect(compound.repRange.primaryRange).not.toEqual(isolation.repRange.primaryRange);
+    expect(compound.profile.id).not.toBe(isolation.profile.id);
+    expect(compound.profile.guidance_note).not.toBe(isolation.profile.guidance_note);
+  });
+
+  it('two isolation exercises with materially different characteristics (stability demand) get different profiles', () => {
+    const stableIsolation = buildProgramming(getExerciseById('cable-hammer-curl-rope')!, null); // stability: low
+    const elevatedStabilityIsolation = buildProgramming(getExerciseById('cable-fly')!, null); // stability: medium
+    expect(stableIsolation.profile.id).not.toBe(elevatedStabilityIsolation.profile.id);
+    expect(stableIsolation.repRange.primaryRange).not.toEqual(elevatedStabilityIsolation.repRange.primaryRange);
+  });
+
+  it('every exercise in the dataset resolves to a real, non-fallback profile', () => {
+    // Guards against a future exercise record silently falling through to
+    // the generic fallback profile because the classification ruleset
+    // doesn't cover it — the current ruleset's compound/isolation
+    // fallback rules should catch every record.
+    for (const exercise of exercises) {
+      expect(resolveProgrammingProfile(exercise).id).not.toBe('general-fallback');
     }
   });
 });

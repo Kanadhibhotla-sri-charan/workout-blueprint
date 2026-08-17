@@ -1,72 +1,19 @@
-# Default rep-range guidance, keyed by exercise_type and coverage_categories
-# rather than per-exercise — reuses fields every exercise record already
-# has (see SCHEMA.md), so this file does not need a row per exercise and
-# stays small as the taxonomy grows.
+# Exercise-specific rep-range overrides only. Default (non-override)
+# rep-range guidance now lives in programming-profiles.yaml (Phase 4B
+# §10-11) as part of each Programming Profile — the classification logic
+# that used to live directly in this file's own `defaults:` list moved
+# there so rep range, RIR/volume framing, and technique suitability all
+# come from one shared profile lookup instead of three separately
+# maintained classifiers.
 #
-# Architecture (per architect approval memo item 3):
-#
-#   exercise_type + coverage_categories
-#           |
-#           v
-#   default rule below (first match wins, in list order)
-#           |
-#           v
-#   optional exercise-specific override (see `overrides:` below)
-#           |
-#           v
-#   final guidance
-#
-# `overrides` exists so a genuine, defensible exercise-specific distinction
-# can be recorded later without restructuring this file — it is
-# deliberately empty for the Phase 4 v1 slice. Do NOT populate it for all
-# 123 exercises; only add an entry when a real distinction requires
-# deviating from the default lookup (architect Guardrail: don't create
+# This file's only remaining job: a genuine, defensible exercise-specific
+# distinction that the profile-level default doesn't capture. Deliberately
+# empty for the Phase 4 v1 slice — do NOT populate it for all 123
+# exercises; only add an entry when a real distinction requires deviating
+# from the profile-level default (architect Guardrail: don't create
 # exercise-specific programming records for every exercise now).
 #
 # Ranges are starting points to adjust, not exact values — see the
 # wording_rules in global-principles.yaml.
-
-defaults:
-  - id: heavy-compound
-    match:
-      coverage_categories_any: [heavy-compound]
-    primary_range: [6, 12]
-    acceptable_range: [5, 15]
-    reason: >-
-      Heavy compound movements are commonly trained in a moderate rep
-      range where meaningful load can still be managed with good
-      technique; higher reps remain usable, just less commonly the
-      primary focus for this kind of movement.
-
-  - id: stable-compound
-    match:
-      coverage_categories_any: [stable-compound]
-    primary_range: [8, 15]
-    acceptable_range: [6, 20]
-    reason: >-
-      Fixed-path or otherwise more stable compound movements commonly
-      tolerate a somewhat wider rep range than a heavy free-weight
-      compound, since stability demand is lower.
-
-  - id: isolation
-    match:
-      exercise_type: isolation
-    primary_range: [10, 20]
-    acceptable_range: [8, 30]
-    reason: >-
-      Isolation movements commonly tolerate a wide rep range without
-      losing effectiveness, since they typically carry a lower
-      technical-breakdown and joint-loading concern at higher reps than
-      a heavy compound movement does.
-
-  - id: compound-fallback
-    match:
-      exercise_type: compound
-    primary_range: [6, 15]
-    acceptable_range: [5, 20]
-    reason: >-
-      A general compound-movement range, used when a compound exercise
-      doesn't carry the heavy-compound or stable-compound coverage
-      category specifically.
 
 overrides: []

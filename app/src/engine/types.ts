@@ -125,6 +125,15 @@ export type DecisionResult =
        * ranking hierarchy in decisionEngine.ts).
        */
       bestFitTargetMatch: TargetMatch;
+      /**
+       * Target-aware programming framing (Phase 4B §12): a short note on
+       * how bestFit's role relative to `target` should shape how it's
+       * programmed — e.g. a supporting-target pick is secondary volume,
+       * not a replacement for direct primary-target work. Null when no
+       * physique target resolved (bestFitTargetMatch is 'general'), since
+       * there's no target-priority relationship to describe.
+       */
+      targetProgrammingContext: string | null;
       bestFit: Exercise;
       why: string;
       /** Why the movement itself is mechanically relevant — the exercise's own resistance_profile. */

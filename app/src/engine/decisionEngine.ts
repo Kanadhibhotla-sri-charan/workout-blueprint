@@ -214,6 +214,29 @@ function targetMatchTier(exercise: Exercise, primaryTargetId: string | null, sup
   return 2;
 }
 
+// Phase 4B §12: a short note on how bestFit's role relative to `target`
+// should shape how it's programmed. Deterministic text keyed off
+// bestFitTargetMatch — no volume/overlap accounting (that's the "current
+// training context" layer the spec frames as a later step, §13), just the
+// priority relationship this recommendation already knows.
+function buildTargetProgrammingContext(
+  target: PhysiqueTarget | null,
+  supportingTargets: PhysiqueTarget[],
+  bestFitTargetMatch: TargetMatch,
+  bestFit: Exercise
+): string | null {
+  if (!target) return null;
+  if (bestFitTargetMatch === 'primary') {
+    return `${target.name} is the primary target driving this recommendation — prioritize its direct volume over supporting-target work when the two compete for training time or recovery budget.`;
+  }
+  if (bestFitTargetMatch === 'supporting') {
+    const matchedSupporting = supportingTargets.find((t) => bestFit.physique_targets?.includes(t.id));
+    const supportingName = matchedSupporting?.name ?? 'a supporting target';
+    return `This trains ${supportingName}, a supporting target for ${target.name} rather than the primary target directly — treat its volume as secondary alongside direct ${target.name} work, not a replacement for it.`;
+  }
+  return `${target.name} is the target driving this recommendation, though this specific pick isn't tagged to it directly yet in the taxonomy — treat the guidance below as a general starting point.`;
+}
+
 function buildResultFromRanked(
   ranked: Exercise[],
   explainBest: (exercise: Exercise) => string,
@@ -249,6 +272,7 @@ function buildResultFromRanked(
     supportingTargets,
     functionalGoal,
     bestFitTargetMatch,
+    targetProgrammingContext: buildTargetProgrammingContext(target, supportingTargets, bestFitTargetMatch, bestFit),
     bestFit,
     why: explainBest(bestFit),
     stimulus: bestFit.resistance_profile,

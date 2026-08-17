@@ -41,19 +41,6 @@ export interface GlobalPrinciples {
   };
 }
 
-export interface RepRangeMatch {
-  exercise_type?: string;
-  coverage_categories_any?: string[];
-}
-
-export interface RepRangeRule {
-  id: string;
-  match: RepRangeMatch;
-  primary_range: [number, number];
-  acceptable_range: [number, number];
-  reason: string;
-}
-
 export interface RepRangeOverride {
   exercise_id: string;
   primary_range: [number, number];
@@ -62,8 +49,40 @@ export interface RepRangeOverride {
 }
 
 export interface RepRanges {
-  defaults: RepRangeRule[];
   overrides: RepRangeOverride[];
+}
+
+// Programming Profile catalog (Phase 4B §10-11) — see
+// data/programming/programming-profiles.yaml for the full rationale. A
+// deterministic classification layer between "what exercise is this" and
+// "what programming guidance applies," derived from existing exercise
+// metadata rather than a hand-written prescription per exercise.
+export interface ProgrammingProfile {
+  id: string;
+  name: string;
+  summary: string;
+  primary_range: [number, number];
+  acceptable_range: [number, number];
+  rep_range_reason: string;
+  guidance_note: string;
+}
+
+export interface ProgrammingProfileMatch {
+  exercise_type?: string;
+  coverage_categories_any?: string[];
+  stability_demand_at_least?: 'low' | 'medium' | 'high';
+}
+
+export interface ProgrammingProfileClassificationRule {
+  profile_id: string;
+  match: ProgrammingProfileMatch;
+}
+
+export interface ProgrammingProfileCatalog {
+  profiles: ProgrammingProfile[];
+  classification: {
+    defaults: ProgrammingProfileClassificationRule[];
+  };
 }
 
 export interface IntensityTechnique {
@@ -110,6 +129,7 @@ export interface ProgrammingData {
   physiqueTargets: PhysiqueTarget[];
   globalPrinciples: GlobalPrinciples;
   repRanges: RepRanges;
+  programmingProfiles: ProgrammingProfileCatalog;
   intensityTechniques: IntensityTechnique[];
   aestheticOutcomes: AestheticOutcome[];
   functionalGoals: FunctionalGoal[];

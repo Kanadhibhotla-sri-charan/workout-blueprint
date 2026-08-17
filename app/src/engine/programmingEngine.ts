@@ -1,5 +1,5 @@
 import type { Exercise } from '../types/exercise';
-import type { IntensityTechnique, RepRangeMatch } from '../types/programming';
+import type { IntensityTechnique, ProgrammingProfile, ProgrammingProfileMatch } from '../types/programming';
 import { programming } from '../data';
 import { DEMAND_LEVELS } from '../utils/filters';
 import type { DemandLevel } from './types';
@@ -19,9 +19,22 @@ export interface Programming {
   frequencyPerWeek: [number, number];
   progressionExplanation: string;
   intensityTechnique: IntensityTechnique | null;
+  /** The classified Programming Profile driving this exercise's guidance (Phase 4B §10-11). */
+  profile: ProgrammingProfile;
 }
 
-function matchesRule(exercise: Exercise, match: RepRangeMatch): boolean {
+const FALLBACK_PROFILE: ProgrammingProfile = {
+  id: 'general-fallback',
+  name: 'General',
+  summary: 'No more specific profile classification applies to this exercise yet.',
+  primary_range: [8, 15],
+  acceptable_range: [6, 20],
+  rep_range_reason:
+    "General practical range — no more specific guidance is defined yet for this exercise's characteristics.",
+  guidance_note: 'No profile-specific guidance is defined yet for this exercise\'s characteristics.',
+};
+
+function matchesProfileRule(exercise: Exercise, match: ProgrammingProfileMatch): boolean {
   if (match.exercise_type && exercise.exercise_type !== match.exercise_type) return false;
   if (
     match.coverage_categories_any &&
@@ -29,17 +42,36 @@ function matchesRule(exercise: Exercise, match: RepRangeMatch): boolean {
   ) {
     return false;
   }
+  if (match.stability_demand_at_least) {
+    const exerciseIndex = DEMAND_LEVELS.indexOf(exercise.stability_demand as (typeof DEMAND_LEVELS)[number]);
+    const minIndex = DEMAND_LEVELS.indexOf(match.stability_demand_at_least);
+    if (exerciseIndex < minIndex) return false;
+  }
   return true;
 }
 
-// Default-plus-override rep-range lookup per
-// docs/knowledge-manual/programming/README.md — an exercise-specific
-// override (keyed by exercise_id in rep-ranges.yaml) wins when present;
-// otherwise the first matching default rule (in file order) applies.
-// architect approval memo item 3: this is the DEFAULT mechanism, not an
-// absolute rule — the override list exists for exactly this reason and
-// stays empty until a real distinction requires populating it.
-export function resolveRepRange(exercise: Exercise): RepRangeGuidance {
+// Programming Profile classification (Phase 4B §10-11): first matching
+// rule wins, in file order, reusing exercise_type/coverage_categories/
+// stability_demand — fields every exercise record already has — rather
+// than an invented numerical score. Falls back to a generic profile for
+// the (currently impossible, given the ruleset's compound/isolation
+// fallback rules) case of an exercise matching nothing.
+export function resolveProgrammingProfile(exercise: Exercise): ProgrammingProfile {
+  const rule = programming.programmingProfiles.classification.defaults.find((r) =>
+    matchesProfileRule(exercise, r.match)
+  );
+  if (!rule) return FALLBACK_PROFILE;
+  const profile = programming.programmingProfiles.profiles.find((p) => p.id === rule.profile_id);
+  return profile ?? FALLBACK_PROFILE;
+}
+
+// Profile-plus-override rep-range lookup: an exercise-specific override
+// (keyed by exercise_id in rep-ranges.yaml) wins when present; otherwise
+// the resolved Programming Profile's own rep range applies. The override
+// list exists for a genuine per-exercise distinction and stays empty
+// until one is needed (architect Guardrail: don't create exercise-
+// specific programming records for every exercise now).
+export function resolveRepRange(exercise: Exercise, profile: ProgrammingProfile): RepRangeGuidance {
   const override = programming.repRanges.overrides.find((o) => o.exercise_id === exercise.id);
   if (override) {
     return {
@@ -49,23 +81,10 @@ export function resolveRepRange(exercise: Exercise): RepRangeGuidance {
     };
   }
 
-  const rule = programming.repRanges.defaults.find((r) => matchesRule(exercise, r.match));
-  if (rule) {
-    return {
-      primaryRange: rule.primary_range,
-      acceptableRange: rule.acceptable_range,
-      reason: rule.reason,
-    };
-  }
-
-  // Defensive fallback — every one of the 123 current records matches a
-  // default rule (compound or isolation always matches at least the
-  // compound-fallback/isolation rule), but a future record with neither
-  // shouldn't crash the engine.
   return {
-    primaryRange: [8, 15],
-    acceptableRange: [6, 20],
-    reason: 'General practical range — no more specific guidance is defined yet for this exercise\'s characteristics.',
+    primaryRange: profile.primary_range,
+    acceptableRange: profile.acceptable_range,
+    reason: profile.rep_range_reason,
   };
 }
 
@@ -106,8 +125,10 @@ function selectIntensityTechnique(
 
 export function buildProgramming(exercise: Exercise, maxFatigueCost: DemandLevel | null): Programming {
   const { rir, progression } = programming.globalPrinciples;
+  const profile = resolveProgrammingProfile(exercise);
   return {
-    repRange: resolveRepRange(exercise),
+    repRange: resolveRepRange(exercise, profile),
+    profile,
     rirTypicalRange: rir.typical_working_range,
     rirExplanation: rir.explanation,
     rirGuidance: rir.guidance,

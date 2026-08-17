@@ -1,0 +1,208 @@
+# Programming Profile catalog (Phase 4B §10-11) — a reusable, deterministic
+# classification layer between "what exercise is this" and "what
+# programming guidance applies to it," built entirely from existing
+# exercise metadata (exercise_type, coverage_categories, stability_demand —
+# fields every record already has per SCHEMA.md) rather than a hand-written
+# prescription per exercise. Phase 4B §9's explicit guardrail: do NOT
+# create 123 individual programming records; this file has one entry per
+# profile (8 total), not one per exercise.
+#
+# Supersedes the classification logic that previously lived directly in
+# rep-ranges.yaml's `defaults:` list — this file now owns the
+# exercise_type/coverage_categories/stability_demand -> profile mapping.
+# rep-ranges.yaml's `overrides:` list (exercise-specific escape hatch)
+# still applies afterward, unchanged, for the rare case a real exercise-
+# specific distinction is worth recording (see rep-ranges.yaml's own
+# comment — still empty by design for the Phase 4 v1 slice).
+#
+# Every profile carries:
+#   - a rep-range (same shape rep-ranges.yaml's old defaults used, so
+#     resolveRepRange's behavior for existing exercises is unchanged);
+#   - a guidance_note: a short, profile-specific piece of programming
+#     advice distinct from the generic global principles, so exercises of
+#     different profiles visibly differ in more than just numbers (Phase
+#     4B §25 Test C — "should not blindly receive identical programming
+#     guidance when their exercise characteristics materially differ").
+#
+# Classification is first-match-wins, in list order, same discipline as
+# every other rule-based lookup in this dataset (rep-ranges.yaml,
+# aesthetic-outcomes.yaml's target resolution, etc.) — never a blended or
+# invented numerical score.
+
+profiles:
+  - id: heavy-free-weight-compound
+    name: Heavy free-weight compound
+    summary: >-
+      A free-weight-loaded compound movement without a fixed stabilizing
+      path — meaningful load can be managed, but stability and technique
+      both matter more than on a fixed-path machine.
+    primary_range: [6, 12]
+    acceptable_range: [5, 15]
+    rep_range_reason: >-
+      Heavy compound movements are commonly trained in a moderate rep
+      range where meaningful load can still be managed with good
+      technique; higher reps remain usable, just less commonly the
+      primary focus for this kind of movement.
+    guidance_note: >-
+      Technical breakdown risk rises as fatigue accumulates on a movement
+      like this — prioritize crisp reps with good bar/body path over
+      grinding out a final rep with degrading form.
+
+  - id: stable-compound
+    name: Stable compound
+    summary: >-
+      A fixed-path or otherwise more stable compound movement — lower
+      stability demand than a free-weight compound, so a somewhat wider
+      rep range is commonly well tolerated.
+    primary_range: [8, 15]
+    acceptable_range: [6, 20]
+    rep_range_reason: >-
+      Fixed-path or otherwise more stable compound movements commonly
+      tolerate a somewhat wider rep range than a heavy free-weight
+      compound, since stability demand is lower.
+    guidance_note: >-
+      The fixed path removes most of the balancing and stabilizing work a
+      free-weight version would need, so effort can be focused more
+      directly on the working muscle across a wider rep range.
+
+  - id: lengthened-position-isolation
+    name: Lengthened-position isolation
+    summary: >-
+      An isolation movement whose hardest point sits at, or near, the
+      stretched end of the range — the position current hypertrophy
+      research most consistently associates with a stretch-mediated
+      growth benefit.
+    primary_range: [8, 15]
+    acceptable_range: [6, 20]
+    rep_range_reason: >-
+      A moderate rep range that still allows real loading of the
+      stretched position — very high reps tend to reduce how much load
+      can be handled at the hardest, most stretched point, which is the
+      point this profile is built around.
+    guidance_note: >-
+      The stretched position is where this exercise does its most
+      distinctive work — resist the urge to shorten the range of motion
+      just to move more weight, since that range is the reason to choose
+      this exercise over a shorter-range alternative.
+
+  - id: shortened-position-isolation
+    name: Shortened-position isolation
+    summary: >-
+      An isolation movement whose hardest point sits at, or near, the
+      shortened/contracted end of the range, rather than the stretch.
+    primary_range: [10, 20]
+    acceptable_range: [8, 30]
+    rep_range_reason: >-
+      Isolation movements biased toward the shortened position commonly
+      tolerate a wide rep range, similar to isolation work generally,
+      since the loading challenge is concentrated away from the
+      joint-stress-sensitive stretched end of the range.
+    guidance_note: >-
+      Peak tension is concentrated at the top/contracted position on this
+      movement — a deliberate pause or squeeze there is more relevant
+      here than it would be on a lengthened-position exercise.
+
+  - id: constant-tension-isolation
+    name: Constant-tension isolation
+    summary: >-
+      A cable-, band-, or otherwise constant-tension isolation movement
+      with low fatigue cost — the working muscle rarely gets a true rest
+      within the rep.
+    primary_range: [10, 20]
+    acceptable_range: [8, 30]
+    rep_range_reason: >-
+      Isolation movements commonly tolerate a wide rep range without
+      losing effectiveness, and constant-tension equipment in particular
+      removes the brief unloaded moments a free weight's resistance curve
+      can create.
+    guidance_note: >-
+      Because tension rarely fully releases during the rep, this tends to
+      feel harder at a given weight than the number on the stack
+      suggests — judge effort by RIR, not by comparing that number to a
+      free-weight equivalent.
+
+  - id: elevated-stability-isolation
+    name: Elevated-stability isolation
+    summary: >-
+      An isolation movement with real balance or stabilization demand
+      beyond the baseline case — genuine body-positioning or control work
+      alongside the target-muscle effort, regardless of the specific
+      equipment used.
+    primary_range: [8, 15]
+    acceptable_range: [6, 20]
+    rep_range_reason: >-
+      An isolation movement with genuine stabilization demand commonly
+      sits closer to a moderate rep range than the widest isolation
+      ranges, since body positioning and control both matter to executing
+      it well, not just the target-muscle effort.
+    guidance_note: >-
+      This carries more balance and stabilization demand than a typical
+      isolation exercise — form and control matter more here, and
+      pushing the load too aggressively tends to break technique down
+      before the target muscle is genuinely the limiting factor.
+
+  - id: moderate-hypertrophy-isolation
+    name: Moderate hypertrophy isolation
+    summary: >-
+      A stable, machine- or cable-based isolation movement without a
+      distinctive lengthened/shortened-position bias or unusually low
+      fatigue cost — the general-purpose isolation case.
+    primary_range: [10, 20]
+    acceptable_range: [8, 30]
+    rep_range_reason: >-
+      Isolation movements commonly tolerate a wide rep range without
+      losing effectiveness, since they typically carry a lower
+      technical-breakdown and joint-loading concern at higher reps than a
+      heavy compound movement does.
+    guidance_note: >-
+      A stable, general-purpose isolation movement — a reasonable default
+      choice for adding direct volume to a target without much technique
+      risk at higher reps.
+
+  - id: compound-general
+    name: General compound
+    summary: >-
+      A compound movement not otherwise carrying the heavy-compound or
+      stable-compound coverage category — most often a unilateral or
+      otherwise structurally distinct compound variation.
+    primary_range: [6, 15]
+    acceptable_range: [5, 20]
+    rep_range_reason: >-
+      A general compound-movement range, used when a compound exercise
+      doesn't carry the heavy-compound or stable-compound coverage
+      category specifically.
+    guidance_note: >-
+      This doesn't fit neatly into the usual heavy- or stable-compound
+      pattern — treat the ranges here as a reasonable starting point and
+      adjust based on how it actually feels to load and control.
+
+classification:
+  defaults:
+    - profile_id: heavy-free-weight-compound
+      match:
+        coverage_categories_any: [heavy-compound]
+    - profile_id: stable-compound
+      match:
+        coverage_categories_any: [stable-compound]
+    - profile_id: lengthened-position-isolation
+      match:
+        exercise_type: isolation
+        coverage_categories_any: [lengthened-position-emphasis]
+    - profile_id: shortened-position-isolation
+      match:
+        exercise_type: isolation
+        coverage_categories_any: [shortened-position-emphasis]
+    - profile_id: constant-tension-isolation
+      match:
+        exercise_type: isolation
+        coverage_categories_any: [low-fatigue]
+    - profile_id: elevated-stability-isolation
+      match:
+        exercise_type: isolation
+        stability_demand_at_least: medium
+    - profile_id: moderate-hypertrophy-isolation
+      match:
+        exercise_type: isolation
+    - profile_id: compound-general
+      match:
+        exercise_type: compound

@@ -64,6 +64,7 @@ function main() {
     physiqueTargets: loadYaml('physique-targets.yaml').targets,
     globalPrinciples: loadYaml('global-principles.yaml'),
     repRanges: loadYaml('rep-ranges.yaml'),
+    programmingProfiles: loadYaml('programming-profiles.yaml'),
     intensityTechniques: loadYaml('intensity-techniques.yaml').techniques,
     aestheticOutcomes: loadYaml('aesthetic-outcomes.yaml').outcomes,
     functionalGoals: loadYaml('functional-goals.yaml').goals,
