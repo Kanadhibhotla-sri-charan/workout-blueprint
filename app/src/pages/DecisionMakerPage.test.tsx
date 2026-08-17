@@ -359,6 +359,43 @@ describe('DecisionMakerPage', () => {
     expect(document.querySelector('.decision-result-functional')).not.toBeInTheDocument();
   });
 
+  // Found during the 4K mobile pass: switching entry modes cleared
+  // bodyRegion/physiqueTarget/functionalGoal but not currentExerciseId, so
+  // an exercise picked under the old region could silently resubmit even
+  // though the dropdown visibly showed "— none —" after the switch —
+  // "complement-current" for a Function-mode pick would then reason from a
+  // stale, unrelated chest exercise instead of returning the engine's own
+  // missing-current-exercise message.
+  it('switching entry modes clears a previously-picked current exercise, not just the region/target', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'chest');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'chest-side-projection'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'complement-current'
+    );
+    await user.selectOptions(screen.getByLabelText(/current exercise/i), 'incline-dumbbell-press');
+
+    await user.click(screen.getByRole('radio', { name: /^function$/i }));
+    expect(screen.getByLabelText(/current exercise/i)).toHaveValue('');
+
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'core');
+    await user.selectOptions(
+      screen.getByLabelText(/what do you want to improve functionally/i),
+      'core-anti-extension'
+    );
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    // The engine's own "needs you to specify the exercise" message, not a
+    // recommendation reasoned from the stale Incline Dumbbell Press pick.
+    expect(await screen.findByText(/needs you to specify the exercise/i)).toBeInTheDocument();
+  });
+
   // 4I: full-body taxonomy expansion. "Glutes" is a genuinely new region
   // label in the Appearance selector (the underlying exercise data calls
   // it "hips" — this proves the outcome's target.parent_region correctly

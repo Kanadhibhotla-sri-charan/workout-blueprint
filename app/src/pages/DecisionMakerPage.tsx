@@ -101,6 +101,12 @@ export function DecisionMakerPage() {
     setSupportingPhysiqueTargets([]);
     setAestheticOutcomeId('');
     setFunctionalGoalId('');
+    // currentExerciseId's valid options are filtered by bodyRegion (see
+    // currentExerciseOptions below); leaving a previously-picked exercise
+    // in place after a mode switch clears bodyRegion would silently
+    // resubmit an exercise from the *old* region once a new one resolves,
+    // even though the dropdown visibly shows "— none —" in between.
+    setCurrentExerciseId('');
   }
 
   function handleTargetSelectChange(value: string) {

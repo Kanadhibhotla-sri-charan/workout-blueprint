@@ -335,3 +335,37 @@ Replaces the Function mode's placeholder stub with a real, working functional-go
 ### Pending
 
 4K (mobile/usability pass) and 4L (full Definition-of-Done validation) remain, per the corrections doc's implementation order (§21).
+
+---
+
+# 4K — Mobile/usability pass
+
+**Date:** 2026-08-17
+
+Actually launched the app (Vite dev server) behind headless Chromium at phone viewports (375×667 and 414×896 — iPhone SE and a larger Android size), rather than reasoning about the CSS alone. Walked all three entry modes, all three golden slices, a newly-expanded region (Glutes), and the Knowledge Explorer/Exercise Detail pages, checking for horizontal overflow (`scrollWidth > clientWidth`) and reviewing full-page screenshots.
+
+### What was found
+
+- **No horizontal overflow anywhere** — every page checked (`home`, Decision Maker in all three modes and filled states, the result view, exercise list, exercise detail) came back `scrollWidth === clientWidth` at both widths.
+- **A visual false alarm, investigated and ruled out**: full-page screenshots showed the sticky app header appearing to duplicate mid-page. Confirmed via `page.locator('.app-header').count()` (returned 1) and a scrolled, non-full-page screenshot (showed a single, correctly-positioned sticky header) that this is a known Playwright/Chromium full-page-screenshot stitching artifact with `position: sticky` elements, not a real rendering bug in the app.
+- **A real bug**: switching entry modes (Appearance/Function/Advanced) via `handleEntryModeChange` cleared `bodyRegion`/`physiqueTarget`/`supportingPhysiqueTargets`/`aestheticOutcomeId`/`functionalGoalId` (added in 4J) but not `currentExerciseId`. Reproduced live: pick Appearance → chest-side-projection → complement-current → Incline Dumbbell Press, then switch to Function mode and pick Core Anti-Extension. The "Current exercise" dropdown visibly showed "— none —" (its old value, Incline Dumbbell Press, isn't in the now-core-filtered option list), but the underlying React state still held `'incline-dumbbell-press'`. Submitting in this state would have run `complement-current` against the stale chest exercise — `resolveComplements(inclineDumbbellPress, ...)` filtered against `regionCandidates` for `core` — producing either a confusing wrong recommendation or (as traced through the code) a "No exercise complementing Incline Dumbbell Press meets your constraints in this region" error that references an exercise the visible UI never showed as selected.
+
+### What changed
+
+- **`app/src/pages/DecisionMakerPage.tsx`** — `handleEntryModeChange` now also resets `currentExerciseId`, since its valid options (`currentExerciseOptions`) are filtered by `bodyRegion`, which the same function already resets.
+- **`app/src/pages/DecisionMakerPage.test.tsx`** — regression test: pick an aesthetic outcome with a current exercise set, switch to Function mode, confirm the dropdown reads empty, complete a Function-mode `complement-current` submission without picking a new current exercise, and confirm the engine's own `missing-current-exercise` message appears — proving the stale value can no longer reach the engine.
+
+### Decisions made
+
+- **Investigate before reporting.** The sticky-header "duplication" looked like a real bug in the first full-page screenshot. Rather than noting it as a finding, checked the actual DOM element count and a scrolled non-full-page render first — both confirmed it was a screenshot-tool artifact. Reporting it as a bug would have been a false finding; the discipline here (verify before concluding) is the same one this project has applied to every validator check added this session (inject a violation, confirm detection, then trust the "PASS" result).
+- **Fixed the real bug immediately rather than just noting it**, since it was small, contained to a function already being touched this phase, and directly affects correctness (a wrong recommendation silently returned, or an error message naming an exercise the user never selected).
+
+### Verified
+
+- `npm run test`: **113 tests across 14 files**, all passing (up from 112) — including the new stale-`currentExerciseId` regression test.
+- Re-ran the full mobile-viewport check after the fix: overflow-free at both widths, and the "Current exercise" dropdown now correctly resets to empty on every mode switch, confirmed via screenshot.
+- `npx tsc -b --force`, `npm run lint` (oxlint), `npm run build`, and `npm run validate-data`: all clean.
+
+### Pending
+
+4L (full Definition-of-Done validation) remains, per the corrections doc's implementation order (§21) — the final step.
