@@ -18,10 +18,11 @@ const { loadPhysiqueTargets, loadAestheticOutcomes } = require('./load-programmi
 // ADR 0003, so every exercise's physique_targets entries must resolve here.
 const { targetIds: PHYSIQUE_TARGET_IDS, fileErrors: PHYSIQUE_TARGET_FILE_ERRORS } = loadPhysiqueTargets();
 
-// data/programming/aesthetic-outcomes.yaml (revised Phase 4, §28-29) is the
-// authoritative aesthetic-outcome taxonomy. Each outcome's physique_targets
-// must resolve to a real id in physique-targets.yaml — the aesthetic layer
-// references targets, it does not redefine them.
+// data/programming/aesthetic-outcomes.yaml (revised Phase 4, §28-29; primary/
+// supporting split per Phase 4 Corrections §7) is the authoritative
+// aesthetic-outcome taxonomy. Each outcome's primary_targets and
+// supporting_targets must resolve to real ids in physique-targets.yaml —
+// the aesthetic layer references targets, it does not redefine them.
 const { outcomes: AESTHETIC_OUTCOMES, fileErrors: AESTHETIC_OUTCOME_FILE_ERRORS } = loadAestheticOutcomes();
 const AESTHETIC_OUTCOME_REQUIRED_STRING_FIELDS = ['id', 'display_name', 'region', 'viewpoint', 'visual_description'];
 
@@ -68,10 +69,11 @@ function validate(records) {
     });
   }
 
-  // --- Aesthetic outcomes: required fields + physique_targets referential
-  // integrity (§28-29 of the revised Phase 4 spec). Not tied to any one
-  // exercise record, so reported standalone like the physique-targets file
-  // errors above.
+  // --- Aesthetic outcomes: required fields + primary_targets/
+  // supporting_targets referential integrity (§28-29 of the revised Phase
+  // 4 spec; primary/supporting split per Phase 4 Corrections §7). Not tied
+  // to any one exercise record, so reported standalone like the
+  // physique-targets file errors above.
   AESTHETIC_OUTCOMES.forEach((outcome, index) => {
     const label = outcome && typeof outcome.id === 'string' ? outcome.id : `index ${index}`;
     const reportOutcome = (message) => {
@@ -89,12 +91,30 @@ function validate(records) {
       }
     }
 
-    if (!isNonEmptyList(outcome && outcome.physique_targets)) {
-      reportOutcome(`"physique_targets" is required and must be a non-empty list, got ${JSON.stringify(outcome && outcome.physique_targets)}`);
+    if (!isNonEmptyList(outcome && outcome.primary_targets)) {
+      reportOutcome(`"primary_targets" is required and must be a non-empty list, got ${JSON.stringify(outcome && outcome.primary_targets)}`);
     } else {
-      for (const targetId of outcome.physique_targets) {
+      for (const targetId of outcome.primary_targets) {
         if (typeof targetId !== 'string' || !PHYSIQUE_TARGET_IDS.has(targetId)) {
-          reportOutcome(`"physique_targets" references unknown target id ${JSON.stringify(targetId)} — not defined in data/programming/physique-targets.yaml`);
+          reportOutcome(`"primary_targets" references unknown target id ${JSON.stringify(targetId)} — not defined in data/programming/physique-targets.yaml`);
+        }
+      }
+    }
+
+    // supporting_targets is optional (an outcome may have no additional
+    // contributors), but when present must be a list of real target ids
+    // too, and must not just repeat the primary target(s) — that would
+    // defeat the point of distinguishing the two.
+    const supportingTargets = outcome && outcome.supporting_targets;
+    if (!isListOrNull(supportingTargets)) {
+      reportOutcome(`"supporting_targets" must be a list, or absent/null, got ${JSON.stringify(supportingTargets)}`);
+    } else if (Array.isArray(supportingTargets)) {
+      const primaryTargets = (outcome && outcome.primary_targets) || [];
+      for (const targetId of supportingTargets) {
+        if (typeof targetId !== 'string' || !PHYSIQUE_TARGET_IDS.has(targetId)) {
+          reportOutcome(`"supporting_targets" references unknown target id ${JSON.stringify(targetId)} — not defined in data/programming/physique-targets.yaml`);
+        } else if (primaryTargets.includes(targetId)) {
+          reportOutcome(`"supporting_targets" duplicates primary target id ${JSON.stringify(targetId)} — a target should appear in only one of the two lists`);
         }
       }
     }

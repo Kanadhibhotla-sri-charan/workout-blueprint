@@ -6,6 +6,7 @@ import type { DecisionInput } from './types';
 const BASE_INPUT: DecisionInput = {
   bodyRegion: 'chest',
   physiqueTarget: null,
+  supportingPhysiqueTargets: null,
   goal: 'build-base',
   equipmentAvailable: null,
   maxSetupTime: null,
@@ -211,6 +212,85 @@ describe('makeRecommendation — taxonomy expansion beyond Upper Pec', () => {
     if (thickness.status === 'ok' && width.status === 'ok') {
       expect(thickness.bestFit.physique_targets).toContain('back-thickness');
       expect(width.bestFit.physique_targets).toContain('lat-width');
+    }
+  });
+});
+
+// Phase 4 Corrections §6-8: an aesthetic outcome's contributing targets
+// must not be permanently reduced to physique_targets[0] — the primary
+// target drives the recommendation, but supporting targets must broaden
+// the candidate pool and never be silently discarded.
+describe('makeRecommendation — primary + supporting physique targets (Phase 4 Corrections)', () => {
+  it('one primary target with no supporting targets behaves exactly as before (supportingTargets is an empty array, not omitted)', () => {
+    const result = makeRecommendation({ ...BASE_INPUT, physiqueTarget: 'upper-pec' }, exercises);
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('upper-pec');
+      expect(result.supportingTargets).toEqual([]);
+    }
+  });
+
+  it('a primary target plus a supporting target resolves both, and the supporting target is not silently discarded', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        bodyRegion: 'arms',
+        physiqueTarget: 'brachialis-arm-thickness',
+        supportingPhysiqueTargets: ['triceps'],
+        goal: 'build-base',
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('brachialis-arm-thickness');
+      expect(result.supportingTargets.map((t) => t.id)).toEqual(['triceps']);
+    }
+  });
+
+  it('the supporting target materially broadens the candidate pool — a brachialis-only pool has no heavy-compound option, but folding in triceps produces one', () => {
+    const primaryOnly = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'arms', physiqueTarget: 'brachialis-arm-thickness', goal: 'build-base' },
+      exercises
+    );
+    const withSupporting = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        bodyRegion: 'arms',
+        physiqueTarget: 'brachialis-arm-thickness',
+        supportingPhysiqueTargets: ['triceps'],
+        goal: 'build-base',
+      },
+      exercises
+    );
+    expect(primaryOnly.status).toBe('ok');
+    expect(withSupporting.status).toBe('ok');
+    if (primaryOnly.status === 'ok' && withSupporting.status === 'ok') {
+      // Every brachialis-arm-thickness-tagged exercise is isolation-only,
+      // so the primary-only pool can't produce a heavy-compound pick.
+      expect(primaryOnly.bestFit.coverage_categories).not.toContain('heavy-compound');
+      // Once triceps (supporting) is folded in, a heavy-compound triceps
+      // exercise becomes reachable and wins build-base's ranking — proof
+      // the supporting target genuinely changed the outcome, not just
+      // decorated it.
+      expect(withSupporting.bestFit.coverage_categories).toContain('heavy-compound');
+      expect(withSupporting.bestFit.id).toBe('close-grip-bench-press');
+    }
+  });
+
+  it('supportingPhysiqueTargets has no effect when the primary target itself has no matches (never rescues an unresolved primary)', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        physiqueTarget: 'not-a-real-target',
+        supportingPhysiqueTargets: ['upper-pec'],
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target).toBeNull();
+      expect(result.supportingTargets).toEqual([]);
     }
   });
 });

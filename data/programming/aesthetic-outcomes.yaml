@@ -4,24 +4,31 @@
 # canonical, first-class entities representing a visual/mirror-recognizable
 # characteristic, not exercise-attached text or muscle-name synonyms.
 #
-# Each outcome maps downstream to one or more `data/programming/
-# physique-targets.yaml` ids — it does NOT redefine what a physique target
-# means (same "one canonical definition per entity" rule ADR 0003
-# established for the exercise/physique-target relationship) and it does
-# NOT duplicate exercise knowledge (§28).
+# Each outcome maps downstream to `data/programming/physique-targets.yaml`
+# ids via an explicit primary_targets / supporting_targets split (Phase 4
+# Corrections §7-8, docs/architecture/PHASE-4-CORRECTIONS.md) — it does NOT
+# redefine what a physique target means (same "one canonical definition per
+# entity" rule ADR 0003 established for the exercise/physique-target
+# relationship) and it does NOT duplicate exercise knowledge (§28).
+# `primary_targets` is what drives exercise selection; `supporting_targets`
+# (optional, defaults to none) are contributing targets that must not be
+# silently discarded — the engine folds them into the candidate pool and
+# the UI surfaces them, but they never outweigh the primary target's role
+# in choosing the actual recommendation. See engine/decisionEngine.ts and
+# programmingEngine's callers for how the two are consumed differently.
 #
 # 4A's full-body audit and proposed taxonomy is
 # docs/dev/reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md (architect-
 # approved, including the two flagged/lower-confidence outcomes). Per the
 # spec's own implementation order (§43) and its explicit instruction not to
 # implement the entire taxonomy before validating the first vertical slice,
-# this file currently carries only the two outcomes required for the two
-# golden vertical slices (§36/§37) — chest-side-projection and
-# triceps-back-depth — both of which resolve entirely to physique targets
-# that already exist, so no new taxonomy risk is introduced here. The
-# remaining ~22 approved outcomes (and the 9 new physique targets six of
-# them depend on) are added in the taxonomy-expansion pass (4I), after both
-# golden slices pass.
+# this file currently carries only the three outcomes needed for the three
+# required golden vertical slices (§36/§37 of the revised spec, plus the
+# multi-target slice required by the Corrections doc §19/§21) — all of
+# which resolve entirely to physique targets that already exist, so no new
+# taxonomy risk is introduced here. The remaining ~21 approved outcomes
+# (and the 9 new physique targets most of them depend on) are added in the
+# taxonomy-expansion pass (4I), after all three golden slices pass.
 
 outcomes:
   - id: chest-side-projection
@@ -32,16 +39,19 @@ outcomes:
       The chest lacks depth or projection when viewed from the side —
       it doesn't stand out from the torso the way a fuller chest does,
       even if it looks reasonably full from straight on.
-    physique_targets:
+    primary_targets:
       - upper-pec
+    supporting_targets:
       - lower-pec
     technical_explanation: >-
       Side-view chest projection comes from how much pectoral mass sits
       forward of the ribcage across the chest's vertical span, not from
       any single spot. The upper-chest shelf (just below the collarbone)
-      and the lower-chest/rib transition are the two regions most
-      responsible for that forward profile — the mid-chest mainly adds
-      front-on width and thickness rather than side-view depth.
+      is the single biggest lever for that forward profile and is what
+      drives the recommendation here; the lower-chest/rib transition
+      also contributes to side-view depth and is worth developing
+      alongside it — the mid-chest mainly adds front-on width and
+      thickness rather than side-view depth.
     anatomical_targets:
       - pectoralis major, clavicular (upper) head
       - pectoralis major, costal (lower) head
@@ -58,22 +68,56 @@ outcomes:
       The back of the upper arm looks flat or thin when viewed from
       behind, rather than showing visible mass and shape — even if the
       arm looks reasonably full from the front (biceps side).
-    physique_targets:
+    primary_targets:
       - triceps
+    supporting_targets:
       - triceps-long-head
     technical_explanation: >-
       The triceps brachii makes up roughly two-thirds of upper-arm
       size, more than the biceps, so its development has an outsized
-      effect on how the arm looks from behind. The long head in
-      particular runs along the inner/rear portion of the upper arm and
-      is the part most easily under-trained by exercises that never
-      take the shoulder into an overhead position — it's the head most
-      responsible for the visible "horseshoe" shape some lifters lack
-      when they describe the back of the arm as having no depth.
+      effect on how the arm looks from behind — general triceps
+      development is what drives the recommendation here. The long
+      head specifically runs along the inner/rear portion of the upper
+      arm and is the part most easily under-trained by exercises that
+      never take the shoulder into an overhead position; giving it
+      dedicated attention alongside general triceps work is what
+      produces the visible "horseshoe" shape some lifters lack when
+      they describe the back of the arm as having no depth.
     anatomical_targets:
-      - triceps brachii, long head
       - triceps brachii, lateral and medial heads
+      - triceps brachii, long head
     common_user_phrasings:
       - "My triceps have no depth from behind."
       - "My arms look thin from behind even though they look okay from the front."
       - "The back of my arm looks flat."
+
+  - id: arm-side-thickness
+    display_name: "Arms look thin from the side"
+    region: arms
+    viewpoint: side
+    visual_description: >-
+      The upper arm looks narrow when viewed from the side — thin
+      front-to-back — even if it looks reasonably full from the front
+      (biceps view) or back (triceps view) alone.
+    primary_targets:
+      - brachialis-arm-thickness
+    supporting_targets:
+      - triceps
+    technical_explanation: >-
+      Side-view arm thickness is a front-to-back measurement, not a
+      single muscle's size. The brachialis sits underneath the biceps
+      and pushes it outward — it's the single biggest lever for this
+      specific side-on profile and is what drives the recommendation
+      here, distinct from biceps peak (a front-on flex characteristic).
+      The triceps, which make up roughly two-thirds of upper-arm size,
+      also contribute real thickness visible from the side and are
+      worth developing alongside it — an arm can have a well-developed
+      biceps peak and still look thin from the side if the brachialis
+      and triceps are undertrained.
+    anatomical_targets:
+      - brachialis
+      - triceps brachii, all three heads
+    common_user_phrasings:
+      - "My arms look thin from the side."
+      - "My arms look big from the front but not from the side."
+      - "My arms don't look as thick as they should."

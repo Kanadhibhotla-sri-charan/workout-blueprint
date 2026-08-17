@@ -3,6 +3,7 @@ import '@testing-library/jest-dom/vitest';
 import { afterEach, describe, expect, it } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import type { UserEvent } from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { DecisionMakerPage } from './DecisionMakerPage';
 
@@ -20,12 +21,21 @@ function renderPage() {
   );
 }
 
+// Appearance is the default entry mode (Phase 4 Corrections §2-5: it's the
+// primary physique-goal entry point, not an optional add-on). Tests that
+// specifically exercise the direct/advanced target picker switch into that
+// mode explicitly first.
+async function useAdvancedMode(user: UserEvent) {
+  await user.click(screen.getByRole('radio', { name: /direct \/ advanced/i }));
+}
+
 describe('DecisionMakerPage', () => {
   it('produces a Best Fit recommendation for a goal-only submission', async () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
+    await useAdvancedMode(user);
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'build-base'
@@ -39,7 +49,8 @@ describe('DecisionMakerPage', () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
+    await useAdvancedMode(user);
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'replace-exercise'
@@ -62,7 +73,8 @@ describe('DecisionMakerPage', () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
+    await useAdvancedMode(user);
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'replace-exercise'
@@ -80,12 +92,15 @@ describe('DecisionMakerPage', () => {
   // Pec + Incline Dumbbell Press + "more growth / low redundancy" must
   // demonstrate the complete vertical slice through the actual UI, not
   // just the engine directly — this is the acceptance gate before the
-  // taxonomy expands past Upper Pec.
-  it('golden test case: Upper Pec + Incline Dumbbell Press + complement goal', async () => {
+  // taxonomy expands past Upper Pec. Exercised here via the direct/
+  // advanced picker specifically, to confirm that path still works
+  // unchanged (Phase 4 Corrections §5's "direct target path still works").
+  it('golden test case (direct/advanced path): Upper Pec + Incline Dumbbell Press + complement goal', async () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'target:upper-pec');
+    await useAdvancedMode(user);
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'target:upper-pec');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'complement-current'
@@ -96,7 +111,7 @@ describe('DecisionMakerPage', () => {
     // Specific physique target recognition — disambiguated from the
     // select's own "Upper Pec" option text via the result block specifically.
     await screen.findByRole('heading', { name: /stimulus/i });
-    const targetName = document.querySelector('.decision-result-block .decision-result-name');
+    const targetName = document.querySelector('.decision-result-target .decision-result-name');
     expect(targetName?.textContent).toBe('Upper Pec');
     // Visual objective (the target's physique_outcome).
     expect(screen.getByText(/upper chest shelf/i)).toBeInTheDocument();
@@ -122,14 +137,13 @@ describe('DecisionMakerPage', () => {
   // outcome selector — not the direct target dropdown — must resolve
   // "Chest looks flat from the side" all the way through to the same
   // already-validated Upper Pec engine chain (Incline Dumbbell Press ->
-  // Cable Fly, full programming). This is the actual required golden slice;
-  // the test above exercises the same chain via the direct target picker,
-  // which the aesthetic layer sits on top of without disturbing.
+  // Cable Fly, full programming). Appearance is the default entry mode
+  // (Phase 4 Corrections §2), so no mode switch is needed here.
   it('golden slice: the aesthetic-outcome entry point ("Chest looks flat from the side") resolves through Upper Pec', async () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/body area \(by appearance\)/i), 'chest');
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'chest');
     await user.selectOptions(
       screen.getByLabelText(/how do you want it to look/i),
       'chest-side-projection'
@@ -148,14 +162,18 @@ describe('DecisionMakerPage', () => {
     expect(outcomeName?.textContent).toBe('Chest looks flat from the side');
     expect(screen.getByText(/lacks depth or projection/i)).toBeInTheDocument();
 
-    // It resolved to the same Upper Pec target the direct-picker golden
-    // test validates, not a fabricated or generic chest pick.
+    // It resolved to the same Upper Pec primary target the direct-picker
+    // golden test validates, not a fabricated or generic chest pick.
     const targetName = document.querySelector('.decision-result-target .decision-result-name');
     expect(targetName?.textContent).toBe('Upper Pec');
     expect(screen.getByText(/upper chest shelf/i)).toBeInTheDocument();
 
-    // Same complement-selection and programming guarantees as the direct
-    // golden test.
+    // Supporting target (lower-pec) is surfaced, not silently discarded
+    // (Phase 4 Corrections §7-8).
+    const supportingBlock = document.querySelector('.decision-result-supporting');
+    expect(supportingBlock?.textContent).toMatch(/lower pec/i);
+
+    // Same complement-selection and programming guarantees as before.
     const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
     expect(bestFitLink).toBeDefined();
     expect(bestFitLink?.textContent).not.toBe('Incline Dumbbell Press');
@@ -171,7 +189,7 @@ describe('DecisionMakerPage', () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/body area \(by appearance\)/i), 'arms');
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'arms');
     await user.selectOptions(
       screen.getByLabelText(/how do you want it to look/i),
       'triceps-back-depth'
@@ -195,6 +213,10 @@ describe('DecisionMakerPage', () => {
     // technical_explanation not to collide with it.
     expect(screen.getByText(/outsized effect on overall arm thickness/i)).toBeInTheDocument();
 
+    // Supporting target (triceps-long-head) surfaced, not discarded.
+    const supportingBlock = document.querySelector('.decision-result-supporting');
+    expect(supportingBlock?.textContent).toMatch(/triceps — long-head emphasis/i);
+
     // A genuinely different movement from the current exercise, not the
     // same one restated.
     const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
@@ -207,17 +229,61 @@ describe('DecisionMakerPage', () => {
     expect(document.querySelector('.decision-result-best')?.textContent).toMatch(/alongside Cable Pushdown/i);
   });
 
-  it('editing question 1 directly after using the appearance selector clears the stale "what you\'re trying to change" block', async () => {
+  // Multi-target golden slice required by the Phase 4 Corrections doc
+  // (§19/§21 step 10): "My arms look thin from the side" involves both a
+  // primary target (brachialis-arm-thickness) and a supporting one
+  // (triceps), and the supporting target must materially matter, not just
+  // be decorative — proven here by build-base resolving to a heavy-compound
+  // triceps exercise that a brachialis-only pool could never produce (the
+  // three brachialis-tagged exercises are all isolation).
+  it('multi-target golden slice: "Arms look thin from the side" folds the supporting target into the candidate pool', async () => {
     const user = userEvent.setup();
     renderPage();
 
-    await user.selectOptions(screen.getByLabelText(/body area \(by appearance\)/i), 'chest');
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'arms');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'arm-side-thickness'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'build-base'
+    );
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    await screen.findByRole('heading', { name: /what you're trying to change/i });
+    const outcomeName = document.querySelector('.decision-result-outcome .decision-result-name');
+    expect(outcomeName?.textContent).toBe('Arms look thin from the side');
+
+    const targetBlock = document.querySelector('.decision-result-target');
+    expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Brachialis / Arm Thickness');
+
+    // Supporting target (triceps) is surfaced.
+    const supportingBlock = document.querySelector('.decision-result-supporting');
+    expect(supportingBlock?.textContent).toMatch(/triceps/i);
+
+    // The concrete, testable proof that the supporting target isn't
+    // decorative: a brachialis-only pool (hammer-curl family, all
+    // isolation) could never produce a heavy-compound best fit for a
+    // build-base goal. Close-Grip Bench Press is only reachable because
+    // triceps (supporting) was folded into the candidate pool.
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink?.textContent).toBe('Close-Grip Bench Press');
+  });
+
+  it('editing the direct/advanced picker after using the appearance selector clears the stale "what you\'re trying to change" block and its supporting targets', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'chest');
     await user.selectOptions(
       screen.getByLabelText(/how do you want it to look/i),
       'chest-side-projection'
     );
-    // Override question 1 directly, away from the aesthetic pick.
-    await user.selectOptions(screen.getByLabelText(/what do you want to improve/i), 'region:chest');
+    // Switch to the direct/advanced path and override away from the
+    // aesthetic pick.
+    await useAdvancedMode(user);
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'region:chest');
     await user.selectOptions(
       screen.getByLabelText(/what are you trying to accomplish/i),
       'build-base'
@@ -226,5 +292,28 @@ describe('DecisionMakerPage', () => {
 
     expect(await screen.findByText(/best fit/i)).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /what you're trying to change/i })).not.toBeInTheDocument();
+    expect(document.querySelector('.decision-result-supporting')).not.toBeInTheDocument();
+  });
+
+  // Phase 4 Corrections §5/§19: Function must be a clearly separated entry
+  // point, distinct from both Appearance and the direct/advanced path,
+  // even though it has no working data model yet (that's 4J).
+  it('Function is a clearly separated entry point that does not attempt a recommendation', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.click(screen.getByRole('radio', { name: /^function$/i }));
+
+    expect(screen.getByText(/on the blueprint roadmap/i)).toBeInTheDocument();
+    expect(screen.queryByLabelText(/what are you trying to accomplish/i)).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /get recommendation/i })).not.toBeInTheDocument();
+  });
+
+  it('Appearance is selected by default — the first physique-oriented entry is aesthetic, not anatomical', async () => {
+    renderPage();
+
+    expect(screen.getByRole('radio', { name: /^appearance$/i })).toBeChecked();
+    expect(screen.getByLabelText(/body area/i)).toBeInTheDocument();
+    expect(screen.queryByLabelText(/region or physique target/i)).not.toBeInTheDocument();
   });
 });

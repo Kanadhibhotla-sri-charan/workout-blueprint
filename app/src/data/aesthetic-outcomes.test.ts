@@ -15,12 +15,23 @@ describe('aesthetic-outcomes taxonomy', () => {
     }
   });
 
-  it('every outcome maps to at least one physique target, and every mapped target resolves to a real target', () => {
+  it('every outcome has at least one primary target, and every primary_targets/supporting_targets entry resolves to a real target', () => {
     const targetIds = new Set(physiqueTargets.map((t) => t.id));
     for (const outcome of aestheticOutcomes) {
-      expect(outcome.physique_targets.length).toBeGreaterThan(0);
-      for (const id of outcome.physique_targets) {
+      expect(outcome.primary_targets.length).toBeGreaterThan(0);
+      for (const id of outcome.primary_targets) {
         expect(targetIds.has(id)).toBe(true);
+      }
+      for (const id of outcome.supporting_targets ?? []) {
+        expect(targetIds.has(id)).toBe(true);
+      }
+    }
+  });
+
+  it('supporting_targets never repeats a primary target on the same outcome (Phase 4 Corrections §7)', () => {
+    for (const outcome of aestheticOutcomes) {
+      for (const id of outcome.supporting_targets ?? []) {
+        expect(outcome.primary_targets).not.toContain(id);
       }
     }
   });
@@ -35,13 +46,21 @@ describe('aesthetic-outcomes taxonomy', () => {
     }
   });
 
-  it('the chest-side-projection golden-slice outcome maps to upper-pec and lower-pec', () => {
+  it('the chest-side-projection golden-slice outcome has upper-pec as primary and lower-pec as supporting', () => {
     const outcome = getAestheticOutcomeById('chest-side-projection')!;
-    expect(outcome.physique_targets).toEqual(expect.arrayContaining(['upper-pec', 'lower-pec']));
+    expect(outcome.primary_targets).toEqual(['upper-pec']);
+    expect(outcome.supporting_targets).toEqual(['lower-pec']);
   });
 
-  it('the triceps-back-depth golden-slice outcome maps to triceps and triceps-long-head', () => {
+  it('the triceps-back-depth golden-slice outcome has triceps as primary and triceps-long-head as supporting', () => {
     const outcome = getAestheticOutcomeById('triceps-back-depth')!;
-    expect(outcome.physique_targets).toEqual(expect.arrayContaining(['triceps', 'triceps-long-head']));
+    expect(outcome.primary_targets).toEqual(['triceps']);
+    expect(outcome.supporting_targets).toEqual(['triceps-long-head']);
+  });
+
+  it('the arm-side-thickness multi-target golden-slice outcome has brachialis-arm-thickness as primary and triceps as supporting', () => {
+    const outcome = getAestheticOutcomeById('arm-side-thickness')!;
+    expect(outcome.primary_targets).toEqual(['brachialis-arm-thickness']);
+    expect(outcome.supporting_targets).toEqual(['triceps']);
   });
 });

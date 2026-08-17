@@ -197,3 +197,64 @@ Two test-assertion collisions surfaced while writing the test (not product bugs)
 ### STOP-gate status
 
 Both golden slices pass. Per the spec's own implementation order (§43), 4I (expand the taxonomy to the full architect-approved ~24 outcomes / 9 new physique targets from the 4A/4B proposal) is next, but is a substantial expansion — checking in with the architect before proceeding, same discipline used before the original taxonomy expansion in the first Phase 4 pass.
+
+---
+
+# Revision — Phase 4 Corrections
+
+**Trigger:** Architect-supplied [corrections memo](../architecture/PHASE-4-CORRECTIONS.md) reviewing the built slices. Two required corrections before proceeding to the full taxonomy expansion: (1) make Aesthetic Outcome the genuine primary physique-goal entry point, not an optional shortcut alongside the direct target picker; (2) replace the permanent `physique_targets[0]` assumption with an explicit primary/supporting target model so contributing targets are never silently discarded. Explicit non-goals: do not restart Phase 4, do not rewrite the decision engine, do not introduce AI.
+
+**Date:** 2026-08-17
+
+## Correction #2 — primary/supporting target schema + engine
+
+Implemented first since the UX correction depends on it.
+
+### What changed
+
+- **`data/programming/aesthetic-outcomes.yaml`** — `physique_targets: [...]` replaced with an explicit `primary_targets: [...]` / `supporting_targets: [...]` split on all three outcomes. `chest-side-projection`: primary `upper-pec`, supporting `lower-pec`. `triceps-back-depth`: primary `triceps`, supporting `triceps-long-head`. Both preserve the exact primary target the two already-passing golden slices depend on, so neither slice's `bestFit` changes (see Verified below for why — both slices use `complement-current`, whose ranking never reads the target-narrowed candidate pool).
+- **New outcome: `arm-side-thickness`** ("Arms look thin from the side") — primary `brachialis-arm-thickness`, supporting `triceps`. Added specifically to satisfy the Corrections doc's required multi-target golden slice (§19/§21 step 10), and grounded in real data rather than the doc's own illustrative "overall upper-arm development" example (per §13, "use the actual audited taxonomy... rather than inventing a new list from this document" — no target named "overall upper-arm development" exists, so it wasn't invented): `brachialis-arm-thickness`'s own `physique_outcome` explicitly says "seen from the side," making it the genuine primary driver of this specific viewpoint, distinct from `arm-side-projection`'s existing chest and triceps outcomes.
+- **`scripts/lib/validate.js`** — required-field/referential-integrity check updated for the new schema: `primary_targets` (required, non-empty, must resolve) and `supporting_targets` (optional, must resolve when present, and must not repeat a primary target — verified by deliberately injecting both an unknown supporting-target id and a supporting target that duplicates the primary, confirming both violations were caught, then restoring).
+- **`app/src/types/programming.ts`** — `AestheticOutcome.physique_targets` replaced with `primary_targets: string[]` and `supporting_targets?: string[]`.
+- **`app/src/engine/types.ts`** — `DecisionInput` gains `supportingPhysiqueTargets: string[] | null`, alongside the existing `physiqueTarget: string | null` (the primary). `DecisionResult`'s `'ok'` variant gains `supportingTargets: PhysiqueTarget[]` — always an array, empty rather than omitted, so "not silently discarded" is enforceable by a test, not just a code-review convention.
+- **`app/src/engine/decisionEngine.ts`** — Step 1 now computes `primaryMatches` (unchanged from before) and, only once the primary target has genuinely resolved, folds in `supportingMatches` (exercises tagged with any `supportingPhysiqueTargets` id) via a de-duplicating union into the candidate pool. `target`/`visualObjective` still derive from the primary only (Corrections §8: "the primary target should drive the main recommendation... do not automatically give equal weight to all targets") — supporting targets broaden the pool and are resolved into `supportingTargets` for display, but never substitute for an unresolved primary (a bare `supportingPhysiqueTargets` list with no matching primary target does not narrow anything on its own — verified by test).
+- **`app/src/pages/DecisionMakerPage.tsx`** — `handleAestheticOutcomeChange` now reads `outcome.primary_targets[0]` (unchanged mechanism, corrected field name) and separately sets `supportingPhysiqueTargets` from `outcome.supporting_targets ?? []`; both are cleared when the user overrides via the direct/advanced picker, same staleness-prevention already in place for the aesthetic-outcome id itself. Result view gained a "🧩 Also contributes" block, listing every supporting target's name and `physique_outcome`, shown whenever `supportingTargets.length > 0`.
+
+### Decisions made
+
+- **Supporting targets broaden the pool via a union, not a fallback-when-empty.** Considered a narrower alternative (only try supporting targets if the primary target's own pool comes up empty), but the Corrections doc's own bullet list (§8: "broaden the candidate pool... identify complementary exercises... explain the aesthetic outcome... prevent a recommendation from ignoring an important contributor") describes an always-on broadening, not a rare fallback — and a fallback-only design would make the multi-target golden slice's own supporting target (`triceps`, whose exercises are certainly reachable via the `arms` body region already) look like it does nothing, since `brachialis-arm-thickness` alone already has non-zero matches. The union design is what actually makes the golden slice's own proof (isolation-only primary pool vs. heavy-compound pick once triceps is folded in) meaningful.
+- **The union only applies once the primary target has resolved.** A `supportingPhysiqueTargets` list with an unresolved (or absent) primary target does not narrow candidates on its own — matches Corrections §8's "the primary target should drive the main recommendation," and avoids a confusing state where a target the user never selected as primary could still narrow their results. Verified by test (`not-a-real-target` primary + valid `upper-pec` supporting still falls back to plain body-region selection).
+- **`supportingTargets` is typed as a plain array, not `array | null`.** An empty array and "no supporting targets" are the same state; making callers null-check adds friction without adding information the type doesn't already carry, and "always an array, empty when none" is the same pattern `complements`/`watchOut` already use elsewhere in `DecisionResult`.
+
+### Verified
+
+- Deliberately injected two aesthetic-outcomes.yaml violations (an unknown supporting-target id, a supporting target duplicating the outcome's own primary target) — both caught by `npm run validate-data`, then restored and re-confirmed clean.
+- New engine-level tests (`decisionEngine.test.ts`): a primary-only outcome still returns `supportingTargets: []`; a primary+supporting outcome resolves both; the supporting target concretely changes the `build-base` recommendation (brachialis-only pool has no heavy-compound option; folding in triceps produces `close-grip-bench-press`); an unresolved primary is never rescued by a valid supporting target.
+- Confirmed via direct inspection that the two pre-existing golden slices' `bestFit` is unaffected by the schema change: both use `complement-current`, whose ranking path (`resolveComplements` + `regionCandidates`) never reads the target-narrowed `candidates` variable the primary/supporting union feeds — the union only affects `build-base`/`replace-exercise`/`low-fatigue`/`limited-equipment`/`visual-area` goals and the (already non-zero either way) `no-candidates` check.
+
+## Correction #1 — Appearance as the primary entry point
+
+### What changed
+
+- **`app/src/pages/DecisionMakerPage.tsx`** — question 1 restructured into a `<fieldset>` with the legend "1. What do you want to improve?" containing a 3-way radio choice — 👀 Appearance, 🦴 Function, 🎯 Direct / Advanced — defaulting to **Appearance** (not a neutral empty state), per Corrections §5's "the first physique-oriented problem presented to the user is an aesthetic/visual problem." Each mode renders its own panel below the radios:
+  - **Appearance** (default): the region → aesthetic-outcome selector pair from 4E, unchanged in behavior, just relocated and re-labeled ("Body area" / "How do you want it to look?").
+  - **Function**: a stub message naming what it will eventually cover (rotator cuff, scapular stability, hip mobility, core stability) and pointing to the other two modes — intentionally not a working form, since no functional taxonomy/data model exists yet (that's 4J, explicitly a later implementation-order step in both the revised spec and the corrections doc; building it now would be exactly the scope expansion §20 warns against). Steps 2-4 and the submit button are hidden entirely in this mode, so there's no way to submit a stale or meaningless recommendation from it.
+  - **Direct / Advanced**: the pre-existing region/target `<select>` from Phase 4's first pass, unchanged in mechanism — same id (`dm-target`), same `region:`/`target:` value scheme — just relabeled ("Region or physique target," since "What do you want to improve?" now belongs to the mode radios) and gated behind this mode instead of always visible. Corrections §4 explicitly requires reusing the existing engine, not building a second one — this mode is a visibility change only, zero new logic.
+  - Switching modes preserves whatever `bodyRegion`/`physiqueTarget` state is already set (e.g. picking an outcome in Appearance mode, then switching to Advanced, shows that same target already selected) — a deliberate continuity property, not incidental.
+- **`app/src/index.css`** — `.entry-mode-field`/`.entry-mode-choices`/`.entry-mode-panel`/`.radio-field` styling, reusing the existing `.decision-constraints` fieldset and `.checkbox-field` patterns rather than inventing new visual language. Removed the now-unused `.appearance-entry` rule from 4E (the appearance block is no longer a standalone always-visible div).
+
+### Decisions made
+
+- **Function is visible but non-functional, not hidden entirely.** Corrections §5's acceptance criteria explicitly lists "Appearance and Function remain clearly separated" as a checkbox for *this* correction, and §19 lists "Function remains separate" under required new tests — both read as wanting the three-way branch visible now, with Function's actual data model still correctly deferred to 4J. A stub message is minimal, inspectable complexity (matches §12's "keep it deterministic and explainable," even though that guidance was written about the target-mapping model specifically) — not a new engine or a functional taxonomy built ahead of schedule.
+- **All pre-existing DecisionMakerPage tests needed updating**, since the direct/advanced `<select>` is no longer visible by default — they now click the "Direct / Advanced" radio first via a small `useAdvancedMode` test helper. This is treated as an intentional behavior change validated by tests, not a regression: the corrections memo explicitly asked for exactly this default-to-Appearance behavior.
+
+### Verified
+
+- `npm run test`: **92 tests across 13 files**, all passing (up from 83 before this revision) — including new tests for: Appearance checked by default with no anatomical picker visible; Function showing its stub and hiding goal/constraints/submit entirely; the direct/advanced path still resolving the original golden test case end to end; and the new multi-target golden slice (`arm-side-thickness`) passing through the actual Appearance UI, with its "Also contributes" block visibly listing the supporting target.
+- `npx tsc -b --force`: clean. (Note for future work: this project's root `tsconfig.json` has `"files": []` with only `references` — plain `tsc --noEmit` silently checks zero files against it; `tsc -b` is required to actually type-check the referenced `tsconfig.app.json`/`tsconfig.node.json` projects. Caught this mid-session when a real missing-field error didn't surface until switching commands.)
+- `npm run lint` (oxlint) and `npm run build`: both clean.
+- `npm run validate-data` (root): PASS, 123/123 records, 0 issues.
+
+### Pending
+
+Both golden slices (chest-side-projection, triceps-back-depth) and the new multi-target slice (arm-side-thickness) all re-pass after both corrections, satisfying the corrections doc's own validation requirements (§19, implementation-order steps 5, 8-10). Per §21's implementation order, 4I (expand to the full ~21 remaining approved outcomes and 9 new physique targets from the 4A/4B proposal) is next.

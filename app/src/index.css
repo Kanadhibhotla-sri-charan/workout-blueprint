@@ -526,7 +526,8 @@ select {
   font-weight: 600;
 }
 
-.decision-constraints {
+.decision-constraints,
+.entry-mode-field {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: var(--space-4);
@@ -535,21 +536,38 @@ select {
   gap: var(--space-3);
 }
 
-.decision-constraints legend {
+.decision-constraints legend,
+.entry-mode-field legend {
   font-weight: 600;
   padding: 0 var(--space-1);
 }
 
-.checkbox-field {
+.checkbox-field,
+.radio-field {
   display: flex;
   align-items: center;
   gap: var(--space-2);
   font-weight: 500;
 }
 
-.checkbox-field input {
+.checkbox-field input,
+.radio-field input {
   width: auto;
   min-height: auto;
+}
+
+.entry-mode-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.entry-mode-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border);
 }
 
 .field-hint {
@@ -590,10 +608,9 @@ select {
   background: var(--accent-bg);
 }
 
-.appearance-entry {
-  padding: var(--space-4);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius);
+.decision-result-supporting ul {
+  margin: 0;
+  padding-left: var(--space-4);
 }
 
 .decision-result-name {

@@ -83,7 +83,16 @@ export interface AestheticOutcome {
   region: string;
   viewpoint: string;
   visual_description: string;
-  physique_targets: string[];
+  /** Drives exercise selection — the target(s) primarily responsible for this outcome. */
+  primary_targets: string[];
+  /**
+   * Contributing targets that must not be silently discarded (Phase 4
+   * Corrections §7-8): folded into the candidate pool and surfaced in the
+   * UI, but never overriding the primary target's role in choosing the
+   * actual recommendation. Absent/empty when an outcome has no additional
+   * contributors.
+   */
+  supporting_targets?: string[];
   technical_explanation?: string;
   anatomical_targets?: string[];
   common_user_phrasings?: string[];

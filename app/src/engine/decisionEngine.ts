@@ -25,14 +25,39 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
   // this is what keeps Phase 3's body-region-only selection working
   // unchanged while the taxonomy is still being expanded target by target.
   const resolvedTarget = input.physiqueTarget ? (getPhysiqueTargetById(input.physiqueTarget) ?? null) : null;
-  const targetMatches = resolvedTarget
+  const primaryMatches = resolvedTarget
     ? allExercises.filter((exercise) => exercise.physique_targets?.includes(resolvedTarget.id))
     : [];
-  // Only treated as "genuinely used" when it actually has curated
-  // exercises — a target with zero matches falls back to body-region
-  // selection (below) and must not claim target-awareness it didn't have
-  // (see buildResultFromRanked's target/visualObjective handling).
-  const target = targetMatches.length > 0 ? resolvedTarget : null;
+  // Only treated as "genuinely used" when the primary target actually has
+  // curated exercises — a target with zero matches falls back to
+  // body-region selection (below) and must not claim target-awareness it
+  // didn't have (see buildResultFromRanked's target/visualObjective
+  // handling). Supporting targets never rescue a primary target that has
+  // no matches of its own — they broaden an already-real target, they
+  // don't substitute for one (Phase 4 Corrections §8: "the primary target
+  // should drive the main recommendation").
+  const target = primaryMatches.length > 0 ? resolvedTarget : null;
+  // Supporting targets (Phase 4 Corrections §7-8) are folded into the
+  // candidate pool alongside the primary target's own matches, so an
+  // outcome's contributing targets are never silently unreachable just
+  // because they didn't happen to be first in the list — but only once a
+  // primary target has genuinely resolved; a bare supportingPhysiqueTargets
+  // list with no primary target does not narrow anything on its own.
+  const supportingTargetIds = target ? (input.supportingPhysiqueTargets ?? []) : [];
+  const supportingMatches = supportingTargetIds.length
+    ? allExercises.filter((exercise) =>
+        supportingTargetIds.some((id) => exercise.physique_targets?.includes(id))
+      )
+    : [];
+  const targetMatches =
+    primaryMatches.length > 0
+      ? [...new Map([...primaryMatches, ...supportingMatches].map((exercise) => [exercise.id, exercise])).values()]
+      : [];
+  const supportingTargets = target
+    ? supportingTargetIds
+        .map((id) => getPhysiqueTargetById(id))
+        .filter((resolved): resolved is PhysiqueTarget => resolved != null)
+    : [];
   let candidates =
     targetMatches.length > 0
       ? targetMatches
@@ -99,7 +124,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       () => `${currentExercise!.name} has no substitute meeting your constraints in this region.`,
       allExercises,
       input,
-      target
+      target,
+      supportingTargets
     );
   }
 
@@ -114,7 +140,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       () => `No exercise complementing ${currentExercise!.name} meets your constraints in this region.`,
       allExercises,
       input,
-      target
+      target,
+      supportingTargets
     );
   }
 
@@ -125,7 +152,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     () => 'No exercise in this region meets every constraint you gave.',
     allExercises,
     input,
-    target
+    target,
+    supportingTargets
   );
 }
 
@@ -135,7 +163,8 @@ function buildResultFromRanked(
   noCandidatesReason: () => string,
   allExercises: Exercise[],
   input: DecisionInput,
-  target: PhysiqueTarget | null
+  target: PhysiqueTarget | null,
+  supportingTargets: PhysiqueTarget[]
 ): DecisionResult {
   const [bestFit, alt] = ranked;
   if (!bestFit) {
@@ -152,6 +181,9 @@ function buildResultFromRanked(
     status: 'ok',
     target: target,
     visualObjective: target ? target.physique_outcome : null,
+    // Never silently discarded (Phase 4 Corrections §7-8) — always an
+    // array, empty when there are none, rather than omitted.
+    supportingTargets,
     bestFit,
     why: explainBest(bestFit),
     stimulus: bestFit.resistance_profile,

@@ -58,6 +58,16 @@ export interface DecisionInput {
    * working unchanged when this is null.
    */
   physiqueTarget: string | null;
+  /**
+   * Optional contributing targets (Phase 4 Corrections §7-8) alongside
+   * `physiqueTarget`, which remains "the" primary target driving the main
+   * recommendation and the Target/Visual-objective display. Only has any
+   * effect when `physiqueTarget` is set and itself resolves. Folded into
+   * the candidate pool so a supporting target's exercises are never
+   * silently unreachable, without giving them equal weight to the primary
+   * target — see decisionEngine.ts Step 1.
+   */
+  supportingPhysiqueTargets: string[] | null;
   goal: Goal;
   equipmentAvailable: string[] | null;
   maxSetupTime: DemandLevel | null;
@@ -74,6 +84,14 @@ export type DecisionResult =
       target: PhysiqueTarget | null;
       /** Target's physique_outcome — "what you should expect to see" — when a target resolved. */
       visualObjective: string | null;
+      /**
+       * Resolved supportingPhysiqueTargets that contributed to candidate
+       * selection alongside `target` (Phase 4 Corrections §7-8). Always an
+       * array — empty, not omitted, when there are none — so the UI can
+       * render "also contributes" without discarding anything silently.
+       * Only populated when `target` itself resolved.
+       */
+      supportingTargets: PhysiqueTarget[];
       bestFit: Exercise;
       why: string;
       /** Why the movement itself is mechanically relevant — the exercise's own resistance_profile. */
