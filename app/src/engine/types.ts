@@ -47,6 +47,14 @@ export const GOALS_REQUIRING_CURRENT_EXERCISE: Goal[] = [
   'replace-exercise',
 ];
 
+// Target provenance (Phase 4B §4/§6): why a recommended exercise entered
+// the candidate pool, preserved through ranking so the UI/explanation can
+// stay consistent with it — "primary" for a direct primary-physique-target
+// match, "supporting" for a direct supporting-target match, "general" for
+// everything else (plain body-region/functional-goal matches, or no target
+// was in play at all).
+export type TargetMatch = 'primary' | 'supporting' | 'general';
+
 export interface DecisionInput {
   bodyRegion: string;
   /**
@@ -110,6 +118,13 @@ export type DecisionResult =
        * recommendation never gets displayed as if it were an aesthetic one.
        */
       functionalGoal: FunctionalGoal | null;
+      /**
+       * Why bestFit entered the candidate pool (Phase 4B §4/§6) — 'general'
+       * when no physique target was in play, not when a target existed but
+       * bestFit didn't match it (that case doesn't reach here — see the
+       * ranking hierarchy in decisionEngine.ts).
+       */
+      bestFitTargetMatch: TargetMatch;
       bestFit: Exercise;
       why: string;
       /** Why the movement itself is mechanically relevant — the exercise's own resistance_profile. */

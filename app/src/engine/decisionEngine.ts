@@ -1,5 +1,5 @@
 import type { Exercise } from '../types/exercise';
-import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal } from './types';
+import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal, type TargetMatch } from './types';
 import { isEquipmentFeasible } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
@@ -133,11 +133,31 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     };
   }
 
+  // Target-match tier (Phase 4B §3-4): a direct primary-target match must
+  // outrank a direct supporting-target match, which must outrank everything
+  // else, regardless of how favorable a lower-tier candidate's generic
+  // stimulus tags happen to be. A no-op (returns the list unchanged) when no
+  // physique target is in play, so plain body-region/functional-goal
+  // selection is unaffected. Applied as a stable pre-sort in front of each
+  // goal branch's own existing ranking, so within a tier the established
+  // stimulus/structural tiebreak rules — already validated by their own
+  // tests — are unchanged.
+  const primaryTargetId = target?.id ?? null;
+  const supportingTargetIdList = supportingTargets.map((t) => t.id);
+  const sortByTargetTier = (list: Exercise[]): Exercise[] => {
+    if (!primaryTargetId && supportingTargetIdList.length === 0) return list;
+    return [...list].sort(
+      (a, b) =>
+        targetMatchTier(a, primaryTargetId, supportingTargetIdList) -
+        targetMatchTier(b, primaryTargetId, supportingTargetIdList)
+    );
+  };
+
   // Step 5: current-exercise overlap/complement logic, and Steps 7-8
   // (rank, explain), branched by goal.
   if (input.goal === 'replace-exercise') {
     return buildResultFromRanked(
-      rankStructuralAlternatives(currentExercise!, candidates, input.equipmentAvailable),
+      sortByTargetTier(rankStructuralAlternatives(currentExercise!, candidates, input.equipmentAvailable)),
       (exercise) =>
         `Fills approximately the same role as ${currentExercise!.name} — same ${exercise.movement_patterns[0]} movement, same ${humanize(exercise.exercise_type)} classification.`,
       () => `${currentExercise!.name} has no substitute meeting your constraints in this region.`,
@@ -145,7 +165,9 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       input,
       target,
       supportingTargets,
-      functionalGoal
+      functionalGoal,
+      primaryTargetId,
+      supportingTargetIdList
     );
   }
 
@@ -154,7 +176,7 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       (exercise) => regionCandidates.some((candidate) => candidate.id === exercise.id)
     );
     return buildResultFromRanked(
-      resolved,
+      sortByTargetTier(resolved),
       (exercise) =>
         `Adds a different stimulus alongside ${currentExercise!.name} — a ${exercise.movement_patterns[0]} movement rather than ${currentExercise!.name}'s ${currentExercise!.movement_patterns[0]}.`,
       () => `No exercise complementing ${currentExercise!.name} meets your constraints in this region.`,
@@ -162,11 +184,13 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       input,
       target,
       supportingTargets,
-      functionalGoal
+      functionalGoal,
+      primaryTargetId,
+      supportingTargetIdList
     );
   }
 
-  const ranked = rankByGoal(input.goal, candidates);
+  const ranked = sortByTargetTier(rankByGoal(input.goal, candidates));
   return buildResultFromRanked(
     ranked,
     (exercise) => explainGoalPick(input.goal, exercise),
@@ -175,8 +199,19 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     input,
     target,
     supportingTargets,
-    functionalGoal
+    functionalGoal,
+    primaryTargetId,
+    supportingTargetIdList
   );
+}
+
+// Phase 4B §3-4: 0 = direct primary-target match, 1 = direct
+// supporting-target match, 2 = everything else (general regional match,
+// curated complement not yet target-tagged, or no target was in play).
+function targetMatchTier(exercise: Exercise, primaryTargetId: string | null, supportingTargetIds: string[]): 0 | 1 | 2 {
+  if (primaryTargetId && exercise.physique_targets?.includes(primaryTargetId)) return 0;
+  if (supportingTargetIds.some((id) => exercise.physique_targets?.includes(id))) return 1;
+  return 2;
 }
 
 function buildResultFromRanked(
@@ -187,7 +222,9 @@ function buildResultFromRanked(
   input: DecisionInput,
   target: PhysiqueTarget | null,
   supportingTargets: PhysiqueTarget[],
-  functionalGoal: FunctionalGoal | null
+  functionalGoal: FunctionalGoal | null,
+  primaryTargetId: string | null,
+  supportingTargetIds: string[]
 ): DecisionResult {
   const [bestFit, alt] = ranked;
   if (!bestFit) {
@@ -200,6 +237,9 @@ function buildResultFromRanked(
   // setup-dependent) can be the right recommendation for a target before
   // the taxonomy has caught up to tagging it. `target` is only non-null
   // here when it actually drove candidate selection (see Step 1).
+  const bestFitTargetMatchTier = targetMatchTier(bestFit, primaryTargetId, supportingTargetIds);
+  const bestFitTargetMatch: TargetMatch =
+    bestFitTargetMatchTier === 0 ? 'primary' : bestFitTargetMatchTier === 1 ? 'supporting' : 'general';
   return {
     status: 'ok',
     target: target,
@@ -208,6 +248,7 @@ function buildResultFromRanked(
     // array, empty when there are none, rather than omitted.
     supportingTargets,
     functionalGoal,
+    bestFitTargetMatch,
     bestFit,
     why: explainBest(bestFit),
     stimulus: bestFit.resistance_profile,

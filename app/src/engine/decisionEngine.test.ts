@@ -354,11 +354,13 @@ describe('makeRecommendation — primary + supporting physique targets (Phase 4 
     }
   });
 
-  it('the supporting target materially broadens the candidate pool — a brachialis-only pool has no heavy-compound option, but folding in triceps produces one', () => {
-    const primaryOnly = makeRecommendation(
-      { ...BASE_INPUT, bodyRegion: 'arms', physiqueTarget: 'brachialis-arm-thickness', goal: 'build-base' },
-      exercises
-    );
+  // Phase 4B §3-4 corrects a design mistake from the original Corrections-
+  // phase version of this test: a supporting target must never outrank a
+  // reachable primary-target exercise just because it carries a more
+  // favorable generic stimulus tag (here, close-grip-bench-press's
+  // heavy-compound tag). The engine's own worked example (§2/§25 "arms
+  // look thin from the side") is exactly this brachialis/triceps pair.
+  it('a reachable primary-target exercise wins over a supporting-target exercise even when the supporting one has a more favorable generic stimulus tag', () => {
     const withSupporting = makeRecommendation(
       {
         ...BASE_INPUT,
@@ -369,18 +371,43 @@ describe('makeRecommendation — primary + supporting physique targets (Phase 4 
       },
       exercises
     );
-    expect(primaryOnly.status).toBe('ok');
     expect(withSupporting.status).toBe('ok');
-    if (primaryOnly.status === 'ok' && withSupporting.status === 'ok') {
-      // Every brachialis-arm-thickness-tagged exercise is isolation-only,
-      // so the primary-only pool can't produce a heavy-compound pick.
-      expect(primaryOnly.bestFit.coverage_categories).not.toContain('heavy-compound');
-      // Once triceps (supporting) is folded in, a heavy-compound triceps
-      // exercise becomes reachable and wins build-base's ranking — proof
-      // the supporting target genuinely changed the outcome, not just
-      // decorated it.
-      expect(withSupporting.bestFit.coverage_categories).toContain('heavy-compound');
-      expect(withSupporting.bestFit.id).toBe('close-grip-bench-press');
+    if (withSupporting.status === 'ok') {
+      // Every brachialis-arm-thickness-tagged exercise is isolation-only —
+      // close-grip-bench-press (triceps, heavy-compound) is reachable in
+      // the pool and would win on generic stimulus tags alone, but must
+      // not, because brachialis is the primary target here.
+      expect(withSupporting.bestFit.physique_targets).toContain('brachialis-arm-thickness');
+      expect(withSupporting.bestFit.coverage_categories).not.toContain('heavy-compound');
+      expect(withSupporting.bestFitTargetMatch).toBe('primary');
+      // The supporting target is not discarded just because it didn't win.
+      expect(withSupporting.supportingTargets.map((t) => t.id)).toEqual(['triceps']);
+    }
+  });
+
+  // Test B (§25): the supporting target must remain reachable, not just
+  // resolved-but-unreachable — when equipment constraints eliminate every
+  // primary-target candidate, a supporting-target exercise must still be
+  // recommendable, and the result must say so via bestFitTargetMatch.
+  it('a supporting-target exercise becomes bestFit when no primary-target exercise survives the equipment constraint', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        bodyRegion: 'arms',
+        physiqueTarget: 'brachialis-arm-thickness',
+        supportingPhysiqueTargets: ['triceps'],
+        goal: 'build-base',
+        // None of the three brachialis-tagged exercises (all dumbbell/cable)
+        // are feasible with only these two — dip-triceps-biased (supporting,
+        // triceps) is the only physique_targets-tagged survivor.
+        equipmentAvailable: ['dip bars', 'bodyweight'],
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.bestFit.id).toBe('dip-triceps-biased');
+      expect(result.bestFitTargetMatch).toBe('supporting');
     }
   });
 

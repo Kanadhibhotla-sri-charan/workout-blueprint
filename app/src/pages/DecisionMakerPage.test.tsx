@@ -229,14 +229,15 @@ describe('DecisionMakerPage', () => {
     expect(document.querySelector('.decision-result-best')?.textContent).toMatch(/alongside Cable Pushdown/i);
   });
 
-  // Multi-target golden slice required by the Phase 4 Corrections doc
-  // (§19/§21 step 10): "My arms look thin from the side" involves both a
-  // primary target (brachialis-arm-thickness) and a supporting one
-  // (triceps), and the supporting target must materially matter, not just
-  // be decorative — proven here by build-base resolving to a heavy-compound
-  // triceps exercise that a brachialis-only pool could never produce (the
-  // three brachialis-tagged exercises are all isolation).
-  it('multi-target golden slice: "Arms look thin from the side" folds the supporting target into the candidate pool', async () => {
+  // Multi-target golden slice, corrected per Phase 4B §3-4/§25 Test A:
+  // "My arms look thin from the side" involves both a primary target
+  // (brachialis-arm-thickness) and a supporting one (triceps). The
+  // primary-target exercise must win the top recommendation regardless of
+  // how favorable a supporting-target exercise's generic stimulus tag is
+  // — a triceps-only top pick fails this test, per the spec's own
+  // "arms look thin from the side" worked example. The supporting target
+  // must still be surfaced, not discarded, just because it didn't win.
+  it('multi-target golden slice: "Arms look thin from the side" recommends a direct primary-target exercise and still surfaces the supporting target', async () => {
     const user = userEvent.setup();
     renderPage();
 
@@ -258,17 +259,16 @@ describe('DecisionMakerPage', () => {
     const targetBlock = document.querySelector('.decision-result-target');
     expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Brachialis / Arm Thickness');
 
-    // Supporting target (triceps) is surfaced.
+    // Supporting target (triceps) is surfaced even though it doesn't win.
     const supportingBlock = document.querySelector('.decision-result-supporting');
     expect(supportingBlock?.textContent).toMatch(/triceps/i);
 
-    // The concrete, testable proof that the supporting target isn't
-    // decorative: a brachialis-only pool (hammer-curl family, all
-    // isolation) could never produce a heavy-compound best fit for a
-    // build-base goal. Close-Grip Bench Press is only reachable because
-    // triceps (supporting) was folded into the candidate pool.
+    // Test A (Phase 4B §25): top recommendation must be a direct
+    // primary-target (brachialis) exercise. A triceps-only result fails —
+    // Close-Grip Bench Press (triceps, heavy-compound) is reachable and
+    // would win on generic stimulus tags alone, but must not.
     const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
-    expect(bestFitLink?.textContent).toBe('Close-Grip Bench Press');
+    expect(bestFitLink?.textContent).toBe('Cable Hammer Curl (Rope)');
   });
 
   it('editing the direct/advanced picker after using the appearance selector clears the stale "what you\'re trying to change" block and its supporting targets', async () => {

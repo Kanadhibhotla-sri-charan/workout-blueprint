@@ -369,3 +369,44 @@ Actually launched the app (Vite dev server) behind headless Chromium at phone vi
 ### Pending
 
 4L (full Definition-of-Done validation) remains, per the corrections doc's implementation order (§21) — the final step.
+
+---
+
+# Phase 4B — Recommendation & Programming Refinement
+
+Phase 4 (original → revised Aesthetic Outcome layer → Corrections → full taxonomy expansion → 4J/4K/4L) reached Definition of Done and was marked Complete. Real-world testing against the finished product then surfaced three problems the Definition of Done didn't catch, because they're about ranking/programming *behavior*, not taxonomy completeness: (1) the recommendation engine doesn't preserve primary/supporting target reasoning through ranking, (2) programming guidance is too generic across exercises, (3) intensity-technique selection effectively always defaults to Drop Set. Architect spec saved verbatim at `docs/architecture/PHASE-4B-RECOMMENDATION-PROGRAMMING-REFINEMENT.md`, with an explicit 11-step implementation order (4B-1 through 4B-11) and an explicit gate: "Do not move to later steps if the earlier semantic ranking is still incorrect."
+
+## 4B-1/4B-2/4B-3 — Target-aware ranking, provenance, regression test
+
+**Date:** 2026-08-17
+
+### The bug
+
+`rankByGoal`'s ranking (used by `build-base`/`visual-area`/`low-fatigue`/`limited-equipment`) only considered generic exercise stimulus tags (`heavy-compound`, `stable-compound`, `lengthened-position-emphasis`, fatigue cost, equipment count) — zero awareness of primary-vs-supporting physique-target membership. Since Step 1 already flattens primary and supporting target matches into one deduplicated candidate pool, a supporting-target exercise with a favorable stimulus tag could outrank a primary-target exercise with a less flashy one. Concretely: for the `arm-side-thickness` outcome (primary: brachialis-arm-thickness, supporting: triceps), all three brachialis-tagged exercises are isolation-only, while Close-Grip Bench Press (triceps, supporting) is heavy-compound — so it won `build-base`, meaning "arms look thin from the side" recommended a triceps exercise as the top pick instead of a direct brachialis one. This is the architect spec's own worked example (§2/§25 Test A: "a triceps-only result fails").
+
+Notably, this exact outcome had previously been treated as a *feature* — the `arm-side-thickness` golden-slice test added during the Corrections-phase work (#63) asserted Close-Grip Bench Press as the correct winner, reasoning that this proved the supporting target "wasn't decorative." That was a design misunderstanding on my part, not something the user flagged — the real architect spec (this document) makes clear the opposite is required: a reachable primary-target exercise must win regardless of a supporting-target exercise's generic stimulus tags. The supporting target still has to matter (Test B), just not by outranking a reachable primary-target pick.
+
+### What changed
+
+- **`app/src/engine/types.ts`** — new `TargetMatch = 'primary' | 'supporting' | 'general'` type; `DecisionResult`'s `'ok'` variant gains `bestFitTargetMatch: TargetMatch`, so the UI/tests can assert *why* the winning exercise was recommended, not just what it is.
+- **`app/src/engine/decisionEngine.ts`**:
+  - New `targetMatchTier(exercise, primaryTargetId, supportingTargetIds)`: 0 for a direct primary-target match, 1 for a direct supporting-target match, 2 for everything else.
+  - New `sortByTargetTier`, a stable pre-sort applied in front of each goal branch's existing ranking (`rankStructuralAlternatives` for `replace-exercise`; `resolveComplements`'s filtered result for `different-stimulus`/`complement-current`; `rankByGoal` for the default branch). A no-op when no physique target is in play, so plain body-region/functional-goal browsing is unaffected; within a tier, the established stimulus/structural tiebreak rules are unchanged.
+  - `buildResultFromRanked` now takes `primaryTargetId`/`supportingTargetIds`, computes `bestFitTargetMatch` from the same tier function, and returns it on the result.
+- **`app/src/engine/decisionEngine.test.ts`** — the old (now-understood-to-be-wrong) `arm-side-thickness` "supporting target broadens the pool" test rewritten into two tests: (1) a reachable primary-target exercise (Cable Hammer Curl (Rope)) wins over the supporting-target Close-Grip Bench Press despite its heavy-compound tag, with `bestFitTargetMatch === 'primary'` and `supportingTargets` still populated; (2) Test B — when an equipment constraint (`['dip bars', 'bodyweight']`) eliminates every brachialis-tagged (primary) exercise, the supporting-target Dip (Triceps-Biased) becomes `bestFit` with `bestFitTargetMatch === 'supporting'`, proving the supporting target remains genuinely reachable, not just resolved-but-decorative.
+- **`app/src/pages/DecisionMakerPage.test.tsx`** — the `arm-side-thickness` golden-slice UI test updated to assert the corrected winner (Cable Hammer Curl (Rope)) through the real "Arms → Appearance → Arms look thin from the side → Build the main training base" path, while still confirming the supporting target (triceps) is surfaced in the "also contributes" block. This test is Test A from the spec (§25), run end-to-end through the actual UI, not just the engine.
+
+### Decisions made
+
+- **No separate literal "Test A"/"Test B" test files.** The rewritten `DecisionMakerPage.test.tsx` case *is* Test A (exact input, exact UI path, asserts a direct primary-target top pick); the two `decisionEngine.test.ts` cases are Test A and Test B at the engine level. Adding word-for-word duplicates would be redundant coverage of the same behavior, not a stronger regression guard.
+- **Tier sort applied as a wrapping layer, not threaded into `rankByGoal`/`rankStructuralAlternatives`/`resolveComplements` internals.** Those functions' own tests (already validated, still passing untouched) cover their existing tiebreak logic; the target-tier requirement is orthogonal (it's about *which* candidates are considered first, not how ties within a tier are broken), so keeping it as a pre-sort in `decisionEngine.ts` avoids touching three already-correct, already-tested modules.
+
+### Verified
+
+- `npm run test`: **114 tests across 14 files**, all passing (up from 113).
+- `npx tsc -b --force` (the real type-check — bare `tsc --noEmit` silently checks zero files against this repo's root `tsconfig.json`) and `npm run lint` (oxlint): both clean.
+- Confirmed via a throwaway probe test (deleted after use) that the fix produces the intended values before writing final assertions: `bestFit.id === 'cable-hammer-curl-rope'`, `bestFitTargetMatch === 'primary'` for the plain case; `bestFit.id === 'dip-triceps-biased'`, `bestFitTargetMatch === 'supporting'` for the equipment-constrained case.
+
+### Pending
+
+4B-4/4B-5/4B-6 (reusable Programming Profile model), 4B-7/4B-8/4B-9 (intensity-technique eligibility model), 4B-10/4B-11 (UI refinement + full regression pass) remain, per the spec's implementation order (§21-ish numbering in the spec itself).
