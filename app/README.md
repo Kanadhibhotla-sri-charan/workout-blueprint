@@ -14,6 +14,8 @@ npm run dev
 
 Opens at `http://localhost:5173` by default. `npm run build` produces a static production build in `app/dist/`; `npm run preview` serves that build locally. `npm run test` runs the Vitest suite (engine correctness, including the deterministic decision-engine rules documented in [`docs/dev/reports/DECISION-ENGINE-RULES.md`](../docs/dev/reports/DECISION-ENGINE-RULES.md)). No backend, database, or network access is required — the app runs entirely from the repository's local YAML data.
 
+Production deployment (GitHub Pages, triggered on push to `main`) is documented in the [root README](../README.md#production-build--deployment). Note that `vite.config.ts` sets `base: '/workout-blueprint/'` for that deployment, and `main.tsx` passes it to `BrowserRouter` as `basename` — `npm run dev` still works at `/` because `import.meta.env.BASE_URL` resolves differently per mode.
+
 ## Data
 
 `npm run dev` and `npm run build` first run `scripts/generate-data.mjs`, which loads and validates every record in `../data/exercises/*.yaml` (reusing the same `../scripts/lib/` logic `npm run validate-data` uses at the repo root) and writes `src/data/exercises.generated.json`. That file is gitignored and regenerated on every run — never hand-edit it, and never edit YAML data from inside `app/`. If the dataset fails validation, the build fails rather than shipping bad data.
