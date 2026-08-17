@@ -24,10 +24,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
-          cache-dependency-path: app/package-lock.json
-      - name: Install dependencies
+          cache-dependency-path: |
+            package-lock.json
+            app/package-lock.json
+      - name: Install root dependencies
+        # scripts/lib/ (used by app's generate-data.mjs) requires js-yaml,
+        # declared in the root package.json, not app/package.json.
+        run: npm ci
+      - name: Install app dependencies
         working-directory: app
         run: npm ci
       - name: Build (also runs data validation and type-checking)
