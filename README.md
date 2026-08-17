@@ -6,6 +6,8 @@ Physique Blueprint helps people answer **what exercise should I choose, and why?
 
 **Production app:** https://kanadhibhotla-sri-charan.github.io/workout-blueprint/
 
+**Version:** [`v1.0.0`](https://github.com/Kanadhibhotla-sri-charan/workout-blueprint/releases/tag/v1.0.0) — the first production release, per [`docs/architecture/DEPLOYMENT-AND-PRODUCTION-READINESS.md`](docs/architecture/DEPLOYMENT-AND-PRODUCTION-READINESS.md) §14. Every deployment is traceable to the `main` commit the [deploy workflow](.github/workflows/deploy-pages.yml) built it from.
+
 ## Documentation map
 
 - [Product Design Document](docs/PDD/PDD.md) — vision, decision logic, UX, governance, and roadmap.
