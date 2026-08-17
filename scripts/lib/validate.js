@@ -11,12 +11,18 @@ const {
   REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
 } = require('./taxonomy');
-const { loadPhysiqueTargets, loadAestheticOutcomes } = require('./load-programming');
+const { loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals } = require('./load-programming');
 
 // Loaded once at module scope, same treatment as taxonomy.js's constants —
 // data/programming/physique-targets.yaml is the authoritative taxonomy per
 // ADR 0003, so every exercise's physique_targets entries must resolve here.
 const { targetIds: PHYSIQUE_TARGET_IDS, fileErrors: PHYSIQUE_TARGET_FILE_ERRORS } = loadPhysiqueTargets();
+
+// data/programming/functional-goals.yaml (revised Phase 4 spec §12/§39) is
+// the authoritative functional-goal taxonomy — the "Function" branch's
+// counterpart to physique-targets.yaml. Every exercise's functional_goals
+// entries must resolve here.
+const { goalIds: FUNCTIONAL_GOAL_IDS, fileErrors: FUNCTIONAL_GOAL_FILE_ERRORS } = loadFunctionalGoals();
 
 // data/programming/aesthetic-outcomes.yaml (revised Phase 4, §28-29; primary/
 // supporting split per Phase 4 Corrections §7) is the authoritative
@@ -66,6 +72,14 @@ function validate(records) {
       record: null,
       category: 'programming-data',
       message: `data/programming/aesthetic-outcomes.yaml :: ${fileError}`,
+    });
+  }
+
+  for (const fileError of FUNCTIONAL_GOAL_FILE_ERRORS) {
+    issues.push({
+      record: null,
+      category: 'programming-data',
+      message: `data/programming/functional-goals.yaml :: ${fileError}`,
     });
   }
 
@@ -183,6 +197,21 @@ function validate(records) {
             record,
             'taxonomy',
             `"physique_targets" references unknown target id "${targetId}" — not defined in data/programming/physique-targets.yaml`
+          );
+        }
+      }
+    }
+
+    // --- Taxonomy: functional_goals must resolve to a real id in
+    // data/programming/functional-goals.yaml (revised Phase 4 spec §12/
+    // §39) — same referential-integrity discipline as physique_targets.
+    if (Array.isArray(record.functional_goals)) {
+      for (const goalId of record.functional_goals) {
+        if (typeof goalId === 'string' && !FUNCTIONAL_GOAL_IDS.has(goalId)) {
+          report(
+            record,
+            'taxonomy',
+            `"functional_goals" references unknown goal id "${goalId}" — not defined in data/programming/functional-goals.yaml`
           );
         }
       }

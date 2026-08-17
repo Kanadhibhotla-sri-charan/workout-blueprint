@@ -701,6 +701,7 @@
   body_regions: [shoulders]
   primary_targets: [external rotators of the shoulder]
   secondary_targets: []
+  functional_goals: [rotator-cuff]
   movement_patterns: [shoulder external rotation]
   equipment: [cable, band]
   exercise_type: isolation
@@ -754,6 +755,7 @@
   body_regions: [shoulders]
   primary_targets: [serratus anterior]
   secondary_targets: [chest, triceps]
+  functional_goals: [scapular-stability]
   movement_patterns: [scapular protraction within a horizontal press]
   equipment: [bodyweight]
   exercise_type: compound

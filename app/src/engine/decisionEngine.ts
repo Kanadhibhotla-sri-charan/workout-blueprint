@@ -5,8 +5,8 @@ import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
 import { buildProgramming } from './programmingEngine';
-import { getPhysiqueTargetById } from '../data';
-import type { PhysiqueTarget } from '../types/programming';
+import { getFunctionalGoalById, getPhysiqueTargetById } from '../data';
+import type { FunctionalGoal, PhysiqueTarget } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 
@@ -58,10 +58,29 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
         .map((id) => getPhysiqueTargetById(id))
         .filter((resolved): resolved is PhysiqueTarget => resolved != null)
     : [];
+  // Function branch's counterpart to the physique-target resolution above
+  // (revised Phase 4 spec §12/§39): only ever consulted when no physique
+  // target resolved, since the UI never sets both — Appearance/Advanced
+  // and Function are mutually exclusive entry modes. Kept as a fully
+  // separate resolution (not reusing physiqueTarget's id-space) so
+  // functional and aesthetic navigation stay distinct all the way through
+  // the result, not just in the selector (§12's "do not mix functional
+  // terminology into the aesthetic outcome selector").
+  const resolvedFunctionalGoal =
+    targetMatches.length === 0 && input.functionalGoal
+      ? (getFunctionalGoalById(input.functionalGoal) ?? null)
+      : null;
+  const functionalMatches = resolvedFunctionalGoal
+    ? allExercises.filter((exercise) => exercise.functional_goals?.includes(resolvedFunctionalGoal.id))
+    : [];
+  const functionalGoal = functionalMatches.length > 0 ? resolvedFunctionalGoal : null;
+
   let candidates =
     targetMatches.length > 0
       ? targetMatches
-      : allExercises.filter((exercise) => exercise.body_regions.includes(input.bodyRegion));
+      : functionalMatches.length > 0
+        ? functionalMatches
+        : allExercises.filter((exercise) => exercise.body_regions.includes(input.bodyRegion));
 
   // Step 4: remove records not ready to recommend (see
   // DECISION-ENGINE-RULES.md §2 rule 5 — same "not draft" gate used by the
@@ -125,7 +144,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       allExercises,
       input,
       target,
-      supportingTargets
+      supportingTargets,
+      functionalGoal
     );
   }
 
@@ -141,7 +161,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       allExercises,
       input,
       target,
-      supportingTargets
+      supportingTargets,
+      functionalGoal
     );
   }
 
@@ -153,7 +174,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     allExercises,
     input,
     target,
-    supportingTargets
+    supportingTargets,
+    functionalGoal
   );
 }
 
@@ -164,7 +186,8 @@ function buildResultFromRanked(
   allExercises: Exercise[],
   input: DecisionInput,
   target: PhysiqueTarget | null,
-  supportingTargets: PhysiqueTarget[]
+  supportingTargets: PhysiqueTarget[],
+  functionalGoal: FunctionalGoal | null
 ): DecisionResult {
   const [bestFit, alt] = ranked;
   if (!bestFit) {
@@ -184,6 +207,7 @@ function buildResultFromRanked(
     // Never silently discarded (Phase 4 Corrections §7-8) — always an
     // array, empty when there are none, rather than omitted.
     supportingTargets,
+    functionalGoal,
     bestFit,
     why: explainBest(bestFit),
     stimulus: bestFit.resistance_profile,

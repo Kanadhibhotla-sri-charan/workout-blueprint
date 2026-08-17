@@ -76,4 +76,44 @@ function loadAestheticOutcomes() {
   return { outcomes: data.outcomes, fileErrors: [] };
 }
 
-module.exports = { loadPhysiqueTargets, loadAestheticOutcomes, PROGRAMMING_DIR };
+// Loads data/programming/functional-goals.yaml (revised Phase 4 spec §12/
+// §39). Same treatment as loadPhysiqueTargets — the root validator needs
+// each goal's id, to check functional_goals referential integrity on
+// exercise records the same way physique_targets is checked against
+// physique-targets.yaml.
+function loadFunctionalGoals() {
+  const file = path.join(PROGRAMMING_DIR, 'functional-goals.yaml');
+  const relFile = path.relative(process.cwd(), file);
+
+  if (!fs.existsSync(file)) {
+    return { goalIds: new Set(), fileErrors: [`${relFile}: file not found`] };
+  }
+
+  let data;
+  try {
+    data = yaml.load(fs.readFileSync(file, 'utf8'));
+  } catch (err) {
+    return { goalIds: new Set(), fileErrors: [`${relFile}: malformed YAML — ${err.message}`] };
+  }
+
+  if (!data || !Array.isArray(data.goals)) {
+    return {
+      goalIds: new Set(),
+      fileErrors: [`${relFile}: expected a top-level "goals" list`],
+    };
+  }
+
+  const goalIds = new Set();
+  const fileErrors = [];
+  data.goals.forEach((goal, index) => {
+    if (!goal || typeof goal.id !== 'string') {
+      fileErrors.push(`${relFile}: goal at index ${index} is missing a string "id"`);
+      return;
+    }
+    goalIds.add(goal.id);
+  });
+
+  return { goalIds, fileErrors };
+}
+
+module.exports = { loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals, PROGRAMMING_DIR };

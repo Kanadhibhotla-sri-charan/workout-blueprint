@@ -1,5 +1,5 @@
 import type { Exercise } from '../types/exercise';
-import type { PhysiqueTarget } from '../types/programming';
+import type { FunctionalGoal, PhysiqueTarget } from '../types/programming';
 import type { DEMAND_LEVELS } from '../utils/filters';
 import type { Programming } from './programmingEngine';
 
@@ -68,6 +68,17 @@ export interface DecisionInput {
    * target — see decisionEngine.ts Step 1.
    */
   supportingPhysiqueTargets: string[] | null;
+  /**
+   * Optional functional goal (revised Phase 4 spec §12/§39), e.g.
+   * "rotator-cuff" — the Function branch's counterpart to physiqueTarget,
+   * resolved against data/programming/functional-goals.yaml and matched
+   * against exercises' functional_goals field instead of physique_targets.
+   * Mutually exclusive with physiqueTarget in practice (the UI only ever
+   * sets one), kept as a separate field rather than reusing physiqueTarget
+   * so functional and aesthetic navigation stay conceptually distinct in
+   * the result, not just in the selector.
+   */
+  functionalGoal: string | null;
   goal: Goal;
   equipmentAvailable: string[] | null;
   maxSetupTime: DemandLevel | null;
@@ -92,6 +103,13 @@ export type DecisionResult =
        * Only populated when `target` itself resolved.
        */
       supportingTargets: PhysiqueTarget[];
+      /**
+       * The resolved functional goal, when functionalGoal was set and
+       * matched real exercises. Kept separate from `target` (which is
+       * always physique-specific) rather than reusing it, so a functional
+       * recommendation never gets displayed as if it were an aesthetic one.
+       */
+      functionalGoal: FunctionalGoal | null;
       bestFit: Exercise;
       why: string;
       /** Why the movement itself is mechanically relevant — the exercise's own resistance_profile. */

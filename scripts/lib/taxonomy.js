@@ -55,7 +55,7 @@ const REQUIRED_LIST_FIELDS = [
 const OPTIONAL_LIST_FIELDS = [
   'secondary_targets', 'less_suitable_when', 'advantages', 'technique_cues',
   'common_mistakes', 'programming_notes', 'alternatives', 'complements',
-  'overlaps_with', 'evidence_notes', 'physique_targets',
+  'overlaps_with', 'evidence_notes', 'physique_targets', 'functional_goals',
 ];
 
 const REQUIRED_SCALAR_STRING_FIELDS = [
@@ -69,7 +69,7 @@ const ALL_FIELDS = new Set([
   'setup_time', 'fatigue_cost', 'best_used_when', 'less_suitable_when', 'mirror_effect',
   'advantages', 'limitations', 'technique_cues', 'common_mistakes', 'programming_notes',
   'alternatives', 'complements', 'overlaps_with', 'evidence_notes', 'review_status',
-  'physique_targets',
+  'physique_targets', 'functional_goals',
 ]);
 
 module.exports = {

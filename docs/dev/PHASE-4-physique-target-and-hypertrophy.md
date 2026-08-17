@@ -292,3 +292,46 @@ Implements the complete architect-approved taxonomy from the 4A/4B proposal (`do
 ### Pending
 
 4J (functional entry-point preservation/integration), 4K (mobile/usability pass), 4L (full Definition-of-Done validation) remain, per the corrections doc's implementation order (§21).
+
+---
+
+# 4J — Functional entry-point integration
+
+**Date:** 2026-08-17
+
+Replaces the Function mode's placeholder stub with a real, working functional-goals taxonomy, reusing the existing engine exactly the way physique targets do — a fully parallel resolution path, not a new engine, and never mixed into the aesthetic outcome selector (revised spec §12).
+
+### What changed
+
+- **`data/programming/functional-goals.yaml`** (new) — 7 functional goals, structurally mirroring `physique-targets.yaml` (id, name, `parent_region`, `definition`, plus `why_it_matters` in place of `physique_outcome`, since the payoff is durability/movement-quality rather than a visual outcome): `rotator-cuff`, `scapular-stability` (shoulders); `hip-flexors`, `hip-stability` (hips); `core-anti-extension`, `core-anti-rotation`, `core-anti-lateral-flexion` (core). Only 7 of the spec's 8 example goals — "hip mobility" is deliberately not represented, since the dataset has no dedicated mobility-drill exercise distinct from hip-flexor strength work or the hip-stability exercises, and inventing a mapping would be the same fake-precision problem the aesthetic taxonomy's own guardrail warns against.
+- **8 exercise records tagged** with a new `functional_goals` field across `shoulders.yaml` (`cable-band-external-rotation` → rotator-cuff, `push-up-plus` → scapular-stability), `hips.yaml` (`standing-cable-hip-flexion` → hip-flexors, `hip-abduction`/`hip-adduction` → hip-stability — both **dual-purpose**, already carrying `physique_targets` from 4I, now also `functional_goals`, since the two fields are independent, not mutually exclusive), and `core.yaml` (`plank` → core-anti-extension, `pallof-press` → core-anti-rotation, `suitcase-carry` → core-anti-lateral-flexion) — the exact set the 4A audit had already identified as functional-only (or dual-purpose) and excluded from aesthetic tagging.
+- **`scripts/lib/taxonomy.js`** — `functional_goals` added to `OPTIONAL_LIST_FIELDS` and `ALL_FIELDS`.
+- **`scripts/lib/load-programming.js`** — `loadFunctionalGoals()`, same pattern as `loadPhysiqueTargets()`/`loadAestheticOutcomes()`.
+- **`scripts/lib/validate.js`** — loads functional goals once at module scope; validates every exercise's `functional_goals` entries resolve to a real id, same referential-integrity treatment as `physique_targets`. Verified by injecting a bad reference (`not-a-real-goal` on a temporary throwaway record), confirming `npm run validate-data` caught it, then removing the test record entirely (`git checkout --`) and re-confirming a clean pass.
+- **`app/src/types/exercise.ts`** — `Exercise.functional_goals: string[] | null`.
+- **`app/src/types/programming.ts`** — new `FunctionalGoal` interface; `ProgrammingData.functionalGoals`.
+- **`app/src/data/index.ts`** — `functionalGoals` export, `getFunctionalGoalById()`, `getFunctionalGoalsByRegion()`.
+- **`app/src/engine/types.ts`** — `DecisionInput.functionalGoal: string | null`, kept fully separate from `physiqueTarget` (its own field, not a reused id-space) so a functional recommendation is never displayed as an aesthetic one. `DecisionResult`'s `'ok'` variant gains `functionalGoal: FunctionalGoal | null`.
+- **`app/src/engine/decisionEngine.ts`** — Step 1 gains a functional-goal resolution mirroring the physique-target one exactly (resolve id → filter exercises by `functional_goals` inclusion → only "genuinely used" when it has real matches), consulted **only when no physique target resolved** (the UI never sets both — Appearance/Advanced and Function are mutually exclusive entry modes). Candidate-pool fallback chain extended: target matches → functional matches → plain body region. `buildResultFromRanked` threads `functionalGoal` through the same three call sites `target`/`supportingTargets` already go through.
+- **`app/src/pages/DecisionMakerPage.tsx`** — Function mode's stub replaced with a real two-select "region → functional goal" picker, mirroring Appearance's structure exactly (`getFunctionalGoalsByRegion`, `handleFunctionalRegionChange`, `handleFunctionalGoalChange`). Steps 2-4 and the submit button, previously hidden entirely in Function mode, are now always shown — Function submits through the exact same form. Result view gains a "🦴 Functional goal" block (name/definition/why-it-matters), populated from `result.functionalGoal` directly rather than a separately-captured UI selection (unlike the aesthetic-outcome block, which needs presentation-only fields — `display_name`/`visual_description` — not present on the engine's resolved object; `FunctionalGoal`'s fields are already exactly what the block needs, so no parallel `resultFunctionalGoal` state was necessary).
+- **New `handleEntryModeChange()`** — a real bug caught before it shipped: the existing per-select staleness-clearing (each handler clearing the *other* modes' outcome/goal id) had a gap — switching entry modes and then changing only the *new* mode's region select (without yet picking a specific outcome/goal there) left the *previous* mode's `bodyRegion`/`physiqueTarget`/`functionalGoal` state stale but still submittable. Fixed by resetting all mode-specific state (`bodyRegion`, `physiqueTarget`, `supportingPhysiqueTargets`, `aestheticOutcomeId`, `functionalGoalId`) on every mode switch itself, not just on each select's own change handler.
+- **`docs/knowledge-manual/SCHEMA.md`** — `functional_goals` field entry (mirroring `physique_targets`'s, noting the dual-purpose case) and summary-table row.
+- **`docs/knowledge-manual/programming/README.md`** — added the `functional-goals.yaml` entry to the file index.
+- **New tests**: `app/src/data/functional-goals.test.ts` (generic taxonomy-integrity checks, same pattern as the physique/aesthetic ones, plus a specific check that `hip-abduction`/`hip-adduction` are genuinely dual-tagged); a `decisionEngine.test.ts` "functional goals (4J)" block (resolved goal narrows candidates and leaves `target`/`visualObjective` null; unknown goal id falls back to body region; two goals resolve to their real single dedicated exercises; a functional goal never combines with a physique target when both are somehow set — physique target still wins, matching the "only consulted when no physique target resolved" rule); `DecisionMakerPage.test.tsx` cases for the real Function golden path (Core Anti-Extension → Plank, through the actual UI, confirming aesthetic-only blocks stay absent) and for the entry-mode-switch staleness fix.
+
+### Decisions made
+
+- **"Hip mobility" excluded from the 7 implemented goals.** The spec's own example list names 8 functional goals; the dataset only genuinely supports 7. Extending to include a "hip mobility" mapping without a real dedicated exercise would repeat the exact fake-precision mistake the aesthetic taxonomy's guardrail exists to prevent — same standard applied to both branches, not just the aesthetic one.
+- **A functional goal never combines with a physique target in the engine, by construction, not just by UI convention.** `resolvedFunctionalGoal` is only computed `targetMatches.length === 0 && input.functionalGoal` — even if some future caller passed both, the physique target wins deterministically and the functional path is never consulted, rather than requiring the UI to be the only thing enforcing mutual exclusivity.
+- **No separate `resultFunctionalGoal` UI state**, unlike the aesthetic outcome's `resultAestheticOutcome`. The asymmetry is deliberate: aesthetic outcomes carry presentation-only fields (`display_name`, `visual_description`, `technical_explanation`) that don't exist anywhere on the engine's `PhysiqueTarget` result, so the UI selection has to be captured separately to display them. `FunctionalGoal`'s fields (`name`, `definition`, `why_it_matters`) are exactly what the result block needs and are already returned on `result.functionalGoal` — adding a parallel capture would have been redundant state serving no purpose.
+
+### Verified
+
+- `npm run validate-data`: PASS, 123/123 records, 0 issues.
+- Functional-goals validator check confirmed to actually catch a violation (deliberately injected on a throwaway test record, caught, the record removed entirely via `git checkout --`, re-confirmed clean).
+- `npm run test`: **112 tests across 14 files**, all passing (up from 102) — including the Function branch's own golden-path test through the real UI and the entry-mode-switch staleness regression test.
+- `npx tsc -b --force`, `npm run lint` (oxlint), and `npm run build`: all clean.
+
+### Pending
+
+4K (mobile/usability pass) and 4L (full Definition-of-Done validation) remain, per the corrections doc's implementation order (§21).

@@ -1,0 +1,112 @@
+# Canonical functional-goal taxonomy (Phase 4, revised spec §12/§39;
+# corrections doc §2-5). This is the "Function" branch's authoritative
+# data, structurally mirroring physique-targets.yaml (id, name,
+# parent_region, definition, plus an outcome-style field — here
+# `why_it_matters`, since a functional goal's payoff is durability/
+# movement-quality, not a visual outcome) but kept in its own file and
+# its own id-space so functional and aesthetic navigation never share a
+# selector, per the spec's explicit "do not mix functional terminology
+# into the aesthetic outcome selector."
+#
+# Exercise records reference these ids via their own `functional_goals`
+# field (data/exercises/*.yaml), the same relationship pattern
+# `physique_targets` has with physique-targets.yaml — one authoritative
+# definition here, no exercise re-defines what a goal means.
+#
+# Only 7 of the spec's 8 example goals are represented. "Hip mobility" is
+# not — the dataset has no dedicated mobility-drill exercise distinct from
+# hip-flexor strength work or the hip-abduction/hip-adduction stability
+# exercises already covering hip stability; inventing a mapping for it
+# would be exactly the fake-precision problem the taxonomy's own guardrail
+# warns against. Revisit only if a genuine mobility-drill exercise is
+# added to the knowledge base.
+
+goals:
+  - id: rotator-cuff
+    name: Rotator Cuff
+    parent_region: shoulders
+    definition: >-
+      The external rotators of the shoulder, trained through isolated
+      external-rotation movements that pressing and pulling exercises
+      load only indirectly.
+    why_it_matters: >-
+      Joint durability and controlled rotation strength for the
+      shoulder — a health-and-resilience role rather than a size
+      driver, most relevant for shoulders under heavy or frequent
+      pressing/pulling load.
+
+  - id: scapular-stability
+    name: Scapular Stability
+    parent_region: shoulders
+    definition: >-
+      Scapular protraction control (serratus anterior), trained through
+      movements that add controlled shoulder-blade motion on top of a
+      pressing pattern — something most ordinary pressing does not load
+      directly.
+    why_it_matters: >-
+      Movement quality and durability for the shoulder blade's
+      position and control during pressing — a warm-up/general-health
+      role rather than a primary size driver.
+
+  - id: hip-flexors
+    name: Hip Flexors
+    parent_region: hips
+    definition: >-
+      The hip-flexor muscles, trained through loaded hip-flexion
+      movements that most lower-body routines leave entirely to
+      stretching.
+    why_it_matters: >-
+      Hip-flexor strength and size for running, kicking, or knee-raise
+      work — a specific, secondary functional role rather than a
+      routine staple.
+
+  - id: hip-stability
+    name: Hip Stability
+    parent_region: hips
+    definition: >-
+      Pelvic and hip-joint stability under load, trained through
+      direct hip-abduction and hip-adduction work that bilateral
+      squats and hinges only train indirectly, as stabilizers.
+    why_it_matters: >-
+      Pelvic control and side-to-side hip stability, relevant to
+      injury resilience and to squatting/hinging technique under
+      fatigue, not just to hip width or inner-thigh appearance (the
+      same exercises also serve those visual outcomes — see
+      hip-width-side and inner-thigh-fullness in the aesthetic
+      taxonomy).
+
+  - id: core-anti-extension
+    name: Core Anti-Extension
+    parent_region: core
+    definition: >-
+      Trunk bracing that resists the lower back arching under load,
+      trained through isometric holds like a plank rather than
+      spinal-flexion movements like a crunch.
+    why_it_matters: >-
+      Trunk endurance and bracing control, relevant to keeping the
+      spine neutral under load in squats, presses, and carries — a
+      stability role rather than a growth stimulus.
+
+  - id: core-anti-rotation
+    name: Core Anti-Rotation
+    parent_region: core
+    definition: >-
+      Trunk bracing that resists rotational force, trained through
+      anti-rotation holds like a Pallof press rather than trunk-rotation
+      movements like a woodchop.
+    why_it_matters: >-
+      Rotational control and durability, a role crunches and planks do
+      not cover — relevant to single-arm/single-leg work and any
+      lift where an off-center load tries to twist the trunk.
+
+  - id: core-anti-lateral-flexion
+    name: Core Anti-Lateral-Flexion
+    parent_region: core
+    definition: >-
+      Trunk bracing that resists sideways bending, trained through
+      unilaterally-loaded carries that make the trunk resist being
+      pulled toward the loaded side.
+    why_it_matters: >-
+      Lateral trunk control and durability, plus grip endurance as a
+      side effect — relevant to single-side carrying and loading
+      tasks a bilateral, symmetric lift never challenges.

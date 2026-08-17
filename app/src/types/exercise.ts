@@ -19,6 +19,8 @@ export interface Exercise {
   secondary_targets: string[] | null;
   /** Canonical target ids resolving against data/programming/physique-targets.yaml — see ADR 0003. */
   physique_targets: string[] | null;
+  /** Canonical goal ids resolving against data/programming/functional-goals.yaml — the Function branch's counterpart to physique_targets. */
+  functional_goals: string[] | null;
   movement_patterns: string[];
   equipment: string[];
   exercise_type: ExerciseType;

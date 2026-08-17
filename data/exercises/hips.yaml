@@ -295,6 +295,7 @@
   primary_targets: [gluteus medius, gluteus minimus]
   secondary_targets: [tensor fasciae latae]
   physique_targets: [gluteus-medius-minimus]
+  functional_goals: [hip-stability]
   movement_patterns: [hip abduction]
   equipment: [machine, band]
   exercise_type: isolation
@@ -348,6 +349,7 @@
   primary_targets: [adductors]
   secondary_targets: []
   physique_targets: [adductors]
+  functional_goals: [hip-stability]
   movement_patterns: [hip adduction]
   equipment: [machine]
   exercise_type: isolation
@@ -401,6 +403,7 @@
   body_regions: [hips]
   primary_targets: [hip flexors]
   secondary_targets: [rectus abdominis]
+  functional_goals: [hip-flexors]
   movement_patterns: [hip flexion]
   equipment: [cable]
   exercise_type: isolation

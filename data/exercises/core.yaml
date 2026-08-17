@@ -181,6 +181,7 @@
   primary_targets: [rectus abdominis, transverse abdominis]
   secondary_targets: [glutes, shoulders]
   physique_targets: [rectus-abdominis]
+  functional_goals: [core-anti-extension]
   movement_patterns: [anti-extension isometric]
   equipment: [bodyweight]
   exercise_type: isolation
@@ -292,6 +293,7 @@
   primary_targets: [obliques]
   secondary_targets: [rectus abdominis, hip musculature]
   physique_targets: [obliques]
+  functional_goals: [core-anti-rotation]
   movement_patterns: [anti-rotation isometric]
   equipment: [band, cable]
   exercise_type: isolation
@@ -342,6 +344,7 @@
   primary_targets: [obliques, quadratus lumborum]
   secondary_targets: [grip, traps]
   physique_targets: [obliques]
+  functional_goals: [core-anti-lateral-flexion]
   movement_patterns: [anti-lateral flexion under load]
   equipment: [dumbbell, kettlebell]
   exercise_type: isolation

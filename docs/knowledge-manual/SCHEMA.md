@@ -68,6 +68,15 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** yes — this is what the Phase 4 Decision Maker's target-selection flow reads first, ahead of `primary_targets`.
 - **Required for `reviewed`:** no. A record can be fully reviewed and still carry no `physique_targets` value if its target hasn't been added to the taxonomy yet.
 
+### `functional_goals`
+- **Type:** list of strings, or `null`
+- **Required:** no — same "absent means not yet mapped" treatment as `physique_targets`; only exercises serving a genuine functional/durability role (rotator cuff, scapular stability, hip flexors, hip stability, core anti-extension/anti-rotation/anti-lateral-flexion) carry this field. Most records omit it entirely.
+- **Format:** each entry must be an id defined in [`data/programming/functional-goals.yaml`](../../data/programming/functional-goals.yaml) — the Function branch's counterpart to `physique_targets`/`physique-targets.yaml`, added in the revised Phase 4 spec's 4J step. `npm run validate-data` rejects any entry that doesn't resolve to a real id there, same referential-integrity treatment as `physique_targets`.
+- **Dual-purpose exercises:** an exercise can legitimately carry both `physique_targets` and `functional_goals` (e.g. `hip-abduction` serves both `gluteus-medius-minimus` aesthetically and `hip-stability` functionally) — the two fields are independent, not mutually exclusive.
+- **Never mixed into the aesthetic taxonomy:** an exercise's `functional_goals` never feeds `aesthetic-outcomes.yaml`'s `primary_targets`/`supporting_targets`, and the Decision Maker's Appearance selector never surfaces functional goals — see the revised Phase 4 spec §12.
+- **Decision-making impact:** yes — read by the Decision Maker's Function entry point, mutually exclusive with `physique_targets` in a given recommendation.
+- **Required for `reviewed`:** no.
+
 ### `movement_patterns`
 - **Type:** list of strings
 - **Required:** yes, non-empty
@@ -231,6 +240,7 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 | `primary_targets` | list | yes | open | yes | yes |
 | `secondary_targets` | list | no | open | yes | conditional |
 | `physique_targets` | list | no | IDs, must resolve to `data/programming/physique-targets.yaml` | yes | no |
+| `functional_goals` | list | no | IDs, must resolve to `data/programming/functional-goals.yaml` | yes | no |
 | `movement_patterns` | list | yes | first item closed (49), rest open | yes | yes |
 | `equipment` | list | yes | open | yes | yes |
 | `exercise_type` | string | yes | closed (2) | yes | yes |

@@ -7,6 +7,7 @@ const BASE_INPUT: DecisionInput = {
   bodyRegion: 'chest',
   physiqueTarget: null,
   supportingPhysiqueTargets: null,
+  functionalGoal: null,
   goal: 'build-base',
   equipmentAvailable: null,
   maxSetupTime: null,
@@ -414,6 +415,73 @@ describe('makeRecommendation — primary + supporting physique targets (Phase 4 
     if (result.status === 'ok') {
       expect(result.target).toBeNull();
       expect(result.supportingTargets).toEqual([]);
+    }
+  });
+});
+
+// 4J: the Function branch's engine-level counterpart to the physique-target
+// tests above. Kept as its own describe block since functionalGoal is a
+// fully separate resolution path (see decisionEngine.ts), not a variant of
+// physiqueTarget.
+describe('makeRecommendation — functional goals (4J)', () => {
+  it('a resolved functional goal narrows candidates and populates result.functionalGoal, leaving target/visualObjective null', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'core', functionalGoal: 'core-anti-extension', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.functionalGoal?.id).toBe('core-anti-extension');
+      expect(result.bestFit.id).toBe('plank');
+      expect(result.target).toBeNull();
+      expect(result.visualObjective).toBeNull();
+    }
+  });
+
+  it('an unknown functional goal id falls back to body-region selection without functionalGoal', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'core', functionalGoal: 'not-a-real-goal', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.functionalGoal).toBeNull();
+      expect(result.bestFit.body_regions).toContain('core');
+    }
+  });
+
+  it('rotator-cuff (shoulders) and hip-flexors (hips) resolve to their real, single dedicated exercises', () => {
+    const rotatorCuff = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'shoulders', functionalGoal: 'rotator-cuff', goal: 'build-base' },
+      exercises
+    );
+    const hipFlexors = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'hips', functionalGoal: 'hip-flexors', goal: 'build-base' },
+      exercises
+    );
+    expect(rotatorCuff.status).toBe('ok');
+    expect(hipFlexors.status).toBe('ok');
+    if (rotatorCuff.status === 'ok' && hipFlexors.status === 'ok') {
+      expect(rotatorCuff.bestFit.id).toBe('cable-band-external-rotation');
+      expect(hipFlexors.bestFit.id).toBe('standing-cable-hip-flexion');
+    }
+  });
+
+  it('a functional goal never combines with a physique target — the UI never sets both, and physiqueTarget still wins if it somehow were', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        bodyRegion: 'chest',
+        physiqueTarget: 'upper-pec',
+        functionalGoal: 'core-anti-extension',
+        goal: 'build-base',
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('upper-pec');
+      expect(result.functionalGoal).toBeNull();
     }
   });
 });

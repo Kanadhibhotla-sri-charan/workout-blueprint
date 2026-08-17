@@ -298,15 +298,65 @@ describe('DecisionMakerPage', () => {
   // Phase 4 Corrections §5/§19: Function must be a clearly separated entry
   // point, distinct from both Appearance and the direct/advanced path,
   // even though it has no working data model yet (that's 4J).
-  it('Function is a clearly separated entry point that does not attempt a recommendation', async () => {
+  // 4J: Function is a real, working entry point — separate from Appearance,
+  // feeding the same engine through its own functionalGoal input. Core
+  // Anti-Extension has exactly one tagged exercise (Plank), so build-base
+  // resolving to it end to end is a clean, deterministic proof the branch
+  // actually works, not just that it's visually present.
+  it('Function resolves a real recommendation through its own functional-goal picker, kept separate from the aesthetic result blocks', async () => {
     const user = userEvent.setup();
     renderPage();
 
     await user.click(screen.getByRole('radio', { name: /^function$/i }));
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'core');
+    await user.selectOptions(
+      screen.getByLabelText(/what do you want to improve functionally/i),
+      'core-anti-extension'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'build-base'
+    );
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
 
-    expect(screen.getByText(/on the blueprint roadmap/i)).toBeInTheDocument();
-    expect(screen.queryByLabelText(/what are you trying to accomplish/i)).not.toBeInTheDocument();
-    expect(screen.queryByRole('button', { name: /get recommendation/i })).not.toBeInTheDocument();
+    const functionalBlock = document.querySelector('.decision-result-functional');
+    expect(functionalBlock?.querySelector('.decision-result-name')?.textContent).toBe('Core Anti-Extension');
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink?.textContent).toBe('Plank');
+
+    // Never mixed into the aesthetic outcome selector or result blocks
+    // (revised spec §12).
+    expect(document.querySelector('.decision-result-outcome')).not.toBeInTheDocument();
+    expect(document.querySelector('.decision-result-target')).not.toBeInTheDocument();
+  });
+
+  it('switching from Function to Appearance clears the stale functional-goal state, and vice versa', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.click(screen.getByRole('radio', { name: /^function$/i }));
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'core');
+    await user.selectOptions(
+      screen.getByLabelText(/what do you want to improve functionally/i),
+      'core-anti-extension'
+    );
+
+    await user.click(screen.getByRole('radio', { name: /^appearance$/i }));
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'chest');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'chest-side-projection'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'build-base'
+    );
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    // Resolved the aesthetic pick, not a leftover functional one.
+    const targetBlock = document.querySelector('.decision-result-target');
+    expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Upper Pec');
+    expect(document.querySelector('.decision-result-functional')).not.toBeInTheDocument();
   });
 
   // 4I: full-body taxonomy expansion. "Glutes" is a genuinely new region

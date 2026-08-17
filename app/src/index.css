@@ -603,7 +603,8 @@ select {
 }
 
 .decision-result-best,
-.decision-result-outcome {
+.decision-result-outcome,
+.decision-result-functional {
   border-color: var(--accent);
   background: var(--accent-bg);
 }

@@ -98,10 +98,19 @@ export interface AestheticOutcome {
   common_user_phrasings?: string[];
 }
 
+export interface FunctionalGoal {
+  id: string;
+  name: string;
+  parent_region: string;
+  definition: string;
+  why_it_matters: string;
+}
+
 export interface ProgrammingData {
   physiqueTargets: PhysiqueTarget[];
   globalPrinciples: GlobalPrinciples;
   repRanges: RepRanges;
   intensityTechniques: IntensityTechnique[];
   aestheticOutcomes: AestheticOutcome[];
+  functionalGoals: FunctionalGoal[];
 }

@@ -5,8 +5,11 @@ import {
   bodyRegions,
   equipmentOptions,
   exercises,
+  functionalGoals,
   getAestheticOutcomeById,
   getAestheticOutcomesByRegion,
+  getFunctionalGoalById,
+  getFunctionalGoalsByRegion,
   physiqueTargets,
 } from '../data';
 import { makeRecommendation } from '../engine/decisionEngine';
@@ -23,9 +26,9 @@ type DemandChoice = DemandLevel | '';
 // should be an aesthetic one. Direct/advanced target selection is
 // preserved for experienced users, reframed as a secondary path rather
 // than the default. Function is a separate, clearly-labeled entry point
-// (§5's "Appearance and Function remain clearly separated") — it has no
-// data model yet (that's 4J, functional entry-point integration), so it
-// currently shows what it will cover rather than a working form.
+// (§5's "Appearance and Function remain clearly separated") feeding the
+// same downstream engine through its own functionalGoal input (4J) —
+// never mixed into the aesthetic outcome selector.
 type EntryMode = 'appearance' | 'function' | 'advanced';
 
 function toDemandLevel(value: DemandChoice): DemandLevel | null {
@@ -59,6 +62,12 @@ export function DecisionMakerPage() {
   const [aestheticOutcomeId, setAestheticOutcomeId] = useState('');
   const [supportingPhysiqueTargets, setSupportingPhysiqueTargets] = useState<string[]>([]);
   const [resultAestheticOutcome, setResultAestheticOutcome] = useState<AestheticOutcome | null>(null);
+  // Function branch (4J): "region -> functional goal" mirrors the
+  // Appearance selector's structure, but resolves into its own
+  // functionalGoal state rather than physiqueTarget — kept fully separate
+  // so a functional recommendation is never displayed as an aesthetic one.
+  const [functionalRegion, setFunctionalRegion] = useState('');
+  const [functionalGoalId, setFunctionalGoalId] = useState('');
 
   const goalNeedsCurrentExercise = goal !== '' && GOALS_REQUIRING_CURRENT_EXERCISE.includes(goal);
   const currentExerciseOptions = bodyRegion
@@ -68,6 +77,9 @@ export function DecisionMakerPage() {
   const aestheticRegions = [...new Set(aestheticOutcomes.map((o) => o.region))].sort();
   const outcomesInAppearanceRegion = appearanceRegion ? getAestheticOutcomesByRegion(appearanceRegion) : [];
 
+  const functionalRegions = [...new Set(functionalGoals.map((g) => g.parent_region))].sort();
+  const goalsInFunctionalRegion = functionalRegion ? getFunctionalGoalsByRegion(functionalRegion) : [];
+
   // "region:<name>" for a broad body-region pick, "target:<id>" for a
   // specific physique target — combined into one select, grouped by
   // region, per PHASE-4 §6's "browse a region, then optionally drill into
@@ -75,14 +87,30 @@ export function DecisionMakerPage() {
   // are added to the taxonomy without needing UI rework.
   const targetSelectValue = physiqueTarget ? `target:${physiqueTarget}` : bodyRegion ? `region:${bodyRegion}` : '';
 
+  // Switching the top-level entry mode resets every mode's resolved state,
+  // not just the one being left — piecemeal clearing inside each select's
+  // own handler only fires once a new value is picked there, which left a
+  // gap: switching modes and changing the *other* mode's region select
+  // without yet picking a new outcome/goal could otherwise submit a stale
+  // bodyRegion/physiqueTarget/functionalGoal combination left over from
+  // before the switch.
+  function handleEntryModeChange(mode: EntryMode) {
+    setEntryMode(mode);
+    setBodyRegion('');
+    setPhysiqueTarget('');
+    setSupportingPhysiqueTargets([]);
+    setAestheticOutcomeId('');
+    setFunctionalGoalId('');
+  }
+
   function handleTargetSelectChange(value: string) {
     // A direct edit to the advanced picker overrides whatever the
-    // appearance selector had resolved, so the result view doesn't keep
-    // showing a stale "what you're trying to change" block, and a
-    // hand-picked target doesn't inherit another outcome's supporting
-    // targets.
+    // appearance or function selector had resolved, so the result view
+    // doesn't keep showing a stale block, and a hand-picked target
+    // doesn't inherit another outcome's supporting targets.
     setAestheticOutcomeId('');
     setSupportingPhysiqueTargets([]);
+    setFunctionalGoalId('');
     if (value.startsWith('target:')) {
       const id = value.slice('target:'.length);
       const target = physiqueTargets.find((t) => t.id === id);
@@ -102,6 +130,7 @@ export function DecisionMakerPage() {
 
   function handleAestheticOutcomeChange(outcomeId: string) {
     setAestheticOutcomeId(outcomeId);
+    setFunctionalGoalId('');
     const outcome = getAestheticOutcomeById(outcomeId);
     if (!outcome) return;
     // Primary/supporting split (Phase 4 Corrections §7-8): the primary
@@ -115,14 +144,33 @@ export function DecisionMakerPage() {
     if (target) setBodyRegion(target.parent_region);
   }
 
+  function handleFunctionalRegionChange(region: string) {
+    setFunctionalRegion(region);
+    setFunctionalGoalId('');
+  }
+
+  function handleFunctionalGoalChange(goalId: string) {
+    setFunctionalGoalId(goalId);
+    // A functional pick overrides whatever the aesthetic path had
+    // resolved, and vice versa (handleAestheticOutcomeChange/
+    // handleTargetSelectChange clear this state) — the two never combine.
+    setPhysiqueTarget('');
+    setSupportingPhysiqueTargets([]);
+    setAestheticOutcomeId('');
+    const goalRecord = getFunctionalGoalById(goalId);
+    if (!goalRecord) return;
+    setBodyRegion(goalRecord.parent_region);
+  }
+
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    if (entryMode === 'function' || !bodyRegion || !goal) return;
+    if (!bodyRegion || !goal) return;
 
     const input: DecisionInput = {
       bodyRegion,
       physiqueTarget: physiqueTarget || null,
       supportingPhysiqueTargets: supportingPhysiqueTargets.length > 0 ? supportingPhysiqueTargets : null,
+      functionalGoal: functionalGoalId || null,
       goal,
       equipmentAvailable: restrictEquipment ? equipmentAvailable : null,
       maxSetupTime: toDemandLevel(maxSetupTime),
@@ -153,7 +201,7 @@ export function DecisionMakerPage() {
                 name="entry-mode"
                 value="appearance"
                 checked={entryMode === 'appearance'}
-                onChange={() => setEntryMode('appearance')}
+                onChange={() => handleEntryModeChange('appearance')}
               />
               <span aria-hidden="true">👀</span> Appearance
             </label>
@@ -163,7 +211,7 @@ export function DecisionMakerPage() {
                 name="entry-mode"
                 value="function"
                 checked={entryMode === 'function'}
-                onChange={() => setEntryMode('function')}
+                onChange={() => handleEntryModeChange('function')}
               />
               <span aria-hidden="true">🦴</span> Function
             </label>
@@ -173,7 +221,7 @@ export function DecisionMakerPage() {
                 name="entry-mode"
                 value="advanced"
                 checked={entryMode === 'advanced'}
-                onChange={() => setEntryMode('advanced')}
+                onChange={() => handleEntryModeChange('advanced')}
               />
               <span aria-hidden="true">🎯</span> Direct / Advanced
             </label>
@@ -217,11 +265,45 @@ export function DecisionMakerPage() {
           )}
 
           {entryMode === 'function' && (
-            <p className="field-hint entry-mode-panel">
-              Function-based training goals — rotator cuff, scapular stability, hip mobility,
-              core stability, and more — are on the Blueprint roadmap but not available here yet.
-              Switch to Appearance or Direct / Advanced above to get a recommendation today.
-            </p>
+            <div className="entry-mode-panel">
+              <p className="field-hint">
+                Functional goals — joint durability, movement quality, and stability — feed the
+                same engine as Appearance, kept separate since they're not about how something
+                looks.
+              </p>
+              <label htmlFor="dm-functional-region">Body area</label>
+              <select
+                id="dm-functional-region"
+                value={functionalRegion}
+                onChange={(event) => handleFunctionalRegionChange(event.target.value)}
+              >
+                <option value="">— none —</option>
+                {functionalRegions.map((region) => (
+                  <option key={region} value={region}>
+                    {humanize(region)}
+                  </option>
+                ))}
+              </select>
+              {functionalRegion && (
+                <>
+                  <label htmlFor="dm-functional-goal">What do you want to improve functionally?</label>
+                  <select
+                    id="dm-functional-goal"
+                    value={functionalGoalId}
+                    onChange={(event) => handleFunctionalGoalChange(event.target.value)}
+                  >
+                    <option value="" disabled>
+                      Select a functional goal…
+                    </option>
+                    {goalsInFunctionalRegion.map((goalOption) => (
+                      <option key={goalOption.id} value={goalOption.id}>
+                        {goalOption.name}
+                      </option>
+                    ))}
+                  </select>
+                </>
+              )}
+            </div>
           )}
 
           {entryMode === 'advanced' && (
@@ -254,8 +336,6 @@ export function DecisionMakerPage() {
           )}
         </fieldset>
 
-        {entryMode !== 'function' && (
-        <>
         <div className="filter-field">
           <label htmlFor="dm-goal">2. What are you trying to accomplish?</label>
           <select
@@ -402,8 +482,6 @@ export function DecisionMakerPage() {
         <button type="submit" className="button button-primary decision-submit">
           Get Recommendation
         </button>
-        </>
-        )}
       </form>
 
       {result && <DecisionResultView result={result} aestheticOutcome={resultAestheticOutcome} />}
@@ -443,6 +521,17 @@ function DecisionResultView({
               <p>{aestheticOutcome.technical_explanation}</p>
             </details>
           )}
+        </div>
+      )}
+
+      {result.functionalGoal && (
+        <div className="decision-result-block decision-result-functional">
+          <h2>
+            <span aria-hidden="true">🦴</span> Functional goal
+          </h2>
+          <p className="decision-result-name">{result.functionalGoal.name}</p>
+          <p>{result.functionalGoal.definition}</p>
+          <p className="field-hint">{result.functionalGoal.why_it_matters}</p>
         </div>
       )}
 
