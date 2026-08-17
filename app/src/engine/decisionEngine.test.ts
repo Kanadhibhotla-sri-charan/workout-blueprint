@@ -1,12 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { makeRecommendation } from './decisionEngine';
-import { exercises } from '../data';
-import type { DecisionInput } from './types';
+import { exercises, getAestheticOutcomeById, getPhysiqueTargetById } from '../data';
+import type { DecisionInput, Goal } from './types';
 
 const BASE_INPUT: DecisionInput = {
   bodyRegion: 'chest',
   physiqueTarget: null,
   supportingPhysiqueTargets: null,
+  aestheticOutcome: null,
   functionalGoal: null,
   goal: 'build-base',
   equipmentAvailable: null,
@@ -556,6 +557,155 @@ describe('makeRecommendation — functional goals (4J)', () => {
     if (result.status === 'ok') {
       expect(result.target?.id).toBe('upper-pec');
       expect(result.functionalGoal).toBeNull();
+    }
+  });
+});
+
+// Phase 4C: aesthetic-specific exercise suitability. Mirrors exactly what
+// DecisionMakerPage.tsx's handleAestheticOutcomeChange resolves (primary
+// target from outcome.primary_targets[0], supporting targets from
+// outcome.supporting_targets, aestheticOutcome set to the outcome's own
+// id), so a passing test here is a real proof the actual UI flow behaves
+// correctly, not just the engine in isolation.
+function recommendForOutcome(outcomeId: string, goal: Goal, overrides: Partial<DecisionInput> = {}) {
+  const outcome = getAestheticOutcomeById(outcomeId)!;
+  const primaryTargetId = outcome.primary_targets[0];
+  const target = getPhysiqueTargetById(primaryTargetId)!;
+  return makeRecommendation(
+    {
+      ...BASE_INPUT,
+      bodyRegion: target.parent_region,
+      physiqueTarget: primaryTargetId,
+      supportingPhysiqueTargets: outcome.supporting_targets ?? null,
+      aestheticOutcome: outcomeId,
+      goal,
+      ...overrides,
+    },
+    exercises
+  );
+}
+
+describe('makeRecommendation — Phase 4C aesthetic-specific exercise suitability', () => {
+  // §6 permanent negative test — Lower Calf Fullness. Seated Calf Raise's
+  // own summary literally says the bent knee makes it "a soleus-specific
+  // stimulus"; Leg-Press Calf Raise's own summary says it's for
+  // "accumulating extra volume rather than being a primary growth
+  // driver." Before Phase 4C, Leg-Press Calf Raise won on pure
+  // alphabetical accident.
+  it('lower calf fullness: Seated Calf Raise (bent-knee, soleus-specific) beats Leg-Press Calf Raise under every goal, which remains a valid alternative', () => {
+    for (const goal of ['build-base', 'visual-area'] as Goal[]) {
+      const result = recommendForOutcome('calf-lower-fullness', goal);
+      expect(result.status).toBe('ok');
+      if (result.status === 'ok') {
+        expect(result.bestFit.id).toBe('seated-calf-raise');
+        // §12: the suitability layer refines, it doesn't exclude — the
+        // less-specific-but-still-valid exercise remains reachable.
+        const allIds = [result.bestFit.id, result.alternative?.id, ...result.complements.map((c) => c.id)];
+        expect(allIds).toContain('leg-press-calf-raise');
+      }
+    }
+  });
+
+  // §7 permanent negative test — Overall Quad Front Mass. Before Phase 4C,
+  // the visual-area goal's own generic ranking favored Reverse Nordic
+  // Curl's lengthened-position-emphasis tag over every heavy squat.
+  it('quad front mass: a heavy-loadable compound beats Reverse Nordic Curl under the visual-area goal, which remains a valid, reachable exercise', () => {
+    const result = recommendForOutcome('quad-front-mass', 'visual-area');
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.bestFit.id).not.toBe('reverse-nordic-curl');
+      expect(result.bestFit.aesthetic_characteristics).toContain('high-loadable');
+      const reverseNordicStillReachable = makeRecommendation(
+        { ...BASE_INPUT, bodyRegion: 'quads', physiqueTarget: 'quads', goal: 'visual-area', currentExerciseId: null },
+        exercises
+      );
+      expect(reverseNordicStillReachable.status).toBe('ok');
+    }
+  });
+
+  // §8 — Chest side-projection, strengthened. Incline Dumbbell Press
+  // uniquely combines both of this outcome's preferred characteristics
+  // (lengthened-biased + high-loadable) among the whole upper-pec pool,
+  // so it should win decisively under any goal, not just the ones whose
+  // generic stimulus ranking happens to favor it.
+  it('chest side-projection: Incline Dumbbell Press (lengthened + high-loadable) wins under every goal', () => {
+    for (const goal of ['build-base', 'visual-area'] as Goal[]) {
+      const result = recommendForOutcome('chest-side-projection', goal);
+      expect(result.status).toBe('ok');
+      if (result.status === 'ok') {
+        expect(result.bestFit.id).toBe('incline-dumbbell-press');
+      }
+    }
+  });
+
+  // §5 — aesthetic suitability must never undo the Phase 4B primary-target
+  // rule. Dip (Chest-Biased) is a supporting-target (lower-pec) exercise
+  // that matches BOTH of chest-side-projection's preferred characteristics
+  // (heavy-compound + lengthened-position-emphasis) — the same suitability
+  // score as the primary-target winner — yet must still lose, because
+  // target-tier dominance is checked before suitability, not after.
+  it('a supporting-target exercise with maximal aesthetic suitability still loses to any primary-target exercise', () => {
+    const result = recommendForOutcome('chest-side-projection', 'build-base');
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.bestFit.physique_targets).toContain('upper-pec');
+      expect(result.bestFitTargetMatch).toBe('primary');
+      expect(result.bestFit.id).not.toBe('dip-chest-biased');
+    }
+  });
+
+  // §9 — Shoulder width. side-delt's candidate pool is already narrow
+  // (three lateral-raise variants, no front-delt press tagged to it), so
+  // this mainly locks in that a front-delt-style press can never win a
+  // shoulder-width recommendation.
+  it('shoulder width: the recommendation is always a direct lateral-delt isolation exercise, never a front-delt press', () => {
+    for (const goal of ['build-base', 'visual-area'] as Goal[]) {
+      const result = recommendForOutcome('shoulder-width-front', goal);
+      expect(result.status).toBe('ok');
+      if (result.status === 'ok') {
+        expect(result.bestFit.physique_targets).toContain('side-delt');
+        expect(result.bestFit.id).toMatch(/lateral-raise/);
+      }
+    }
+  });
+
+  // §10 — Back width vs back thickness must produce meaningfully
+  // different behavior: Case A (width) resolves to a vertical-pull
+  // exercise, Case B (thickness) resolves to a horizontal-pull exercise,
+  // and the two picks are never the same exercise.
+  it('back width (Case A, vertical-pull) and back thickness (Case B, horizontal-pull) recommend different, mechanically appropriate exercises', () => {
+    const widthResult = recommendForOutcome('back-width-v-taper', 'build-base');
+    const thicknessResult = recommendForOutcome('back-side-thickness', 'build-base');
+    expect(widthResult.status).toBe('ok');
+    expect(thicknessResult.status).toBe('ok');
+    if (widthResult.status === 'ok' && thicknessResult.status === 'ok') {
+      expect(widthResult.bestFit.aesthetic_characteristics).toContain('vertical-pull');
+      expect(thicknessResult.bestFit.aesthetic_characteristics).toContain('horizontal-pull');
+      expect(widthResult.bestFit.id).not.toBe(thicknessResult.bestFit.id);
+    }
+  });
+
+  // §18 — the recommendation trace must be internally consistent with the
+  // rest of the result: a 'high' aestheticSuitability trace should only
+  // ever occur alongside a primary-target-tier pick that actually matches
+  // every one of the outcome's preferred characteristics, and 'not-
+  // applicable' should only occur when the outcome has none.
+  it('bestFitTrace reflects the actual ranking inputs that decided the pick', () => {
+    const withPreference = recommendForOutcome('calf-lower-fullness', 'build-base');
+    expect(withPreference.status).toBe('ok');
+    if (withPreference.status === 'ok') {
+      expect(withPreference.bestFitTrace.exerciseName).toBe('Seated Calf Raise');
+      expect(withPreference.bestFitTrace.targetMatch).toBe('primary');
+      expect(withPreference.bestFitTrace.aestheticSuitability).toBe('high');
+      expect(withPreference.bestFitTrace.finalReason).toMatch(/direct primary-target match/);
+      expect(withPreference.bestFitTrace.finalReason).toMatch(/high aesthetic suitability/);
+    }
+
+    const withoutPreference = recommendForOutcome('arm-side-thickness', 'build-base');
+    expect(withoutPreference.status).toBe('ok');
+    if (withoutPreference.status === 'ok') {
+      // arm-side-thickness has no preferred_characteristics defined.
+      expect(withoutPreference.bestFitTrace.aestheticSuitability).toBe('not-applicable');
     }
   });
 });

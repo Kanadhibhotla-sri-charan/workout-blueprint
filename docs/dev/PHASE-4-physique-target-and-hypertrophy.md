@@ -534,3 +534,104 @@ Final step: surface everything the previous three steps added to the engine resu
 ### Phase 4B status
 
 All 11 implementation steps (4B-1 through 4B-11) complete. Phase 4B is done.
+
+---
+
+# Phase 4C — Aesthetic-Specific Exercise Suitability & Programming Refinement
+
+**Date:** 2026-08-17
+
+Real-world testing of the completed Phase 4B engine surfaced a second-order problem the architect named precisely: once several exercises correctly match the same primary target, generic stimulus tags can still select an exercise that's less appropriate for the *exact* visual problem. Spec saved verbatim at `docs/architecture/PHASE-4C-AESTHETIC-SUITABILITY.md`, with its own 12-step implementation order (4C-1 through 4C-12) and an explicit instruction not to restart or redesign anything Phase 4/4B already got right.
+
+## 4C-1 — Audit current ranking behavior
+
+Ran the engine directly (a throwaway probe test, not committed) against every scenario in the spec's §19 test matrix, under both `build-base` and `visual-area` goals, and confirmed three concrete bugs with real data, not hypotheticals:
+
+- **Calves** (`calf-lower-fullness`, primary target soleus): Leg-Press Calf Raise beat Seated Calf Raise under *every* goal. Both exercises' own `summary` fields state the answer outright — Seated Calf Raise: "a soleus-specific stimulus"; Leg-Press Calf Raise: "for accumulating extra volume rather than being a primary growth driver." The two were tied on the engine's existing tier logic and fell to alphabetical tiebreak, which happened to favor the wrong one — exactly the spec's own named failure (§6).
+- **Quads** (`quad-front-mass`, primary target quads) under `visual-area`: Reverse Nordic Curl (a niche, lengthened-position isolation exercise) beat every heavy squat, because the existing `visual-area` goal ranking gives any `lengthened-position-emphasis`-tagged exercise top priority regardless of how appropriate it is for "overall mass" — the spec's other named failure (§7).
+- **Back** (`back-width-v-taper`) under `visual-area`: Dumbbell Pullover (a straight-arm, shoulder-extension movement) beat every actual vertical-pull exercise (pull-ups, pulldowns) — the outcome's own `technical_explanation` already says width is "trained primarily through vertical-pull (pull-up/pulldown) movements."
+
+Chest projection/width and shoulder-width were already defensible (narrow, correctly-tagged candidate pools) but not decisively specific; arm-side-thickness and triceps-back-depth were already correct, because Phase 4/4B's finer-grained targets (`brachialis-arm-thickness`/`triceps`, `triceps`/`triceps-long-head`) already achieve the specificity Phase 4C is after for those two outcomes.
+
+## 4C-2/4C-3 — Aesthetic characteristics vocabulary + outcome preference mapping
+
+### What changed
+
+- **`scripts/lib/taxonomy.js`** — new `AESTHETIC_CHARACTERISTICS` controlled vocabulary: `bent-knee`, `vertical-pull`, `horizontal-pull`, `high-loadable`, `lengthened-biased`. Deliberately small — every value exists because a real outcome preference needs it (§2's "only retain characteristics that materially help distinguish suitability"), not speculatively. `aesthetic_characteristics` added to `OPTIONAL_LIST_FIELDS`/`ALL_FIELDS`.
+- **`scripts/lib/validate.js`** — validates `aesthetic_characteristics` entries against the controlled set (same treatment as `coverage_categories`), and a new `preferred_characteristics` check on `aesthetic-outcomes.yaml` entries. Verified by injecting a bad value (`not-a-real-characteristic` on `seated-calf-raise`), confirming `npm run validate-data` caught it, then reverting.
+- **`data/exercises/{calves,quads,chest,back}.yaml`** — tagged only the exercises actually relevant to the outcomes being fixed (~20 records, not all 123): `bent-knee` on Seated Calf Raise; `high-loadable` on the 7 heavy/stable-compound quad exercises and the 4 heavy/stable-compound upper-pec presses plus 4 mid-pec presses; `lengthened-biased` on Incline Dumbbell Press, Incline Cable Press, Incline Dumbbell Fly; `vertical-pull` on the 5 true vertical-pull back exercises (pull-ups/pulldowns); `horizontal-pull` on the 6 row-pattern back exercises. Every tag traces to the exercise's own existing `movement_patterns`/`coverage_categories` fields (e.g. `movement_patterns: [vertical pull, ...]` already existed from Phase 1's taxonomy normalization) rather than being invented — `aesthetic_characteristics` exists for the handful of distinctions those fields don't already expose in a directly-matchable form.
+- **`data/programming/aesthetic-outcomes.yaml`** — `preferred_characteristics` added to 6 outcomes: `chest-side-projection` (`lengthened-biased`, `high-loadable`), `chest-front-width` (`high-loadable`), `back-width-v-taper` (`vertical-pull`), `back-side-thickness` (`horizontal-pull`), `quad-front-mass` (`high-loadable`), `calf-lower-fullness` (`bent-knee`). The other 20 outcomes carry none — their existing target granularity already resolves specificity.
+- **`app/src/types/exercise.ts`** — `Exercise.aesthetic_characteristics: string[] | null`.
+- **`app/src/types/programming.ts`** — `AestheticOutcome.preferred_characteristics?: string[]`.
+- **`app/src/data/index.ts`** — `exercises`'s cast changed from a direct `as Exercise[]` to `as unknown as Exercise[]`, matching `programming`'s existing pattern; the new sparse optional field pushed the generated JSON's inferred union type past what TS's direct-cast structural-overlap check tolerates.
+- **`docs/knowledge-manual/SCHEMA.md`** — new `aesthetic_characteristics` field entry and summary-table row.
+
+### Decisions made
+
+- **Reused existing fields as tag values instead of re-deriving from scratch.** `vertical-pull`/`horizontal-pull` map directly onto exercises' own `movement_patterns[0]` values (already normalized in Phase 1); `high-loadable`/`lengthened-biased` correlate with existing `coverage_categories` (`heavy-compound`/`stable-compound`, `lengthened-position-emphasis`) but are still tracked as a separate field rather than pattern-matching the free-text `movement_patterns` field directly in engine code — `movement_patterns` is prose by design (SCHEMA.md), the same reason `complements` needed `resolveDeclaredComplements`/`rankStructuralComplements` instead of being matched directly.
+
+## 4C-4 — Integrate aesthetic suitability into candidate ranking
+
+### What changed
+
+- **`app/src/engine/types.ts`** — `DecisionInput.aestheticOutcome: string | null` — the specific aesthetic outcome id the UI resolved `physiqueTarget` from, when it was resolved from one. Only ever consulted to look up `preferred_characteristics`; never a second target-selection path.
+- **`app/src/pages/DecisionMakerPage.tsx`** — `handleSubmit` now passes `aestheticOutcomeId` through as `aestheticOutcome`. Already correctly cleared by every existing entry-mode/target-change handler (no new staleness bug — the 4K fix already covers this field's siblings).
+- **`app/src/engine/decisionEngine.ts`** — `sortByAestheticSuitability`, a new stable sort ranking candidates by how many of the resolved outcome's `preferred_characteristics` they match (descending), a no-op when no outcome was selected or it has none. Composed via stable-sort layering: `sortByTargetTier(sortByAestheticSuitability(<existing ranking>))` at all three goal-branch call sites — since JS sorts are stable, applying the least-significant sort first and the most-significant last produces the full hierarchy from §4 (target tier dominates → aesthetic suitability refines within a tier → the pre-existing goalKey/structural tiebreak remains the final tiebreak) without touching any of the three already-tested ranking functions (`rankByGoal`, `rankStructuralAlternatives`, `resolveComplements`) internally.
+
+### Verified
+
+Reran the 4C-1 probe with `aestheticOutcome` wired through exactly as the real UI sets it: all three confirmed bugs fixed (Seated Calf Raise, Back Squat, and a genuine vertical-pull exercise now win their respective scenarios under every goal), with zero effect on any scenario that doesn't set `aestheticOutcome` (full 131-test suite still green before any new tests were added).
+
+## 4C-5/4C-6/4C-7 — Permanent regression tests
+
+Added a new `decisionEngine.test.ts` describe block, `Phase 4C aesthetic-specific exercise suitability`, via a `recommendForOutcome()` helper that mirrors `DecisionMakerPage.tsx`'s `handleAestheticOutcomeChange` exactly (same primary/supporting/aestheticOutcome resolution), so a passing test is a real proof about the UI flow, not just the engine in isolation:
+
+- **§6 permanent negative test** — Seated Calf Raise beats Leg-Press Calf Raise under every goal; Leg-Press Calf Raise remains reachable as the alternative (§12 — refinement, not exclusion).
+- **§7 permanent negative test** — quad-front-mass under `visual-area` no longer picks Reverse Nordic Curl, which remains reachable via a plain target-only query.
+- **§8 strengthened** — chest-side-projection resolves to Incline Dumbbell Press (uniquely combining both preferred characteristics) under every goal.
+- **§5 preservation test** — Dip (Chest-Biased), a *supporting*-target (lower-pec) exercise, was tagged `high-loadable`/`lengthened-biased` (a genuinely defensible tag — it's a heavy bodyweight compound in a lengthened position, same rationale as Incline Dumbbell Press) specifically to create a real, data-grounded tension case: maximal aesthetic suitability score, but still loses to any primary-target (upper-pec) exercise, proving target-tier dominance holds regardless of suitability score.
+- **§9** — shoulder-width-front always resolves to a lateral-raise-family exercise (the pool was already narrow enough that this mostly documents existing-correct behavior).
+- **§10 contrast test** — back-width-v-taper and back-side-thickness resolve to different exercises with the expected `vertical-pull`/`horizontal-pull` characteristics respectively.
+- **`DecisionMakerPage.test.tsx`** — a UI-level golden slice for the calf case (§6), run through the real form controls, asserting the Target block, Best Fit link text, and the "✓ Direct match" line in the "Why this exercise?" block.
+
+## 4C-8/4C-9 — Programming-profile audit + exercise_type precedence fix
+
+Audited `resolveProgrammingProfile`'s classification against every one of the 123 exercise records (a Node script using the same `matches()`/`classify()` logic the engine runs, not a sample) for the four contradiction classes §14 names. Found exactly 2, both the spec's own named example: **Seated Calf Raise** and **Leg-Press Calf Raise** — both `exercise_type: isolation` — were classified into the `stable-compound` *programming profile* (a compound-family profile), because the `heavy-free-weight-compound`/`stable-compound` classification rules matched on `coverage_categories_any` alone with no `exercise_type` gate, and both calf exercises happen to carry a `stable-compound` coverage tag despite being isolation movements. No fatigue-cost or skill-demand contradictions were found elsewhere in the database.
+
+### What changed
+
+- **`data/programming/programming-profiles.yaml`** — added `exercise_type: compound` to both compound-family classification rules, implementing §13's canonical rule (`exercise_type` gates the primary profile family first; `coverage_categories` only refine within it — never the reverse). Re-running the audit script after the fix: 0 contradictions, 0 unclassified exercises. Seated Calf Raise now correctly lands on `constant-tension-isolation` (it carries a `low-fatigue` coverage tag); Leg-Press Calf Raise lands on the generic `moderate-hypertrophy-isolation` default — both isolation-family, both defensible.
+- **`app/src/engine/programmingEngine.test.ts`** — a targeted test for the two calf records, plus a permanent full-database audit test (`every exercise in the database classifies into a profile family consistent with its own exercise_type`) — satisfies §14/§21's "full exercise-database programming-profile audit passes" acceptance criterion as a standing regression guard, not a one-off script result.
+
+## 4C-10/4C-11/4C-12 — Recommendation trace, full regression, final real-world test
+
+- **`app/src/engine/types.ts`** — new `RecommendationTrace` interface (`exerciseName`, `targetName`, `targetMatch`, `aestheticSuitability` — `'not-applicable' | 'none' | 'some' | 'high'` — `programmingProfile`, `fatigueCost`, `finalReason`) and `DecisionResult`'s `'ok'` variant gains `bestFitTrace: RecommendationTrace`, implementing §18's "expose enough internal information to explain ranking... available in development/debug mode." Computed unconditionally (cheap, deterministic — no new ranking logic, just a summary of state already computed) rather than gated behind an env flag or settings toggle, keeping the "don't overengineer" guardrail intact.
+- **`app/src/engine/decisionEngine.ts`** — `buildRecommendationTrace()` assembles the trace from `bestFitTargetMatch`, the aesthetic-suitability score already computed for ranking, and the resolved `Programming.profile.name`.
+- **`app/src/pages/DecisionMakerPage.tsx`** — a `<details>` "Debug: ranking trace" block, collapsed by default, appended after Complements — satisfies §18's "does not have to be shown fully to normal users" by being present but not visually prominent, rather than requiring a separate dev-mode build flag.
+- **`app/src/index.css`** — small, muted `.decision-result-trace` styling so the block doesn't compete visually with the primary recommendation blocks.
+- Full regression pass: **141 tests across 14 files**, all passing. `npx tsc -b --force`, `npm run lint` (oxlint), `npm run build`, `npm run validate-data`: all clean.
+- Final real-world test: launched the actual Vite dev server behind headless Chromium (not just the test suite) and walked 6 of §19's required test-matrix scenarios at both desktop and 375px mobile viewports — every one resolved to the expected, now-fixed exercise, with zero horizontal overflow at any viewport. Screenshotted the calf-lower-fullness golden slice with the debug trace expanded, confirming end-to-end: Seated Calf Raise wins, "✓ Direct match" shows in "Why this exercise?", Leg-Press Calf Raise still appears as the Alternative (not excluded), and the trace reads "Target match: primary / Aesthetic suitability: high / Programming profile: Constant-tension isolation / Final reason: direct primary-target match + high aesthetic suitability."
+
+### Phase 4C Acceptance Criteria (spec §21) — final walkthrough
+
+- [x] Primary-target ranking remains intact — `sortByTargetTier` still applied last/outermost; §5 preservation test proves it directly.
+- [x] Aesthetic-specific suitability is represented deterministically — `aesthetic_characteristics`/`preferred_characteristics`, matched by simple set intersection, no scoring.
+- [x] Exercises can be distinguished by relevance to a specific aesthetic outcome — `bestFitTrace.aestheticSuitability`.
+- [x] Generic stimulus characteristics cannot routinely override aesthetic suitability — `sortByAestheticSuitability` is applied before the existing `goalKey`-based ranking in the stable-sort composition.
+- [x] Lower-calf / soleus regression passes — 4C-5.
+- [x] Overall-quad-mass regression passes — 4C-6.
+- [x] Chest side-projection regression passes — 4C-7 (strengthened).
+- [x] Shoulder-width regression passes — 4C-7.
+- [x] Back-width vs back-thickness tests produce meaningfully different behavior — 4C-7 contrast test.
+- [x] Brachialis / side-arm-thickness regression continues to pass — untouched, still green (no `preferred_characteristics` added to that outcome; its existing target granularity was already sufficient).
+- [x] Technical explanation and recommendation remain consistent — Phase 4B's Test E already covers `bestFitTargetMatch` consistency; the new `bestFitTrace` extends the same auditability to aesthetic suitability.
+- [x] Programming profile classification is consistent with canonical exercise type — 4C-9's `exercise_type: compound` gate.
+- [x] Full exercise-database programming-profile audit passes — permanent test in `programmingEngine.test.ts`, not just a one-off script.
+- [x] Existing intensity-technique behavior continues to pass — untouched this phase, full Phase 4B intensity-technique test suite still green.
+- [x] No AI/ML or opaque scoring has been introduced — suitability is a simple, explainable set-intersection count; ranking is stable-sort composition throughout.
+- [x] Existing Phase 2 / Phase 3 / Phase 4B tests continue to pass — 141/141 green, only pre-existing test touched all phase was the Cable Fly rep-range assertion from Phase 4B (unrelated, already documented there).
+- [x] Mobile UX remains functional — verified at 375px, zero horizontal overflow across all 6 real-world scenarios checked.
+
+### Phase 4C status
+
+All 12 implementation steps (4C-1 through 4C-12) complete. Phase 4C is done.

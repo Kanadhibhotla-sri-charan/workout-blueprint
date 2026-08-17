@@ -77,6 +77,14 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** yes — read by the Decision Maker's Function entry point, mutually exclusive with `physique_targets` in a given recommendation.
 - **Required for `reviewed`:** no.
 
+### `aesthetic_characteristics`
+- **Type:** list of strings, or `null`
+- **Required:** no. Added in Phase 4C §2 — a small, closed vocabulary of movement-mechanics traits (currently `bent-knee`, `vertical-pull`, `horizontal-pull`, `high-loadable`, `lengthened-biased`) distinguishing "this exercise trains the target" (`physique_targets`) from "this exercise is especially suited to a specific visual problem" (this field). Deliberately kept small — a value only exists here because a real `aesthetic-outcomes.yaml` `preferred_characteristics` entry needs it, not speculatively; most exercise records omit this field entirely, including many that carry `physique_targets`.
+- **Format:** each entry must be one of the controlled values in `scripts/lib/taxonomy.js`'s `AESTHETIC_CHARACTERISTICS`. `npm run validate-data` rejects any other value.
+- **Not a substitute for `movement_patterns` or `coverage_categories`:** this field only exists for the handful of distinctions those fields don't already capture in a directly-matchable form (e.g. `movement_patterns` is normalized prose, not meant to be pattern-matched by engine logic). Where an existing field already captures the distinction cleanly, that field is reused instead of duplicating it here.
+- **Decision-making impact:** yes — read by the Decision Maker's aesthetic-suitability ranking tier (Phase 4C §4), which refines ranking *within* a target tier established by Phase 4B; it never overrides the primary/supporting target rule.
+- **Required for `reviewed`:** no.
+
 ### `movement_patterns`
 - **Type:** list of strings
 - **Required:** yes, non-empty
@@ -241,6 +249,7 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 | `secondary_targets` | list | no | open | yes | conditional |
 | `physique_targets` | list | no | IDs, must resolve to `data/programming/physique-targets.yaml` | yes | no |
 | `functional_goals` | list | no | IDs, must resolve to `data/programming/functional-goals.yaml` | yes | no |
+| `aesthetic_characteristics` | list | no | closed (5, Phase 4C) | yes | no |
 | `movement_patterns` | list | yes | first item closed (49), rest open | yes | yes |
 | `equipment` | list | yes | open | yes | yes |
 | `exercise_type` | string | yes | closed (2) | yes | yes |

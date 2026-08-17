@@ -2,8 +2,10 @@ import { describe, expect, it } from 'vitest';
 import { buildProgramming, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
 import { exercises, getExerciseById } from '../data';
 
+const COMPOUND_PROFILE_FAMILY = new Set(['heavy-free-weight-compound', 'stable-compound', 'compound-general']);
+
 describe('resolveProgrammingProfile — Phase 4B §10-11', () => {
-  it('a heavy-compound exercise classifies as heavy-free-weight-compound regardless of exercise_type', () => {
+  it('a heavy-compound exercise classifies as heavy-free-weight-compound', () => {
     const exercise = getExerciseById('incline-dumbbell-press')!; // heavy-compound
     expect(resolveProgrammingProfile(exercise).id).toBe('heavy-free-weight-compound');
   });
@@ -24,6 +26,42 @@ describe('resolveProgrammingProfile — Phase 4B §10-11', () => {
     const plain = getExerciseById('cable-hammer-curl-rope')!; // isolation, no distinguishing tag, stability: low
     expect(resolveProgrammingProfile(lengthened).id).toBe('lengthened-position-isolation');
     expect(resolveProgrammingProfile(plain).id).toBe('moderate-hypertrophy-isolation');
+  });
+});
+
+// Phase 4C §13-14: exercise_type must gate the primary profile family
+// before coverage_categories refine within it — never the reverse.
+// Before this fix, the heavy-free-weight-compound/stable-compound rules
+// matched on coverage_categories_any alone with no exercise_type check,
+// so an isolation exercise carrying a heavy-compound/stable-compound
+// coverage tag landed on a compound programming profile.
+describe('resolveProgrammingProfile — Phase 4C §13 exercise_type precedence', () => {
+  it('an isolation exercise carrying a stable-compound coverage tag still classifies into the isolation profile family, not a compound one', () => {
+    const seatedCalfRaise = getExerciseById('seated-calf-raise')!;
+    const legPressCalfRaise = getExerciseById('leg-press-calf-raise')!;
+    expect(seatedCalfRaise.exercise_type).toBe('isolation');
+    expect(seatedCalfRaise.coverage_categories).toContain('stable-compound');
+    expect(legPressCalfRaise.exercise_type).toBe('isolation');
+    expect(legPressCalfRaise.coverage_categories).toContain('stable-compound');
+
+    expect(COMPOUND_PROFILE_FAMILY.has(resolveProgrammingProfile(seatedCalfRaise).id)).toBe(false);
+    expect(COMPOUND_PROFILE_FAMILY.has(resolveProgrammingProfile(legPressCalfRaise).id)).toBe(false);
+  });
+
+  // §14: run the audit across the complete exercise database, not just
+  // the two calf records that motivated the fix — a permanent regression
+  // guard against a future profile rule reintroducing the same class of
+  // contradiction.
+  it('every exercise in the database classifies into a profile family consistent with its own exercise_type', () => {
+    for (const exercise of exercises) {
+      const profileId = resolveProgrammingProfile(exercise).id;
+      const isCompoundProfile = COMPOUND_PROFILE_FAMILY.has(profileId);
+      if (exercise.exercise_type === 'compound') {
+        expect(isCompoundProfile, `${exercise.id} is compound but classified as ${profileId}`).toBe(true);
+      } else {
+        expect(isCompoundProfile, `${exercise.id} is isolation but classified as ${profileId}`).toBe(false);
+      }
+    }
   });
 });
 

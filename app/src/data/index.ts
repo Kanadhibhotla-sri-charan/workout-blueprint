@@ -7,12 +7,14 @@ import generatedProgramming from './programming.generated.json';
 // scripts/generate-data.mjs from the canonical YAML (see app/README.md
 // "Data"). Neither exists until that script has run once — "npm run dev"/
 // "npm run build" do this automatically via the predev/prebuild hooks.
-export const exercises: Exercise[] = generated as Exercise[];
-// JSON's array literals infer as e.g. number[] rather than the tuple types
-// [number, number] the ranges in ProgrammingData use, so a direct cast
-// isn't structurally valid — routing through `unknown` is the standard,
-// deliberate way to assert "this generated JSON matches the hand-written
-// type," same reasoning as any build-time-generated-data cast.
+// Routing through `unknown` is the standard, deliberate way to assert
+// "this generated JSON matches the hand-written type" for build-time-
+// generated data — TS's structural-overlap check on a direct cast gets
+// unreliable once enough fields are sparse/optional across records (e.g.
+// aesthetic_characteristics, Phase 4C, present on only some records),
+// same reasoning `programming` below already relied on for its tuple
+// types.
+export const exercises: Exercise[] = generated as unknown as Exercise[];
 export const programming: ProgrammingData = generatedProgramming as unknown as ProgrammingData;
 
 export function getExerciseById(id: string): Exercise | undefined {

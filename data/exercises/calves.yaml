@@ -107,6 +107,7 @@
   primary_targets: [soleus]
   secondary_targets: [gastrocnemius (less than a straight-knee raise)]
   physique_targets: [soleus]
+  aesthetic_characteristics: [bent-knee]
   movement_patterns: [ankle plantarflexion, knee bent]
   equipment: [machine]
   exercise_type: isolation

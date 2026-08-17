@@ -177,12 +177,24 @@ profiles:
       adjust based on how it actually feels to load and control.
 
 classification:
+  # Phase 4C §13's canonical rule: exercise_type gates the primary
+  # profile family FIRST; coverage_categories only refine within it,
+  # never override it. Before Phase 4C, the two compound-profile rules
+  # below matched on coverage_categories_any alone with no exercise_type
+  # check, so an isolation exercise carrying a heavy-compound/stable-
+  # compound coverage tag (a real case: seated-calf-raise and leg-press-
+  # calf-raise both carry `stable-compound` despite being isolation
+  # movements) would be misclassified into a compound programming
+  # profile. Audited against the full 123-exercise database (Phase 4C
+  # §14) — these were the only 2 contradictions found.
   defaults:
     - profile_id: heavy-free-weight-compound
       match:
+        exercise_type: compound
         coverage_categories_any: [heavy-compound]
     - profile_id: stable-compound
       match:
+        exercise_type: compound
         coverage_categories_any: [stable-compound]
     - profile_id: lengthened-position-isolation
       match:

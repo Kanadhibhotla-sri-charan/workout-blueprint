@@ -1,11 +1,11 @@
 import type { Exercise } from '../types/exercise';
-import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal, type TargetMatch } from './types';
+import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal, type RecommendationTrace, type TargetMatch } from './types';
 import { isEquipmentFeasible } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
 import { buildProgramming } from './programmingEngine';
-import { getFunctionalGoalById, getPhysiqueTargetById } from '../data';
+import { getAestheticOutcomeById, getFunctionalGoalById, getPhysiqueTargetById } from '../data';
 import type { FunctionalGoal, PhysiqueTarget } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
@@ -153,11 +153,36 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     );
   };
 
+  // Aesthetic-specific suitability (Phase 4C §2-4): among exercises that
+  // already train the resolved target, the ones whose aesthetic_
+  // characteristics best match the *specific selected aesthetic outcome*'s
+  // preferred_characteristics rank first — refining ranking within a
+  // target tier, never crossing tiers (that's still sortByTargetTier's
+  // job, applied after this one; stable sorts compose in significance
+  // order, least significant first — see §5, "aesthetic suitability
+  // refines ranking within the appropriate target tier"). A no-op when no
+  // aesthetic outcome was selected (Direct/Advanced mode, or an outcome
+  // with no meaningful preference) or it has no preferred_characteristics,
+  // so plain body-region/target-only selection is unaffected.
+  const resolvedAestheticOutcome = input.aestheticOutcome ? (getAestheticOutcomeById(input.aestheticOutcome) ?? null) : null;
+  const preferredCharacteristics = resolvedAestheticOutcome?.preferred_characteristics ?? [];
+  const aestheticSuitabilityScore = (exercise: Exercise): number => {
+    if (preferredCharacteristics.length === 0) return 0;
+    const characteristics = exercise.aesthetic_characteristics ?? [];
+    return preferredCharacteristics.filter((c) => characteristics.includes(c)).length;
+  };
+  const sortByAestheticSuitability = (list: Exercise[]): Exercise[] => {
+    if (preferredCharacteristics.length === 0) return list;
+    return [...list].sort((a, b) => aestheticSuitabilityScore(b) - aestheticSuitabilityScore(a));
+  };
+
   // Step 5: current-exercise overlap/complement logic, and Steps 7-8
   // (rank, explain), branched by goal.
   if (input.goal === 'replace-exercise') {
     return buildResultFromRanked(
-      sortByTargetTier(rankStructuralAlternatives(currentExercise!, candidates, input.equipmentAvailable)),
+      sortByTargetTier(
+        sortByAestheticSuitability(rankStructuralAlternatives(currentExercise!, candidates, input.equipmentAvailable))
+      ),
       (exercise) =>
         `Fills approximately the same role as ${currentExercise!.name} — same ${exercise.movement_patterns[0]} movement, same ${humanize(exercise.exercise_type)} classification.`,
       () => `${currentExercise!.name} has no substitute meeting your constraints in this region.`,
@@ -167,7 +192,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       supportingTargets,
       functionalGoal,
       primaryTargetId,
-      supportingTargetIdList
+      supportingTargetIdList,
+      preferredCharacteristics
     );
   }
 
@@ -176,7 +202,7 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       (exercise) => regionCandidates.some((candidate) => candidate.id === exercise.id)
     );
     return buildResultFromRanked(
-      sortByTargetTier(resolved),
+      sortByTargetTier(sortByAestheticSuitability(resolved)),
       (exercise) =>
         `Adds a different stimulus alongside ${currentExercise!.name} — a ${exercise.movement_patterns[0]} movement rather than ${currentExercise!.name}'s ${currentExercise!.movement_patterns[0]}.`,
       () => `No exercise complementing ${currentExercise!.name} meets your constraints in this region.`,
@@ -186,11 +212,12 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       supportingTargets,
       functionalGoal,
       primaryTargetId,
-      supportingTargetIdList
+      supportingTargetIdList,
+      preferredCharacteristics
     );
   }
 
-  const ranked = sortByTargetTier(rankByGoal(input.goal, candidates));
+  const ranked = sortByTargetTier(sortByAestheticSuitability(rankByGoal(input.goal, candidates)));
   return buildResultFromRanked(
     ranked,
     (exercise) => explainGoalPick(input.goal, exercise),
@@ -201,7 +228,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     supportingTargets,
     functionalGoal,
     primaryTargetId,
-    supportingTargetIdList
+    supportingTargetIdList,
+    preferredCharacteristics
   );
 }
 
@@ -237,6 +265,48 @@ function buildTargetProgrammingContext(
   return `${target.name} is the target driving this recommendation, though this specific pick isn't tagged to it directly yet in the taxonomy — treat the guidance below as a general starting point.`;
 }
 
+// Phase 4C §18: enough internal ranking state to answer "why did this
+// exercise rank above that one" for development/adversarial testing —
+// see RecommendationTrace's own doc comment in types.ts.
+function buildRecommendationTrace(
+  bestFit: Exercise,
+  target: PhysiqueTarget | null,
+  bestFitTargetMatch: TargetMatch,
+  preferredCharacteristics: string[],
+  aestheticScore: number,
+  profileName: string
+): RecommendationTrace {
+  const aestheticSuitability: RecommendationTrace['aestheticSuitability'] =
+    preferredCharacteristics.length === 0
+      ? 'not-applicable'
+      : aestheticScore === 0
+        ? 'none'
+        : aestheticScore === preferredCharacteristics.length
+          ? 'high'
+          : 'some';
+  const targetMatchLabel =
+    bestFitTargetMatch === 'primary'
+      ? 'direct primary-target match'
+      : bestFitTargetMatch === 'supporting'
+        ? 'supporting-target match'
+        : 'general regional match';
+  const suitabilityLabel =
+    aestheticSuitability === 'not-applicable'
+      ? null
+      : aestheticSuitability === 'none'
+        ? null
+        : `${aestheticSuitability} aesthetic suitability`;
+  return {
+    exerciseName: bestFit.name,
+    targetName: target?.name ?? null,
+    targetMatch: bestFitTargetMatch,
+    aestheticSuitability,
+    programmingProfile: profileName,
+    fatigueCost: bestFit.fatigue_cost,
+    finalReason: [targetMatchLabel, suitabilityLabel].filter(Boolean).join(' + '),
+  };
+}
+
 function buildResultFromRanked(
   ranked: Exercise[],
   explainBest: (exercise: Exercise) => string,
@@ -247,7 +317,8 @@ function buildResultFromRanked(
   supportingTargets: PhysiqueTarget[],
   functionalGoal: FunctionalGoal | null,
   primaryTargetId: string | null,
-  supportingTargetIds: string[]
+  supportingTargetIds: string[],
+  preferredCharacteristics: string[]
 ): DecisionResult {
   const [bestFit, alt] = ranked;
   if (!bestFit) {
@@ -263,6 +334,10 @@ function buildResultFromRanked(
   const bestFitTargetMatchTier = targetMatchTier(bestFit, primaryTargetId, supportingTargetIds);
   const bestFitTargetMatch: TargetMatch =
     bestFitTargetMatchTier === 0 ? 'primary' : bestFitTargetMatchTier === 1 ? 'supporting' : 'general';
+  const bestFitAestheticScore = preferredCharacteristics.filter((c) =>
+    (bestFit.aesthetic_characteristics ?? []).includes(c)
+  ).length;
+  const programming = buildProgramming(bestFit, input.maxFatigueCost);
   return {
     status: 'ok',
     target: target,
@@ -273,10 +348,18 @@ function buildResultFromRanked(
     functionalGoal,
     bestFitTargetMatch,
     targetProgrammingContext: buildTargetProgrammingContext(target, supportingTargets, bestFitTargetMatch, bestFit),
+    bestFitTrace: buildRecommendationTrace(
+      bestFit,
+      target,
+      bestFitTargetMatch,
+      preferredCharacteristics,
+      bestFitAestheticScore,
+      programming.profile.name
+    ),
     bestFit,
     why: explainBest(bestFit),
     stimulus: bestFit.resistance_profile,
-    programming: buildProgramming(bestFit, input.maxFatigueCost),
+    programming,
     alternative: alt ?? null,
     alternativeWhy: alt ? `A close second under the same constraints: ${explainBest(alt)}` : null,
     watchOut: buildWatchOut(bestFit),

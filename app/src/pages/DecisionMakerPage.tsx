@@ -176,6 +176,7 @@ export function DecisionMakerPage() {
       bodyRegion,
       physiqueTarget: physiqueTarget || null,
       supportingPhysiqueTargets: supportingPhysiqueTargets.length > 0 ? supportingPhysiqueTargets : null,
+      aestheticOutcome: aestheticOutcomeId || null,
       functionalGoal: functionalGoalId || null,
       goal,
       equipmentAvailable: restrictEquipment ? equipmentAvailable : null,
@@ -707,6 +708,33 @@ function DecisionResultView({
           </ul>
         </div>
       )}
+
+      {/* Phase 4C §18: a development/debug ranking trace, collapsed by
+          default — not the primary user-facing explanation, but available
+          for adversarial testing of ranking behavior without re-deriving
+          it by hand. */}
+      <details className="decision-result-trace">
+        <summary>Debug: ranking trace</summary>
+        <dl className="demand-grid">
+          <div>
+            <dt>Target match</dt>
+            <dd>{result.bestFitTrace.targetMatch}</dd>
+          </div>
+          <div>
+            <dt>Aesthetic suitability</dt>
+            <dd>{result.bestFitTrace.aestheticSuitability}</dd>
+          </div>
+          <div>
+            <dt>Programming profile</dt>
+            <dd>{result.bestFitTrace.programmingProfile}</dd>
+          </div>
+          <div>
+            <dt>Fatigue cost</dt>
+            <dd>{result.bestFitTrace.fatigueCost}</dd>
+          </div>
+        </dl>
+        <p className="field-hint">Final reason: {result.bestFitTrace.finalReason}</p>
+      </details>
     </div>
   );
 }

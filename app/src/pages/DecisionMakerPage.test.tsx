@@ -519,4 +519,30 @@ describe('DecisionMakerPage', () => {
       expect(intensityBlock?.textContent?.length).toBeGreaterThan('Intensity technique'.length);
     });
   });
+
+  // Phase 4C §6 permanent negative test, run through the real UI. Before
+  // Phase 4C, "Lower calf near the ankle looks thin" recommended Leg-Press
+  // Calf Raise (self-described in its own summary as being "for
+  // accumulating extra volume rather than being a primary growth driver")
+  // over Seated Calf Raise (self-described as "a soleus-specific
+  // stimulus") on pure alphabetical accident.
+  it('Phase 4C golden slice: "Lower calf near the ankle looks thin" recommends the soleus-specific Seated Calf Raise, not the generic Leg-Press Calf Raise', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'calves');
+    await user.selectOptions(screen.getByLabelText(/how do you want it to look/i), 'calf-lower-fullness');
+    await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    await screen.findByRole('heading', { name: /what you're trying to change/i });
+    const targetBlock = document.querySelector('.decision-result-target');
+    expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Soleus');
+
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink?.textContent).toBe('Seated Calf Raise');
+
+    const whyBlock = document.querySelector('.decision-result-why');
+    expect(whyBlock?.textContent).toMatch(/✓ Direct match/);
+  });
 });

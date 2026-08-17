@@ -58,6 +58,9 @@ outcomes:
       also contributes to side-view depth and is worth developing
       alongside it — the mid-chest mainly adds front-on width and
       thickness rather than side-view depth.
+    preferred_characteristics:
+      - lengthened-biased
+      - high-loadable
     anatomical_targets:
       - pectoralis major, clavicular (upper) head
       - pectoralis major, costal (lower) head
@@ -149,6 +152,8 @@ outcomes:
       driver of this outcome. A filled-in upper-chest shelf also adds
       to the overall front-on impression of width, without being the
       primary driver the way it is for side-view projection.
+    preferred_characteristics:
+      - high-loadable
     anatomical_targets:
       - pectoralis major, sternocostal (mid) head
       - pectoralis major, clavicular (upper) head
@@ -262,6 +267,8 @@ outcomes:
       (pull-up/pulldown) movements, is the primary driver of back
       width and the V-taper look. This is an outline/silhouette
       characteristic, distinct from back thickness (depth).
+    preferred_characteristics:
+      - vertical-pull
     anatomical_targets:
       - latissimus dorsi
     common_user_phrasings:
@@ -284,6 +291,8 @@ outcomes:
       trapezius — trained primarily through horizontal-pull (row)
       movements. It's a distinct characteristic from lat width: about
       the back's depth and definition, not its outline.
+    preferred_characteristics:
+      - horizontal-pull
     anatomical_targets:
       - rhomboids
       - trapezius, mid and lower fibers
@@ -458,6 +467,8 @@ outcomes:
       movements — squats, presses, lunges, and leg-extension work —
       are the primary size driver for the front of the thigh and the
       whole leg.
+    preferred_characteristics:
+      - high-loadable
     anatomical_targets:
       - quadriceps femoris
     common_user_phrasings:
@@ -577,6 +588,8 @@ outcomes:
       ankle plantarflexion, fills out this specific lower portion of
       the calf's profile — often the part that stays thin even once
       the upper calf has already grown.
+    preferred_characteristics:
+      - bent-knee
     anatomical_targets:
       - soleus
     common_user_phrasings:

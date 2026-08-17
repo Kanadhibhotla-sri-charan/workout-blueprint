@@ -21,6 +21,12 @@ export interface Exercise {
   physique_targets: string[] | null;
   /** Canonical goal ids resolving against data/programming/functional-goals.yaml — the Function branch's counterpart to physique_targets. */
   functional_goals: string[] | null;
+  /**
+   * Small, closed vocabulary of movement-mechanics traits (Phase 4C §2) —
+   * distinguishes "trains the target" (physique_targets) from "especially
+   * suited to a specific aesthetic outcome." See SCHEMA.md.
+   */
+  aesthetic_characteristics: string[] | null;
   movement_patterns: string[];
   equipment: string[];
   exercise_type: ExerciseType;

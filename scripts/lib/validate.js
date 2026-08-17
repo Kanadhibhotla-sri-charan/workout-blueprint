@@ -10,6 +10,7 @@ const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
   REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
+  AESTHETIC_CHARACTERISTICS,
 } = require('./taxonomy');
 const { loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals } = require('./load-programming');
 
@@ -132,6 +133,21 @@ function validate(records) {
         }
       }
     }
+
+    // preferred_characteristics (Phase 4C §3) is optional — most outcomes
+    // don't need it, since their physique_targets already narrow the pool
+    // enough. When present, every value must be in the controlled
+    // aesthetic-characteristics vocabulary.
+    const preferredCharacteristics = outcome && outcome.preferred_characteristics;
+    if (!isListOrNull(preferredCharacteristics)) {
+      reportOutcome(`"preferred_characteristics" must be a list, or absent/null, got ${JSON.stringify(preferredCharacteristics)}`);
+    } else if (Array.isArray(preferredCharacteristics)) {
+      for (const characteristic of preferredCharacteristics) {
+        if (typeof characteristic !== 'string' || !AESTHETIC_CHARACTERISTICS.has(characteristic)) {
+          reportOutcome(`"preferred_characteristics" contains unrecognized value ${JSON.stringify(characteristic)} — not in the controlled set (Phase 4C)`);
+        }
+      }
+    }
   });
 
   const allIds = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
@@ -245,6 +261,13 @@ function validate(records) {
       for (const v of record.coverage_categories) {
         if (!COVERAGE_CATEGORIES.has(v)) {
           report(record, 'taxonomy', `"coverage_categories" contains unrecognized value "${v}" — not in the controlled set`);
+        }
+      }
+    }
+    if (Array.isArray(record.aesthetic_characteristics)) {
+      for (const v of record.aesthetic_characteristics) {
+        if (!AESTHETIC_CHARACTERISTICS.has(v)) {
+          report(record, 'taxonomy', `"aesthetic_characteristics" contains unrecognized value "${v}" — not in the controlled set (Phase 4C)`);
         }
       }
     }

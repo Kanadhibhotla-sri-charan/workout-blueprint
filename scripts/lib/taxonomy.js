@@ -23,6 +23,18 @@ const COVERAGE_CATEGORIES = new Set([
 
 const REVIEW_STATUSES = new Set(['draft', 'needs-review', 'reviewed']);
 
+// Aesthetic-specific exercise characteristics (Phase 4C §2) — a small,
+// deterministic vocabulary of movement-mechanics traits that distinguish
+// "this exercise trains the target" (physique_targets) from "this
+// exercise is especially suited to a specific visual problem." Kept
+// intentionally small per §2's "only retain characteristics that
+// materially help distinguish suitability" — each value here exists
+// because a real aesthetic-outcome preference (aesthetic-outcomes.yaml's
+// preferred_characteristics) needs it, not speculatively.
+const AESTHETIC_CHARACTERISTICS = new Set([
+  'bent-knee', 'vertical-pull', 'horizontal-pull', 'high-loadable', 'lengthened-biased',
+]);
+
 // The first item of movement_patterns must be one of these fundamental
 // patterns (Phase 1 taxonomy normalization). Subsequent items are
 // free-form modifiers and are not validated against a closed list —
@@ -56,6 +68,7 @@ const OPTIONAL_LIST_FIELDS = [
   'secondary_targets', 'less_suitable_when', 'advantages', 'technique_cues',
   'common_mistakes', 'programming_notes', 'alternatives', 'complements',
   'overlaps_with', 'evidence_notes', 'physique_targets', 'functional_goals',
+  'aesthetic_characteristics',
 ];
 
 const REQUIRED_SCALAR_STRING_FIELDS = [
@@ -69,7 +82,7 @@ const ALL_FIELDS = new Set([
   'setup_time', 'fatigue_cost', 'best_used_when', 'less_suitable_when', 'mirror_effect',
   'advantages', 'limitations', 'technique_cues', 'common_mistakes', 'programming_notes',
   'alternatives', 'complements', 'overlaps_with', 'evidence_notes', 'review_status',
-  'physique_targets', 'functional_goals',
+  'physique_targets', 'functional_goals', 'aesthetic_characteristics',
 ]);
 
 module.exports = {
@@ -79,6 +92,7 @@ module.exports = {
   DEMAND_LEVELS,
   COVERAGE_CATEGORIES,
   REVIEW_STATUSES,
+  AESTHETIC_CHARACTERISTICS,
   FUNDAMENTAL_MOVEMENT_PATTERNS,
   REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS,

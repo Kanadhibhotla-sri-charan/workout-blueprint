@@ -15,6 +15,7 @@
   primary_targets: [quads, glutes]
   secondary_targets: [adductors, erectors, trunk musculature]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [squat / knee-dominant]
   equipment: [barbell, rack]
   exercise_type: compound
@@ -72,6 +73,7 @@
   primary_targets: [quads, glutes]
   secondary_targets: [adductors]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [squat / knee-dominant]
   equipment: [smith machine]
   exercise_type: compound
@@ -127,6 +129,7 @@
   primary_targets: [quads]
   secondary_targets: [glutes, trunk musculature]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [squat / knee-dominant]
   equipment: [barbell, rack]
   exercise_type: compound
@@ -183,6 +186,7 @@
   primary_targets: [quads, adductors]
   secondary_targets: [glutes]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [squat / knee-dominant, wide stance]
   equipment: [barbell]
   exercise_type: compound
@@ -241,6 +245,7 @@
   primary_targets: [quads, adductors]
   secondary_targets: [glutes, hamstrings, spinal erectors, lats, traps, grip]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [hip hinge, wide stance]
   equipment: [barbell]
   exercise_type: compound
@@ -299,6 +304,7 @@
   primary_targets: [quads]
   secondary_targets: [glutes]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [squat / knee-dominant]
   equipment: [machine]
   exercise_type: compound
@@ -354,6 +360,7 @@
   primary_targets: [quads, glutes]
   secondary_targets: [adductors]
   physique_targets: [quads]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [knee- and hip-dominant press]
   equipment: [machine]
   exercise_type: compound

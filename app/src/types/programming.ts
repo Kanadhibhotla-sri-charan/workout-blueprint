@@ -117,6 +117,13 @@ export interface AestheticOutcome {
   technical_explanation?: string;
   anatomical_targets?: string[];
   common_user_phrasings?: string[];
+  /**
+   * Exercise aesthetic_characteristics this outcome is especially well
+   * served by (Phase 4C §3) — refines ranking within a target tier, never
+   * overrides it. Absent/empty for most outcomes, whose physique_targets
+   * already narrow the candidate pool enough on their own.
+   */
+  preferred_characteristics?: string[];
 }
 
 export interface FunctionalGoal {

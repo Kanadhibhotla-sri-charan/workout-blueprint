@@ -620,3 +620,19 @@ select {
   font-size: 1.1rem;
   margin-bottom: var(--space-2);
 }
+
+.decision-result-trace {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.decision-result-trace summary {
+  cursor: pointer;
+  min-height: var(--touch-target);
+  display: flex;
+  align-items: center;
+}
+
+.decision-result-trace .demand-grid {
+  margin-top: var(--space-2);
+}

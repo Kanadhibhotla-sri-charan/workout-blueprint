@@ -30,6 +30,7 @@
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [upper-pec]
+  aesthetic_characteristics: [high-loadable, lengthened-biased]
   movement_patterns: [incline horizontal press]
   equipment: [dumbbell, bench]
   exercise_type: compound
@@ -107,6 +108,7 @@
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [upper-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [incline horizontal press]
   equipment: [barbell, bench, rack]
   exercise_type: compound
@@ -169,6 +171,7 @@
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [upper-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [incline horizontal press]
   equipment: [machine]
   exercise_type: compound
@@ -231,6 +234,7 @@
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [upper-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [incline horizontal press]
   equipment: [smith machine, bench]
   exercise_type: compound
@@ -290,6 +294,7 @@
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [upper-pec]
+  aesthetic_characteristics: [lengthened-biased]
   movement_patterns: [incline horizontal press]
   equipment: [cable]
   exercise_type: compound
@@ -351,6 +356,7 @@
     - chest (commonly cited as mid/sternal-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [mid-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [horizontal press]
   equipment: [barbell, bench, rack]
   exercise_type: compound
@@ -426,6 +432,7 @@
     - chest (commonly cited as mid/sternal-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [mid-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [horizontal press]
   equipment: [smith machine, bench]
   exercise_type: compound
@@ -484,6 +491,7 @@
     - chest (commonly cited as mid/sternal-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [mid-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [horizontal press]
   equipment: [dumbbell, bench]
   exercise_type: compound
@@ -546,6 +554,7 @@
     - chest (commonly cited as mid/sternal-biased)
   secondary_targets: [anterior deltoids, triceps]
   physique_targets: [mid-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [horizontal press]
   equipment: [machine]
   exercise_type: compound
@@ -817,6 +826,7 @@
     - chest (commonly cited as upper/clavicular-biased)
   secondary_targets: [anterior deltoids]
   physique_targets: [upper-pec]
+  aesthetic_characteristics: [lengthened-biased]
   movement_patterns: [shoulder horizontal adduction on an incline]
   equipment: [dumbbell, bench]
   exercise_type: isolation
@@ -1152,6 +1162,7 @@
     - chest (commonly cited as lower/costal-biased)
   secondary_targets: [triceps, anterior deltoids]
   physique_targets: [lower-pec]
+  aesthetic_characteristics: [high-loadable, lengthened-biased]
   movement_patterns: [horizontal-to-vertical press]
   equipment: [dip bars, bodyweight]
   exercise_type: compound
@@ -1216,6 +1227,7 @@
     - chest (commonly cited as mid-biased, similar to a flat press)
   secondary_targets: [anterior deltoids, triceps, trunk musculature]
   physique_targets: [mid-pec]
+  aesthetic_characteristics: [high-loadable]
   movement_patterns: [horizontal press]
   equipment: [bodyweight]
   exercise_type: compound

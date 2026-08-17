@@ -23,6 +23,7 @@
   primary_targets: [lats]
   secondary_targets: [mid-back, trunk musculature, elbow flexors (less than chin-up)]
   physique_targets: [lat-width]
+  aesthetic_characteristics: [vertical-pull]
   movement_patterns: [vertical pull, pronated grip]
   equipment: [pull-up bar, bodyweight]
   exercise_type: compound
@@ -79,6 +80,7 @@
   primary_targets: [lats, elbow flexors]
   secondary_targets: [mid-back, trunk musculature]
   physique_targets: [lat-width]
+  aesthetic_characteristics: [vertical-pull]
   movement_patterns: [vertical pull, supinated grip]
   equipment: [pull-up bar, bodyweight]
   exercise_type: compound
@@ -135,6 +137,7 @@
   primary_targets: [lats]
   secondary_targets: [mid-back, elbow flexors (less than supinated grip)]
   physique_targets: [lat-width]
+  aesthetic_characteristics: [vertical-pull]
   movement_patterns: [vertical pull, pronated grip]
   equipment: [cable]
   exercise_type: compound
@@ -194,6 +197,7 @@
   primary_targets: [lats, elbow flexors]
   secondary_targets: [mid-back]
   physique_targets: [lat-width]
+  aesthetic_characteristics: [vertical-pull]
   movement_patterns: [vertical pull, supinated grip]
   equipment: [cable]
   exercise_type: compound
@@ -248,6 +252,7 @@
   primary_targets: [lats]
   secondary_targets: [mid-back, elbow flexors (between pronated and supinated)]
   physique_targets: [lat-width]
+  aesthetic_characteristics: [vertical-pull]
   movement_patterns: [vertical pull, neutral grip]
   equipment: [cable]
   exercise_type: compound
@@ -302,6 +307,7 @@
   primary_targets: [mid-back, rhomboids, mid/lower trapezius]
   secondary_targets: [lats, elbow flexors]
   physique_targets: [back-thickness]
+  aesthetic_characteristics: [horizontal-pull]
   movement_patterns: [horizontal pull]
   equipment: [machine, bench]
   exercise_type: compound
@@ -364,6 +370,7 @@
   primary_targets: [mid-back, rhomboids]
   secondary_targets: [lats, elbow flexors, spinal erectors]
   physique_targets: [back-thickness]
+  aesthetic_characteristics: [horizontal-pull]
   movement_patterns: [horizontal pull, pronated grip]
   equipment: [barbell]
   exercise_type: compound
@@ -421,6 +428,7 @@
   primary_targets: [lats, elbow flexors]
   secondary_targets: [mid-back, spinal erectors]
   physique_targets: [lat-width]
+  aesthetic_characteristics: [horizontal-pull]
   movement_patterns: [horizontal pull, supinated grip]
   equipment: [barbell]
   exercise_type: compound
@@ -472,6 +480,7 @@
   primary_targets: [mid-back, rhomboids, lats]
   secondary_targets: [elbow flexors]
   physique_targets: [lat-width, back-thickness]
+  aesthetic_characteristics: [horizontal-pull]
   movement_patterns: [horizontal pull]
   equipment: [cable]
   exercise_type: compound
@@ -526,6 +535,7 @@
   primary_targets: [mid-back, lats]
   secondary_targets: [spinal erectors, elbow flexors]
   physique_targets: [lat-width, back-thickness]
+  aesthetic_characteristics: [horizontal-pull]
   movement_patterns: [horizontal pull]
   equipment: [t-bar, landmine]
   exercise_type: compound
@@ -701,6 +711,7 @@
   primary_targets: [lats, mid-back]
   secondary_targets: [elbow flexors, trunk musculature]
   physique_targets: [lat-width, back-thickness]
+  aesthetic_characteristics: [horizontal-pull]
   movement_patterns: [horizontal pull]
   equipment: [dumbbell, bench]
   exercise_type: compound

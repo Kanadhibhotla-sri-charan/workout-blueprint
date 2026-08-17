@@ -55,6 +55,28 @@ export const GOALS_REQUIRING_CURRENT_EXERCISE: Goal[] = [
 // was in play at all).
 export type TargetMatch = 'primary' | 'supporting' | 'general';
 
+// Recommendation trace (Phase 4C §18) — enough internal ranking state to
+// answer "why did this exercise rank above that one" for development/
+// adversarial testing. Not meant to be the primary user-facing
+// explanation (that's `why`/`targetProgrammingContext`/etc.) — a compact,
+// inspectable summary of the ranking inputs that actually decided the
+// pick, so a future regression can be diagnosed without re-deriving them
+// by hand.
+export interface RecommendationTrace {
+  exerciseName: string;
+  targetName: string | null;
+  targetMatch: TargetMatch;
+  /**
+   * 'not-applicable' when no aesthetic outcome with preferred_characteristics
+   * was in play; otherwise how many of the outcome's preferred
+   * characteristics this exercise actually matches.
+   */
+  aestheticSuitability: 'not-applicable' | 'none' | 'some' | 'high';
+  programmingProfile: string;
+  fatigueCost: string;
+  finalReason: string;
+}
+
 export interface DecisionInput {
   bodyRegion: string;
   /**
@@ -76,6 +98,17 @@ export interface DecisionInput {
    * target — see decisionEngine.ts Step 1.
    */
   supportingPhysiqueTargets: string[] | null;
+  /**
+   * Optional aesthetic outcome id (Phase 4C §2-4), e.g. "calf-lower-
+   * fullness" — the specific visual problem `physiqueTarget` was resolved
+   * from, when it was resolved from one (the Appearance entry point sets
+   * this; the Direct/Advanced picker never does, since it selects a
+   * target directly with no outcome behind it). Only consulted to look up
+   * the outcome's own `preferred_characteristics`, refining ranking
+   * *within* the target tier `physiqueTarget`/`supportingPhysiqueTargets`
+   * already establish — never a second target-selection mechanism.
+   */
+  aestheticOutcome: string | null;
   /**
    * Optional functional goal (revised Phase 4 spec §12/§39), e.g.
    * "rotator-cuff" — the Function branch's counterpart to physiqueTarget,
@@ -134,6 +167,8 @@ export type DecisionResult =
        * there's no target-priority relationship to describe.
        */
       targetProgrammingContext: string | null;
+      /** Development/debug ranking trace for bestFit (Phase 4C §18) — not the primary user-facing explanation. */
+      bestFitTrace: RecommendationTrace;
       bestFit: Exercise;
       why: string;
       /** Why the movement itself is mechanically relevant — the exercise's own resistance_profile. */
