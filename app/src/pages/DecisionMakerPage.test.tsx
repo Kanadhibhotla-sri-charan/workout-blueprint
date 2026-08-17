@@ -545,4 +545,28 @@ describe('DecisionMakerPage', () => {
     const whyBlock = document.querySelector('.decision-result-why');
     expect(whyBlock?.textContent).toMatch(/✓ Direct match/);
   });
+
+  // Phase 4C Final Correction §12 permanent negative test, run through the
+  // real UI. Before this correction, "Calves look thin / no shape"
+  // recommended Leg Press Calf Raise (a stable-compound coverage tag) over
+  // Standing Calf Raise, even though the outcome's own knowledge base
+  // already establishes Standing Calf Raise as the primary width/shape
+  // tool — an explicit Aesthetic Exercise Role the generic stimulus
+  // ranking couldn't see.
+  it('Phase 4C Final Correction golden slice: "Calves look thin / no shape" recommends Standing Calf Raise, not the generic Leg Press Calf Raise', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'calves');
+    await user.selectOptions(screen.getByLabelText(/how do you want it to look/i), 'calf-width-shape');
+    await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    await screen.findByRole('heading', { name: /what you're trying to change/i });
+    const targetBlock = document.querySelector('.decision-result-target');
+    expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Gastrocnemius');
+
+    const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
+    expect(bestFitLink?.textContent).toBe('Standing Calf Raise');
+  });
 });

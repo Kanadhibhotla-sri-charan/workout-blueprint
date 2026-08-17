@@ -10,7 +10,7 @@ const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
   REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
-  AESTHETIC_CHARACTERISTICS,
+  AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
 } = require('./taxonomy');
 const { loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals } = require('./load-programming');
 
@@ -84,6 +84,11 @@ function validate(records) {
     });
   }
 
+  // Needed early by exercise_roles referential-integrity checks below —
+  // computed here rather than reusing the `allIds` set further down,
+  // which is built after this loop runs.
+  const exerciseIdSet = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
+
   // --- Aesthetic outcomes: required fields + primary_targets/
   // supporting_targets referential integrity (§28-29 of the revised Phase
   // 4 spec; primary/supporting split per Phase 4 Corrections §7). Not tied
@@ -145,6 +150,46 @@ function validate(records) {
       for (const characteristic of preferredCharacteristics) {
         if (typeof characteristic !== 'string' || !AESTHETIC_CHARACTERISTICS.has(characteristic)) {
           reportOutcome(`"preferred_characteristics" contains unrecognized value ${JSON.stringify(characteristic)} — not in the controlled set (Phase 4C)`);
+        }
+      }
+    }
+
+    // exercise_roles (Phase 4C Final Correction §6) — optional, contextual
+    // to this outcome only (never a global exercise property). Present on
+    // very few outcomes by design (§7/§24: only where a real ranking
+    // distinction was found, never an exhaustive matrix). Every id must
+    // resolve to a real exercise, and the same exercise must not appear
+    // under more than one role for the same outcome.
+    const exerciseRoles = outcome && outcome.exercise_roles;
+    if (exerciseRoles !== undefined && exerciseRoles !== null) {
+      if (typeof exerciseRoles !== 'object' || Array.isArray(exerciseRoles)) {
+        reportOutcome(`"exercise_roles" must be an object keyed by role, or absent/null, got ${JSON.stringify(exerciseRoles)}`);
+      } else {
+        const seenExerciseIds = new Map();
+        for (const role of AESTHETIC_ROLES) {
+          const idsForRole = exerciseRoles[role];
+          if (idsForRole === undefined || idsForRole === null) continue;
+          if (!Array.isArray(idsForRole)) {
+            reportOutcome(`"exercise_roles.${role}" must be a list, or absent/null, got ${JSON.stringify(idsForRole)}`);
+            continue;
+          }
+          for (const exerciseId of idsForRole) {
+            if (typeof exerciseId !== 'string' || !exerciseIdSet.has(exerciseId)) {
+              reportOutcome(`"exercise_roles.${role}" references unknown exercise id ${JSON.stringify(exerciseId)}`);
+              continue;
+            }
+            const priorRole = seenExerciseIds.get(exerciseId);
+            if (priorRole) {
+              reportOutcome(`"exercise_roles" lists ${JSON.stringify(exerciseId)} under both "${priorRole}" and "${role}" — an exercise should have only one role per outcome`);
+            } else {
+              seenExerciseIds.set(exerciseId, role);
+            }
+          }
+        }
+        for (const key of Object.keys(exerciseRoles)) {
+          if (!AESTHETIC_ROLES.includes(key)) {
+            reportOutcome(`"exercise_roles" has unrecognized role key ${JSON.stringify(key)} — must be one of ${AESTHETIC_ROLES.join('|')}`);
+          }
         }
       }
     }

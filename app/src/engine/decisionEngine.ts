@@ -6,7 +6,7 @@ import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
 import { buildProgramming } from './programmingEngine';
 import { getAestheticOutcomeById, getFunctionalGoalById, getPhysiqueTargetById } from '../data';
-import type { FunctionalGoal, PhysiqueTarget } from '../types/programming';
+import type { AestheticOutcome, FunctionalGoal, PhysiqueTarget } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 
@@ -176,12 +176,34 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     return [...list].sort((a, b) => aestheticSuitabilityScore(b) - aestheticSuitabilityScore(a));
   };
 
+  // Aesthetic Exercise Role (Phase 4C Final Correction §4-11): an explicit,
+  // outcome-contextual role — PRIMARY/DIRECT/SECONDARY/SUPPORTING/
+  // UNSPECIFIED — that takes precedence over the generic-stimulus/
+  // characteristics-based suitability ranking above, within the same
+  // target tier (§10). Composed as yet another stable sort, applied after
+  // sortByAestheticSuitability but before sortByTargetTier — same
+  // significance-ordering technique already used for that layer, so
+  // target tier still dominates everything (§9) and an explicit role
+  // still can't cross tiers. A no-op when no aesthetic outcome resolved or
+  // it defines no exercise_roles — UNSPECIFIED exercises (the common case)
+  // fall through to whatever sortByAestheticSuitability already ordered
+  // them by (§11).
+  const sortByAestheticRole = (list: Exercise[]): Exercise[] => {
+    if (!resolvedAestheticOutcome?.exercise_roles) return list;
+    return [...list].sort(
+      (a, b) =>
+        aestheticRoleTier(a, resolvedAestheticOutcome) - aestheticRoleTier(b, resolvedAestheticOutcome)
+    );
+  };
+
   // Step 5: current-exercise overlap/complement logic, and Steps 7-8
   // (rank, explain), branched by goal.
   if (input.goal === 'replace-exercise') {
     return buildResultFromRanked(
       sortByTargetTier(
-        sortByAestheticSuitability(rankStructuralAlternatives(currentExercise!, candidates, input.equipmentAvailable))
+        sortByAestheticRole(
+          sortByAestheticSuitability(rankStructuralAlternatives(currentExercise!, candidates, input.equipmentAvailable))
+        )
       ),
       (exercise) =>
         `Fills approximately the same role as ${currentExercise!.name} — same ${exercise.movement_patterns[0]} movement, same ${humanize(exercise.exercise_type)} classification.`,
@@ -193,7 +215,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       functionalGoal,
       primaryTargetId,
       supportingTargetIdList,
-      preferredCharacteristics
+      preferredCharacteristics,
+      resolvedAestheticOutcome
     );
   }
 
@@ -202,7 +225,7 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       (exercise) => regionCandidates.some((candidate) => candidate.id === exercise.id)
     );
     return buildResultFromRanked(
-      sortByTargetTier(sortByAestheticSuitability(resolved)),
+      sortByTargetTier(sortByAestheticRole(sortByAestheticSuitability(resolved))),
       (exercise) =>
         `Adds a different stimulus alongside ${currentExercise!.name} — a ${exercise.movement_patterns[0]} movement rather than ${currentExercise!.name}'s ${currentExercise!.movement_patterns[0]}.`,
       () => `No exercise complementing ${currentExercise!.name} meets your constraints in this region.`,
@@ -213,11 +236,12 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
       functionalGoal,
       primaryTargetId,
       supportingTargetIdList,
-      preferredCharacteristics
+      preferredCharacteristics,
+      resolvedAestheticOutcome
     );
   }
 
-  const ranked = sortByTargetTier(sortByAestheticSuitability(rankByGoal(input.goal, candidates)));
+  const ranked = sortByTargetTier(sortByAestheticRole(sortByAestheticSuitability(rankByGoal(input.goal, candidates))));
   return buildResultFromRanked(
     ranked,
     (exercise) => explainGoalPick(input.goal, exercise),
@@ -229,7 +253,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     functionalGoal,
     primaryTargetId,
     supportingTargetIdList,
-    preferredCharacteristics
+    preferredCharacteristics,
+    resolvedAestheticOutcome
   );
 }
 
@@ -241,6 +266,31 @@ function targetMatchTier(exercise: Exercise, primaryTargetId: string | null, sup
   if (supportingTargetIds.some((id) => exercise.physique_targets?.includes(id))) return 1;
   return 2;
 }
+
+// Aesthetic Exercise Role (Phase 4C Final Correction §4-8): lexicographic
+// rank — 0 primary, 1 direct, 2 secondary, 3 supporting, 4 unspecified
+// (no explicit role for this exercise on this outcome, or no outcome/
+// exercise_roles at all). Deliberately ordinal, not a weighted score
+// (§23) — the numbers are internal implementation constants representing
+// the exact PRIMARY > DIRECT > SECONDARY > SUPPORTING > UNSPECIFIED
+// hierarchy, nothing else.
+function aestheticRoleTier(exercise: Exercise, outcome: AestheticOutcome | null): 0 | 1 | 2 | 3 | 4 {
+  const roles = outcome?.exercise_roles;
+  if (!roles) return 4;
+  if (roles.primary?.includes(exercise.id)) return 0;
+  if (roles.direct?.includes(exercise.id)) return 1;
+  if (roles.secondary?.includes(exercise.id)) return 2;
+  if (roles.supporting?.includes(exercise.id)) return 3;
+  return 4;
+}
+
+const AESTHETIC_ROLE_LABELS: Record<0 | 1 | 2 | 3 | 4, RecommendationTrace['aestheticRole']> = {
+  0: 'primary',
+  1: 'direct',
+  2: 'secondary',
+  3: 'supporting',
+  4: 'unspecified',
+};
 
 // Phase 4B §12: a short note on how bestFit's role relative to `target`
 // should shape how it's programmed. Deterministic text keyed off
@@ -274,6 +324,7 @@ function buildRecommendationTrace(
   bestFitTargetMatch: TargetMatch,
   preferredCharacteristics: string[],
   aestheticScore: number,
+  aestheticRole: RecommendationTrace['aestheticRole'],
   profileName: string
 ): RecommendationTrace {
   const aestheticSuitability: RecommendationTrace['aestheticSuitability'] =
@@ -291,19 +342,23 @@ function buildRecommendationTrace(
         ? 'supporting-target match'
         : 'general regional match';
   const suitabilityLabel =
-    aestheticSuitability === 'not-applicable'
+    aestheticSuitability === 'not-applicable' || aestheticSuitability === 'none'
       ? null
-      : aestheticSuitability === 'none'
-        ? null
-        : `${aestheticSuitability} aesthetic suitability`;
+      : `${aestheticSuitability} aesthetic suitability`;
+  // Role takes precedence over generic suitability in the ranking itself
+  // (§10), so it takes precedence in the explanation too — when a role is
+  // explicit, it's the more specific reason and suitability isn't
+  // separately restated.
+  const roleLabel = aestheticRole === 'unspecified' ? null : `${aestheticRole} aesthetic role`;
   return {
     exerciseName: bestFit.name,
     targetName: target?.name ?? null,
     targetMatch: bestFitTargetMatch,
     aestheticSuitability,
+    aestheticRole,
     programmingProfile: profileName,
     fatigueCost: bestFit.fatigue_cost,
-    finalReason: [targetMatchLabel, suitabilityLabel].filter(Boolean).join(' + '),
+    finalReason: [targetMatchLabel, roleLabel ?? suitabilityLabel].filter(Boolean).join(' + '),
   };
 }
 
@@ -318,7 +373,8 @@ function buildResultFromRanked(
   functionalGoal: FunctionalGoal | null,
   primaryTargetId: string | null,
   supportingTargetIds: string[],
-  preferredCharacteristics: string[]
+  preferredCharacteristics: string[],
+  resolvedAestheticOutcome: AestheticOutcome | null
 ): DecisionResult {
   const [bestFit, alt] = ranked;
   if (!bestFit) {
@@ -337,6 +393,7 @@ function buildResultFromRanked(
   const bestFitAestheticScore = preferredCharacteristics.filter((c) =>
     (bestFit.aesthetic_characteristics ?? []).includes(c)
   ).length;
+  const bestFitAestheticRole = AESTHETIC_ROLE_LABELS[aestheticRoleTier(bestFit, resolvedAestheticOutcome)];
   const programming = buildProgramming(bestFit, input.maxFatigueCost);
   return {
     status: 'ok',
@@ -354,6 +411,7 @@ function buildResultFromRanked(
       bestFitTargetMatch,
       preferredCharacteristics,
       bestFitAestheticScore,
+      bestFitAestheticRole,
       programming.profile.name
     ),
     bestFit,

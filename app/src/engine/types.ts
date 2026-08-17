@@ -72,6 +72,8 @@ export interface RecommendationTrace {
    * characteristics this exercise actually matches.
    */
   aestheticSuitability: 'not-applicable' | 'none' | 'some' | 'high';
+  /** Aesthetic Exercise Role (Phase 4C Final Correction §4-6/§20) — 'unspecified' when the outcome defines no exercise_roles, or none named this exercise. */
+  aestheticRole: 'primary' | 'direct' | 'secondary' | 'supporting' | 'unspecified';
   programmingProfile: string;
   fatigueCost: string;
   finalReason: string;

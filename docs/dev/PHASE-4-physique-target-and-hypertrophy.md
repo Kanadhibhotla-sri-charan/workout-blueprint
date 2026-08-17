@@ -635,3 +635,86 @@ Audited `resolveProgrammingProfile`'s classification against every one of the 12
 ### Phase 4C status
 
 All 12 implementation steps (4C-1 through 4C-12) complete. Phase 4C is done.
+
+---
+
+# Phase 4C Final Correction — Aesthetic Exercise Role
+
+**Date:** 2026-08-17
+
+Adversarial testing of the completed Phase 4C engine surfaced a residual gap: even with target-aware ranking (4B) and characteristics-based aesthetic suitability (4C), some exercises sharing the same primary target still had different real-world usefulness for the *exact* visual problem that the existing mechanisms couldn't fully capture — e.g. Standing Calf Raise vs. Leg Press Calf Raise both train the gastrocnemius, but only one is the knowledge base's actual primary tool for calf width/shape specifically. Spec saved verbatim at `docs/architecture/PHASE-4C-FINAL-AESTHETIC-EXERCISE-ROLE.md`, explicitly framed by the architect as **the final planned architecture correction** before moving to real-world use (§29: "STOP adding architecture" once this passes).
+
+## 4C-F1/F2 — Aesthetic Exercise Role model + contextual mapping schema
+
+### What changed
+
+- **`scripts/lib/taxonomy.js`** — new `AESTHETIC_ROLES = ['primary', 'direct', 'secondary', 'supporting']` (ordered highest-rank first; `'unspecified'` is deliberately not a valid YAML key — it's the implicit default for any exercise not listed under one of these four, per §5).
+- **`scripts/lib/validate.js`** — validates `aesthetic-outcomes.yaml`'s new optional `exercise_roles` object: every listed exercise id must resolve to a real exercise, every role key must be one of the four controlled values, and the same exercise must not appear under more than one role for the same outcome. Verified by injecting a bad exercise id and a duplicate-role case on `calf-width-shape`, confirming `npm run validate-data` caught both, then reverting.
+- **`data/programming/aesthetic-outcomes.yaml`** — `exercise_roles` added to exactly 3 outcomes (not an exhaustive matrix, per §7/§24 — only where a real, adversarial-testing-confirmed ranking bug demonstrated the need):
+  - `calf-width-shape`: `primary: [standing-calf-raise]`, `secondary: [leg-press-calf-raise]` (§12).
+  - `upper-back-fullness`: `direct: [barbell-dumbbell-shrug]`, `secondary: [rack-pull]` (§13).
+  - `quad-sweep-separation`: `direct: [leg-extension]`, `secondary: [reverse-nordic-curl]` (§14) — this outcome's own `technical_explanation` already cites Leg Extension's `mirror_effect` text as the documented source for the separation claim, making the role assignment a direct transcription of already-established knowledge, not a new claim.
+- **`app/src/types/programming.ts`** — `AestheticOutcome.exercise_roles?: { primary?, direct?, secondary?, supporting?: string[] }`.
+
+### Verified
+
+Before writing the role data, confirmed all three bugs were real and reproducible with the actual engine (not hypothetical): under the existing pre-correction ranking, `calf-width-shape` picked Leg Press Calf Raise over Standing Calf Raise on alphabetical tiebreak (both tied on the generic `stable-compound` stimulus tag); `upper-back-fullness` picked Rack Pull (heavy-compound) over Shrug (no distinguishing tag) purely on the `build-base` goal's stimulus ranking; `quad-sweep-separation` picked Reverse Nordic Curl over Leg Extension under `visual-area` for the same `lengthened-position-emphasis`-tag reason 4C-6 had already fixed for the *different* `quad-front-mass` outcome — a clean illustration of why role must be per-outcome, not global (Leg Extension is right for separation, wrong for overall mass; Reverse Nordic Curl is the reverse).
+
+## 4C-F3/F4/F5/F6 — Integrate role tier into ranking hierarchy
+
+### What changed
+
+- **`app/src/engine/decisionEngine.ts`**:
+  - New `aestheticRoleTier(exercise, outcome)`: lexicographic rank 0 (primary) through 4 (unspecified) — deliberately ordinal internal constants representing the exact hierarchy (§8/§23), never a weighted score.
+  - New `sortByAestheticRole`, a stable sort composed **between** the existing `sortByAestheticSuitability` and `sortByTargetTier`: `sortByTargetTier(sortByAestheticRole(sortByAestheticSuitability(<base ranking>)))` at all three goal-branch call sites. Same significance-ordering technique already established in 4B/4C — each sort is stable and applied in increasing order of significance, so the final composite order is target tier (most significant) → aesthetic role → characteristics-based suitability → the original stimulus/alphabetical tiebreak (least significant), exactly matching §8's hierarchy without touching any of the three already-tested base-ranking functions.
+  - A no-op whenever the resolved aesthetic outcome has no `exercise_roles` at all (the common case — only 3 of 26 outcomes define any) — `sortByAestheticRole` returns the list unchanged, so `sortByAestheticSuitability`'s ordering passes through untouched (§11's UNSPECIFIED fallback).
+- **`app/src/engine/types.ts`** — `RecommendationTrace.aestheticRole: 'primary' | 'direct' | 'secondary' | 'supporting' | 'unspecified'`.
+- **`app/src/engine/decisionEngine.ts`**'s `buildRecommendationTrace()` — now also computes and reports the role; when a role is explicit (not unspecified) its label takes precedence over the suitability label in `finalReason`, since the role is the more specific reason once it exists (§10 — explicit role beats generic stimulus, so the explanation should reflect the same precedence, not stack both).
+- **`app/src/pages/DecisionMakerPage.tsx`** — the debug ranking-trace block gains an "Aesthetic role" row alongside the existing target match / aesthetic suitability / programming profile / fatigue cost rows.
+
+### Decisions made
+
+- **Role composed as an additional stable-sort layer, not a replacement for the characteristics-based suitability layer.** §1 explicitly lists "Aesthetic-specific suitability layer" among what must be preserved; §8's hierarchy places role above stimulus ranking but the existing suitability mechanism already *is* part of "stimulus/programming ranking" once role doesn't apply. Keeping both layers, with role taking precedence, means the ~23 outcomes with no explicit role still get the refinement 4C already gave them, while the 3 outcomes needing an even sharper distinction get it via role.
+
+## 4C-F7/F8/F9 — Regression tests
+
+Added a new `decisionEngine.test.ts` describe block for the three named fixes, using the same `recommendForOutcome()` helper (already mirrors the real UI's `handleAestheticOutcomeChange` resolution) established in the earlier Phase 4C test block:
+
+- **§12** — Standing Calf Raise (role `primary`) beats Leg Press Calf Raise (role `secondary`) under every goal; Leg Press Calf Raise remains reachable as the alternative.
+- **§13** — Shrug (role `direct`) beats Rack Pull (role `secondary`) under every goal; Rack Pull remains reachable.
+- **§14** — Leg Extension (role `direct`) beats Reverse Nordic Curl (role `secondary`) under every goal; Reverse Nordic Curl remains reachable.
+- **§11 fallback regression** — `chest-side-projection` (no `exercise_roles`) still resolves every candidate's role to `'unspecified'` and still picks Incline Dumbbell Press exactly as the earlier 4C suitability-layer test already established — proving the new role layer is a genuine no-op when absent, not just coincidentally producing the same answer.
+- **§9 preservation regression** — `arm-side-thickness` (Phase 4B's original brachialis/triceps primary-vs-supporting-target test, no `exercise_roles`) still resolves `bestFitTargetMatch === 'primary'`, confirming the new sort layer stacked on top of `sortByTargetTier` didn't disturb the target-tier rule it's built on.
+- **`DecisionMakerPage.test.tsx`** — a UI-level golden slice for the calf-width-shape case, run through the real Appearance → region → outcome → goal form controls.
+
+All 6 new tests passed on first run after implementation (verified against real engine output via a throwaway probe test before finalizing assertions, per this session's established discipline of confirming actual values rather than guessing).
+
+## 4C-F10/F11/F12 — Full regression, complete validation, final real-world test
+
+- Full suite: **147 tests across 14 files**, all passing (up from 141). `npx tsc -b --force`, `npm run lint` (oxlint), `npm run build`, `npm run validate-data`: all clean.
+- Final real-world adversarial test: launched the actual Vite dev server behind headless Chromium and walked all three named fixes (calf width/shape, upper-trap fullness, above-knee quad separation) at both desktop and 375px mobile viewports — every one resolved to the spec-named exercise, zero horizontal overflow. Expanded the debug trace for the calf-width-shape case and confirmed it reads "Target match: primary / Aesthetic role: primary / ... / Final reason: direct primary-target match + primary aesthetic role" — matching §20's own worked example almost verbatim.
+
+### Acceptance Criteria (spec §26) — final walkthrough
+
+- [x] `Aesthetic Exercise Role` exists as a deterministic concept — `aestheticRoleTier`, ordinal, no scoring.
+- [x] Roles are contextual to an aesthetic outcome — stored under `aesthetic-outcomes.yaml`'s own `exercise_roles`, never on the exercise record itself.
+- [x] Roles are not global properties of an exercise — same exercise (e.g. Reverse Nordic Curl) carries different treatment on `quad-front-mass` (no role, ranks low via characteristics) vs. `quad-sweep-separation` (explicit `secondary` role) — genuinely different outcomes, genuinely different behavior.
+- [x] PRIMARY / DIRECT / SECONDARY / SUPPORTING / UNSPECIFIED are supported — all 5 represented in the type and tier function; `supporting` isn't exercised by real data yet (no current fix needed it) but is fully implemented and validated.
+- [x] Primary-target hierarchy remains stronger than supporting-target roles — `sortByTargetTier` still the outermost/final sort; §9 preservation test.
+- [x] Explicit aesthetic role overrides generic stimulus ranking within the same target tier — all 3 named fixes prove this directly.
+- [x] Unspecified exercises fall back safely to the existing engine — §11 fallback regression test.
+- [x] No exhaustive exercise × aesthetic-outcome matrix — 3 of 26 outcomes, ~6 exercises total.
+- [x] Calf width / Upper-trap fullness / Above-knee separation regressions pass — 4C-F7/F8/F9.
+- [x] Brachialis side-thickness regression continues to pass — untouched, still green.
+- [x] Lower-calf regression continues to pass — untouched (different outcome, `calf-lower-fullness`, uses the characteristics layer not role).
+- [x] Shoulder-width regression continues to pass — untouched.
+- [x] Back width/thickness contrast continues to pass — untouched.
+- [x] Programming-profile classification remains correct — untouched this correction, still audited clean from 4C-8/9.
+- [x] Intensity-technique behavior remains correct — untouched this correction, full suite still green.
+- [x] Existing Phase 2/3/4B/4C tests continue to pass — 147/147.
+- [x] Mobile UX remains functional — verified at 375px across all 3 new scenarios.
+- [x] No AI/ML/opaque scoring introduced — pure lexicographic stable-sort composition throughout.
+
+### Phase 4C Final Correction status
+
+All 12 implementation steps (4C-F1 through 4C-F12) complete. Per the architect's own framing (§29), this is the final planned architecture correction for the current Blueprint version — future changes should be knowledge-entry fixes with regression tests, not new architectural phases.

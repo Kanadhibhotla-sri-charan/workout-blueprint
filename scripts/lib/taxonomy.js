@@ -35,6 +35,13 @@ const AESTHETIC_CHARACTERISTICS = new Set([
   'bent-knee', 'vertical-pull', 'horizontal-pull', 'high-loadable', 'lengthened-biased',
 ]);
 
+// Aesthetic Exercise Role (Phase 4C Final Correction §4-6) — the explicit
+// role keys an aesthetic outcome's `exercise_roles` may use. Ordered by
+// rank, highest first; 'unspecified' is never written to YAML (it's the
+// implicit default for any exercise not listed under one of these four),
+// so it deliberately isn't a valid key here.
+const AESTHETIC_ROLES = ['primary', 'direct', 'secondary', 'supporting'];
+
 // The first item of movement_patterns must be one of these fundamental
 // patterns (Phase 1 taxonomy normalization). Subsequent items are
 // free-form modifiers and are not validated against a closed list —
@@ -93,6 +100,7 @@ module.exports = {
   COVERAGE_CATEGORIES,
   REVIEW_STATUSES,
   AESTHETIC_CHARACTERISTICS,
+  AESTHETIC_ROLES,
   FUNDAMENTAL_MOVEMENT_PATTERNS,
   REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS,

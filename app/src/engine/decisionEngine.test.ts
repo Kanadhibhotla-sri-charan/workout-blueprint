@@ -709,3 +709,95 @@ describe('makeRecommendation — Phase 4C aesthetic-specific exercise suitabilit
     }
   });
 });
+
+// Phase 4C Final Correction: Aesthetic Exercise Role. An explicit,
+// outcome-contextual role (primary/direct/secondary/supporting) that
+// takes precedence over the generic-stimulus/characteristics-based
+// suitability ranking within a target tier — the final planned
+// architecture correction per the architect.
+describe('makeRecommendation — Phase 4C Final Correction: Aesthetic Exercise Role', () => {
+  // §12 permanent negative test — Calf Width/Shape. Before this
+  // correction, Leg Press Calf Raise (carrying a stable-compound coverage
+  // tag) beat Standing Calf Raise under every goal, purely on the generic
+  // stimulus ranking — even though the outcome's own knowledge base
+  // (§2/§6) already establishes Standing Calf Raise as the primary tool
+  // for calf width/shape specifically.
+  it('calf width/shape: Standing Calf Raise (explicit primary role) beats Leg Press Calf Raise (secondary role) under every goal, which remains a valid alternative', () => {
+    for (const goal of ['build-base', 'visual-area'] as Goal[]) {
+      const result = recommendForOutcome('calf-width-shape', goal);
+      expect(result.status).toBe('ok');
+      if (result.status === 'ok') {
+        expect(result.bestFit.id).toBe('standing-calf-raise');
+        expect(result.bestFitTrace.aestheticRole).toBe('primary');
+        const allIds = [result.bestFit.id, result.alternative?.id, ...result.complements.map((c) => c.id)];
+        expect(allIds).toContain('leg-press-calf-raise');
+      }
+    }
+  });
+
+  // §13 permanent negative test — Upper-Trap Fullness. Rack Pull
+  // (heavy-compound) previously beat Shrug (no distinguishing generic
+  // tag) purely on stimulus ranking, even though the outcome's own
+  // technical_explanation already identifies shrugging/shoulder-elevation
+  // movements — not a heavy top-of-pull compound — as the driver.
+  it('upper-trap fullness: Shrug (explicit direct role) beats Rack Pull (secondary role) under every goal, which remains a valid exercise', () => {
+    for (const goal of ['build-base', 'visual-area'] as Goal[]) {
+      const result = recommendForOutcome('upper-back-fullness', goal);
+      expect(result.status).toBe('ok');
+      if (result.status === 'ok') {
+        expect(result.bestFit.id).toBe('barbell-dumbbell-shrug');
+        expect(result.bestFitTrace.aestheticRole).toBe('direct');
+        const allIds = [result.bestFit.id, result.alternative?.id, ...result.complements.map((c) => c.id)];
+        expect(allIds).toContain('rack-pull');
+      }
+    }
+  });
+
+  // §14 permanent negative test — Above-the-Knee Quad Separation. The
+  // outcome's own technical_explanation already cites Leg Extension's
+  // mirror_effect as the documented source for this specific shaping
+  // claim; Reverse Nordic Curl (lengthened-position-emphasis) previously
+  // won under the visual-area goal purely on that generic tag.
+  it('above-knee quad separation: Leg Extension (explicit direct role) beats Reverse Nordic Curl (secondary role) under every goal, which remains a valid exercise', () => {
+    for (const goal of ['build-base', 'visual-area'] as Goal[]) {
+      const result = recommendForOutcome('quad-sweep-separation', goal);
+      expect(result.status).toBe('ok');
+      if (result.status === 'ok') {
+        expect(result.bestFit.id).toBe('leg-extension');
+        expect(result.bestFitTrace.aestheticRole).toBe('direct');
+        const allIds = [result.bestFit.id, result.alternative?.id, ...result.complements.map((c) => c.id)];
+        expect(allIds).toContain('reverse-nordic-curl');
+      }
+    }
+  });
+
+  // §11 — UNSPECIFIED fallback. The great majority of outcomes define no
+  // exercise_roles at all; adding the new role sort must not change their
+  // already-tested behavior. chest-side-projection has no exercise_roles,
+  // so every candidate's role should resolve to 'unspecified' and ranking
+  // should fall through entirely to the pre-existing Phase 4C suitability
+  // layer (already proven to pick Incline Dumbbell Press).
+  it('an outcome with no exercise_roles resolves every candidate to the unspecified role and falls back to the existing suitability ranking unchanged', () => {
+    const result = recommendForOutcome('chest-side-projection', 'build-base');
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.bestFitTrace.aestheticRole).toBe('unspecified');
+      expect(result.bestFit.id).toBe('incline-dumbbell-press');
+    }
+  });
+
+  // §9 preservation test — adding the new role layer must not change the
+  // already-proven Phase 4B primary-target-beats-supporting-target rule.
+  // arm-side-thickness has no exercise_roles (role tier degenerates to
+  // 'unspecified' for every candidate on both sides of the target-tier
+  // boundary), so this is a direct regression check that stacking a new
+  // sort layer on top of sortByTargetTier didn't disturb it.
+  it('the primary-target-beats-supporting-target rule from Phase 4B is unaffected by the new role layer', () => {
+    const result = recommendForOutcome('arm-side-thickness', 'build-base');
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.bestFitTargetMatch).toBe('primary');
+      expect(result.bestFit.physique_targets).toContain('brachialis-arm-thickness');
+    }
+  });
+});

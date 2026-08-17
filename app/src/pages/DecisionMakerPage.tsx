@@ -721,6 +721,10 @@ function DecisionResultView({
             <dd>{result.bestFitTrace.targetMatch}</dd>
           </div>
           <div>
+            <dt>Aesthetic role</dt>
+            <dd>{result.bestFitTrace.aestheticRole}</dd>
+          </div>
+          <div>
             <dt>Aesthetic suitability</dt>
             <dd>{result.bestFitTrace.aestheticSuitability}</dd>
           </div>

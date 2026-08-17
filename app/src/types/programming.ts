@@ -124,6 +124,22 @@ export interface AestheticOutcome {
    * already narrow the candidate pool enough on their own.
    */
   preferred_characteristics?: string[];
+  /**
+   * Aesthetic Exercise Role (Phase 4C Final Correction §4-6) — which
+   * exercises are especially useful for THIS exact visual problem, keyed
+   * by role, contextual to this outcome only (the same exercise can carry
+   * a different role, or none, on a different outcome — never a global
+   * exercise property). Absent for the great majority of outcomes by
+   * design (§7/§24: only added where a real ranking distinction was
+   * found); an exercise not listed under any role here is 'unspecified'
+   * and falls back to the existing Phase 4C suitability/stimulus ranking.
+   */
+  exercise_roles?: {
+    primary?: string[];
+    direct?: string[];
+    secondary?: string[];
+    supporting?: string[];
+  };
 }
 
 export interface FunctionalGoal {

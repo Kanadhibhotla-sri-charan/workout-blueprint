@@ -316,6 +316,11 @@ outcomes:
       shoulder-elevation movements, adds height and slope specifically
       at the neck-to-shoulder junction, contributing to a thicker-
       necked, more filled-out upper-back silhouette.
+    exercise_roles:
+      direct:
+        - barbell-dumbbell-shrug
+      secondary:
+        - rack-pull
     anatomical_targets:
       - trapezius, upper fibers
     common_user_phrasings:
@@ -522,6 +527,11 @@ outcomes:
       No separate physique target was created for this — it resolves
       to the same generic `quads` target, since the data doesn't
       support a genuinely independent target, only an emphasis note.
+    exercise_roles:
+      direct:
+        - leg-extension
+      secondary:
+        - reverse-nordic-curl
     anatomical_targets:
       - quadriceps femoris, vastus medialis (visual emphasis only — not a separate target)
     common_user_phrasings:
@@ -566,6 +576,11 @@ outcomes:
       knee is straight, trained through standing-position ankle
       plantarflexion, is what produces this diamond shape and overall
       calf width.
+    exercise_roles:
+      primary:
+        - standing-calf-raise
+      secondary:
+        - leg-press-calf-raise
     anatomical_targets:
       - gastrocnemius, medial and lateral heads
     common_user_phrasings:
