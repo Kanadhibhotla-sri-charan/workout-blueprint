@@ -22,6 +22,7 @@
   body_regions: [hips]
   primary_targets: [gluteus maximus]
   secondary_targets: [hamstrings, quads]
+  physique_targets: [gluteus-maximus]
   movement_patterns: [hip extension, shortened range (hip fully extended)]
   equipment: [barbell, bench, hip-thrust machine, smith machine]
   exercise_type: compound
@@ -101,6 +102,7 @@
   body_regions: [hips]
   primary_targets: [glutes, hamstrings]
   secondary_targets: [spinal erectors]
+  physique_targets: [gluteus-maximus]
   movement_patterns: [hip hinge]
   equipment: [smith machine]
   exercise_type: compound
@@ -168,6 +170,7 @@
   body_regions: [hips]
   primary_targets: [glutes]
   secondary_targets: [hamstrings, quads (less than the knee-dominant execution), adductors]
+  physique_targets: [gluteus-maximus]
   movement_patterns: [unilateral hip-dominant, long-stance execution]
   equipment: [dumbbell, barbell, bench]
   exercise_type: compound
@@ -239,6 +242,7 @@
   body_regions: [hips]
   primary_targets: [gluteus maximus]
   secondary_targets: []
+  physique_targets: [gluteus-maximus]
   movement_patterns: [hip extension]
   equipment: [cable]
   exercise_type: isolation
@@ -290,6 +294,7 @@
   body_regions: [hips]
   primary_targets: [gluteus medius, gluteus minimus]
   secondary_targets: [tensor fasciae latae]
+  physique_targets: [gluteus-medius-minimus]
   movement_patterns: [hip abduction]
   equipment: [machine, band]
   exercise_type: isolation
@@ -342,6 +347,7 @@
   body_regions: [hips]
   primary_targets: [adductors]
   secondary_targets: []
+  physique_targets: [adductors]
   movement_patterns: [hip adduction]
   equipment: [machine]
   exercise_type: isolation

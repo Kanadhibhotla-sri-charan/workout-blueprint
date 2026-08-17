@@ -19,6 +19,7 @@
   body_regions: [forearms]
   primary_targets: [wrist flexors]
   secondary_targets: []
+  physique_targets: [forearm-flexors]
   movement_patterns: [wrist flexion]
   equipment: [barbell, dumbbell, cable]
   exercise_type: isolation
@@ -74,6 +75,7 @@
   body_regions: [forearms]
   primary_targets: [wrist extensors]
   secondary_targets: []
+  physique_targets: [forearm-extensors]
   movement_patterns: [wrist extension]
   equipment: [barbell, dumbbell, cable]
   exercise_type: isolation
@@ -128,6 +130,7 @@
   body_regions: [forearms]
   primary_targets: [brachioradialis, wrist extensors]
   secondary_targets: [biceps, brachialis]
+  physique_targets: [forearm-extensors]
   movement_patterns: [elbow flexion, pronated grip]
   equipment: [barbell, ez-bar, dumbbell]
   exercise_type: isolation
@@ -184,6 +187,7 @@
   body_regions: [forearms]
   primary_targets: [brachioradialis, wrist extensors]
   secondary_targets: [biceps, brachialis]
+  physique_targets: [forearm-extensors]
   movement_patterns: [elbow flexion, pronated grip]
   equipment: [cable]
   exercise_type: isolation

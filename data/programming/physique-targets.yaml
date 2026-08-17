@@ -9,19 +9,40 @@
 #
 # Populated incrementally by taxonomy expansion. The Upper Pec-only vertical
 # slice (4A/4B/4D/4E/4F) passed its golden test case
-# (docs/dev/reports/PHASE-4-GOLDEN-TEST-CASE.md); this file now carries the
-# rest of the targets the architect approved for expansion: the other two
-# chest targets, front/side/rear delts, lat width, back thickness, upper
-# traps, biceps, brachialis/arm thickness, triceps (plus a long-head-
+# (docs/dev/reports/PHASE-4-GOLDEN-TEST-CASE.md); this file then carried the
+# rest of the targets the architect approved for the first expansion: the
+# other two chest targets, front/side/rear delts, lat width, back thickness,
+# upper traps, biceps, brachialis/arm thickness, triceps (plus a long-head-
 # emphasis sub-target the data explicitly supports via evidence_notes), and
 # the two core targets the data actually supports. Lower Abs remains
 # explicitly excluded — the data does not support a defensible upper/lower
 # rectus-abdominis split (see ADR 0003) — and is not to be added without a
-# future evidence pass establishing one. Quads, hamstrings, calves, hips,
-# forearms, and neck are not represented here; the architect's approved
-# expansion list didn't include them, and adding targets beyond what was
-# approved would be exactly the scope creep the Phase 4 spec's final
-# guardrail warns against.
+# future evidence pass establishing one.
+#
+# Phase 4's revised Aesthetic Outcome layer (4I, full-body taxonomy
+# expansion, docs/dev/reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md,
+# architect-approved) added 10 more targets, extending coverage to the
+# regions the first expansion pass didn't reach: calves (gastrocnemius,
+# soleus), hips (gluteus-maximus, gluteus-medius-minimus, adductors), quads
+# (a single generic `quads` target — no sweep/teardrop sub-target; see that
+# outcome's own note), hamstrings (a single generic `hamstrings` target —
+# deliberately not split by seated- vs. lying-leg-curl emphasis, since the
+# data itself says the two fill out the thigh "more evenly... than either
+# does alone," arguing against a split), forearms (forearm-flexors,
+# forearm-extensors), and neck (neck-thickness, one of the two outcomes the
+# 4A audit flagged as lower-confidence but the architect approved keeping).
+# Adductors were deliberately NOT tagged onto quads.yaml's sumo-squat/
+# sumo-deadlift despite those exercises' own secondary_targets naming
+# adductors — their body_regions is [quads] only, and adductors' own
+# parent_region is hips, so tagging them would violate this file's own
+# tagged-exercise/parent-region alignment invariant (see
+# physique-targets.test.ts). Adductors resolves from hip-adduction alone,
+# a real, dedicated, single-exercise-supported target — narrow but genuine,
+# not fabricated. The same constraint dropped gluteus-maximus from every
+# quads.yaml squat/press variant and from back-extension-45-hip-dominant
+# (hamstrings.yaml, body_regions: [hamstrings] only) — it resolves from the
+# 5 hips.yaml/hamstrings.yaml exercises whose body_regions actually include
+# hips.
 
 targets:
   - id: upper-pec
@@ -199,3 +220,128 @@ targets:
       Visually, this is the classic six-pack definition down the front of
       the midline — though, like obliques, visibility depends heavily on
       body-fat level, not just how developed the muscle is.
+
+  - id: gastrocnemius
+    name: Gastrocnemius
+    parent_region: calves
+    definition: >-
+      The two-headed calf muscle that contributes when the knee is
+      straight, trained through standing-position ankle plantarflexion.
+    physique_outcome: >-
+      Visually, this is the diamond-shaped bulge and overall width of the
+      calf, most visible from behind or the side when the muscle is
+      flexed with the foot pointed — the raise most people mean when they
+      picture a bigger calf.
+
+  - id: soleus
+    name: Soleus
+    parent_region: calves
+    definition: >-
+      The calf muscle beneath the gastrocnemius that stays active even
+      with the knee bent, trained through seated-position ankle
+      plantarflexion.
+    physique_outcome: >-
+      Visually, this fills out the lower half of the calf's profile,
+      closer to the ankle, rather than the upper bulge the gastrocnemius
+      builds — often the part that stays thin even once the upper calf
+      has already grown.
+
+  - id: gluteus-maximus
+    name: Gluteus Maximus
+    parent_region: hips
+    definition: >-
+      The largest glute muscle, trained through hip-extension movements,
+      most directly in a shortened (hip fully extended) position.
+    physique_outcome: >-
+      Visually, this is glute roundness and a fuller "shelf" projecting
+      from the lower back, most noticeable in a standing, hip-extended
+      posture and from behind or the side.
+
+  - id: gluteus-medius-minimus
+    name: Gluteus Medius / Minimus
+    parent_region: hips
+    definition: >-
+      The smaller glute muscles on the side of the hip, trained through
+      hip-abduction movements that most bilateral squats and hinges only
+      work as stabilizers.
+    physique_outcome: >-
+      Visually, this fills in what's sometimes called the "hip dip" and
+      adds a rounder side profile to the hip — distinct from the
+      back-of-hip effect gluteus maximus development produces.
+
+  - id: adductors
+    name: Adductors
+    parent_region: hips
+    definition: >-
+      The inner-thigh muscle group, trained through hip-adduction
+      movements — a group most squatting patterns only load indirectly.
+    physique_outcome: >-
+      Visually, this adds inner-thigh fullness, changing the leg's
+      profile from the front — though closing the gap between the
+      thighs is a combination of this muscle's size and body
+      composition, not training alone.
+
+  - id: quads
+    name: Quads
+    parent_region: quads
+    definition: >-
+      The quadriceps as a whole (all four heads), trained through
+      knee-extension movements — squats, presses, lunges, and
+      leg-extension work.
+    physique_outcome: >-
+      Visually, this is overall mass through the front of the thigh —
+      the primary size driver for the whole leg. Kept as one generic
+      target rather than split by head: the data supports one exercise
+      (leg-extension) producing more visible separation/"sweep" above
+      the knee than others, but that's noted as a within-target emphasis
+      rather than a separate target, per the taxonomy's no-fake-precision
+      guardrail — see the quad-sweep-separation outcome.
+
+  - id: hamstrings
+    name: Hamstrings
+    parent_region: hamstrings
+    definition: >-
+      The hamstring group as a whole, trained through hip-hinge and
+      knee-flexion movements.
+    physique_outcome: >-
+      Visually, this is overall thickness through the back of the thigh.
+      Kept as one generic target rather than split by exercise (e.g.
+      seated- vs. lying-leg-curl emphasis) — the data itself says the two
+      "fill out the back of the thigh more evenly, top to bottom" when
+      combined, which argues against a split, not for one.
+
+  - id: forearm-flexors
+    name: Forearm Flexors
+    parent_region: forearms
+    definition: >-
+      The palm-side (wrist-flexor) forearm muscles, trained through
+      wrist-flexion movements — loaded only indirectly by gripping in
+      larger lifts.
+    physique_outcome: >-
+      Visually, this adds fullness on the palm-side of the forearm, most
+      noticeable near the elbow with the palm facing up.
+
+  - id: forearm-extensors
+    name: Forearm Extensors
+    parent_region: forearms
+    definition: >-
+      The back-of-hand-side (wrist-extensor) forearm muscles and the
+      brachioradialis, trained through wrist-extension and
+      neutral/pronated-grip elbow-flexion movements.
+    physique_outcome: >-
+      Visually, this adds fullness on the back-of-hand side of the
+      forearm — the side visible when the arm hangs relaxed — including
+      the brachioradialis "peak" at the elbow crease that shows when the
+      elbow is bent.
+
+  - id: neck-thickness
+    name: Neck Thickness
+    parent_region: neck
+    definition: >-
+      The neck extensors (primarily) and flexors, trained through
+      loaded neck-extension and neck-flexion movements.
+    physique_outcome: >-
+      Visually, this is width and thickness across the neck, most
+      responsible for the "thick neck" look — primarily driven by the
+      back and sides (neck extension), with neck flexion rounding out
+      the front profile rather than adding comparable size on its own.

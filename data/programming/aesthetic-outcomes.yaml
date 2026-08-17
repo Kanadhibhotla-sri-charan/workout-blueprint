@@ -19,16 +19,22 @@
 #
 # 4A's full-body audit and proposed taxonomy is
 # docs/dev/reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md (architect-
-# approved, including the two flagged/lower-confidence outcomes). Per the
-# spec's own implementation order (§43) and its explicit instruction not to
-# implement the entire taxonomy before validating the first vertical slice,
-# this file currently carries only the three outcomes needed for the three
-# required golden vertical slices (§36/§37 of the revised spec, plus the
-# multi-target slice required by the Corrections doc §19/§21) — all of
-# which resolve entirely to physique targets that already exist, so no new
-# taxonomy risk is introduced here. The remaining ~21 approved outcomes
-# (and the 9 new physique targets most of them depend on) are added in the
-# taxonomy-expansion pass (4I), after all three golden slices pass.
+# approved, including the two flagged/lower-confidence outcomes:
+# quad-sweep-separation and the neck outcome below, "neck-size"). The first
+# three outcomes below (chest-side-projection, triceps-back-depth,
+# arm-side-thickness) were built first, for the three required golden
+# vertical slices (§36/§37 of the revised spec, plus the multi-target slice
+# required by the Corrections doc §19/§21), per the spec's explicit
+# instruction not to implement the entire taxonomy before validating the
+# first vertical slice. All three golden slices passed; this file now
+# carries the full architect-approved taxonomy (4I).
+#
+# Most outcomes below have exactly one primary target and no supporting
+# targets — that's not an oversight, it's what the 4A audit actually found:
+# the large majority of these visual characteristics are genuinely driven
+# by one target, not several. Only chest-front-width (mid-pec + upper-pec)
+# joins the three golden-slice outcomes in having a real multi-target
+# relationship.
 
 outcomes:
   - id: chest-side-projection
@@ -121,3 +127,528 @@ outcomes:
       - "My arms look thin from the side."
       - "My arms look big from the front but not from the side."
       - "My arms don't look as thick as they should."
+
+  # --- 4I: full-body taxonomy expansion ---
+
+  - id: chest-front-width
+    display_name: "Chest doesn't look wide enough from the front"
+    region: chest
+    viewpoint: front
+    visual_description: >-
+      The chest looks narrow or thin straight-on, lacking the visible
+      mass across the front that makes a chest look "full" in a t-shirt
+      or a relaxed front pose.
+    primary_targets:
+      - mid-pec
+    supporting_targets:
+      - upper-pec
+    technical_explanation: >-
+      Front-on chest mass is mostly the sternocostal (mid) portion of
+      the pectoralis major — the largest part of the muscle and the
+      part loaded by default in a flat-angle press — so it's the main
+      driver of this outcome. A filled-in upper-chest shelf also adds
+      to the overall front-on impression of width, without being the
+      primary driver the way it is for side-view projection.
+    anatomical_targets:
+      - pectoralis major, sternocostal (mid) head
+      - pectoralis major, clavicular (upper) head
+    common_user_phrasings:
+      - "My chest doesn't look wide enough from the front."
+      - "My chest looks small in a t-shirt."
+      - "I don't have much chest mass when I look straight on."
+
+  - id: chest-upper-shelf
+    display_name: "Upper chest doesn't stand out"
+    region: chest
+    viewpoint: front
+    visual_description: >-
+      There's no visible fullness just below the collarbone — the
+      chest appears to start lower down rather than forming a squared-
+      off upper-chest line.
+    primary_targets:
+      - upper-pec
+    technical_explanation: >-
+      This is specifically about the clavicular (upper) head of the
+      pectoralis major, the portion closest to the collarbone. It's a
+      distinct region from the mid-chest mass that drives general
+      front-on width, which is why a well-developed chest can still
+      lack this specific shelf if upper-chest work has been skipped.
+    anatomical_targets:
+      - pectoralis major, clavicular (upper) head
+    common_user_phrasings:
+      - "Upper chest doesn't stand out."
+      - "My chest starts too low."
+      - "No shelf below my collarbone."
+
+  - id: chest-lower-definition
+    display_name: "Chest-to-abdominal boundary isn't clear"
+    region: chest
+    viewpoint: side
+    visual_description: >-
+      There's no clear line where the chest ends and the abs begin —
+      most visible from the side or a lower/decline-angle view.
+    primary_targets:
+      - lower-pec
+    technical_explanation: >-
+      This is the lower/costal portion of the pectoralis major, most
+      commonly developed via a decline angle or a forward-leaning dip.
+      It shows up specifically as definition along the lower border of
+      the chest and the transition into the ribs — a distinct region
+      from the upper-chest shelf.
+    anatomical_targets:
+      - pectoralis major, costal (lower) head
+    common_user_phrasings:
+      - "Chest/abdominal boundary isn't clear."
+      - "My chest and abs blend together."
+      - "No clean line under my chest."
+
+  - id: shoulder-width-front
+    display_name: "Shoulders don't look wide enough"
+    region: shoulders
+    viewpoint: front
+    visual_description: >-
+      The shoulders don't create a visible taper from shoulder to
+      waist, especially noticeable from the front.
+    primary_targets:
+      - side-delt
+    technical_explanation: >-
+      The lateral (side) head of the deltoid, trained through
+      abduction movements like a lateral raise, is the single biggest
+      lever for apparent shoulder width — the "cap" that creates the
+      front-on taper. It's also the delt head most heavily worked by
+      most chest pressing.
+    anatomical_targets:
+      - deltoid, lateral head
+    common_user_phrasings:
+      - "Shoulders don't make me look wide."
+      - "No taper from my shoulders to my waist."
+      - "My shoulders look narrow from the front."
+
+  - id: shoulder-3d-shape
+    display_name: "Shoulders look front-heavy / flat from behind"
+    region: shoulders
+    viewpoint: back
+    visual_description: >-
+      The shoulders look developed from the front but flat or
+      unfinished from behind or the side, lacking a rounded,
+      three-dimensional shape.
+    primary_targets:
+      - rear-delt
+    technical_explanation: >-
+      The posterior (rear) head of the deltoid is trained through
+      horizontal-abduction/reverse-fly-style movements, which most
+      pressing-heavy routines under-train relative to the front delt
+      (already worked hard by chest pressing). Rear-delt development
+      adds width and roundness as seen from behind or the side.
+    anatomical_targets:
+      - deltoid, posterior head
+    common_user_phrasings:
+      - "My shoulders look flat from behind."
+      - "My shoulders look front-heavy."
+      - "No roundness to my shoulders from the side."
+
+  - id: back-width-v-taper
+    display_name: "Back doesn't look wide enough / weak V-taper"
+    region: back
+    viewpoint: back
+    visual_description: >-
+      The back doesn't create the visible V-shape from shoulders down
+      to the waist — most noticeable from behind or in a relaxed-arm
+      front pose.
+    primary_targets:
+      - lat-width
+    technical_explanation: >-
+      The latissimus dorsi, trained primarily through vertical-pull
+      (pull-up/pulldown) movements, is the primary driver of back
+      width and the V-taper look. This is an outline/silhouette
+      characteristic, distinct from back thickness (depth).
+    anatomical_targets:
+      - latissimus dorsi
+    common_user_phrasings:
+      - "My back doesn't look wide enough."
+      - "Weak V-taper."
+      - "My lats don't flare enough."
+
+  - id: back-side-thickness
+    display_name: "Back looks flat / no depth from the side"
+    region: back
+    viewpoint: side
+    visual_description: >-
+      The back looks wide but flat — it doesn't add visible depth from
+      the side, and there's little definition between the shoulder
+      blades from behind.
+    primary_targets:
+      - back-thickness
+    technical_explanation: >-
+      This is the mid-back musculature — rhomboids and mid/lower
+      trapezius — trained primarily through horizontal-pull (row)
+      movements. It's a distinct characteristic from lat width: about
+      the back's depth and definition, not its outline.
+    anatomical_targets:
+      - rhomboids
+      - trapezius, mid and lower fibers
+    common_user_phrasings:
+      - "My back looks wide but not thick."
+      - "No depth to my back from the side."
+      - "My back looks flat."
+
+  - id: upper-back-fullness
+    display_name: "Neck-to-shoulder area doesn't look full"
+    region: back
+    viewpoint: front
+    visual_description: >-
+      The area where the neck meets the shoulders looks thin or
+      undeveloped, rather than sloped and filled-out — visible from
+      the front and behind.
+    primary_targets:
+      - upper-traps
+    technical_explanation: >-
+      The upper trapezius, trained through shrugging and
+      shoulder-elevation movements, adds height and slope specifically
+      at the neck-to-shoulder junction, contributing to a thicker-
+      necked, more filled-out upper-back silhouette.
+    anatomical_targets:
+      - trapezius, upper fibers
+    common_user_phrasings:
+      - "My traps don't stand out."
+      - "Neck-to-shoulder area looks thin."
+      - "No slope from my neck to my shoulders."
+
+  - id: biceps-front-peak
+    display_name: "Biceps don't look full from the front"
+    region: arms
+    viewpoint: front
+    visual_description: >-
+      The front of the upper arm lacks visible mass and peak height,
+      especially noticeable with the elbow bent (a "flex" pose).
+    primary_targets:
+      - biceps
+    technical_explanation: >-
+      The biceps brachii, trained through elbow-flexion movements with
+      the forearm supinated or neutral, is the classic "arm flex"
+      muscle — peak height and overall mass on the front of the upper
+      arm. Distinct from side-view arm thickness, which brachialis and
+      triceps drive more than biceps does.
+    anatomical_targets:
+      - biceps brachii
+    common_user_phrasings:
+      - "My biceps don't look full."
+      - "No peak when I flex."
+      - "My arms look small from the front."
+
+  - id: ab-front-definition
+    display_name: "Abs don't show definition from the front"
+    region: core
+    viewpoint: front
+    visual_description: >-
+      No visible six-pack definition down the front of the midline,
+      even with reasonable overall leanness.
+    primary_targets:
+      - rectus-abdominis
+    technical_explanation: >-
+      The rectus abdominis, trained through spinal- and hip-flexion
+      movements that shorten the distance between the ribcage and
+      pelvis, is the muscle responsible for the classic six-pack look.
+      Visibility depends heavily on body-fat level as well as
+      development — training alone doesn't guarantee this outcome.
+    anatomical_targets:
+      - rectus abdominis
+    common_user_phrasings:
+      - "No six-pack definition."
+      - "My abs don't show."
+      - "Flat stomach but no visible abs."
+
+  - id: waist-side-definition
+    display_name: "Waist/sides don't show definition"
+    region: core
+    viewpoint: front
+    visual_description: >-
+      No visible diagonal lines framing the sides of the abdomen —
+      the waist looks smooth rather than defined.
+    primary_targets:
+      - obliques
+    technical_explanation: >-
+      The internal and external obliques, trained through
+      anti-rotation, rotation, and lateral-flexion-resisting
+      movements, add definition to the sides of the waist. Like
+      rectus-abdominis definition, this is also strongly influenced
+      by body-fat level, not training alone.
+    anatomical_targets:
+      - internal and external obliques
+    common_user_phrasings:
+      - "No definition on the sides of my waist."
+      - "My obliques don't show."
+      - "No V-lines at my hips."
+
+  - id: glute-roundness
+    display_name: "Glutes look flat"
+    region: glutes
+    viewpoint: back
+    visual_description: >-
+      The glutes lack visible roundness from behind — they look flat
+      rather than full, even when the rest of the legs look developed.
+    primary_targets:
+      - gluteus-maximus
+    technical_explanation: >-
+      The gluteus maximus, trained through hip-extension movements
+      most directly in a shortened (hip fully extended) position,
+      drives glute roundness and shape as seen from behind.
+    anatomical_targets:
+      - gluteus maximus
+    common_user_phrasings:
+      - "My glutes look flat."
+      - "No roundness to my glutes."
+      - "Flat butt from behind."
+
+  - id: glute-side-projection
+    display_name: "Glutes don't project from the side"
+    region: glutes
+    viewpoint: side
+    visual_description: >-
+      The glutes don't create a visible "shelf" projecting from the
+      lower back when viewed from the side, especially in a standing
+      posture.
+    primary_targets:
+      - gluteus-maximus
+    technical_explanation: >-
+      Same underlying muscle as glute-roundness (gluteus maximus), but
+      this is specifically the side-view projection characteristic —
+      most noticeable in a standing, hip-extended posture rather than
+      only when the glutes are actively flexed.
+    anatomical_targets:
+      - gluteus maximus
+    common_user_phrasings:
+      - "My glutes don't project from the side."
+      - "No shelf to my glutes."
+      - "Flat from the side, not just from behind."
+
+  - id: hip-width-side
+    display_name: "Hips don't look full / 'hip dip' is visible"
+    region: glutes
+    viewpoint: side
+    visual_description: >-
+      There's a visible indentation on the side of the hip (sometimes
+      called a "hip dip"), rather than a rounder, fuller side profile.
+    primary_targets:
+      - gluteus-medius-minimus
+    technical_explanation: >-
+      The gluteus medius and minimus, trained through hip-abduction
+      movements that most bilateral squats and hinges only work as
+      stabilizers, fill in this specific side-of-hip area — distinct
+      from gluteus maximus, which drives the back-of-hip effect.
+    anatomical_targets:
+      - gluteus medius
+      - gluteus minimus
+    common_user_phrasings:
+      - "I have a hip dip."
+      - "My hips don't look full on the side."
+      - "Indentation on the side of my hip."
+
+  - id: quad-front-mass
+    display_name: "Thighs look thin from the front"
+    region: quads
+    viewpoint: front
+    visual_description: >-
+      The front of the thigh lacks visible mass, even when overall leg
+      size looks reasonable from other angles.
+    primary_targets:
+      - quads
+    technical_explanation: >-
+      The quadriceps as a whole, trained through knee-extension
+      movements — squats, presses, lunges, and leg-extension work —
+      are the primary size driver for the front of the thigh and the
+      whole leg.
+    anatomical_targets:
+      - quadriceps femoris
+    common_user_phrasings:
+      - "My thighs look thin from the front."
+      - "Not much quad mass."
+      - "My legs look small from the front."
+
+  - id: inner-thigh-fullness
+    display_name: "Inner thigh looks thin"
+    region: quads
+    viewpoint: front
+    visual_description: >-
+      The inner thigh looks flat or thin, changing the leg's overall
+      profile from the front, even when the front of the thigh looks
+      developed.
+    primary_targets:
+      - adductors
+    technical_explanation: >-
+      The adductors, trained through hip-adduction movements that most
+      squatting patterns only load indirectly, add inner-thigh
+      fullness. Closing the visible gap between the thighs is a
+      combination of this muscle's size and body composition, not
+      training alone.
+    anatomical_targets:
+      - hip adductors
+    common_user_phrasings:
+      - "My inner thigh looks thin."
+      - "Gap between my thighs."
+      - "Not much inner-leg mass."
+
+  - id: quad-sweep-separation
+    display_name: "No separation above the knee"
+    region: quads
+    viewpoint: front
+    visual_description: >-
+      The front of the thigh looks like one undifferentiated mass
+      rather than showing visible separation and shape just above the
+      inner knee (sometimes called quad "sweep" or "teardrop").
+    primary_targets:
+      - quads
+    technical_explanation: >-
+      Flagged during the 4A taxonomy audit as lower-confidence than
+      most other outcomes in this file: the supporting data comes
+      almost entirely from one exercise (leg-extension), whose own
+      mirror_effect describes it as "the most targeted quad-shaping
+      tool... separation and sweep across the front of the thigh,
+      including the teardrop-shaped muscle just above the inner knee."
+      That's real, described data — not invented — but it's a
+      narrower evidence base than the other quad outcome
+      (quad-front-mass), which draws on more than a dozen exercises.
+      No separate physique target was created for this — it resolves
+      to the same generic `quads` target, since the data doesn't
+      support a genuinely independent target, only an emphasis note.
+    anatomical_targets:
+      - quadriceps femoris, vastus medialis (visual emphasis only — not a separate target)
+    common_user_phrasings:
+      - "No separation above my knee."
+      - "My quads look like one blob."
+      - "No teardrop shape to my thigh."
+
+  - id: hamstring-back-fullness
+    display_name: "Back of thighs look flat"
+    region: hamstrings
+    viewpoint: back
+    visual_description: >-
+      The back of the thigh lacks visible thickness, even when the
+      front of the leg (quads) looks developed.
+    primary_targets:
+      - hamstrings
+    technical_explanation: >-
+      The hamstring group as a whole, trained through hip-hinge and
+      knee-flexion movements, drives overall thickness through the
+      back of the thigh. Kept as one generic target rather than split
+      by exercise — see physique-targets.yaml's own note on why a
+      seated- vs. lying-leg-curl split isn't supported.
+    anatomical_targets:
+      - hamstrings (biceps femoris, semitendinosus, semimembranosus)
+    common_user_phrasings:
+      - "Back of my thighs look flat."
+      - "No hamstring development."
+      - "My legs only look good from the front."
+
+  - id: calf-width-shape
+    display_name: "Calves look thin / no shape"
+    region: calves
+    viewpoint: back
+    visual_description: >-
+      The calf lacks visible width and the diamond-shaped bulge most
+      people picture when they think of a developed calf — most
+      visible from behind or the side.
+    primary_targets:
+      - gastrocnemius
+    technical_explanation: >-
+      The gastrocnemius, the calf muscle that contributes when the
+      knee is straight, trained through standing-position ankle
+      plantarflexion, is what produces this diamond shape and overall
+      calf width.
+    anatomical_targets:
+      - gastrocnemius, medial and lateral heads
+    common_user_phrasings:
+      - "My calves look thin."
+      - "No shape to my calves."
+      - "Skinny calves no matter what I do."
+
+  - id: calf-lower-fullness
+    display_name: "Lower calf near the ankle looks thin"
+    region: calves
+    viewpoint: side
+    visual_description: >-
+      The lower portion of the calf, closer to the ankle, looks thin
+      even when the upper calf has some visible development.
+    primary_targets:
+      - soleus
+    technical_explanation: >-
+      The soleus, the calf muscle beneath the gastrocnemius that stays
+      active even with the knee bent, trained through seated-position
+      ankle plantarflexion, fills out this specific lower portion of
+      the calf's profile — often the part that stays thin even once
+      the upper calf has already grown.
+    anatomical_targets:
+      - soleus
+    common_user_phrasings:
+      - "My calf looks thin near my ankle."
+      - "Lower calf doesn't fill out."
+      - "Upper calf is fine but lower calf is thin."
+
+  - id: forearm-fullness-inner
+    display_name: "Forearms look thin (palm side)"
+    region: forearms
+    viewpoint: front
+    visual_description: >-
+      The palm-side of the forearm looks thin, most noticeable near
+      the elbow with the palm facing up.
+    primary_targets:
+      - forearm-flexors
+    technical_explanation: >-
+      The palm-side (wrist-flexor) forearm muscles are loaded only
+      indirectly by gripping in larger lifts, so this side of the
+      forearm often lags without direct wrist-flexion work.
+    anatomical_targets:
+      - wrist flexors
+    common_user_phrasings:
+      - "Palm side of my forearm looks thin."
+      - "Inner forearm doesn't fill out."
+      - "No mass near my elbow crease."
+
+  - id: forearm-fullness-outer
+    display_name: "Forearms look thin (back of hand side)"
+    region: forearms
+    viewpoint: side
+    visual_description: >-
+      The back-of-hand side of the forearm looks thin — the side
+      that's actually visible when the arm hangs relaxed — even when
+      grip strength feels adequate.
+    primary_targets:
+      - forearm-extensors
+    technical_explanation: >-
+      The back-of-hand-side (wrist-extensor) forearm muscles and the
+      brachioradialis are considerably weaker than the flexors and get
+      little direct work in a typical routine, so this side often lags
+      even for lifters with strong grip from pulling work.
+    anatomical_targets:
+      - wrist extensors
+      - brachioradialis
+    common_user_phrasings:
+      - "Back of my forearm looks thin."
+      - "No forearm peak when my elbow is bent."
+      - "My forearms look thin when my arm hangs down."
+
+  - id: neck-size
+    display_name: "Neck doesn't look thick"
+    region: neck
+    viewpoint: side
+    visual_description: >-
+      The neck looks narrow rather than thick, most noticeable from
+      the side or behind.
+    primary_targets:
+      - neck-thickness
+    technical_explanation: >-
+      Flagged during the 4A taxonomy audit as lower-confidence than
+      most other outcomes in this file: the supporting data itself
+      hedges on it — the lateral-neck-flexion record's own
+      mirror_effect calls that work "a niche addition for most
+      lifters," language the dataset doesn't use for its other
+      exercises. Neck extension is the primary driver of visible neck
+      thickness (back and sides); neck flexion rounds out the front
+      profile but doesn't add comparable size on its own.
+    anatomical_targets:
+      - neck extensors
+      - neck flexors
+    common_user_phrasings:
+      - "My neck doesn't look thick."
+      - "Skinny neck."
+      - "No neck size no matter what I do."

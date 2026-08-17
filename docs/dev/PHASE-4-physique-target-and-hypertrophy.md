@@ -258,3 +258,37 @@ Implemented first since the UX correction depends on it.
 ### Pending
 
 Both golden slices (chest-side-projection, triceps-back-depth) and the new multi-target slice (arm-side-thickness) all re-pass after both corrections, satisfying the corrections doc's own validation requirements (§19, implementation-order steps 5, 8-10). Per §21's implementation order, 4I (expand to the full ~21 remaining approved outcomes and 9 new physique targets from the 4A/4B proposal) is next.
+
+---
+
+# 4I — Full-body taxonomy expansion
+
+**Date:** 2026-08-17
+
+Implements the complete architect-approved taxonomy from the 4A/4B proposal (`docs/dev/reports/PHASE-4-AESTHETIC-TAXONOMY-PROPOSAL.md`), following the corrections doc's own implementation order (§21, step 6, after both golden slices and the multi-target slice re-passed).
+
+### What changed
+
+- **`data/programming/physique-targets.yaml`** — 10 new targets (15 → 25 total): `gastrocnemius`, `soleus` (calves); `gluteus-maximus`, `gluteus-medius-minimus`, `adductors` (hips); `quads` (a single generic target, not split by head or by the leg-extension "sweep" emphasis the data only weakly supports); `hamstrings` (a single generic target, deliberately not split by exercise — see the file's own note); `forearm-flexors`, `forearm-extensors`; `neck-thickness` (one of the two 4A-flagged lower-confidence outcomes, architect-approved to keep).
+- **38 exercise records tagged** with `physique_targets` across `calves.yaml` (4), `hips.yaml` (6), `quads.yaml` (16 — every record in the file), `hamstrings.yaml` (6 — every record in the file), `forearms.yaml` (4), and `neck.yaml` (2), re-deriving each mapping from the same real-data audit method used for the first taxonomy expansion (`primary_targets` annotations on each exercise record).
+- **A real region-alignment constraint surfaced and was resolved by narrowing, not by loosening the invariant.** `physique-targets.test.ts`'s existing generic check — every tagged exercise's `body_regions` must contain its target's `parent_region` — meant `gluteus-maximus` (parent_region: `hips`) could only be tagged onto hips.yaml/hamstrings.yaml exercises whose `body_regions` actually includes `hips`, not onto quads.yaml's squat/press variants (whose own `secondary_targets` do mention glutes, but whose `body_regions` is `[quads]` only). Same issue for `adductors` (parent_region: `hips`) against quads.yaml's `sumo-squat`/`sumo-deadlift`. Resolved by simply not tagging the cross-region cases rather than weakening the test or picking an inconsistent `parent_region` — `gluteus-maximus` still resolves from 5 real exercises (`hip-thrust`, `smith-machine-romanian-deadlift`, `bulgarian-split-squat-hip-dominant`, `cable-kickback-glute`, `romanian-deadlift`), and `adductors` resolves from one dedicated exercise (`hip-adduction`) — narrower than most targets, but genuine, not fabricated.
+- **`data/programming/aesthetic-outcomes.yaml`** — 23 new outcomes (3 → 26 total), covering every region in the architect-approved list: chest (3 more), shoulders (2), back (3), arms (1 more), core (2), glutes (3, a new region — `region: glutes` is a presentation label; the underlying exercises are `hips`, so each glute outcome's `primary_targets` resolves through `gluteus-maximus`/`gluteus-medius-minimus`'s own `parent_region: hips`, keeping the engine's actual `bodyRegion` correct), quads (3, including the second 4A-flagged outcome, `quad-sweep-separation`), hamstrings (1), calves (2), forearms (2), neck (1, `neck-size` — named distinctly from the `neck-thickness` *target* it resolves to, to avoid an id collision between the two files). Only `chest-front-width` (primary `mid-pec`, supporting `upper-pec`) has a real primary/supporting split — every other new outcome has exactly one primary target and no supporting targets, which the file's own updated header now states explicitly: that's what the 4A audit actually found, not an oversight.
+- **`docs/knowledge-manual/programming/README.md`** — added the previously-missing `aesthetic-outcomes.yaml` entry (an omission from 4C — the file existed and was validated/tested since then, just never documented in this human-readable index).
+- **New tests**: a `decisionEngine.test.ts` "4I full-body taxonomy expansion" block spot-checking one target per newly-reachable region (gluteus-maximus/hips, quads, hamstrings, gastrocnemius vs. soleus distinctness, forearm-flexors vs. forearm-extensors distinctness, neck-thickness, and the two single-exercise-supported targets adductors/gluteus-medius-minimus resolving to their real exercises) plus a `chest-front-width`-style primary+supporting case; a `DecisionMakerPage.test.tsx` case proving a genuinely new Appearance region ("Glutes") resolves through the real UI to the correct underlying `hips` body region and offers `hip-thrust` as a current-exercise option, not a nonexistent "glutes" region.
+
+### Decisions made
+
+- **No new physique targets or outcomes beyond the architect-approved list.** Same discipline as the first taxonomy expansion — the temptation to add, e.g., a separate hip-flexor aesthetic outcome or an inner/outer-quad split was present in the data (secondary_targets mention plenty of muscles) but excluded, per the taxonomy's own no-fake-precision guardrail and the corrections doc's explicit "do not add aesthetic outcomes simply to increase the number of options" (§14).
+- **`quad-sweep-separation` and `neck-size` kept their 4A-documented lower-confidence framing in their `technical_explanation` fields**, rather than being upgraded to read the same as every other outcome now that they're "in." The architect approved keeping them, not upgrading their evidence tier — the taxonomy stays honest about which outcomes have broad multi-exercise support versus narrower support.
+- **`region: glutes` was kept as a presentation label distinct from the underlying `hips` body region**, rather than renaming the physique targets' `parent_region` to `glutes` to match. The architect's own spec and corrections doc both explicitly list "Glutes" in the user-facing region list (§9 of the revised spec, §13 of the corrections doc), while the exercise data has always used `hips` — this is exactly the separation the engine already supports (outcome region for UI grouping vs. target `parent_region` for actual candidate-pool filtering), not a new mechanism.
+
+### Verified
+
+- Deliberately re-ran the full `npm run validate-data` after each of the three edits (targets, exercise tagging, outcomes) rather than only at the end, catching the region-alignment issue immediately after the first tagging attempt rather than after all three files were already written.
+- `npm run validate-data`: PASS, 123/123 records, 0 issues.
+- `npm run test`: **101 tests across 13 files**, all passing (up from 92) — the existing generic taxonomy-integrity tests (`physique-targets.test.ts`, `aesthetic-outcomes.test.ts`) extended automatically to cover all 25 targets and 26 outcomes with zero changes needed, by design.
+- `npx tsc -b --force`, `npm run lint` (oxlint), and `npm run build`: all clean.
+
+### Pending
+
+4J (functional entry-point preservation/integration), 4K (mobile/usability pass), 4L (full Definition-of-Done validation) remain, per the corrections doc's implementation order (§21).

@@ -19,6 +19,7 @@
   body_regions: [calves]
   primary_targets: [gastrocnemius (inner/medial and outer/lateral heads)]
   secondary_targets: [soleus]
+  physique_targets: [gastrocnemius]
   movement_patterns: [ankle plantarflexion, knee straight]
   equipment: [machine, smith machine, dumbbell, block or plate]
   exercise_type: isolation
@@ -105,6 +106,7 @@
   body_regions: [calves]
   primary_targets: [soleus]
   secondary_targets: [gastrocnemius (less than a straight-knee raise)]
+  physique_targets: [soleus]
   movement_patterns: [ankle plantarflexion, knee bent]
   equipment: [machine]
   exercise_type: isolation
@@ -171,6 +173,7 @@
   body_regions: [calves]
   primary_targets: [gastrocnemius, soleus]
   secondary_targets: []
+  physique_targets: [gastrocnemius, soleus]
   movement_patterns: [ankle plantarflexion]
   equipment: [leg press machine]
   exercise_type: isolation
@@ -227,6 +230,7 @@
   body_regions: [calves]
   primary_targets: [gastrocnemius]
   secondary_targets: [soleus]
+  physique_targets: [gastrocnemius]
   movement_patterns: [unilateral ankle plantarflexion]
   equipment: [bodyweight]
   exercise_type: isolation

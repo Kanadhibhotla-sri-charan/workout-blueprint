@@ -29,6 +29,7 @@
   body_regions: [hips, hamstrings]
   primary_targets: [hamstrings, glutes]
   secondary_targets: [spinal erectors]
+  physique_targets: [hamstrings, gluteus-maximus]
   movement_patterns: [hip hinge, moderate knee bend]
   equipment: [barbell, dumbbell, smith machine]
   exercise_type: compound
@@ -115,6 +116,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings]
   secondary_targets: [glutes (less than an RDL)]
+  physique_targets: [hamstrings]
   movement_patterns: [hip hinge, straight-leg execution]
   equipment: [barbell, dumbbell]
   exercise_type: compound
@@ -177,6 +179,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings]
   secondary_targets: []
+  physique_targets: [hamstrings]
   movement_patterns: [knee flexion, hip flexed]
   equipment: [machine]
   exercise_type: isolation
@@ -258,6 +261,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings]
   secondary_targets: [calves]
+  physique_targets: [hamstrings]
   movement_patterns: [knee flexion, hip extended]
   equipment: [machine]
   exercise_type: isolation
@@ -311,6 +315,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings]
   secondary_targets: []
+  physique_targets: [hamstrings]
   movement_patterns: [knee flexion, eccentric emphasis]
   equipment: [bodyweight, partner or anchor]
   exercise_type: isolation
@@ -392,6 +397,7 @@
   body_regions: [hamstrings]
   primary_targets: [hamstrings, glutes]
   secondary_targets: [spinal erectors (less than the spinal-extension-dominant execution)]
+  physique_targets: [hamstrings]
   movement_patterns: [hip extension, hip-hinge-dominant execution]
   equipment: [45-degree hyperextension bench]
   exercise_type: compound

@@ -309,6 +309,35 @@ describe('DecisionMakerPage', () => {
     expect(screen.queryByRole('button', { name: /get recommendation/i })).not.toBeInTheDocument();
   });
 
+  // 4I: full-body taxonomy expansion. "Glutes" is a genuinely new region
+  // label in the Appearance selector (the underlying exercise data calls
+  // it "hips" — this proves the outcome's target.parent_region correctly
+  // drives the engine's bodyRegion, independent of the outcome's own
+  // presentation-label region).
+  it('a newly expanded region (Glutes) resolves through the Appearance UI to the real underlying hips body region', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.selectOptions(screen.getByLabelText(/body area/i), 'glutes');
+    await user.selectOptions(
+      screen.getByLabelText(/how do you want it to look/i),
+      'glute-roundness'
+    );
+    await user.selectOptions(
+      screen.getByLabelText(/what are you trying to accomplish/i),
+      'build-base'
+    );
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+    await screen.findByRole('heading', { name: /what you're trying to change/i });
+    const targetBlock = document.querySelector('.decision-result-target');
+    expect(targetBlock?.querySelector('.decision-result-name')?.textContent).toBe('Gluteus Maximus');
+    // The current-exercise dropdown, and the recommendation itself, must
+    // be drawn from the real "hips" region the target resolves to, not a
+    // nonexistent "glutes" body region.
+    expect(screen.getByRole('option', { name: 'Hip Thrust' })).toBeInTheDocument();
+  });
+
   it('Appearance is selected by default — the first physique-oriented entry is aesthetic, not anatomical', async () => {
     renderPage();
 

@@ -216,6 +216,111 @@ describe('makeRecommendation — taxonomy expansion beyond Upper Pec', () => {
   });
 });
 
+// 4I: the full-body taxonomy expansion added 10 new physique targets across
+// 6 regions the engine had never resolved a target in before (glutes,
+// quads, hamstrings, calves, forearms, neck). Spot-checks across all 6,
+// rather than one test per target, since the generic data-integrity tests
+// in physique-targets.test.ts already cover every target exhaustively.
+describe('makeRecommendation — 4I full-body taxonomy expansion', () => {
+  it('gluteus-maximus (hips region) resolves to a real hip-thrust-family pick', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'hips', physiqueTarget: 'gluteus-maximus', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('gluteus-maximus');
+      expect(result.bestFit.physique_targets).toContain('gluteus-maximus');
+    }
+  });
+
+  it('the generic quads target resolves within the quads region', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'quads', physiqueTarget: 'quads', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('quads');
+      expect(result.bestFit.body_regions).toContain('quads');
+    }
+  });
+
+  it('the generic hamstrings target resolves within the hamstrings region', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'hamstrings', physiqueTarget: 'hamstrings', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('hamstrings');
+    }
+  });
+
+  it('gastrocnemius and soleus (calves) are distinct targets that narrow to different candidate pools', () => {
+    const gastroc = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'calves', physiqueTarget: 'gastrocnemius', goal: 'build-base' },
+      exercises
+    );
+    const soleus = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'calves', physiqueTarget: 'soleus', goal: 'build-base' },
+      exercises
+    );
+    expect(gastroc.status).toBe('ok');
+    expect(soleus.status).toBe('ok');
+    if (gastroc.status === 'ok' && soleus.status === 'ok') {
+      expect(gastroc.bestFit.physique_targets).toContain('gastrocnemius');
+      expect(soleus.bestFit.physique_targets).toContain('soleus');
+    }
+  });
+
+  it('forearm-flexors and forearm-extensors (forearms) resolve to opposite-side exercises', () => {
+    const flexors = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'forearms', physiqueTarget: 'forearm-flexors', goal: 'build-base' },
+      exercises
+    );
+    const extensors = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'forearms', physiqueTarget: 'forearm-extensors', goal: 'build-base' },
+      exercises
+    );
+    expect(flexors.status).toBe('ok');
+    expect(extensors.status).toBe('ok');
+    if (flexors.status === 'ok' && extensors.status === 'ok') {
+      expect(flexors.bestFit.id).toBe('wrist-curl');
+      expect(extensors.bestFit.physique_targets).toContain('forearm-extensors');
+    }
+  });
+
+  it('neck-thickness (neck region) resolves to a real neck-extension-family pick', () => {
+    const result = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'neck', physiqueTarget: 'neck-thickness', goal: 'build-base' },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('neck-thickness');
+      expect(result.bestFit.physique_targets).toContain('neck-thickness');
+    }
+  });
+
+  it('adductors and gluteus-medius-minimus resolve from their single dedicated exercises (narrow but genuine support)', () => {
+    const adductors = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'hips', physiqueTarget: 'adductors', goal: 'build-base' },
+      exercises
+    );
+    const abduction = makeRecommendation(
+      { ...BASE_INPUT, bodyRegion: 'hips', physiqueTarget: 'gluteus-medius-minimus', goal: 'build-base' },
+      exercises
+    );
+    expect(adductors.status).toBe('ok');
+    expect(abduction.status).toBe('ok');
+    if (adductors.status === 'ok' && abduction.status === 'ok') {
+      expect(adductors.bestFit.id).toBe('hip-adduction');
+      expect(abduction.bestFit.id).toBe('hip-abduction');
+    }
+  });
+});
+
 // Phase 4 Corrections §6-8: an aesthetic outcome's contributing targets
 // must not be permanently reduced to physique_targets[0] — the primary
 // target drives the recommendation, but supporting targets must broaden
@@ -275,6 +380,24 @@ describe('makeRecommendation — primary + supporting physique targets (Phase 4 
       // decorated it.
       expect(withSupporting.bestFit.coverage_categories).toContain('heavy-compound');
       expect(withSupporting.bestFit.id).toBe('close-grip-bench-press');
+    }
+  });
+
+  it('a chest-front-width-style outcome (primary mid-pec, supporting upper-pec) resolves both and folds supporting into the pool', () => {
+    const result = makeRecommendation(
+      {
+        ...BASE_INPUT,
+        bodyRegion: 'chest',
+        physiqueTarget: 'mid-pec',
+        supportingPhysiqueTargets: ['upper-pec'],
+        goal: 'build-base',
+      },
+      exercises
+    );
+    expect(result.status).toBe('ok');
+    if (result.status === 'ok') {
+      expect(result.target?.id).toBe('mid-pec');
+      expect(result.supportingTargets.map((t) => t.id)).toEqual(['upper-pec']);
     }
   });
 

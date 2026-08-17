@@ -73,6 +73,7 @@
   body_regions: [neck]
   primary_targets: [neck extensors]
   secondary_targets: [upper trapezius]
+  physique_targets: [neck-thickness]
   movement_patterns: [neck extension]
   equipment: [harness, plate, machine]
   exercise_type: isolation
@@ -136,6 +137,7 @@
   body_regions: [neck]
   primary_targets: [neck flexors]
   secondary_targets: []
+  physique_targets: [neck-thickness]
   movement_patterns: [neck flexion]
   equipment: [plate, band]
   exercise_type: isolation
