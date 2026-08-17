@@ -19,6 +19,14 @@ export interface Programming {
   frequencyPerWeek: [number, number];
   progressionExplanation: string;
   intensityTechnique: IntensityTechnique | null;
+  /**
+   * Contextual explanation of the intensityTechnique decision (Phase 4B
+   * §19-20) — why this technique fits this specific exercise's fatigue/
+   * skill/stability profile, or, when intensityTechnique is null, why
+   * none of the catalog's techniques were eligible. Never empty: "no
+   * technique" is always explained, not just silently absent.
+   */
+  intensityTechniqueContext: string;
   /** The classified Programming Profile driving this exercise's guidance (Phase 4B §10-11). */
   profile: ProgrammingProfile;
 }
@@ -101,31 +109,86 @@ function resolveFrequency(maxFatigueCost: DemandLevel | null): [number, number] 
   return maxFatigueCost === 'low' ? [low, low] : [low, high];
 }
 
-// Deterministic v1 suggestion rule documented in
-// data/programming/intensity-techniques.yaml: suggest drop-set, and only
-// drop-set, when the exercise is isolation, its fatigue_cost is at most
-// what the technique allows, and the user hasn't asked to keep fatigue
-// low (which the technique would work against).
-function selectIntensityTechnique(
-  exercise: Exercise,
-  maxFatigueCost: DemandLevel | null
-): IntensityTechnique | null {
-  if (maxFatigueCost === 'low') return null;
+function demandIndex(level: DemandLevel | string): number {
+  return DEMAND_LEVELS.indexOf(level as (typeof DEMAND_LEVELS)[number]);
+}
 
-  const dropSet = programming.intensityTechniques.find((t) => t.id === 'drop-set');
-  if (!dropSet) return null;
-  if (!dropSet.suitable_exercise_types.includes(exercise.exercise_type)) return null;
+// Eligibility (Phase 4B §16-17): a technique is eligible only when the
+// exercise's own exercise_type/fatigue_cost/skill_demand/stability_demand
+// all fall within what that specific technique's catalog entry tolerates
+// — checked against all three thresholds, not just fatigue, so (for
+// example) a heavy, high-skill, high-stability compound like a
+// conventional deadlift is correctly ineligible for every technique even
+// though "compound" alone would pass rest-pause's exercise_type check.
+function isTechniqueEligible(technique: IntensityTechnique, exercise: Exercise): boolean {
+  if (!technique.suitable_exercise_types.includes(exercise.exercise_type)) return false;
+  if (demandIndex(exercise.fatigue_cost) > demandIndex(technique.suitable_when_fatigue_cost_at_most)) return false;
+  if (demandIndex(exercise.skill_demand) > demandIndex(technique.suitable_when_skill_demand_at_most)) return false;
+  if (demandIndex(exercise.stability_demand) > demandIndex(technique.suitable_when_stability_demand_at_most)) {
+    return false;
+  }
+  return true;
+}
 
-  const exerciseFatigueIndex = DEMAND_LEVELS.indexOf(exercise.fatigue_cost as (typeof DEMAND_LEVELS)[number]);
-  const maxAllowedIndex = DEMAND_LEVELS.indexOf(dropSet.suitable_when_fatigue_cost_at_most);
-  if (exerciseFatigueIndex > maxAllowedIndex) return null;
+// How much headroom the exercise has below a technique's thresholds,
+// summed across all three demand dimensions — 0 means the exercise sits
+// exactly at every one of the technique's limits (the tightest, most
+// specifically-suited fit); a larger number means the technique's
+// tolerance is looser than this exercise actually needs.
+function eligibilitySlack(technique: IntensityTechnique, exercise: Exercise): number {
+  return (
+    (demandIndex(technique.suitable_when_fatigue_cost_at_most) - demandIndex(exercise.fatigue_cost)) +
+    (demandIndex(technique.suitable_when_skill_demand_at_most) - demandIndex(exercise.skill_demand)) +
+    (demandIndex(technique.suitable_when_stability_demand_at_most) - demandIndex(exercise.stability_demand))
+  );
+}
 
-  return dropSet;
+// Ranking (Phase 4B §16/§18): among eligible techniques, the one whose
+// thresholds fit this exercise most tightly (lowest slack) wins — the
+// technique this exercise is most specifically suited to, rather than
+// always the same catalog-order default. Ties broken by catalog order
+// (drop-set, rest-pause, myo-reps), a fixed and explainable tiebreak, not
+// a blended score.
+function eligibleTechniquesRanked(exercise: Exercise): IntensityTechnique[] {
+  return programming.intensityTechniques
+    .filter((technique) => isTechniqueEligible(technique, exercise))
+    .map((technique, catalogIndex) => ({ technique, catalogIndex, slack: eligibilitySlack(technique, exercise) }))
+    .sort((a, b) => a.slack - b.slack || a.catalogIndex - b.catalogIndex)
+    .map((entry) => entry.technique);
+}
+
+// Contextual explanation (Phase 4B §19) — built from this exercise's own
+// resolved profile and demand levels, not generic canned copy, so it
+// changes with the exercise rather than repeating the same sentence for
+// every recommendation.
+function explainIntensityTechnique(technique: IntensityTechnique, exercise: Exercise, profile: ProgrammingProfile): string {
+  return (
+    `${technique.name} fits this exercise: it's a ${profile.name.toLowerCase()} movement with ${exercise.fatigue_cost} ` +
+    `fatigue cost, ${exercise.skill_demand} skill demand, and ${exercise.stability_demand} stability demand — all ` +
+    `within what ${technique.name} tolerates. ${technique.when_it_may_help}`
+  );
+}
+
+function explainNoIntensityTechnique(exercise: Exercise, maxFatigueCost: DemandLevel | null): string {
+  if (maxFatigueCost === 'low') {
+    return (
+      'No intensity technique is recommended here — you asked to keep fatigue low, and every technique in the ' +
+      'catalog adds meaningful local fatigue on top of the working sets themselves.'
+    );
+  }
+  return (
+    `No intensity technique is recommended here — this exercise's ${exercise.fatigue_cost} fatigue cost, ` +
+    `${exercise.skill_demand} skill demand, and ${exercise.stability_demand} stability demand exceed what every ` +
+    "technique in the catalog tolerates. Sufficient stimulus is already available from the working sets " +
+    'themselves; adding a technique here would mainly add fatigue and technical risk without a clear benefit.'
+  );
 }
 
 export function buildProgramming(exercise: Exercise, maxFatigueCost: DemandLevel | null): Programming {
   const { rir, progression } = programming.globalPrinciples;
   const profile = resolveProgrammingProfile(exercise);
+  const eligible = maxFatigueCost === 'low' ? [] : eligibleTechniquesRanked(exercise);
+  const intensityTechnique = eligible[0] ?? null;
   return {
     repRange: resolveRepRange(exercise, profile),
     profile,
@@ -135,6 +198,9 @@ export function buildProgramming(exercise: Exercise, maxFatigueCost: DemandLevel
     weeklyVolumeSets: resolveWeeklyVolume(maxFatigueCost),
     frequencyPerWeek: resolveFrequency(maxFatigueCost),
     progressionExplanation: progression.explanation,
-    intensityTechnique: selectIntensityTechnique(exercise, maxFatigueCost),
+    intensityTechnique,
+    intensityTechniqueContext: intensityTechnique
+      ? explainIntensityTechnique(intensityTechnique, exercise, profile)
+      : explainNoIntensityTechnique(exercise, maxFatigueCost),
   };
 }

@@ -94,6 +94,8 @@ export interface IntensityTechnique {
   fatigue_time_implications: string;
   suitable_exercise_types: string[];
   suitable_when_fatigue_cost_at_most: 'low' | 'medium' | 'high';
+  suitable_when_skill_demand_at_most: 'low' | 'medium' | 'high';
+  suitable_when_stability_demand_at_most: 'low' | 'medium' | 'high';
 }
 
 export interface AestheticOutcome {

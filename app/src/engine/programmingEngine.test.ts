@@ -119,3 +119,70 @@ describe('buildProgramming — fatigue-constraint interaction', () => {
     expect(programming.intensityTechnique?.id).toBe('drop-set');
   });
 });
+
+// Phase 4B §16-20/§25 Test D: deterministic technique eligibility and
+// ranking, replacing the old "always drop-set for isolation" rule.
+describe('intensity-technique eligibility and ranking (Phase 4B §25 Test D)', () => {
+  it('different eligible exercises receive different technique recommendations', () => {
+    // low/low/low across fatigue, skill, and stability — the tightest
+    // possible fit for myo-reps' own low/low/low thresholds, so it wins
+    // over drop-set/rest-pause's looser (but also eligible) thresholds.
+    const cableHammerCurl = getExerciseById('cable-hammer-curl-rope')!;
+    expect([cableHammerCurl.fatigue_cost, cableHammerCurl.skill_demand, cableHammerCurl.stability_demand]).toEqual([
+      'low',
+      'low',
+      'low',
+    ]);
+    expect(buildProgramming(cableHammerCurl, null).intensityTechnique?.id).toBe('myo-reps');
+
+    // medium skill demand rules out myo-reps (its skill ceiling is low),
+    // leaving drop-set/rest-pause tied on slack — catalog order picks
+    // drop-set.
+    const dragCurl = getExerciseById('drag-curl')!;
+    expect(dragCurl.skill_demand).toBe('medium');
+    expect(buildProgramming(dragCurl, null).intensityTechnique?.id).toBe('drop-set');
+  });
+
+  it('no technique can be a valid recommendation for a heavy, high-skill, high-stability compound movement', () => {
+    const deadlift = getExerciseById('conventional-deadlift')!;
+    expect([deadlift.fatigue_cost, deadlift.skill_demand, deadlift.stability_demand]).toEqual([
+      'high',
+      'high',
+      'high',
+    ]);
+    const result = buildProgramming(deadlift, null);
+    expect(result.intensityTechnique).toBeNull();
+    expect(result.intensityTechniqueContext.length).toBeGreaterThan(0);
+    expect(result.intensityTechniqueContext).not.toMatch(/keep fatigue low/i);
+  });
+
+  it('a moderate-fatigue, moderate-stability compound can still be eligible for rest-pause even though drop-set and myo-reps are not', () => {
+    // Compound exercise_type rules out drop-set/myo-reps (isolation-only)
+    // regardless of its demand levels; rest-pause allows compound, and
+    // this exercise's medium fatigue/skill and low stability all sit
+    // within rest-pause's medium/medium/medium thresholds.
+    const smithRdl = getExerciseById('smith-machine-romanian-deadlift')!;
+    expect(smithRdl.exercise_type).toBe('compound');
+    const result = buildProgramming(smithRdl, null);
+    expect(result.intensityTechnique?.id).toBe('rest-pause');
+  });
+
+  it('Drop Set is not the universal answer — myo-reps, rest-pause, and none are all reachable outcomes', () => {
+    const outcomes = new Set(
+      [
+        getExerciseById('cable-hammer-curl-rope')!,
+        getExerciseById('smith-machine-romanian-deadlift')!,
+        getExerciseById('conventional-deadlift')!,
+      ].map((exercise) => buildProgramming(exercise, null).intensityTechnique?.id ?? 'none')
+    );
+    expect(outcomes).toEqual(new Set(['myo-reps', 'rest-pause', 'none']));
+  });
+
+  it('the technique explanation is exercise-specific, not identical boilerplate across different exercises', () => {
+    const a = buildProgramming(getExerciseById('cable-hammer-curl-rope')!, null).intensityTechniqueContext;
+    const b = buildProgramming(getExerciseById('drag-curl')!, null).intensityTechniqueContext;
+    expect(a).not.toBe(b);
+    expect(a.length).toBeGreaterThan(0);
+    expect(b.length).toBeGreaterThan(0);
+  });
+});

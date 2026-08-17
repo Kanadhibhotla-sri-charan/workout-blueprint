@@ -36,6 +36,8 @@ techniques:
       when it requires reloading a barbell.
     suitable_exercise_types: [isolation]
     suitable_when_fatigue_cost_at_most: medium
+    suitable_when_skill_demand_at_most: medium
+    suitable_when_stability_demand_at_most: medium
 
   - id: rest-pause
     name: Rest-Pause
@@ -58,6 +60,12 @@ techniques:
       for the rest periods, though less than a fully separate set.
     suitable_exercise_types: [isolation, compound]
     suitable_when_fatigue_cost_at_most: medium
+    suitable_when_skill_demand_at_most: medium
+    # Stability, not just fatigue, is what rules out a heavy deadlift or
+    # squat here even though "compound" is otherwise eligible per
+    # suitable_exercise_types — a brief rest doesn't reduce how much
+    # whole-body stabilization the next cluster still demands.
+    suitable_when_stability_demand_at_most: medium
 
   - id: myo-reps
     name: Myo-Reps
@@ -79,12 +87,36 @@ techniques:
       fatigue.
     suitable_exercise_types: [isolation]
     suitable_when_fatigue_cost_at_most: low
+    # Myo-reps depends on the trainee's own judgment of proximity to
+    # failure more than the other two techniques (see when_not_to_use
+    # above) — the strictest skill/stability ceiling of the three reflects
+    # that, not a claim that skill/stability_demand literally measure
+    # failure-judgment ability.
+    suitable_when_skill_demand_at_most: low
+    suitable_when_stability_demand_at_most: low
 
-# Deterministic v1 suggestion rule (implemented in
-# app/src/engine/programmingEngine.ts): suggest exactly one technique —
-# drop-set, the simplest and most broadly applicable of the three — when
-# the chosen exercise is isolation, its fatigue_cost is low or medium, and
-# no active user fatigue constraint (maxFatigueCost) would be exceeded by
-# adding it. Otherwise suggest none. This is a strict predicate, not a
-# ranked choice among the three catalog entries — expanding to a real
-# choice among techniques is 4H scope, not v1.
+# Deterministic eligibility + ranking model (Phase 4B §16-20, implemented
+# in app/src/engine/programmingEngine.ts):
+#
+#   exercise_type + fatigue_cost + skill_demand + stability_demand
+#           |
+#           v
+#   eligible techniques (every catalog entry whose suitable_* thresholds
+#   the exercise's own attributes satisfy, and whose fatigue addition the
+#   user's maxFatigueCost constraint tolerates)
+#           |
+#           v
+#   first eligible technique in the list order above wins (drop-set, then
+#   rest-pause, then myo-reps) — a fixed, explainable priority, never a
+#   blended score
+#           |
+#           v
+#   recommended technique, or none, when the eligible set is empty
+#
+# This replaces the old "always suggest drop-set for any low/medium-
+# fatigue isolation exercise" rule: eligibility is now checked against all
+# three techniques' full suitable_* criteria (not just drop-set's), so a
+# heavy, high-skill, high-stability compound movement (e.g. a heavy
+# deadlift) is correctly ineligible for all three, and different exercises
+# can land on different recommended techniques — see
+# programmingEngine.test.ts's "intensity technique eligibility" tests.

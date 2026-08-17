@@ -447,3 +447,40 @@ Addresses Phase 4B Issue #2 (§8-14): programming guidance was driven only by `e
 ### Pending
 
 4B-7/4B-8/4B-9 (intensity-technique eligibility model) and 4B-10/4B-11 (UI refinement + full regression pass) remain.
+
+---
+
+## 4B-7/4B-8/4B-9 — Intensity-technique eligibility model
+
+**Date:** 2026-08-17
+
+Addresses Phase 4B Issue #3 (§15-22): the engine had three techniques in its catalog (drop-set, rest-pause, myo-reps) but the selection logic only ever checked drop-set's own criteria — rest-pause and myo-reps were unreachable dead data, and the result was, in the architect's words, "effectively defaults to Drop Set."
+
+### What changed
+
+- **`data/programming/intensity-techniques.yaml`** — each of the 3 techniques gains two new eligibility fields, `suitable_when_skill_demand_at_most` and `suitable_when_stability_demand_at_most` (drop-set: medium/medium; rest-pause: medium/medium; myo-reps: low/low — the strictest, matching its `when_not_to_use` text's emphasis on the trainee's own failure-proximity judgment). Rewrote the trailing comment from the old "v1 suggestion rule: always drop-set" description to the real eligibility → ranking → recommendation pipeline.
+- **`app/src/types/programming.ts`** — `IntensityTechnique` gains the two new fields.
+- **`app/src/engine/programmingEngine.ts`**:
+  - `isTechniqueEligible(technique, exercise)`: a technique is eligible only when the exercise's `exercise_type` is in the technique's `suitable_exercise_types` *and* its `fatigue_cost`/`skill_demand`/`stability_demand` are all at or below that technique's own thresholds — checked against all three technique's full criteria, not just fatigue and not just drop-set's. This alone makes a heavy, high-skill, high-stability compound movement (e.g. Conventional Deadlift) correctly ineligible for every technique, matching the spec's own §18 "Heavy Deadlift: not appropriate" worked example.
+  - `eligibilitySlack(technique, exercise)`: sums how much headroom the exercise has below each of a technique's three thresholds. 0 means the exercise sits exactly at every limit (the tightest, most specifically-suited fit).
+  - `eligibleTechniquesRanked(exercise)`: filters to eligible techniques, ranks by ascending slack (tightest fit first), ties broken by catalog order (drop-set, rest-pause, myo-reps) — a fixed, explainable priority per §7's "Do Not Overengineer Ranking" guardrail, never a blended score. The tightest-fit rule is what lets myo-reps actually win for the exercises it's most suited to (very low fatigue/skill/stability) instead of always being shadowed by drop-set's looser (but also technically eligible) thresholds.
+  - `explainIntensityTechnique()`/`explainNoIntensityTechnique()`: build a contextual explanation from the exercise's own resolved Programming Profile name and its actual fatigue/skill/stability levels — e.g. "Myo-Reps fits this exercise: it's a moderate hypertrophy isolation movement with low fatigue cost, low skill demand, and low stability demand — all within what Myo-Reps tolerates. [technique's own when_it_may_help text]" — rather than the same generic copy regardless of which exercise was recommended (§19's explicit instruction: avoid "Drop sets add more work in less time," explain the context instead). The "no technique" case is explained too, never silently empty (§20's "This is important" — no technique is a legitimate, explained outcome, not an absence of output).
+  - `Programming` gains `intensityTechniqueContext: string` (always non-empty, whether or not a technique was recommended).
+  - `buildProgramming()` rewired to compute the full eligible/ranked list and take the top entry (or null), instead of a drop-set-only predicate.
+- **`app/src/engine/programmingEngine.test.ts`** — new "intensity-technique eligibility and ranking (Phase 4B §25 Test D)" block: different exercises receive different technique recommendations (Cable Hammer Curl Rope → myo-reps; Drag Curl, whose medium skill demand rules out myo-reps → drop-set); a heavy/high-skill/high-stability compound (Conventional Deadlift) gets no technique, with a real, non-boilerplate explanation; a moderate compound (Smith Machine Romanian Deadlift) is eligible for rest-pause specifically, even though drop-set/myo-reps are isolation-only; a three-exercise check that myo-reps, rest-pause, and "none" are all reachable outcomes (Drop Set is not universal); technique explanations differ by exercise rather than repeating the same string.
+
+### Decisions made
+
+- **Ranked by tightest-fit slack, not a fixed technique-priority order.** An earlier draft simply picked the first eligible technique in catalog order (drop-set, rest-pause, myo-reps). Simulating it against the dataset showed myo-reps would never actually win: every exercise meeting myo-reps' stricter low/low/low thresholds also automatically meets drop-set's looser medium/medium/medium thresholds, so drop-set (checked first) would always shadow it — recreating a milder version of the exact "effectively defaults to one technique" bug this step exists to fix. The slack-based ranking (reward the technique whose thresholds the exercise fits most tightly) is still a fixed, deterministic, explainable rule — just one that accounts for how specifically an exercise matches a technique instead of only whether it qualifies at all.
+- **Eligibility checked against all three demand dimensions (fatigue, skill, stability) per technique, not fatigue alone.** The old rule only ever compared `fatigue_cost`. Adding skill/stability thresholds is what makes the Heavy-Deadlift-style "none appropriate" case reachable through the general rule (rest-pause's `suitable_exercise_types` includes compound, so fatigue alone wouldn't exclude every heavy compound the way stability does) rather than needing a special-cased "no technique for heavy-compound" rule bolted on separately.
+- **`maxFatigueCost === 'low'` still suppresses every technique as a blanket gate**, not folded into the per-technique slack/threshold system. Every technique's own fatigue/time-implications text says it adds real local fatigue on top of the exercise itself, regardless of how low that exercise's own baseline fatigue cost is — so a user who explicitly asked to keep fatigue low shouldn't get a technique recommendation just because the chosen exercise happens to have a very low fatigue_cost. This mirrors the pre-existing rule (kept, not changed) rather than introducing a new nuance the spec didn't ask for.
+
+### Verified
+
+- `npm run test`: **126 tests across 14 files**, all passing (up from 121).
+- `npx tsc -b --force`, `npm run lint` (oxlint), `npm run build`, and `npm run validate-data`: all clean.
+- Manually traced the eligibility/ranking arithmetic by hand against 5 real exercises (Cable Hammer Curl Rope, Drag Curl, Conventional Deadlift, Smith Machine Romanian Deadlift, Cable Fly) before writing the corresponding tests, confirming the slack-ranking behaves as designed rather than only trusting the test assertions after the fact.
+
+### Pending
+
+4B-10/4B-11 (UI refinement to surface `profile`/`guidance_note`/`targetProgrammingContext`/`intensityTechniqueContext`, plus a full regression pass across all 5 golden test categories A-E) remain — the final step.
