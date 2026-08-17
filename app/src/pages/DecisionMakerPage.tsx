@@ -585,6 +585,31 @@ function DecisionResultView({
         <p>{result.why}</p>
       </div>
 
+      {result.target && (
+        <div className="decision-result-block decision-result-why">
+          <h2>
+            <span aria-hidden="true">🔍</span> Why this exercise?
+          </h2>
+          <p>
+            <strong>Primary target:</strong> {result.target.name} —{' '}
+            {result.bestFitTargetMatch === 'primary'
+              ? '✓ Direct match'
+              : 'not directly tagged to this pick yet'}
+          </p>
+          {result.bestFitTargetMatch === 'supporting' &&
+            (() => {
+              const matchedSupportingTarget = result.supportingTargets.find((supportingTarget) =>
+                result.bestFit.physique_targets?.includes(supportingTarget.id)
+              );
+              return matchedSupportingTarget ? (
+                <p>
+                  <strong>Supporting target:</strong> {matchedSupportingTarget.name} — ✓ Secondary contribution
+                </p>
+              ) : null;
+            })()}
+        </div>
+      )}
+
       <div className="decision-result-block">
         <h2>
           <span aria-hidden="true">🧬</span> Stimulus
@@ -596,6 +621,9 @@ function DecisionResultView({
         <h2>
           <span aria-hidden="true">📊</span> Programming
         </h2>
+        <p className="field-hint">
+          <strong>Baseline</strong> — {programming.profile.name}
+        </p>
         <dl className="demand-grid">
           <div>
             <dt>Reps</dt>
@@ -617,17 +645,28 @@ function DecisionResultView({
         <p className="field-hint">{programming.repRange.reason}</p>
         <p className="field-hint">{programming.rirGuidance}</p>
         <p className="field-hint">{programming.progressionExplanation}</p>
+        <p>{programming.profile.guidance_note}</p>
+        {result.targetProgrammingContext && (
+          <p className="field-hint">
+            <strong>For this target</strong> — {result.targetProgrammingContext}
+          </p>
+        )}
       </div>
 
-      {programming.intensityTechnique && (
-        <div className="decision-result-block">
-          <h2>
-            <span aria-hidden="true">⚡</span> Optional: {programming.intensityTechnique.name}
-          </h2>
-          <p>{programming.intensityTechnique.when_it_may_help}</p>
-          <p className="field-hint">{programming.intensityTechnique.when_not_to_use}</p>
-        </div>
-      )}
+      <div className="decision-result-block">
+        <h2>
+          <span aria-hidden="true">⚡</span> Intensity technique
+        </h2>
+        {programming.intensityTechnique ? (
+          <>
+            <p className="decision-result-name">{programming.intensityTechnique.name}</p>
+            <p>{programming.intensityTechniqueContext}</p>
+            <p className="field-hint">{programming.intensityTechnique.when_not_to_use}</p>
+          </>
+        ) : (
+          <p className="field-hint">{programming.intensityTechniqueContext}</p>
+        )}
+      </div>
 
       {result.alternative && (
         <div className="decision-result-block">

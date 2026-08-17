@@ -414,6 +414,50 @@ describe('makeRecommendation — primary + supporting physique targets (Phase 4 
     }
   });
 
+  // Test E (§25): "If the explanation identifies target A as primary but
+  // the recommendation only addresses target B, the test fails." Checked
+  // as a structural invariant — bestFitTargetMatch must always agree with
+  // which of bestFit's own physique_targets actually matches — across
+  // every scenario this file already exercises where a target resolved,
+  // so a future ranking change can't silently desync the two again.
+  it('bestFitTargetMatch is always internally consistent with what bestFit is actually tagged with (explanation consistency)', () => {
+    const scenarios: Array<Pick<DecisionInput, 'bodyRegion' | 'physiqueTarget' | 'supportingPhysiqueTargets' | 'goal' | 'equipmentAvailable'>> = [
+      { bodyRegion: 'chest', physiqueTarget: 'upper-pec', supportingPhysiqueTargets: null, goal: 'build-base', equipmentAvailable: null },
+      {
+        bodyRegion: 'arms',
+        physiqueTarget: 'brachialis-arm-thickness',
+        supportingPhysiqueTargets: ['triceps'],
+        goal: 'build-base',
+        equipmentAvailable: null,
+      },
+      {
+        bodyRegion: 'arms',
+        physiqueTarget: 'brachialis-arm-thickness',
+        supportingPhysiqueTargets: ['triceps'],
+        goal: 'build-base',
+        equipmentAvailable: ['dip bars', 'bodyweight'],
+      },
+    ];
+
+    for (const scenario of scenarios) {
+      const result = makeRecommendation({ ...BASE_INPUT, ...scenario }, exercises);
+      expect(result.status).toBe('ok');
+      if (result.status !== 'ok') continue;
+
+      const taggedPrimary = result.target ? (result.bestFit.physique_targets?.includes(result.target.id) ?? false) : false;
+      const taggedSupporting = result.supportingTargets.some((t) => result.bestFit.physique_targets?.includes(t.id));
+
+      if (result.bestFitTargetMatch === 'primary') {
+        expect(taggedPrimary).toBe(true);
+      } else if (result.bestFitTargetMatch === 'supporting') {
+        expect(taggedPrimary).toBe(false);
+        expect(taggedSupporting).toBe(true);
+      } else {
+        expect(taggedPrimary).toBe(false);
+      }
+    }
+  });
+
   it('a chest-front-width-style outcome (primary mid-pec, supporting upper-pec) resolves both and folds supporting into the pool', () => {
     const result = makeRecommendation(
       {

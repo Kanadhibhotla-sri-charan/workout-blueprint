@@ -432,4 +432,91 @@ describe('DecisionMakerPage', () => {
     expect(screen.getByLabelText(/body area/i)).toBeInTheDocument();
     expect(screen.queryByLabelText(/region or physique target/i)).not.toBeInTheDocument();
   });
+
+  // 4B-10 (Phase 4B §23): "Why this exercise?" makes primary/supporting
+  // target provenance auditable in the UI, not just available on the
+  // engine result object.
+  describe('4B-10: reasoning and programming-profile visibility', () => {
+    it('shows a direct-match checkmark against the primary target when bestFit is a primary-target pick', async () => {
+      const user = userEvent.setup();
+      renderPage();
+
+      await user.selectOptions(screen.getByLabelText(/body area/i), 'arms');
+      await user.selectOptions(screen.getByLabelText(/how do you want it to look/i), 'arm-side-thickness');
+      await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+      await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+      await screen.findByRole('heading', { name: /why this exercise/i });
+      const whyBlock = document.querySelector('.decision-result-why');
+      expect(whyBlock?.textContent).toMatch(/Primary target:\s*Brachialis \/ Arm Thickness/);
+      expect(whyBlock?.textContent).toMatch(/✓ Direct match/);
+      // Cable Hammer Curl (Rope) is the primary-target winner (Phase 4B
+      // §3-4 regression) — no supporting-target line should be shown when
+      // bestFitTargetMatch is 'primary', since Triceps didn't win this pick.
+      expect(whyBlock?.textContent).not.toMatch(/Supporting target/);
+    });
+
+    it('shows a supporting-target secondary-contribution line when bestFit is a supporting-target pick', async () => {
+      const user = userEvent.setup();
+      renderPage();
+
+      await user.selectOptions(screen.getByLabelText(/body area/i), 'arms');
+      await user.selectOptions(screen.getByLabelText(/how do you want it to look/i), 'arm-side-thickness');
+      await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+      // Restrict equipment to only what Dip (Triceps-Biased) needs, so
+      // every brachialis (primary-target) exercise is filtered out and the
+      // supporting-target triceps exercise must win instead (mirrors the
+      // engine-level regression test in decisionEngine.test.ts).
+      await user.click(screen.getByLabelText(/limit by equipment/i));
+      await user.selectOptions(screen.getByLabelText(/equipment available/i), ['dip bars', 'bodyweight']);
+      await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+      await screen.findByRole('heading', { name: /why this exercise/i });
+      const whyBlock = document.querySelector('.decision-result-why');
+      expect(whyBlock?.textContent).toMatch(/Primary target:\s*Brachialis \/ Arm Thickness/);
+      expect(whyBlock?.textContent).toMatch(/not directly tagged to this pick yet/);
+      expect(whyBlock?.textContent).toMatch(/Supporting target:\s*Triceps/);
+      expect(whyBlock?.textContent).toMatch(/✓ Secondary contribution/);
+    });
+
+    it('the Programming block surfaces the resolved Programming Profile name and a target-aware "for this target" note', async () => {
+      const user = userEvent.setup();
+      renderPage();
+
+      await user.selectOptions(screen.getByLabelText(/body area/i), 'arms');
+      await user.selectOptions(screen.getByLabelText(/how do you want it to look/i), 'arm-side-thickness');
+      await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+      await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+      await screen.findByRole('heading', { name: /programming/i });
+      const programmingBlocks = Array.from(document.querySelectorAll('.decision-result-block'));
+      const programmingBlock = programmingBlocks.find((block) =>
+        block.querySelector('h2')?.textContent?.match(/programming/i)
+      );
+      expect(programmingBlock?.textContent).toMatch(/Baseline/);
+      // Cable Hammer Curl (Rope) classifies as moderate-hypertrophy-isolation.
+      expect(programmingBlock?.textContent).toMatch(/Moderate hypertrophy isolation/);
+      expect(programmingBlock?.textContent).toMatch(/For this target/);
+      expect(programmingBlock?.textContent).toMatch(/primary target driving this recommendation/i);
+    });
+
+    it('the Intensity technique block always renders, explaining a real pick or explaining why none applies', async () => {
+      const user = userEvent.setup();
+      renderPage();
+
+      await useAdvancedMode(user);
+      await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'region:back');
+      await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+      await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+
+      await screen.findByRole('heading', { name: /intensity technique/i });
+      const intensityBlock = Array.from(document.querySelectorAll('.decision-result-block')).find((block) =>
+        block.querySelector('h2')?.textContent?.match(/intensity technique/i)
+      );
+      // Either a real technique name plus a non-generic contextual
+      // explanation, or an explicit "no technique" explanation — never a
+      // silently absent block (Phase 4B §20).
+      expect(intensityBlock?.textContent?.length).toBeGreaterThan('Intensity technique'.length);
+    });
+  });
 });

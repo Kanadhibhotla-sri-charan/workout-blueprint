@@ -484,3 +484,53 @@ Addresses Phase 4B Issue #3 (§15-22): the engine had three techniques in its ca
 ### Pending
 
 4B-10/4B-11 (UI refinement to surface `profile`/`guidance_note`/`targetProgrammingContext`/`intensityTechniqueContext`, plus a full regression pass across all 5 golden test categories A-E) remain — the final step.
+
+---
+
+## 4B-10/4B-11 — UI refinement + full regression pass
+
+**Date:** 2026-08-17
+
+Final step: surface everything the previous three steps added to the engine result (`bestFitTargetMatch`, `targetProgrammingContext`, `profile`/`guidance_note`, `intensityTechniqueContext`) in the actual Decision Maker UI, per §23-24's "make the reasoning visible," then validate the whole of Phase 4B against its own acceptance criteria (§26) and golden tests (§25 Tests A-E).
+
+### What changed
+
+- **`app/src/pages/DecisionMakerPage.tsx`**:
+  - New **"Why this exercise?"** block (§23), shown whenever a physique target resolved: states the primary target with "✓ Direct match" when `bestFitTargetMatch === 'primary'`, or "not directly tagged to this pick yet" otherwise; when `bestFitTargetMatch === 'supporting'`, adds a second line naming the specific supporting target that matched with "✓ Secondary contribution" (found by checking which of `supportingTargets` the actual `bestFit.physique_targets` includes — not just showing the first supporting target in the list, so the line is never wrong when there's more than one).
+  - **Programming block** restructured toward §24's Baseline → target-context shape: a "Baseline — {profile.name}" line above the existing reps/RIR/weekly-sets/frequency grid; `profile.guidance_note` rendered as its own paragraph; `targetProgrammingContext` rendered as a "For this target — ..." line when a target resolved. "Your current routine" (§24's third tier) is deliberately not implemented — see the 4B-6 entry above for why.
+  - **Intensity technique block** now always renders (previously conditional on `intensityTechnique` being non-null) — when one was recommended, shows its name plus the new contextual `intensityTechniqueContext` explanation instead of the old generic `when_it_may_help` copy; when none applies, shows `intensityTechniqueContext`'s "no technique" explanation instead of the block disappearing. This is the UI-level fix for §20's "no technique is a legitimate, explained outcome," matching what `programmingEngine.ts` already computes.
+- **`app/src/pages/DecisionMakerPage.test.tsx`** — new "4B-10: reasoning and programming-profile visibility" block: the primary-match checkmark renders (and no supporting-target line appears) for the arm-side-thickness golden slice; the supporting-target secondary-contribution line renders when an equipment constraint forces a supporting-target win (mirrors the engine-level Test B regression, driven through the real equipment-multiselect UI); the Programming block shows the resolved profile name and a target-aware note; the Intensity technique block always renders non-empty content.
+- **`app/src/engine/decisionEngine.test.ts`** — added the missing named **Test E** (§25 — "explanation consistency... if the explanation identifies target A as primary but the recommendation only addresses target B, the test fails"): a structural-invariant check run across three already-covered scenarios (single target, multi-target primary win, multi-target supporting win) confirming `bestFitTargetMatch` always agrees with which of `bestFit`'s own `physique_targets` actually matches `target`/`supportingTargets` — not just spot-checked in the two scenarios that happened to already have assertions for it.
+- Manually verified in a real browser (headless Chromium against the Vite dev server, both desktop and a 375px mobile viewport) rather than trusting the test suite alone: the arm-side-thickness golden slice (primary-match checkmark, Moderate Hypertrophy Isolation baseline, Myo-Reps recommended with a contextual explanation) and the equipment-constrained supporting-target case (secondary-contribution line, "no intensity technique" explanation naming the specific exceeded thresholds) both render correctly with no horizontal overflow at 375px.
+
+### Phase 4B Acceptance Criteria (spec §26) — final walkthrough
+
+- [x] Primary target relevance dominates generic stimulus ranking — `targetMatchTier`/`sortByTargetTier` (4B-1).
+- [x] Candidate exercises retain primary/supporting target provenance — `bestFitTargetMatch` (4B-2), now also shown in the UI (4B-10).
+- [x] Direct primary-target exercises are prioritized appropriately — Test A, engine + UI.
+- [x] Supporting-target exercises remain available — Test B, engine + UI.
+- [x] The engine no longer allows a generic stimulus tag to routinely override primary-target relevance — same tier sort; regression test asserts Close-Grip Bench Press's heavy-compound tag does not beat a reachable brachialis exercise.
+- [x] The "arms look thin from the side" case recommends at least one direct brachialis exercise — golden UI test asserts Cable Hammer Curl (Rope), a brachialis-tagged exercise, wins.
+- [x] Technical explanations and recommendations are consistent — Test E, engine-level structural invariant.
+- [x] Programming is no longer solely based on broad exercise type — Programming Profile classification also uses `stability_demand` (`elevated-stability-isolation`) and lengthened/shortened-position tags, not just `exercise_type`/`coverage_categories` alone.
+- [x] Reusable programming profiles exist — 8 profiles in `programming-profiles.yaml` (4B-4).
+- [x] Existing exercise metadata contributes to programming-profile assignment — classification uses only pre-existing fields, no invented scores (4B-5).
+- [x] Target priority can influence programming — `targetProgrammingContext` (4B-6), now shown in the UI.
+- [ ] **Current training context can influence programming where already supported** — deliberately not implemented. The app has no routine/volume-tracking state at all (the Decision Maker produces one recommendation at a time, not a weekly plan), so there is no "current training context" for programming to read from yet — this isn't a case of the feature existing and Phase 4B failing to wire it in ("where already supported" not being met because nothing supports it yet). Documented as a real gap, not silently skipped; a future phase that adds routine tracking would be the natural place to close it.
+- [x] Intensity techniques have explicit eligibility/suitability logic — `isTechniqueEligible` across all 3 techniques' fatigue/skill/stability thresholds (4B-7).
+- [x] Drop Set is no longer the universal/default technique — regression test proves myo-reps, rest-pause, and "none" are all reachable outcomes (4B-8).
+- [x] The system can legitimately recommend no intensity technique — Conventional Deadlift regression test + UI always renders the "no technique" explanation rather than hiding the block (4B-9/4B-10).
+- [x] Intensity explanations are contextual — `explainIntensityTechnique`/`explainNoIntensityTechnique`, built from the exercise's own resolved profile and demand levels, verified to differ across exercises (not identical boilerplate).
+- [x] Existing Phase 2/3 functionality remains intact — full suite green throughout (131/131 at the end of this step), no Phase 2/3 test touched except the one Cable Fly rep-range assertion updated to reflect its more accurate profile classification (documented in the 4B-4/5/6 entry as a deliberate improvement, not a regression).
+- [x] Existing aesthetic taxonomy remains intact — no changes to `aesthetic-outcomes.yaml`, `physique-targets.yaml`, or any exercise's `physique_targets` field this phase.
+- [x] Regression/golden tests pass — all 5 categories (A-E) now have dedicated tests; 131/131 total passing.
+
+### Verified
+
+- `npm run test`: **131 tests across 14 files**, all passing (up from 126).
+- `npx tsc -b --force`, `npm run lint` (oxlint), `npm run build`, and `npm run validate-data`: all clean.
+- Manual browser verification (headless Chromium, desktop + 375px mobile) of both the primary-target-wins and supporting-target-wins golden scenarios, confirming the new UI blocks render correctly and match what the engine actually computed — screenshots taken, not just DOM assertions trusted blind.
+
+### Phase 4B status
+
+All 11 implementation steps (4B-1 through 4B-11) complete. Phase 4B is done.
