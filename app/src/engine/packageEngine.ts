@@ -40,6 +40,16 @@ export interface ResolvedPackage {
   targetCoverage: TargetCoverage[];
   rirTypicalRange: [number, number];
   progressionExplanation: string;
+  /**
+   * Final spec §7: a package whose weekly volume exceeds the app's own
+   * global "practical" range sits in the higher-recovery-dependent band
+   * global-principles.yaml itself already defines — computed here, never
+   * authored per package, so the label can't drift from the numbers it
+   * describes.
+   */
+  isHighVolume: boolean;
+  /** The global practical-volume range, exposed for the volume visualization's reference band (spec §27) — reuses global-principles.yaml, never a per-package invented range. */
+  weeklyVolumeTargetRange: [number, number];
 }
 
 export function getMuscleGroups(): MuscleGroupDefinition[] {
@@ -87,6 +97,8 @@ export function resolvePackage(packageId: string): ResolvedPackage | null {
     return { targetId, targetName: target ? target.name : targetId, covered };
   });
 
+  const weeklyVolumeTargetRange = programming.globalPrinciples.weekly_volume.practical_range_sets;
+
   return {
     pkg,
     muscleGroup,
@@ -96,5 +108,52 @@ export function resolvePackage(packageId: string): ResolvedPackage | null {
     targetCoverage,
     rirTypicalRange: programming.globalPrinciples.rir.typical_working_range,
     progressionExplanation: programming.globalPrinciples.progression.explanation,
+    isHighVolume: weeklyDirectSets > weeklyVolumeTargetRange[1],
+    weeklyVolumeTargetRange,
   };
+}
+
+export interface PackageComparison {
+  /** Exercises present in the Complete package but not the Efficient one. */
+  addedExercises: { id: string; name: string }[];
+  /** Targets the added exercises cover that the Efficient package's own exercises don't already cover. */
+  addedTargetNames: string[];
+}
+
+// Final spec §6/§16-17: "what do I gain by choosing Complete?" answered
+// from the actual resolved package data — never a hand-written claim per
+// muscle group. addedTargetNames only counts a target as newly covered
+// when Efficient itself doesn't already cover it, so Complete never gets
+// credit for coverage Efficient already provides.
+export function comparePackageLevels(efficient: ResolvedPackage, complete: ResolvedPackage): PackageComparison {
+  const efficientExerciseIds = new Set(efficient.exercises.map((e) => e.exercise.id));
+  const addedExercises = complete.exercises
+    .filter((e) => !efficientExerciseIds.has(e.exercise.id))
+    .map((e) => ({ id: e.exercise.id, name: e.exercise.name }));
+
+  const efficientCoveredTargetIds = new Set(
+    efficient.targetCoverage.filter((t) => t.covered).map((t) => t.targetId)
+  );
+  const addedTargetNames = complete.targetCoverage
+    .filter((t) => t.covered && !efficientCoveredTargetIds.has(t.targetId))
+    .map((t) => t.targetName);
+
+  return { addedExercises, addedTargetNames };
+}
+
+// Final spec §25: a per-exercise, gym-usable progression note — a
+// parametrized restatement of the app's own existing double-progression
+// model (global-principles.yaml progression.explanation) using this
+// specific exercise's own resolved rep range, not a new progression
+// philosophy.
+export function buildExerciseProgressionNote(reps: string): string {
+  const match = reps.match(/^(\d+)-(\d+)$/);
+  if (!match) return programming.globalPrinciples.progression.explanation;
+  const [, lowText, highText] = match;
+  const low = Number(lowText);
+  const high = Number(highText);
+  return (
+    `Stay within ${low}–${high} reps at your target RIR. When every set reaches ${high} reps with clean ` +
+    `technique, increase the load slightly and expect the rep count to drop back toward ${low} — then repeat.`
+  );
 }

@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { programming } from '../data';
-import { getMuscleGroups, getPackagesForMuscleGroup, resolvePackage } from './packageEngine';
+import {
+  buildExerciseProgressionNote,
+  comparePackageLevels,
+  getMuscleGroups,
+  getPackagesForMuscleGroup,
+  resolvePackage,
+} from './packageEngine';
 
 describe('packageEngine', () => {
   it('exposes all 11 supported muscle groups (Phase 5 §12)', () => {
@@ -77,5 +83,63 @@ describe('packageEngine', () => {
       const complete = packages.find((p) => p.level === 'complete')!;
       expect(complete.exercises.length, `muscle group "${group.id}"`).toBeGreaterThan(efficient.exercises.length);
     }
+  });
+
+  // Final UI spec §6/§16-17: "what do I gain by choosing Complete?" must
+  // be answered from real package data — comparePackageLevels() computes
+  // that diff rather than it being a hand-written claim per muscle.
+  describe('comparePackageLevels', () => {
+    it('reports every Complete-only exercise for every muscle group', () => {
+      for (const group of getMuscleGroups()) {
+        const packages = getPackagesForMuscleGroup(group.id);
+        const efficient = resolvePackage(packages.find((p) => p.level === 'efficient')!.id)!;
+        const complete = resolvePackage(packages.find((p) => p.level === 'complete')!.id)!;
+        const comparison = comparePackageLevels(efficient, complete);
+
+        const efficientIds = new Set(efficient.exercises.map((e) => e.exercise.id));
+        const completeOnlyIds = complete.exercises
+          .map((e) => e.exercise.id)
+          .filter((id) => !efficientIds.has(id));
+
+        expect(comparison.addedExercises.map((e) => e.id).sort(), `muscle group "${group.id}"`).toEqual(
+          completeOnlyIds.sort()
+        );
+        // Complete always adds at least one exercise (proven above: it always has strictly more).
+        expect(comparison.addedExercises.length, `muscle group "${group.id}"`).toBeGreaterThan(0);
+      }
+    });
+
+    it('never credits Complete with coverage Efficient already provides (chest: both cover all 3 pec targets, so no target should be reported as newly added)', () => {
+      const efficient = resolvePackage('chest-efficient')!;
+      const complete = resolvePackage('chest-complete')!;
+      const comparison = comparePackageLevels(efficient, complete);
+      expect(comparison.addedTargetNames).toEqual([]);
+    });
+  });
+
+  describe('buildExerciseProgressionNote', () => {
+    it('parametrizes the double-progression model with the exercise\'s own rep range', () => {
+      const note = buildExerciseProgressionNote('6-12');
+      expect(note).toContain('6–12 reps');
+      expect(note).toContain('12 reps');
+      expect(note).toContain('toward 6');
+    });
+
+    it('falls back to the global progression explanation for an unparseable range', () => {
+      expect(buildExerciseProgressionNote('not-a-range')).toBe(programming.globalPrinciples.progression.explanation);
+    });
+  });
+
+  describe('isHighVolume', () => {
+    it('is only true for packages whose weekly volume exceeds the global practical range, and never for an Efficient package', () => {
+      const practicalMax = programming.globalPrinciples.weekly_volume.practical_range_sets[1];
+      for (const pkg of programming.developmentPackages.packages) {
+        const resolved = resolvePackage(pkg.id)!;
+        expect(resolved.isHighVolume, `package "${pkg.id}"`).toBe(resolved.weeklyDirectSets > practicalMax);
+        if (pkg.level === 'efficient') {
+          expect(resolved.isHighVolume, `package "${pkg.id}" (efficient must never be high-volume)`).toBe(false);
+        }
+      }
+    });
   });
 });

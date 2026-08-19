@@ -977,15 +977,13 @@ packages:
           half of the calf's profile near the ankle, often the part that
           stays thin even after the upper calf grows.
     frequency:
-      sessions_per_week: 3
+      sessions_per_week: 2
     rationale: >-
       Straight-knee and bent-knee raises are not interchangeable — the
       knee angle changes which of the two calf muscles is mechanically
       able to contribute, which is exactly why the Decision Maker
       distinguishes calf-width-shape (gastrocnemius) from
-      calf-lower-fullness (soleus) as separate outcomes. Frequency is
-      higher than most packages because calves are commonly trained more
-      often, within the app's own existing frequency range.
+      calf-lower-fullness (soleus) as separate outcomes.
 
   - id: calves-complete
     muscle_group: calves
@@ -1022,7 +1020,7 @@ packages:
           available range without the stronger side compensating, plus
           genuine stabilization demand standing raises don't require.
     frequency:
-      sessions_per_week: 3
+      sessions_per_week: 2
     rationale: >-
       Single-leg calf raise adds a real stability/range-of-motion
       dimension the bilateral standing raise can mask, not a third
@@ -1066,15 +1064,13 @@ packages:
           Anti-rotation oblique work — the side-of-waist definition lines,
           trained by resisting rotation rather than causing it.
     frequency:
-      sessions_per_week: 3
+      sessions_per_week: 2
     rationale: >-
       Cable crunch and hanging leg raise both target the rectus
       abdominis but through different joint actions (spinal flexion vs.
       hip flexion), so neither makes the other redundant. Pallof press is
       the only oblique-specific movement, added because rectus-abdominis
-      and oblique development don't transfer to each other. Frequency is
-      higher than most packages because core work is commonly trained more
-      often, within the app's own existing frequency range.
+      and oblique development don't transfer to each other.
 
   - id: core-complete
     muscle_group: core
@@ -1119,7 +1115,7 @@ packages:
           Pallof press's anti-rotation, giving obliques both a
           rotation-producing and a rotation-resisting stimulus.
     frequency:
-      sessions_per_week: 3
+      sessions_per_week: 2
     rationale: >-
       Cable woodchop deliberately trains rotation itself, the mirror
       image of the Pallof press's anti-rotation — obliques respond to
