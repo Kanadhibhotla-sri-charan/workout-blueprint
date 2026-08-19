@@ -116,4 +116,63 @@ function loadFunctionalGoals() {
   return { goalIds, fileErrors };
 }
 
-module.exports = { loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals, PROGRAMMING_DIR };
+// Loads data/programming/programming-profiles.yaml. Needed by the
+// development-packages cross-check (Phase 5 §5): each package exercise's
+// authored `reps` must match the primary_range of the Programming Profile
+// that exercise itself resolves to, so package data can never silently
+// drift from what the Decision Maker would say about the same exercise.
+function loadProgrammingProfiles() {
+  const file = path.join(PROGRAMMING_DIR, 'programming-profiles.yaml');
+  const relFile = path.relative(process.cwd(), file);
+
+  if (!fs.existsSync(file)) {
+    return { catalog: null, fileErrors: [`${relFile}: file not found`] };
+  }
+
+  let data;
+  try {
+    data = yaml.load(fs.readFileSync(file, 'utf8'));
+  } catch (err) {
+    return { catalog: null, fileErrors: [`${relFile}: malformed YAML — ${err.message}`] };
+  }
+
+  if (!data || !Array.isArray(data.profiles) || !data.classification || !Array.isArray(data.classification.defaults)) {
+    return {
+      catalog: null,
+      fileErrors: [`${relFile}: expected top-level "profiles" and "classification.defaults" lists`],
+    };
+  }
+
+  return { catalog: data, fileErrors: [] };
+}
+
+// Loads data/programming/development-packages.yaml (Phase 5 §5).
+function loadDevelopmentPackages() {
+  const file = path.join(PROGRAMMING_DIR, 'development-packages.yaml');
+  const relFile = path.relative(process.cwd(), file);
+
+  if (!fs.existsSync(file)) {
+    return { catalog: null, fileErrors: [`${relFile}: file not found`] };
+  }
+
+  let data;
+  try {
+    data = yaml.load(fs.readFileSync(file, 'utf8'));
+  } catch (err) {
+    return { catalog: null, fileErrors: [`${relFile}: malformed YAML — ${err.message}`] };
+  }
+
+  if (!data || !Array.isArray(data.muscle_groups) || !Array.isArray(data.packages)) {
+    return {
+      catalog: null,
+      fileErrors: [`${relFile}: expected top-level "muscle_groups" and "packages" lists`],
+    };
+  }
+
+  return { catalog: data, fileErrors: [] };
+}
+
+module.exports = {
+  loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals,
+  loadProgrammingProfiles, loadDevelopmentPackages, PROGRAMMING_DIR,
+};

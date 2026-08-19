@@ -1,0 +1,1127 @@
+# Development-package catalog (Phase 5 §5) — "if I want this whole muscle
+# group developed as completely as possible, what combination should I
+# train?" the complement to aesthetic-outcomes.yaml's single-problem
+# diagnosis. Every exercise_id here must already exist in
+# data/exercises/*.yaml — this file adds package membership, order, sets,
+# reps, RIR, role-within-the-package, and rationale; it never re-describes
+# an exercise or re-derives a target (per §21 of the Phase 5 spec).
+#
+# `reps` per exercise is authored, not invented: it is copied from that
+# exercise's own resolved Programming Profile primary_range
+# (programming-profiles.yaml, via resolveProgrammingProfile) at the time
+# this file was written, so it can never contradict what the Decision
+# Maker itself would say about the same exercise. scripts/validate-data.js
+# cross-checks this and would fail on drift.
+#
+# `rir` is the single global RIR value the rest of the app already uses
+# everywhere (global-principles.yaml's rir.typical_working_range,
+# currently 1-3) — deliberately not varied per exercise, since nothing
+# else in this dataset models a per-exercise RIR distinction and inventing
+# one here would be a new, unreviewed modeling dimension.
+#
+# `weekly direct volume` is NOT stored here — it is the product of
+# each exercise's own `sets` and the package's `frequency`, computed by
+# the package engine (packageEngine.ts), exactly as spec §7's own worked
+# example computes it ("Session: 3+3+2=8, Frequency: 2x/week, Weekly: 16
+# direct sets"). Storing it separately would duplicate what these two
+# fields already say.
+
+muscle_groups:
+  - id: chest
+    name: Chest
+    target_ids: [upper-pec, mid-pec, lower-pec]
+
+  - id: shoulders
+    name: Shoulders
+    target_ids: [front-delt, side-delt, rear-delt]
+
+  - id: back
+    name: Back
+    target_ids: [lat-width, back-thickness, upper-traps]
+
+  - id: biceps
+    name: Biceps
+    target_ids: [biceps, brachialis-arm-thickness]
+
+  - id: triceps
+    name: Triceps
+    target_ids: [triceps, triceps-long-head]
+
+  - id: forearms
+    name: Forearms
+    target_ids: [forearm-flexors, forearm-extensors]
+
+  - id: quads
+    name: Quads
+    target_ids: [quads]
+
+  - id: hamstrings
+    name: Hamstrings
+    target_ids: [hamstrings]
+
+  - id: glutes
+    name: Glutes
+    target_ids: [gluteus-maximus, gluteus-medius-minimus]
+
+  - id: calves
+    name: Calves
+    target_ids: [gastrocnemius, soleus]
+
+  - id: core
+    name: Core
+    target_ids: [rectus-abdominis, obliques]
+
+packages:
+  # ─────────────────────────── CHEST ───────────────────────────
+  - id: chest-efficient
+    muscle_group: chest
+    level: efficient
+    display_name: Chest — Efficient
+    objective: >-
+      Broad, balanced chest development — upper, mid, and lower pec — in
+      the smallest exercise combination that avoids real redundancy.
+    exercises:
+      - exercise_id: incline-barbell-press
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Upper-chest shelf and the fullness that closes the gap below the
+          collarbone.
+      - exercise_id: flat-barbell-bench-press
+        order: 2
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          The main slab of chest mass and front-on thickness.
+      - exercise_id: cable-fly
+        order: 3
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Constant-tension stretch work across the whole pec — including
+          the lower/outer sweep the two presses above don't directly
+          emphasize.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      The two presses are deliberately different angles (upper vs. mid)
+      rather than two versions of the same movement, so neither is
+      redundant with the other. Cable fly adds isolated, constant-tension
+      volume across all three pec regions at once, including the lower
+      pec neither press directly targets — together this covers all three
+      chest targets without adding a fourth exercise that would mostly
+      overlap with what the presses already do.
+
+  - id: chest-complete
+    muscle_group: chest
+    level: complete
+    display_name: Chest — Complete
+    objective: >-
+      Full chest development with direct lower-pec loading and extra
+      upper-pec detail work, for chest as a training priority.
+    exercises:
+      - exercise_id: incline-barbell-press
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Upper-chest shelf and the fullness that closes the gap below the
+          collarbone.
+      - exercise_id: flat-barbell-bench-press
+        order: 2
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          The main slab of chest mass and front-on thickness.
+      - exercise_id: dip-chest-biased
+        order: 3
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Direct lower-chest loading and the transition-line definition
+          near the ribs that flat/incline pressing doesn't emphasize.
+      - exercise_id: cable-fly
+        order: 4
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Constant-tension stretch work across the whole pec, including
+          the lower/outer sweep.
+      - exercise_id: incline-dumbbell-fly
+        order: 5
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Extra stretch-emphasis detail work isolated to the upper-chest
+          shelf, without the shoulder/triceps involvement the incline
+          press brings along.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Builds on the Efficient combination by adding a genuine lower-pec
+      compound movement (the presses above bias upper/mid pec, not lower)
+      and an isolated upper-pec stretch exercise the incline press's
+      pressing pattern doesn't reproduce. Every added exercise targets a
+      region or movement quality the other four don't already cover —
+      none is here simply to make the package longer.
+
+  # ─────────────────────────── SHOULDERS ───────────────────────────
+  - id: shoulders-efficient
+    muscle_group: shoulders
+    level: efficient
+    display_name: Shoulders — Efficient
+    objective: >-
+      Shoulder width and 3D shape, focused on side and rear delt — the two
+      heads standard pressing work doesn't already train hard.
+    exercises:
+      - exercise_id: dumbbell-lateral-raise
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          The single biggest lever for apparent shoulder width — the cap
+          that creates the shoulder-to-waist taper.
+      - exercise_id: cable-lateral-raise
+        order: 2
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Stretch-position lateral work, keeping tension on the side delt
+          through the bottom of the range where a dumbbell loses it.
+      - exercise_id: face-pull
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Rear-delt roundness and the back-of-shoulder shape that front
+          and side work don't touch.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Front delt is deliberately left without dedicated volume here — the
+      knowledge base notes it's already heavily loaded by standard chest
+      and shoulder pressing work most training programs include elsewhere,
+      so it's rarely the limiting factor in shoulder development. The two
+      lateral-raise variations differ in resistance profile (free weight
+      vs. cable stretch), not just equipment, and face pull adds the rear
+      head neither reaches.
+
+  - id: shoulders-complete
+    muscle_group: shoulders
+    level: complete
+    display_name: Shoulders — Complete
+    objective: >-
+      Maximum side- and rear-delt development for shoulders as a training
+      priority, adding a second angle on each.
+    exercises:
+      - exercise_id: dumbbell-lateral-raise
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          The single biggest lever for apparent shoulder width.
+      - exercise_id: cable-lateral-raise
+        order: 2
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Stretch-position lateral work the dumbbell version loses tension
+          in at the bottom.
+      - exercise_id: machine-lateral-raise
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Stable side-delt volume without the stabilization demand of the
+          free-weight/cable versions — useful once those sets have added
+          up.
+      - exercise_id: face-pull
+        order: 4
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Rear-delt roundness and the back-of-shoulder shape.
+      - exercise_id: rear-delt-row
+        order: 5
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          A rowing-pattern rear-delt movement — a different resistance
+          curve and pulling pattern than the fly-style face pull, filling
+          out 3D shoulder shape from another angle.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Adds a third side-delt angle and a second rear-delt movement pattern
+      (pulling vs. flying) rather than another near-identical fly variant
+      — each addition changes either the resistance profile or the
+      movement pattern, not just the equipment. Front delt remains
+      deliberately excluded for the same reason as the Efficient package.
+
+  # ─────────────────────────── BACK ───────────────────────────
+  - id: back-efficient
+    muscle_group: back
+    level: efficient
+    display_name: Back — Efficient
+    objective: >-
+      Balanced back width, thickness, and upper-trap development in three
+      exercises, one per target.
+    exercises:
+      - exercise_id: lat-pulldown-wide-pronated
+        order: 1
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary lat-width builder — the vertical-pull movement most
+          responsible for the V-taper.
+      - exercise_id: chest-supported-row
+        order: 2
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary back-thickness builder — horizontal-pull depth without
+          spinal-erector fatigue limiting the set.
+      - exercise_id: barbell-dumbbell-shrug
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Upper-trap height and thickness where the neck meets the
+          shoulders — a region the width and thickness work above doesn't
+          reach.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Back width (vertical pull) and back thickness (horizontal pull) are
+      genuinely different movement patterns loading different parts of the
+      back, not interchangeable — this is the same distinction the
+      Decision Maker draws between back-width-v-taper and
+      back-side-thickness. The shrug adds the one target neither pulling
+      pattern trains directly.
+
+  - id: back-complete
+    muscle_group: back
+    level: complete
+    display_name: Back — Complete
+    objective: >-
+      Full back development for back as a training priority, adding
+      combined width-and-thickness volume plus isolated lat stretch work.
+    exercises:
+      - exercise_id: lat-pulldown-wide-pronated
+        order: 1
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary lat-width builder.
+      - exercise_id: chest-supported-row
+        order: 2
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary back-thickness builder.
+      - exercise_id: barbell-dumbbell-shrug
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Upper-trap height and thickness.
+      - exercise_id: seated-cable-row
+        order: 4
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Combined width-and-thickness row work, adding volume to both
+          targets at once with minimal setup demand.
+      - exercise_id: straight-arm-pulldown
+        order: 5
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Isolated lat-width stretch-to-contract work with no elbow-flexor
+          involvement competing for fatigue, unlike every pulldown/row
+          above.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Seated cable row adds a stable, moderate-load pattern that splits
+      volume between both major targets rather than duplicating either
+      dedicated exercise. Straight-arm pulldown is the only isolation
+      movement in the package — pure lat width without any grip/elbow-
+      flexor fatigue, complementing rather than repeating the compound
+      pulling work above it.
+
+  # ─────────────────────────── BICEPS ───────────────────────────
+  - id: biceps-efficient
+    muscle_group: biceps
+    level: efficient
+    display_name: Biceps — Efficient
+    objective: >-
+      Overall front-of-arm development — biceps peak and brachialis
+      thickness — in two exercises.
+    exercises:
+      - exercise_id: barbell-ez-bar-curl
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary biceps mass and front-on peak-height builder.
+      - exercise_id: hammer-curl
+        order: 2
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Brachialis thickness that sits under the biceps and pushes it
+          outward — adds arm thickness from the side, distinct from
+          front-on peak.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Biceps (supinated grip) and brachialis (neutral grip) are different
+      target muscles per the existing taxonomy, not two names for the same
+      one — a straight curl and a hammer curl genuinely train different
+      tissue, which is why arm-side-thickness's own regression case
+      requires the hammer-curl family rather than a second straight curl.
+
+  - id: biceps-complete
+    muscle_group: biceps
+    level: complete
+    display_name: Biceps — Complete
+    objective: >-
+      Full front-of-arm development for arms as a training priority,
+      adding a stretch-position angle to each target.
+    exercises:
+      - exercise_id: barbell-ez-bar-curl
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary biceps mass and peak-height builder.
+      - exercise_id: hammer-curl
+        order: 2
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Brachialis thickness, distinct from front-on peak.
+      - exercise_id: incline-dumbbell-curl
+        order: 3
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Stretch-position biceps work the standing curl's resistance
+          curve under-loads.
+      - exercise_id: cross-body-hammer-curl
+        order: 4
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          A different brachialis loading angle — the cross-body path
+          changes the resistance profile from the standard hammer curl.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Each addition targets the same two muscles as the Efficient package
+      through a genuinely different resistance profile (shoulder-extended
+      stretch for biceps; cross-body angle for brachialis) rather than
+      repeating the same curl pattern a third and fourth time.
+
+  # ─────────────────────────── TRICEPS ───────────────────────────
+  - id: triceps-efficient
+    muscle_group: triceps
+    level: efficient
+    display_name: Triceps — Efficient
+    objective: >-
+      Overall triceps mass with dedicated long-head stretch work, in three
+      exercises.
+    exercises:
+      - exercise_id: close-grip-bench-press
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Heaviest-loadable triceps mass builder, plus real total
+          upper-body pressing volume.
+      - exercise_id: overhead-triceps-extension
+        order: 2
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Long-head-specific stretch work — the overhead position most
+          other triceps exercises miss, loading the head that makes up
+          the largest share of triceps mass.
+      - exercise_id: cable-pushdown
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Low-fatigue finishing volume for both heads already loaded by
+          pressing, without adding much systemic fatigue.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      The triceps make up roughly two-thirds of upper-arm size, so this
+      package leads with the heaviest-loadable movement, then specifically
+      targets the long head — the one head a non-overhead exercise like
+      the close-grip press or pushdown structurally can't bias — before
+      adding low-fatigue finishing volume.
+
+  - id: triceps-complete
+    muscle_group: triceps
+    level: complete
+    display_name: Triceps — Complete
+    objective: >-
+      Full triceps development for arms as a training priority, adding a
+      second heavy angle and a cable long-head variant.
+    exercises:
+      - exercise_id: close-grip-bench-press
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Heaviest-loadable triceps mass builder.
+      - exercise_id: overhead-triceps-extension
+        order: 2
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Long-head-specific stretch work via the overhead position.
+      - exercise_id: cable-pushdown
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Low-fatigue finishing volume.
+      - exercise_id: dip-triceps-biased
+        order: 4
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          A second heavy compound angle — the upright-torso execution
+          shifts more load onto the triceps than the chest-biased dip
+          does.
+      - exercise_id: cable-overhead-extension-leaning-forward
+        order: 5
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          A cable variant of the long-head stretch position with constant
+          tension through the range, complementing the free-weight
+          overhead extension.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Both additions deliberately double down on what the Efficient
+      package already prioritizes (heavy loading, long-head stretch)
+      rather than adding an unrelated third movement pattern — a second
+      compound angle and a cable version of the same stretch position, for
+      triceps as a genuine priority.
+
+  # ─────────────────────────── FOREARMS ───────────────────────────
+  - id: forearms-efficient
+    muscle_group: forearms
+    level: efficient
+    display_name: Forearms — Efficient
+    objective: >-
+      Both sides of the forearm — flexor and extensor — in two exercises.
+    exercises:
+      - exercise_id: wrist-curl
+        order: 1
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Palm-side forearm fullness near the elbow.
+      - exercise_id: reverse-wrist-curl
+        order: 2
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Back-of-hand-side forearm fullness — the side visible when the
+          arm hangs relaxed.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Forearm flexors and extensors are opposite muscle groups trained by
+      opposite wrist motions — one exercise per side is the minimum that
+      actually covers both, not an arbitrary pairing.
+
+  - id: forearms-complete
+    muscle_group: forearms
+    level: complete
+    display_name: Forearms — Complete
+    objective: >-
+      Full forearm development, adding brachioradialis "peak" work to the
+      extensor side.
+    exercises:
+      - exercise_id: wrist-curl
+        order: 1
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Palm-side forearm fullness near the elbow.
+      - exercise_id: reverse-wrist-curl
+        order: 2
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Back-of-hand-side forearm fullness.
+      - exercise_id: reverse-curl
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Brachioradialis "peak" at the elbow crease — a different loading
+          pattern (elbow flexion under a pronated grip) than the
+          wrist-only reverse wrist curl.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Reverse curl trains the extensor side through elbow flexion rather
+      than wrist extension — a genuinely different joint action from the
+      reverse wrist curl, not a repeat of it.
+
+  # ─────────────────────────── QUADS ───────────────────────────
+  - id: quads-efficient
+    muscle_group: quads
+    level: efficient
+    display_name: Quads — Efficient
+    objective: >-
+      Overall quad mass plus above-knee separation, in the smallest
+      combination that stays safely loadable.
+    exercises:
+      - exercise_id: back-squat
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary quad mass builder and the heaviest-loadable movement in
+          the package.
+      - exercise_id: leg-press
+        order: 2
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Fixed-path quad loading without the balance/spinal demand of a
+          free squat — lets effort push closer to failure safely.
+      - exercise_id: leg-extension
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          The most visible above-knee separation/sweep of any quad
+          exercise in the data — isolated knee extension the two compound
+          movements above don't provide on their own.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Leg press is not "another squat" — its fixed path removes the
+      balance/bracing demand a free squat needs, letting sets run closer
+      to failure without technical breakdown risk. Leg extension is the
+      package's only isolation movement, added specifically because the
+      Decision Maker's own quad-sweep-separation outcome ranks it above
+      every compound alternative for that specific visual characteristic.
+
+  - id: quads-complete
+    muscle_group: quads
+    level: complete
+    display_name: Quads — Complete
+    objective: >-
+      Full quad development for legs as a training priority, adding
+      unilateral loading and deep stretch-position work.
+    exercises:
+      - exercise_id: back-squat
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary quad mass builder.
+      - exercise_id: leg-press
+        order: 2
+        sets: 3
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Fixed-path quad loading without the balance/spinal demand of a
+          free squat.
+      - exercise_id: leg-extension
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          The most visible above-knee separation/sweep of any quad
+          exercise in the data.
+      - exercise_id: bulgarian-split-squat-knee-dominant
+        order: 4
+        sets: 3
+        reps: "6-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Unilateral loading that closes left/right imbalances the
+          bilateral squat and press can hide.
+      - exercise_id: reverse-nordic-curl
+        order: 5
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Deep stretch-position quad loading through knee flexion under
+          bodyweight — a resistance profile nothing else in the package
+          provides.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Both additions provide something the three-exercise Efficient
+      package structurally can't: single-leg loading, and a true
+      lengthened-position stimulus. Neither is another bilateral,
+      shortened-to-mid-range squat pattern.
+
+  # ─────────────────────────── HAMSTRINGS ───────────────────────────
+  - id: hamstrings-efficient
+    muscle_group: hamstrings
+    level: efficient
+    display_name: Hamstrings — Efficient
+    objective: >-
+      Overall hamstring thickness via both a hip-hinge and a knee-flexion
+      movement.
+    exercises:
+      - exercise_id: romanian-deadlift
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary hamstring mass builder through a deep stretch position,
+          with meaningful glute involvement as a bonus.
+      - exercise_id: seated-leg-curl
+        order: 2
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Knee-flexion isolation the hip-hinge movement above doesn't
+          train — the knowledge base notes this combination fills out the
+          thigh more evenly than either alone.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Hip-hinge (RDL) and knee-flexion (leg curl) are the hamstrings' two
+      distinct joint actions — training only one leaves the other
+      genuinely under-stimulated, which is exactly what the exercise data
+      itself says about combining the two leg-curl variations.
+
+  - id: hamstrings-complete
+    muscle_group: hamstrings
+    level: complete
+    display_name: Hamstrings — Complete
+    objective: >-
+      Full hamstring development for legs as a training priority, adding a
+      second knee-flexion angle.
+    exercises:
+      - exercise_id: romanian-deadlift
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary hamstring mass builder through a deep stretch position.
+      - exercise_id: seated-leg-curl
+        order: 2
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Knee-flexion isolation the hip-hinge movement doesn't train.
+      - exercise_id: lying-leg-curl
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          A second knee-flexion angle (different hip position than
+          seated) — the same fill-out-more-evenly effect the data notes
+          between the two leg-curl variations.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Lying leg curl is added specifically because the underlying exercise
+      data documents seated and lying leg curl as complementary, not
+      redundant — the hip angle changes which part of the hamstring is
+      most stretched under load.
+
+  # ─────────────────────────── GLUTES ───────────────────────────
+  - id: glutes-efficient
+    muscle_group: glutes
+    level: efficient
+    display_name: Glutes — Efficient
+    objective: >-
+      Glute roundness and side-hip fullness in three exercises.
+    exercises:
+      - exercise_id: hip-thrust
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary glute-roundness builder — shortened-position loading at
+          the top of hip extension, the position glute training is most
+          built around.
+      - exercise_id: bulgarian-split-squat-hip-dominant
+        order: 2
+        sets: 3
+        reps: "6-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Unilateral, hip-dominant loading that adds glute volume without
+          the lower-back demand of another hip-hinge movement.
+      - exercise_id: hip-abduction
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          The side-of-hip target most bilateral squats and hinges only
+          work as a stabilizer — fills the "hip dip" and adds side-profile
+          roundness.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Gluteus maximus (roundness) and gluteus medius/minimus (side
+      profile) are different muscles per the existing taxonomy — hip
+      thrust and the split squat both load the former through different
+      joint positions (shortened vs. mid-range, bilateral vs. unilateral),
+      while hip abduction is the only movement in the package that
+      actually trains the latter.
+
+  - id: glutes-complete
+    muscle_group: glutes
+    level: complete
+    display_name: Glutes — Complete
+    objective: >-
+      Full glute development for glutes as a training priority, adding
+      isolated hip-extension volume.
+    exercises:
+      - exercise_id: hip-thrust
+        order: 1
+        sets: 3
+        reps: "6-12"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary glute-roundness builder.
+      - exercise_id: bulgarian-split-squat-hip-dominant
+        order: 2
+        sets: 3
+        reps: "6-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Unilateral, hip-dominant glute loading.
+      - exercise_id: hip-abduction
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Side-of-hip target most other movements only work as a
+          stabilizer.
+      - exercise_id: cable-kickback-glute
+        order: 4
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Isolated hip-extension volume with constant cable tension,
+          without any of the spinal-erector or hamstring fatigue the
+          compound hip-hinge movements bring along.
+    frequency:
+      sessions_per_week: 2
+    rationale: >-
+      Cable kickback is the package's only true isolation movement —
+      added to accumulate glute-specific volume once the compound
+      movements' broader fatigue cost becomes the limiting factor, not to
+      duplicate the hip thrust's own contribution.
+
+  # ─────────────────────────── CALVES ───────────────────────────
+  - id: calves-efficient
+    muscle_group: calves
+    level: efficient
+    display_name: Calves — Efficient
+    objective: >-
+      Both calf muscles — gastrocnemius and soleus — in two exercises.
+    exercises:
+      - exercise_id: standing-calf-raise
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary calf width/shape builder — straight-knee loading of the
+          gastrocnemius, the diamond-shaped bulge most people picture.
+      - exercise_id: seated-calf-raise
+        order: 2
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Bent-knee loading that isolates the soleus — fills the lower
+          half of the calf's profile near the ankle, often the part that
+          stays thin even after the upper calf grows.
+    frequency:
+      sessions_per_week: 3
+    rationale: >-
+      Straight-knee and bent-knee raises are not interchangeable — the
+      knee angle changes which of the two calf muscles is mechanically
+      able to contribute, which is exactly why the Decision Maker
+      distinguishes calf-width-shape (gastrocnemius) from
+      calf-lower-fullness (soleus) as separate outcomes. Frequency is
+      higher than most packages because calves are commonly trained more
+      often, within the app's own existing frequency range.
+
+  - id: calves-complete
+    muscle_group: calves
+    level: complete
+    display_name: Calves — Complete
+    objective: >-
+      Full calf development for calves as a training priority, adding
+      unilateral gastrocnemius work.
+    exercises:
+      - exercise_id: standing-calf-raise
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Primary calf width/shape builder.
+      - exercise_id: seated-calf-raise
+        order: 2
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Bent-knee soleus isolation.
+      - exercise_id: single-leg-calf-raise
+        order: 3
+        sets: 2
+        reps: "8-15"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Unilateral loading that lets each calf work through its full
+          available range without the stronger side compensating, plus
+          genuine stabilization demand standing raises don't require.
+    frequency:
+      sessions_per_week: 3
+    rationale: >-
+      Single-leg calf raise adds a real stability/range-of-motion
+      dimension the bilateral standing raise can mask, not a third
+      near-identical bilateral set.
+
+  # ─────────────────────────── CORE ───────────────────────────
+  - id: core-efficient
+    muscle_group: core
+    level: efficient
+    display_name: Core — Efficient
+    objective: >-
+      Rectus abdominis and oblique development through genuinely different
+      movement qualities, in three exercises.
+    exercises:
+      - exercise_id: cable-crunch
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Loadable spinal-flexion work for direct rectus-abdominis mass,
+          progressively overloadable unlike most bodyweight ab work.
+      - exercise_id: hanging-knee-leg-raise
+        order: 2
+        sets: 3
+        reps: "6-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Hip-flexion-dominant ab work — a different movement pattern
+          (posterior pelvic tilt under load) than the spinal-flexion
+          crunch above.
+      - exercise_id: pallof-press
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Anti-rotation oblique work — the side-of-waist definition lines,
+          trained by resisting rotation rather than causing it.
+    frequency:
+      sessions_per_week: 3
+    rationale: >-
+      Cable crunch and hanging leg raise both target the rectus
+      abdominis but through different joint actions (spinal flexion vs.
+      hip flexion), so neither makes the other redundant. Pallof press is
+      the only oblique-specific movement, added because rectus-abdominis
+      and oblique development don't transfer to each other. Frequency is
+      higher than most packages because core work is commonly trained more
+      often, within the app's own existing frequency range.
+
+  - id: core-complete
+    muscle_group: core
+    level: complete
+    display_name: Core — Complete
+    objective: >-
+      Full core development for core as a training priority, adding a
+      rotation-producing oblique movement.
+    exercises:
+      - exercise_id: cable-crunch
+        order: 1
+        sets: 3
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Loadable spinal-flexion work for direct rectus-abdominis mass.
+      - exercise_id: hanging-knee-leg-raise
+        order: 2
+        sets: 3
+        reps: "6-15"
+        rir: "1-3"
+        role: direct
+        contribution: >-
+          Hip-flexion-dominant ab work.
+      - exercise_id: pallof-press
+        order: 3
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: primary
+        contribution: >-
+          Anti-rotation oblique work.
+      - exercise_id: cable-woodchop
+        order: 4
+        sets: 2
+        reps: "10-20"
+        rir: "1-3"
+        role: secondary
+        contribution: >-
+          Rotational oblique work — the opposite movement quality from the
+          Pallof press's anti-rotation, giving obliques both a
+          rotation-producing and a rotation-resisting stimulus.
+    frequency:
+      sessions_per_week: 3
+    rationale: >-
+      Cable woodchop deliberately trains rotation itself, the mirror
+      image of the Pallof press's anti-rotation — obliques respond to
+      both movement qualities, so this is a genuine addition, not a
+      second anti-rotation exercise.

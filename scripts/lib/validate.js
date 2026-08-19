@@ -12,7 +12,10 @@ const {
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
   AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
 } = require('./taxonomy');
-const { loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals } = require('./load-programming');
+const {
+  loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals,
+  loadProgrammingProfiles, loadDevelopmentPackages,
+} = require('./load-programming');
 
 // Loaded once at module scope, same treatment as taxonomy.js's constants —
 // data/programming/physique-targets.yaml is the authoritative taxonomy per
@@ -33,9 +36,51 @@ const { goalIds: FUNCTIONAL_GOAL_IDS, fileErrors: FUNCTIONAL_GOAL_FILE_ERRORS } 
 const { outcomes: AESTHETIC_OUTCOMES, fileErrors: AESTHETIC_OUTCOME_FILE_ERRORS } = loadAestheticOutcomes();
 const AESTHETIC_OUTCOME_REQUIRED_STRING_FIELDS = ['id', 'display_name', 'region', 'viewpoint', 'visual_description'];
 
+// data/programming/programming-profiles.yaml — needed to cross-check
+// development-packages.yaml's authored reps against the same
+// classification logic app/src/engine/programmingEngine.ts's
+// resolveProgrammingProfile() uses, so package data can't silently drift
+// from what the Decision Maker would say about the same exercise (Phase 5
+// §5 dev-log rationale).
+const { catalog: PROGRAMMING_PROFILES, fileErrors: PROGRAMMING_PROFILES_FILE_ERRORS } = loadProgrammingProfiles();
+
+// data/programming/development-packages.yaml (Phase 5 §5).
+const { catalog: DEVELOPMENT_PACKAGES, fileErrors: DEVELOPMENT_PACKAGES_FILE_ERRORS } = loadDevelopmentPackages();
+
 const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const QUOTED_MODULE_REF = /^([a-z0-9]+(-[a-z0-9]+)*) \(.*module.*\)/;
+const REP_RANGE_PATTERN = /^\d+-\d+$/;
+
+const DEMAND_ORDER = ['low', 'medium', 'high'];
+
+// Same first-match-wins classification programmingEngine.ts's
+// resolveProgrammingProfile() implements — duplicated here in plain JS
+// only because validate-data.js is a build-time Node/CommonJS script that
+// can't import the app's TypeScript engine directly. Any change to the
+// TS version must be mirrored here.
+function matchesProfileRule(exercise, match) {
+  if (match.exercise_type && exercise.exercise_type !== match.exercise_type) return false;
+  if (
+    match.coverage_categories_any &&
+    !match.coverage_categories_any.some((c) => (exercise.coverage_categories || []).includes(c))
+  ) {
+    return false;
+  }
+  if (match.stability_demand_at_least) {
+    const exerciseIndex = DEMAND_ORDER.indexOf(exercise.stability_demand);
+    const minIndex = DEMAND_ORDER.indexOf(match.stability_demand_at_least);
+    if (exerciseIndex < minIndex) return false;
+  }
+  return true;
+}
+
+function resolveProgrammingProfileForExercise(exercise) {
+  if (!PROGRAMMING_PROFILES) return null;
+  const rule = PROGRAMMING_PROFILES.classification.defaults.find((r) => matchesProfileRule(exercise, r.match));
+  if (!rule) return null;
+  return PROGRAMMING_PROFILES.profiles.find((p) => p.id === rule.profile_id) || null;
+}
 
 function isListOrNull(value) {
   return value === null || value === undefined || Array.isArray(value);
@@ -84,10 +129,162 @@ function validate(records) {
     });
   }
 
+  for (const fileError of PROGRAMMING_PROFILES_FILE_ERRORS) {
+    issues.push({
+      record: null,
+      category: 'programming-data',
+      message: `data/programming/programming-profiles.yaml :: ${fileError}`,
+    });
+  }
+
+  for (const fileError of DEVELOPMENT_PACKAGES_FILE_ERRORS) {
+    issues.push({
+      record: null,
+      category: 'programming-data',
+      message: `data/programming/development-packages.yaml :: ${fileError}`,
+    });
+  }
+
   // Needed early by exercise_roles referential-integrity checks below —
   // computed here rather than reusing the `allIds` set further down,
   // which is built after this loop runs.
   const exerciseIdSet = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
+  const exerciseById = new Map(records.map((r) => [r.id, r]));
+
+  // --- Development packages (Phase 5 §5/§23): coverage, redundancy, and
+  // programming-consistency checks. Not tied to any one exercise record.
+  if (DEVELOPMENT_PACKAGES) {
+    const muscleGroupIds = new Set();
+    (DEVELOPMENT_PACKAGES.muscle_groups || []).forEach((group, index) => {
+      const label = group && typeof group.id === 'string' ? group.id : `index ${index}`;
+      const reportGroup = (message) => {
+        issues.push({
+          record: null,
+          category: 'programming-data',
+          message: `data/programming/development-packages.yaml :: muscle_groups :: ${label} :: ${message}`,
+        });
+      };
+      if (!group || typeof group.id !== 'string' || group.id.trim() === '') {
+        reportGroup(`"id" must be a non-empty string`);
+      } else if (muscleGroupIds.has(group.id)) {
+        reportGroup(`duplicate muscle_group id`);
+      } else {
+        muscleGroupIds.add(group.id);
+      }
+      if (!group || typeof group.name !== 'string' || group.name.trim() === '') {
+        reportGroup(`"name" must be a non-empty string`);
+      }
+      if (!isNonEmptyList(group && group.target_ids)) {
+        reportGroup(`"target_ids" must be a non-empty list`);
+      } else {
+        for (const targetId of group.target_ids) {
+          if (typeof targetId !== 'string' || !PHYSIQUE_TARGET_IDS.has(targetId)) {
+            reportGroup(`"target_ids" references unknown target id ${JSON.stringify(targetId)} — not defined in data/programming/physique-targets.yaml`);
+          }
+        }
+      }
+    });
+
+    const packageIds = new Set();
+    (DEVELOPMENT_PACKAGES.packages || []).forEach((pkg, index) => {
+      const label = pkg && typeof pkg.id === 'string' ? pkg.id : `index ${index}`;
+      const reportPkg = (message) => {
+        issues.push({
+          record: null,
+          category: 'programming-data',
+          message: `data/programming/development-packages.yaml :: packages :: ${label} :: ${message}`,
+        });
+      };
+
+      if (!pkg || typeof pkg.id !== 'string' || pkg.id.trim() === '') {
+        reportPkg(`"id" must be a non-empty string`);
+      } else if (packageIds.has(pkg.id)) {
+        reportPkg(`duplicate package id`);
+      } else {
+        packageIds.add(pkg.id);
+      }
+      if (!pkg || typeof pkg.muscle_group !== 'string' || !muscleGroupIds.has(pkg.muscle_group)) {
+        reportPkg(`"muscle_group" references unknown muscle_groups id ${JSON.stringify(pkg && pkg.muscle_group)}`);
+      }
+      if (!pkg || (pkg.level !== 'efficient' && pkg.level !== 'complete')) {
+        reportPkg(`"level" must be "efficient" or "complete", got ${JSON.stringify(pkg && pkg.level)}`);
+      }
+      for (const field of ['display_name', 'objective', 'rationale']) {
+        if (!pkg || typeof pkg[field] !== 'string' || pkg[field].trim() === '') {
+          reportPkg(`"${field}" must be a non-empty string`);
+        }
+      }
+      if (!pkg || !pkg.frequency || typeof pkg.frequency.sessions_per_week !== 'number' || pkg.frequency.sessions_per_week <= 0) {
+        reportPkg(`"frequency.sessions_per_week" must be a positive number`);
+      }
+
+      // Coverage/redundancy (§4/§23): at least 2 distinct exercises, every
+      // exercise_id must resolve, no exercise repeated within a package.
+      const exercises = pkg && pkg.exercises;
+      if (!Array.isArray(exercises) || exercises.length < 2) {
+        reportPkg(`"exercises" must contain at least 2 distinct exercises, got ${Array.isArray(exercises) ? exercises.length : JSON.stringify(exercises)}`);
+      } else {
+        const seenExerciseIds = new Set();
+        const seenOrders = new Set();
+        exercises.forEach((entry, exIndex) => {
+          const exLabel = entry && typeof entry.exercise_id === 'string' ? entry.exercise_id : `exercises[${exIndex}]`;
+          const reportEx = (message) => reportPkg(`${exLabel} :: ${message}`);
+
+          if (!entry || typeof entry.exercise_id !== 'string' || !exerciseIdSet.has(entry.exercise_id)) {
+            reportEx(`"exercise_id" references unknown exercise id ${JSON.stringify(entry && entry.exercise_id)}`);
+            return;
+          }
+          if (seenExerciseIds.has(entry.exercise_id)) {
+            reportEx(`appears more than once in the same package — every package exercise must be distinct`);
+          }
+          seenExerciseIds.add(entry.exercise_id);
+
+          if (typeof entry.order !== 'number' || entry.order <= 0) {
+            reportEx(`"order" must be a positive number, got ${JSON.stringify(entry.order)}`);
+          } else if (seenOrders.has(entry.order)) {
+            reportEx(`duplicate "order" value ${entry.order} within this package`);
+          } else {
+            seenOrders.add(entry.order);
+          }
+
+          if (typeof entry.sets !== 'number' || entry.sets <= 0) {
+            reportEx(`"sets" must be a positive number, got ${JSON.stringify(entry.sets)}`);
+          }
+          if (typeof entry.reps !== 'string' || !REP_RANGE_PATTERN.test(entry.reps)) {
+            reportEx(`"reps" must be a "min-max" string, got ${JSON.stringify(entry.reps)}`);
+          }
+          if (typeof entry.rir !== 'string' || !REP_RANGE_PATTERN.test(entry.rir)) {
+            reportEx(`"rir" must be a "min-max" string, got ${JSON.stringify(entry.rir)}`);
+          }
+          if (!AESTHETIC_ROLES.includes(entry.role)) {
+            reportEx(`"role" must be one of ${AESTHETIC_ROLES.join('|')}, got ${JSON.stringify(entry.role)}`);
+          }
+          if (typeof entry.contribution !== 'string' || entry.contribution.trim() === '') {
+            reportEx(`"contribution" must be a non-empty string`);
+          }
+
+          // Programming consistency (§23 "Programming matches exercise
+          // type/profile"): the authored reps must equal the primary_range
+          // of the Programming Profile this exact exercise resolves to
+          // elsewhere in the app — never a hand-typed number that could
+          // silently contradict the Decision Maker.
+          const exerciseRecord = exerciseById.get(entry.exercise_id);
+          if (exerciseRecord && typeof entry.reps === 'string' && REP_RANGE_PATTERN.test(entry.reps)) {
+            const profile = resolveProgrammingProfileForExercise(exerciseRecord);
+            if (profile) {
+              const expected = `${profile.primary_range[0]}-${profile.primary_range[1]}`;
+              if (entry.reps !== expected) {
+                reportEx(
+                  `"reps" (${JSON.stringify(entry.reps)}) does not match ${JSON.stringify(exerciseRecord.id)}'s resolved ` +
+                  `Programming Profile "${profile.id}" primary_range (expected ${JSON.stringify(expected)})`
+                );
+              }
+            }
+          }
+        });
+      }
+    });
+  }
 
   // --- Aesthetic outcomes: required fields + primary_targets/
   // supporting_targets referential integrity (§28-29 of the revised Phase

@@ -4,6 +4,8 @@
 // it never hand-duplicates programming guidance (same rule §4 of the
 // Phase 3 spec established for exercise knowledge).
 
+import type { DevelopmentPackageCatalog } from './packages';
+
 export interface PhysiqueTarget {
   id: string;
   name: string;
@@ -158,4 +160,5 @@ export interface ProgrammingData {
   intensityTechniques: IntensityTechnique[];
   aestheticOutcomes: AestheticOutcome[];
   functionalGoals: FunctionalGoal[];
+  developmentPackages: DevelopmentPackageCatalog;
 }

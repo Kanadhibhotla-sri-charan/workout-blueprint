@@ -17,6 +17,9 @@ export function Layout() {
           <NavLink to="/decide" className={navLinkClass}>
             Decide
           </NavLink>
+          <NavLink to="/build" className={navLinkClass}>
+            Build
+          </NavLink>
         </nav>
       </header>
       <main className="app-main">

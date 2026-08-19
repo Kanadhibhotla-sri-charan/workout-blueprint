@@ -20,12 +20,20 @@ export function HomePage() {
         Turn structured exercise knowledge into practical exercise decisions.
       </p>
 
-      <div className="home-actions">
-        <Link to="/exercises" className="button button-primary">
-          Explore Exercises
+      <div className="home-path-picker">
+        <Link to="/decide" className="home-path-card">
+          <span className="home-path-card-title">Fix a Visual Problem</span>
+          <span className="home-path-card-desc">Find what may be limiting a specific aesthetic — one problem, one explainable recommendation.</span>
         </Link>
-        <Link to="/decide" className="button button-secondary">
-          Make a Decision
+        <Link to="/build" className="home-path-card">
+          <span className="home-path-card-title">Build the Muscle</span>
+          <span className="home-path-card-desc">Complete, coverage-driven all-round development packages for a whole muscle group.</span>
+        </Link>
+      </div>
+
+      <div className="home-actions">
+        <Link to="/exercises" className="button button-secondary">
+          Explore Exercises
         </Link>
       </div>
 

@@ -57,6 +57,7 @@ Physique Blueprint is a **renderer of knowledge, not a second knowledge base** â
 | Aesthetic outcomes (the "what visual problem?" entry points, incl. `preferred_characteristics` and `exercise_roles`) | `data/programming/aesthetic-outcomes.yaml` |
 | Physique targets / functional goals | `data/programming/` |
 | Programming rules (rep ranges, programming profiles, intensity-technique eligibility) | `data/programming/programming-profiles.yaml`, `data/programming/rep-ranges.yaml`, `data/programming/intensity-techniques.yaml` |
+| All-round development packages (the "Build the Muscle" entry point) | `data/programming/development-packages.yaml` |
 | Schema definition | [`docs/knowledge-manual/SCHEMA.md`](docs/knowledge-manual/SCHEMA.md) |
 
 ### Safe knowledge-update process
