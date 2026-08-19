@@ -172,6 +172,7 @@ select {
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
 }
 
 .button-primary {
@@ -179,10 +180,20 @@ select {
   color: var(--accent-contrast);
 }
 
+.button-primary:hover,
+.button-primary:focus-visible {
+  opacity: 0.88;
+}
+
 .button-secondary {
   background: var(--bg-raised);
   color: var(--text);
   border-color: var(--border);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  border-color: var(--accent);
 }
 
 /* Home page */
@@ -248,6 +259,12 @@ select {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  transition: border-color 0.15s ease;
+}
+
+.region-tile:hover,
+.region-tile:focus-visible {
+  border-color: var(--accent);
 }
 
 .region-count {
@@ -344,6 +361,12 @@ select {
   background: var(--bg-raised);
   text-decoration: none;
   color: var(--text);
+  transition: border-color 0.15s ease;
+}
+
+.exercise-card:hover,
+.exercise-card:focus-visible {
+  border-color: var(--accent);
 }
 
 .exercise-card-head {
@@ -497,6 +520,7 @@ select {
 .technical-detail summary {
   cursor: pointer;
   font-weight: 600;
+  color: var(--accent);
   font-size: 1.1rem;
   padding: var(--space-2) 0;
   min-height: var(--touch-target);
@@ -619,6 +643,15 @@ select {
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: var(--space-2);
+}
+
+.decision-result-outcome summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  min-height: var(--touch-target);
+  display: flex;
+  align-items: center;
 }
 
 .decision-result-trace {
@@ -784,6 +817,12 @@ select {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
+  transition: border-color 0.15s ease;
+}
+
+.package-level-tab:hover,
+.package-level-tab:focus-visible {
+  border-color: var(--accent);
 }
 
 .package-level-tab-active {
@@ -1030,4 +1069,5 @@ select {
   display: flex;
   align-items: center;
   font-weight: 600;
+  color: var(--accent);
 }

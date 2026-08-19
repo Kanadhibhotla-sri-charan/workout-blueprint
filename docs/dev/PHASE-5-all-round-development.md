@@ -75,3 +75,18 @@ Full click-through in a real browser (not just automated checks): home → Build
 ## Pending decisions
 
 None. Per spec §30, architecture is frozen again after this phase — future changes should be concrete-defect-driven (`docs/real-world-feedback/`), not another architecture pass.
+
+## Post-deployment follow-up: UI-consistency fix
+
+Logged per the post-deployment loop (`docs/real-world-feedback/bugs.md`), not as new architecture — a real observation from actual use, not a new phase.
+
+**Observed:** the user compared the deployed Build tab against Explore/Decide and could not see any of Phase 5's visual polish outside Build — a fair reading, since the polish had only been applied to Build's own new CSS classes.
+
+**Investigated before fixing:** `.exercise-card`/`.decision-result-block` already shared the exact same border/radius/padding/background formula as Build's `.muscle-group-card`/`.package-summary-card` — the "card chrome" was already consistent. The actual, checkable gaps were narrower than the complaint suggested: no hover/focus-visible feedback on `.exercise-card`/`.region-tile`, no hover state on `.button` at all, and three different stylings for the same "expand for more" `<details>`/`<summary>` affordance across the app (`.technical-detail summary` and the unstyled "Technical explanation" summary had no color; `.package-exercise-details summary` was accent-colored; `.package-progression summary`, added in this same phase, was inconsistent with its own sibling).
+
+**Fix (CSS-only, zero markup/behavior changes):**
+- `.exercise-card`, `.region-tile`, `.package-level-tab`: added `border-color` hover/focus-visible transitions matching `.muscle-group-card`/`.home-path-card`.
+- `.button`/`.button-primary`/`.button-secondary`: added hover/focus-visible states (previously none at all).
+- `.technical-detail summary`, `.decision-result-outcome summary` (the "Technical explanation" toggle), `.package-progression summary`: unified to the accent-colored expand affordance already established by `.package-exercise-details summary`. `.decision-result-trace summary` (the debug ranking trace) was deliberately left muted — that's an intentional de-emphasis from Phase 4C, not an inconsistency.
+
+**Verified:** `npx tsc -b --force`, `oxlint`, and the full Vitest suite (153/153) all still pass — expected, since no `.tsx`/test file changed. Manually confirmed via a real production build + headless Chromium: hover states render correctly, Decide's full result view and Exercise Detail's "Technical details" now read as the same product as Build, and 375px checks across `/`, `/exercises`, `/decide`, `/build`, and `/build/chest` show zero horizontal overflow and zero console errors.
