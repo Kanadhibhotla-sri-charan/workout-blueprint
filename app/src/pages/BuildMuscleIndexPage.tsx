@@ -10,8 +10,11 @@ export function BuildMuscleIndexPage() {
 
   return (
     <div className="build-muscle-index">
+      <p className="eyebrow">Build</p>
       <h1>Build the Muscle</h1>
-      <p className="build-muscle-intro">Complete visual development plans.</p>
+      <p className="build-muscle-intro">
+        Complete visual-development packages built from Blueprint's exercise and programming model.
+      </p>
 
       <h2 className="build-muscle-section-heading">Choose a muscle group</h2>
       <div className="muscle-group-grid">

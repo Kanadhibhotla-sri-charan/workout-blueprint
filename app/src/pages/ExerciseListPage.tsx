@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import {
   bodyRegions,
@@ -34,6 +35,7 @@ function readFilters(searchParams: URLSearchParams): Filters {
 
 export function ExerciseListPage() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const query = searchParams.get('q') ?? '';
   const filters = readFilters(searchParams);
   const regionIsValid = filters.region === null || bodyRegions.includes(filters.region);
@@ -74,32 +76,74 @@ export function ExerciseListPage() {
 
   const heading =
     filters.region && regionIsValid && !query ? humanize(filters.region) : 'All Exercises';
+  const activeFilterCount = Object.entries(filters).filter(
+    ([key, value]) => key !== 'region' && value !== null
+  ).length;
 
   return (
     <div className="exercise-list-page">
-      <div className="exercise-list-header">
-        <div>
-          <h1>{heading}</h1>
-          <p className="result-count">
-            {results.length} exercise{results.length === 1 ? '' : 's'}
-          </p>
-        </div>
+      <div className="exercise-list-hero">
+        <p className="eyebrow">Explore</p>
+        <h1>{heading}</h1>
+        <p className="exercise-list-hero-desc">
+          Find movements, understand what they do, and compare roles.
+        </p>
       </div>
 
       <SearchBox value={query} onChange={(value) => updateParams({ q: value })} />
 
-      <FilterBar
-        filters={filters}
-        options={{
-          regions: bodyRegions,
-          equipment: equipmentOptions,
-          exerciseTypes: exerciseTypeOptions,
-          laterality: lateralityOptions,
-          coverageCategories: coverageCategoryOptions,
-        }}
-        onChange={handleFilterChange}
-        onClear={handleClearFilters}
-      />
+      <div className="region-pill-row" role="group" aria-label="Filter by body region">
+        <button
+          type="button"
+          className={filters.region === null ? 'region-pill region-pill-active' : 'region-pill'}
+          onClick={() => handleFilterChange({ region: null })}
+        >
+          All
+        </button>
+        {bodyRegions.map((region) => (
+          <button
+            key={region}
+            type="button"
+            className={filters.region === region ? 'region-pill region-pill-active' : 'region-pill'}
+            onClick={() => handleFilterChange({ region })}
+          >
+            {humanize(region)}
+          </button>
+        ))}
+      </div>
+
+      <div className="filter-bar-toggle">
+        <button
+          type="button"
+          className="button button-secondary"
+          onClick={() => setFiltersOpen((open) => !open)}
+          aria-expanded={filtersOpen}
+        >
+          {filtersOpen ? 'Hide filters' : 'More filters'}
+          {activeFilterCount > 0 ? ` (${activeFilterCount})` : ''}
+        </button>
+      </div>
+
+      {filtersOpen && (
+        <FilterBar
+          filters={filters}
+          options={{
+            regions: bodyRegions,
+            equipment: equipmentOptions,
+            exerciseTypes: exerciseTypeOptions,
+            laterality: lateralityOptions,
+            coverageCategories: coverageCategoryOptions,
+          }}
+          onChange={handleFilterChange}
+          onClear={handleClearFilters}
+        />
+      )}
+
+      <div className="exercise-list-header">
+        <p className="result-count">
+          {results.length} exercise{results.length === 1 ? '' : 's'}
+        </p>
+      </div>
 
       {filters.region !== null && !regionIsValid && (
         <p className="empty-state">

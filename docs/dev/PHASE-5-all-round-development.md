@@ -122,3 +122,55 @@ Rewrote both Build pages (`BuildMuscleIndexPage.tsx`, `BuildMusclePackagePage.ts
 - Responsive sweep at 375/390/768/1024px across all main routes: zero horizontal overflow, zero console errors. Verified against a real production build (`vite build` + `vite preview`) in both light and dark color schemes.
 
 No architecture changed. `decisionEngine.ts` and `programmingEngine.ts` are untouched; every prior phase's regression test is still green.
+
+## Final UI overhaul (PHASE-5-FINAL-UI-OVERHAUL.md)
+
+A full application-wide visual redesign, implemented against the existing Phase 5 architecture per the spec's own instruction: presentation only, no new recommendation logic, no new architecture. The prior passes had already made Build feel premium while Explore/Decide/Home lagged behind visually — this pass makes all four feel like one deliberate product.
+
+### Dark-first design tokens (§3-4)
+
+Replaced the token layer in `index.css` with an intentionally-designed dark palette as the **default** `:root` (not a `prefers-color-scheme: dark` override) — `--bg-page`/`-surface`/`-surface-raised`/`-surface-hover`, `--border-subtle`/`-strong`, `--text-primary`/`-secondary`/`-muted`/`-disabled`, `--accent`/`-soft`/`-strong`, `--success`/`-warning`/`-danger`, `--radius-sm/md/lg/xl`, `--shadow-card`/`-elevated`, an 8-step `--space-1..8` scale. A `prefers-color-scheme: light` media query supplies the light variant for users who prefer it — the spec's "make dark mode the primary identity" is satisfied by making dark the unconditional default, not by removing light mode entirely. Contrast-checked every actively-used text/background pair against WCAG AA (4.5:1): all pass, ranging 5.8–17.7:1 in dark, 4.8–10.3:1 in light.
+
+### Global app shell (§6-11)
+
+- `Layout.tsx`: added a diamond brand mark, pill-shaped active-nav state, and a mobile bottom nav (`Explore`/`Decide`/`Build` — Home stays reachable via the brand) that replaces the top nav under 640px rather than cramming three links into a compact header.
+- `index.css`: a subtle radial-gradient atmosphere behind the page (`.app-shell::before`), per-page-type max-widths (reading ~800px, decide ~960px, dashboard ~1160px) instead of one flat 720px column, a shared `.surface-card`/hover/focus vocabulary, and a unified expandable-`<details>` affordance (a small `+` marker that rotates 45° on open) used identically across Explore's technical details, Decide's technical explanation, and Build's exercise-card sections.
+
+### Home (§12-13)
+
+Rebuilt around a centered hero, the Fix-a-Problem/Build-Muscle path cards promoted above Explore (their own icon, description, and "Start →" cue), and an Explore "band" link — search and body-region browsing pushed below, matching the spec's stated priority order.
+
+### Explore — list + detail (§14-16)
+
+- Added a region **pill row** as the primary, always-visible way to narrow by body region (mirroring the spec's own mockup) and moved the remaining attribute filters (equipment, exercise type, laterality, setup time, fatigue cost, coverage role) into a collapsible "More filters" panel — removed the now-redundant Region `<select>` from `FilterBar` rather than keeping two controls for the same field.
+- `ExerciseCard`: added a body-region eyebrow above the exercise name.
+- `ExerciseDetailPage`: added a region eyebrow, renamed "What you'll see" → "Visual effect" to match Build's section naming, added an accent rail on the mirror-effect callout — no content or field changes, all 30 schema fields still render exactly where they did.
+
+### Decide — flow + result (§17-23)
+
+- Added a progress indicator (`01 ─ 02 ─ 03 ─ RESULT`, dots fill as each step's state becomes non-empty) and wrapped each of the 4 form sections in a `.decision-step` card with a `STEP 0N` label.
+- **Constraint proven before writing any of it**: `DecisionMakerPage.test.tsx` exercises every field via `getByLabelText`/`getByRole` across 20 tests, several of which fill fields out of a "natural" top-to-bottom order or assert a field is *absent* until an entry-mode switch reveals it. The progress indicator is `aria-hidden` and purely computed from existing state (`Boolean(bodyRegion)`, etc.) — it renders, it never gates. No field was moved behind a reveal condition that didn't already exist (the entry-mode panels and the equipment multi-select already conditionally rendered before this pass); every class name, heading, and label the test suite queries is unchanged. Full suite re-run after the change: still 158/158.
+- Removed all decorative `aria-hidden` emoji (👀🦴🎯🥇🔍🧬📊⚡🥈⚠️🔄🧩) from radio labels and result headings — they were already screen-reader-invisible, so removing them only affects the sighted-user tone, and a heavy emoji glyph on every heading read as informal against §2's "premium, technical, confident" identity. Headings now use typography hierarchy alone.
+- Result view: `.decision-result-outcome`/`.decision-result-best` given visually stronger treatment (larger heading, accent border/gradient, elevated shadow) so the aesthetic problem and the recommendation read as the payoff; technical explanation stays in its existing collapsed `<details>`. No block was reordered or removed — same `querySelector('.decision-result-*')` structure the tests already assert on.
+
+### Build — landing + package page (§24-34)
+
+Already closest to the target after the prior two passes; this pass re-skinned every existing class onto the new tokens and added:
+- `Choose a package` cards now sit on the dark-first surface tokens with a stronger active/hover state.
+- Exercise sequence rendered as a **connected vertical timeline** on desktop (≥720px: a spine line with circular order nodes) collapsing to plain stacked cards on mobile — spec §29-30's explicit desktop/mobile split, achieved with pure CSS (`::before` line + `position: absolute` node) and zero markup change beyond what already existed.
+- Landing page tagline updated to the spec's own copy; added a `Build` eyebrow matching Explore/Decide's pattern.
+
+### What did not change
+
+`decisionEngine.ts`, `programmingEngine.ts`, `packageEngine.ts`, every YAML knowledge file, and every route are untouched. This was a presentation pass: component markup changed only where a new visual (timeline nodes, progress dots, region pills, bottom nav) needed a new element to render into; no field was added, removed, or renamed on any data type.
+
+### Verification
+
+- `npx tsc -b --force`, `oxlint`, `npm run validate-data`, full Vitest suite: **158/158 passing** (unchanged count — this was a UI pass, no new test surface needed).
+- Automated responsive sweep at 375/390/768/1024/1280px across all 7 routes via a real production build (`vite build` + `vite preview`) and headless Chromium: zero horizontal overflow (`scrollWidth === clientWidth` at every width), zero console errors.
+- Manual visual QA: dark and light color schemes, keyboard-only focus-visible check (clearly visible accent ring on nav/buttons), a submitted Decide recommendation end-to-end, and the Explore "More filters" panel expanded — all screenshotted against the live production build.
+- Cross-mode consistency (§53): the same exercise card language (surface, radius, border, hover) now appears identically in Explore's grid, Decide's result blocks, and Build's exercise-sequence cards — confirmed by direct visual comparison of the three screenshots side by side.
+
+## Final boundary
+
+Per the spec's own §59: architecture is frozen. No Phase 6, no second package engine, no AI, no backend, no further open-ended visual redesign. Future work follows the observe → classify → fix-smallest-layer → regression-test → deploy loop, driven by real use recorded in `docs/real-world-feedback/`.

@@ -8,6 +8,7 @@ import { humanize, truncate } from '../utils/format';
 export function ExerciseCard({ exercise }: { exercise: Exercise }) {
   return (
     <Link to={`/exercises/${exercise.id}`} className="exercise-card">
+      <p className="exercise-card-region">{humanize(exercise.body_regions[0])}</p>
       <div className="exercise-card-head">
         <h3>{exercise.name}</h3>
         <span className="exercise-card-type">{humanize(exercise.exercise_type)}</span>

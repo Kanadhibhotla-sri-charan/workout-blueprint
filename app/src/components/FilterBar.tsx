@@ -44,6 +44,9 @@ function FilterSelect({
 // immediately on change (no submit step) and every active filter is
 // AND-combined by utils/filters.ts's applyFilters — "Chest + Cable +
 // Isolation + Low fatigue" narrows the same way the spec's example does.
+// Region itself is filtered via the pill row above this panel
+// (ExerciseListPage) — omitted here to avoid a second, redundant control
+// for the same field.
 export function FilterBar({
   filters,
   options,
@@ -59,12 +62,6 @@ export function FilterBar({
 
   return (
     <div className="filter-bar">
-      <FilterSelect
-        label="Region"
-        value={filters.region}
-        options={options.regions}
-        onChange={(value) => onChange({ region: value })}
-      />
       <FilterSelect
         label="Equipment"
         value={filters.equipment}

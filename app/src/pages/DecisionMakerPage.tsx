@@ -190,17 +190,52 @@ export function DecisionMakerPage() {
     setResultAestheticOutcome(getAestheticOutcomeById(aestheticOutcomeId) ?? null);
   }
 
+  // Purely presentational — drives the progress indicator only, never a
+  // gate on which fields are rendered. Every field the test suite queries
+  // via getByLabelText stays mounted regardless of step completion.
+  const step1Done = Boolean(bodyRegion);
+  const step2Done = Boolean(goal);
+  const step3Done = step2Done;
+
   return (
     <div className="decision-maker-page">
-      <h1>Make a Decision</h1>
-      <p className="home-tagline">
-        Answer a few practical questions and get one explainable recommendation — not a ranked
-        list of ten.
-      </p>
+      <div className="decision-maker-hero">
+        <p className="eyebrow">Decide</p>
+        <h1>Turn a visual problem into a training decision.</h1>
+        <p className="home-tagline">
+          Tell Blueprint what you see. It will explain what may be limiting it and what to focus on.
+        </p>
+      </div>
+
+      <div className="decision-progress" aria-hidden="true">
+        <span className="decision-progress-step">
+          <span className={step1Done ? 'decision-progress-dot decision-progress-dot-done' : 'decision-progress-dot'} />
+          01
+        </span>
+        <span className="decision-progress-line" />
+        <span className="decision-progress-step">
+          <span className={step2Done ? 'decision-progress-dot decision-progress-dot-done' : 'decision-progress-dot'} />
+          02
+        </span>
+        <span className="decision-progress-line" />
+        <span className="decision-progress-step">
+          <span className={step3Done ? 'decision-progress-dot decision-progress-dot-done' : 'decision-progress-dot'} />
+          03
+        </span>
+        <span className="decision-progress-line" />
+        <span className="decision-progress-step">
+          <span className={result ? 'decision-progress-dot decision-progress-dot-done' : 'decision-progress-dot'} />
+          RESULT
+        </span>
+      </div>
 
       <form onSubmit={handleSubmit} className="decision-form">
-        <fieldset className="filter-field entry-mode-field">
+        <fieldset className="filter-field entry-mode-field decision-step">
           <legend>1. What do you want to improve?</legend>
+          <p className="decision-step-label">
+            <span className="decision-step-number">STEP 01</span>
+            What are you trying to improve?
+          </p>
           <div className="entry-mode-choices">
             <label className="radio-field">
               <input
@@ -210,7 +245,7 @@ export function DecisionMakerPage() {
                 checked={entryMode === 'appearance'}
                 onChange={() => handleEntryModeChange('appearance')}
               />
-              <span aria-hidden="true">👀</span> Appearance
+              Appearance
             </label>
             <label className="radio-field">
               <input
@@ -220,7 +255,7 @@ export function DecisionMakerPage() {
                 checked={entryMode === 'function'}
                 onChange={() => handleEntryModeChange('function')}
               />
-              <span aria-hidden="true">🦴</span> Function
+              Function
             </label>
             <label className="radio-field">
               <input
@@ -230,7 +265,7 @@ export function DecisionMakerPage() {
                 checked={entryMode === 'advanced'}
                 onChange={() => handleEntryModeChange('advanced')}
               />
-              <span aria-hidden="true">🎯</span> Direct / Advanced
+              Direct / Advanced
             </label>
           </div>
 
@@ -343,7 +378,7 @@ export function DecisionMakerPage() {
           )}
         </fieldset>
 
-        <div className="filter-field">
+        <div className="filter-field decision-step">
           <label htmlFor="dm-goal">2. What are you trying to accomplish?</label>
           <select
             id="dm-goal"
@@ -362,8 +397,12 @@ export function DecisionMakerPage() {
           </select>
         </div>
 
-        <fieldset className="decision-constraints">
+        <fieldset className="decision-constraints decision-step">
           <legend>3. What constraints matter?</legend>
+          <p className="decision-step-label">
+            <span className="decision-step-number">STEP 03</span>
+            What constraints matter?
+          </p>
 
           <label className="checkbox-field">
             <input
@@ -468,7 +507,7 @@ export function DecisionMakerPage() {
           </div>
         </fieldset>
 
-        <div className="filter-field">
+        <div className="filter-field decision-step">
           <label htmlFor="dm-current">
             4. Current exercise {goalNeedsCurrentExercise ? '(required for this goal)' : '(optional)'}
           </label>
@@ -518,7 +557,7 @@ function DecisionResultView({
       {aestheticOutcome && (
         <div className="decision-result-block decision-result-outcome">
           <h2>
-            <span aria-hidden="true">👀</span> What you&apos;re trying to change
+            What you&apos;re trying to change
           </h2>
           <p className="decision-result-name">{aestheticOutcome.display_name}</p>
           <p>{aestheticOutcome.visual_description}</p>
@@ -534,7 +573,7 @@ function DecisionResultView({
       {result.functionalGoal && (
         <div className="decision-result-block decision-result-functional">
           <h2>
-            <span aria-hidden="true">🦴</span> Functional goal
+            Functional goal
           </h2>
           <p className="decision-result-name">{result.functionalGoal.name}</p>
           <p>{result.functionalGoal.definition}</p>
@@ -545,7 +584,7 @@ function DecisionResultView({
       {result.target && (
         <div className="decision-result-block decision-result-target">
           <h2>
-            <span aria-hidden="true">🎯</span> Target
+            Target
           </h2>
           <p className="decision-result-name">{result.target.name}</p>
           <p>{result.target.definition}</p>
@@ -555,7 +594,7 @@ function DecisionResultView({
       {result.supportingTargets.length > 0 && (
         <div className="decision-result-block decision-result-supporting">
           <h2>
-            <span aria-hidden="true">🧩</span> Also contributes
+            Also contributes
           </h2>
           <ul>
             {result.supportingTargets.map((supportingTarget) => (
@@ -570,7 +609,7 @@ function DecisionResultView({
       {result.visualObjective && (
         <div className="decision-result-block">
           <h2>
-            <span aria-hidden="true">👀</span> Visual objective
+            Visual objective
           </h2>
           <p>{result.visualObjective}</p>
         </div>
@@ -578,7 +617,7 @@ function DecisionResultView({
 
       <div className="decision-result-block decision-result-best">
         <h2>
-          <span aria-hidden="true">🥇</span> Best fit
+          Best fit
         </h2>
         <Link to={`/exercises/${result.bestFit.id}`} className="decision-result-name">
           {result.bestFit.name}
@@ -589,7 +628,7 @@ function DecisionResultView({
       {result.target && (
         <div className="decision-result-block decision-result-why">
           <h2>
-            <span aria-hidden="true">🔍</span> Why this exercise?
+            Why this exercise?
           </h2>
           <p>
             <strong>Primary target:</strong> {result.target.name} —{' '}
@@ -613,14 +652,14 @@ function DecisionResultView({
 
       <div className="decision-result-block">
         <h2>
-          <span aria-hidden="true">🧬</span> Stimulus
+          Stimulus
         </h2>
         <p>{result.stimulus}</p>
       </div>
 
       <div className="decision-result-block">
         <h2>
-          <span aria-hidden="true">📊</span> Programming
+          Programming
         </h2>
         <p className="field-hint">
           <strong>Baseline</strong> — {programming.profile.name}
@@ -656,7 +695,7 @@ function DecisionResultView({
 
       <div className="decision-result-block">
         <h2>
-          <span aria-hidden="true">⚡</span> Intensity technique
+          Intensity technique
         </h2>
         {programming.intensityTechnique ? (
           <>
@@ -672,7 +711,7 @@ function DecisionResultView({
       {result.alternative && (
         <div className="decision-result-block">
           <h2>
-            <span aria-hidden="true">🥈</span> Alternative
+            Alternative
           </h2>
           <Link to={`/exercises/${result.alternative.id}`} className="decision-result-name">
             {result.alternative.name}
@@ -684,7 +723,7 @@ function DecisionResultView({
       {result.watchOut.length > 0 && (
         <div className="decision-result-block">
           <h2>
-            <span aria-hidden="true">⚠️</span> Watch out
+            Watch out
           </h2>
           <ul>
             {result.watchOut.map((note) => (
@@ -697,7 +736,7 @@ function DecisionResultView({
       {result.complements.length > 0 && (
         <div className="decision-result-block">
           <h2>
-            <span aria-hidden="true">🔄</span> Complements
+            Complements
           </h2>
           <ul className="relationship-list">
             {result.complements.map((exercise) => (

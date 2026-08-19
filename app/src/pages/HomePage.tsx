@@ -15,27 +15,46 @@ export function HomePage() {
 
   return (
     <div className="home-page">
-      <h1>Physique Blueprint</h1>
-      <p className="home-tagline">
-        Turn structured exercise knowledge into practical exercise decisions.
-      </p>
+      <div className="home-hero">
+        <h1>Physique Blueprint</h1>
+        <p className="home-tagline">
+          Turn physique goals into explainable training decisions.
+        </p>
+      </div>
 
       <div className="home-path-picker">
         <Link to="/decide" className="home-path-card">
-          <span className="home-path-card-title">Fix a Visual Problem</span>
-          <span className="home-path-card-desc">Find what may be limiting a specific aesthetic — one problem, one explainable recommendation.</span>
+          <span className="home-path-card-icon" aria-hidden="true">
+            &#9679;
+          </span>
+          <span className="home-path-card-title">Fix a Problem</span>
+          <span className="home-path-card-desc">
+            Diagnose a visual limitation — one problem, one explainable recommendation.
+          </span>
+          <span className="home-path-card-cta">Start &rarr;</span>
         </Link>
         <Link to="/build" className="home-path-card">
-          <span className="home-path-card-title">Build the Muscle</span>
-          <span className="home-path-card-desc">Complete, coverage-driven all-round development packages for a whole muscle group.</span>
+          <span className="home-path-card-icon" aria-hidden="true">
+            &#9670;
+          </span>
+          <span className="home-path-card-title">Build Muscle</span>
+          <span className="home-path-card-desc">
+            Complete, coverage-driven all-round development packages for a whole muscle group.
+          </span>
+          <span className="home-path-card-cta">Start &rarr;</span>
         </Link>
       </div>
 
-      <div className="home-actions">
-        <Link to="/exercises" className="button button-secondary">
-          Explore Exercises
-        </Link>
-      </div>
+      <Link to="/exercises" className="home-explore-band">
+        <span>
+          <span className="home-explore-band-title">Explore the exercise library</span>
+          <br />
+          <span className="home-explore-band-desc">Search, compare and understand exercises</span>
+        </span>
+        <span className="home-explore-band-arrow" aria-hidden="true">
+          &rarr;
+        </span>
+      </Link>
 
       <form className="home-search" onSubmit={handleSearchSubmit} role="search">
         <label htmlFor="home-search-input">Search exercises</label>

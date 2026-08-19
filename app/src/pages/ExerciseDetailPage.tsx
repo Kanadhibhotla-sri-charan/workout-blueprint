@@ -24,8 +24,9 @@ export function ExerciseDetailPage() {
     <article className="exercise-detail">
       {/* 1–2: what is this, why does it exist */}
       <p className="breadcrumb">
-        <Link to="/exercises">All exercises</Link>
+        <Link to="/exercises">&larr; Explore</Link>
       </p>
+      <p className="eyebrow">{humanize(exercise.body_regions[0])}</p>
       <h1>{exercise.name}</h1>
       <p className="detail-summary">{exercise.summary}</p>
       <p className="detail-why">{exercise.why_this_exists}</p>
@@ -52,7 +53,7 @@ export function ExerciseDetailPage() {
 
       {/* 3: what will I see / what does it help develop */}
       <section className="detail-section mirror-effect-section">
-        <h2>What you'll see</h2>
+        <h2>Visual effect</h2>
         <p>{exercise.mirror_effect}</p>
       </section>
 
