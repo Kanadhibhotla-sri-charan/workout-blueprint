@@ -8,7 +8,7 @@
 
 const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
-  REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
+  REVIEW_STATUSES, VIDEO_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
   AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
 } = require('./taxonomy');
@@ -51,6 +51,7 @@ const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const QUOTED_MODULE_REF = /^([a-z0-9]+(-[a-z0-9]+)*) \(.*module.*\)/;
 const REP_RANGE_PATTERN = /^\d+-\d+$/;
+const YOUTUBE_URL_PATTERN = /^https:\/\/(www\.|m\.)?(youtube\.com\/(watch\?v=[a-zA-Z0-9_-]{11}|shorts\/[a-zA-Z0-9_-]{11})|youtu\.be\/[a-zA-Z0-9_-]{11})(\S*)?$/;
 
 const DEMAND_ORDER = ['low', 'medium', 'high'];
 
@@ -489,6 +490,24 @@ function validate(records) {
     }
     if (!REVIEW_STATUSES.has(record.review_status)) {
       report(record, 'schema', `"review_status" must be one of ${[...REVIEW_STATUSES].join('|')}, got ${JSON.stringify(record.review_status)}`);
+    }
+    if (record.video_status !== undefined && record.video_status !== null && !VIDEO_STATUSES.has(record.video_status)) {
+      report(record, 'schema', `"video_status" must be one of ${[...VIDEO_STATUSES].join('|')}, got ${JSON.stringify(record.video_status)}`);
+    }
+    if (record.video_link !== undefined && record.video_link !== null) {
+      if (typeof record.video_link !== 'string' || !YOUTUBE_URL_PATTERN.test(record.video_link)) {
+        report(record, 'schema', `"video_link" must be a valid YouTube URL (https://www.youtube.com/watch?v=... or https://youtu.be/...), got ${JSON.stringify(record.video_link)}`);
+      }
+    }
+    if (record.video_creator !== undefined && record.video_creator !== null) {
+      if (typeof record.video_creator !== 'string' || record.video_creator.trim() === '') {
+        report(record, 'schema', `"video_creator" must be a non-empty string, got ${JSON.stringify(record.video_creator)}`);
+      }
+    }
+    if (record.video_title !== undefined && record.video_title !== null) {
+      if (typeof record.video_title !== 'string' || record.video_title.trim() === '') {
+        report(record, 'schema', `"video_title" must be a non-empty string, got ${JSON.stringify(record.video_title)}`);
+      }
     }
 
     // --- Taxonomy: body_regions, coverage_categories, movement_patterns ---

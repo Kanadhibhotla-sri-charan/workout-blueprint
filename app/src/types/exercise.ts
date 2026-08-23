@@ -8,6 +8,7 @@ export type ExerciseType = 'compound' | 'isolation';
 export type Laterality = 'bilateral' | 'unilateral' | 'alternating';
 export type DemandLevel = 'low' | 'medium' | 'high';
 export type ReviewStatus = 'draft' | 'needs-review' | 'reviewed';
+export type VideoStatus = 'verified' | 'needs-review' | 'broken';
 
 export interface Exercise {
   id: string;
@@ -50,6 +51,11 @@ export interface Exercise {
   overlaps_with: string[] | null;
   evidence_notes: string[] | null;
   review_status: ReviewStatus;
+  /** Canonical YouTube execution tutorial reference. */
+  video_link?: string | null;
+  video_creator?: string | null;
+  video_title?: string | null;
+  video_status?: VideoStatus | null;
   /** Source file basename, e.g. "chest.yaml" — added by the generator, not part of the canonical schema. */
   _file: string;
 }

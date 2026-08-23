@@ -23,6 +23,12 @@ export function ExerciseCard({ exercise }: { exercise: Exercise }) {
         </div>
       )}
       <p className="exercise-card-mirror">{truncate(exercise.mirror_effect, 110)}</p>
+      {exercise.video_link && (
+        <div className="exercise-card-video-hint">
+          <span className="video-hint-icon" aria-hidden="true">▶</span>
+          <span>Watch technique</span>
+        </div>
+      )}
     </Link>
   );
 }

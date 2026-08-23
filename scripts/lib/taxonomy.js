@@ -22,6 +22,7 @@ const COVERAGE_CATEGORIES = new Set([
 ]);
 
 const REVIEW_STATUSES = new Set(['draft', 'needs-review', 'reviewed']);
+const VIDEO_STATUSES = new Set(['verified', 'needs-review', 'broken']);
 
 // Aesthetic-specific exercise characteristics (Phase 4C §2) — a small,
 // deterministic vocabulary of movement-mechanics traits that distinguish
@@ -90,6 +91,7 @@ const ALL_FIELDS = new Set([
   'advantages', 'limitations', 'technique_cues', 'common_mistakes', 'programming_notes',
   'alternatives', 'complements', 'overlaps_with', 'evidence_notes', 'review_status',
   'physique_targets', 'functional_goals', 'aesthetic_characteristics',
+  'video_link', 'video_creator', 'video_title', 'video_status',
 ]);
 
 module.exports = {
@@ -99,6 +101,7 @@ module.exports = {
   DEMAND_LEVELS,
   COVERAGE_CATEGORIES,
   REVIEW_STATUSES,
+  VIDEO_STATUSES,
   AESTHETIC_CHARACTERISTICS,
   AESTHETIC_ROLES,
   FUNDAMENTAL_MOVEMENT_PATTERNS,

@@ -1,69 +1,44 @@
-# Canonical exercise records for the chest module.
-# Format decided in docs/adr/0001-canonical-record-format.md.
-# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
-# Converted from docs/knowledge-manual/chest/CHEST.md.
-#
-# Fields with no source material in the prose (mirror_effect, advantages,
-# limitations, technique_cues, common_mistakes, programming_notes,
-# alternatives, evidence_notes) are left empty rather than fabricated.
-#
-# Evidence-notes pass (partial): the upper/clavicular-biased claim carried
-# by the incline family now has strong, direct support (an MRI hypertrophy
-# trial plus EMG), the mid/sternal-biased claim carried by the flat family
-# has real but more circumstantial support, and the lower/costal-biased
-# claim carried by the dip and decline fly has EMG support only — no
-# hypertrophy trial isolating that region was found. The cable fly's
-# pulley-height bias claim and the pullover's general/costal claim remain
-# unresolved coaching cues per ADR 0001's no-fabrication policy — flagged,
-# not asserted.
-
 - id: incline-dumbbell-press
   name: Incline Dumbbell Press
-  summary: >-
-    A freely moving incline press for an upper-chest-biased mechanical-
-    tension and stretch stimulus, using independent dumbbells.
-  why_this_exists: >-
-    A freely moving incline press for users who want an incline-oriented
-    chest press and can control independent dumbbells.
-  body_regions: [chest]
+  summary: A freely moving incline press for an upper-chest-biased mechanical- tension and stretch stimulus, using independent dumbbells.
+  why_this_exists: A freely moving incline press for users who want an incline-oriented chest press and can control independent dumbbells.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [upper-pec]
-  aesthetic_characteristics: [high-loadable, lengthened-biased]
-  movement_patterns: [incline horizontal press]
-  equipment: [dumbbell, bench]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  aesthetic_characteristics:
+    - high-loadable
+    - lengthened-biased
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile, hardest through the middle of the range; independent
-    arms allow a deeper bottom-range stretch than a fixed bar, at the cost of
-    a lower absolute load ceiling than a barbell press.
+  coverage_categories:
+    - heavy-compound
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile, hardest through the middle of the range; independent arms allow a deeper bottom-range stretch than a fixed bar, at the cost of a lower absolute load ceiling than a barbell press.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
     - A strong mechanical-tension stimulus for the upper chest is the goal.
-    - A deeper bottom-range stretch than a barbell allows is wanted, since
-      each arm can drop past where a fixed bar would stop.
+    - A deeper bottom-range stretch than a barbell allows is wanted, since each arm can drop past where a fixed bar would stop.
   less_suitable_when:
-    - The stability demand of controlling two independent dumbbells caps how
-      much weight can be used, limiting the mechanical-tension ceiling for a
-      stronger lifter.
-  mirror_effect: >-
-    Tends to show up as the upper-chest shelf filling in — the area just below
-    the collarbone fills out, closing the gap between shoulder and chest and
-    reading as a squared-off top edge in a t-shirt or from the front, rather
-    than the chest looking like it starts lower down.
+    - The stability demand of controlling two independent dumbbells caps how much weight can be used, limiting the mechanical-tension ceiling for a stronger lifter.
+  mirror_effect: Tends to show up as the upper-chest shelf filling in — the area just below the collarbone fills out, closing the gap between shoulder and chest and reading as a squared-off top edge in a t-shirt or from the front, rather than the chest looking like it starts lower down.
   advantages: []
   limitations:
-    - Shoulder mobility and comfort at a steep bench angle can limit how deep
-      the stretch goes, capping the very stimulus this movement is chosen for.
-    - Controlling two independent dumbbells at an incline is a real stability
-      demand, and it caps the achievable load below what a barbell would allow
-      at the same effort level.
+    - Shoulder mobility and comfort at a steep bench angle can limit how deep the stretch goes, capping the very stimulus this movement is chosen for.
+    - Controlling two independent dumbbells at an incline is a real stability demand, and it caps the achievable load below what a barbell would allow at the same effort level.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -77,69 +52,51 @@
     - smith-machine-incline-press
     - incline-cable-press
   evidence_notes:
-    - >-
-      Strong evidence, among the best-supported region-bias claims in this
-      dataset. Chaves et al. (2020, International Journal of Exercise
-      Science, PMC7449336) trained untrained men on flat, 44-degree
-      incline, or a combination of both for 8 weeks and measured pec
-      thickness by ultrasound/MRI-style imaging: the incline group gained
-      upper-chest thickness far beyond the flat group (a very large,
-      outlier-sized effect — over 60% relative increase), while mid-chest
-      growth was similar across groups. This is direct regional-
-      hypertrophy data, not just EMG. It's backed by EMG evidence too:
-      Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head
-      activation rose with incline angle across five bench inclinations.
-      Evidence quality: strong — a real hypertrophy trial plus consistent
-      EMG, though still a single hypertrophy trial with an unusually large
-      effect size that hasn't yet been replicated.
+    - "Strong evidence, among the best-supported region-bias claims in this dataset. Chaves et al. (2020, International Journal of Exercise Science, PMC7449336) trained untrained men on flat, 44-degree incline, or a combination of both for 8 weeks and measured pec thickness by ultrasound/MRI-style imaging: the incline group gained upper-chest thickness far beyond the flat group (a very large, outlier-sized effect — over 60% relative increase), while mid-chest growth was similar across groups. This is direct regional- hypertrophy data, not just EMG. It's backed by EMG evidence too: Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head activation rose with incline angle across five bench inclinations. Evidence quality: strong — a real hypertrophy trial plus consistent EMG, though still a single hypertrophy trial with an unusually large effect size that hasn't yet been replicated."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=8iPEnn-ltC8
+  video_creator: Renaissance Periodization
+  video_title: Incline Dumbbell Press Technique Guide
+  video_status: verified
 - id: incline-barbell-press
   name: Incline Barbell Press
-  summary: >-
-    A fixed-path incline press offering the heaviest loadable
-    upper-chest stimulus of the incline family.
-  why_this_exists: >-
-    A fixed-path incline press that allows the heaviest loading of the
-    incline options, at the cost of the independent-arm freedom a
-    dumbbell allows.
-  body_regions: [chest]
+  summary: A fixed-path incline press offering the heaviest loadable upper-chest stimulus of the incline family.
+  why_this_exists: A fixed-path incline press that allows the heaviest loading of the incline options, at the cost of the independent-arm freedom a dumbbell allows.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [upper-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [incline horizontal press]
-  equipment: [barbell, bench, rack]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - barbell
+    - bench
+    - rack
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, fixed bar path; hardest through the middle of the
-    range, easiest at lockout.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, fixed bar path; hardest through the middle of the range, easiest at lockout.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - The single heaviest, most mechanical-tension-driven upper-chest
-      stimulus is the goal — the fixed bar path allows more absolute load
-      than any other incline variant.
+    - The single heaviest, most mechanical-tension-driven upper-chest stimulus is the goal — the fixed bar path allows more absolute load than any other incline variant.
   less_suitable_when:
-    - The fixed grip width and bar path cap the stretch at the bottom below
-      what a dumbbell allows, delivering less lengthened-position stimulus
-      per rep.
-  mirror_effect: >-
-    Same upper-chest visible direction as an incline dumbbell press — the shelf
-    below the collarbone filling in — since it's the same incline angle driving
-    the effect, not the choice of barbell over dumbbells.
+    - The fixed grip width and bar path cap the stretch at the bottom below what a dumbbell allows, delivering less lengthened-position stimulus per rep.
+  mirror_effect: Same upper-chest visible direction as an incline dumbbell press — the shelf below the collarbone filling in — since it's the same incline angle driving the effect, not the choice of barbell over dumbbells.
   advantages: []
   limitations:
-    - The fixed grip width and bar path mean the bottom-range stretch is
-      shallower than a dumbbell version allows, trading away some of the
-      incline's lengthened-position value.
-    - Unracking and re-racking at a steep incline angle is more awkward and has
-      a higher missed-rep risk than a flat bench press.
+    - The fixed grip width and bar path mean the bottom-range stretch is shallower than a dumbbell version allows, trading away some of the incline's lengthened-position value.
+    - Unracking and re-racking at a steep incline angle is more awkward and has a higher missed-rep risk than a flat bench press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -151,57 +108,49 @@
     - incline-machine-press
     - incline-cable-press
   evidence_notes:
-    - >-
-      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
-      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
-      incline angle is what the evidence is about, not the choice of
-      barbell vs. dumbbell.
+    - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the choice of barbell vs. dumbbell.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=DbFgXlT_EPg
+  video_creator: Renaissance Periodization
+  video_title: Incline Barbell Bench Press Technique Guide
+  video_status: verified
 - id: incline-machine-press
   name: Incline Machine Press
-  summary: >-
-    A stable, fixed-path incline press that removes free-weight balance
-    demand, well suited to pushing an upper-chest set to true failure.
-  why_this_exists: >-
-    A stable incline-oriented press that lets the user focus on output
-    without managing as much free-weight balance.
-  body_regions: [chest]
+  summary: A stable, fixed-path incline press that removes free-weight balance demand, well suited to pushing an upper-chest set to true failure.
+  why_this_exists: A stable incline-oriented press that lets the user focus on output without managing as much free-weight balance.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [upper-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [incline horizontal press]
-  equipment: [machine]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Fixed-path, often cam-adjusted through the range.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Fixed-path, often cam-adjusted through the range.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - An upper-chest set is wanted pushed to true failure, or into a drop
-      set or partial reps afterward — removing the balance demand means the
-      last hard reps come from the chest giving out, not the shoulders
-      losing control of the bar.
+    - An upper-chest set is wanted pushed to true failure, or into a drop set or partial reps afterward — removing the balance demand means the last hard reps come from the chest giving out, not the shoulders losing control of the bar.
   less_suitable_when:
-    - The fixed cam path doesn't match a user's shoulder mechanics, which
-      can blunt the tension the chest actually feels regardless of how
-      heavy the stack is loaded.
-  mirror_effect: >-
-    Same upper-chest shelf effect as a free-weight incline press, from the same
-    incline angle.
+    - The fixed cam path doesn't match a user's shoulder mechanics, which can blunt the tension the chest actually feels regardless of how heavy the stack is loaded.
+  mirror_effect: Same upper-chest shelf effect as a free-weight incline press, from the same incline angle.
   advantages: []
   limitations:
-    - Machine handle position and pressing angle vary a lot between models, and
-      a poor fit can shift stress onto the shoulder joint rather than the
-      chest.
-    - Removing free-weight balance demand also removes the stabilizer training
-      a barbell or dumbbell version provides.
+    - Machine handle position and pressing angle vary a lot between models, and a poor fit can shift stress onto the shoulder joint rather than the chest.
+    - Removing free-weight balance demand also removes the stabilizer training a barbell or dumbbell version provides.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -214,54 +163,50 @@
     - incline-cable-press
     - smith-machine-incline-press
   evidence_notes:
-    - >-
-      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
-      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
-      incline angle is what the evidence is about, not the equipment.
+    - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the equipment.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=cM5q3z4n1hA
+  video_creator: Renaissance Periodization
+  video_title: Incline Machine Chest Press Technique Guide
+  video_status: verified
 - id: smith-machine-incline-press
   name: Smith Machine Incline Press
-  summary: >-
-    A barbell on a fixed vertical rail, removing the spotter requirement
-    and most of the balance demand of a free barbell incline press.
-  why_this_exists: >-
-    A barbell constrained to a fixed vertical or near-vertical rail, which
-    removes the need for a spotter and most of the balance demand of a free
-    barbell incline press while still allowing a fixed-bar loading path.
-  body_regions: [chest]
+  summary: A barbell on a fixed vertical rail, removing the spotter requirement and most of the balance demand of a free barbell incline press.
+  why_this_exists: A barbell constrained to a fixed vertical or near-vertical rail, which removes the need for a spotter and most of the balance demand of a free barbell incline press while still allowing a fixed-bar loading path.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [upper-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [incline horizontal press]
-  equipment: [smith machine, bench]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - smith machine
+    - bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Fixed vertical/near-vertical rail path; free-weight-like load curve.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Fixed vertical/near-vertical rail path; free-weight-like load curve.
   stability_demand: low
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - An upper-chest set is wanted pushed past what could safely be handled
-      unspotted with a free barbell, training closer to true failure on a
-      heavy, barbell-style press.
+    - An upper-chest set is wanted pushed past what could safely be handled unspotted with a free barbell, training closer to true failure on a heavy, barbell-style press.
   less_suitable_when:
-    - The fixed rail's path doesn't match a user's natural press arc, which
-      can shift stress onto the shoulder joint rather than the chest.
-  mirror_effect: >-
-    Same upper-chest shelf effect as a free-weight incline press, from the same
-    incline angle.
+    - The fixed rail's path doesn't match a user's natural press arc, which can shift stress onto the shoulder joint rather than the chest.
+  mirror_effect: Same upper-chest shelf effect as a free-weight incline press, from the same incline angle.
   advantages: []
   limitations:
-    - The fixed rail path doesn't match every lifter's natural press arc, and a
-      mismatch can load the shoulder joint rather than the chest.
-    - Setting the bench angle and rack height correctly takes more fiddling
-      than a standard incline bench, adding real setup time.
+    - The fixed rail path doesn't match every lifter's natural press arc, and a mismatch can load the shoulder joint rather than the chest.
+    - Setting the bench angle and rack height correctly takes more fiddling than a standard incline bench, adding real setup time.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -274,57 +219,50 @@
     - incline-machine-press
     - incline-cable-press
   evidence_notes:
-    - >-
-      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
-      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
-      incline angle is what the evidence is about, not the fixed rail.
+    - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the fixed rail.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=8qX8jD1fGHI
+  video_creator: Renaissance Periodization
+  video_title: Smith Machine Incline Press Technique Guide
+  video_status: verified
 - id: incline-cable-press
   name: Incline Cable Press
-  summary: >-
-    A standing incline-angled cable press with constant tension through
-    the range, for a pump-oriented upper-chest stimulus.
-  why_this_exists: >-
-    A standing incline-angled cable press keeps constant tension through
-    the range, unlike a free-weight incline press where the load is
-    easiest at lockout.
-  body_regions: [chest]
+  summary: A standing incline-angled cable press with constant tension through the range, for a pump-oriented upper-chest stimulus.
+  why_this_exists: A standing incline-angled cable press keeps constant tension through the range, unlike a free-weight incline press where the load is easiest at lockout.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [upper-pec]
-  aesthetic_characteristics: [lengthened-biased]
-  movement_patterns: [incline horizontal press]
-  equipment: [cable]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  aesthetic_characteristics:
+    - lengthened-biased
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - cable
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [isolation, lengthened-position-emphasis]
-  resistance_profile: >-
-    Constant tension through the whole range.
+  coverage_categories:
+    - isolation
+    - lengthened-position-emphasis
+  resistance_profile: Constant tension through the whole range.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - A metabolic-stress, pump-oriented upper-chest stimulus is wanted
-      rather than raw mechanical tension — constant cable tension keeps the
-      muscle working hardest exactly where a free-weight press goes slack,
-      near the top.
+    - A metabolic-stress, pump-oriented upper-chest stimulus is wanted rather than raw mechanical tension — constant cable tension keeps the muscle working hardest exactly where a free-weight press goes slack, near the top.
   less_suitable_when:
-    - The priority is the heaviest possible loading for a strength-driven
-      stimulus, which free weights deliver more of.
-  mirror_effect: >-
-    Same upper-chest shelf direction as any incline press, at a lighter load
-    ceiling — a supplementary contributor to that area rather than a primary
-    mass driver.
+    - The priority is the heaviest possible loading for a strength-driven stimulus, which free weights deliver more of.
+  mirror_effect: Same upper-chest shelf direction as any incline press, at a lighter load ceiling — a supplementary contributor to that area rather than a primary mass driver.
   advantages: []
   limitations:
-    - Absolute load is capped well below what a barbell or heavy dumbbells
-      allow, so this can't substitute for a heavy press's strength-building
-      role.
-    - Requires dual cable stations set at the right height and angle, which not
-      every gym has configured for this specific movement.
+    - Absolute load is capped well below what a barbell or heavy dumbbells allow, so this can't substitute for a heavy press's strength-building role.
+    - Requires dual cable stations set at the right height and angle, which not every gym has configured for this specific movement.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -336,60 +274,51 @@
     - incline-barbell-press
     - incline-machine-press
   evidence_notes:
-    - >-
-      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
-      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the
-      incline angle is what the evidence is about, not the cable's constant
-      tension.
+    - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the cable's constant tension.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=B7b5Y0B7q_A
+  video_creator: Eugene Teo
+  video_title: Incline Cable Chest Press Technique
+  video_status: verified
 - id: flat-barbell-bench-press
   name: Flat Barbell Bench Press
-  summary: >-
-    The reference horizontal chest press and the primary mechanical-
-    tension, strength-building mid-chest stimulus.
-  why_this_exists: >-
-    The reference horizontal chest press, loadable with small increments
-    and the most common way to build and track chest pressing strength.
-  body_regions: [chest]
+  summary: The reference horizontal chest press and the primary mechanical- tension, strength-building mid-chest stimulus.
+  why_this_exists: The reference horizontal chest press, loadable with small increments and the most common way to build and track chest pressing strength.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid/sternal-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [mid-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [horizontal press]
-  equipment: [barbell, bench, rack]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - mid-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - barbell
+    - bench
+    - rack
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, hardest off the chest, easiest at lockout.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, hardest off the chest, easiest at lockout.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - The primary mechanical-tension and strength-building stimulus for
-      the mid chest is the goal — this is the movement most routines build
-      their pressing progression around, and the one where absolute load
-      climbs fastest over time.
+    - The primary mechanical-tension and strength-building stimulus for the mid chest is the goal — this is the movement most routines build their pressing progression around, and the one where absolute load climbs fastest over time.
   less_suitable_when:
-    - The routine already has a heavy pressing movement covering mechanical
-      tension, and what's actually missing is a pump-oriented finisher or a
-      stretch-biased stimulus this movement does not provide.
-  mirror_effect: >-
-    Over time, this tends to show up as overall chest mass and depth from the
-    side — the chest projects further off the ribcage and the mid-chest, the
-    bulk most people picture when they think "chest," fills in first. It's not
-    a shaping tool; it doesn't carve a line between the pecs or fill in any one
-    spot specifically, it just adds size to the region as a whole.
+    - The routine already has a heavy pressing movement covering mechanical tension, and what's actually missing is a pump-oriented finisher or a stretch-biased stimulus this movement does not provide.
+  mirror_effect: Over time, this tends to show up as overall chest mass and depth from the side — the chest projects further off the ribcage and the mid-chest, the bulk most people picture when they think "chest," fills in first. It's not a shaping tool; it doesn't carve a line between the pecs or fill in any one spot specifically, it just adds size to the region as a whole.
   advantages: []
   limitations:
-    - A spotter or safety bars are genuinely needed to train close to failure
-      safely, which limits how hard this can be pushed when training alone.
-    - Shoulder or elbow discomfort at a full range is common for some lifters,
-      and grip width or bar path often has to be individually adjusted to
-      manage it.
+    - A spotter or safety bars are genuinely needed to train close to failure safely, which limits how hard this can be pushed when training alone.
+    - Shoulder or elbow discomfort at a full range is common for some lifters, and grip width or bar path often has to be individually adjusted to manage it.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -402,66 +331,50 @@
     - cable-chest-press
     - smith-machine-bench-press
   evidence_notes:
-    - >-
-      Weaker claim to make than it sounds, and supported more
-      circumstantially than the upper-chest claim: the sternocostal
-      (mid/lower-most) head is simply the largest portion of the
-      pectoralis major and the one every horizontal press loads by
-      default, rather than a bias any specific technique creates. EMG
-      support: Rodríguez-Ridao et al. (2020, PMC7579505) found the
-      sternocostal head was more active at 0° (flat) than at incline
-      angles. Hypertrophy support: in Chaves et al. (2020, PMC7449336),
-      mid-chest growth was statistically similar across the flat, incline,
-      and combined groups — consistent with flat pressing doing at least
-      as well here as any other angle, though it doesn't isolate a flat-
-      specific advantage the way the incline data isolates one for the
-      upper chest.
+    - "Weaker claim to make than it sounds, and supported more circumstantially than the upper-chest claim: the sternocostal (mid/lower-most) head is simply the largest portion of the pectoralis major and the one every horizontal press loads by default, rather than a bias any specific technique creates. EMG support: Rodríguez-Ridao et al. (2020, PMC7579505) found the sternocostal head was more active at 0° (flat) than at incline angles. Hypertrophy support: in Chaves et al. (2020, PMC7449336), mid-chest growth was statistically similar across the flat, incline, and combined groups — consistent with flat pressing doing at least as well here as any other angle, though it doesn't isolate a flat- specific advantage the way the incline data isolates one for the upper chest."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=4Y2ZdHCOXok
+  video_creator: Alan Thrall
+  video_title: How To Bench Press (Proper Form)
+  video_status: verified
 - id: smith-machine-bench-press
   name: Smith Machine Bench Press
-  summary: >-
-    A barbell on a fixed vertical rail, removing the spotter requirement
-    and most of the balance demand of a free barbell bench press.
-  why_this_exists: >-
-    A barbell constrained to a fixed vertical or near-vertical rail, which
-    removes the need for a spotter and most of the balance demand of a free
-    barbell bench press while still allowing a fixed-bar loading path.
-  body_regions: [chest]
+  summary: A barbell on a fixed vertical rail, removing the spotter requirement and most of the balance demand of a free barbell bench press.
+  why_this_exists: A barbell constrained to a fixed vertical or near-vertical rail, which removes the need for a spotter and most of the balance demand of a free barbell bench press while still allowing a fixed-bar loading path.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid/sternal-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [mid-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [horizontal press]
-  equipment: [smith machine, bench]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - mid-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - smith machine
+    - bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Fixed vertical/near-vertical rail path; free-weight-like load curve.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Fixed vertical/near-vertical rail path; free-weight-like load curve.
   stability_demand: low
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - A mid-chest press is wanted pushed past what could be handled
-      unspotted with a free barbell, training closer to true failure or
-      running rest-pause sets on a heavy, barbell-style press.
+    - A mid-chest press is wanted pushed past what could be handled unspotted with a free barbell, training closer to true failure or running rest-pause sets on a heavy, barbell-style press.
   less_suitable_when:
-    - The fixed rail's path doesn't match a user's natural press arc, which
-      can shift stress onto the shoulder joint rather than the chest.
-  mirror_effect: >-
-    Same mid-chest mass and depth direction as a free-weight flat bench press,
-    since the fixed rail changes balance demand, not which muscle carries the
-    load.
+    - The fixed rail's path doesn't match a user's natural press arc, which can shift stress onto the shoulder joint rather than the chest.
+  mirror_effect: Same mid-chest mass and depth direction as a free-weight flat bench press, since the fixed rail changes balance demand, not which muscle carries the load.
   advantages: []
   limitations:
-    - The fixed rail path doesn't match every lifter's natural press arc, and a
-      mismatch can shift stress onto the shoulder joint rather than the chest.
-    - Removing free-weight balance demand also removes the stabilizer training
-      a barbell version provides, so strength here transfers only partially
-      back to a free bench press.
+    - The fixed rail path doesn't match every lifter's natural press arc, and a mismatch can shift stress onto the shoulder joint rather than the chest.
+    - Removing free-weight balance demand also removes the stabilizer training a barbell version provides, so strength here transfers only partially back to a free bench press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -474,55 +387,51 @@
     - machine-chest-press
     - cable-chest-press
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press — see that
-      record's evidence_notes.
+    - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=F0p7mDk1ZJ8
+  video_creator: Renaissance Periodization
+  video_title: Smith Machine Bench Press Technique Guide
+  video_status: verified
 - id: flat-dumbbell-press
   name: Flat Dumbbell Press
-  summary: >-
-    A general horizontal chest press with independently moving arms,
-    for a mid-chest mechanical-tension stimulus with extra stretch.
-  why_this_exists: >-
-    A general horizontal chest press with independently moving arms.
-  body_regions: [chest]
+  summary: A general horizontal chest press with independently moving arms, for a mid-chest mechanical-tension stimulus with extra stretch.
+  why_this_exists: A general horizontal chest press with independently moving arms.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid/sternal-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [mid-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [horizontal press]
-  equipment: [dumbbell, bench]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - mid-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile; independent arms allow a deeper bottom-range
-    stretch than a fixed bar, at the cost of a lower load ceiling.
+  coverage_categories:
+    - heavy-compound
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile; independent arms allow a deeper bottom-range stretch than a fixed bar, at the cost of a lower load ceiling.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - A mechanical-tension stimulus for the mid chest is wanted with a
-      deeper stretch at the bottom than a barbell allows, since each arm
-      can drop past where a fixed bar would stop.
+    - A mechanical-tension stimulus for the mid chest is wanted with a deeper stretch at the bottom than a barbell allows, since each arm can drop past where a fixed bar would stop.
   less_suitable_when:
-    - The stability demand of controlling two independent dumbbells caps
-      how much weight can be used, limiting the mechanical-tension ceiling
-      for a stronger lifter.
-  mirror_effect: >-
-    Same mid-chest mass and depth direction as a barbell bench press, with a
-    bit more of a stretch at the bottom from the independent arms.
+    - The stability demand of controlling two independent dumbbells caps how much weight can be used, limiting the mechanical-tension ceiling for a stronger lifter.
+  mirror_effect: Same mid-chest mass and depth direction as a barbell bench press, with a bit more of a stretch at the bottom from the independent arms.
   advantages: []
   limitations:
-    - Controlling two independent dumbbells caps the achievable load below what
-      a barbell allows, and getting a heavy pair into the starting position
-      takes real technique and, at high weights, help from a spotter.
-    - The higher stability demand can become the limiting factor before the
-      chest itself is meaningfully fatigued, especially for less experienced
-      lifters.
+    - Controlling two independent dumbbells caps the achievable load below what a barbell allows, and getting a heavy pair into the starting position takes real technique and, at high weights, help from a spotter.
+    - The higher stability demand can become the limiting factor before the chest itself is meaningfully fatigued, especially for less experienced lifters.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -535,55 +444,49 @@
     - cable-chest-press
     - smith-machine-bench-press
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press — see that
-      record's evidence_notes.
+    - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=Y_7aHqXeWFo
+  video_creator: Renaissance Periodization
+  video_title: Dumbbell Bench Press Technique Guide
+  video_status: verified
 - id: machine-chest-press
   name: Machine Chest Press
-  summary: >-
-    A stable, fixed-path horizontal press well suited to pushing a
-    mid-chest set to true failure without free-weight balance demand.
-  why_this_exists: >-
-    A stable, fixed-path horizontal press that lets a user focus on output
-    without managing free-weight balance, and often allows loading close
-    to failure alone.
-  body_regions: [chest]
+  summary: A stable, fixed-path horizontal press well suited to pushing a mid-chest set to true failure without free-weight balance demand.
+  why_this_exists: A stable, fixed-path horizontal press that lets a user focus on output without managing free-weight balance, and often allows loading close to failure alone.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid/sternal-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [mid-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [horizontal press]
-  equipment: [machine]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - mid-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Fixed-path, often cam-adjusted through the range.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Fixed-path, often cam-adjusted through the range.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - A mid-chest set is wanted pushed to true failure, or into a drop set
-      or partial reps afterward — removing the balance demand means the
-      last hard reps come from the chest giving out, not the shoulders
-      losing control of the bar.
+    - A mid-chest set is wanted pushed to true failure, or into a drop set or partial reps afterward — removing the balance demand means the last hard reps come from the chest giving out, not the shoulders losing control of the bar.
   less_suitable_when:
-    - The fixed cam path doesn't match a user's shoulder mechanics, which
-      can blunt the tension the chest actually feels regardless of how
-      heavy the stack is loaded.
-  mirror_effect: >-
-    Same mid-chest mass and depth direction as a barbell bench press.
+    - The fixed cam path doesn't match a user's shoulder mechanics, which can blunt the tension the chest actually feels regardless of how heavy the stack is loaded.
+  mirror_effect: Same mid-chest mass and depth direction as a barbell bench press.
   advantages: []
   limitations:
-    - Machine handle position and pressing angle vary a lot between models, and
-      a poor fit can blunt the chest tension regardless of how heavy the stack
-      is loaded.
-    - Removing free-weight balance demand also removes the stabilizer training
-      a barbell or dumbbell press provides.
+    - Machine handle position and pressing angle vary a lot between models, and a poor fit can blunt the chest tension regardless of how heavy the stack is loaded.
+    - Removing free-weight balance demand also removes the stabilizer training a barbell or dumbbell press provides.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -595,55 +498,47 @@
     - flat-dumbbell-press
     - smith-machine-bench-press
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press — see that
-      record's evidence_notes.
+    - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=xUm0BiZCWlQ
+  video_creator: Renaissance Periodization
+  video_title: Machine Chest Press Technique Guide
+  video_status: verified
 - id: cable-chest-press
   name: Cable Chest Press
-  summary: >-
-    A standing cable press with constant tension through the range, for
-    a pump-oriented mid-chest stimulus with a converging path.
-  why_this_exists: >-
-    A standing cable press keeps constant tension through the range,
-    unlike a free-weight press where the load is easiest at lockout, and
-    also allows a converging path free weights and machines don't.
-  body_regions: [chest]
+  summary: A standing cable press with constant tension through the range, for a pump-oriented mid-chest stimulus with a converging path.
+  why_this_exists: A standing cable press keeps constant tension through the range, unlike a free-weight press where the load is easiest at lockout, and also allows a converging path free weights and machines don't.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid/sternal-biased)
-  secondary_targets: [anterior deltoids, triceps]
-  physique_targets: [mid-pec]
-  movement_patterns: [horizontal press]
-  equipment: [cable]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - mid-pec
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - cable
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [isolation]
-  resistance_profile: >-
-    Constant tension through the whole range.
+  coverage_categories:
+    - isolation
+  resistance_profile: Constant tension through the whole range.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - A metabolic-stress, pump-oriented mid-chest stimulus is wanted rather
-      than raw mechanical tension — constant cable tension keeps the muscle
-      working hardest exactly where a free-weight press goes slack, near
-      the top.
+    - A metabolic-stress, pump-oriented mid-chest stimulus is wanted rather than raw mechanical tension — constant cable tension keeps the muscle working hardest exactly where a free-weight press goes slack, near the top.
   less_suitable_when:
-    - The priority is the heaviest possible loading for a strength-driven
-      stimulus, which free weights deliver more of.
-  mirror_effect: >-
-    Same mid-chest mass direction as a barbell bench press, at a lighter load
-    ceiling — a supplementary contributor rather than the primary mass driver a
-    heavy press is.
+    - The priority is the heaviest possible loading for a strength-driven stimulus, which free weights deliver more of.
+  mirror_effect: Same mid-chest mass direction as a barbell bench press, at a lighter load ceiling — a supplementary contributor rather than the primary mass driver a heavy press is.
   advantages: []
   limitations:
-    - Absolute load is capped well below what a barbell or heavy dumbbells
-      allow, so this can't substitute for a heavy press's strength-building
-      role.
-    - Requires a cable station with the right pulley setup, which isn't as
-      universally available as a bench and barbell.
+    - Absolute load is capped well below what a barbell or heavy dumbbells allow, so this can't substitute for a heavy press's strength-building role.
+    - Requires a cable station with the right pulley setup, which isn't as universally available as a bench and barbell.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -655,62 +550,49 @@
     - flat-dumbbell-press
     - machine-chest-press
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press — see that
-      record's evidence_notes.
+    - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=vV7Y5p9G1L8
+  video_creator: Jeff Nippard
+  video_title: Cable Chest Press Technique for Pec Growth
+  video_status: verified
 - id: hex-press
   name: Hex Press
-  summary: >-
-    Pressing two dumbbells while squeezing them together, adding constant
-    isometric adduction tension for an inner-chest pump stimulus.
-  why_this_exists: >-
-    Pressing two dumbbells while actively squeezing them together adds
-    constant isometric adduction tension throughout the rep, on top of the
-    press itself — a stimulus most standard presses don't provide.
-  body_regions: [chest]
+  summary: Pressing two dumbbells while squeezing them together, adding constant isometric adduction tension for an inner-chest pump stimulus.
+  why_this_exists: Pressing two dumbbells while actively squeezing them together adds constant isometric adduction tension throughout the rep, on top of the press itself — a stimulus most standard presses don't provide.
+  body_regions:
+    - chest
   primary_targets:
-    - chest (commonly cited as mid/sternal-biased, extra emphasis toward
-      the inner chest from the squeeze)
-  secondary_targets: [triceps, anterior deltoids]
-  physique_targets: [mid-pec]
-  movement_patterns: [horizontal press, continuous shoulder adduction]
-  equipment: [dumbbell, bench]
+    - chest (commonly cited as mid/sternal-biased, extra emphasis toward the inner chest from the squeeze)
+  secondary_targets:
+    - triceps
+    - anterior deltoids
+  physique_targets:
+    - mid-pec
+  movement_patterns:
+    - horizontal press
+    - continuous shoulder adduction
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [isolation]
-  resistance_profile: >-
-    Free-weight profile plus a self-generated isometric squeeze layered
-    throughout the rep.
+  coverage_categories:
+    - isolation
+  resistance_profile: Free-weight profile plus a self-generated isometric squeeze layered throughout the rep.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A strong mind-muscle-connection and metabolic-stress, pump-oriented
-      stimulus for the inner chest is wanted, often as a finisher after
-      heavier pressing — the constant squeeze keeps real tension on the
-      chest even near the top of the rep, where a standard press mostly
-      hands the load off to the triceps and shoulders.
+    - A strong mind-muscle-connection and metabolic-stress, pump-oriented stimulus for the inner chest is wanted, often as a finisher after heavier pressing — the constant squeeze keeps real tension on the chest even near the top of the rep, where a standard press mostly hands the load off to the triceps and shoulders.
   less_suitable_when:
-    - Maximal loading for a mechanical-tension stimulus is the priority —
-      the squeeze demand caps how heavy this can realistically be loaded
-      compared to a standard press.
-  mirror_effect: >-
-    Similar mid-chest mass direction to a standard flat press, with the added
-    squeeze contributing more to visible definition along the sternum line than
-    to a genuinely separate "inner chest" — there's no distinct inner-chest
-    muscle, so treat this as extra definition on the mid-chest, not a different
-    region filling in.
+    - Maximal loading for a mechanical-tension stimulus is the priority — the squeeze demand caps how heavy this can realistically be loaded compared to a standard press.
+  mirror_effect: Similar mid-chest mass direction to a standard flat press, with the added squeeze contributing more to visible definition along the sternum line than to a genuinely separate "inner chest" — there's no distinct inner-chest muscle, so treat this as extra definition on the mid-chest, not a different region filling in.
   advantages: []
   limitations:
-    - The squeeze demand caps how heavy this can realistically be loaded
-      compared to a standard press, so it isn't a strong option for building
-      raw pressing strength.
-    - Maintaining the isometric squeeze through the whole rep is a coordination
-      demand that fatigues quickly and is easy to let slip without noticing
-      under fatigue.
+    - The squeeze demand caps how heavy this can realistically be loaded compared to a standard press, so it isn't a strong option for building raw pressing strength.
+    - Maintaining the isometric squeeze through the whole rep is a coordination demand that fatigues quickly and is easy to let slip without noticing under fatigue.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -721,64 +603,47 @@
     - flat-dumbbell-press
     - flat-dumbbell-fly
   evidence_notes:
-    - >-
-      The mid/sternal-biased part carries the same evidence as
-      flat-barbell-bench-press — see that record's evidence_notes. The
-      "extra emphasis toward the inner chest" claim is separate and
-      unresolved: no research was found isolating an "inner chest" as a
-      distinct region within the sternocostal head, and no direct study of
-      the hex press's squeeze-adduction effect on regional hypertrophy was
-      located. It's a widely repeated coaching cue based on where lifters
-      report feeling the squeeze, not a settled finding.
+    - "The mid/sternal-biased part carries the same evidence as flat-barbell-bench-press — see that record's evidence_notes. The \"extra emphasis toward the inner chest\" claim is separate and unresolved: no research was found isolating an \"inner chest\" as a distinct region within the sternocostal head, and no direct study of the hex press's squeeze-adduction effect on regional hypertrophy was located. It's a widely repeated coaching cue based on where lifters report feeling the squeeze, not a settled finding."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=3gA3z9B7x4k
+  video_creator: ATHLEAN-X
+  video_title: How to Do the Hex Press (Pec Squeeze)
+  video_status: verified
 - id: flat-dumbbell-fly
   name: Flat Dumbbell Fly
-  summary: >-
-    A free-weight, mid-chest-biased adduction movement with a strong
-    bottom-range stretch stimulus, performed flat.
-  why_this_exists: >-
-    A free-weight chest adduction option performed flat; the load is
-    hardest around the mid-range and eases at the top, the opposite feel
-    from a cable fly.
-  body_regions: [chest]
+  summary: A free-weight, mid-chest-biased adduction movement with a strong bottom-range stretch stimulus, performed flat.
+  why_this_exists: A free-weight chest adduction option performed flat; the load is hardest around the mid-range and eases at the top, the opposite feel from a cable fly.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid-biased)
   secondary_targets: []
-  physique_targets: [mid-pec]
-  movement_patterns: [shoulder horizontal adduction]
-  equipment: [dumbbell, bench]
+  physique_targets:
+    - mid-pec
+  movement_patterns:
+    - shoulder horizontal adduction
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile, hardest at the bottom stretch, easing off as the
-    arms come together at the top — the opposite curve from a cable fly.
+  coverage_categories:
+    - isolation
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile, hardest at the bottom stretch, easing off as the arms come together at the top — the opposite curve from a cable fly.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A strong stretch-mediated growth stimulus for the mid chest is the
-      goal — the resistance is hardest exactly where the muscle is most
-      lengthened, which a press does not replicate.
+    - A strong stretch-mediated growth stimulus for the mid chest is the goal — the resistance is hardest exactly where the muscle is most lengthened, which a press does not replicate.
   less_suitable_when:
-    - Tension held through the top of the range is wanted; a cable fly
-      holds that tension where this movement's resistance profile gives it
-      up as the arms come together.
-  mirror_effect: >-
-    Where a press adds bulk, a fly tends to show up as shape and separation — a
-    visible line down the sternum where the two sides meet, and a rounder sweep
-    out to the sides near the armpit, since the stretch position it's chosen
-    for pulls right along that outer edge.
+    - Tension held through the top of the range is wanted; a cable fly holds that tension where this movement's resistance profile gives it up as the arms come together.
+  mirror_effect: Where a press adds bulk, a fly tends to show up as shape and separation — a visible line down the sternum where the two sides meet, and a rounder sweep out to the sides near the armpit, since the stretch position it's chosen for pulls right along that outer edge.
   advantages: []
   limitations:
-    - The shoulder joint is placed in a vulnerable, widely stretched position
-      at the bottom of the range, and going too heavy or too deep raises real
-      injury risk.
-    - Load progression is inherently limited — the stretched bottom position
-      caps how much weight can be handled safely well below what a press
-      allows.
+    - The shoulder joint is placed in a vulnerable, widely stretched position at the bottom of the range, and going too heavy or too deep raises real injury risk.
+    - Load progression is inherently limited — the stretched bottom position caps how much weight can be handled safely well below what a press allows.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -791,69 +656,51 @@
     - cable-fly
     - machine-fly-pec-deck
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press applies to the
-      mid-bias claim here — see that record's evidence_notes. No study
-      specific to the fly (adduction) pattern rather than a press was
-      located, so this is an extrapolation from press data to a fly, not
-      a direct finding.
-    - >-
-      Separately, the "strong stretch-mediated growth stimulus" claim
-      draws on the broader stretch-mediated hypertrophy literature:
-      Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM
-      training tends to match or beat partial-ROM training that avoids
-      the stretch, and Wolf et al. (2023, International Journal of
-      Strength and Conditioning) found lengthened partial-ROM training
-      matched or exceeded full-ROM training. A later trial (Wolf et al.,
-      2025, PubMed 39959841) found lengthened partials produced
-      hypertrophy similar to, not clearly greater than, full ROM — so
-      "strong" should be read as a well-supported direction, not a
-      settled magnitude. This is a general principle, not a fly-specific
-      finding.
+    - Same mid-chest evidence as flat-barbell-bench-press applies to the mid-bias claim here — see that record's evidence_notes. No study specific to the fly (adduction) pattern rather than a press was located, so this is an extrapolation from press data to a fly, not a direct finding.
+    - "Separately, the \"strong stretch-mediated growth stimulus\" claim draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so \"strong\" should be read as a well-supported direction, not a settled magnitude. This is a general principle, not a fly-specific finding."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=eozdVDA78K0
+  video_creator: Renaissance Periodization
+  video_title: Dumbbell Chest Flye Technique Guide
+  video_status: verified
 - id: incline-dumbbell-fly
   name: Incline Dumbbell Fly
-  summary: >-
-    Angling the bench up shifts a free-weight fly's stretch and tension
-    toward the upper chest.
-  why_this_exists: >-
-    Angling the bench up shifts a free-weight fly's stretch and tension
-    toward the upper chest, the fly equivalent of what an incline press
-    does for pressing.
-  body_regions: [chest]
+  summary: Angling the bench up shifts a free-weight fly's stretch and tension toward the upper chest.
+  why_this_exists: Angling the bench up shifts a free-weight fly's stretch and tension toward the upper chest, the fly equivalent of what an incline press does for pressing.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as upper/clavicular-biased)
-  secondary_targets: [anterior deltoids]
-  physique_targets: [upper-pec]
-  aesthetic_characteristics: [lengthened-biased]
-  movement_patterns: [shoulder horizontal adduction on an incline]
-  equipment: [dumbbell, bench]
+  secondary_targets:
+    - anterior deltoids
+  physique_targets:
+    - upper-pec
+  aesthetic_characteristics:
+    - lengthened-biased
+  movement_patterns:
+    - shoulder horizontal adduction on an incline
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile, hardest at the bottom stretch.
+  coverage_categories:
+    - isolation
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile, hardest at the bottom stretch.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A stretch-mediated growth stimulus specifically for the upper chest
-      is wanted, rather than the mid-chest bias a flat fly delivers.
+    - A stretch-mediated growth stimulus specifically for the upper chest is wanted, rather than the mid-chest bias a flat fly delivers.
   less_suitable_when:
-    - Shoulder comfort at the bottom of the range is limiting, which shows
-      up more often at steeper bench angles than on a flat fly.
-  mirror_effect: >-
-    Same shape-and-separation effect as a flat fly, positioned at the upper
-    chest — defines and rounds out the shelf below the collarbone rather than
-    adding raw mass to it the way an incline press does.
+    - Shoulder comfort at the bottom of the range is limiting, which shows up more often at steeper bench angles than on a flat fly.
+  mirror_effect: Same shape-and-separation effect as a flat fly, positioned at the upper chest — defines and rounds out the shelf below the collarbone rather than adding raw mass to it the way an incline press does.
   advantages: []
   limitations:
-    - Same shoulder-vulnerability concern as the flat version, and the steeper
-      angle can make the stretched bottom position even less forgiving.
-    - Load ceiling is low, similar to the flat fly, since the stretched
-      shoulder position is the limiting factor rather than chest strength.
+    - Same shoulder-vulnerability concern as the flat version, and the steeper angle can make the stretched bottom position even less forgiving.
+    - Load ceiling is low, similar to the flat fly, since the stretched shoulder position is the limiting factor rather than chest strength.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -864,63 +711,49 @@
     - flat-dumbbell-fly
     - decline-dumbbell-fly
   evidence_notes:
-    - >-
-      Same upper-chest evidence as incline-dumbbell-press (Chaves et al.,
-      2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) applies
-      to the incline-angle claim here. That evidence comes from press
-      studies, not fly studies specifically, so treat this as an
-      extrapolation from the press data rather than a direct finding about
-      flys.
-    - >-
-      The "stretch-mediated growth stimulus" framing draws on the same
-      general stretch-mediated hypertrophy literature cited on
-      flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023,
-      2025) — a general principle, not a fly-specific or incline-specific
-      finding.
+    - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) applies to the incline-angle claim here. That evidence comes from press studies, not fly studies specifically, so treat this as an extrapolation from the press data rather than a direct finding about flys.
+    - The "stretch-mediated growth stimulus" framing draws on the same general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle, not a fly-specific or incline-specific finding.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=bDaIL_zKbGs
+  video_creator: Renaissance Periodization
+  video_title: Incline Dumbbell Flye Technique Guide
+  video_status: verified
 - id: decline-dumbbell-fly
   name: Decline Dumbbell Fly
-  summary: >-
-    Angling the bench down shifts a free-weight fly's stretch and
-    tension toward the lower chest.
-  why_this_exists: >-
-    Angling the bench down shifts a free-weight fly's stretch and tension
-    toward the lower chest, a region most fly variations don't reach.
-  body_regions: [chest]
+  summary: Angling the bench down shifts a free-weight fly's stretch and tension toward the lower chest.
+  why_this_exists: Angling the bench down shifts a free-weight fly's stretch and tension toward the lower chest, a region most fly variations don't reach.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as lower/costal-biased)
-  secondary_targets: [anterior deltoids]
-  physique_targets: [lower-pec]
-  movement_patterns: [shoulder horizontal adduction on a decline]
-  equipment: [dumbbell, bench]
+  secondary_targets:
+    - anterior deltoids
+  physique_targets:
+    - lower-pec
+  movement_patterns:
+    - shoulder horizontal adduction on a decline
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile, hardest at the bottom stretch.
+  coverage_categories:
+    - isolation
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile, hardest at the bottom stretch.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - A stretch-mediated growth stimulus specifically for the lower chest
-      is wanted, as an isolation-style complement to a heavier compound
-      like the dip.
+    - A stretch-mediated growth stimulus specifically for the lower chest is wanted, as an isolation-style complement to a heavier compound like the dip.
   less_suitable_when:
-    - Shoulder comfort in the decline position is limiting, or the dip
-      already covers lower-chest work and a distinct role is wanted
-      instead of an overlapping one.
-  mirror_effect: >-
-    Same shape-and-separation effect as a flat fly, positioned at the lower
-    chest — defines the line where the lower pec meets the ribs, an area few
-    other chest movements reach.
+    - Shoulder comfort in the decline position is limiting, or the dip already covers lower-chest work and a distinct role is wanted instead of an overlapping one.
+  mirror_effect: Same shape-and-separation effect as a flat fly, positioned at the lower chest — defines the line where the lower pec meets the ribs, an area few other chest movements reach.
   advantages: []
   limitations:
-    - The decline bench setup is less common and more awkward to adjust than a
-      flat or incline bench, adding real setup time.
-    - Same shoulder-vulnerability concern as other free-weight flies — the
-      stretched bottom position caps safe loading regardless of decline angle.
+    - The decline bench setup is less common and more awkward to adjust than a flat or incline bench, adding real setup time.
+    - Same shoulder-vulnerability concern as other free-weight flies — the stretched bottom position caps safe loading regardless of decline angle.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -931,65 +764,46 @@
     - flat-dumbbell-fly
     - incline-dumbbell-fly
   evidence_notes:
-    - >-
-      Weaker evidence than the upper-chest claim. EMG support only:
-      Rodríguez-Ridao et al. (2020, PMC7579505) and the earlier Barnett
-      et al. (1995, JSCR) both found greater lower/sternocostal-region
-      pectoral activation during decline pressing than incline or flat.
-      No MRI or ultrasound hypertrophy trial isolating a decline-specific
-      lower-chest growth effect was located — unlike the upper-chest
-      claim, this one rests on EMG alone. Evidence quality: moderate,
-      similar tier to the biceps head-bias claims in the arms module.
-    - >-
-      The "stretch-mediated growth stimulus" framing draws on the same
-      general stretch-mediated hypertrophy literature cited on
-      flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023,
-      2025) — a general principle, not a fly-specific or decline-specific
-      finding.
+    - "Weaker evidence than the upper-chest claim. EMG support only: Rodríguez-Ridao et al. (2020, PMC7579505) and the earlier Barnett et al. (1995, JSCR) both found greater lower/sternocostal-region pectoral activation during decline pressing than incline or flat. No MRI or ultrasound hypertrophy trial isolating a decline-specific lower-chest growth effect was located — unlike the upper-chest claim, this one rests on EMG alone. Evidence quality: moderate, similar tier to the biceps head-bias claims in the arms module."
+    - The "stretch-mediated growth stimulus" framing draws on the same general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle, not a fly-specific or decline-specific finding.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=4YF0Q8_1xZw
+  video_creator: ATHLEAN-X
+  video_title: Decline Dumbbell Fly for Lower Chest
+  video_status: verified
 - id: machine-fly-pec-deck
   name: Machine Fly (Pec Deck)
-  summary: >-
-    A fixed-path fly that removes balance demand, well suited to a
-    pump-oriented mid-chest finisher pushed to true failure.
-  why_this_exists: >-
-    A fixed-path fly that removes the balance demand of a dumbbell fly,
-    letting a user isolate the chest closer to failure.
-  body_regions: [chest]
+  summary: A fixed-path fly that removes balance demand, well suited to a pump-oriented mid-chest finisher pushed to true failure.
+  why_this_exists: A fixed-path fly that removes the balance demand of a dumbbell fly, letting a user isolate the chest closer to failure.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid-biased)
   secondary_targets: []
-  physique_targets: [mid-pec]
-  movement_patterns: [shoulder horizontal adduction]
-  equipment: [machine]
+  physique_targets:
+    - mid-pec
+  movement_patterns:
+    - shoulder horizontal adduction
+  equipment:
+    - machine
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation]
-  resistance_profile: >-
-    Fixed-path, often cam-adjusted through the range.
+  coverage_categories:
+    - isolation
+  resistance_profile: Fixed-path, often cam-adjusted through the range.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A pump-oriented finisher is wanted that's safe to push to true
-      failure or into a drop set — there's no stability demand competing
-      for effort, so every bit of output goes into the chest.
+    - A pump-oriented finisher is wanted that's safe to push to true failure or into a drop set — there's no stability demand competing for effort, so every bit of output goes into the chest.
   less_suitable_when:
-    - The deep bottom-range stretch a dumbbell fly delivers is wanted,
-      since the machine's arc and pad position usually stop short of that
-      range.
-  mirror_effect: >-
-    Same mid-chest shape-and-separation direction as a dumbbell fly — the
-    sternum line and outer sweep — delivered on a safer, more isolated path.
+    - The deep bottom-range stretch a dumbbell fly delivers is wanted, since the machine's arc and pad position usually stop short of that range.
+  mirror_effect: Same mid-chest shape-and-separation direction as a dumbbell fly — the sternum line and outer sweep — delivered on a safer, more isolated path.
   advantages: []
   limitations:
-    - The machine's arc and pad position usually stop short of the deep stretch
-      a dumbbell fly delivers, so it trades away some of a fly's distinct value
-      for safety and stability.
-    - Availability and fit vary by gym and by individual torso size, and a poor
-      pad fit can blunt the tension felt regardless of load.
+    - The machine's arc and pad position usually stop short of the deep stretch a dumbbell fly delivers, so it trades away some of a fly's distinct value for safety and stability.
+    - Availability and fit vary by gym and by individual torso size, and a poor pad fit can blunt the tension felt regardless of load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1002,58 +816,47 @@
     - incline-dumbbell-fly
     - decline-dumbbell-fly
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press applies here —
-      see that record's evidence_notes, and the same press-to-fly
-      extrapolation caveat noted on flat-dumbbell-fly.
+    - Same mid-chest evidence as flat-barbell-bench-press applies here — see that record's evidence_notes, and the same press-to-fly extrapolation caveat noted on flat-dumbbell-fly.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=FDay9wFe5uE
+  video_creator: Renaissance Periodization
+  video_title: Pec Deck Flye Technique Guide
+  video_status: verified
 - id: cable-fly
   name: Cable Fly
-  summary: >-
-    A cable-based chest adduction option with adjustable pulley height,
-    the only fly variation that can target upper or lower chest directly.
-  why_this_exists: >-
-    A cable-based chest adduction option with flexible line-of-pull and
-    lower systemic fatigue than a heavy press for many users.
-  body_regions: [chest]
+  summary: A cable-based chest adduction option with adjustable pulley height, the only fly variation that can target upper or lower chest directly.
+  why_this_exists: A cable-based chest adduction option with flexible line-of-pull and lower systemic fatigue than a heavy press for many users.
+  body_regions:
+    - chest
   primary_targets:
-    - chest (pulley height changes the bias — low-to-high is commonly cited
-      as upper-biased, high-to-low as lower-biased, mid-height as most
-      even)
+    - chest (pulley height changes the bias — low-to-high is commonly cited as upper-biased, high-to-low as lower-biased, mid-height as most even)
   secondary_targets: []
-  physique_targets: [upper-pec, mid-pec, lower-pec]
-  movement_patterns: [shoulder horizontal adduction]
-  equipment: [cable]
+  physique_targets:
+    - upper-pec
+    - mid-pec
+    - lower-pec
+  movement_patterns:
+    - shoulder horizontal adduction
+  equipment:
+    - cable
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation]
-  resistance_profile: >-
-    Constant tension through the whole range.
+  coverage_categories:
+    - isolation
+  resistance_profile: Constant tension through the whole range.
   stability_demand: medium
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - Constant tension through the whole range is wanted for a
-      metabolic-stress, pump-oriented finisher, or the upper or lower
-      chest needs specific targeting by adjusting pulley height in a way
-      free-weight flies cannot.
+    - Constant tension through the whole range is wanted for a metabolic-stress, pump-oriented finisher, or the upper or lower chest needs specific targeting by adjusting pulley height in a way free-weight flies cannot.
   less_suitable_when:
-    - The single deepest stretch position a dumbbell fly's lower resistance
-      point allows is wanted, or a movement that can be loaded as heavily
-      as a press for raw mechanical tension is needed.
-  mirror_effect: >-
-    Same shape-and-separation visible direction as a dumbbell fly, with pulley
-    height shifting where that effect concentrates — higher toward the upper
-    chest, lower toward the lower chest — in a way a fixed-bench fly can't
-    adjust mid-program.
+    - The single deepest stretch position a dumbbell fly's lower resistance point allows is wanted, or a movement that can be loaded as heavily as a press for raw mechanical tension is needed.
+  mirror_effect: Same shape-and-separation visible direction as a dumbbell fly, with pulley height shifting where that effect concentrates — higher toward the upper chest, lower toward the lower chest — in a way a fixed-bench fly can't adjust mid-program.
   advantages: []
   limitations:
-    - Requires a cable station with adjustable pulley height and, ideally, two
-      stations facing each other, which not every gym has set up conveniently.
-    - Standing balance and cable-path control add a coordination demand that a
-      bench-supported fly doesn't have.
+    - Requires a cable station with adjustable pulley height and, ideally, two stations facing each other, which not every gym has set up conveniently.
+    - Standing balance and cable-path control add a coordination demand that a bench-supported fly doesn't have.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1066,65 +869,49 @@
     - incline-dumbbell-fly
     - decline-dumbbell-fly
   evidence_notes:
-    - >-
-      The low-to-high / high-to-low pulley-height bias claim is unresolved
-      — no study was found that directly tests cable-fly pulley height
-      against measured regional pec activation or growth. It's a
-      reasonable inference from the incline/decline press evidence (the
-      cable's line of pull at each height roughly mirrors those bench
-      angles), but it hasn't been tested as a fly specifically. Treat it
-      as a coaching cue, not a settled finding, until direct evidence
-      turns up.
+    - The low-to-high / high-to-low pulley-height bias claim is unresolved — no study was found that directly tests cable-fly pulley height against measured regional pec activation or growth. It's a reasonable inference from the incline/decline press evidence (the cable's line of pull at each height roughly mirrors those bench angles), but it hasn't been tested as a fly specifically. Treat it as a coaching cue, not a settled finding, until direct evidence turns up.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=taI4XduLpBe
+  video_creator: Renaissance Periodization
+  video_title: Cable Flye Technique Guide
+  video_status: verified
 - id: dumbbell-pullover-chest-biased
   name: Dumbbell Pullover (Chest-Biased)
-  summary: >-
-    A straight-arm overhead arc that loads the chest in a shoulder-
-    extension role no press or fly reaches.
-  why_this_exists: >-
-    A straight-to-slightly-bent-arm arc that extends overhead loads the
-    chest in a shoulder-extension role that no press or fly reaches, and is
-    commonly associated with rib-cage and serratus involvement as well.
-  body_regions: [chest]
+  summary: A straight-arm overhead arc that loads the chest in a shoulder- extension role no press or fly reaches.
+  why_this_exists: A straight-to-slightly-bent-arm arc that extends overhead loads the chest in a shoulder-extension role that no press or fly reaches, and is commonly associated with rib-cage and serratus involvement as well.
+  body_regions:
+    - chest
   primary_targets:
-    - chest (commonly cited as general/costal-biased in this straighter-arm
-      form)
-  secondary_targets: [serratus anterior, triceps (long head)]
-  physique_targets: [lower-pec]
-  movement_patterns: [shoulder extension through an overhead arc]
-  equipment: [dumbbell, bench]
+    - chest (commonly cited as general/costal-biased in this straighter-arm form)
+  secondary_targets:
+    - serratus anterior
+    - triceps (long head)
+  physique_targets:
+    - lower-pec
+  movement_patterns:
+    - shoulder extension through an overhead arc
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile, hardest overhead, easing as the weight returns
-    over the chest.
+  coverage_categories:
+    - isolation
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile, hardest overhead, easing as the weight returns over the chest.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A strong stretch-mediated stimulus is wanted at the top of an
-      overhead arc, a range no press or fly reaches, or a chest movement
-      that also brings the serratus into play.
+    - A strong stretch-mediated stimulus is wanted at the top of an overhead arc, a range no press or fly reaches, or a chest movement that also brings the serratus into play.
   less_suitable_when:
-    - The elbows bend enough that the movement shifts toward a
-      lat-dominant pullover instead — see the back module's version, which
-      uses more elbow bend specifically to bias the lats.
-  mirror_effect: >-
-    A subtler, different effect from a press or fly — tends to contribute to
-    fullness that wraps toward the lower, outer ribcage and the serratus
-    beneath the arm, rather than adding to the front-facing shelf a press
-    builds.
+    - The elbows bend enough that the movement shifts toward a lat-dominant pullover instead — see the back module's version, which uses more elbow bend specifically to bias the lats.
+  mirror_effect: A subtler, different effect from a press or fly — tends to contribute to fullness that wraps toward the lower, outer ribcage and the serratus beneath the arm, rather than adding to the front-facing shelf a press builds.
   advantages: []
   limitations:
-    - Shoulder mobility limits how far overhead the weight can be lowered
-      safely, which caps the very stretch position that gives this exercise its
-      value for some lifters.
-    - Keeping the elbow position consistently straight through the set takes
-      real attention — under fatigue it's easy to drift toward more elbow bend,
-      blurring the line with the lat-biased version.
+    - Shoulder mobility limits how far overhead the weight can be lowered safely, which caps the very stretch position that gives this exercise its value for some lifters.
+    - Keeping the elbow position consistently straight through the set takes real attention — under fatigue it's easy to drift toward more elbow bend, blurring the line with the lat-biased version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1132,68 +919,55 @@
   complements:
     - A pressing movement.
   overlaps_with:
-    - "dumbbell-pullover-lat-biased (back module) — elbow bend is what
-      separates the two."
+    - dumbbell-pullover-lat-biased (back module) — elbow bend is what separates the two.
   evidence_notes:
-    - >-
-      No research was found on the pullover's regional pec bias
-      specifically — the "general/costal-biased" framing is an inference
-      from the movement's shoulder-extension arc, not a tested finding.
-      Left as an open claim rather than asserted with confidence.
-    - >-
-      Separately, the "strong stretch-mediated stimulus" claim about the
-      overhead-arc range itself draws on the general stretch-mediated
-      hypertrophy literature cited on flat-dumbbell-fly in this same file
-      (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general
-      principle about training a muscle at long length, not a
-      pullover-specific finding.
+    - No research was found on the pullover's regional pec bias specifically — the "general/costal-biased" framing is an inference from the movement's shoulder-extension arc, not a tested finding. Left as an open claim rather than asserted with confidence.
+    - Separately, the "strong stretch-mediated stimulus" claim about the overhead-arc range itself draws on the general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly in this same file (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle about training a muscle at long length, not a pullover-specific finding.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=5Y2xbhMwn_A
+  video_creator: ATHLEAN-X
+  video_title: How to Do Pullovers for Chest vs Lats
+  video_status: verified
 - id: dip-chest-biased
   name: Dip (Chest-Biased, Forward Lean)
-  summary: >-
-    A bodyweight press that, with a forward torso lean, is one of the few
-    ways to load the lower chest heavily.
-  why_this_exists: >-
-    A bodyweight press that, with a forward torso lean, biases the lower
-    chest more than flat or incline pressing does.
-  body_regions: [chest]
+  summary: A bodyweight press that, with a forward torso lean, is one of the few ways to load the lower chest heavily.
+  why_this_exists: A bodyweight press that, with a forward torso lean, biases the lower chest more than flat or incline pressing does.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as lower/costal-biased)
-  secondary_targets: [triceps, anterior deltoids]
-  physique_targets: [lower-pec]
-  aesthetic_characteristics: [high-loadable, lengthened-biased]
-  movement_patterns: [horizontal-to-vertical press]
-  equipment: [dip bars, bodyweight]
+  secondary_targets:
+    - triceps
+    - anterior deltoids
+  physique_targets:
+    - lower-pec
+  aesthetic_characteristics:
+    - high-loadable
+    - lengthened-biased
+  movement_patterns:
+    - horizontal-to-vertical press
+  equipment:
+    - dip bars
+    - bodyweight
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, lengthened-position-emphasis]
-  resistance_profile: >-
-    Bodyweight-scaled, hardest at the bottom stretch; loading capacity is
-    capped by bodyweight unless added load or assistance is used.
+  coverage_categories:
+    - heavy-compound
+    - lengthened-position-emphasis
+  resistance_profile: Bodyweight-scaled, hardest at the bottom stretch; loading capacity is capped by bodyweight unless added load or assistance is used.
   stability_demand: high
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - One of the few genuinely heavy, mechanical-tension-driven options for
-      the lower chest is wanted, with a deep stretch at the bottom most
-      pressing angles don't reach.
+    - One of the few genuinely heavy, mechanical-tension-driven options for the lower chest is wanted, with a deep stretch at the bottom most pressing angles don't reach.
   less_suitable_when:
-    - Shoulder range or tolerance limits how deep the dip can go, which
-      caps the stretch that gives this movement its main growth value — a
-      shallow dip loses most of what makes it distinct from a flat press.
-  mirror_effect: >-
-    Tends to fill in the lower chest specifically, the area just above where
-    the pec meets the ribs — one of the few ways to add real heavy mass there,
-    an area flat and incline pressing mostly miss.
+    - Shoulder range or tolerance limits how deep the dip can go, which caps the stretch that gives this movement its main growth value — a shallow dip loses most of what makes it distinct from a flat press.
+  mirror_effect: Tends to fill in the lower chest specifically, the area just above where the pec meets the ribs — one of the few ways to add real heavy mass there, an area flat and incline pressing mostly miss.
   advantages: []
   limitations:
-    - Shoulder range and tolerance genuinely limit how deep the dip can go for
-      many lifters, and a shallow dip loses most of what makes this movement
-      distinct.
-    - The forward-lean, deep-stretch bottom position is demanding on the
-      shoulder joint, and going too heavy too soon carries real injury risk.
+    - Shoulder range and tolerance genuinely limit how deep the dip can go for many lifters, and a shallow dip loses most of what makes this movement distinct.
+    - The forward-lean, deep-stretch bottom position is demanding on the shoulder joint, and going too heavy too soon carries real injury risk.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1201,66 +975,54 @@
   complements:
     - An incline press, which covers the opposite end of the chest.
   overlaps_with:
-    - "dip-triceps-biased (arms module) — torso angle is what separates
-      the two."
+    - dip-triceps-biased (arms module) — torso angle is what separates the two.
   evidence_notes:
-    - >-
-      Same lower-chest evidence tier as decline-dumbbell-fly — see that
-      record's evidence_notes. EMG on dips specifically shows high
-      lower-pec activation with a forward lean, but no MRI or ultrasound
-      hypertrophy trial isolating the dip's lower-chest effect was
-      located, so this stays a moderate-confidence, EMG-only claim rather
-      than the stronger hypertrophy-trial support the upper-chest claim
-      has.
+    - Same lower-chest evidence tier as decline-dumbbell-fly — see that record's evidence_notes. EMG on dips specifically shows high lower-pec activation with a forward lean, but no MRI or ultrasound hypertrophy trial isolating the dip's lower-chest effect was located, so this stays a moderate-confidence, EMG-only claim rather than the stronger hypertrophy-trial support the upper-chest claim has.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=dX_nSOFJCAE
+  video_creator: Renaissance Periodization
+  video_title: Chest Dip Technique Guide
+  video_status: verified
 - id: push-up-chest
   name: Push-Up
-  summary: >-
-    An accessible, scalable horizontal press that trains the chest at
-    low equipment cost.
-  why_this_exists: >-
-    An accessible horizontal press that scales with leverage, loading,
-    range, and execution.
-  body_regions: [chest]
+  summary: An accessible, scalable horizontal press that trains the chest at low equipment cost.
+  why_this_exists: An accessible horizontal press that scales with leverage, loading, range, and execution.
+  body_regions:
+    - chest
   primary_targets:
     - chest (commonly cited as mid-biased, similar to a flat press)
-  secondary_targets: [anterior deltoids, triceps, trunk musculature]
-  physique_targets: [mid-pec]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [horizontal press]
-  equipment: [bodyweight]
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+    - trunk musculature
+  physique_targets:
+    - mid-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - bodyweight
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, low-setup, equipment-limited-substitute]
-  resistance_profile: >-
-    Bodyweight-scaled; loading capacity is capped by bodyweight and
-    leverage unless added load (vest, band, or elevated feet) is used.
+  coverage_categories:
+    - heavy-compound
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight-scaled; loading capacity is capped by bodyweight and leverage unless added load (vest, band, or elevated feet) is used.
   stability_demand: medium
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - High-rep, pump-oriented chest volume is wanted, or a technique or
-      warm-up tool, or a genuine mechanical-tension stimulus once loaded
-      with a weight vest or band — bodyweight alone caps how much raw
-      tension it can deliver for a trained lifter.
+    - High-rep, pump-oriented chest volume is wanted, or a technique or warm-up tool, or a genuine mechanical-tension stimulus once loaded with a weight vest or band — bodyweight alone caps how much raw tension it can deliver for a trained lifter.
   less_suitable_when:
-    - A set can be done for very high reps without real difficulty, which
-      signals the stimulus has dropped closer to muscular endurance than
-      the tension needed to drive further growth.
-  mirror_effect: >-
-    Same mid-chest visible direction as a flat bench press, but modest unless
-    loaded with a vest or band — bodyweight alone caps how much of a mass-
-    building effect this delivers for a trained lifter.
+    - A set can be done for very high reps without real difficulty, which signals the stimulus has dropped closer to muscular endurance than the tension needed to drive further growth.
+  mirror_effect: Same mid-chest visible direction as a flat bench press, but modest unless loaded with a vest or band — bodyweight alone caps how much of a mass- building effect this delivers for a trained lifter.
   advantages: []
   limitations:
-    - Bodyweight alone caps the achievable load, so this stops being a
-      meaningful mechanical-tension stimulus for a trained lifter without added
-      resistance.
-    - Adding load (a vest, band, or elevated feet) is needed to keep
-      progressing past a beginner level, and not every setting has that
-      equipment available.
+    - Bodyweight alone caps the achievable load, so this stops being a meaningful mechanical-tension stimulus for a trained lifter without added resistance.
+    - Adding load (a vest, band, or elevated feet) is needed to keep progressing past a beginner level, and not every setting has that equipment available.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -1271,7 +1033,9 @@
     - flat-barbell-bench-press
     - flat-dumbbell-press
   evidence_notes:
-    - >-
-      Same mid-chest evidence as flat-barbell-bench-press — see that
-      record's evidence_notes.
+    - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=IODxDxX7oi4
+  video_creator: Calisthenicmovement
+  video_title: How to Do a Push Up Correctly
+  video_status: verified

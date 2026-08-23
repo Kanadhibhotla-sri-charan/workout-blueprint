@@ -1,140 +1,94 @@
-# Canonical exercise records for the hips and glutes module.
-# Format decided in docs/adr/0001-canonical-record-format.md.
-# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
-# Converted from docs/knowledge-manual/hips/HIPS.md.
-#
-# Note: the plain Romanian deadlift is NOT duplicated here. Per ADR 0001,
-# its canonical record lives in hamstrings.yaml (id: romanian-deadlift)
-# with body_regions: [hips, hamstrings], since it's a genuinely identical
-# exercise with no execution fork between the two prose modules. The
-# Smith machine RDL variant below is unaffected — it was only ever
-# written into this module's prose, not duplicated, so it keeps its own
-# full record here.
-
 - id: hip-thrust
   name: Hip Thrust
-  summary: >-
-    Loads hip extension where the hip is already straight — the
-    strongest available shortened-position, glute-specific stimulus.
-  why_this_exists: >-
-    Loads hip extension where the hip is already straight, a position
-    squats and hinges load least.
-  body_regions: [hips]
-  primary_targets: [gluteus maximus]
-  secondary_targets: [hamstrings, quads]
-  physique_targets: [gluteus-maximus]
-  movement_patterns: [hip extension, shortened range (hip fully extended)]
-  equipment: [barbell, bench, hip-thrust machine, smith machine]
+  summary: Loads hip extension where the hip is already straight — the strongest available shortened-position, glute-specific stimulus.
+  why_this_exists: Loads hip extension where the hip is already straight, a position squats and hinges load least.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus maximus
+  secondary_targets:
+    - hamstrings
+    - quads
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip extension
+    - shortened range (hip fully extended)
+  equipment:
+    - barbell
+    - bench
+    - hip-thrust machine
+    - smith machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, shortened-position-emphasis]
-  resistance_profile: >-
-    A barbell across the hips is the default loadable version; a
-    dedicated hip-thrust machine or a Smith machine both offer a fixed
-    path, which some find more comfortable than balancing a free barbell.
+  coverage_categories:
+    - heavy-compound
+    - shortened-position-emphasis
+  resistance_profile: A barbell across the hips is the default loadable version; a dedicated hip-thrust machine or a Smith machine both offer a fixed path, which some find more comfortable than balancing a free barbell.
   stability_demand: medium
   skill_demand: medium
   setup_time: high
   fatigue_cost: medium
   best_used_when:
-    - The strongest available shortened-position stimulus specifically
-      for the glutes is wanted — by EMG, not necessarily by measured
-      growth (see evidence_notes) — without the spinal loading a hinge
-      adds.
+    - The strongest available shortened-position stimulus specifically for the glutes is wanted — by EMG, not necessarily by measured growth (see evidence_notes) — without the spinal loading a hinge adds.
   less_suitable_when:
-    - A stretch-mediated stimulus is the priority instead — a hinge
-      pattern loads the lengthened position this movement mostly skips.
-  mirror_effect: >-
-    Tends to show up as glute roundness and a fuller "shelf" from the side —
-    projection out from the lower back — most noticeable in a standing, hip-
-    extended posture rather than only when the glutes are actively flexed,
-    since that's the exact position this movement trains hardest.
+    - A stretch-mediated stimulus is the priority instead — a hinge pattern loads the lengthened position this movement mostly skips.
+  mirror_effect: Tends to show up as glute roundness and a fuller "shelf" from the side — projection out from the lower back — most noticeable in a standing, hip- extended posture rather than only when the glutes are actively flexed, since that's the exact position this movement trains hardest.
   advantages: []
   limitations:
-    - Setup is genuinely awkward without a dedicated machine — rolling a loaded
-      barbell into position across the hips takes real practice and a pad to
-      avoid bruising.
-    - Barbell versions cap out at what the lifter's hip flexibility and bar
-      comfort allow before the movement breaks down, well before the glutes
-      reach their true strength limit for some lifters.
-    - The shortened top position that gives this exercise its value also means
-      the resistance is lightest at the bottom, so mechanical tension isn't
-      constant through the range.
+    - Setup is genuinely awkward without a dedicated machine — rolling a loaded barbell into position across the hips takes real practice and a pad to avoid bruising.
+    - Barbell versions cap out at what the lifter's hip flexibility and bar comfort allow before the movement breaks down, well before the glutes reach their true strength limit for some lifters.
+    - The shortened top position that gives this exercise its value also means the resistance is lightest at the bottom, so mechanical tension isn't constant through the range.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - "romanian-deadlift (hamstrings module)"
+    - romanian-deadlift (hamstrings module)
   overlaps_with: []
   evidence_notes:
-    - >-
-      The "strongest" framing needs a real caveat, not just a citation.
-      EMG support is strong: a comparison of the back squat and barbell
-      hip thrust (Contreras et al.-era EMG work) found the hip thrust
-      produced roughly 2-3x the gluteus maximus activation of a back
-      squat at comparable relative loads, consistent with the horizontal
-      load vector peaking exactly at full hip extension. But a 2023 MRI
-      hypertrophy trial (Plotkin et al., PMC10593473, bioRxiv/Sports
-      Medicine) training hip thrust vs. back squat at equated volume
-      found the two produced similar gluteal hypertrophy despite that
-      large EMG gap — squats even produced somewhat greater thigh
-      growth. This is a clear case of EMG and actual measured growth not
-      correlating, so "strongest" is fair to say about mechanical
-      tension/EMG in this specific shortened position, but should not be
-      read as "produces more glute growth than other patterns" — the
-      hypertrophy evidence doesn't support that stronger claim.
+    - "The \"strongest\" framing needs a real caveat, not just a citation. EMG support is strong: a comparison of the back squat and barbell hip thrust (Contreras et al.-era EMG work) found the hip thrust produced roughly 2-3x the gluteus maximus activation of a back squat at comparable relative loads, consistent with the horizontal load vector peaking exactly at full hip extension. But a 2023 MRI hypertrophy trial (Plotkin et al., PMC10593473, bioRxiv/Sports Medicine) training hip thrust vs. back squat at equated volume found the two produced similar gluteal hypertrophy despite that large EMG gap — squats even produced somewhat greater thigh growth. This is a clear case of EMG and actual measured growth not correlating, so \"strongest\" is fair to say about mechanical tension/EMG in this specific shortened position, but should not be read as \"produces more glute growth than other patterns\" — the hypertrophy evidence doesn't support that stronger claim."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=xDmFkJxPzeM
+  video_creator: Renaissance Periodization
+  video_title: Barbell Hip Thrust Technique Guide
+  video_status: verified
 - id: smith-machine-romanian-deadlift
   name: Smith Machine Romanian Deadlift
-  summary: >-
-    Fixing the bar to a vertical rail keeps it automatically close to the
-    body, easing the technical cue beginners struggle with most in a
-    free-bar RDL.
-  why_this_exists: >-
-    Fixing the bar to a vertical rail keeps it automatically close to the
-    body through the hinge, which is the technical cue beginners most
-    often struggle to hold with a free bar; this makes the pattern
-    easier to groove before adding a free bar. Unlike a row, an RDL's
-    correct bar path is already close to vertical, so the fixed rail
-    helps rather than fights it.
-  body_regions: [hips]
-  primary_targets: [glutes, hamstrings]
-  secondary_targets: [spinal erectors]
-  physique_targets: [gluteus-maximus]
-  movement_patterns: [hip hinge]
-  equipment: [smith machine]
+  summary: Fixing the bar to a vertical rail keeps it automatically close to the body, easing the technical cue beginners struggle with most in a free-bar RDL.
+  why_this_exists: Fixing the bar to a vertical rail keeps it automatically close to the body through the hinge, which is the technical cue beginners most often struggle to hold with a free bar; this makes the pattern easier to groove before adding a free bar. Unlike a row, an RDL's correct bar path is already close to vertical, so the fixed rail helps rather than fights it.
+  body_regions:
+    - hips
+  primary_targets:
+    - glutes
+    - hamstrings
+  secondary_targets:
+    - spinal erectors
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip hinge
+  equipment:
+    - smith machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound, lengthened-position-emphasis]
-  resistance_profile: >-
-    Fixed vertical rail path; free-weight-like load curve.
+  coverage_categories:
+    - stable-compound
+    - lengthened-position-emphasis
+  resistance_profile: Fixed vertical rail path; free-weight-like load curve.
   stability_demand: low
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - The RDL's stretch-mediated stimulus is wanted while still learning
-      to control the hinge, since the fixed rail removes the bar-path
-      variable that most often breaks technique down under load.
+    - The RDL's stretch-mediated stimulus is wanted while still learning to control the hinge, since the fixed rail removes the bar-path variable that most often breaks technique down under load.
   less_suitable_when:
-    - Hip-to-torso proportions need more depth than the fixed rail allows,
-      or the bar needs to accommodate individual leverages the way a free
-      bar can.
-  mirror_effect: >-
-    Same visible direction as the free-bar Romanian deadlift — combined
-    hamstring and glute fullness viewed from behind — since the fixed rail
-    changes how the movement is learned, not which muscles end up carrying the
-    load.
+    - Hip-to-torso proportions need more depth than the fixed rail allows, or the bar needs to accommodate individual leverages the way a free bar can.
+  mirror_effect: Same visible direction as the free-bar Romanian deadlift — combined hamstring and glute fullness viewed from behind — since the fixed rail changes how the movement is learned, not which muscles end up carrying the load.
   advantages: []
   limitations:
-    - The fixed rail path doesn't match every lifter's natural hip-hinge arc,
-      which can force compensations at the knees or hips instead of removing
-      them.
-    - Once the bar-path-control training wheels are no longer needed, there's
-      little further benefit over the free-bar version, so it's mainly useful
-      as a stepping stone rather than a long-term staple.
+    - The fixed rail path doesn't match every lifter's natural hip-hinge arc, which can force compensations at the knees or hips instead of removing them.
+    - Once the bar-path-control training wheels are no longer needed, there's little further benefit over the free-bar version, so it's mainly useful as a stepping stone rather than a long-term staple.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -142,72 +96,54 @@
   complements:
     - hip-thrust
   overlaps_with:
-    - "romanian-deadlift (hamstrings module) — distinguish by how much the
-      setup controls the bar path."
+    - romanian-deadlift (hamstrings module) — distinguish by how much the setup controls the bar path.
   evidence_notes:
-    - >-
-      Same evidence as the free-bar romanian-deadlift (hamstrings module)
-      — see that record's evidence_notes for the general stretch-mediated
-      hypertrophy literature. The fixed rail changes bar-path control, not
-      the hip position the stretch claim is actually about.
+    - Same evidence as the free-bar romanian-deadlift (hamstrings module) — see that record's evidence_notes for the general stretch-mediated hypertrophy literature. The fixed rail changes bar-path control, not the hip position the stretch claim is actually about.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=J_7_F5K1q8o
+  video_creator: Renaissance Periodization
+  video_title: Smith Machine RDL Technique Guide
+  video_status: verified
 - id: bulgarian-split-squat-hip-dominant
   name: Bulgarian Split Squat (Long-Stance, Hip-Dominant Execution)
-  summary: >-
-    A long-stance, hip-dominant unilateral pattern biasing the glutes
-    and hamstrings, distinct from the quads module's short-stance
-    version.
-  why_this_exists: >-
-    A unilateral pattern that loads the hip through a long range with
-    much less absolute load than a bilateral squat. Setting the front
-    foot further out in front, keeping the torso upright, and letting
-    the hips sink straight down and back — rather than letting the front
-    knee travel forward — is what shifts this movement's emphasis onto
-    the glutes and hamstrings specifically. This is the stance and
-    execution this record describes; the quads module has the same
-    exercise with a shorter stance for a different emphasis.
-  body_regions: [hips]
-  primary_targets: [glutes]
-  secondary_targets: [hamstrings, quads (less than the knee-dominant execution), adductors]
-  physique_targets: [gluteus-maximus]
-  movement_patterns: [unilateral hip-dominant, long-stance execution]
-  equipment: [dumbbell, barbell, bench]
+  summary: A long-stance, hip-dominant unilateral pattern biasing the glutes and hamstrings, distinct from the quads module's short-stance version.
+  why_this_exists: A unilateral pattern that loads the hip through a long range with much less absolute load than a bilateral squat. Setting the front foot further out in front, keeping the torso upright, and letting the hips sink straight down and back — rather than letting the front knee travel forward — is what shifts this movement's emphasis onto the glutes and hamstrings specifically. This is the stance and execution this record describes; the quads module has the same exercise with a shorter stance for a different emphasis.
+  body_regions:
+    - hips
+  primary_targets:
+    - glutes
+  secondary_targets:
+    - hamstrings
+    - quads (less than the knee-dominant execution)
+    - adductors
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - unilateral hip-dominant
+    - long-stance execution
+  equipment:
+    - dumbbell
+    - barbell
+    - bench
   exercise_type: compound
   laterality: unilateral
-  coverage_categories: [unilateral]
-  resistance_profile: >-
-    Free-weight profile, long stance.
+  coverage_categories:
+    - unilateral
+  resistance_profile: Free-weight profile, long stance.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - A strong per-side, stretch-mediated stimulus for the glutes and
-      hamstrings is specifically wanted, or a side-to-side strength gap
-      needs closing through focused per-leg volume.
+    - A strong per-side, stretch-mediated stimulus for the glutes and hamstrings is specifically wanted, or a side-to-side strength gap needs closing through focused per-leg volume.
   less_suitable_when:
-    - The quads need to be biased instead — a shorter stance with the knee
-      traveling forward, described in the quads module's copy of this
-      exercise, does that instead. Balance limiting the set before the
-      target muscles are fatigued is also a sign to check load or stance
-      before adding more.
-  mirror_effect: >-
-    Similar visible direction to a hip thrust or RDL — glute roundness, with
-    some hamstring fullness alongside it — but built and visible one side at a
-    time, which is what makes it useful for closing a visible left-right glute
-    size difference the bilateral versions can't target directly.
+    - The quads need to be biased instead — a shorter stance with the knee traveling forward, described in the quads module's copy of this exercise, does that instead. Balance limiting the set before the target muscles are fatigued is also a sign to check load or stance before adding more.
+  mirror_effect: Similar visible direction to a hip thrust or RDL — glute roundness, with some hamstring fullness alongside it — but built and visible one side at a time, which is what makes it useful for closing a visible left-right glute size difference the bilateral versions can't target directly.
   advantages: []
   limitations:
-    - Balance and stability demand is high, which for many lifters becomes the
-      limiting factor before the glutes or hamstrings are meaningfully
-      fatigued.
-    - The rear-foot-elevated setup is genuinely awkward to get into and adjust,
-      adding real setup time and a fall risk that a bilateral movement doesn't
-      have.
-    - Keeping the hip-dominant technique consistent under fatigue is harder
-      than it looks — the knee tends to drift forward late in a set, sliding
-      the emphasis toward the quads.
+    - Balance and stability demand is high, which for many lifters becomes the limiting factor before the glutes or hamstrings are meaningfully fatigued.
+    - The rear-foot-elevated setup is genuinely awkward to get into and adjust, adding real setup time and a fall risk that a bilateral movement doesn't have.
+    - Keeping the hip-dominant technique consistent under fatigue is harder than it looks — the knee tends to drift forward late in a set, sliding the emphasis toward the quads.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -215,64 +151,49 @@
   complements:
     - A bilateral squat or hinge.
   overlaps_with:
-    - "bulgarian-split-squat-knee-dominant (quads module)"
-    - "smith-machine-bulgarian-split-squat (quads module)"
+    - bulgarian-split-squat-knee-dominant (quads module)
+    - smith-machine-bulgarian-split-squat (quads module)
   evidence_notes:
-    - >-
-      No study specific to this movement was located. The "stretch-
-      mediated" framing draws on the general stretch-mediated hypertrophy
-      literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf
-      et al. (2023, International Journal of Strength and Conditioning)
-      found training at longer muscle length tends to match or beat
-      training that avoids the stretch, though a later trial (Wolf et
-      al., 2025, PubMed 39959841) found the advantage over full ROM is
-      smaller than earlier work suggested. The long-stance execution's
-      hip-flexion depth is what the claim is actually about, not
-      anything unique to this exercise's other properties.
+    - "No study specific to this movement was located. The \"stretch- mediated\" framing draws on the general stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf et al. (2023, International Journal of Strength and Conditioning) found training at longer muscle length tends to match or beat training that avoids the stretch, though a later trial (Wolf et al., 2025, PubMed 39959841) found the advantage over full ROM is smaller than earlier work suggested. The long-stance execution's hip-flexion depth is what the claim is actually about, not anything unique to this exercise's other properties."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=2C-uNgKwPLE
+  video_creator: Renaissance Periodization
+  video_title: Bulgarian Split Squat Technique Guide
+  video_status: verified
 - id: cable-kickback-glute
   name: Cable Kickback
-  summary: >-
-    A single-joint hip-extension option, a low-fatigue, pump-oriented
-    glute finisher.
-  why_this_exists: >-
-    A single-joint hip-extension option that adds glute work without
-    further loading the knees, spine, or trunk.
-  body_regions: [hips]
-  primary_targets: [gluteus maximus]
+  summary: A single-joint hip-extension option, a low-fatigue, pump-oriented glute finisher.
+  why_this_exists: A single-joint hip-extension option that adds glute work without further loading the knees, spine, or trunk.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus maximus
   secondary_targets: []
-  physique_targets: [gluteus-maximus]
-  movement_patterns: [hip extension]
-  equipment: [cable]
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip extension
+  equipment:
+    - cable
   exercise_type: isolation
   laterality: unilateral
-  coverage_categories: [isolation, low-fatigue]
-  resistance_profile: >-
-    Cable stack, unilateral.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+  resistance_profile: Cable stack, unilateral.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A low-fatigue, pump-oriented glute finisher is wanted late in a
-      session, when heavier compound work has already used up most of the
-      available recovery budget.
+    - A low-fatigue, pump-oriented glute finisher is wanted late in a session, when heavier compound work has already used up most of the available recovery budget.
   less_suitable_when:
-    - The lower back extends instead of the hip, shifting the stimulus
-      away from the glute and onto the spine.
-  mirror_effect: >-
-    A minor, finishing-touch effect at best — some added glute pump and
-    roundness late in a session, but the light, single-joint loading here isn't
-    enough on its own to be a primary driver of visible glute size or shape.
+    - The lower back extends instead of the hip, shifting the stimulus away from the glute and onto the spine.
+  mirror_effect: A minor, finishing-touch effect at best — some added glute pump and roundness late in a session, but the light, single-joint loading here isn't enough on its own to be a primary driver of visible glute size or shape.
   advantages: []
   limitations:
-    - The single-joint, unilateral setup means load per side is inherently
-      light — this isn't a movement that can substitute for a compound's
-      overall stimulus.
-    - It's very easy to substitute lower-back extension for hip extension,
-      especially as fatigue sets in, which shifts the stimulus away from the
-      target muscle without feeling obviously wrong.
+    - The single-joint, unilateral setup means load per side is inherently light — this isn't a movement that can substitute for a compound's overall stimulus.
+    - It's very easy to substitute lower-back extension for hip extension, especially as fatigue sets in, which shifts the stimulus away from the target muscle without feeling obviously wrong.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -282,50 +203,50 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=cM_XpM439jQ
+  video_creator: Eugene Teo
+  video_title: Glute Kickback on Cable Technique
+  video_status: verified
 - id: hip-abduction
   name: Hip Abduction
-  summary: >-
-    Directly loads the gluteus medius and minimus, which most squats and
-    hinges train only as stabilizers.
-  why_this_exists: >-
-    Directly loads the gluteus medius and minimus, which most squats and
-    hinges train only as stabilizers.
-  body_regions: [hips]
-  primary_targets: [gluteus medius, gluteus minimus]
-  secondary_targets: [tensor fasciae latae]
-  physique_targets: [gluteus-medius-minimus]
-  functional_goals: [hip-stability]
-  movement_patterns: [hip abduction]
-  equipment: [machine, band]
+  summary: Directly loads the gluteus medius and minimus, which most squats and hinges train only as stabilizers.
+  why_this_exists: Directly loads the gluteus medius and minimus, which most squats and hinges train only as stabilizers.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus medius
+    - gluteus minimus
+  secondary_targets:
+    - tensor fasciae latae
+  physique_targets:
+    - gluteus-medius-minimus
+  functional_goals:
+    - hip-stability
+  movement_patterns:
+    - hip abduction
+  equipment:
+    - machine
+    - band
   exercise_type: isolation
   laterality: unilateral
-  coverage_categories: [isolation, low-fatigue, low-setup]
-  resistance_profile: >-
-    Machine or band.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+    - low-setup
+  resistance_profile: Machine or band.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A direct mechanical-tension and pump stimulus for hip width and
-      pelvic stability is wanted, which bilateral front-to-back work only
-      trains indirectly.
+    - A direct mechanical-tension and pump stimulus for hip width and pelvic stability is wanted, which bilateral front-to-back work only trains indirectly.
   less_suitable_when:
-    - The trunk leans to create the movement instead of the hip, which
-      shifts the stimulus away from the target muscle.
-  mirror_effect: >-
-    Tends to show up as fullness on the side of the hip rather than the back —
-    filling in what's sometimes called the "hip dip" and adding a rounder side
-    profile, distinct from the back-of-hip effect a thrust or hinge produces.
+    - The trunk leans to create the movement instead of the hip, which shifts the stimulus away from the target muscle.
+  mirror_effect: Tends to show up as fullness on the side of the hip rather than the back — filling in what's sometimes called the "hip dip" and adding a rounder side profile, distinct from the back-of-hip effect a thrust or hinge produces.
   advantages: []
   limitations:
-    - The gluteus medius and minimus are comparatively small muscles, so the
-      absolute loads involved — and therefore the mechanical-tension ceiling —
-      stay modest even with good technique.
-    - Trunk lean is an easy, often unconscious way to fake more range of
-      motion, which quietly shifts the stimulus away from the hip and reduces
-      the exercise's value.
+    - The gluteus medius and minimus are comparatively small muscles, so the absolute loads involved — and therefore the mechanical-tension ceiling — stay modest even with good technique.
+    - Trunk lean is an easy, often unconscious way to fake more range of motion, which quietly shifts the stimulus away from the hip and reduces the exercise's value.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -336,51 +257,46 @@
     - hip-adduction
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=3-M9k4qZ1_8
+  video_creator: Renaissance Periodization
+  video_title: Machine Hip Abduction Technique Guide
+  video_status: verified
 - id: hip-adduction
   name: Hip Adduction
-  summary: >-
-    Loads the adductors directly, a group that contributes to squatting
-    and leg size but is rarely trained on its own.
-  why_this_exists: >-
-    Loads the adductors directly, a group that contributes to squatting
-    and to leg size but is rarely trained on its own.
-  body_regions: [hips]
-  primary_targets: [adductors]
+  summary: Loads the adductors directly, a group that contributes to squatting and leg size but is rarely trained on its own.
+  why_this_exists: Loads the adductors directly, a group that contributes to squatting and to leg size but is rarely trained on its own.
+  body_regions:
+    - hips
+  primary_targets:
+    - adductors
   secondary_targets: []
-  physique_targets: [adductors]
-  functional_goals: [hip-stability]
-  movement_patterns: [hip adduction]
-  equipment: [machine]
+  physique_targets:
+    - adductors
+  functional_goals:
+    - hip-stability
+  movement_patterns:
+    - hip adduction
+  equipment:
+    - machine
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-fatigue]
-  resistance_profile: >-
-    Machine.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+  resistance_profile: Machine.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A direct growth stimulus for the adductors is wanted that squatting
-      patterns only provide as a side effect, or a routine heavy in
-      abduction work needs balancing.
+    - A direct growth stimulus for the adductors is wanted that squatting patterns only provide as a side effect, or a routine heavy in abduction work needs balancing.
   less_suitable_when:
-    - No machine or cable is available, and free-weight adductor options
-      exceed current tolerance.
-  mirror_effect: >-
-    Tends to show up as inner-thigh fullness, changing the leg's profile from
-    the front — closing the gap between the thighs is a combination of this
-    muscle's size and body composition, not training alone, so treat this as
-    shaping the inner thigh rather than a guaranteed "gap closer."
+    - No machine or cable is available, and free-weight adductor options exceed current tolerance.
+  mirror_effect: Tends to show up as inner-thigh fullness, changing the leg's profile from the front — closing the gap between the thighs is a combination of this muscle's size and body composition, not training alone, so treat this as shaping the inner thigh rather than a guaranteed "gap closer."
   advantages: []
   limitations:
-    - Machine availability is the main constraint — this movement is hard to
-      replicate well with free weights, so its accessibility depends entirely
-      on what a given gym has.
-    - The adductors are a comparatively small muscle group, so the achievable
-      loading and overall growth contribution stay modest next to a routine's
-      compound lifts.
+    - Machine availability is the main constraint — this movement is hard to replicate well with free weights, so its accessibility depends entirely on what a given gym has.
+    - The adductors are a comparatively small muscle group, so the achievable loading and overall growth contribution stay modest next to a routine's compound lifts.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -391,49 +307,45 @@
     - hip-abduction
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=0UBRfiX4zDs
+  video_creator: Renaissance Periodization
+  video_title: Machine Hip Adduction Technique Guide
+  video_status: verified
 - id: standing-cable-hip-flexion
   name: Standing Cable Hip Flexion
-  summary: >-
-    Trains hip flexion under load, which most lower-body routines leave
-    entirely to stretching.
-  why_this_exists: >-
-    Trains hip flexion under load, which most lower-body routines leave
-    entirely to stretching.
-  body_regions: [hips]
-  primary_targets: [hip flexors]
-  secondary_targets: [rectus abdominis]
-  functional_goals: [hip-flexors]
-  movement_patterns: [hip flexion]
-  equipment: [cable]
+  summary: Trains hip flexion under load, which most lower-body routines leave entirely to stretching.
+  why_this_exists: Trains hip flexion under load, which most lower-body routines leave entirely to stretching.
+  body_regions:
+    - hips
+  primary_targets:
+    - hip flexors
+  secondary_targets:
+    - rectus abdominis
+  functional_goals:
+    - hip-flexors
+  movement_patterns:
+    - hip flexion
+  equipment:
+    - cable
   exercise_type: isolation
   laterality: unilateral
-  coverage_categories: [isolation, low-fatigue]
-  resistance_profile: >-
-    Cable stack.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+  resistance_profile: Cable stack.
   stability_demand: low
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - Hip-flexor strength and size are wanted for running, kicking, or
-      knee-raise work — a specific, secondary role rather than a routine
-      staple.
+    - Hip-flexor strength and size are wanted for running, kicking, or knee-raise work — a specific, secondary role rather than a routine staple.
   less_suitable_when:
-    - Session priorities haven't yet covered the larger movements that
-      deliver most of a lower-body routine's growth stimulus.
-  mirror_effect: >-
-    Minor and specific — the hip flexors are small, so any visible effect shows
-    up as slightly more definition at the front of the hip and top of the thigh
-    rather than a noticeable size change; this is more a functional than an
-    aesthetic addition.
+    - Session priorities haven't yet covered the larger movements that deliver most of a lower-body routine's growth stimulus.
+  mirror_effect: Minor and specific — the hip flexors are small, so any visible effect shows up as slightly more definition at the front of the hip and top of the thigh rather than a noticeable size change; this is more a functional than an aesthetic addition.
   advantages: []
   limitations:
-    - The hip flexors are a small muscle group relative to most compound lower-
-      body work, so this movement adds only a minor growth stimulus on its own.
-    - Anterior hip or lower-back symptoms can flare with hip-flexor-dominant
-      work in general, making this one to reduce or drop rather than push
-      through if that occurs.
+    - The hip flexors are a small muscle group relative to most compound lower- body work, so this movement adds only a minor growth stimulus on its own.
+    - Anterior hip or lower-back symptoms can flare with hip-flexor-dominant work in general, making this one to reduce or drop rather than push through if that occurs.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -441,6 +353,10 @@
   complements:
     - Hip-extension work and trunk anti-extension work.
   overlaps_with:
-    - "hanging-knee-leg-raise (core module)"
+    - hanging-knee-leg-raise (core module)
   evidence_notes: []
   review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=c3wVz6N7q5o
+  video_creator: ATHLEAN-X
+  video_title: Standing Cable Hip Flexor Exercise
+  video_status: verified

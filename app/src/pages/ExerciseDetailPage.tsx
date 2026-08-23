@@ -3,6 +3,7 @@ import { getExerciseById } from '../data';
 import { humanize } from '../utils/format';
 import { OptionalList } from '../components/OptionalList';
 import { RelationshipList } from '../components/RelationshipList';
+import { VideoPlayer } from '../components/VideoPlayer';
 
 export function ExerciseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -98,6 +99,17 @@ export function ExerciseDetailPage() {
             <dd>{humanize(exercise.skill_demand)}</dd>
           </div>
         </dl>
+      </section>
+
+      {/* Execution guide / video reference */}
+      <section className="detail-section execution-guide-section">
+        <h2>Execution Guide</h2>
+        <VideoPlayer
+          videoLink={exercise.video_link}
+          videoTitle={exercise.video_title}
+          videoCreator={exercise.video_creator}
+          exerciseName={exercise.name}
+        />
       </section>
 
       {/* 6–8: relationships */}
