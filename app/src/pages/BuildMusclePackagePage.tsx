@@ -270,13 +270,14 @@ export function BuildMusclePackagePage() {
 
             {resolvedExercise.exercise.video_link && (
               <div className="package-exercise-video-action">
-                <Link
-                  to={`/exercises/${resolvedExercise.exercise.id}`}
-                  className="package-video-link"
-                  aria-label={`Watch technique video for ${resolvedExercise.exercise.name}`}
+                <a
+                  href={resolvedExercise.exercise.video_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="video-link-simple"
                 >
-                  <span className="video-hint-icon" aria-hidden="true">▶</span> Watch technique
-                </Link>
+                  🎥 Click here for video
+                </a>
               </div>
             )}
 

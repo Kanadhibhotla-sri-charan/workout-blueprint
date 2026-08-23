@@ -25,8 +25,15 @@ export function ExerciseCard({ exercise }: { exercise: Exercise }) {
       <p className="exercise-card-mirror">{truncate(exercise.mirror_effect, 110)}</p>
       {exercise.video_link && (
         <div className="exercise-card-video-hint">
-          <span className="video-hint-icon" aria-hidden="true">▶</span>
-          <span>Watch technique</span>
+          <a
+            href={exercise.video_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="video-link-simple"
+            onClick={(e) => e.stopPropagation()}
+          >
+            🎥 Click here for video
+          </a>
         </div>
       )}
     </Link>

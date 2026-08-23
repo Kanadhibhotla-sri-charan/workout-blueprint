@@ -3,7 +3,6 @@ import { getExerciseById } from '../data';
 import { humanize } from '../utils/format';
 import { OptionalList } from '../components/OptionalList';
 import { RelationshipList } from '../components/RelationshipList';
-import { VideoPlayer } from '../components/VideoPlayer';
 
 export function ExerciseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -102,15 +101,21 @@ export function ExerciseDetailPage() {
       </section>
 
       {/* Execution guide / video reference */}
-      <section className="detail-section execution-guide-section">
-        <h2>Execution Guide</h2>
-        <VideoPlayer
-          videoLink={exercise.video_link}
-          videoTitle={exercise.video_title}
-          videoCreator={exercise.video_creator}
-          exerciseName={exercise.name}
-        />
-      </section>
+      {exercise.video_link && (
+        <section className="detail-section execution-guide-section">
+          <h2>Execution Guide</h2>
+          <p className="execution-guide-link-row">
+            <a
+              href={exercise.video_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link-simple"
+            >
+              🎥 Click here for video
+            </a>
+          </p>
+        </section>
+      )}
 
       {/* 6–8: relationships */}
       {(exercise.alternatives?.length ||

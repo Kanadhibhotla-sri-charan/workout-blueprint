@@ -586,9 +586,14 @@ function DecisionResultView({
         <p>{result.why}</p>
         {result.bestFit.video_link && (
           <div className="decision-result-video">
-            <Link to={`/exercises/${result.bestFit.id}`} className="button button-secondary button-video-action">
-              <span aria-hidden="true">▶</span> Watch technique
-            </Link>
+            <a
+              href={result.bestFit.video_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link-simple"
+            >
+              🎥 Click here for video
+            </a>
           </div>
         )}
       </div>
