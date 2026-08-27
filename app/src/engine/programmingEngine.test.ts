@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildProgramming, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
+import { buildProgramming, getEligibleIntensityTechniques, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
 import { exercises, getExerciseById } from '../data';
 
 const COMPOUND_PROFILE_FAMILY = new Set(['heavy-free-weight-compound', 'stable-compound', 'compound-general']);
@@ -222,5 +222,15 @@ describe('intensity-technique eligibility and ranking (Phase 4B §25 Test D)', (
     expect(a).not.toBe(b);
     expect(a.length).toBeGreaterThan(0);
     expect(b.length).toBeGreaterThan(0);
+  });
+
+  it('getEligibleIntensityTechniques returns all eligible techniques for an exercise without recommendation filtering', () => {
+    const cableCurl = getExerciseById('cable-curl')!;
+    const techniques = getEligibleIntensityTechniques(cableCurl);
+    expect(techniques.length).toBeGreaterThan(0);
+    expect(techniques.map((t) => t.id)).toContain('drop-set');
+
+    const deadlift = getExerciseById('conventional-deadlift')!;
+    expect(getEligibleIntensityTechniques(deadlift)).toHaveLength(0);
   });
 });

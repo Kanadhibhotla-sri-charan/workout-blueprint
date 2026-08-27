@@ -11,3 +11,7 @@ export function truncate(text: string, maxLength: number): string {
   if (trimmed.length <= maxLength) return trimmed;
   return `${trimmed.slice(0, maxLength).trimEnd()}…`;
 }
+
+export function formatRange(range: [number, number]): string {
+  return range[0] === range[1] ? String(range[0]) : `${range[0]}–${range[1]}`;
+}

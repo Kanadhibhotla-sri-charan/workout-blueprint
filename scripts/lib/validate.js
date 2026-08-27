@@ -395,6 +395,7 @@ function validate(records) {
 
   const allIds = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
   const idCounts = new Map();
+  const videoLinkCounts = new Map();
 
   for (const record of records) {
     const seenInFile = new Set(
@@ -491,13 +492,17 @@ function validate(records) {
     if (!REVIEW_STATUSES.has(record.review_status)) {
       report(record, 'schema', `"review_status" must be one of ${[...REVIEW_STATUSES].join('|')}, got ${JSON.stringify(record.review_status)}`);
     }
-    if (record.video_status !== undefined && record.video_status !== null && !VIDEO_STATUSES.has(record.video_status)) {
-      report(record, 'schema', `"video_status" must be one of ${[...VIDEO_STATUSES].join('|')}, got ${JSON.stringify(record.video_status)}`);
+
+    // --- Video Reference Validation (Spec §8 & §9) ---
+    if (!record.video_link || typeof record.video_link !== 'string' || !YOUTUBE_URL_PATTERN.test(record.video_link)) {
+      report(record, 'schema', `"video_link" is required and must be a valid YouTube URL, got ${JSON.stringify(record.video_link)}`);
+    } else {
+      const existing = videoLinkCounts.get(record.video_link) || [];
+      existing.push(record.id);
+      videoLinkCounts.set(record.video_link, existing);
     }
-    if (record.video_link !== undefined && record.video_link !== null) {
-      if (typeof record.video_link !== 'string' || !YOUTUBE_URL_PATTERN.test(record.video_link)) {
-        report(record, 'schema', `"video_link" must be a valid YouTube URL (https://www.youtube.com/watch?v=... or https://youtu.be/...), got ${JSON.stringify(record.video_link)}`);
-      }
+    if (record.video_status !== 'verified') {
+      report(record, 'schema', `"video_status" must be "verified" for production exercises, got ${JSON.stringify(record.video_status)}`);
     }
     if (record.video_creator !== undefined && record.video_creator !== null) {
       if (typeof record.video_creator !== 'string' || record.video_creator.trim() === '') {
@@ -584,6 +589,16 @@ function validate(records) {
   const duplicateIds = [];
   for (const [id, count] of idCounts.entries()) {
     if (count > 1) duplicateIds.push({ id, count });
+  }
+
+  for (const [url, exerciseIds] of videoLinkCounts.entries()) {
+    if (exerciseIds.length > 1) {
+      issues.push({
+        record: null,
+        category: 'schema',
+        message: `duplicate video_link "${url}" appears across ${exerciseIds.length} exercises: ${exerciseIds.join(', ')}`,
+      });
+    }
   }
 
   return { issues, duplicateIds, allIds };

@@ -204,3 +204,7 @@ export function buildProgramming(exercise: Exercise, maxFatigueCost: DemandLevel
       : explainNoIntensityTechnique(exercise, maxFatigueCost),
   };
 }
+
+export function getEligibleIntensityTechniques(exercise: Exercise): IntensityTechnique[] {
+  return programming.intensityTechniques.filter((technique) => isTechniqueEligible(technique, exercise));
+}

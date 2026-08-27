@@ -1314,3 +1314,57 @@ select {
 .decision-result-video {
   margin-top: var(--space-3);
 }
+
+/* ==========================================================================
+   Universal Intensity Techniques Styles
+   ========================================================================== */
+
+.intensity-techniques-section {
+  margin-top: var(--space-5);
+}
+
+.intensity-technique-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.intensity-technique-card {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+
+.intensity-technique-card h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-1);
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.technique-what {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-2);
+}
+
+.technique-detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-2);
+}
+
+.technique-detail-group p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.technique-detail-group strong {
+  color: var(--text);
+}
