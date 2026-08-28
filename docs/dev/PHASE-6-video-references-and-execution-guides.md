@@ -47,6 +47,6 @@ Implemented under the project's three-role operating model (Architect: ChatGPT, 
 ## Verification
 
 - `npm run validate-data`: **PASS** — 123 records validated across 11 files with 0 violations.
-- `npm test`: **PASS** — 16 test files, **162/162 tests passed**.
+- `npm test`: **PASS** — 16 test files, **168/168 tests passed** (including QA Gate §12/§13/§14/§20 regression tests).
 - `npm run lint`: **PASS** — 0 errors, 0 warnings (`oxlint`).
-- `npm run build`: **PASS** — Production bundle compiled cleanly (`tsc -b && vite build`).
+- `npm run build`: **PASS** — Production bundle compiled cleanly (`tsc -b && vite build`, 225ms).
