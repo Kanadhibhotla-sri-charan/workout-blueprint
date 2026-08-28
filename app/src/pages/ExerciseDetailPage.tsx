@@ -171,9 +171,12 @@ export function ExerciseDetailPage() {
             ))}
           </div>
         ) : (
-          <p className="text-muted">
-            No specific intensity technique is recommended for this variation. Standard progressive overload is the primary progression method.
-          </p>
+          <div className="no-intensity-technique">
+            <p className="text-muted">
+              No specific intensity technique is recommended for this variation. Standard progressive overload is the primary progression method.
+            </p>
+            <p className="field-hint">{programming.intensityTechniqueContext}</p>
+          </div>
         )}
       </section>
 
