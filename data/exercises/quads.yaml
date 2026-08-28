@@ -1,51 +1,44 @@
-# Canonical exercise records for the quads module.
-# Format decided in docs/adr/0001-canonical-record-format.md.
-# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
-# Converted from docs/knowledge-manual/quads/QUADS.md.
-
 - id: back-squat
   name: Back Squat
-  summary: >-
-    The main loadable knee-dominant pattern, the single heaviest
-    mechanical-tension stimulus available for the quads and glutes.
-  why_this_exists: >-
-    The main loadable knee-dominant pattern, and the reference point most
-    other quad work is compared against.
-  body_regions: [quads]
-  primary_targets: [quads, glutes]
-  secondary_targets: [adductors, erectors, trunk musculature]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [squat / knee-dominant]
-  equipment: [barbell, rack]
+  summary: The main loadable knee-dominant pattern, the single heaviest mechanical-tension stimulus available for the quads and glutes.
+  why_this_exists: The main loadable knee-dominant pattern, and the reference point most other quad work is compared against.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - glutes
+  secondary_targets:
+    - adductors
+    - erectors
+    - trunk musculature
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - squat / knee-dominant
+  equipment:
+    - barbell
+    - rack
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile.
   stability_demand: high
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - The single heaviest, most mechanical-tension-driven quad-and-glute
-      stimulus available is the goal, with strength as a direct byproduct.
+    - The single heaviest, most mechanical-tension-driven quad-and-glute stimulus available is the goal, with strength as a direct byproduct.
   less_suitable_when:
-    - Recovery is limited, or quad-specific volume is wanted without the
-      whole-body systemic fatigue this movement brings.
-  mirror_effect: >-
-    Tends to show up as overall mass through the front of the thigh and the
-    glutes together — this is the primary size driver for the whole leg, not a
-    shaping tool for any one part of it.
+    - Recovery is limited, or quad-specific volume is wanted without the whole-body systemic fatigue this movement brings.
+  mirror_effect: Tends to show up as overall mass through the front of the thigh and the glutes together — this is the primary size driver for the whole leg, not a shaping tool for any one part of it.
   advantages: []
   limitations:
-    - Technical demand is high — bar position, depth, and bracing all have to
-      come together, and poor technique carries real injury risk at heavy
-      loads.
-    - Recovery cost is high relative to most other quad movements, since it
-      taxes the whole body and central nervous system, not just the legs.
-    - Ankle, hip, or thoracic mobility limits can cap usable depth or bar
-      position well before the quads reach their true strength limit.
+    - Technical demand is high — bar position, depth, and bracing all have to come together, and poor technique carries real injury risk at heavy loads.
+    - Recovery cost is high relative to most other quad movements, since it taxes the whole body and central nervous system, not just the legs.
+    - Ankle, hip, or thoracic mobility limits can cap usable depth or bar position well before the quads reach their true strength limit.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -59,51 +52,47 @@
     - smith-machine-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=bEv6CCg2BC8
+  video_creator: Alan Thrall
+  video_title: How To Squat (Proper Form)
+  video_status: verified
 - id: smith-machine-squat
   name: Smith Machine Squat
-  summary: >-
-    A fixed vertical bar path removing balance and bracing demand, well
-    suited to training closer to failure without a spotter.
-  why_this_exists: >-
-    A fixed vertical bar path that removes the balance and bracing demand
-    of a free barbell squat, letting a user train closer to failure
-    without a spotter.
-  body_regions: [quads]
-  primary_targets: [quads, glutes]
-  secondary_targets: [adductors]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [squat / knee-dominant]
-  equipment: [smith machine]
+  summary: A fixed vertical bar path removing balance and bracing demand, well suited to training closer to failure without a spotter.
+  why_this_exists: A fixed vertical bar path that removes the balance and bracing demand of a free barbell squat, letting a user train closer to failure without a spotter.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - glutes
+  secondary_targets:
+    - adductors
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - squat / knee-dominant
+  equipment:
+    - smith machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Fixed vertical rail path; free-weight-like load curve.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Fixed vertical rail path; free-weight-like load curve.
   stability_demand: low
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - A quad-and-glute set is wanted pushed closer to true failure than
-      could safely be handled unspotted with a free barbell.
+    - A quad-and-glute set is wanted pushed closer to true failure than could safely be handled unspotted with a free barbell.
   less_suitable_when:
-    - The fixed vertical path doesn't match a user's natural squat path,
-      which can shift stress onto the knees or lower back rather than the
-      target muscles.
-  mirror_effect: >-
-    Same visible direction as the free-weight back squat — overall front-of-
-    thigh and glute mass — since the fixed rail changes balance demand, not
-    which muscles carry the load.
+    - The fixed vertical path doesn't match a user's natural squat path, which can shift stress onto the knees or lower back rather than the target muscles.
+  mirror_effect: Same visible direction as the free-weight back squat — overall front-of- thigh and glute mass — since the fixed rail changes balance demand, not which muscles carry the load.
   advantages: []
   limitations:
-    - The fixed vertical path doesn't match every lifter's natural squat arc,
-      and a mismatch can shift stress onto the knees or lower back instead of
-      the target muscles.
-    - Removing the balance and bracing demand also removes the stabilizer
-      training a free-weight squat provides, so strength here transfers only
-      partially back to an unassisted squat.
+    - The fixed vertical path doesn't match every lifter's natural squat arc, and a mismatch can shift stress onto the knees or lower back instead of the target muscles.
+    - Removing the balance and bracing demand also removes the stabilizer training a free-weight squat provides, so strength here transfers only partially back to an unassisted squat.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -115,51 +104,48 @@
     - hack-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=1g8p9qW6yX8
+  video_creator: Renaissance Periodization
+  video_title: Smith Machine Squat Technique Guide
+  video_status: verified
 - id: front-squat
   name: Front Squat
-  summary: >-
-    The front-loaded bar position keeps the torso more upright, shifting
-    more mechanical-tension demand onto the quads than a back squat.
-  why_this_exists: >-
-    The front-loaded bar position keeps the torso more upright than a
-    back squat, which shifts more of the demand onto the quads and
-    changes the technical and mobility requirements.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes, trunk musculature]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [squat / knee-dominant]
-  equipment: [barbell, rack]
+  summary: The front-loaded bar position keeps the torso more upright, shifting more mechanical-tension demand onto the quads than a back squat.
+  why_this_exists: The front-loaded bar position keeps the torso more upright than a back squat, which shifts more of the demand onto the quads and changes the technical and mobility requirements.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+    - trunk musculature
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - squat / knee-dominant
+  equipment:
+    - barbell
+    - rack
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, front-rack position.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, front-rack position.
   stability_demand: high
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - A heavy, mechanical-tension squat stimulus is wanted with more of
-      the load specifically directed at the quads than a back squat
-      provides.
+    - A heavy, mechanical-tension squat stimulus is wanted with more of the load specifically directed at the quads than a back squat provides.
   less_suitable_when:
-    - Wrist or shoulder mobility can't support the rack position, capping
-      how much load can actually be used before form breaks down.
-  mirror_effect: >-
-    Similar visible direction to a back squat — front-of-thigh and glute mass —
-    but the more upright torso shifts the balance a little more toward quad-
-    specific development relative to the glutes.
+    - Wrist or shoulder mobility can't support the rack position, capping how much load can actually be used before form breaks down.
+  mirror_effect: Similar visible direction to a back squat — front-of-thigh and glute mass — but the more upright torso shifts the balance a little more toward quad- specific development relative to the glutes.
   advantages: []
   limitations:
-    - The front-rack position demands real wrist, shoulder, and thoracic
-      mobility, and lifters who lack it often can't hold the position long
-      enough to complete a heavy set.
-    - Load capacity is meaningfully lower than a back squat's, since the front-
-      rack position and upright torso become the limiting factor before the
-      legs' full strength does.
+    - The front-rack position demands real wrist, shoulder, and thoracic mobility, and lifters who lack it often can't hold the position long enough to complete a heavy set.
+    - Load capacity is meaningfully lower than a back squat's, since the front- rack position and upright torso become the limiting factor before the legs' full strength does.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -171,52 +157,48 @@
     - hack-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=tlfahNDnjj8
+  video_creator: Renaissance Periodization
+  video_title: Front Squat Technique Guide
+  video_status: verified
 - id: sumo-squat
   name: Sumo Squat
-  summary: >-
-    A wide stance changes joint angles enough to bring the adductors in
-    as a real mechanical-tension target, not just a stabilizer.
-  why_this_exists: >-
-    A wide stance with the toes turned out changes the joint angles at
-    the hip and knee, bringing the adductors into the squat as a real
-    mechanical-tension target rather than just a stabilizer, and often
-    allows a more upright torso than a shoulder-width stance.
-  body_regions: [quads]
-  primary_targets: [quads, adductors]
-  secondary_targets: [glutes]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [squat / knee-dominant, wide stance]
-  equipment: [barbell]
+  summary: A wide stance changes joint angles enough to bring the adductors in as a real mechanical-tension target, not just a stabilizer.
+  why_this_exists: A wide stance with the toes turned out changes the joint angles at the hip and knee, bringing the adductors into the squat as a real mechanical-tension target rather than just a stabilizer, and often allows a more upright torso than a shoulder-width stance.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - adductors
+  secondary_targets:
+    - glutes
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - squat / knee-dominant
+    - wide stance
+  equipment:
+    - barbell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, wide stance.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, wide stance.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - A squat variation is wanted that trains the adductors directly, or
-      torso length or hip mobility makes a more upright squat more
-      comfortable than a shoulder-width stance.
+    - A squat variation is wanted that trains the adductors directly, or torso length or hip mobility makes a more upright squat more comfortable than a shoulder-width stance.
   less_suitable_when:
-    - Hip external-rotation mobility is limiting, which can push stress
-      onto the knees or lower back instead of the intended muscles.
-  mirror_effect: >-
-    Tends to add inner-thigh (adductor) fullness alongside the usual quad mass,
-    changing the leg's profile from the front more than a shoulder-width squat
-    does — a fuller look through the inner thigh, not just the front.
+    - Hip external-rotation mobility is limiting, which can push stress onto the knees or lower back instead of the intended muscles.
+  mirror_effect: Tends to add inner-thigh (adductor) fullness alongside the usual quad mass, changing the leg's profile from the front more than a shoulder-width squat does — a fuller look through the inner thigh, not just the front.
   advantages: []
   limitations:
-    - Hip external-rotation mobility genuinely limits how wide and how deep the
-      stance can go, and forcing it without that mobility can push stress onto
-      the knees.
-    - The wide stance is a real technical departure from a standard squat, so
-      it takes its own practice rather than transferring automatically from
-      shoulder-width squatting experience.
+    - Hip external-rotation mobility genuinely limits how wide and how deep the stance can go, and forcing it without that mobility can push stress onto the knees.
+    - The wide stance is a real technical departure from a standard squat, so it takes its own practice rather than transferring automatically from shoulder-width squatting experience.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -228,58 +210,53 @@
     - sumo-deadlift
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=4dKz3L1yX5E
+  video_creator: Renaissance Periodization
+  video_title: Sumo Squat Technique Guide
+  video_status: verified
 - id: sumo-deadlift
   name: Sumo Deadlift
-  summary: >-
-    A wide-stance floor pull with real quad and adductor involvement and
-    less lower-back range than a conventional deadlift.
-  why_this_exists: >-
-    A wide stance with the toes turned out and the hands gripping inside
-    the knees shortens the range of motion and keeps the torso more
-    upright than a conventional deadlift, shifting the demand away from
-    the lower back and toward the quads and adductors — enough that it's
-    recorded here rather than with the conventional deadlift in the back
-    module.
-  body_regions: [quads]
-  primary_targets: [quads, adductors]
-  secondary_targets: [glutes, hamstrings, spinal erectors, lats, traps, grip]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [hip hinge, wide stance]
-  equipment: [barbell]
+  summary: A wide-stance floor pull with real quad and adductor involvement and less lower-back range than a conventional deadlift.
+  why_this_exists: A wide stance with the toes turned out and the hands gripping inside the knees shortens the range of motion and keeps the torso more upright than a conventional deadlift, shifting the demand away from the lower back and toward the quads and adductors — enough that it's recorded here rather than with the conventional deadlift in the back module.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - adductors
+  secondary_targets:
+    - glutes
+    - hamstrings
+    - spinal erectors
+    - lats
+    - traps
+    - grip
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - hip hinge
+    - wide stance
+  equipment:
+    - barbell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, floor start, wide stance, shorter range of
-    motion than a conventional deadlift.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, floor start, wide stance, shorter range of motion than a conventional deadlift.
   stability_demand: high
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - A maximal-load pull is wanted with real quad and adductor
-      involvement and less lower-back range than a conventional deadlift,
-      or torso or arm length makes the conventional stance's range
-      awkward.
+    - A maximal-load pull is wanted with real quad and adductor involvement and less lower-back range than a conventional deadlift, or torso or arm length makes the conventional stance's range awkward.
   less_suitable_when:
-    - Hip external-rotation mobility is limiting, which can push stress
-      onto the knees or hips instead of the intended muscles, or the
-      fuller hip-hinge range and greater spinal-erector demand the
-      conventional deadlift provides is wanted instead.
-  mirror_effect: >-
-    Similar visible direction to the sumo squat — quad and inner-thigh mass
-    together — with less contribution to lower-back erector thickness than a
-    conventional deadlift, since the shorter range and more upright torso ask
-    less of the lower back.
+    - Hip external-rotation mobility is limiting, which can push stress onto the knees or hips instead of the intended muscles, or the fuller hip-hinge range and greater spinal-erector demand the conventional deadlift provides is wanted instead.
+  mirror_effect: Similar visible direction to the sumo squat — quad and inner-thigh mass together — with less contribution to lower-back erector thickness than a conventional deadlift, since the shorter range and more upright torso ask less of the lower back.
   advantages: []
   limitations:
-    - Hip mobility requirements are real and specific — a lifter without
-      adequate external rotation can't set up the stance properly no matter how
-      much they load the bar.
-    - The technical demand is high, and the wide stance plus close grip inside
-      the knees takes real practice to coordinate safely under heavy load.
+    - Hip mobility requirements are real and specific — a lifter without adequate external rotation can't set up the stance properly no matter how much they load the bar.
+    - The technical demand is high, and the wide stance plus close grip inside the knees takes real practice to coordinate safely under heavy load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -287,110 +264,104 @@
   complements:
     - A single-joint hamstring or glute movement.
   overlaps_with:
-    - "conventional-deadlift (back module)"
+    - conventional-deadlift (back module)
     - sumo-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=Xsn_A_6aHps
+  video_creator: Alan Thrall
+  video_title: How to Sumo Deadlift
+  video_status: verified
 - id: hack-squat
   name: Hack Squat
-  summary: >-
-    A guided squat path biasing the quads, well suited to pushing close
-    to failure without a spotter.
-  why_this_exists: >-
-    A guided squat path that biases the quads and needs far less balance
-    and bracing than a barbell squat.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [squat / knee-dominant]
-  equipment: [machine]
+  summary: A guided squat path biasing the quads, well suited to pushing close to failure without a spotter.
+  why_this_exists: A guided squat path that biases the quads and needs far less balance and bracing than a barbell squat.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - squat / knee-dominant
+  equipment:
+    - machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Fixed-path sled.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Fixed-path sled.
   stability_demand: low
   skill_demand: low
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - A quad-biased mechanical-tension stimulus is wanted pushed close to
-      failure, without a spotter and without the balance demand of a free
-      squat competing for effort.
+    - A quad-biased mechanical-tension stimulus is wanted pushed close to failure, without a spotter and without the balance demand of a free squat competing for effort.
   less_suitable_when:
-    - The machine's fixed path doesn't suit the individual, which can
-      blunt the tension felt regardless of how heavy the sled is loaded.
-  mirror_effect: >-
-    Similar front-of-thigh mass direction to a back squat, but more isolated
-    toward the quads specifically, with less glute involvement than a free-
-    weight squat.
+    - The machine's fixed path doesn't suit the individual, which can blunt the tension felt regardless of how heavy the sled is loaded.
+  mirror_effect: Similar front-of-thigh mass direction to a back squat, but more isolated toward the quads specifically, with less glute involvement than a free- weight squat.
   advantages: []
   limitations:
-    - The fixed pad and shoulder-harness position doesn't accommodate every
-      body size or limb-length ratio well, and a poor fit can create discomfort
-      or awkward loading before the quads are the limiter.
-    - Availability is a real constraint — this specific machine isn't as
-      universal in gyms as a barbell squat rack or a leg press.
+    - The fixed pad and shoulder-harness position doesn't accommodate every body size or limb-length ratio well, and a poor fit can create discomfort or awkward loading before the quads are the limiter.
+    - Availability is a real constraint — this specific machine isn't as universal in gyms as a barbell squat rack or a leg press.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A hinge pattern, since the hack squat does little for the back of
-      the legs.
+    - A hinge pattern, since the hack squat does little for the back of the legs.
   overlaps_with:
     - back-squat
     - leg-press
     - smith-machine-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=0tn5K9NlCfo
+  video_creator: Renaissance Periodization
+  video_title: Hack Squat Technique Guide
+  video_status: verified
 - id: leg-press
   name: Leg Press
-  summary: >-
-    Allows high loads with minimal balance and trunk demand, for heavy
-    quad volume at much less systemic fatigue than a free squat.
-  why_this_exists: >-
-    Allows high loads with minimal balance and trunk demand, and is easy
-    to run close to failure alone.
-  body_regions: [quads]
-  primary_targets: [quads, glutes]
-  secondary_targets: [adductors]
-  physique_targets: [quads]
-  aesthetic_characteristics: [high-loadable]
-  movement_patterns: [knee- and hip-dominant press]
-  equipment: [machine]
+  summary: Allows high loads with minimal balance and trunk demand, for heavy quad volume at much less systemic fatigue than a free squat.
+  why_this_exists: Allows high loads with minimal balance and trunk demand, and is easy to run close to failure alone.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - glutes
+  secondary_targets:
+    - adductors
+  physique_targets:
+    - quads
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - knee- and hip-dominant press
+  equipment:
+    - machine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound, low-fatigue]
-  resistance_profile: >-
-    Fixed-path sled.
+  coverage_categories:
+    - stable-compound
+    - low-fatigue
+  resistance_profile: Fixed-path sled.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - Heavy quad volume needs accumulating with much less systemic fatigue
-      than a free squat, since the trunk and lower back aren't part of the
-      stimulus.
+    - Heavy quad volume needs accumulating with much less systemic fatigue than a free squat, since the trunk and lower back aren't part of the stimulus.
   less_suitable_when:
-    - The range used is short enough that the set stops being challenging
-      where the stretch and tension actually matter.
-  mirror_effect: >-
-    Same general front-of-thigh and glute mass direction as squatting, without
-    the trunk and back development a free squat adds — the visible effect stays
-    in the legs specifically.
+    - The range used is short enough that the set stops being challenging where the stretch and tension actually matter.
+  mirror_effect: Same general front-of-thigh and glute mass direction as squatting, without the trunk and back development a free squat adds — the visible effect stays in the legs specifically.
   advantages: []
   limitations:
-    - It's easy to shorten the range of motion, especially as the load gets
-      heavy, which quietly caps the stimulus without feeling like a technique
-      failure.
-    - The fixed foot-platform angle and seat position don't suit every lifter's
-      hip and knee mechanics, and a poor fit can put more stress on the knees
-      than intended.
+    - It's easy to shorten the range of motion, especially as the load gets heavy, which quietly caps the stimulus without feeling like a technique failure.
+    - The fixed foot-platform angle and seat position don't suit every lifter's hip and knee mechanics, and a poor fit can put more stress on the knees than intended.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -402,56 +373,47 @@
     - back-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=IZxyjW7MPJQ
+  video_creator: Renaissance Periodization
+  video_title: Leg Press Technique Guide
+  video_status: verified
 - id: bulgarian-split-squat-knee-dominant
   name: Bulgarian Split Squat (Short-Stance, Knee-Dominant Execution)
-  summary: >-
-    A short-stance, knee-dominant unilateral pattern biasing the quads,
-    distinct from the hips module's long-stance version.
-  why_this_exists: >-
-    Loads one leg through a long range with a fraction of the absolute
-    load, which suits limited equipment and reveals side-to-side
-    differences. Setting the front foot closer under the torso and
-    letting the knee travel forward over the toes — rather than sinking
-    the hips straight down and back — is what shifts this movement's
-    emphasis onto the quads specifically. This is the stance and
-    execution this record describes; the hips module has the same
-    exercise with a longer stance for a different emphasis.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes (less than the hip-dominant execution), adductors]
-  physique_targets: [quads]
-  movement_patterns: [unilateral knee-dominant, short-stance execution]
-  equipment: [dumbbell, barbell]
+  summary: A short-stance, knee-dominant unilateral pattern biasing the quads, distinct from the hips module's long-stance version.
+  why_this_exists: Loads one leg through a long range with a fraction of the absolute load, which suits limited equipment and reveals side-to-side differences. Setting the front foot closer under the torso and letting the knee travel forward over the toes — rather than sinking the hips straight down and back — is what shifts this movement's emphasis onto the quads specifically. This is the stance and execution this record describes; the hips module has the same exercise with a longer stance for a different emphasis.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes (less than the hip-dominant execution)
+    - adductors
+  physique_targets:
+    - quads
+  movement_patterns:
+    - unilateral knee-dominant
+    - short-stance execution
+  equipment:
+    - dumbbell
+    - barbell
   exercise_type: compound
   laterality: unilateral
-  coverage_categories: [unilateral]
-  resistance_profile: >-
-    Free-weight profile, short stance.
+  coverage_categories:
+    - unilateral
+  resistance_profile: Free-weight profile, short stance.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - A strong per-side, mechanical-tension stimulus for the quads is
-      specifically wanted, or a side-to-side strength gap needs closing.
+    - A strong per-side, mechanical-tension stimulus for the quads is specifically wanted, or a side-to-side strength gap needs closing.
   less_suitable_when:
-    - The glutes and hamstrings need to be biased instead — a longer
-      stance with the hips sinking straight down and back, described in
-      the hips module's copy of this exercise, does that instead. Balance
-      limiting the set before the target muscles are fatigued is also a
-      sign to check load or stance before adding more.
-  mirror_effect: >-
-    Same front-of-thigh mass direction as a squat, trained and visible one leg
-    at a time — useful for closing a visible left-right thigh-size difference
-    the bilateral versions can't target directly.
+    - The glutes and hamstrings need to be biased instead — a longer stance with the hips sinking straight down and back, described in the hips module's copy of this exercise, does that instead. Balance limiting the set before the target muscles are fatigued is also a sign to check load or stance before adding more.
+  mirror_effect: Same front-of-thigh mass direction as a squat, trained and visible one leg at a time — useful for closing a visible left-right thigh-size difference the bilateral versions can't target directly.
   advantages: []
   limitations:
-    - Balance and stability demand is high, and for many lifters this becomes
-      the limiting factor before the quads are meaningfully fatigued.
-    - The rear-foot-elevated setup is awkward to get into and adjust
-      consistently, adding real setup time and a fall risk a bilateral squat
-      doesn't have.
+    - Balance and stability demand is high, and for many lifters this becomes the limiting factor before the quads are meaningfully fatigued.
+    - The rear-foot-elevated setup is awkward to get into and adjust consistently, adding real setup time and a fall risk a bilateral squat doesn't have.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -459,58 +421,54 @@
   complements:
     - A bilateral squat or press.
   overlaps_with:
-    - "bulgarian-split-squat-hip-dominant (hips module)"
+    - bulgarian-split-squat-hip-dominant (hips module)
     - smith-machine-bulgarian-split-squat
     - static-lunge
     - reverse-lunge
     - walking-lunge
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=2C-uNgKwPLE
+  video_creator: Renaissance Periodization
+  video_title: Bulgarian Split Squat (Quad-Biased) Technique Guide
+  video_status: verified
 - id: smith-machine-bulgarian-split-squat
   name: Smith Machine Bulgarian Split Squat
-  summary: >-
-    Fixing the bar to a vertical rail removes most of the balance demand
-    that limits the free-weight version, letting the stimulus reach the
-    muscles rather than being capped by wobble.
-  why_this_exists: >-
-    Fixing the bar to a vertical rail removes most of the balance demand
-    that otherwise limits a free-weight Bulgarian split squat, directly
-    addressing the stability issue that makes the free version hard for
-    many users.
-  body_regions: [quads]
-  primary_targets: [quads, glutes]
-  secondary_targets: [adductors, hip stabilizers]
-  physique_targets: [quads]
-  movement_patterns: [unilateral knee- and hip-dominant]
-  equipment: [smith machine]
+  summary: Fixing the bar to a vertical rail removes most of the balance demand that limits the free-weight version, letting the stimulus reach the muscles rather than being capped by wobble.
+  why_this_exists: Fixing the bar to a vertical rail removes most of the balance demand that otherwise limits a free-weight Bulgarian split squat, directly addressing the stability issue that makes the free version hard for many users.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - glutes
+  secondary_targets:
+    - adductors
+    - hip stabilizers
+  physique_targets:
+    - quads
+  movement_patterns:
+    - unilateral knee- and hip-dominant
+  equipment:
+    - smith machine
   exercise_type: compound
   laterality: unilateral
-  coverage_categories: [unilateral, stable-compound]
-  resistance_profile: >-
-    Fixed vertical rail path.
+  coverage_categories:
+    - unilateral
+    - stable-compound
+  resistance_profile: Fixed vertical rail path.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - Balance, not leg strength, is what's limiting the free-weight
-      version — fixing the bar path lets the actual growth stimulus reach
-      the quads and glutes instead of being capped by wobble.
+    - Balance, not leg strength, is what's limiting the free-weight version — fixing the bar path lets the actual growth stimulus reach the quads and glutes instead of being capped by wobble.
   less_suitable_when:
-    - The fixed rail's path doesn't match a user's natural lunge arc,
-      which can feel awkward and shift stress away from the target
-      muscles.
-  mirror_effect: >-
-    Same per-leg quad visible direction as the free-weight version, with the
-    fixed rail reducing how much balance limits the load before the quads do.
+    - The fixed rail's path doesn't match a user's natural lunge arc, which can feel awkward and shift stress away from the target muscles.
+  mirror_effect: Same per-leg quad visible direction as the free-weight version, with the fixed rail reducing how much balance limits the load before the quads do.
   advantages: []
   limitations:
-    - The fixed rail path doesn't always match a lifter's natural lunge arc,
-      and a mismatch can feel awkward or shift stress away from the target
-      muscles.
-    - Removing the balance demand also removes some of the stabilizer and
-      coordination training the free-weight version provides.
+    - The fixed rail path doesn't always match a lifter's natural lunge arc, and a mismatch can feel awkward or shift stress away from the target muscles.
+    - Removing the balance demand also removes some of the stabilizer and coordination training the free-weight version provides.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -521,52 +479,48 @@
     - bulgarian-split-squat-knee-dominant
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=1K_9yL8fX0w
+  video_creator: Renaissance Periodization
+  video_title: Smith Machine Bulgarian Split Squat Technique Guide
+  video_status: verified
 - id: static-lunge
   name: Static Lunge
-  summary: >-
-    A fixed-stance, in-place lunge removing the coordination and balance
-    demand of a walking or reverse lunge.
-  why_this_exists: >-
-    A fixed stance lunge performed in place, without stepping, which
-    removes the coordination and balance demand of a walking or reverse
-    lunge and lets effort go directly into the working leg.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes, adductors]
-  physique_targets: [quads]
-  movement_patterns: [unilateral knee-dominant, stationary stance]
-  equipment: [barbell, dumbbell, sandbag]
+  summary: A fixed-stance, in-place lunge removing the coordination and balance demand of a walking or reverse lunge.
+  why_this_exists: A fixed stance lunge performed in place, without stepping, which removes the coordination and balance demand of a walking or reverse lunge and lets effort go directly into the working leg.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+    - adductors
+  physique_targets:
+    - quads
+  movement_patterns:
+    - unilateral knee-dominant
+    - stationary stance
+  equipment:
+    - barbell
+    - dumbbell
+    - sandbag
   exercise_type: compound
   laterality: unilateral
-  coverage_categories: [unilateral]
-  resistance_profile: >-
-    A barbell on the back allows the heaviest load on a fixed path;
-    dumbbells at the sides are a lighter, more accessible setup with
-    independent arms; a shouldered sandbag adds a shifting, unstable load
-    that raises the trunk-bracing demand beyond either.
+  coverage_categories:
+    - unilateral
+  resistance_profile: A barbell on the back allows the heaviest load on a fixed path; dumbbells at the sides are a lighter, more accessible setup with independent arms; a shouldered sandbag adds a shifting, unstable load that raises the trunk-bracing demand beyond either.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - A controlled, per-leg mechanical-tension stimulus is wanted without
-      the extra coordination demand of moving between reps.
+    - A controlled, per-leg mechanical-tension stimulus is wanted without the extra coordination demand of moving between reps.
   less_suitable_when:
-    - The higher-coordination, more athletic carryover a walking lunge
-      provides is wanted instead.
-  mirror_effect: >-
-    Same per-leg quad mass direction as a split squat, without the stepping
-    coordination demand — the visible effect on the thigh is the same, just
-    easier to load consistently.
+    - The higher-coordination, more athletic carryover a walking lunge provides is wanted instead.
+  mirror_effect: Same per-leg quad mass direction as a split squat, without the stepping coordination demand — the visible effect on the thigh is the same, just easier to load consistently.
   advantages: []
   limitations:
-    - The stationary stance still demands real hip and ankle mobility to keep
-      the front knee tracking well, and poor mobility can push stress onto the
-      knee joint.
-    - Load options are somewhat limited compared to a bilateral squat — grip
-      and trunk-bracing demand from a shouldered or side-held load cap how
-      heavy this can go before those become the limiter.
+    - The stationary stance still demands real hip and ankle mobility to keep the front knee tracking well, and poor mobility can push stress onto the knee joint.
+    - Load options are somewhat limited compared to a bilateral squat — grip and trunk-bracing demand from a shouldered or side-held load cap how heavy this can go before those become the limiter.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -578,51 +532,47 @@
     - reverse-lunge
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=QOVaHwm-Q6U
+  video_creator: Renaissance Periodization
+  video_title: Split Squat / Static Lunge Technique Guide
+  video_status: verified
 - id: reverse-lunge
   name: Reverse Lunge
-  summary: >-
-    Stepping backward keeps the front knee from traveling far past the
-    toes, often kinder on the knee than a forward-stepping lunge.
-  why_this_exists: >-
-    Stepping backward into the lunge, rather than forward, keeps the
-    front knee from traveling far past the toes, which many find kinder
-    on the front knee than a forward-stepping lunge.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes]
-  physique_targets: [quads]
-  movement_patterns: [unilateral knee-dominant, stepping backward]
-  equipment: [barbell, dumbbell, sandbag]
+  summary: Stepping backward keeps the front knee from traveling far past the toes, often kinder on the knee than a forward-stepping lunge.
+  why_this_exists: Stepping backward into the lunge, rather than forward, keeps the front knee from traveling far past the toes, which many find kinder on the front knee than a forward-stepping lunge.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+  physique_targets:
+    - quads
+  movement_patterns:
+    - unilateral knee-dominant
+    - stepping backward
+  equipment:
+    - barbell
+    - dumbbell
+    - sandbag
   exercise_type: compound
   laterality: unilateral
-  coverage_categories: [unilateral]
-  resistance_profile: >-
-    A barbell on the back allows the heaviest load on a fixed path;
-    dumbbells at the sides are a lighter, more accessible setup with
-    independent arms; a shouldered sandbag adds a shifting, unstable load
-    that raises the trunk-bracing demand beyond either.
+  coverage_categories:
+    - unilateral
+  resistance_profile: A barbell on the back allows the heaviest load on a fixed path; dumbbells at the sides are a lighter, more accessible setup with independent arms; a shouldered sandbag adds a shifting, unstable load that raises the trunk-bracing demand beyond either.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - A lunge pattern is wanted that's easier on the front knee, or an
-      easier entry point into lunging than a walking lunge's continuous
-      balance demand.
+    - A lunge pattern is wanted that's easier on the front knee, or an easier entry point into lunging than a walking lunge's continuous balance demand.
   less_suitable_when:
-    - The continuous, higher-coordination stimulus a walking lunge
-      provides is wanted instead.
-  mirror_effect: >-
-    Same per-leg quad mass direction as other lunge variations, generally more
-    comfortable on the front knee, which doesn't change the visible target.
+    - The continuous, higher-coordination stimulus a walking lunge provides is wanted instead.
+  mirror_effect: Same per-leg quad mass direction as other lunge variations, generally more comfortable on the front knee, which doesn't change the visible target.
   advantages: []
   limitations:
-    - The step-back motion demands a level of balance and hip control that can
-      be a genuine barrier for less-coordinated or deconditioned lifters
-      starting out.
-    - It's easy to let the step-back distance vary between reps, which changes
-      the knee angle and muddies consistent progressive overload.
+    - The step-back motion demands a level of balance and hip control that can be a genuine barrier for less-coordinated or deconditioned lifters starting out.
+    - It's easy to let the step-back distance vary between reps, which changes the knee angle and muddies consistent progressive overload.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -634,54 +584,48 @@
     - walking-lunge
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=7v2B_yHqNTo
+  video_creator: Renaissance Periodization
+  video_title: Reverse Lunge Technique Guide
+  video_status: verified
 - id: walking-lunge
   name: Walking Lunge
-  summary: >-
-    Continuous forward stepping adds a coordination and conditioning
-    demand on top of the per-leg quad stimulus.
-  why_this_exists: >-
-    Stepping forward continuously and alternating legs removes the reset
-    between reps a static or reverse lunge has, adding a coordination and
-    conditioning demand on top of the per-leg quad stimulus.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes]
-  physique_targets: [quads]
-  movement_patterns: [unilateral knee-dominant, stepping forward continuously]
-  equipment: [barbell, dumbbell, sandbag]
+  summary: Continuous forward stepping adds a coordination and conditioning demand on top of the per-leg quad stimulus.
+  why_this_exists: Stepping forward continuously and alternating legs removes the reset between reps a static or reverse lunge has, adding a coordination and conditioning demand on top of the per-leg quad stimulus.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+  physique_targets:
+    - quads
+  movement_patterns:
+    - unilateral knee-dominant
+    - stepping forward continuously
+  equipment:
+    - barbell
+    - dumbbell
+    - sandbag
   exercise_type: compound
   laterality: alternating
-  coverage_categories: [unilateral, skill-coordination]
-  resistance_profile: >-
-    A barbell on the back allows a fixed path but adds the most balance
-    demand of the three loading options; dumbbells at the sides are the
-    easier entry point; a shouldered sandbag adds a shifting, unstable
-    load on top of a movement that's already balance-demanding.
+  coverage_categories:
+    - unilateral
+    - skill-coordination
+  resistance_profile: A barbell on the back allows a fixed path but adds the most balance demand of the three loading options; dumbbells at the sides are the easier entry point; a shouldered sandbag adds a shifting, unstable load on top of a movement that's already balance-demanding.
   stability_demand: high
   skill_demand: high
   setup_time: low
   fatigue_cost: high
   best_used_when:
-    - A higher-rep, pump-and-conditioning-oriented per-leg stimulus with
-      athletic carryover is wanted, rather than a controlled
-      mechanical-tension set.
+    - A higher-rep, pump-and-conditioning-oriented per-leg stimulus with athletic carryover is wanted, rather than a controlled mechanical-tension set.
   less_suitable_when:
-    - Balance and coordination limit the load before the legs are
-      meaningfully fatigued, capping how much of the intended stimulus the
-      set can deliver — a static or reverse lunge removes that limiter.
-  mirror_effect: >-
-    Same per-leg quad direction as other lunges, but the continuous, higher-rep
-    nature of this version tends to contribute more to an overall leaner, more
-    conditioned look than to raw mass, compared to a heavier, lower-rep
-    compound.
+    - Balance and coordination limit the load before the legs are meaningfully fatigued, capping how much of the intended stimulus the set can deliver — a static or reverse lunge removes that limiter.
+  mirror_effect: Same per-leg quad direction as other lunges, but the continuous, higher-rep nature of this version tends to contribute more to an overall leaner, more conditioned look than to raw mass, compared to a heavier, lower-rep compound.
   advantages: []
   limitations:
-    - The continuous, alternating-leg demand makes balance and coordination the
-      limiting factor for many lifters well before the quads are meaningfully
-      fatigued.
-    - Space requirements (a clear walking lane) make it harder to fit into a
-      typical gym session than a stationary lunge or squat variation.
+    - The continuous, alternating-leg demand makes balance and coordination the limiting factor for many lifters well before the quads are meaningfully fatigued.
+    - Space requirements (a clear walking lane) make it harder to fit into a typical gym session than a stationary lunge or squat variation.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -693,49 +637,47 @@
     - reverse-lunge
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=L8fvypPrzzs
+  video_creator: Renaissance Periodization
+  video_title: Walking Lunge Technique Guide
+  video_status: verified
 - id: goblet-squat
   name: Goblet Squat
-  summary: >-
-    An accessible squat pattern needing only a single dumbbell or
-    kettlebell, useful as a first loaded squat or for home training.
-  why_this_exists: >-
-    An accessible squat pattern that needs only a single dumbbell or
-    kettlebell, useful as a first loaded squat or for training at home.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes, trunk musculature]
-  physique_targets: [quads]
-  movement_patterns: [squat / knee-dominant]
-  equipment: [dumbbell, kettlebell]
+  summary: An accessible squat pattern needing only a single dumbbell or kettlebell, useful as a first loaded squat or for home training.
+  why_this_exists: An accessible squat pattern that needs only a single dumbbell or kettlebell, useful as a first loaded squat or for training at home.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+    - trunk musculature
+  physique_targets:
+    - quads
+  movement_patterns:
+    - squat / knee-dominant
+  equipment:
+    - dumbbell
+    - kettlebell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [low-setup, equipment-limited-substitute]
-  resistance_profile: >-
-    Free weight, self-limiting load.
+  coverage_categories:
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Free weight, self-limiting load.
   stability_demand: medium
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - The squat pattern is being learned, or a genuine loaded-squat
-      mechanical-tension stimulus is wanted without a rack.
+    - The squat pattern is being learned, or a genuine loaded-squat mechanical-tension stimulus is wanted without a rack.
   less_suitable_when:
-    - The load a single dumbbell allows stops being challenging, at which
-      point a barbell squat delivers a stronger mechanical-tension
-      stimulus.
-  mirror_effect: >-
-    Same front-of-thigh mass direction as any squat, capped by how much a
-    single dumbbell or kettlebell can load — a modest contributor to quad size
-    rather than a primary one once heavier loading becomes available.
+    - The load a single dumbbell allows stops being challenging, at which point a barbell squat delivers a stronger mechanical-tension stimulus.
+  mirror_effect: Same front-of-thigh mass direction as any squat, capped by how much a single dumbbell or kettlebell can load — a modest contributor to quad size rather than a primary one once heavier loading becomes available.
   advantages: []
   limitations:
-    - A single dumbbell or kettlebell caps the achievable load well below what
-      a barbell allows, so this stops being a strong mechanical-tension
-      stimulus for an intermediate or advanced lifter.
-    - Grip and the front-loaded core-bracing demand often become the limiting
-      factor before the legs are genuinely fatigued, especially at the top of
-      the weight range this setup allows.
+    - A single dumbbell or kettlebell caps the achievable load well below what a barbell allows, so this stops being a strong mechanical-tension stimulus for an intermediate or advanced lifter.
+    - Grip and the front-loaded core-bracing demand often become the limiting factor before the legs are genuinely fatigued, especially at the top of the weight range this setup allows.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -748,52 +690,45 @@
     - dumbbell-squat-sides
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=MeIiIdhvXT4
+  video_creator: Renaissance Periodization
+  video_title: Goblet Squat Technique Guide
+  video_status: verified
 - id: dumbbell-squat-sides
   name: Dumbbell Squat (Sides)
-  summary: >-
-    Dumbbells held at the sides remove the anti-flexion bracing demand a
-    goblet squat adds and allow more total load.
-  why_this_exists: >-
-    Holding a dumbbell in each hand at the sides, rather than one held at
-    the chest, removes the anti-flexion core-bracing demand a goblet
-    squat adds and allows more total load, since two dumbbells split
-    between two hands aren't limited by how much a single implement can
-    be held at the chest.
-  body_regions: [quads]
-  primary_targets: [quads]
-  secondary_targets: [glutes, adductors]
-  physique_targets: [quads]
-  movement_patterns: [squat / knee-dominant]
-  equipment: [dumbbell]
+  summary: Dumbbells held at the sides remove the anti-flexion bracing demand a goblet squat adds and allow more total load.
+  why_this_exists: Holding a dumbbell in each hand at the sides, rather than one held at the chest, removes the anti-flexion core-bracing demand a goblet squat adds and allows more total load, since two dumbbells split between two hands aren't limited by how much a single implement can be held at the chest.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets:
+    - glutes
+    - adductors
+  physique_targets:
+    - quads
+  movement_patterns:
+    - squat / knee-dominant
+  equipment:
+    - dumbbell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [low-setup]
-  resistance_profile: >-
-    Free weight, self-limiting load, higher ceiling than a single
-    front-held dumbbell.
+  coverage_categories:
+    - low-setup
+  resistance_profile: Free weight, self-limiting load, higher ceiling than a single front-held dumbbell.
   stability_demand: medium
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - A heavier loadable dumbbell squat is wanted than a goblet squat
-      allows, without the front-loaded core-bracing demand.
+    - A heavier loadable dumbbell squat is wanted than a goblet squat allows, without the front-loaded core-bracing demand.
   less_suitable_when:
-    - Grip becomes the limiting factor before the legs are meaningfully
-      fatigued, capping how much of the intended stimulus the set can
-      actually deliver.
-  mirror_effect: >-
-    Same front-of-thigh mass direction as a goblet squat, with more mass
-    potential since two dumbbells split between the hands allow a higher total
-    load than one held at the chest.
+    - Grip becomes the limiting factor before the legs are meaningfully fatigued, capping how much of the intended stimulus the set can actually deliver.
+  mirror_effect: Same front-of-thigh mass direction as a goblet squat, with more mass potential since two dumbbells split between the hands allow a higher total load than one held at the chest.
   advantages: []
   limitations:
-    - Grip strength commonly becomes the limiting factor before the legs do,
-      especially at heavier dumbbell weights, capping the achievable stimulus.
-    - Two heavy dumbbells are awkward to get into position at the start of a
-      set, and this setup cost adds up over multiple sets more than a barbell
-      rack does.
+    - Grip strength commonly becomes the limiting factor before the legs do, especially at heavier dumbbell weights, capping the achievable stimulus.
+    - Two heavy dumbbells are awkward to get into position at the start of a set, and this setup cost adds up over multiple sets more than a barbell rack does.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -804,49 +739,44 @@
     - goblet-squat
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=z8XyD6p8K1w
+  video_creator: ATHLEAN-X
+  video_title: Dumbbell Squats at Sides Form
+  video_status: verified
 - id: leg-extension
   name: Leg Extension
-  summary: >-
-    The only common movement that loads knee extension without the hip,
-    a targeted, pump-oriented quad stimulus at low systemic cost.
-  why_this_exists: >-
-    The only common movement that loads knee extension without the hip,
-    so it can add quad work at low systemic cost.
-  body_regions: [quads]
-  primary_targets: [quads]
+  summary: The only common movement that loads knee extension without the hip, a targeted, pump-oriented quad stimulus at low systemic cost.
+  why_this_exists: The only common movement that loads knee extension without the hip, so it can add quad work at low systemic cost.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
   secondary_targets: []
-  physique_targets: [quads]
-  movement_patterns: [knee extension]
-  equipment: [machine]
+  physique_targets:
+    - quads
+  movement_patterns:
+    - knee extension
+  equipment:
+    - machine
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-fatigue]
-  resistance_profile: >-
-    Fixed-path machine.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+  resistance_profile: Fixed-path machine.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A targeted, pump-oriented quad finisher is wanted after squatting,
-      or quad volume is wanted that heavy compound recovery limits don't
-      allow.
+    - A targeted, pump-oriented quad finisher is wanted after squatting, or quad volume is wanted that heavy compound recovery limits don't allow.
   less_suitable_when:
-    - Knee comfort is limiting under load, capping how much of the
-      intended stimulus the set can safely deliver.
-  mirror_effect: >-
-    The most targeted quad-shaping tool in this module — tends to show up as
-    separation and sweep across the front of the thigh, including the teardrop-
-    shaped muscle just above the inner knee, since this is the only common
-    movement that isolates the quad without the hip sharing the load.
+    - Knee comfort is limiting under load, capping how much of the intended stimulus the set can safely deliver.
+  mirror_effect: The most targeted quad-shaping tool in this module — tends to show up as separation and sweep across the front of the thigh, including the teardrop- shaped muscle just above the inner knee, since this is the only common movement that isolates the quad without the hip sharing the load.
   advantages: []
   limitations:
-    - Some lifters feel knee discomfort under this loading pattern,
-      particularly at end-range extension, which can limit how heavily it's
-      used regardless of quad strength.
-    - As a single-joint, non-weight-bearing movement, it doesn't build the
-      balance, bracing, or multi-joint coordination that squatting patterns do.
+    - Some lifters feel knee discomfort under this loading pattern, particularly at end-range extension, which can limit how heavily it's used regardless of quad strength.
+    - As a single-joint, non-weight-bearing movement, it doesn't build the balance, bracing, or multi-joint coordination that squatting patterns do.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -857,53 +787,47 @@
     - reverse-nordic-curl
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=YyvSfVjQeL0
+  video_creator: Renaissance Periodization
+  video_title: Leg Extension Technique Guide
+  video_status: verified
 - id: reverse-nordic-curl
   name: Reverse Nordic Curl
-  summary: >-
-    Loads knee extension with the hip extended, so the rectus femoris
-    works in a lengthened position — a strong stretch-mediated stimulus.
-  why_this_exists: >-
-    Loads knee extension with the hip extended, so the rectus femoris
-    works in a lengthened position, and it needs almost no equipment.
-  body_regions: [quads]
-  primary_targets: [quads (emphasis on the rectus femoris)]
+  summary: Loads knee extension with the hip extended, so the rectus femoris works in a lengthened position — a strong stretch-mediated stimulus.
+  why_this_exists: Loads knee extension with the hip extended, so the rectus femoris works in a lengthened position, and it needs almost no equipment.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads (emphasis on the rectus femoris)
   secondary_targets: []
-  physique_targets: [quads]
-  movement_patterns: [knee extension, hip extended]
-  equipment: [bodyweight]
+  physique_targets:
+    - quads
+  movement_patterns:
+    - knee extension
+    - hip extended
+  equipment:
+    - bodyweight
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [low-setup, lengthened-position-emphasis, skill-coordination]
-  resistance_profile: >-
-    Bodyweight, scales by range controlled.
+  coverage_categories:
+    - low-setup
+    - lengthened-position-emphasis
+    - skill-coordination
+  resistance_profile: Bodyweight, scales by range controlled.
   stability_demand: medium
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - A strong stretch-mediated stimulus is wanted specifically for the
-      rectus femoris, in a position no common machine or squat variation
-      reaches.
+    - A strong stretch-mediated stimulus is wanted specifically for the rectus femoris, in a position no common machine or squat variation reaches.
   less_suitable_when:
-    - Knee tolerance is limiting, or the range can't yet be controlled —
-      this movement should be scaled gradually rather than loaded
-      aggressively from the start.
-  mirror_effect: >-
-    Tends to contribute to fullness down the center of the front thigh
-    specifically, since the rectus femoris this targets runs down that central
-    line — adds to the quad's central sweep rather than the outer teardrop
-    shape a leg extension emphasizes.
+    - Knee tolerance is limiting, or the range can't yet be controlled — this movement should be scaled gradually rather than loaded aggressively from the start.
+  mirror_effect: Tends to contribute to fullness down the center of the front thigh specifically, since the rectus femoris this targets runs down that central line — adds to the quad's central sweep rather than the outer teardrop shape a leg extension emphasizes.
   advantages: []
   limitations:
-    - The knee experiences real end-range stress in this position, and lifters
-      with existing knee sensitivity may not tolerate it well even at a
-      controlled pace.
-    - There's a real skill floor — many lifters can't control any meaningful
-      range at all when starting out, and loading it too aggressively before
-      building control raises injury risk.
-    - There's no simple way to add external load once bodyweight control is
-      mastered, unlike a barbell-based leg exercise.
+    - The knee experiences real end-range stress in this position, and lifters with existing knee sensitivity may not tolerate it well even at a controlled pace.
+    - There's a real skill floor — many lifters can't control any meaningful range at all when starting out, and loading it too aggressively before building control raises injury risk.
+    - There's no simple way to add external load once bodyweight control is mastered, unlike a barbell-based leg exercise.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -913,24 +837,9 @@
   overlaps_with:
     - leg-extension
   evidence_notes:
-    - >-
-      No study using this specific exercise was located, but the
-      underlying principle — that training the quads at a longer muscle
-      length (deep hip/knee flexion) drives more growth than training at
-      a shorter length — has direct support from squat-depth research.
-      Bloomquist et al. (2013) ran a 12-week controlled trial comparing
-      shallow squats (~60° knee flexion) against deep squats (~120° knee
-      flexion): the deep-squat group gained quadriceps cross-sectional
-      area across the entire thigh, while the shallow-squat group only
-      grew measurably in the upper thigh. This is a squat-depth finding,
-      not a reverse-Nordic-curl finding, but it's the same underlying
-      variable — how lengthened the quads get under load — that this
-      record's rectus-femoris claim rests on. It's also consistent with
-      the broader stretch-mediated hypertrophy literature: Schoenfeld &
-      Grgic (2020, SAGE Open Medicine) and Wolf et al. (2023,
-      International Journal of Strength and Conditioning) found training
-      at longer muscle length tends to match or beat training that
-      avoids the stretch, though a later trial (Wolf et al., 2025,
-      PubMed 39959841) found the advantage over full ROM is smaller than
-      earlier work suggested.
+    - "No study using this specific exercise was located, but the underlying principle — that training the quads at a longer muscle length (deep hip/knee flexion) drives more growth than training at a shorter length — has direct support from squat-depth research. Bloomquist et al. (2013) ran a 12-week controlled trial comparing shallow squats (~60° knee flexion) against deep squats (~120° knee flexion): the deep-squat group gained quadriceps cross-sectional area across the entire thigh, while the shallow-squat group only grew measurably in the upper thigh. This is a squat-depth finding, not a reverse-Nordic-curl finding, but it's the same underlying variable — how lengthened the quads get under load — that this record's rectus-femoris claim rests on. It's also consistent with the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf et al. (2023, International Journal of Strength and Conditioning) found training at longer muscle length tends to match or beat training that avoids the stretch, though a later trial (Wolf et al., 2025, PubMed 39959841) found the advantage over full ROM is smaller than earlier work suggested."
   review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=7_1k8yW9xZ0
+  video_creator: Kneesovertoesguy
+  video_title: How to Reverse Nordic Curl for Rectus Femoris
+  video_status: verified

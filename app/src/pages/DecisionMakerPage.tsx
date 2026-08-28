@@ -623,6 +623,18 @@ function DecisionResultView({
           {result.bestFit.name}
         </Link>
         <p>{result.why}</p>
+        {result.bestFit.video_link && (
+          <div className="decision-result-video">
+            <a
+              href={result.bestFit.video_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link-simple"
+            >
+              🎥 Click here for video
+            </a>
+          </div>
+        )}
       </div>
 
       {result.target && (

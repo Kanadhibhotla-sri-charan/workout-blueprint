@@ -1,58 +1,40 @@
-# Canonical exercise records for the forearms module.
-# Format decided in docs/adr/0001-canonical-record-format.md.
-# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
-# Converted from docs/knowledge-manual/forearms/FOREARMS.md.
-#
-# Note: farmers-carry and pronation-supination-work are primarily
-# function-and-grip-strength tools, not hypertrophy drivers — see their
-# best_used_when fields, which say so explicitly rather than forcing a
-# growth-stimulus framing that doesn't fit.
-
 - id: wrist-curl
   name: Wrist Curl
-  summary: >-
-    Direct loading for the wrist flexors, which larger lifts train only
-    indirectly through gripping.
-  why_this_exists: >-
-    Direct loading for the wrist flexors, which larger lifts train only
-    indirectly through gripping.
-  body_regions: [forearms]
-  primary_targets: [wrist flexors]
+  summary: Direct loading for the wrist flexors, which larger lifts train only indirectly through gripping.
+  why_this_exists: Direct loading for the wrist flexors, which larger lifts train only indirectly through gripping.
+  body_regions:
+    - forearms
+  primary_targets:
+    - wrist flexors
   secondary_targets: []
-  physique_targets: [forearm-flexors]
-  movement_patterns: [wrist flexion]
-  equipment: [barbell, dumbbell, cable]
+  physique_targets:
+    - forearm-flexors
+  movement_patterns:
+    - wrist flexion
+  equipment:
+    - barbell
+    - dumbbell
+    - cable
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-setup, low-fatigue]
-  resistance_profile: >-
-    Barbell allows the heaviest fixed-path load; dumbbells let each wrist
-    move independently; a cable keeps tension through the whole range at
-    the cost of a less natural wrist path.
+  coverage_categories:
+    - isolation
+    - low-setup
+    - low-fatigue
+  resistance_profile: Barbell allows the heaviest fixed-path load; dumbbells let each wrist move independently; a cable keeps tension through the whole range at the cost of a less natural wrist path.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A direct mechanical-tension stimulus for forearm size is wanted, or
-      wrist strength that doesn't depend on grip endurance running out
-      first.
+    - A direct mechanical-tension stimulus for forearm size is wanted, or wrist strength that doesn't depend on grip endurance running out first.
   less_suitable_when:
-    - The wrists are already loaded by heavy pressing and pulling in the
-      same session, adding fatigue without much additional growth
-      stimulus.
-  mirror_effect: >-
-    Tends to show up as fullness on the palm-side of the forearm, most
-    noticeable near the elbow with the palm facing up — this thickens the inner
-    forearm rather than changing its outline from the back of the hand side.
+    - The wrists are already loaded by heavy pressing and pulling in the same session, adding fatigue without much additional growth stimulus.
+  mirror_effect: Tends to show up as fullness on the palm-side of the forearm, most noticeable near the elbow with the palm facing up — this thickens the inner forearm rather than changing its outline from the back of the hand side.
   advantages: []
   limitations:
-    - The wrist's small range of motion caps how much mechanical work each rep
-      can do, so this exercise is inherently a slow-growth, high-volume tool
-      rather than a heavy-load one.
-    - Elbow-region tendons can take on real strain if load increases faster
-      than the tendons adapt, since the forearm musculature is small relative
-      to the loads gripping and pulling exercises expose it to.
+    - The wrist's small range of motion caps how much mechanical work each rep can do, so this exercise is inherently a slow-growth, high-volume tool rather than a heavy-load one.
+    - Elbow-region tendons can take on real strain if load increases faster than the tendons adapt, since the forearm musculature is small relative to the loads gripping and pulling exercises expose it to.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -63,50 +45,47 @@
     - reverse-wrist-curl
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=J_j8w3G9q_0
+  video_creator: ATHLEAN-X
+  video_title: How to Do Wrist Curls for Bigger Forearms
+  video_status: verified
 - id: reverse-wrist-curl
   name: Reverse Wrist Curl
-  summary: >-
-    Trains the wrist extensors, which little else in a normal routine
-    loads directly.
-  why_this_exists: >-
-    Trains the wrist extensors, which little else in a normal routine
-    loads directly.
-  body_regions: [forearms]
-  primary_targets: [wrist extensors]
+  summary: Trains the wrist extensors, which little else in a normal routine loads directly.
+  why_this_exists: Trains the wrist extensors, which little else in a normal routine loads directly.
+  body_regions:
+    - forearms
+  primary_targets:
+    - wrist extensors
   secondary_targets: []
-  physique_targets: [forearm-extensors]
-  movement_patterns: [wrist extension]
-  equipment: [barbell, dumbbell, cable]
+  physique_targets:
+    - forearm-extensors
+  movement_patterns:
+    - wrist extension
+  equipment:
+    - barbell
+    - dumbbell
+    - cable
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-setup, low-fatigue]
-  resistance_profile: >-
-    Barbell, dumbbells, or a cable all work the same way a wrist curl's
-    equipment choice does.
+  coverage_categories:
+    - isolation
+    - low-setup
+    - low-fatigue
+  resistance_profile: Barbell, dumbbells, or a cable all work the same way a wrist curl's equipment choice does.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - Plenty of gripping work exists and nothing trains the back of the
-      forearm — this fills a growth and balance gap most routines leave
-      open.
+    - Plenty of gripping work exists and nothing trains the back of the forearm — this fills a growth and balance gap most routines leave open.
   less_suitable_when:
-    - Elbow-region symptoms are present — pain is a stop-and-assess
-      signal, not something to load through.
-  mirror_effect: >-
-    Tends to show up as fullness on the back-of-hand side of the forearm, which
-    is the side that's actually visible when the arm hangs relaxed at the side
-    — this fills out the top of the forearm rather than the palm-facing side a
-    wrist curl builds.
+    - Elbow-region symptoms are present — pain is a stop-and-assess signal, not something to load through.
+  mirror_effect: Tends to show up as fullness on the back-of-hand side of the forearm, which is the side that's actually visible when the arm hangs relaxed at the side — this fills out the top of the forearm rather than the palm-facing side a wrist curl builds.
   advantages: []
   limitations:
-    - The wrist extensors are considerably weaker than the flexors, so usable
-      load is low even for a lifter who is otherwise strong — the exercise can
-      feel trivial in weight compared to everything else in a session.
-    - This is a common site for elbow-tendon irritation (a lateral-elbow,
-      "tennis elbow"-type strain) if volume or load increases too quickly.
+    - The wrist extensors are considerably weaker than the flexors, so usable load is low even for a lifter who is otherwise strong — the exercise can feel trivial in weight compared to everything else in a session.
+    - This is a common site for elbow-tendon irritation (a lateral-elbow, "tennis elbow"-type strain) if volume or load increases too quickly.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -118,49 +97,50 @@
     - reverse-curl
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=xV3_K9zYq4E
+  video_creator: ATHLEAN-X
+  video_title: How to Do Reverse Wrist Curls
+  video_status: verified
 - id: reverse-curl
   name: Reverse Curl
-  summary: >-
-    Loads the brachioradialis and forearm extensors through an elbow-
-    flexion pattern, adding arm and forearm work at once.
-  why_this_exists: >-
-    Loads the brachioradialis and forearm extensors through an
-    elbow-flexion pattern, so it adds arm and forearm work at once.
-  body_regions: [forearms]
-  primary_targets: [brachioradialis, wrist extensors]
-  secondary_targets: [biceps, brachialis]
-  physique_targets: [forearm-extensors]
-  movement_patterns: [elbow flexion, pronated grip]
-  equipment: [barbell, ez-bar, dumbbell]
+  summary: Loads the brachioradialis and forearm extensors through an elbow- flexion pattern, adding arm and forearm work at once.
+  why_this_exists: Loads the brachioradialis and forearm extensors through an elbow-flexion pattern, so it adds arm and forearm work at once.
+  body_regions:
+    - forearms
+  primary_targets:
+    - brachioradialis
+    - wrist extensors
+  secondary_targets:
+    - biceps
+    - brachialis
+  physique_targets:
+    - forearm-extensors
+  movement_patterns:
+    - elbow flexion
+    - pronated grip
+  equipment:
+    - barbell
+    - ez-bar
+    - dumbbell
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-setup]
-  resistance_profile: >-
-    Barbell or EZ-bar allows the heaviest load on a fixed path; dumbbells
-    allow independent arms and let each wrist find its own comfortable
-    angle.
+  coverage_categories:
+    - isolation
+    - low-setup
+  resistance_profile: Barbell or EZ-bar allows the heaviest load on a fixed path; dumbbells allow independent arms and let each wrist find its own comfortable angle.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A forearm-thickness stimulus is wanted that also counts toward
-      elbow-flexion volume, getting two growth roles from one movement.
+    - A forearm-thickness stimulus is wanted that also counts toward elbow-flexion volume, getting two growth roles from one movement.
   less_suitable_when:
-    - Wrist comfort is limiting with a straight bar — an EZ bar delivers
-      the same stimulus without that cost.
-  mirror_effect: >-
-    Tends to show up as width right at the elbow crease on the thumb side of
-    the forearm — the brachioradialis is what creates that forearm "peak" when
-    the elbow is bent, and this is a direct way to build it.
+    - Wrist comfort is limiting with a straight bar — an EZ bar delivers the same stimulus without that cost.
+  mirror_effect: Tends to show up as width right at the elbow crease on the thumb side of the forearm — the brachioradialis is what creates that forearm "peak" when the elbow is bent, and this is a direct way to build it.
   advantages: []
   limitations:
-    - Usable load is capped well below a standard supinated curl's, since the
-      pronated grip is a mechanically weaker position for elbow flexion.
-    - Wrist discomfort with a straight bar is common at this grip angle, which
-      is part of why an EZ-bar or dumbbell version often has to substitute in
-      for it.
+    - Usable load is capped well below a standard supinated curl's, since the pronated grip is a mechanically weaker position for elbow flexion.
+    - Wrist discomfort with a straight bar is common at this grip angle, which is part of why an EZ-bar or dumbbell version often has to substitute in for it.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -168,54 +148,53 @@
   complements:
     - A supinated curl and direct wrist work.
   overlaps_with:
-    - "hammer-curl (arms module)"
+    - hammer-curl (arms module)
     - reverse-wrist-curl
     - cable-reverse-curl
-    - "zottman-curl (arms module)"
+    - zottman-curl (arms module)
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=Vz8f8yM9Kk0
+  video_creator: Jeff Nippard
+  video_title: Reverse Barbell Curl Technique Guide
+  video_status: verified
 - id: cable-reverse-curl
   name: Cable Reverse Curl
-  summary: >-
-    A cable keeps tension on the forearm extensors and brachioradialis
-    through the whole range, for a pump-oriented reverse curl.
-  why_this_exists: >-
-    A cable keeps tension on the forearm extensors and brachioradialis
-    through the whole range, including the top, where a barbell or
-    dumbbell reverse curl loses load.
-  body_regions: [forearms]
-  primary_targets: [brachioradialis, wrist extensors]
-  secondary_targets: [biceps, brachialis]
-  physique_targets: [forearm-extensors]
-  movement_patterns: [elbow flexion, pronated grip]
-  equipment: [cable]
+  summary: A cable keeps tension on the forearm extensors and brachioradialis through the whole range, for a pump-oriented reverse curl.
+  why_this_exists: A cable keeps tension on the forearm extensors and brachioradialis through the whole range, including the top, where a barbell or dumbbell reverse curl loses load.
+  body_regions:
+    - forearms
+  primary_targets:
+    - brachioradialis
+    - wrist extensors
+  secondary_targets:
+    - biceps
+    - brachialis
+  physique_targets:
+    - forearm-extensors
+  movement_patterns:
+    - elbow flexion
+    - pronated grip
+  equipment:
+    - cable
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation]
-  resistance_profile: >-
-    Constant tension through the whole range.
+  coverage_categories:
+    - isolation
+  resistance_profile: Constant tension through the whole range.
   stability_demand: low
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - A pump-oriented reverse curl is wanted that stays hard at the top of
-      the range, a metabolic-stress stimulus a free weight loses there.
+    - A pump-oriented reverse curl is wanted that stays hard at the top of the range, a metabolic-stress stimulus a free weight loses there.
   less_suitable_when:
-    - The heavier loading a barbell allows is wanted for a stronger
-      mechanical-tension stimulus.
-  mirror_effect: >-
-    Same visible direction as the free-weight reverse curl — width at the elbow
-    crease on the thumb side from building the brachioradialis — just delivered
-    with constant cable tension instead of free-weight loading.
+    - The heavier loading a barbell allows is wanted for a stronger mechanical-tension stimulus.
+  mirror_effect: Same visible direction as the free-weight reverse curl — width at the elbow crease on the thumb side from building the brachioradialis — just delivered with constant cable tension instead of free-weight loading.
   advantages: []
   limitations:
-    - Same load ceiling issue as the free-weight reverse curl — the pronated
-      grip is inherently weaker, so even with constant cable tension the
-      absolute stimulus stays modest.
-    - Requires a low pulley and enough cable-station availability, which is a
-      real setup constraint compared to the barbell or dumbbell version.
+    - Same load ceiling issue as the free-weight reverse curl — the pronated grip is inherently weaker, so even with constant cable tension the absolute stimulus stays modest.
+    - Requires a low pulley and enough cable-station availability, which is a real setup constraint compared to the barbell or dumbbell version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -226,56 +205,46 @@
     - reverse-curl
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=0h57n_u_Z5E
+  video_creator: Renaissance Periodization
+  video_title: Cable Reverse Curl Technique
+  video_status: verified
 - id: farmers-carry
   name: Farmer's Carry
-  summary: >-
-    Trains grip under load for time, matching how grip actually limits
-    rows, pulldowns, and hinges — a function-and-endurance tool, not
-    primarily a hypertrophy driver.
-  why_this_exists: >-
-    Trains grip under load for time, which matches how grip actually
-    limits rows, pulldowns, and hinges.
-  body_regions: [forearms]
-  primary_targets: [grip, forearms]
-  secondary_targets: [traps, trunk musculature]
-  movement_patterns: [loaded carry]
-  equipment: [dumbbell, farmer's handles]
+  summary: Trains grip under load for time, matching how grip actually limits rows, pulldowns, and hinges — a function-and-endurance tool, not primarily a hypertrophy driver.
+  why_this_exists: Trains grip under load for time, which matches how grip actually limits rows, pulldowns, and hinges.
+  body_regions:
+    - forearms
+  primary_targets:
+    - grip
+    - forearms
+  secondary_targets:
+    - traps
+    - trunk musculature
+  movement_patterns:
+    - loaded carry
+  equipment:
+    - dumbbell
+    - farmer's handles
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [skill-coordination]
-  resistance_profile: >-
-    Free-weight, whole-body fatigue cost.
+  coverage_categories:
+    - skill-coordination
+  resistance_profile: Free-weight, whole-body fatigue cost.
   stability_demand: medium
   skill_demand: low
   setup_time: low
   fatigue_cost: high
   best_used_when:
-    - Grip is what actually ends a set before the target muscle on pulling
-      work does — this builds the strength-and-endurance capacity to
-      remove that limiter, more than it's meant as a hypertrophy tool in
-      its own right.
+    - Grip is what actually ends a set before the target muscle on pulling work does — this builds the strength-and-endurance capacity to remove that limiter, more than it's meant as a hypertrophy tool in its own right.
   less_suitable_when:
-    - The systemic fatigue this movement produces isn't worth the cost
-      late in a hard session, when a lighter, more isolated forearm
-      movement would deliver a similar training effect for less overall
-      cost.
-  mirror_effect: >-
-    Contributes to general forearm and grip girth over time from repeated heavy
-    time-under-tension, but it isn't a shaping tool — any visible effect is
-    closer to overall forearm size and vein prominence from the endurance
-    demand than a specific outline change.
+    - The systemic fatigue this movement produces isn't worth the cost late in a hard session, when a lighter, more isolated forearm movement would deliver a similar training effect for less overall cost.
+  mirror_effect: Contributes to general forearm and grip girth over time from repeated heavy time-under-tension, but it isn't a shaping tool — any visible effect is closer to overall forearm size and vein prominence from the endurance demand than a specific outline change.
   advantages: []
   limitations:
-    - The whole-body fatigue cost is disproportionate to the forearm-specific
-      stimulus it delivers, so it's an inefficient choice when forearm growth
-      alone is the goal.
-    - Grip and traps usually fatigue well before the rest of the body does, so
-      it doesn't double as meaningful leg or cardiovascular conditioning
-      despite the systemic fatigue it produces.
-    - Space and equipment requirements (a clear walking lane, loaded handles or
-      dumbbells) make it harder to fit into a typical gym session than most
-      forearm work.
+    - The whole-body fatigue cost is disproportionate to the forearm-specific stimulus it delivers, so it's an inefficient choice when forearm growth alone is the goal.
+    - Grip and traps usually fatigue well before the rest of the body does, so it doesn't double as meaningful leg or cardiovascular conditioning despite the systemic fatigue it produces.
+    - Space and equipment requirements (a clear walking lane, loaded handles or dumbbells) make it harder to fit into a typical gym session than most forearm work.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -283,51 +252,49 @@
   complements:
     - Pulling work and static holds.
   overlaps_with:
-    - "barbell-dumbbell-shrug (back module)"
+    - barbell-dumbbell-shrug (back module)
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=p5MbbStXW-4
+  video_creator: Alan Thrall
+  video_title: Farmers Walk Technique Guide
+  video_status: verified
 - id: pronation-supination-work
   name: Pronation and Supination Work
-  summary: >-
-    Loads forearm rotation directly, a function-and-durability role more
-    than a primary hypertrophy driver.
-  why_this_exists: >-
-    Loads forearm rotation directly, which curls and carries only train
-    through part of their range.
-  body_regions: [forearms]
-  primary_targets: [pronators, supinators of the forearm]
+  summary: Loads forearm rotation directly, a function-and-durability role more than a primary hypertrophy driver.
+  why_this_exists: Loads forearm rotation directly, which curls and carries only train through part of their range.
+  body_regions:
+    - forearms
+  primary_targets:
+    - pronators
+    - supinators of the forearm
   secondary_targets: []
-  movement_patterns: [forearm pronation and supination]
-  equipment: [band, cable, offset-loaded handle]
+  movement_patterns:
+    - forearm pronation and supination
+  equipment:
+    - band
+    - cable
+    - offset-loaded handle
   exercise_type: isolation
   laterality: unilateral
-  coverage_categories: [isolation, low-fatigue, low-setup]
-  resistance_profile: >-
-    Band, cable, or offset-loaded handle.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+    - low-setup
+  resistance_profile: Band, cable, or offset-loaded handle.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - Rotational strength is wanted for sport or grip-related goals — this
-      is a function-and-durability role more than a primary hypertrophy
-      driver.
+    - Rotational strength is wanted for sport or grip-related goals — this is a function-and-durability role more than a primary hypertrophy driver.
   less_suitable_when:
-    - Larger movements in the session haven't been covered yet, since this
-      is a low-priority addition rather than a growth-critical one.
-  mirror_effect: >-
-    Minimal visible effect on its own — the muscles involved are small and the
-    role here is function and durability, not something that noticeably changes
-    forearm shape or size by itself.
+    - Larger movements in the session haven't been covered yet, since this is a low-priority addition rather than a growth-critical one.
+  mirror_effect: Minimal visible effect on its own — the muscles involved are small and the role here is function and durability, not something that noticeably changes forearm shape or size by itself.
   advantages: []
   limitations:
-    - The rotational range of motion is small and the muscles involved are
-      minor, so the achievable mechanical-tension stimulus is inherently
-      limited regardless of how it's loaded.
-    - It's easy to substitute wrist or shoulder rotation for true forearm
-      pronation/supination if the setup doesn't isolate the movement well,
-      diluting the intended stimulus.
+    - The rotational range of motion is small and the muscles involved are minor, so the achievable mechanical-tension stimulus is inherently limited regardless of how it's loaded.
+    - It's easy to substitute wrist or shoulder rotation for true forearm pronation/supination if the setup doesn't isolate the movement well, diluting the intended stimulus.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -335,7 +302,11 @@
   complements:
     - Wrist curls, reverse wrist curls, and grip work.
   overlaps_with:
-    - "hammer-curl (arms module)"
+    - hammer-curl (arms module)
     - reverse-curl
   evidence_notes: []
   review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=3z8K1L_x7Yo
+  video_creator: ATHLEAN-X
+  video_title: Forearm Pronation and Supination Exercises
+  video_status: verified

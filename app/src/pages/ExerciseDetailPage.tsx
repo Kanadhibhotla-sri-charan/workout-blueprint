@@ -1,8 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { getExerciseById } from '../data';
-import { humanize } from '../utils/format';
+import { humanize, formatRange } from '../utils/format';
 import { OptionalList } from '../components/OptionalList';
 import { RelationshipList } from '../components/RelationshipList';
+import { buildProgramming, getEligibleIntensityTechniques } from '../engine/programmingEngine';
 
 export function ExerciseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -19,6 +20,9 @@ export function ExerciseDetailPage() {
       </div>
     );
   }
+
+  const programming = buildProgramming(exercise, null);
+  const eligibleTechniques = getEligibleIntensityTechniques(exercise);
 
   return (
     <article className="exercise-detail">
@@ -99,6 +103,82 @@ export function ExerciseDetailPage() {
             <dd>{humanize(exercise.skill_demand)}</dd>
           </div>
         </dl>
+      </section>
+
+      {/* Execution guide / video reference */}
+      {exercise.video_link && (
+        <section className="detail-section execution-guide-section">
+          <h2>Execution Guide</h2>
+          <p className="execution-guide-link-row">
+            <a
+              href={exercise.video_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link-simple"
+            >
+              🎥 Click here for video
+            </a>
+          </p>
+        </section>
+      )}
+
+      {/* Programming Baseline */}
+      <section className="detail-section programming-baseline-section">
+        <h2>Programming</h2>
+        <p className="field-hint">
+          <strong>Baseline</strong> — {programming.profile.name}
+        </p>
+        <dl className="demand-grid">
+          <div>
+            <dt>Reps</dt>
+            <dd>{formatRange(programming.repRange.primaryRange)}</dd>
+          </div>
+          <div>
+            <dt>RIR</dt>
+            <dd>{formatRange(programming.rirTypicalRange)}</dd>
+          </div>
+          <div>
+            <dt>Weekly sets</dt>
+            <dd>{formatRange(programming.weeklyVolumeSets)}</dd>
+          </div>
+          <div>
+            <dt>Frequency</dt>
+            <dd>{formatRange(programming.frequencyPerWeek)}/week</dd>
+          </div>
+        </dl>
+        <p className="field-hint">{programming.repRange.reason}</p>
+        <p className="field-hint">{programming.rirGuidance}</p>
+        <p className="field-hint">{programming.progressionExplanation}</p>
+        {programming.profile.guidance_note && (
+          <p className="field-hint">{programming.profile.guidance_note}</p>
+        )}
+      </section>
+
+      {/* Universal Intensity Techniques */}
+      <section className="detail-section intensity-techniques-section">
+        <h2>Intensity Techniques</h2>
+        {eligibleTechniques.length > 0 ? (
+          <div className="intensity-technique-cards">
+            {eligibleTechniques.map((technique) => (
+              <div key={technique.id} className="intensity-technique-card">
+                <h3>{technique.name}</h3>
+                <p className="technique-what">{technique.what}</p>
+                <div className="technique-detail-group">
+                  <p><strong>When it may help:</strong> {technique.when_it_may_help}</p>
+                  <p><strong>When not to use:</strong> {technique.when_not_to_use}</p>
+                  <p><strong>Fatigue & time implications:</strong> {technique.fatigue_time_implications}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="no-intensity-technique">
+            <p className="text-muted">
+              No specific intensity technique is recommended for this variation. Standard progressive overload is the primary progression method.
+            </p>
+            <p className="field-hint">{programming.intensityTechniqueContext}</p>
+          </div>
+        )}
       </section>
 
       {/* 6–8: relationships */}

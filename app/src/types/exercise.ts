@@ -1,13 +1,12 @@
-// Mirrors the canonical 30-field exercise-record schema exactly.
-// Source of truth: ../../../docs/knowledge-manual/SCHEMA.md and
-// ../../../scripts/lib/taxonomy.js. Do not add fields here that don't
-// exist in the canonical YAML — the UI renders knowledge, it doesn't
-// invent its own.
+// Mirrors the canonical exercise-record schema plus generator/runtime fields
+// used by the application. Source of truth: ../../../docs/knowledge-manual/SCHEMA.md
+// and ../../../scripts/lib/taxonomy.js.
 
 export type ExerciseType = 'compound' | 'isolation';
 export type Laterality = 'bilateral' | 'unilateral' | 'alternating';
 export type DemandLevel = 'low' | 'medium' | 'high';
 export type ReviewStatus = 'draft' | 'needs-review' | 'reviewed';
+export type VideoStatus = 'verified' | 'needs-review' | 'broken';
 
 export interface Exercise {
   id: string;
@@ -50,6 +49,11 @@ export interface Exercise {
   overlaps_with: string[] | null;
   evidence_notes: string[] | null;
   review_status: ReviewStatus;
+  /** Canonical YouTube execution tutorial reference. */
+  video_link?: string | null;
+  video_creator?: string | null;
+  video_title?: string | null;
+  video_status?: VideoStatus | null;
   /** Source file basename, e.g. "chest.yaml" — added by the generator, not part of the canonical schema. */
   _file: string;
 }

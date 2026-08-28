@@ -18,15 +18,29 @@ Physique Blueprint helps people answer **what exercise should I choose, and why?
 
 ## Local setup
 
+The repository has two separate `package.json`s that must **both** be installed — the root one (`js-yaml`, used by `scripts/lib/` to load and validate the canonical YAML) and the app's own (React/Vite/etc.). `app`'s `predev`/`prebuild`/`pretest` scripts regenerate the app's data snapshot by calling straight into the root's `scripts/lib/`, so skipping the root install leaves that step unable to find `js-yaml`.
+
+```
+Repository root dependencies (js-yaml — used by scripts/lib/, shared by
+the root validator and the app's data-generation step)
+        ↓
+Application dependencies (app/ — React, Vite, Vitest, etc.)
+        ↓
+Development / build commands (run from app/)
+```
+
 ```
 git clone https://github.com/Kanadhibhotla-sri-charan/workout-blueprint.git
 cd workout-blueprint
+npm install          # repo-root dependencies (js-yaml)
 cd app
-npm install
+npm install           # app dependencies
 npm run dev
 ```
 
 Opens at `http://localhost:5173`. No backend, database, or account is required — the app runs entirely from the repository's local YAML data (see [Data locations](#data-locations) below). Full run/build/test detail lives in [`app/README.md`](app/README.md).
+
+If you ever see `Error: Cannot find module 'js-yaml'` while running `npm run dev`/`build`/`test` from `app/`, it means the root install was skipped — run `npm install` from the repository root and retry.
 
 ## Running tests
 

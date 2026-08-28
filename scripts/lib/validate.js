@@ -8,7 +8,7 @@
 
 const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
-  REVIEW_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
+  REVIEW_STATUSES, VIDEO_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
   AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
 } = require('./taxonomy');
@@ -51,6 +51,7 @@ const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const QUOTED_MODULE_REF = /^([a-z0-9]+(-[a-z0-9]+)*) \(.*module.*\)/;
 const REP_RANGE_PATTERN = /^\d+-\d+$/;
+const YOUTUBE_URL_PATTERN = /^https:\/\/(www\.|m\.)?(youtube\.com\/(watch\?v=[a-zA-Z0-9_-]{11}|shorts\/[a-zA-Z0-9_-]{11})|youtu\.be\/[a-zA-Z0-9_-]{11})(\S*)?$/;
 
 const DEMAND_ORDER = ['low', 'medium', 'high'];
 
@@ -394,6 +395,7 @@ function validate(records) {
 
   const allIds = new Set(records.map((r) => r.id).filter((id) => typeof id === 'string'));
   const idCounts = new Map();
+  const videoLinkCounts = new Map();
 
   for (const record of records) {
     const seenInFile = new Set(
@@ -491,6 +493,28 @@ function validate(records) {
       report(record, 'schema', `"review_status" must be one of ${[...REVIEW_STATUSES].join('|')}, got ${JSON.stringify(record.review_status)}`);
     }
 
+    // --- Video Reference Validation (Spec §8 & §9) ---
+    if (!record.video_link || typeof record.video_link !== 'string' || !YOUTUBE_URL_PATTERN.test(record.video_link)) {
+      report(record, 'schema', `"video_link" is required and must be a valid YouTube URL, got ${JSON.stringify(record.video_link)}`);
+    } else {
+      const existing = videoLinkCounts.get(record.video_link) || [];
+      existing.push(record.id);
+      videoLinkCounts.set(record.video_link, existing);
+    }
+    if (record.video_status !== 'verified') {
+      report(record, 'schema', `"video_status" must be "verified" for production exercises, got ${JSON.stringify(record.video_status)}`);
+    }
+    if (record.video_creator !== undefined && record.video_creator !== null) {
+      if (typeof record.video_creator !== 'string' || record.video_creator.trim() === '') {
+        report(record, 'schema', `"video_creator" must be a non-empty string, got ${JSON.stringify(record.video_creator)}`);
+      }
+    }
+    if (record.video_title !== undefined && record.video_title !== null) {
+      if (typeof record.video_title !== 'string' || record.video_title.trim() === '') {
+        report(record, 'schema', `"video_title" must be a non-empty string, got ${JSON.stringify(record.video_title)}`);
+      }
+    }
+
     // --- Taxonomy: body_regions, coverage_categories, movement_patterns ---
     if (Array.isArray(record.body_regions)) {
       for (const v of record.body_regions) {
@@ -565,6 +589,16 @@ function validate(records) {
   const duplicateIds = [];
   for (const [id, count] of idCounts.entries()) {
     if (count > 1) duplicateIds.push({ id, count });
+  }
+
+  for (const [url, exerciseIds] of videoLinkCounts.entries()) {
+    if (exerciseIds.length > 1) {
+      issues.push({
+        record: null,
+        category: 'schema',
+        message: `duplicate video_link "${url}" appears across ${exerciseIds.length} exercises: ${exerciseIds.join(', ')}`,
+      });
+    }
   }
 
   return { issues, duplicateIds, allIds };

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildProgramming, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
+import { buildProgramming, getEligibleIntensityTechniques, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
 import { exercises, getExerciseById } from '../data';
 
 const COMPOUND_PROFILE_FAMILY = new Set(['heavy-free-weight-compound', 'stable-compound', 'compound-general']);
@@ -222,5 +222,41 @@ describe('intensity-technique eligibility and ranking (Phase 4B §25 Test D)', (
     expect(a).not.toBe(b);
     expect(a.length).toBeGreaterThan(0);
     expect(b.length).toBeGreaterThan(0);
+  });
+
+  it('getEligibleIntensityTechniques returns all eligible techniques for an exercise without recommendation filtering', () => {
+    const cableCurl = getExerciseById('cable-curl')!;
+    const techniques = getEligibleIntensityTechniques(cableCurl);
+    expect(techniques.length).toBeGreaterThan(0);
+    expect(techniques.map((t) => t.id)).toContain('drop-set');
+
+    const deadlift = getExerciseById('conventional-deadlift')!;
+    expect(getEligibleIntensityTechniques(deadlift)).toHaveLength(0);
+  });
+
+  // QA Gate §12: explicit multi-technique regression — cable-curl has 3 eligible techniques
+  it('getEligibleIntensityTechniques returns ALL eligible techniques, not just the first', () => {
+    const cableCurl = getExerciseById('cable-curl')!;
+    const techniques = getEligibleIntensityTechniques(cableCurl);
+    expect(techniques).toHaveLength(3);
+    const ids = techniques.map((t) => t.id);
+    expect(ids).toContain('drop-set');
+    expect(ids).toContain('rest-pause');
+    expect(ids).toContain('myo-reps');
+  });
+
+  // QA Gate §14: explicit single-technique regression — smith-machine-romanian-deadlift has exactly 1
+  it('getEligibleIntensityTechniques returns exactly one technique when only one is eligible', () => {
+    const smithRdl = getExerciseById('smith-machine-romanian-deadlift')!;
+    const techniques = getEligibleIntensityTechniques(smithRdl);
+    expect(techniques).toHaveLength(1);
+    expect(techniques[0].id).toBe('rest-pause');
+  });
+
+  // QA Gate §13: explicit zero-technique regression — conventional-deadlift has zero
+  it('getEligibleIntensityTechniques returns empty array for high-demand exercises', () => {
+    const deadlift = getExerciseById('conventional-deadlift')!;
+    const techniques = getEligibleIntensityTechniques(deadlift);
+    expect(techniques).toHaveLength(0);
   });
 });

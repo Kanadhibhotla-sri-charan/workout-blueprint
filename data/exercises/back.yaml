@@ -1,60 +1,44 @@
-# Canonical exercise records for the back module.
-# Format decided in docs/adr/0001-canonical-record-format.md.
-# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
-# Converted from docs/knowledge-manual/back/BACK.md.
-#
-# Note: the Romanian deadlift is NOT duplicated here. It is a genuinely
-# identical exercise in both the hips and hamstrings prose modules (no
-# execution fork, confirmed by audit), so its single canonical record
-# lives in hamstrings.yaml with body_regions: [hips, hamstrings]. See
-# ADR 0001. Back's conventional deadlift and quads' sumo deadlift are
-# genuinely distinct movements and each keep their own record.
-
 - id: pull-up-pronated
   name: Pull-Up (Pronated Grip)
-  summary: >-
-    A bodyweight vertical pull with an overhand grip, leaning most heavily
-    on the lats and grip with less elbow-flexor assistance than a chin-up.
-  why_this_exists: >-
-    A bodyweight vertical pull that requires little equipment and scales
-    through added load, tempo, or assistance. The overhand grip leans on
-    the lats and grip strength more than the chin-up does.
-  body_regions: [back]
-  primary_targets: [lats]
-  secondary_targets: [mid-back, trunk musculature, elbow flexors (less than chin-up)]
-  physique_targets: [lat-width]
-  aesthetic_characteristics: [vertical-pull]
-  movement_patterns: [vertical pull, pronated grip]
-  equipment: [pull-up bar, bodyweight]
+  summary: A bodyweight vertical pull with an overhand grip, leaning most heavily on the lats and grip with less elbow-flexor assistance than a chin-up.
+  why_this_exists: A bodyweight vertical pull that requires little equipment and scales through added load, tempo, or assistance. The overhand grip leans on the lats and grip strength more than the chin-up does.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+  secondary_targets:
+    - mid-back
+    - trunk musculature
+    - elbow flexors (less than chin-up)
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - vertical-pull
+  movement_patterns:
+    - vertical pull
+    - pronated grip
+  equipment:
+    - pull-up bar
+    - bodyweight
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, skill-coordination]
-  resistance_profile: >-
-    Bodyweight-scaled; progresses via added load, tempo, or assistance.
+  coverage_categories:
+    - heavy-compound
+    - skill-coordination
+  resistance_profile: Bodyweight-scaled; progresses via added load, tempo, or assistance.
   stability_demand: medium
   skill_demand: high
   setup_time: low
   fatigue_cost: high
   best_used_when:
-    - A heavy, bodyweight-scaled mechanical-tension stimulus for lat width
-      is the goal, with grip and upper-back strength building alongside it.
+    - A heavy, bodyweight-scaled mechanical-tension stimulus for lat width is the goal, with grip and upper-back strength building alongside it.
   less_suitable_when:
-    - Bodyweight is too much load to complete a useful number of reps,
-      capping the growth stimulus until strength improves or assistance is
-      added.
-  mirror_effect: >-
-    This is usually the actual answer to "my lats look narrow" — vertical
-    pulling like this is the primary driver of back width, the flare that shows
-    up under the arms and creates the V-taper look from behind. Rows build back
-    thickness, not width; if width specifically is the complaint, this family
-    of movements is where to look first.
+    - Bodyweight is too much load to complete a useful number of reps, capping the growth stimulus until strength improves or assistance is added.
+  mirror_effect: This is usually the actual answer to "my lats look narrow" — vertical pulling like this is the primary driver of back width, the flare that shows up under the arms and creates the V-taper look from behind. Rows build back thickness, not width; if width specifically is the complaint, this family of movements is where to look first.
   advantages: []
   limitations:
-    - Bodyweight is a large, all-or-nothing jump in load for anyone who can't
-      yet do a full rep, and there's no easy way to fine-tune the resistance
-      down without a band or assisted machine.
-    - Grip strength commonly runs out before the lats do, especially for
-      lifters who haven't built grip capacity separately.
+    - Bodyweight is a large, all-or-nothing jump in load for anyone who can't yet do a full rep, and there's no easy way to fine-tune the resistance down without a band or assisted machine.
+    - Grip strength commonly runs out before the lats do, especially for lifters who haven't built grip capacity separately.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -66,52 +50,51 @@
     - lat-pulldown-wide-pronated
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=eGo4IYlbE5g
+  video_creator: Renaissance Periodization
+  video_title: Pull-Up Technique Guide
+  video_status: verified
 - id: chin-up-supinated
   name: Chin-Up (Supinated Grip)
-  summary: >-
-    The same bodyweight vertical pull as the pull-up, with an underhand
-    grip that brings the biceps in more directly.
-  why_this_exists: >-
-    The same bodyweight vertical pull as the pull-up, but the underhand
-    grip brings the biceps in more directly, which often lets a user
-    complete more reps or add more load at the same relative lat effort.
-  body_regions: [back]
-  primary_targets: [lats, elbow flexors]
-  secondary_targets: [mid-back, trunk musculature]
-  physique_targets: [lat-width]
-  aesthetic_characteristics: [vertical-pull]
-  movement_patterns: [vertical pull, supinated grip]
-  equipment: [pull-up bar, bodyweight]
+  summary: The same bodyweight vertical pull as the pull-up, with an underhand grip that brings the biceps in more directly.
+  why_this_exists: The same bodyweight vertical pull as the pull-up, but the underhand grip brings the biceps in more directly, which often lets a user complete more reps or add more load at the same relative lat effort.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+    - elbow flexors
+  secondary_targets:
+    - mid-back
+    - trunk musculature
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - vertical-pull
+  movement_patterns:
+    - vertical pull
+    - supinated grip
+  equipment:
+    - pull-up bar
+    - bodyweight
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound, skill-coordination]
-  resistance_profile: >-
-    Bodyweight-scaled; progresses via added load, tempo, or assistance.
+  coverage_categories:
+    - heavy-compound
+    - skill-coordination
+  resistance_profile: Bodyweight-scaled; progresses via added load, tempo, or assistance.
   stability_demand: medium
   skill_demand: high
   setup_time: low
   fatigue_cost: high
   best_used_when:
-    - The same lat-width stimulus as a pull-up is wanted but with more
-      biceps assistance, often making it easier to reach a growth-effective
-      rep range while still building strength.
+    - The same lat-width stimulus as a pull-up is wanted but with more biceps assistance, often making it easier to reach a growth-effective rep range while still building strength.
   less_suitable_when:
-    - The lats need to be isolated away from the biceps — the biceps taking
-      on more of the load means less of the set's tension lands on the
-      back per rep.
-  mirror_effect: >-
-    Same width-building visible direction as the pull-up — the under-arm flare
-    that creates a V-taper from behind — though with more of each rep's tension
-    shared by the biceps, so the lat-specific stimulus per rep is somewhat less
-    isolated.
+    - The lats need to be isolated away from the biceps — the biceps taking on more of the load means less of the set's tension lands on the back per rep.
+  mirror_effect: Same width-building visible direction as the pull-up — the under-arm flare that creates a V-taper from behind — though with more of each rep's tension shared by the biceps, so the lat-specific stimulus per rep is somewhat less isolated.
   advantages: []
   limitations:
-    - The extra biceps involvement means some of each rep's tension lands on
-      the elbow flexors rather than the back, which understates how hard the
-      back itself is actually working.
-    - Same bodyweight-jump problem as the pull-up — there's no fine-grained way
-      to scale load down for a lifter who can't yet do a full rep.
+    - The extra biceps involvement means some of each rep's tension lands on the elbow flexors rather than the back, which understates how hard the back itself is actually working.
+    - Same bodyweight-jump problem as the pull-up — there's no fine-grained way to scale load down for a lifter who can't yet do a full rep.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -123,59 +106,54 @@
     - lat-pulldown-wide-pronated
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=b-ACTSszrxE
+  video_creator: Renaissance Periodization
+  video_title: Chin-Up Technique Guide
+  video_status: verified
 - id: lat-pulldown-wide-pronated
   name: Lat Pulldown (Wide, Pronated Grip)
-  summary: >-
-    A vertical pull with adjustable load and a wide overhand grip, the
-    default most people mean by "lat pulldown."
-  why_this_exists: >-
-    A vertical pull with adjustable load, which makes it easier to control
-    repetition ranges and progression than bodyweight pulling. The wide
-    pronated grip is the default most people mean by "lat pulldown."
-  body_regions: [back]
-  primary_targets: [lats]
-  secondary_targets: [mid-back, elbow flexors (less than supinated grip)]
-  physique_targets: [lat-width]
-  aesthetic_characteristics: [vertical-pull]
-  movement_patterns: [vertical pull, pronated grip]
-  equipment: [cable]
+  summary: A vertical pull with adjustable load and a wide overhand grip, the default most people mean by "lat pulldown."
+  why_this_exists: A vertical pull with adjustable load, which makes it easier to control repetition ranges and progression than bodyweight pulling. The wide pronated grip is the default most people mean by "lat pulldown."
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+  secondary_targets:
+    - mid-back
+    - elbow flexors (less than supinated grip)
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - vertical-pull
+  movement_patterns:
+    - vertical pull
+    - pronated grip
+  equipment:
+    - cable
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Cable stack, small load increments.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Cable stack, small load increments.
   stability_demand: low
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - Precise, progressive loading for lat-width growth is wanted without
-      the all-or-nothing jumps bodyweight pulling forces, or a set needs
-      to be pushed closer to failure than a pull-up safely allows.
+    - Precise, progressive loading for lat-width growth is wanted without the all-or-nothing jumps bodyweight pulling forces, or a set needs to be pushed closer to failure than a pull-up safely allows.
   less_suitable_when:
-    - Pulling strength has outgrown the stack's top loads, capping how much
-      mechanical tension the machine can provide relative to a heavier
-      bodyweight-plus-load pull-up.
-  mirror_effect: >-
-    Same width-building visible direction as a pull-up — the under-arm flare
-    and V-taper viewed from behind — and the most common default choice for
-    training it, since load is adjustable in a way bodyweight pulling isn't.
+    - Pulling strength has outgrown the stack's top loads, capping how much mechanical tension the machine can provide relative to a heavier bodyweight-plus-load pull-up.
+  mirror_effect: Same width-building visible direction as a pull-up — the under-arm flare and V-taper viewed from behind — and the most common default choice for training it, since load is adjustable in a way bodyweight pulling isn't.
   advantages: []
   limitations:
-    - It's easy to lean back and use the trunk to help complete the pull once
-      the load gets heavy, which shifts some of the work away from the lats
-      without feeling like a technique breakdown.
-    - The seated, supported position removes core and grip demand a bodyweight
-      pull would add, so strength built here transfers only partially to a
-      pull-up.
+    - It's easy to lean back and use the trunk to help complete the pull once the load gets heavy, which shifts some of the work away from the lats without feeling like a technique breakdown.
+    - The seated, supported position removes core and grip demand a bodyweight pull would add, so strength built here transfers only partially to a pull-up.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A rowing pattern, and lat-focused single-joint work where elbow
-      flexors limit the pull.
+    - A rowing pattern, and lat-focused single-joint work where elbow flexors limit the pull.
   overlaps_with:
     - pull-up-pronated
     - chin-up-supinated
@@ -183,50 +161,48 @@
     - neutral-grip-lat-pulldown
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=CAwf7n6Luuc
+  video_creator: Renaissance Periodization
+  video_title: Lat Pulldown Technique Guide
+  video_status: verified
 - id: reverse-grip-lat-pulldown
   name: Reverse-Grip Lat Pulldown
-  summary: >-
-    A supinated, closer-than-wide pulldown grip that brings the biceps
-    into the pull more, with adjustable cable load.
-  why_this_exists: >-
-    A supinated, closer-than-wide grip that brings the biceps into the
-    pull more, similar to how a chin-up relates to a pull-up, while
-    keeping the adjustable load of a cable stack.
-  body_regions: [back]
-  primary_targets: [lats, elbow flexors]
-  secondary_targets: [mid-back]
-  physique_targets: [lat-width]
-  aesthetic_characteristics: [vertical-pull]
-  movement_patterns: [vertical pull, supinated grip]
-  equipment: [cable]
+  summary: A supinated, closer-than-wide pulldown grip that brings the biceps into the pull more, with adjustable cable load.
+  why_this_exists: A supinated, closer-than-wide grip that brings the biceps into the pull more, similar to how a chin-up relates to a pull-up, while keeping the adjustable load of a cable stack.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+    - elbow flexors
+  secondary_targets:
+    - mid-back
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - vertical-pull
+  movement_patterns:
+    - vertical pull
+    - supinated grip
+  equipment:
+    - cable
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Cable stack, small load increments.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Cable stack, small load increments.
   stability_demand: low
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - The pulldown's precise, progressive loading is wanted with more
-      biceps assistance, often making it easier to push a set closer to
-      failure than the wide pronated version.
+    - The pulldown's precise, progressive loading is wanted with more biceps assistance, often making it easier to push a set closer to failure than the wide pronated version.
   less_suitable_when:
-    - The lats need to be isolated with minimal biceps fatigue — the wide
-      pronated version does that more directly.
-  mirror_effect: >-
-    Similar width-building direction to the wide pronated pulldown, with more
-    biceps assistance diluting how isolated the lat-specific tension is per
-    rep.
+    - The lats need to be isolated with minimal biceps fatigue — the wide pronated version does that more directly.
+  mirror_effect: Similar width-building direction to the wide pronated pulldown, with more biceps assistance diluting how isolated the lat-specific tension is per rep.
   advantages: []
   limitations:
-    - Same lean-back and momentum risk as the wide pronated version — the
-      seated position makes it easy to recruit the trunk once the load is
-      heavy.
-    - The closer grip and increased biceps involvement mean less of the pull's
-      tension is specifically isolated to the back muscles.
+    - Same lean-back and momentum risk as the wide pronated version — the seated position makes it easy to recruit the trunk once the load is heavy.
+    - The closer grip and increased biceps involvement mean less of the pull's tension is specifically isolated to the back muscles.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -238,51 +214,48 @@
     - lat-pulldown-wide-pronated
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=QxwtE3XU_0o
+  video_creator: Renaissance Periodization
+  video_title: Underhand Lat Pulldown Technique Guide
+  video_status: verified
 - id: neutral-grip-lat-pulldown
   name: Neutral-Grip Lat Pulldown
-  summary: >-
-    A parallel or angled pulldown grip that avoids the shoulder's
-    end-range external rotation, often the kindest grip on the joints.
-  why_this_exists: >-
-    A parallel or angled grip that avoids the shoulder's end-range
-    external rotation a wide pronated grip asks for, which many find is
-    the kindest grip on the shoulders and elbows.
-  body_regions: [back]
-  primary_targets: [lats]
-  secondary_targets: [mid-back, elbow flexors (between pronated and supinated)]
-  physique_targets: [lat-width]
-  aesthetic_characteristics: [vertical-pull]
-  movement_patterns: [vertical pull, neutral grip]
-  equipment: [cable]
+  summary: A parallel or angled pulldown grip that avoids the shoulder's end-range external rotation, often the kindest grip on the joints.
+  why_this_exists: A parallel or angled grip that avoids the shoulder's end-range external rotation a wide pronated grip asks for, which many find is the kindest grip on the shoulders and elbows.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+  secondary_targets:
+    - mid-back
+    - elbow flexors (between pronated and supinated)
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - vertical-pull
+  movement_patterns:
+    - vertical pull
+    - neutral grip
+  equipment:
+    - cable
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Cable stack, small load increments.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Cable stack, small load increments.
   stability_demand: low
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - Shoulder or elbow discomfort is what actually ends a set before the
-      lats are meaningfully fatigued — the neutral grip removes that
-      limiter and lets more effort go toward a lat-width stimulus.
+    - Shoulder or elbow discomfort is what actually ends a set before the lats are meaningfully fatigued — the neutral grip removes that limiter and lets more effort go toward a lat-width stimulus.
   less_suitable_when:
-    - Shoulder and elbow comfort aren't limiting factors, in which case a
-      pronated or supinated grip may deliver a more specific bias without
-      a meaningful downside.
-  mirror_effect: >-
-    Same width-building visible direction as any lat pulldown — the grip is a
-    joint-comfort choice, not a change in which muscle or visible outcome is
-    being trained.
+    - Shoulder and elbow comfort aren't limiting factors, in which case a pronated or supinated grip may deliver a more specific bias without a meaningful downside.
+  mirror_effect: Same width-building visible direction as any lat pulldown — the grip is a joint-comfort choice, not a change in which muscle or visible outcome is being trained.
   advantages: []
   limitations:
-    - Not every cable station has a neutral-grip attachment available, which
-      limits how consistently this specific grip can be programmed.
-    - The joint-friendlier angle comes at some cost to range of motion on
-      certain machines, depending on where the handle attachment sits relative
-      to the body.
+    - Not every cable station has a neutral-grip attachment available, which limits how consistently this specific grip can be programmed.
+    - The joint-friendlier angle comes at some cost to range of motion on certain machines, depending on where the handle attachment sits relative to the body.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -294,224 +267,215 @@
     - reverse-grip-lat-pulldown
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=l4j7yD5p11Y
+  video_creator: Renaissance Periodization
+  video_title: Neutral Grip Lat Pulldown Technique Guide
+  video_status: verified
 - id: chest-supported-row
   name: Chest-Supported Row
-  summary: >-
-    A horizontal pull where the bench removes lower-back and balance
-    demand, pushing a back-thickness set closer to true failure.
-  why_this_exists: >-
-    A horizontal pull where the bench removes most of the lower-back and
-    balance demand, so effort goes into the pull itself.
-  body_regions: [back]
-  primary_targets: [mid-back, rhomboids, mid/lower trapezius]
-  secondary_targets: [lats, elbow flexors]
-  physique_targets: [back-thickness]
-  aesthetic_characteristics: [horizontal-pull]
-  movement_patterns: [horizontal pull]
-  equipment: [machine, bench]
+  summary: A horizontal pull where the bench removes lower-back and balance demand, pushing a back-thickness set closer to true failure.
+  why_this_exists: A horizontal pull where the bench removes most of the lower-back and balance demand, so effort goes into the pull itself.
+  body_regions:
+    - back
+  primary_targets:
+    - mid-back
+    - rhomboids
+    - mid/lower trapezius
+  secondary_targets:
+    - lats
+    - elbow flexors
+  physique_targets:
+    - back-thickness
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+  equipment:
+    - machine
+    - bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound, low-fatigue]
-  resistance_profile: >-
-    Machine or bench-supported free weight; grip/handle choice (pronated,
-    neutral, supinated) is a preference within this record, not a
-    separate movement.
+  coverage_categories:
+    - stable-compound
+    - low-fatigue
+  resistance_profile: Machine or bench-supported free weight; grip/handle choice (pronated, neutral, supinated) is a preference within this record, not a separate movement.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A strong mechanical-tension stimulus for back thickness is wanted
-      while pushing close to failure — removing the trunk-stability demand
-      means the set ends when the back gives out, not the lower back.
+    - A strong mechanical-tension stimulus for back thickness is wanted while pushing close to failure — removing the trunk-stability demand means the set ends when the back gives out, not the lower back.
   less_suitable_when:
-    - The hinge's added trunk and hip demand is wanted as part of the
-      stimulus, which a supported row deliberately removes.
-  mirror_effect: >-
-    Rows build back thickness, not width — tends to show up as density and a
-    "3D" stacked look viewed from the side, filling out the back between the
-    spine and the shoulder blades, distinct from the under-arm flare vertical
-    pulling builds.
+    - The hinge's added trunk and hip demand is wanted as part of the stimulus, which a supported row deliberately removes.
+  mirror_effect: Rows build back thickness, not width — tends to show up as density and a "3D" stacked look viewed from the side, filling out the back between the spine and the shoulder blades, distinct from the under-arm flare vertical pulling builds.
   advantages: []
   limitations:
-    - The chest pad's angle and height often don't fit every torso length well,
-      and a poor fit can cap the row's range of motion regardless of how heavy
-      the load is.
-    - Removing the hinge also removes the trunk-and-hip training stimulus a
-      free-standing row provides, so strength here doesn't fully transfer to
-      unsupported pulling.
+    - The chest pad's angle and height often don't fit every torso length well, and a poor fit can cap the row's range of motion regardless of how heavy the load is.
+    - Removing the hinge also removes the trunk-and-hip training stimulus a free-standing row provides, so strength here doesn't fully transfer to unsupported pulling.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A vertical pull; a free-standing row only if it fills a different
-      role.
+    - A vertical pull; a free-standing row only if it fills a different role.
   overlaps_with:
     - seated-cable-row
     - barbell-bent-over-row-pronated
     - t-bar-row
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=0UBRfiX4zDs
+  video_creator: Renaissance Periodization
+  video_title: Chest Supported Row Technique Guide
+  video_status: verified
 - id: barbell-bent-over-row-pronated
   name: Barbell Bent-Over Row (Pronated Grip)
-  summary: >-
-    The reference free-weight horizontal pull, the heaviest, most
-    mechanical-tension-driven back-thickness stimulus available.
-  why_this_exists: >-
-    The reference free-weight horizontal pull, loadable with small
-    increments and useful when a user wants one row that also demands
-    trunk and hip control. The overhand grip is the default most people
-    mean by "barbell row," and it flares the elbows wider than an
-    underhand grip, biasing the upper back and rear delts somewhat more.
-  body_regions: [back]
-  primary_targets: [mid-back, rhomboids]
-  secondary_targets: [lats, elbow flexors, spinal erectors]
-  physique_targets: [back-thickness]
-  aesthetic_characteristics: [horizontal-pull]
-  movement_patterns: [horizontal pull, pronated grip]
-  equipment: [barbell]
+  summary: The reference free-weight horizontal pull, the heaviest, most mechanical-tension-driven back-thickness stimulus available.
+  why_this_exists: The reference free-weight horizontal pull, loadable with small increments and useful when a user wants one row that also demands trunk and hip control. The overhand grip is the default most people mean by "barbell row," and it flares the elbows wider than an underhand grip, biasing the upper back and rear delts somewhat more.
+  body_regions:
+    - back
+  primary_targets:
+    - mid-back
+    - rhomboids
+  secondary_targets:
+    - lats
+    - elbow flexors
+    - spinal erectors
+  physique_targets:
+    - back-thickness
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+    - pronated grip
+  equipment:
+    - barbell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, fixed bar path.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, fixed bar path.
   stability_demand: high
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - The heaviest, most mechanical-tension-driven back-thickness stimulus
-      available is the goal, with the hinge itself adding a secondary
-      training demand on the spinal erectors.
+    - The heaviest, most mechanical-tension-driven back-thickness stimulus available is the goal, with the hinge itself adding a secondary training demand on the spinal erectors.
   less_suitable_when:
-    - Lower-back fatigue from other work already limits how much can
-      safely be loaded, capping the mechanical-tension ceiling this
-      movement can deliver.
-  mirror_effect: >-
-    Same thickness-building visible direction as any row — mass and density
-    through the mid-back viewed from the side — and, being the heaviest
-    loadable row option, often the biggest single contributor to that
-    thickness.
+    - Lower-back fatigue from other work already limits how much can safely be loaded, capping the mechanical-tension ceiling this movement can deliver.
+  mirror_effect: Same thickness-building visible direction as any row — mass and density through the mid-back viewed from the side — and, being the heaviest loadable row option, often the biggest single contributor to that thickness.
   advantages: []
   limitations:
-    - The bent-over hinge position places real demand on the lower back, which
-      can become the limiting factor before the target back muscles are.
-    - Technical demand is high — maintaining a neutral spine under load while
-      pulling takes real practice, and poor form here carries real injury risk.
+    - The bent-over hinge position places real demand on the lower back, which can become the limiting factor before the target back muscles are.
+    - Technical demand is high — maintaining a neutral spine under load while pulling takes real practice, and poor form here carries real injury risk.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A supported row or vertical pull that does not add further spinal
-      loading.
+    - A supported row or vertical pull that does not add further spinal loading.
   overlaps_with:
     - reverse-grip-barbell-row
     - t-bar-row
     - chest-supported-row
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=9efg3UpfP_s
+  video_creator: Alan Thrall
+  video_title: How To Barbell Row
+  video_status: verified
 - id: reverse-grip-barbell-row
   name: Reverse-Grip (Underhand) Barbell Row
-  summary: >-
-    The same heavy free-weight row with an underhand grip, shifting
-    emphasis more toward the lats and biceps.
-  why_this_exists: >-
-    The same free-weight row with the grip flipped underhand, which pulls
-    the elbows in closer and brings the lats and biceps into the pull
-    more, the same relationship a chin-up has to a pull-up.
-  body_regions: [back]
-  primary_targets: [lats, elbow flexors]
-  secondary_targets: [mid-back, spinal erectors]
-  physique_targets: [lat-width]
-  aesthetic_characteristics: [horizontal-pull]
-  movement_patterns: [horizontal pull, supinated grip]
-  equipment: [barbell]
+  summary: The same heavy free-weight row with an underhand grip, shifting emphasis more toward the lats and biceps.
+  why_this_exists: The same free-weight row with the grip flipped underhand, which pulls the elbows in closer and brings the lats and biceps into the pull more, the same relationship a chin-up has to a pull-up.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+    - elbow flexors
+  secondary_targets:
+    - mid-back
+    - spinal erectors
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+    - supinated grip
+  equipment:
+    - barbell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, fixed bar path.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, fixed bar path.
   stability_demand: high
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - The same heavy, mechanical-tension-driven row as the overhand
-      version is wanted, shifted more toward the lats and biceps.
+    - The same heavy, mechanical-tension-driven row as the overhand version is wanted, shifted more toward the lats and biceps.
   less_suitable_when:
-    - Wrist or elbow comfort favors a pronated or neutral grip, or
-      lower-back fatigue already caps how heavy this can safely be loaded.
-  mirror_effect: >-
-    Similar thickness-building direction to a standard row, but the underhand
-    grip pulls the lats in more directly, so this leans a little toward
-    contributing to width as well as thickness rather than thickness alone.
+    - Wrist or elbow comfort favors a pronated or neutral grip, or lower-back fatigue already caps how heavy this can safely be loaded.
+  mirror_effect: Similar thickness-building direction to a standard row, but the underhand grip pulls the lats in more directly, so this leans a little toward contributing to width as well as thickness rather than thickness alone.
   advantages: []
   limitations:
-    - Same lower-back and technical demands as the overhand version — the hinge
-      position doesn't get any easier or safer just because the grip changed.
-    - The underhand grip can aggravate elbow or bicep-tendon sensitivity in
-      some lifters at heavier loads.
+    - Same lower-back and technical demands as the overhand version — the hinge position doesn't get any easier or safer just because the grip changed.
+    - The underhand grip can aggravate elbow or bicep-tendon sensitivity in some lifters at heavier loads.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A supported row or vertical pull that does not add further spinal
-      loading.
+    - A supported row or vertical pull that does not add further spinal loading.
   overlaps_with:
     - barbell-bent-over-row-pronated
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=O1_5xH5_R-4
+  video_creator: ATHLEAN-X
+  video_title: Underhand Barbell Row for Lat Width
+  video_status: verified
 - id: seated-cable-row
   name: Seated Cable Row
-  summary: >-
-    A horizontal pull with the trunk supported by the seated position,
-    for back-thickness work without the hinge's stability demand.
-  why_this_exists: >-
-    A horizontal pull with the trunk supported by the seated position, so
-    effort goes into the pull rather than into holding a hinge.
-  body_regions: [back]
-  primary_targets: [mid-back, rhomboids, lats]
-  secondary_targets: [elbow flexors]
-  physique_targets: [lat-width, back-thickness]
-  aesthetic_characteristics: [horizontal-pull]
-  movement_patterns: [horizontal pull]
-  equipment: [cable]
+  summary: A horizontal pull with the trunk supported by the seated position, for back-thickness work without the hinge's stability demand.
+  why_this_exists: A horizontal pull with the trunk supported by the seated position, so effort goes into the pull rather than into holding a hinge.
+  body_regions:
+    - back
+  primary_targets:
+    - mid-back
+    - rhomboids
+    - lats
+  secondary_targets:
+    - elbow flexors
+  physique_targets:
+    - lat-width
+    - back-thickness
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+  equipment:
+    - cable
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound]
-  resistance_profile: >-
-    Cable stack, small load increments; attachment width/grip (wide bar,
-    close V-handle, rope) is a preference within this record, not a
-    separate movement.
+  coverage_categories:
+    - stable-compound
+  resistance_profile: Cable stack, small load increments; attachment width/grip (wide bar, close V-handle, rope) is a preference within this record, not a separate movement.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A back-thickness stimulus is wanted without the hinge's
-      spinal-stability demand competing for effort, letting a set be
-      pushed closer to failure.
+    - A back-thickness stimulus is wanted without the hinge's spinal-stability demand competing for effort, letting a set be pushed closer to failure.
   less_suitable_when:
-    - The hinge's added trunk and hip demand is wanted as part of the
-      stimulus, which a seated row deliberately removes.
-  mirror_effect: >-
-    Same thickness-building visible direction as a free-standing row — density
-    through the mid-back viewed from the side.
+    - The hinge's added trunk and hip demand is wanted as part of the stimulus, which a seated row deliberately removes.
+  mirror_effect: Same thickness-building visible direction as a free-standing row — density through the mid-back viewed from the side.
   advantages: []
   limitations:
-    - The seated, foot-braced setup removes the hip-and-trunk training stimulus
-      a free-standing row provides, so it builds pulling strength somewhat in
-      isolation from that context.
-    - It's easy to round the lower back or lean too far forward and back to add
-      fake range, which can look like more range of motion without adding real
-      back-muscle tension.
+    - The seated, foot-braced setup removes the hip-and-trunk training stimulus a free-standing row provides, so it builds pulling strength somewhat in isolation from that context.
+    - It's easy to round the lower back or lean too far forward and back to add fake range, which can look like more range of motion without adding real back-muscle tension.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -522,49 +486,50 @@
     - chest-supported-row
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=GZbfZ033f74
+  video_creator: Renaissance Periodization
+  video_title: Seated Cable Row Technique Guide
+  video_status: verified
 - id: t-bar-row
   name: T-Bar Row
-  summary: >-
-    A free-standing row with a fixed, close, mostly neutral grip and a
-    heavy, mechanical-tension-driven stimulus.
-  why_this_exists: >-
-    A free-standing row with a fixed, close, mostly neutral grip, which
-    changes the pull's path and torso demand from a barbell row.
-  body_regions: [back]
-  primary_targets: [mid-back, lats]
-  secondary_targets: [spinal erectors, elbow flexors]
-  physique_targets: [lat-width, back-thickness]
-  aesthetic_characteristics: [horizontal-pull]
-  movement_patterns: [horizontal pull]
-  equipment: [t-bar, landmine]
+  summary: A free-standing row with a fixed, close, mostly neutral grip and a heavy, mechanical-tension-driven stimulus.
+  why_this_exists: A free-standing row with a fixed, close, mostly neutral grip, which changes the pull's path and torso demand from a barbell row.
+  body_regions:
+    - back
+  primary_targets:
+    - mid-back
+    - lats
+  secondary_targets:
+    - spinal erectors
+    - elbow flexors
+  physique_targets:
+    - lat-width
+    - back-thickness
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+  equipment:
+    - t-bar
+    - landmine
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, fixed handle position.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, fixed handle position.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - A heavy, mechanical-tension-driven row with a fixed bar path is
-      wanted, which can make it easier to push close to failure than a
-      barbell row's grip-width and balance demands allow.
+    - A heavy, mechanical-tension-driven row with a fixed bar path is wanted, which can make it easier to push close to failure than a barbell row's grip-width and balance demands allow.
   less_suitable_when:
-    - The deepest possible range of motion is the priority, since the
-      fixed handle position can shorten the pull compared to a barbell or
-      dumbbell row.
-  mirror_effect: >-
-    Same thickness-building visible direction as a barbell row — mid-back mass
-    and density — at a heavier loadable ceiling than most machine row options.
+    - The deepest possible range of motion is the priority, since the fixed handle position can shorten the pull compared to a barbell or dumbbell row.
+  mirror_effect: Same thickness-building visible direction as a barbell row — mid-back mass and density — at a heavier loadable ceiling than most machine row options.
   advantages: []
   limitations:
-    - The fixed handle position means grip width and hand angle can't be
-      adjusted mid-set the way a barbell or dumbbell allows, which doesn't suit
-      every lifter's shoulder mechanics.
-    - Requires a dedicated T-bar station or a landmine attachment, which isn't
-      available in every gym the way a barbell is.
+    - The fixed handle position means grip width and hand angle can't be adjusted mid-set the way a barbell or dumbbell allows, which doesn't suit every lifter's shoulder mechanics.
+    - Requires a dedicated T-bar station or a landmine attachment, which isn't available in every gym the way a barbell is.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -577,174 +542,156 @@
     - chest-supported-row
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=j3Igk5nyZE4
+  video_creator: Renaissance Periodization
+  video_title: T-Bar Row Technique Guide
+  video_status: verified
 - id: conventional-deadlift
   name: Conventional Deadlift
-  summary: >-
-    Loads the whole posterior chain from a dead stop on the floor — the
-    single heaviest mechanical-tension stimulus available for it.
-  why_this_exists: >-
-    Loads the entire posterior chain from a dead stop on the floor, which
-    distinguishes it from hinges such as the Romanian deadlift that start
-    from the top and never fully unload.
-  body_regions: [back]
-  primary_targets: [spinal erectors, glutes, hamstrings]
-  secondary_targets: [lats, traps, grip]
-  movement_patterns: [hip hinge]
-  equipment: [barbell]
+  summary: Loads the whole posterior chain from a dead stop on the floor — the single heaviest mechanical-tension stimulus available for it.
+  why_this_exists: Loads the entire posterior chain from a dead stop on the floor, which distinguishes it from hinges such as the Romanian deadlift that start from the top and never fully unload.
+  body_regions:
+    - back
+  primary_targets:
+    - spinal erectors
+    - glutes
+    - hamstrings
+  secondary_targets:
+    - lats
+    - traps
+    - grip
+  movement_patterns:
+    - hip hinge
+  equipment:
+    - barbell
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, floor start, hardest off the floor.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, floor start, hardest off the floor.
   stability_demand: high
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - The single heaviest, most mechanical-tension-driven stimulus
-      available for the whole posterior chain is the goal, and the
-      systemic cost that comes with it can be recovered from.
+    - The single heaviest, most mechanical-tension-driven stimulus available for the whole posterior chain is the goal, and the systemic cost that comes with it can be recovered from.
   less_suitable_when:
-    - Recovery is limited, or what's actually needed is back-thickness or
-      lat-width growth rather than raw whole-body strength — a rack pull
-      or a compound row delivers a more targeted stimulus at far less
-      systemic cost.
-  mirror_effect: >-
-    Contributes to overall back thickness and density broadly — traps, upper
-    back, and especially the spinal erectors, which in a lean physique show up
-    as the "Christmas tree" lines running down either side of the spine. It's a
-    whole-posterior-chain effect, not a targeted width or shape tool.
+    - Recovery is limited, or what's actually needed is back-thickness or lat-width growth rather than raw whole-body strength — a rack pull or a compound row delivers a more targeted stimulus at far less systemic cost.
+  mirror_effect: Contributes to overall back thickness and density broadly — traps, upper back, and especially the spinal erectors, which in a lean physique show up as the "Christmas tree" lines running down either side of the spine. It's a whole-posterior-chain effect, not a targeted width or shape tool.
   advantages: []
   limitations:
-    - The technical demand and injury stakes are higher than almost any other
-      lift in this dataset — poor bar path or a rounded back under heavy load
-      carries real risk.
-    - Recovery cost is high relative to most other back exercises, since the
-      whole posterior chain and central nervous system are taxed, not just the
-      back muscles.
-    - Grip is often the first thing to fail at heavy loads, which can end a set
-      before the back and legs reach their true strength limit unless straps or
-      a mixed grip are used.
+    - The technical demand and injury stakes are higher than almost any other lift in this dataset — poor bar path or a rounded back under heavy load carries real risk.
+    - Recovery cost is high relative to most other back exercises, since the whole posterior chain and central nervous system are taxed, not just the back muscles.
+    - Grip is often the first thing to fail at heavy loads, which can end a set before the back and legs reach their true strength limit unless straps or a mixed grip are used.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A single-joint hamstring or glute movement that adds volume without
-      the same systemic cost.
+    - A single-joint hamstring or glute movement that adds volume without the same systemic cost.
   overlaps_with:
     - rack-pull
-    - "romanian-deadlift (hamstrings module) — related but distinct hinge
-      that starts from the top and never fully unloads."
-    - "sumo-deadlift (quads module) — same floor pull, wide stance,
-      emphasis shifted toward quads and adductors."
+    - romanian-deadlift (hamstrings module) — related but distinct hinge that starts from the top and never fully unloads.
+    - sumo-deadlift (quads module) — same floor pull, wide stance, emphasis shifted toward quads and adductors.
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=wYREQSOZ0-8
+  video_creator: Alan Thrall
+  video_title: How to Deadlift in 5 Steps
+  video_status: verified
 - id: rack-pull
   name: Rack Pull
-  summary: >-
-    A partial-range deadlift from an elevated start, overloading the
-    top-of-pull position past what a full deadlift allows.
-  why_this_exists: >-
-    Starting the pull from an elevated position removes the hardest, most
-    technical part of a deadlift off the floor, which lets a user load
-    significantly heavier weight and biases the top-of-pull musculature
-    more than a full deadlift does.
-  body_regions: [back]
-  primary_targets: [spinal erectors, upper/mid trapezius, grip]
-  secondary_targets: [glutes, hamstrings (less than a full deadlift)]
-  physique_targets: [upper-traps]
-  movement_patterns: [hip hinge, partial range]
-  equipment: [barbell, power rack]
+  summary: A partial-range deadlift from an elevated start, overloading the top-of-pull position past what a full deadlift allows.
+  why_this_exists: Starting the pull from an elevated position removes the hardest, most technical part of a deadlift off the floor, which lets a user load significantly heavier weight and biases the top-of-pull musculature more than a full deadlift does.
+  body_regions:
+    - back
+  primary_targets:
+    - spinal erectors
+    - upper/mid trapezius
+    - grip
+  secondary_targets:
+    - glutes
+    - hamstrings (less than a full deadlift)
+  physique_targets:
+    - upper-traps
+  movement_patterns:
+    - hip hinge
+    - partial range
+  equipment:
+    - barbell
+    - power rack
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [heavy-compound]
-  resistance_profile: >-
-    Free-weight profile, elevated start, partial range of motion.
+  coverage_categories:
+    - heavy-compound
+  resistance_profile: Free-weight profile, elevated start, partial range of motion.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
   best_used_when:
-    - The top-of-pull position needs overloading with more mechanical
-      tension than a full deadlift allows, specifically training grip and
-      upper-back strength under heavier-than-usual load.
+    - The top-of-pull position needs overloading with more mechanical tension than a full deadlift allows, specifically training grip and upper-back strength under heavier-than-usual load.
   less_suitable_when:
-    - The full-range, floor-level strength stimulus a conventional
-      deadlift trains is the goal, since this movement skips that range
-      entirely.
-  mirror_effect: >-
-    Tends to show up more in the traps and upper back than the lower-back
-    erector definition a full-range deadlift builds, since the partial range
-    biases the top-of-pull musculature specifically.
+    - The full-range, floor-level strength stimulus a conventional deadlift trains is the goal, since this movement skips that range entirely.
+  mirror_effect: Tends to show up more in the traps and upper back than the lower-back erector definition a full-range deadlift builds, since the partial range biases the top-of-pull musculature specifically.
   advantages: []
   limitations:
-    - Skipping the floor-level range means it does not build pulling strength
-      or technique off the floor — it should not be mistaken for a full
-      deadlift substitute.
-    - The heavier loads this position allows can tempt lifters into using more
-      back rounding or momentum than they would with a full-range pull, since
-      the working range is shorter and the ego-load temptation is higher.
+    - Skipping the floor-level range means it does not build pulling strength or technique off the floor — it should not be mistaken for a full deadlift substitute.
+    - The heavier loads this position allows can tempt lifters into using more back rounding or momentum than they would with a full-range pull, since the working range is shorter and the ego-load temptation is higher.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - A full-range deadlift or Romanian deadlift, which covers the
-      bottom-range work this movement skips.
+    - A full-range deadlift or Romanian deadlift, which covers the bottom-range work this movement skips.
   overlaps_with:
     - conventional-deadlift
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=u7nsbT_ZasE
+  video_creator: Jeff Nippard
+  video_title: How to Rack Pull for Upper Back & Traps
+  video_status: verified
 - id: single-arm-dumbbell-row
   name: Single-Arm Dumbbell Row
-  summary: >-
-    A unilateral horizontal pull that lets each side work through its own
-    range and exposes side-to-side differences.
-  why_this_exists: >-
-    A unilateral horizontal pull that lets each side work through its own
-    range and exposes side-to-side differences.
-  body_regions: [back]
-  primary_targets: [lats, mid-back]
-  secondary_targets: [elbow flexors, trunk musculature]
-  physique_targets: [lat-width, back-thickness]
-  aesthetic_characteristics: [horizontal-pull]
-  movement_patterns: [horizontal pull]
-  equipment: [dumbbell, bench]
+  summary: A unilateral horizontal pull that lets each side work through its own range and exposes side-to-side differences.
+  why_this_exists: A unilateral horizontal pull that lets each side work through its own range and exposes side-to-side differences.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+    - mid-back
+  secondary_targets:
+    - elbow flexors
+    - trunk musculature
+  physique_targets:
+    - lat-width
+    - back-thickness
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: compound
   laterality: unilateral
-  coverage_categories: [unilateral]
-  resistance_profile: >-
-    Free-weight profile; free arm and slight trunk rotation allow more
-    range and stretch than a bilateral row.
+  coverage_categories:
+    - unilateral
+  resistance_profile: Free-weight profile; free arm and slight trunk rotation allow more range and stretch than a bilateral row.
   stability_demand: medium
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
   best_used_when:
-    - A strong mechanical-tension stimulus per side is wanted, with the
-      free arm and slight trunk rotation allowing a bit more range and
-      stretch than a bilateral row, or a lagging side needs to be brought
-      level with the other.
+    - A strong mechanical-tension stimulus per side is wanted, with the free arm and slight trunk rotation allowing a bit more range and stretch than a bilateral row, or a lagging side needs to be brought level with the other.
   less_suitable_when:
-    - The extra per-side volume needed to match a bilateral row's total
-      work makes this a less efficient way to accumulate back-thickness
-      volume when session time or fatigue budget is tight.
-  mirror_effect: >-
-    Same thickness-building visible direction as a bilateral row, trained and
-    visible one side at a time — useful for closing a visible left-right back-
-    thickness difference the bilateral versions can't target directly.
+    - The extra per-side volume needed to match a bilateral row's total work makes this a less efficient way to accumulate back-thickness volume when session time or fatigue budget is tight.
+  mirror_effect: Same thickness-building visible direction as a bilateral row, trained and visible one side at a time — useful for closing a visible left-right back- thickness difference the bilateral versions can't target directly.
   advantages: []
   limitations:
-    - Per-side volume needs to roughly double to match a bilateral row's total
-      work, which makes this a slower way to accumulate back-thickness volume
-      when time is limited.
-    - The free hand and knee typically brace on a bench, and a wobbly or poorly
-      positioned base can cap how much weight can be handled safely before the
-      target muscles are the limiter.
+    - Per-side volume needs to roughly double to match a bilateral row's total work, which makes this a slower way to accumulate back-thickness volume when time is limited.
+    - The free hand and knee typically brace on a bench, and a wobbly or poorly positioned base can cap how much weight can be handled safely before the target muscles are the limiter.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -754,51 +701,44 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=pYcpY20QaE8
+  video_creator: Renaissance Periodization
+  video_title: One-Arm Dumbbell Row Technique Guide
+  video_status: verified
 - id: straight-arm-pulldown
   name: Straight-Arm Pulldown
-  summary: >-
-    A lat-focused, cable-based option with the elbow mostly fixed, a
-    stretch-mediated stimulus independent of grip or biceps endurance.
-  why_this_exists: >-
-    A lat-focused option with the elbow mostly fixed, which may be useful
-    when elbow flexors fatigue before the lats in pulldowns and rows.
-  body_regions: [back]
-  primary_targets: [lats]
+  summary: A lat-focused, cable-based option with the elbow mostly fixed, a stretch-mediated stimulus independent of grip or biceps endurance.
+  why_this_exists: A lat-focused option with the elbow mostly fixed, which may be useful when elbow flexors fatigue before the lats in pulldowns and rows.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
   secondary_targets: []
-  physique_targets: [lat-width]
-  movement_patterns: [shoulder extension]
-  equipment: [cable]
+  physique_targets:
+    - lat-width
+  movement_patterns:
+    - shoulder extension
+  equipment:
+    - cable
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-fatigue]
-  resistance_profile: >-
-    Constant cable tension.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+  resistance_profile: Constant cable tension.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A stretch-mediated, lat-isolated stimulus that doesn't depend on
-      grip or biceps endurance is wanted, often as a pre-exhaust warm-up or
-      a finisher after heavier pulling.
+    - A stretch-mediated, lat-isolated stimulus that doesn't depend on grip or biceps endurance is wanted, often as a pre-exhaust warm-up or a finisher after heavier pulling.
   less_suitable_when:
-    - Back growth is currently limited by total heavy-pulling volume
-      rather than needing more lat isolation — a compound pull delivers
-      more overall stimulus per set.
-  mirror_effect: >-
-    Tends to show up as fullness along the lower, outer edge of the lat — the
-    "sweep" that flares out near the sides of the torso — since that's the
-    stretched position this movement isolates, distinct from the more general
-    width a vertical pull builds.
+    - Back growth is currently limited by total heavy-pulling volume rather than needing more lat isolation — a compound pull delivers more overall stimulus per set.
+  mirror_effect: Tends to show up as fullness along the lower, outer edge of the lat — the "sweep" that flares out near the sides of the torso — since that's the stretched position this movement isolates, distinct from the more general width a vertical pull builds.
   advantages: []
   limitations:
-    - Load ceiling is inherently modest — the fixed-elbow, straight-arm path is
-      a mechanically weaker position than a bent-arm pull, so this can't
-      substitute for a heavy compound pull's overall stimulus.
-    - It's easy for the shoulders to hike up or the movement to turn into a
-      shrug-like motion under fatigue, which shifts the stimulus away from the
-      lats.
+    - Load ceiling is inherently modest — the fixed-elbow, straight-arm path is a mechanically weaker position than a bent-arm pull, so this can't substitute for a heavy compound pull's overall stimulus.
+    - It's easy for the shoulders to hike up or the movement to turn into a shrug-like motion under fatigue, which shifts the stimulus away from the lats.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -808,64 +748,49 @@
   overlaps_with:
     - dumbbell-pullover-lat-biased
   evidence_notes:
-    - >-
-      No study specific to the straight-arm pulldown or lat length was
-      located. The "stretch-mediated" framing draws on the broader
-      stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020,
-      SAGE Open Medicine) found full/longer-ROM training tends to match
-      or beat partial-ROM training that avoids the stretch, and Wolf et
-      al. (2023, International Journal of Strength and Conditioning)
-      found lengthened partial-ROM training matched or exceeded full-ROM
-      training. A later trial (Wolf et al., 2025, PubMed 39959841) found
-      lengthened partials produced hypertrophy similar to, not clearly
-      greater than, full ROM — so this is a well-supported general
-      direction, not a settled, exercise-specific magnitude claim.
+    - "No study specific to the straight-arm pulldown or lat length was located. The \"stretch-mediated\" framing draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so this is a well-supported general direction, not a settled, exercise-specific magnitude claim."
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=G9_1q_vPzU0
+  video_creator: Renaissance Periodization
+  video_title: Straight Arm Pulldown Technique Guide
+  video_status: verified
 - id: dumbbell-pullover-lat-biased
   name: Dumbbell Pullover (Lat-Biased)
-  summary: >-
-    A free-weight lat-focused option with more elbow bend than the
-    chest-biased version, loading an overhead range no pulldown reaches.
-  why_this_exists: >-
-    A free-weight lat-focused option with the elbow mostly fixed; the load
-    is hardest overhead and eases as the weight comes back over the
-    chest, the opposite feel from a cable pulldown.
-  body_regions: [back]
-  primary_targets: [lats]
-  secondary_targets: [chest, triceps]
-  physique_targets: [lat-width]
-  movement_patterns: [shoulder extension through an overhead arc]
-  equipment: [dumbbell, bench]
+  summary: A free-weight lat-focused option with more elbow bend than the chest-biased version, loading an overhead range no pulldown reaches.
+  why_this_exists: A free-weight lat-focused option with the elbow mostly fixed; the load is hardest overhead and eases as the weight comes back over the chest, the opposite feel from a cable pulldown.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+  secondary_targets:
+    - chest
+    - triceps
+  physique_targets:
+    - lat-width
+  movement_patterns:
+    - shoulder extension through an overhead arc
+  equipment:
+    - dumbbell
+    - bench
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, lengthened-position-emphasis]
-  resistance_profile: >-
-    Free-weight profile, hardest overhead, easing as the weight returns
-    over the chest.
+  coverage_categories:
+    - isolation
+    - lengthened-position-emphasis
+  resistance_profile: Free-weight profile, hardest overhead, easing as the weight returns over the chest.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A stretch-mediated lat stimulus at the top of an overhead arc is
-      wanted, a range compound pulling doesn't reach.
+    - A stretch-mediated lat stimulus at the top of an overhead arc is wanted, a range compound pulling doesn't reach.
   less_suitable_when:
-    - Tension held through the whole range is wanted, which a cable
-      straight-arm pulldown provides and this movement's resistance
-      profile does not.
-  mirror_effect: >-
-    Similar visible direction to the straight-arm pulldown — fullness at the
-    lower, outer lat and the flare near the sides of the torso — from working
-    the same stretched position with a different resistance curve.
+    - Tension held through the whole range is wanted, which a cable straight-arm pulldown provides and this movement's resistance profile does not.
+  mirror_effect: Similar visible direction to the straight-arm pulldown — fullness at the lower, outer lat and the flare near the sides of the torso — from working the same stretched position with a different resistance curve.
   advantages: []
   limitations:
-    - Shoulder mobility limits how far overhead the weight can be lowered
-      safely, which caps the very stretch position that gives this exercise its
-      value for some lifters.
-    - Keeping the elbow bend consistent through the set takes real attention —
-      under fatigue it's easy to drift toward straighter arms, blurring the
-      line with the chest-biased version.
+    - Shoulder mobility limits how far overhead the weight can be lowered safely, which caps the very stretch position that gives this exercise its value for some lifters.
+    - Keeping the elbow bend consistent through the set takes real attention — under fatigue it's easy to drift toward straighter arms, blurring the line with the chest-biased version.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -874,59 +799,52 @@
     - A vertical or horizontal pull.
   overlaps_with:
     - straight-arm-pulldown
-    - "dumbbell-pullover-chest-biased (chest module) — same arc with
-      straighter arms; elbow bend is what separates the two."
+    - dumbbell-pullover-chest-biased (chest module) — same arc with straighter arms; elbow bend is what separates the two.
   evidence_notes:
-    - >-
-      Same general stretch-mediated hypertrophy grounding as
-      straight-arm-pulldown above — see that record's evidence_notes. No
-      study specific to the lat-biased pullover or lat length at the
-      overhead position was located.
+    - Same general stretch-mediated hypertrophy grounding as straight-arm-pulldown above — see that record's evidence_notes. No study specific to the lat-biased pullover or lat length at the overhead position was located.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=fA7dE3qE9p8
+  video_creator: Eugene Teo
+  video_title: Dumbbell Pullover for Lats Setup & Technique
+  video_status: verified
 - id: barbell-dumbbell-shrug
   name: Barbell / Dumbbell Shrug
-  summary: >-
-    Direct upper-trap loading, a mechanical-tension, size-focused
-    stimulus rows and pulls only train indirectly.
-  why_this_exists: >-
-    Direct upper-trap loading for users who want that area trained beyond
-    what rows and pulls provide.
-  body_regions: [back]
-  primary_targets: [upper trapezius]
-  secondary_targets: [grip, forearms]
-  physique_targets: [upper-traps]
-  movement_patterns: [scapular elevation]
-  equipment: [barbell, dumbbell, cable]
+  summary: Direct upper-trap loading, a mechanical-tension, size-focused stimulus rows and pulls only train indirectly.
+  why_this_exists: Direct upper-trap loading for users who want that area trained beyond what rows and pulls provide.
+  body_regions:
+    - back
+  primary_targets:
+    - upper trapezius
+  secondary_targets:
+    - grip
+    - forearms
+  physique_targets:
+    - upper-traps
+  movement_patterns:
+    - scapular elevation
+  equipment:
+    - barbell
+    - dumbbell
+    - cable
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-setup]
-  resistance_profile: >-
-    Free weight or cable; the "why choose this" answer is the same across
-    barbell, dumbbell, and cable.
+  coverage_categories:
+    - isolation
+    - low-setup
+  resistance_profile: Free weight or cable; the "why choose this" answer is the same across barbell, dumbbell, and cable.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A mechanical-tension, size-focused stimulus for the upper traps
-      specifically is the goal, since rows and pulls only train them
-      indirectly.
+    - A mechanical-tension, size-focused stimulus for the upper traps specifically is the goal, since rows and pulls only train them indirectly.
   less_suitable_when:
-    - Grip gives out well before the traps are meaningfully fatigued,
-      capping how much stimulus the set can deliver — straps or a
-      different grip may be needed to keep training past that point.
-  mirror_effect: >-
-    Tends to show up as added height and mass at the top of the shoulders and
-    base of the neck — the "trap mountain" look, visible from both the front
-    and back, which changes the line from neck to shoulder more than it changes
-    back width or thickness.
+    - Grip gives out well before the traps are meaningfully fatigued, capping how much stimulus the set can deliver — straps or a different grip may be needed to keep training past that point.
+  mirror_effect: Tends to show up as added height and mass at the top of the shoulders and base of the neck — the "trap mountain" look, visible from both the front and back, which changes the line from neck to shoulder more than it changes back width or thickness.
   advantages: []
   limitations:
-    - The range of motion is small by nature, which limits how much mechanical
-      work each rep can do compared to a full joint-range movement.
-    - Grip commonly fails before the traps are meaningfully fatigued at heavier
-      loads, capping the achievable stimulus without straps or a hook grip.
+    - The range of motion is small by nature, which limits how much mechanical work each rep can do compared to a full joint-range movement.
+    - Grip commonly fails before the traps are meaningfully fatigued at heavier loads, capping the achievable stimulus without straps or a hook grip.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -936,59 +854,45 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=g6qbq4Zu1qw
+  video_creator: Renaissance Periodization
+  video_title: Dumbbell Shrug Technique Guide
+  video_status: verified
 - id: back-extension-45-spinal-dominant
   name: 45° Back Extension (Spinal-Extension-Dominant Execution)
-  summary: >-
-    A loaded hip-extension pattern executed with straighter legs and
-    controlled lumbar extension, biasing the spinal erectors specifically.
-  why_this_exists: >-
-    A loaded hip-extension and spinal-support pattern that can be trained
-    without the setup and systemic cost of a heavy deadlift. Keeping the
-    legs nearly straight and allowing a small, controlled amount of lumbar
-    extension through the top of the rep — rather than hinging purely from
-    the hip — is what shifts this movement's emphasis onto the spinal
-    erectors specifically. This is the execution this record describes;
-    the hamstrings module has the same equipment used with a different
-    execution for a different emphasis.
-  body_regions: [back]
-  primary_targets: [spinal erectors]
-  secondary_targets: [glutes, hamstrings (less than the hip-hinge-dominant execution)]
-  movement_patterns: [trunk extension, spinal-extension-dominant execution]
-  equipment: [45-degree hyperextension bench]
+  summary: A loaded hip-extension pattern executed with straighter legs and controlled lumbar extension, biasing the spinal erectors specifically.
+  why_this_exists: A loaded hip-extension and spinal-support pattern that can be trained without the setup and systemic cost of a heavy deadlift. Keeping the legs nearly straight and allowing a small, controlled amount of lumbar extension through the top of the rep — rather than hinging purely from the hip — is what shifts this movement's emphasis onto the spinal erectors specifically. This is the execution this record describes; the hamstrings module has the same equipment used with a different execution for a different emphasis.
+  body_regions:
+    - back
+  primary_targets:
+    - spinal erectors
+  secondary_targets:
+    - glutes
+    - hamstrings (less than the hip-hinge-dominant execution)
+  movement_patterns:
+    - trunk extension
+    - spinal-extension-dominant execution
+  equipment:
+    - 45-degree hyperextension bench
   exercise_type: compound
   laterality: bilateral
-  coverage_categories: [stable-compound, low-fatigue]
-  resistance_profile: >-
-    Bodyweight or lightly loaded, adjustable emphasis by execution.
+  coverage_categories:
+    - stable-compound
+    - low-fatigue
+  resistance_profile: Bodyweight or lightly loaded, adjustable emphasis by execution.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A moderate mechanical-tension stimulus specifically for the spinal
-      erectors is wanted, without the systemic fatigue cost of a heavy
-      hinge.
+    - A moderate mechanical-tension stimulus specifically for the spinal erectors is wanted, without the systemic fatigue cost of a heavy hinge.
   less_suitable_when:
-    - The glutes and hamstrings need to be biased instead — bending the
-      knees more and driving the movement from the hips, described in the
-      hamstrings module's copy of this exercise, does that instead. Back
-      symptoms are a stop-and-assess signal either way, not something to
-      train through.
-  mirror_effect: >-
-    Contributes to spinal-erector definition and thickness along either side of
-    the spine — the "Christmas tree" lines visible in a lean lower back — at a
-    lighter load ceiling than a full deadlift, so the effect tends to be more
-    modest unless it's adding volume on top of heavier hinge work.
+    - The glutes and hamstrings need to be biased instead — bending the knees more and driving the movement from the hips, described in the hamstrings module's copy of this exercise, does that instead. Back symptoms are a stop-and-assess signal either way, not something to train through.
+  mirror_effect: Contributes to spinal-erector definition and thickness along either side of the spine — the "Christmas tree" lines visible in a lean lower back — at a lighter load ceiling than a full deadlift, so the effect tends to be more modest unless it's adding volume on top of heavier hinge work.
   advantages: []
   limitations:
-    - The controlled lumbar extension this execution deliberately uses is
-      exactly the technique cue that's easy to overdo, so anyone new to the
-      movement should build up load and range gradually rather than starting
-      aggressively.
-    - Loading options are limited on most equipment — a plate held to the chest
-      or a light barbell across the back is usually the practical ceiling
-      before stability becomes the limiter.
+    - The controlled lumbar extension this execution deliberately uses is exactly the technique cue that's easy to overdo, so anyone new to the movement should build up load and range gradually rather than starting aggressively.
+    - Loading options are limited on most equipment — a plate held to the chest or a light barbell across the back is usually the practical ceiling before stability becomes the limiter.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -996,9 +900,11 @@
   complements:
     - A hinge pattern; see the hamstrings and hips modules for overlap.
   overlaps_with:
-    - "romanian-deadlift (hamstrings module)"
-    - "back-extension-45-hip-dominant (hamstrings module) — same
-      equipment, hip-hinge-dominant execution, hamstring/glute bias
-      instead."
+    - romanian-deadlift (hamstrings module)
+    - back-extension-45-hip-dominant (hamstrings module) — same equipment, hip-hinge-dominant execution, hamstring/glute bias instead.
   evidence_notes: []
   review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=5_ejbGfdAQE
+  video_creator: Renaissance Periodization
+  video_title: Back Extension Technique Guide
+  video_status: verified

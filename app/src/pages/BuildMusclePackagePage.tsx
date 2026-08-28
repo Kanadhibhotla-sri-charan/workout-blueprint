@@ -268,6 +268,19 @@ export function BuildMusclePackagePage() {
             </p>
             <p className="package-exercise-target-line">{targetSummaryLine(resolvedExercise.exercise)}</p>
 
+            {resolvedExercise.exercise.video_link && (
+              <div className="package-exercise-video-action">
+                <a
+                  href={resolvedExercise.exercise.video_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="video-link-simple"
+                >
+                  🎥 Click here for video
+                </a>
+              </div>
+            )}
+
             <details className="package-exercise-details">
               <summary>Why this exercise?</summary>
               <p>{resolvedExercise.entry.contribution}</p>

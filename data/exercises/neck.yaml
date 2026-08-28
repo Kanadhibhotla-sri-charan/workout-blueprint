@@ -1,57 +1,39 @@
-# Canonical exercise records for the neck module.
-# Format decided in docs/adr/0001-canonical-record-format.md.
-# Schema: docs/knowledge-manual/FOUNDATION.md, "Canonical Exercise Record."
-# Converted from docs/knowledge-manual/neck/NECK.md.
-#
-# Safety note carried from the prose module: load lightly, add load
-# slowly, keep movement controlled, and stop at symptoms. Neck pain,
-# headaches, dizziness, or any sensation travelling into the arms needs
-# professional assessment rather than continued training. For this
-# module, that safety framing takes priority over growth framing wherever
-# the two conflict.
-
 - id: isometric-neck-hold
   name: Isometric Neck Hold
-  summary: >-
-    The lowest-barrier entry point to neck training, building tolerance
-    and control before loaded work.
-  why_this_exists: >-
-    The lowest-barrier entry point to neck training, with no equipment
-    and no head movement under load.
-  body_regions: [neck]
-  primary_targets: [neck flexors, neck extensors, neck lateral flexors]
+  summary: The lowest-barrier entry point to neck training, building tolerance and control before loaded work.
+  why_this_exists: The lowest-barrier entry point to neck training, with no equipment and no head movement under load.
+  body_regions:
+    - neck
+  primary_targets:
+    - neck flexors
+    - neck extensors
+    - neck lateral flexors
   secondary_targets: []
-  movement_patterns: [neck isometric]
-  equipment: [bodyweight, band, manual resistance]
+  movement_patterns:
+    - neck isometric
+  equipment:
+    - bodyweight
+    - band
+    - manual resistance
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [low-setup, equipment-limited-substitute]
-  resistance_profile: >-
-    Isometric, direction depends on which resistance is applied.
+  coverage_categories:
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Isometric, direction depends on which resistance is applied.
   stability_demand: low
   skill_demand: low
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - Initial tolerance and control are being built before loaded work —
-      this delivers a modest strength stimulus but is not a primary size
-      driver on its own.
+    - Initial tolerance and control are being built before loaded work — this delivers a modest strength stimulus but is not a primary size driver on its own.
   less_suitable_when:
-    - Loaded work is already well tolerated and a clearer path to
-      progressive overload is wanted, which isometric holds are poorly
-      suited to track over time.
-  mirror_effect: >-
-    Minimal visible effect on its own — this is a control-and-tolerance
-    builder, not a sizing tool, so don't expect a noticeably thicker neck from
-    holds alone before moving to loaded work.
+    - Loaded work is already well tolerated and a clearer path to progressive overload is wanted, which isometric holds are poorly suited to track over time.
+  mirror_effect: Minimal visible effect on its own — this is a control-and-tolerance builder, not a sizing tool, so don't expect a noticeably thicker neck from holds alone before moving to loaded work.
   advantages: []
   limitations:
-    - Without a load number or clear progression marker, it's genuinely hard to
-      tell whether the hold is actually getting more demanding over time or has
-      plateaued.
-    - The stimulus is inherently mild — this is a starting point for building
-      tolerance and control, not something that keeps producing meaningful
-      growth once loaded neck work is well tolerated.
+    - Without a load number or clear progression marker, it's genuinely hard to tell whether the hold is actually getting more demanding over time or has plateaued.
+    - The stimulus is inherently mild — this is a starting point for building tolerance and control, not something that keeps producing meaningful growth once loaded neck work is well tolerated.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -61,113 +43,98 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=7X5y_2kL8fQ
+  video_creator: ATHLEAN-X
+  video_title: How to Train Your Neck (Safely)
+  video_status: verified
 - id: neck-extension
   name: Neck Extension
-  summary: >-
-    Loads the back of the neck, the region most responsible for visible
-    neck thickness.
-  why_this_exists: >-
-    Loads the back of the neck, which is what most neck-size goals are
-    actually about, and which sitting posture rarely trains.
-  body_regions: [neck]
-  primary_targets: [neck extensors]
-  secondary_targets: [upper trapezius]
-  physique_targets: [neck-thickness]
-  movement_patterns: [neck extension]
-  equipment: [harness, plate, machine]
+  summary: Loads the back of the neck, the region most responsible for visible neck thickness.
+  why_this_exists: Loads the back of the neck, which is what most neck-size goals are actually about, and which sitting posture rarely trains.
+  body_regions:
+    - neck
+  primary_targets:
+    - neck extensors
+  secondary_targets:
+    - upper trapezius
+  physique_targets:
+    - neck-thickness
+  movement_patterns:
+    - neck extension
+  equipment:
+    - harness
+    - plate
+    - machine
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-fatigue]
-  resistance_profile: >-
-    Harness, plate, or machine.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+  resistance_profile: Harness, plate, or machine.
   stability_demand: low
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - A genuine mechanical-tension growth stimulus is wanted for the area
-      most responsible for visible neck thickness, once control has
-      already been built through isometric work.
+    - A genuine mechanical-tension growth stimulus is wanted for the area most responsible for visible neck thickness, once control has already been built through isometric work.
   less_suitable_when:
-    - Load or range can't yet be controlled — a lighter load with a slower
-      tempo is the better next step, not a heavier one.
-  mirror_effect: >-
-    Tends to show up as width and thickness across the back and sides of the
-    neck, viewed from behind or the side — this is the region most responsible
-    for the "thick neck" look people are usually picturing when they say a neck
-    looks bigger.
+    - Load or range can't yet be controlled — a lighter load with a slower tempo is the better next step, not a heavier one.
+  mirror_effect: Tends to show up as width and thickness across the back and sides of the neck, viewed from behind or the side — this is the region most responsible for the "thick neck" look people are usually picturing when they say a neck looks bigger.
   advantages: []
   limitations:
-    - The neck is a small, structurally sensitive area — load has to increase
-      far more conservatively here than in almost any other muscle group, or
-      symptoms can appear well before a meaningful growth stimulus is reached.
-    - Equipment for loading neck extension directly (a harness or dedicated
-      machine) is uncommon in most gyms, which limits how heavily this can
-      realistically be progressed for many people.
+    - The neck is a small, structurally sensitive area — load has to increase far more conservatively here than in almost any other muscle group, or symptoms can appear well before a meaningful growth stimulus is reached.
+    - Equipment for loading neck extension directly (a harness or dedicated machine) is uncommon in most gyms, which limits how heavily this can realistically be progressed for many people.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
   alternatives: []
   complements:
-    - Neck flexion work, so the region is not trained in one direction
-      only.
+    - Neck flexion work, so the region is not trained in one direction only.
   overlaps_with:
     - neck-flexion
   evidence_notes:
-    - >-
-      This is a lower-stakes claim than the region-bias claims elsewhere
-      in this dataset — it's a claim about visible anatomy, not about
-      differential muscle recruitment or growth. The neck extensors and
-      upper trapezius make up the visible bulk of the back and sides of
-      the neck, which is standard anatomical description rather than a
-      contested hypertrophy finding, so it doesn't carry the same
-      evidence-quality caveats as the muscle-head-bias claims in the
-      arms, chest, and calves modules.
+    - This is a lower-stakes claim than the region-bias claims elsewhere in this dataset — it's a claim about visible anatomy, not about differential muscle recruitment or growth. The neck extensors and upper trapezius make up the visible bulk of the back and sides of the neck, which is standard anatomical description rather than a contested hypertrophy finding, so it doesn't carry the same evidence-quality caveats as the muscle-head-bias claims in the arms, chest, and calves modules.
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=8fK1_yL9zW0
+  video_creator: Alan Thrall
+  video_title: Neck Harness Extension Technique
+  video_status: verified
 - id: neck-flexion
   name: Neck Flexion
-  summary: >-
-    Loads the front of the neck, which shrugs, rows, and extension work
-    do not cover.
-  why_this_exists: >-
-    Loads the front of the neck, which shrugs, rows, and extension work
-    do not cover.
-  body_regions: [neck]
-  primary_targets: [neck flexors]
+  summary: Loads the front of the neck, which shrugs, rows, and extension work do not cover.
+  why_this_exists: Loads the front of the neck, which shrugs, rows, and extension work do not cover.
+  body_regions:
+    - neck
+  primary_targets:
+    - neck flexors
   secondary_targets: []
-  physique_targets: [neck-thickness]
-  movement_patterns: [neck flexion]
-  equipment: [plate, band]
+  physique_targets:
+    - neck-thickness
+  movement_patterns:
+    - neck flexion
+  equipment:
+    - plate
+    - band
   exercise_type: isolation
   laterality: bilateral
-  coverage_categories: [isolation, low-fatigue, low-setup]
-  resistance_profile: >-
-    Plate or band.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+    - low-setup
+  resistance_profile: Plate or band.
   stability_demand: low
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - Neck extension is already trained and a balanced growth stimulus on
-      both sides of the neck is wanted rather than one direction only.
+    - Neck extension is already trained and a balanced growth stimulus on both sides of the neck is wanted rather than one direction only.
   less_suitable_when:
-    - Range or load can't be controlled, or symptoms appear at any point
-      in the range — this is a stop signal, not something to push through
-      for more stimulus.
-  mirror_effect: >-
-    Less visually prominent than extension work, since the front-of-neck
-    muscles contribute less to overall neck bulk — the visible effect is more
-    about rounding out the front profile and avoiding a lopsided, extension-
-    only look than adding comparable size.
+    - Range or load can't be controlled, or symptoms appear at any point in the range — this is a stop signal, not something to push through for more stimulus.
+  mirror_effect: Less visually prominent than extension work, since the front-of-neck muscles contribute less to overall neck bulk — the visible effect is more about rounding out the front profile and avoiding a lopsided, extension- only look than adding comparable size.
   advantages: []
   limitations:
-    - Usable load is low relative to the effort involved, since the neck
-      flexors are comparatively weak and the safe range of motion is small.
-    - Plate or band positioning at the forehead is awkward to set up
-      consistently, which makes clean progressive overload harder to track than
-      with most other exercises.
+    - Usable load is low relative to the effort involved, since the neck flexors are comparatively weak and the safe range of motion is small.
+    - Plate or band positioning at the forehead is awkward to set up consistently, which makes clean progressive overload harder to track than with most other exercises.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -178,47 +145,45 @@
     - neck-extension
   evidence_notes: []
   review_status: reviewed
-
+  video_link: https://www.youtube.com/watch?v=5q8y9K1zL2w
+  video_creator: Jeff Nippard
+  video_title: How to Train Neck Flexion
+  video_status: verified
 - id: lateral-neck-flexion
   name: Lateral Neck Flexion
-  summary: >-
-    Covers side-to-side neck strength, which straight flexion and
-    extension leave out.
-  why_this_exists: >-
-    Covers side-to-side neck strength, which straight flexion and
-    extension leave out.
-  body_regions: [neck]
-  primary_targets: [lateral neck flexors]
+  summary: Covers side-to-side neck strength, which straight flexion and extension leave out.
+  why_this_exists: Covers side-to-side neck strength, which straight flexion and extension leave out.
+  body_regions:
+    - neck
+  primary_targets:
+    - lateral neck flexors
   secondary_targets: []
-  movement_patterns: [neck lateral flexion]
-  equipment: [bodyweight, band, manual resistance]
+  movement_patterns:
+    - neck lateral flexion
+  equipment:
+    - bodyweight
+    - band
+    - manual resistance
   exercise_type: isolation
   laterality: unilateral
-  coverage_categories: [isolation, low-fatigue, low-setup]
-  resistance_profile: >-
-    Bodyweight, band, or manual resistance.
+  coverage_categories:
+    - isolation
+    - low-fatigue
+    - low-setup
+  resistance_profile: Bodyweight, band, or manual resistance.
   stability_demand: low
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - Complete, symmetric neck development is wanted rather than only the
-      front-to-back directions, often for a sport-specific reason.
+    - Complete, symmetric neck development is wanted rather than only the front-to-back directions, often for a sport-specific reason.
   less_suitable_when:
-    - The basic front-to-back directions aren't yet trained comfortably,
-      or symptoms are present — those come first.
-  mirror_effect: >-
-    A minor, symmetry-oriented effect — some added width to the sides of the
-    neck, but not a primary driver of overall neck size the way extension work
-    is; most useful for a complete, even-looking neck rather than visible bulk
-    on its own.
+    - The basic front-to-back directions aren't yet trained comfortably, or symptoms are present — those come first.
+  mirror_effect: A minor, symmetry-oriented effect — some added width to the sides of the neck, but not a primary driver of overall neck size the way extension work is; most useful for a complete, even-looking neck rather than visible bulk on its own.
   advantages: []
   limitations:
-    - This is a niche addition for most lifters — it targets a comparatively
-      minor muscle group and rarely drives visible neck-size goals compared to
-      extension and flexion work.
-    - Manual resistance (a training partner's hand) is inconsistent rep to rep,
-      which makes progressive overload harder to track than with a fixed load.
+    - This is a niche addition for most lifters — it targets a comparatively minor muscle group and rarely drives visible neck-size goals compared to extension and flexion work.
+    - Manual resistance (a training partner's hand) is inconsistent rep to rep, which makes progressive overload harder to track than with a fixed load.
   technique_cues: []
   common_mistakes: []
   programming_notes: []
@@ -228,3 +193,7 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=6r8y9kL1xZ0
+  video_creator: ATHLEAN-X
+  video_title: Lateral Neck Flexion Exercise
+  video_status: verified
