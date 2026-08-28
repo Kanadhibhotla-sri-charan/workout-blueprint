@@ -6,9 +6,13 @@ The app is a **renderer of knowledge, not a second knowledge base** — it never
 
 ## Run it
 
+This app's data-generation step (`predev`/`prebuild`/`pretest`) calls directly into the repo root's `scripts/lib/` (which depends on the root's own `js-yaml`, declared in the repo-root `package.json`, not this one). Install the root dependencies once before installing this directory's — see the [root README's Local setup](../README.md#local-setup) for why.
+
 ```
+cd ..            # repo root, if not already there
+npm install       # root dependencies (js-yaml) — only needed once
 cd app
-npm install
+npm install        # app dependencies
 npm run dev
 ```
 

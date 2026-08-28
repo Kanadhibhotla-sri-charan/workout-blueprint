@@ -36,7 +36,19 @@ jobs:
       - name: Install app dependencies
         working-directory: app
         run: npm ci
-      - name: Build (also runs data validation and type-checking)
+      # Explicit quality gate — each step must pass before the next runs,
+      # and before the build artifact is produced/deployed below. Reuses
+      # the repository's existing validator/test/lint/build commands
+      # rather than introducing a second copy of any of them.
+      - name: Validate canonical data
+        run: npm run validate-data
+      - name: Run tests
+        working-directory: app
+        run: npm test
+      - name: Lint
+        working-directory: app
+        run: npm run lint
+      - name: Build (also re-runs data validation and type-checking)
         working-directory: app
         run: npm run build
       - name: SPA fallback for client-side routing
