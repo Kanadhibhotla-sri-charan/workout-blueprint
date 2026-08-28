@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Exercise } from '../types/exercise';
 import { humanize, truncate } from '../utils/format';
+import { VideoReference } from './VideoReference';
 
 // The exercise-list card. Per PHASE-3-MVP.md §9: enough to decide whether
 // to open the exercise, not every metadata field — progressive disclosure,
@@ -26,18 +27,11 @@ export function ExerciseCard({ exercise }: { exercise: Exercise }) {
         )}
         <p className="exercise-card-mirror">{truncate(exercise.mirror_effect, 110)}</p>
       </Link>
-      {exercise.video_link && (
+      {(exercise.video_status === 'verified' || exercise.video_status === 'needs-review' || exercise.video_status === 'broken') && (
         // Sibling of the card's <Link>, not nested inside it — an <a> inside
         // an <a> is invalid HTML and breaks focus/AT semantics.
         <div className="exercise-card-video-hint">
-          <a
-            href={exercise.video_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="video-link-simple"
-          >
-            🎥 Click here for video
-          </a>
+          <VideoReference videoLink={exercise.video_link} videoStatus={exercise.video_status} />
         </div>
       )}
     </div>

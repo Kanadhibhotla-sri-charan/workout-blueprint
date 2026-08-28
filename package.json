@@ -5,7 +5,8 @@
   "description": "Data validation and QA tooling for the Physique Blueprint canonical exercise dataset.",
   "scripts": {
     "validate-data": "node scripts/validate-data.js",
-    "data-report": "node scripts/data-report.js"
+    "data-report": "node scripts/data-report.js",
+    "audit-videos": "node scripts/audit-video-links.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.0"

@@ -46,9 +46,9 @@
     - cable-curl
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=in7PaeYlhrM
-  video_creator: Renaissance Periodization
-  video_title: Barbell Curl Technique Guide
+  video_link: https://www.youtube.com/watch?v=5NsFLGUf0Fo
+  video_creator: Colossus Fitness
+  video_title: How To EZ Bar Curl With Perfect Form (Grow Your Biceps)
   video_status: verified
 - id: dumbbell-curl
   name: Dumbbell Curl
@@ -98,8 +98,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=ykJmrZ5v0Oo
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Curl Technique Guide
+  video_creator: Howcast
+  video_title: "How to Do a Dumbbell Biceps Curl | Arm Workout"
   video_status: verified
 - id: incline-dumbbell-curl
   name: Incline Dumbbell Curl
@@ -149,8 +149,8 @@
     - "Separate from the shoulder-position/long-head evidence above, this record's \"strongest stretch-mediated stimulus\" framing also draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training, with both beating shortened-position training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM in trained lifters — so \"strongest\" should be read as a well-supported direction, not a settled magnitude. This is a general training-science principle, not a finding from a study that used this specific exercise."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=soxrZlIl35U
-  video_creator: Renaissance Periodization
-  video_title: Incline Dumbbell Curl Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Seated Incline Dumbbell Bicep Curl"
   video_status: verified
 - id: preacher-curl
   name: Preacher Curl
@@ -204,8 +204,8 @@
     - "Same shoulder-position evidence as the incline curl's long-head claim, applied in reverse: shoulder flexion (preacher) vs. shoulder extension (incline) is the mechanism cited. Kassiano et al. (2024, PMC11906226) is the closest direct hypertrophy comparison. Evidence quality: moderate."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=fIWP-FRFNU0
-  video_creator: Renaissance Periodization
-  video_title: Preacher Curl Technique Guide
+  video_creator: KAGED
+  video_title: "Preacher Curls | How To Perform It Correctly"
   video_status: verified
 - id: preacher-curl-machine
   name: Preacher Curl Machine
@@ -256,7 +256,7 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Ja6ZlIDONac
   video_creator: Renaissance Periodization
-  video_title: Machine Preacher Curl Technique Guide
+  video_title: Machine Preacher Curl
   video_status: verified
 - id: hammer-curl
   name: Hammer Curl
@@ -307,8 +307,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=zC3nLlEvin4
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Hammer Curl Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Dumbbell Hammer Curl"
   video_status: verified
 - id: cable-hammer-curl-rope
   name: Cable Hammer Curl (Rope)
@@ -358,9 +358,9 @@
     - cross-body-hammer-curl
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=7jqi2qWAUrs
-  video_creator: Renaissance Periodization
-  video_title: Cable Rope Hammer Curl Technique Guide
+  video_link: https://www.youtube.com/watch?v=T8YbgwwGxaA
+  video_creator: James Harrison
+  video_title: Rope Hammer Curl - Exercise Tutorial
   video_status: verified
 - id: cross-body-hammer-curl
   name: Cross-Body Hammer Curl
@@ -410,9 +410,9 @@
     - hammer-curl
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=6IdQLjydUv0
-  video_creator: ATHLEAN-X
-  video_title: How to Do Cross Body Hammer Curls
+  video_link: https://www.youtube.com/watch?v=TXgqIvYORgU
+  video_creator: OriGym
+  video_title: "How To Do Cross Body Hammer Curl | Exercise Demo"
   video_status: verified
 - id: cable-curl
   name: Cable Curl
@@ -459,9 +459,9 @@
     - dumbbell-curl
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=AsAVbBQms1I
-  video_creator: Renaissance Periodization
-  video_title: Cable Curl Technique Guide
+  video_link: https://www.youtube.com/watch?v=NFzTWp2qpiE
+  video_creator: Fit Father Project - Fitness For Busy Fathers
+  video_title: How To Do Cable Bicep Curls - Full Video Tutorial and Step-by-Step Guide
   video_status: verified
 - id: drag-curl
   name: Drag Curl
@@ -510,9 +510,9 @@
   evidence_notes:
     - "The common coaching cue calls this short-head-biased, but that contradicts the biomechanical principle the incline-curl evidence supports: drawing the elbows behind the torso extends the shoulder, the same direction incline curls use, which the EMG evidence ties to a long-head bias, not short. No study specifically testing drag curls was found to resolve the contradiction. Treat the head-bias claim as unresolved rather than asserting either side; the movement's real, better-supported value is the stricter, swing-free path (see why_this_exists), not a specific head bias."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=Wlm52Lg02oU
-  video_creator: ATHLEAN-X
-  video_title: How to Drag Curl for Bigger Biceps
+  video_link: https://www.youtube.com/watch?v=LMdNTHH6G8I
+  video_creator: ScottHermanFitness
+  video_title: "How To: Barbell Drag Curl (Increase Bicep Peaks!)"
   video_status: verified
 - id: cable-drag-curl
   name: Cable Drag Curl
@@ -560,9 +560,9 @@
   evidence_notes:
     - Same unresolved head-bias question as the free-weight drag curl — see drag-curl's evidence_notes. The cable's constant tension is a resistance-profile difference, not new evidence on head bias.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=KzVbVd8d_1k
-  video_creator: Eugene Teo
-  video_title: Cable Drag Curl Execution Guide
+  video_link: https://www.youtube.com/watch?v=3ib-M9kKSvU
+  video_creator: ChadMollickDotCom
+  video_title: Cable Drag Curl
   video_status: verified
 - id: zottman-curl
   name: Zottman Curl
@@ -612,9 +612,9 @@
     - reverse-curl (forearms module) — the eccentric half of this movement.
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=ZrpRBgwtqQs
-  video_creator: ATHLEAN-X
-  video_title: How to Do Zottman Curls
+  video_link: https://www.youtube.com/watch?v=D7bMA4WEKMI
+  video_creator: Buff Dudes Workouts
+  video_title: "How to Perform Zottman Curls | Bicep / Forearms Exercise Tutorial"
   video_status: verified
 - id: close-grip-bench-press
   name: Close-Grip Bench Press
@@ -664,8 +664,8 @@
     - "The \"lateral- and medial-head-biased\" claim carried by this record (and by dip-triceps-biased, cable-pushdown, machine-triceps- extension, and triceps-kickback below) is corrected here: it isn't supported by the same kind of evidence as the long-head claim. The long head crosses the shoulder joint, so its length — and therefore its bias — changes with shoulder position, which is what Maeo et al. (2023, see overhead-triceps-extension) actually measured. The lateral and medial heads only cross the elbow, so shoulder position does not change their length the same way, and no equivalent study was found showing these two heads are differentially biased by grip, shoulder-extension, or non-overhead elbow-extension movements specifically. The safest claim these movements support is that they train the triceps as a whole, with the long head under less stretch than an overhead position provides — not a specific lateral/medial split."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=nEF0bv2FW94
-  video_creator: Renaissance Periodization
-  video_title: Close Grip Bench Press Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Close-Grip Barbell Bench Press"
   video_status: verified
 - id: overhead-triceps-extension
   name: Overhead Triceps Extension
@@ -718,9 +718,9 @@
     - "Strong evidence, and stronger than the biceps head-bias claims above: Maeo et al. (2023, European Journal of Sport Science) used MRI to measure triceps long-head growth after 12 weeks of overhead extension training vs. a non-overhead (arm-at-side) extension, at matched volume. The overhead group gained roughly 28.5% long-head cross- sectional area at the site closest to the shoulder vs. roughly 19.6% for the non-overhead group, with the gap most pronounced proximally, consistent with the long head being stretched at the shoulder in the overhead position. This is direct MRI-measured hypertrophy data, not just EMG, which is why this claim is stated more confidently than the biceps incline/preacher claims. It only establishes the long head's bias, not any lateral- or medial-head effect — see the notes on close-grip-bench-press, dip-triceps-biased, cable-pushdown, machine-triceps-extension, and triceps-kickback below for why those heads' bias claims are treated differently."
     - This record's "strongest stretch-mediated growth stimulus" framing is also consistent with the broader stretch-mediated hypertrophy literature — see incline-dumbbell-curl's evidence_notes above for the general citations (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025). The Maeo et al. (2023) finding above is the stronger, exercise-specific evidence; this is additional general-principle grounding, not a separate direct finding.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=_gsUck-7M74
-  video_creator: Renaissance Periodization
-  video_title: Overhead Dumbbell Triceps Extension Technique Guide
+  video_link: https://www.youtube.com/watch?v=O7e8j8K3cJo
+  video_creator: PrazeNation
+  video_title: "Overhead Dumbbell Tricep Extension | Proper Form & Triceps Exercise Demo"
   video_status: verified
 - id: lying-triceps-extension-skull-crusher
   name: Lying Triceps Extension (Skull Crusher)
@@ -770,8 +770,8 @@
     - "Inferred, not directly tested. Maeo et al. (2023) — see overhead-triceps-extension's evidence note — compared only two endpoints: fully overhead vs. arm-at-side. No study located tests the roughly 90-degree shoulder position a skull crusher uses, so this record's \"partial long-head stretch\" claim is a reasonable inference from where 90 degrees sits between those two tested positions, not a finding from a study that actually used this exercise."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=d_KZxkY_0cM
-  video_creator: Renaissance Periodization
-  video_title: Skull Crusher Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Skull Crushers"
   video_status: verified
 - id: dip-triceps-biased
   name: Dip (Triceps-Biased, Upright Torso)
@@ -820,9 +820,9 @@
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a differential lateral/medial-head bias here — see that record's evidence_notes for the full reasoning."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=c3ZGl4pAwZ4
-  video_creator: Renaissance Periodization
-  video_title: Triceps Dip Technique Guide
+  video_link: https://www.youtube.com/watch?v=z4UFwrUIyus
+  video_creator: Jonathan Bonnet
+  video_title: Triceps - (Upright) Dips (Proper Form)
   video_status: verified
 - id: cable-pushdown
   name: Cable Pushdown
@@ -873,7 +873,7 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=6Fzep104f0s
   video_creator: Renaissance Periodization
-  video_title: Cable Triceps Pushdown Technique Guide
+  video_title: Cable Triceps Pushdown
   video_status: verified
 - id: machine-triceps-extension
   name: Machine Triceps Extension
@@ -919,9 +919,9 @@
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a lateral-head-specific bias here — see that record's evidence_notes for the full reasoning."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=9_5J-B2pIec
-  video_creator: Renaissance Periodization
-  video_title: Machine Triceps Extension Technique Guide
+  video_link: https://www.youtube.com/watch?v=j4XSuFLiZ6I
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To Do A SEATED MACHINE TRICEPS EXTENSION | Exercise Demonstration Video and Guide"
   video_status: verified
 - id: triceps-kickback
   name: Triceps Kickback
@@ -970,9 +970,9 @@
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a differential lateral/medial-head bias here — see that record's evidence_notes for the full reasoning. The shoulder stays extended and roughly still through a kickback, so this movement doesn't put the long head through the stretched, shoulder-flexed position the overhead-extension evidence is actually about either."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=6SS6KTBsdR8
-  video_creator: ATHLEAN-X
-  video_title: How to Do Tricep Kickbacks Properly
+  video_link: https://www.youtube.com/watch?v=6SS6K3lAwZ8
+  video_creator: ScottHermanFitness
+  video_title: "How To: Tricep Kickback (Dumbbell)"
   video_status: verified
 - id: cable-overhead-extension-leaning-forward
   name: Cable Overhead Extension (Leaning Forward)
@@ -1023,7 +1023,7 @@
   evidence_notes:
     - Same long-head evidence as overhead-triceps-extension (Maeo et al., 2023) — the shoulder is flexed here the same way, so the same MRI hypertrophy finding applies. The leaning-forward, constant-tension cable path changes the loading curve, not the shoulder position the evidence is actually about, so it doesn't add new evidence either for or against the bias claim beyond what the free-weight version already has.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=1u18yJQLZX0
-  video_creator: Renaissance Periodization
-  video_title: Cable Overhead Triceps Extension Technique Guide
+  video_link: https://www.youtube.com/watch?v=FxMqRp-BvXY
+  video_creator: STYRK
+  video_title: Cable overhead lean away triceps extension, rope
   video_status: verified

@@ -10,6 +10,7 @@ import {
 } from '../engine/packageEngine';
 import { programming } from '../data';
 import { NotFoundPage } from './NotFoundPage';
+import { VideoReference } from '../components/VideoReference';
 
 const DEMAND_FILL: Record<'low' | 'medium' | 'high', number> = { low: 1, medium: 2, high: 3 };
 const ROLE_LABELS: Record<string, string> = {
@@ -268,16 +269,14 @@ export function BuildMusclePackagePage() {
             </p>
             <p className="package-exercise-target-line">{targetSummaryLine(resolvedExercise.exercise)}</p>
 
-            {resolvedExercise.exercise.video_link && (
+            {(resolvedExercise.exercise.video_status === 'verified' ||
+              resolvedExercise.exercise.video_status === 'needs-review' ||
+              resolvedExercise.exercise.video_status === 'broken') && (
               <div className="package-exercise-video-action">
-                <a
-                  href={resolvedExercise.exercise.video_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="video-link-simple"
-                >
-                  🎥 Click here for video
-                </a>
+                <VideoReference
+                  videoLink={resolvedExercise.exercise.video_link}
+                  videoStatus={resolvedExercise.exercise.video_status}
+                />
               </div>
             )}
 

@@ -43,9 +43,9 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=7X5y_2kL8fQ
-  video_creator: ATHLEAN-X
-  video_title: How to Train Your Neck (Safely)
+  video_link: https://www.youtube.com/watch?v=PSwHo-kcfhc
+  video_creator: U.S. Forces Fitness
+  video_title: How to - Isometric Neck Exercise (Front and Back)
   video_status: verified
 - id: neck-extension
   name: Neck Extension
@@ -95,9 +95,9 @@
   evidence_notes:
     - This is a lower-stakes claim than the region-bias claims elsewhere in this dataset — it's a claim about visible anatomy, not about differential muscle recruitment or growth. The neck extensors and upper trapezius make up the visible bulk of the back and sides of the neck, which is standard anatomical description rather than a contested hypertrophy finding, so it doesn't carry the same evidence-quality caveats as the muscle-head-bias claims in the arms, chest, and calves modules.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=8fK1_yL9zW0
-  video_creator: Alan Thrall
-  video_title: Neck Harness Extension Technique
+  video_link: https://www.youtube.com/watch?v=VLdIkr2Gfdc
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To: Seated Head Harness Neck Extension"
   video_status: verified
 - id: neck-flexion
   name: Neck Flexion
@@ -145,9 +145,9 @@
     - neck-extension
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=5q8y9K1zL2w
-  video_creator: Jeff Nippard
-  video_title: How to Train Neck Flexion
+  video_link: https://www.youtube.com/watch?v=o78kjeBJUBQ
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To: Weight Plate Neck Curl"
   video_status: verified
 - id: lateral-neck-flexion
   name: Lateral Neck Flexion
@@ -193,7 +193,7 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=6r8y9kL1xZ0
-  video_creator: ATHLEAN-X
-  video_title: Lateral Neck Flexion Exercise
+  video_link: https://www.youtube.com/watch?v=YgG2DTr5Qhc
+  video_creator: Steve Smith
+  video_title: "Lateral Neck Flexion Exercise | Neck Exercise | Dr. Steven Smith"
   video_status: verified

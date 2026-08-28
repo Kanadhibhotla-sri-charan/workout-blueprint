@@ -4,6 +4,7 @@ import { humanize, formatRange } from '../utils/format';
 import { OptionalList } from '../components/OptionalList';
 import { RelationshipList } from '../components/RelationshipList';
 import { buildProgramming, getEligibleIntensityTechniques } from '../engine/programmingEngine';
+import { VideoReference } from '../components/VideoReference';
 
 export function ExerciseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -106,18 +107,13 @@ export function ExerciseDetailPage() {
       </section>
 
       {/* Execution guide / video reference */}
-      {exercise.video_link && (
+      {(exercise.video_status === 'verified' ||
+        exercise.video_status === 'needs-review' ||
+        exercise.video_status === 'broken') && (
         <section className="detail-section execution-guide-section">
           <h2>Execution Guide</h2>
           <p className="execution-guide-link-row">
-            <a
-              href={exercise.video_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="video-link-simple"
-            >
-              🎥 Click here for video
-            </a>
+            <VideoReference videoLink={exercise.video_link} videoStatus={exercise.video_status} />
           </p>
         </section>
       )}

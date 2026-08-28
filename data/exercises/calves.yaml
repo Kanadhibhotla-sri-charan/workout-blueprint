@@ -52,8 +52,8 @@
     - "Direct hypertrophy trial evidence, stronger than a coaching cue: Nunes et al. (2020, Journal of Strength and Conditioning Research, 34(8): 2347-2351) trained 22 men for 9 weeks on a seated horizontal leg-press calf raise with the foot pointed outward, inward, or forward. Foot-pointed-outward produced significantly more medial (inner) gastrocnemius growth (+8.4% vs. +3.8% for foot-pointed-inward); foot-pointed-inward produced significantly more lateral (outer) growth (+9.1% vs. +5.5% for foot-pointed- outward). This matches this record's toes-out-to-inner, toes-in-to-outer framing. Caveats: it's one trial, in a leg-press calf raise rather than the standing free-weight/machine version this record describes, and the difference between conditions was modest relative to the overall growth every condition produced — the toe angle shifts emphasis, it doesn't isolate a head to the exclusion of the other. Evidence quality: moderate-to-strong — a real hypertrophy trial, the same tier as the triceps overhead- extension claim in the arms module, though from a single study rather than a replicated body of work."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=YMmgqO8Jo-k
-  video_creator: Renaissance Periodization
-  video_title: Standing Calf Raise Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Standing Calf (BM)"
   video_status: verified
 - id: seated-calf-raise
   name: Seated Calf Raise
@@ -105,8 +105,8 @@
     - "The rep-range claim has a real anatomical basis: the soleus is consistently measured at roughly 70-90% slow-twitch (type I) fiber composition, well above most skeletal muscle, which is the standard justification for training it with higher reps and shorter rest. Caveat worth stating plainly: newer hypertrophy research (load- range comparison trials) has found that muscles — including slow-twitch-dominant ones — can grow similarly across a wide range of loads and rep ranges as long as sets are taken close to failure, so the higher-rep prescription is a reasonable bias grounded in fiber type, not a strict requirement for soleus growth. Evidence quality: moderate — solid anatomical basis, softer causal link to the specific training prescription."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=JbyjNymZOt0
-  video_creator: Renaissance Periodization
-  video_title: Seated Calf Raise Technique Guide
+  video_creator: LIVESTRONG
+  video_title: How to Do Seated Calf Raises
   video_status: verified
 - id: leg-press-calf-raise
   name: Leg-Press Calf Raise
@@ -156,9 +156,9 @@
     - seated-calf-raise
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=V8T_jH5m4oI
-  video_creator: Renaissance Periodization
-  video_title: Leg Press Calf Raise Technique Guide
+  video_link: https://www.youtube.com/watch?v=OMUvfMZOcSA
+  video_creator: Travis Tarrant
+  video_title: "Exercise Tutorial: Calf Raise On Leg Press Machine"
   video_status: verified
 - id: single-leg-calf-raise
   name: Single-Leg Calf Raise
@@ -206,9 +206,9 @@
     - standing-calf-raise
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=c3wVz6N7q5o
-  video_creator: ATHLEAN-X
-  video_title: Single Leg Calf Raise Execution
+  video_link: https://www.youtube.com/watch?v=0YHS_USj2uE
+  video_creator: FITASTIC
+  video_title: Single Leg Body Weight Calf Raise
   video_status: verified
 - id: tibialis-raise
   name: Tibialis Raise
@@ -254,7 +254,7 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=vV7-c8T9L0E
-  video_creator: Kneesovertoesguy
-  video_title: Tibialis Raise for Ankle Health and Shin Hypertrophy
+  video_link: https://www.youtube.com/watch?v=pz70FwVRDJE
+  video_creator: All Strength Training
+  video_title: "Bodyweight Tibialis Raise | Fix Shin Splits"
   video_status: verified

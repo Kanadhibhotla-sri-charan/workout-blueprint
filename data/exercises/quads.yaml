@@ -52,9 +52,9 @@
     - smith-machine-squat
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=bEv6CCg2BC8
-  video_creator: Alan Thrall
-  video_title: How To Squat (Proper Form)
+  video_link: https://www.youtube.com/watch?v=CWl0apMgshk
+  video_creator: MSP Fitness
+  video_title: "How to BACK SQUAT: How to Barbell Back Squat properly - exercise demo with perfect technique"
   video_status: verified
 - id: smith-machine-squat
   name: Smith Machine Squat
@@ -104,9 +104,9 @@
     - hack-squat
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=1g8p9qW6yX8
-  video_creator: Renaissance Periodization
-  video_title: Smith Machine Squat Technique Guide
+  video_link: https://www.youtube.com/watch?v=iAcRGCsG_PY
+  video_creator: Travis Tarrant
+  video_title: "Exercise Tutorial: Smith Machine Squat"
   video_status: verified
 - id: front-squat
   name: Front Squat
@@ -157,9 +157,9 @@
     - hack-squat
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=tlfahNDnjj8
-  video_creator: Renaissance Periodization
-  video_title: Front Squat Technique Guide
+  video_link: https://www.youtube.com/watch?v=0ect9ETE6t0
+  video_creator: Fit Father Project - Fitness For Busy Fathers
+  video_title: "How To Properly Do A Barbell Front Squat - Full Video Tutorial & Exercise Guide"
   video_status: verified
 - id: sumo-squat
   name: Sumo Squat
@@ -210,9 +210,9 @@
     - sumo-deadlift
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=4dKz3L1yX5E
-  video_creator: Renaissance Periodization
-  video_title: Sumo Squat Technique Guide
+  video_link: https://www.youtube.com/watch?v=RKyiGw8Vyg0
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To Do A BARBELL SUMO SQUAT | Exercise Demonstration Video and Guide"
   video_status: verified
 - id: sumo-deadlift
   name: Sumo Deadlift
@@ -268,9 +268,9 @@
     - sumo-squat
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=Xsn_A_6aHps
-  video_creator: Alan Thrall
-  video_title: How to Sumo Deadlift
+  video_link: https://www.youtube.com/watch?v=TY_ofowC0DI
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To Do A BARBELL SUMO DEADLIFT | Exercise Demonstration Video and Guide"
   video_status: verified
 - id: hack-squat
   name: Hack Squat
@@ -321,8 +321,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=0tn5K9NlCfo
-  video_creator: Renaissance Periodization
-  video_title: Hack Squat Technique Guide
+  video_creator: Bodybuilding.com
+  video_title: "Hack Squat | Exercise Guide"
   video_status: verified
 - id: leg-press
   name: Leg Press
@@ -374,8 +374,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=IZxyjW7MPJQ
-  video_creator: Renaissance Periodization
-  video_title: Leg Press Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Seated Leg Press (Cybex)"
   video_status: verified
 - id: bulgarian-split-squat-knee-dominant
   name: Bulgarian Split Squat (Short-Stance, Knee-Dominant Execution)
@@ -428,9 +428,9 @@
     - walking-lunge
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=2C-uNgKwPLE
-  video_creator: Renaissance Periodization
-  video_title: Bulgarian Split Squat (Quad-Biased) Technique Guide
+  video_link: https://www.youtube.com/watch?v=-mv0o59XHpg
+  video_creator: AFPTnorge
+  video_title: Bulgarian Split-Squat (Knee Dominant)
   video_status: verified
 - id: smith-machine-bulgarian-split-squat
   name: Smith Machine Bulgarian Split Squat
@@ -479,9 +479,9 @@
     - bulgarian-split-squat-knee-dominant
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=1K_9yL8fX0w
-  video_creator: Renaissance Periodization
-  video_title: Smith Machine Bulgarian Split Squat Technique Guide
+  video_link: https://www.youtube.com/watch?v=oLi2QcD0B3M
+  video_creator: Prep Coach UK
+  video_title: SMITH MACHINE BULGARIAN SPLIT SQUAT TUTORIAL
   video_status: verified
 - id: static-lunge
   name: Static Lunge
@@ -532,9 +532,9 @@
     - reverse-lunge
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=QOVaHwm-Q6U
-  video_creator: Renaissance Periodization
-  video_title: Split Squat / Static Lunge Technique Guide
+  video_link: https://www.youtube.com/watch?v=pwZtB9tcIk4
+  video_creator: HASfit
+  video_title: Stationary Lunge - HASfit Lunge Exercise Demonstration - Dumbbell Lunge - Barbell Lunge Workout
   video_status: verified
 - id: reverse-lunge
   name: Reverse Lunge
@@ -584,9 +584,9 @@
     - walking-lunge
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=7v2B_yHqNTo
-  video_creator: Renaissance Periodization
-  video_title: Reverse Lunge Technique Guide
+  video_link: https://www.youtube.com/watch?v=MpfeGnBFEo8
+  video_creator: IronmasterPro
+  video_title: Dumbbell Reverse Lunge Tutorial
   video_status: verified
 - id: walking-lunge
   name: Walking Lunge
@@ -638,8 +638,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=L8fvypPrzzs
-  video_creator: Renaissance Periodization
-  video_title: Walking Lunge Technique Guide
+  video_creator: CrossFit
+  video_title: The Walking Lunge
   video_status: verified
 - id: goblet-squat
   name: Goblet Squat
@@ -691,8 +691,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=MeIiIdhvXT4
-  video_creator: Renaissance Periodization
-  video_title: Goblet Squat Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Goblet Squat"
   video_status: verified
 - id: dumbbell-squat-sides
   name: Dumbbell Squat (Sides)
@@ -739,9 +739,9 @@
     - goblet-squat
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=z8XyD6p8K1w
-  video_creator: ATHLEAN-X
-  video_title: Dumbbell Squats at Sides Form
+  video_link: https://www.youtube.com/watch?v=ZXwvmRSRRxY
+  video_creator: Travis Tarrant
+  video_title: "Exercise Tutorial: Dumbbell Squat"
   video_status: verified
 - id: leg-extension
   name: Leg Extension
@@ -788,8 +788,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=YyvSfVjQeL0
-  video_creator: Renaissance Periodization
-  video_title: Leg Extension Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Leg Extension (Cybex)"
   video_status: verified
 - id: reverse-nordic-curl
   name: Reverse Nordic Curl
@@ -839,7 +839,7 @@
   evidence_notes:
     - "No study using this specific exercise was located, but the underlying principle — that training the quads at a longer muscle length (deep hip/knee flexion) drives more growth than training at a shorter length — has direct support from squat-depth research. Bloomquist et al. (2013) ran a 12-week controlled trial comparing shallow squats (~60° knee flexion) against deep squats (~120° knee flexion): the deep-squat group gained quadriceps cross-sectional area across the entire thigh, while the shallow-squat group only grew measurably in the upper thigh. This is a squat-depth finding, not a reverse-Nordic-curl finding, but it's the same underlying variable — how lengthened the quads get under load — that this record's rectus-femoris claim rests on. It's also consistent with the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf et al. (2023, International Journal of Strength and Conditioning) found training at longer muscle length tends to match or beat training that avoids the stretch, though a later trial (Wolf et al., 2025, PubMed 39959841) found the advantage over full ROM is smaller than earlier work suggested."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=7_1k8yW9xZ0
-  video_creator: Kneesovertoesguy
-  video_title: How to Reverse Nordic Curl for Rectus Femoris
+  video_link: https://www.youtube.com/watch?v=oM3Do6GLL4U
+  video_creator: Aleks Physio
+  video_title: How To Do Reverse Nordic Curls For Quad Strength
   video_status: verified

@@ -18,6 +18,7 @@ import type { DecisionInput, DecisionResult, DemandLevel, Goal } from '../engine
 import type { AestheticOutcome } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
+import { VideoReference } from '../components/VideoReference';
 
 type DemandChoice = DemandLevel | '';
 // Appearance is the primary physique-goal entry point (Phase 4 Corrections
@@ -623,16 +624,11 @@ function DecisionResultView({
           {result.bestFit.name}
         </Link>
         <p>{result.why}</p>
-        {result.bestFit.video_link && (
+        {(result.bestFit.video_status === 'verified' ||
+          result.bestFit.video_status === 'needs-review' ||
+          result.bestFit.video_status === 'broken') && (
           <div className="decision-result-video">
-            <a
-              href={result.bestFit.video_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="video-link-simple"
-            >
-              🎥 Click here for video
-            </a>
+            <VideoReference videoLink={result.bestFit.video_link} videoStatus={result.bestFit.video_status} />
           </div>
         )}
       </div>

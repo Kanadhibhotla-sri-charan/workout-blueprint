@@ -493,16 +493,26 @@ function validate(records) {
       report(record, 'schema', `"review_status" must be one of ${[...REVIEW_STATUSES].join('|')}, got ${JSON.stringify(record.review_status)}`);
     }
 
-    // --- Video Reference Validation (Spec §8 & §9) ---
-    if (!record.video_link || typeof record.video_link !== 'string' || !YOUTUBE_URL_PATTERN.test(record.video_link)) {
-      report(record, 'schema', `"video_link" is required and must be a valid YouTube URL, got ${JSON.stringify(record.video_link)}`);
-    } else {
+    // --- Video Reference Validation ---
+    // A `verified` record must carry a real, well-formed URL. `needs-review`
+    // and `broken` records are honest placeholders for a reference that
+    // hasn't (yet) been confirmed — they must NOT be forced to also carry a
+    // valid URL, since the whole point of `needs-review` is that no
+    // confirmed-good URL exists yet (Video Reference Remediation spec §7-§8).
+    if (!VIDEO_STATUSES.has(record.video_status)) {
+      report(record, 'schema', `"video_status" must be one of ${[...VIDEO_STATUSES].join('|')}, got ${JSON.stringify(record.video_status)}`);
+    }
+    if (record.video_status === 'verified') {
+      if (!record.video_link || typeof record.video_link !== 'string' || !YOUTUBE_URL_PATTERN.test(record.video_link)) {
+        report(record, 'schema', `"video_link" is required and must be a valid YouTube URL when "video_status" is "verified", got ${JSON.stringify(record.video_link)}`);
+      }
+    } else if (record.video_link !== null && record.video_link !== undefined) {
+      report(record, 'schema', `"video_link" must be null when "video_status" is not "verified" (got status ${JSON.stringify(record.video_status)} with link ${JSON.stringify(record.video_link)}) — a dead/unconfirmed URL must not be preserved as if it were a working reference`);
+    }
+    if (record.video_link && typeof record.video_link === 'string' && YOUTUBE_URL_PATTERN.test(record.video_link)) {
       const existing = videoLinkCounts.get(record.video_link) || [];
       existing.push(record.id);
       videoLinkCounts.set(record.video_link, existing);
-    }
-    if (record.video_status !== 'verified') {
-      report(record, 'schema', `"video_status" must be "verified" for production exercises, got ${JSON.stringify(record.video_status)}`);
     }
     if (record.video_creator !== undefined && record.video_creator !== null) {
       if (typeof record.video_creator !== 'string' || record.video_creator.trim() === '') {

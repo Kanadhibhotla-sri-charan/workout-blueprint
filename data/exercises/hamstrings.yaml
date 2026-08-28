@@ -56,9 +56,9 @@
   evidence_notes:
     - "Draws on the general stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) and Wolf et al. (2023, International Journal of Strength and Conditioning) both found training at longer muscle length tends to match or beat training that avoids the stretch; a later trial (Wolf et al., 2025, PubMed 39959841) found the advantage over full ROM is smaller than earlier work suggested. No study specific to the RDL was located — see seated-leg-curl's evidence_notes below for the closest direct hamstring-length hypertrophy trial found, which used a hip-flexed knee-flexion position rather than a hinge."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=7AacDYGek_w
-  video_creator: Renaissance Periodization
-  video_title: Barbell Romanian Deadlift Technique Guide
+  video_link: https://www.youtube.com/watch?v=lKLYvNGz6mk
+  video_creator: Steev
+  video_title: "Barbell Romanian Deadlift - Proper Form & Technique [4K]"
   video_status: verified
 - id: stiff-leg-deadlift
   name: Stiff-Leg Deadlift
@@ -109,9 +109,9 @@
   evidence_notes:
     - Same general stretch-mediated hypertrophy grounding as romanian-deadlift above — see that record's evidence_notes. No study specific to the stiff-leg deadlift was located.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=CN_7ZxaEPCo
-  video_creator: Renaissance Periodization
-  video_title: Stiff-Legged Deadlift Technique Guide
+  video_link: https://www.youtube.com/watch?v=1uDiW5--rAE
+  video_creator: ScottHermanFitness
+  video_title: "How To: Barbell Stiff-Leg Deadlift"
   video_status: verified
 - id: seated-leg-curl
   name: Seated Leg Curl
@@ -163,7 +163,7 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Orxowest56U
   video_creator: Renaissance Periodization
-  video_title: Seated Leg Curl Technique Guide
+  video_title: Seated Leg Curl
   video_status: verified
 - id: lying-leg-curl
   name: Lying Leg Curl
@@ -211,9 +211,9 @@
     - seated-leg-curl
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=1Tq3EDRykuw
-  video_creator: Renaissance Periodization
-  video_title: Lying Leg Curl Technique Guide
+  video_link: https://www.youtube.com/watch?v=3gZm9wGTsEo
+  video_creator: FIT.nl
+  video_title: "Lying Leg Curl | Proper Form Tutorial for Hamstrings"
   video_status: verified
 - id: nordic-hamstring-curl
   name: Nordic Hamstring Curl
@@ -264,9 +264,9 @@
   evidence_notes:
     - "Worth a correction to the popular framing, not just a citation: the same 2024 trial cited on seated-leg-curl (PMC11419281) directly compared the Nordic curl against lengthened-state training in a hip-flexed position (essentially a loaded seated leg curl) and found the hip-flexed version produced substantially more hamstrings growth (+18% vs. +11% total, +19% vs. +5% biceps femoris long head). The Nordic curl was still an effective hypertrophy stimulus in absolute terms — this isn't a claim that it doesn't work — but \"commonly cited for growth\" undersells that a simpler, less technically demanding machine exercise outperformed it in this trial. The Nordic curl's real, distinct value shown by this and other research is training the eccentric strength and fascicle adaptations tied to injury resilience, which a leg curl doesn't replicate — not necessarily the largest hypertrophy stimulus available."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=4Ym3z8K1L_x
-  video_creator: Eugene Teo
-  video_title: How to Nordic Hamstring Curl
+  video_link: https://www.youtube.com/watch?v=6NCN6kOagfY
+  video_creator: The Kneesovertoesguy
+  video_title: How to Do a Nordic Hamstring Curl
   video_status: verified
 - id: back-extension-45-hip-dominant
   name: 45° Back Extension (Hip-Hinge-Dominant Execution)
@@ -316,7 +316,7 @@
     - back-extension-45-spinal-dominant (back module) — same equipment, spinal-extension-dominant execution, erector bias instead.
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=qZW_9pG7_A0
-  video_creator: Eugene Teo
-  video_title: 45 Degree Back Extension for Glutes & Hamstrings
+  video_link: https://www.youtube.com/watch?v=8Jg5iqTCehg
+  video_creator: James Harrison
+  video_title: 45 Degree Hip Extension - Exercise Tutorial
   video_status: verified

@@ -51,8 +51,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=eGo4IYlbE5g
-  video_creator: Renaissance Periodization
-  video_title: Pull-Up Technique Guide
+  video_creator: Calisthenicmovement
+  video_title: "The Perfect Pull Up  - Do it right!"
   video_status: verified
 - id: chin-up-supinated
   name: Chin-Up (Supinated Grip)
@@ -106,9 +106,9 @@
     - lat-pulldown-wide-pronated
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=b-ACTSszrxE
-  video_creator: Renaissance Periodization
-  video_title: Chin-Up Technique Guide
+  video_link: https://www.youtube.com/watch?v=sNBS5iIu6Zg
+  video_creator: Mike Campbell Man Coach
+  video_title: Chin ups- supinated grip
   video_status: verified
 - id: lat-pulldown-wide-pronated
   name: Lat Pulldown (Wide, Pronated Grip)
@@ -162,8 +162,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=CAwf7n6Luuc
-  video_creator: Renaissance Periodization
-  video_title: Lat Pulldown Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Lat Pulldown | 3 GOLDEN RULES"
   video_status: verified
 - id: reverse-grip-lat-pulldown
   name: Reverse-Grip Lat Pulldown
@@ -214,9 +214,9 @@
     - lat-pulldown-wide-pronated
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=QxwtE3XU_0o
-  video_creator: Renaissance Periodization
-  video_title: Underhand Lat Pulldown Technique Guide
+  video_link: https://www.youtube.com/watch?v=SNiwpA13ZLU
+  video_creator: PureGym
+  video_title: How To Do A Reverse Grip Lat Pulldown
   video_status: verified
 - id: neutral-grip-lat-pulldown
   name: Neutral-Grip Lat Pulldown
@@ -267,9 +267,9 @@
     - reverse-grip-lat-pulldown
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=l4j7yD5p11Y
-  video_creator: Renaissance Periodization
-  video_title: Neutral Grip Lat Pulldown Technique Guide
+  video_link: https://www.youtube.com/watch?v=L5ASC8r8_Fs
+  video_creator: josh cowan
+  video_title: Exercise Tutorial - Neutral Grip Lat Pulldown
   video_status: verified
 - id: chest-supported-row
   name: Chest-Supported Row
@@ -324,9 +324,9 @@
     - t-bar-row
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=0UBRfiX4zDs
-  video_creator: Renaissance Periodization
-  video_title: Chest Supported Row Technique Guide
+  video_link: https://www.youtube.com/watch?v=bmWA2yO9Aa0
+  video_creator: Testosterone Nation
+  video_title: Chest-Supported Row Machine
   video_status: verified
 - id: barbell-bent-over-row-pronated
   name: Barbell Bent-Over Row (Pronated Grip)
@@ -380,9 +380,9 @@
     - chest-supported-row
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=9efg3UpfP_s
-  video_creator: Alan Thrall
-  video_title: How To Barbell Row
+  video_link: https://www.youtube.com/watch?v=Eg8DJz6kW68
+  video_creator: The Fitting Rooms Personal Training Gym
+  video_title: How to do the Bent Over Row with a barbell (pronated grip)
   video_status: verified
 - id: reverse-grip-barbell-row
   name: Reverse-Grip (Underhand) Barbell Row
@@ -433,9 +433,9 @@
     - barbell-bent-over-row-pronated
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=O1_5xH5_R-4
-  video_creator: ATHLEAN-X
-  video_title: Underhand Barbell Row for Lat Width
+  video_link: https://www.youtube.com/watch?v=tyHegMDIEbQ
+  video_creator: Dr. Allan Bacon
+  video_title: Reverse-grip Bent-over Barbell Row Tutorial
   video_status: verified
 - id: seated-cable-row
   name: Seated Cable Row
@@ -487,8 +487,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=GZbfZ033f74
-  video_creator: Renaissance Periodization
-  video_title: Seated Cable Row Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Seated Low Row (LF Cable)"
   video_status: verified
 - id: t-bar-row
   name: T-Bar Row
@@ -543,8 +543,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=j3Igk5nyZE4
-  video_creator: Renaissance Periodization
-  video_title: T-Bar Row Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: T-Bar Row"
   video_status: verified
 - id: conventional-deadlift
   name: Conventional Deadlift
@@ -595,9 +595,9 @@
     - sumo-deadlift (quads module) — same floor pull, wide stance, emphasis shifted toward quads and adductors.
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=wYREQSOZ0-8
-  video_creator: Alan Thrall
-  video_title: How to Deadlift in 5 Steps
+  video_link: https://www.youtube.com/watch?v=GxsLrTzyGUU
+  video_creator: PureGym
+  video_title: How to Do A Conventional Deadlift Correctly
   video_status: verified
 - id: rack-pull
   name: Rack Pull
@@ -648,9 +648,9 @@
     - conventional-deadlift
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=u7nsbT_ZasE
-  video_creator: Jeff Nippard
-  video_title: How to Rack Pull for Upper Back & Traps
+  video_link: https://www.youtube.com/watch?v=WkfOa33J-QM
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To Do A BARBELL RACK PULL | Exercise Demonstration Video and Guide"
   video_status: verified
 - id: single-arm-dumbbell-row
   name: Single-Arm Dumbbell Row
@@ -702,8 +702,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=pYcpY20QaE8
-  video_creator: Renaissance Periodization
-  video_title: One-Arm Dumbbell Row Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Dumbbell Bent-Over Row (Single-Arm)"
   video_status: verified
 - id: straight-arm-pulldown
   name: Straight-Arm Pulldown
@@ -750,9 +750,9 @@
   evidence_notes:
     - "No study specific to the straight-arm pulldown or lat length was located. The \"stretch-mediated\" framing draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so this is a well-supported general direction, not a settled, exercise-specific magnitude claim."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=G9_1q_vPzU0
-  video_creator: Renaissance Periodization
-  video_title: Straight Arm Pulldown Technique Guide
+  video_link: https://www.youtube.com/watch?v=duHQk2PxNos
+  video_creator: Steev
+  video_title: "Cable Straight Arm Pulldown - Proper Form & Technique [4K]"
   video_status: verified
 - id: dumbbell-pullover-lat-biased
   name: Dumbbell Pullover (Lat-Biased)
@@ -803,9 +803,9 @@
   evidence_notes:
     - Same general stretch-mediated hypertrophy grounding as straight-arm-pulldown above — see that record's evidence_notes. No study specific to the lat-biased pullover or lat length at the overhead position was located.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=fA7dE3qE9p8
-  video_creator: Eugene Teo
-  video_title: Dumbbell Pullover for Lats Setup & Technique
+  video_link: https://www.youtube.com/watch?v=Cvsaj2AXevI
+  video_creator: Seriously Strong Training
+  video_title: How to do Dumbbell Pullovers for Massive Lats
   video_status: verified
 - id: barbell-dumbbell-shrug
   name: Barbell / Dumbbell Shrug
@@ -854,9 +854,9 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=g6qbq4Zu1qw
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Shrug Technique Guide
+  video_link: https://www.youtube.com/watch?v=X26Ji1j9LWA
+  video_creator: The Strength Institute
+  video_title: Barbell Shrugs - Tutorial
   video_status: verified
 - id: back-extension-45-spinal-dominant
   name: 45° Back Extension (Spinal-Extension-Dominant Execution)
@@ -906,5 +906,5 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=5_ejbGfdAQE
   video_creator: Renaissance Periodization
-  video_title: Back Extension Technique Guide
+  video_title: 45 Degree Back Raise
   video_status: verified

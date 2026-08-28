@@ -1801,6 +1801,16 @@ details[open] > summary::before {
   opacity: 0.85;
 }
 
+.video-link-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
 .exercise-card-video-hint {
   margin-top: var(--space-2);
 }

@@ -55,8 +55,8 @@
     - "Strong evidence, among the best-supported region-bias claims in this dataset. Chaves et al. (2020, International Journal of Exercise Science, PMC7449336) trained untrained men on flat, 44-degree incline, or a combination of both for 8 weeks and measured pec thickness by ultrasound/MRI-style imaging: the incline group gained upper-chest thickness far beyond the flat group (a very large, outlier-sized effect — over 60% relative increase), while mid-chest growth was similar across groups. This is direct regional- hypertrophy data, not just EMG. It's backed by EMG evidence too: Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head activation rose with incline angle across five bench inclinations. Evidence quality: strong — a real hypertrophy trial plus consistent EMG, though still a single hypertrophy trial with an unusually large effect size that hasn't yet been replicated."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=8iPEnn-ltC8
-  video_creator: Renaissance Periodization
-  video_title: Incline Dumbbell Press Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Dumbbell Incline Chest Press"
   video_status: verified
 - id: incline-barbell-press
   name: Incline Barbell Press
@@ -110,9 +110,9 @@
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the choice of barbell vs. dumbbell.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=DbFgXlT_EPg
-  video_creator: Renaissance Periodization
-  video_title: Incline Barbell Bench Press Technique Guide
+  video_link: https://www.youtube.com/watch?v=jPLdzuHckI8
+  video_creator: Buff Dudes Workouts
+  video_title: "Incline Barbell Press | Upper Chest | How-To Exercise Tutorial"
   video_status: verified
 - id: incline-machine-press
   name: Incline Machine Press
@@ -165,9 +165,9 @@
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the equipment.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=cM5q3z4n1hA
-  video_creator: Renaissance Periodization
-  video_title: Incline Machine Chest Press Technique Guide
+  video_link: https://www.youtube.com/watch?v=LiDArz1R2NU
+  video_creator: FIT.nl
+  video_title: "Incline Machine Chest Press | Proper Form Tutorial for Upper Chest"
   video_status: verified
 - id: smith-machine-incline-press
   name: Smith Machine Incline Press
@@ -221,9 +221,9 @@
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the fixed rail.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=8qX8jD1fGHI
-  video_creator: Renaissance Periodization
-  video_title: Smith Machine Incline Press Technique Guide
+  video_link: https://www.youtube.com/watch?v=yFQshytandQ
+  video_creator: James Harrison
+  video_title: Incline Smith Machine Bench Press - Exercise Tutorial
   video_status: verified
 - id: incline-cable-press
   name: Incline Cable Press
@@ -276,9 +276,9 @@
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the cable's constant tension.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=B7b5Y0B7q_A
-  video_creator: Eugene Teo
-  video_title: Incline Cable Chest Press Technique
+  video_link: https://www.youtube.com/watch?v=qctZmqNhkfU
+  video_creator: HASfit
+  video_title: Incline Cable Chest Press - HASfit Upper Chest Exercise Demonstration - Incline Cable Bench Press
   video_status: verified
 - id: flat-barbell-bench-press
   name: Flat Barbell Bench Press
@@ -334,8 +334,8 @@
     - "Weaker claim to make than it sounds, and supported more circumstantially than the upper-chest claim: the sternocostal (mid/lower-most) head is simply the largest portion of the pectoralis major and the one every horizontal press loads by default, rather than a bias any specific technique creates. EMG support: Rodríguez-Ridao et al. (2020, PMC7579505) found the sternocostal head was more active at 0° (flat) than at incline angles. Hypertrophy support: in Chaves et al. (2020, PMC7449336), mid-chest growth was statistically similar across the flat, incline, and combined groups — consistent with flat pressing doing at least as well here as any other angle, though it doesn't isolate a flat- specific advantage the way the incline data isolates one for the upper chest."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=4Y2ZdHCOXok
-  video_creator: Alan Thrall
-  video_title: How To Bench Press (Proper Form)
+  video_creator: Jeremy Ethier
+  video_title: How to PROPERLY Bench Press for Growth (5 Easy Steps)
   video_status: verified
 - id: smith-machine-bench-press
   name: Smith Machine Bench Press
@@ -389,9 +389,9 @@
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=F0p7mDk1ZJ8
-  video_creator: Renaissance Periodization
-  video_title: Smith Machine Bench Press Technique Guide
+  video_link: https://www.youtube.com/watch?v=7FyJdsXeta8
+  video_creator: Travis Tarrant
+  video_title: "Exercise Tutorial: Smith Machine Bench Press"
   video_status: verified
 - id: flat-dumbbell-press
   name: Flat Dumbbell Press
@@ -446,9 +446,9 @@
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=Y_7aHqXeWFo
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Bench Press Technique Guide
+  video_link: https://www.youtube.com/watch?v=sXk7lP7eN8Q
+  video_creator: PrazeNation
+  video_title: "Flat Bench Dumbbell Press | Proper Form & Chest Exercise Demo"
   video_status: verified
 - id: machine-chest-press
   name: Machine Chest Press
@@ -501,8 +501,8 @@
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=xUm0BiZCWlQ
-  video_creator: Renaissance Periodization
-  video_title: Machine Chest Press Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Chest Press (Cybex)"
   video_status: verified
 - id: cable-chest-press
   name: Cable Chest Press
@@ -552,9 +552,9 @@
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=vV7Y5p9G1L8
-  video_creator: Jeff Nippard
-  video_title: Cable Chest Press Technique for Pec Growth
+  video_link: https://www.youtube.com/watch?v=FVWJglwid4I
+  video_creator: Howcast
+  video_title: "How to Do a Cable Chest Press | Chest Workout"
   video_status: verified
 - id: hex-press
   name: Hex Press
@@ -605,9 +605,9 @@
   evidence_notes:
     - "The mid/sternal-biased part carries the same evidence as flat-barbell-bench-press — see that record's evidence_notes. The \"extra emphasis toward the inner chest\" claim is separate and unresolved: no research was found isolating an \"inner chest\" as a distinct region within the sternocostal head, and no direct study of the hex press's squeeze-adduction effect on regional hypertrophy was located. It's a widely repeated coaching cue based on where lifters report feeling the squeeze, not a settled finding."
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=3gA3z9B7x4k
-  video_creator: ATHLEAN-X
-  video_title: How to Do the Hex Press (Pec Squeeze)
+  video_link: https://www.youtube.com/watch?v=f7N_JpIOgOk
+  video_creator: Train With Cuz
+  video_title: Dumbbell Hex Press
   video_status: verified
 - id: flat-dumbbell-fly
   name: Flat Dumbbell Fly
@@ -660,8 +660,8 @@
     - "Separately, the \"strong stretch-mediated growth stimulus\" claim draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so \"strong\" should be read as a well-supported direction, not a settled magnitude. This is a general principle, not a fly-specific finding."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=eozdVDA78K0
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Chest Flye Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Dumbbell Flys On A Flat Bench"
   video_status: verified
 - id: incline-dumbbell-fly
   name: Incline Dumbbell Fly
@@ -715,8 +715,8 @@
     - The "stretch-mediated growth stimulus" framing draws on the same general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle, not a fly-specific or incline-specific finding.
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=bDaIL_zKbGs
-  video_creator: Renaissance Periodization
-  video_title: Incline Dumbbell Flye Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Incline Dumbbell Fly || Hit Your Chest HARD!"
   video_status: verified
 - id: decline-dumbbell-fly
   name: Decline Dumbbell Fly
@@ -767,9 +767,9 @@
     - "Weaker evidence than the upper-chest claim. EMG support only: Rodríguez-Ridao et al. (2020, PMC7579505) and the earlier Barnett et al. (1995, JSCR) both found greater lower/sternocostal-region pectoral activation during decline pressing than incline or flat. No MRI or ultrasound hypertrophy trial isolating a decline-specific lower-chest growth effect was located — unlike the upper-chest claim, this one rests on EMG alone. Evidence quality: moderate, similar tier to the biceps head-bias claims in the arms module."
     - The "stretch-mediated growth stimulus" framing draws on the same general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle, not a fly-specific or decline-specific finding.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=4YF0Q8_1xZw
-  video_creator: ATHLEAN-X
-  video_title: Decline Dumbbell Fly for Lower Chest
+  video_link: https://www.youtube.com/watch?v=IMALXhhHRKM
+  video_creator: LIVESTRONG
+  video_title: How to Do a Decline Dumbbell Fly
   video_status: verified
 - id: machine-fly-pec-deck
   name: Machine Fly (Pec Deck)
@@ -820,7 +820,7 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=FDay9wFe5uE
   video_creator: Renaissance Periodization
-  video_title: Pec Deck Flye Technique Guide
+  video_title: Machine Flye
   video_status: verified
 - id: cable-fly
   name: Cable Fly
@@ -871,9 +871,9 @@
   evidence_notes:
     - The low-to-high / high-to-low pulley-height bias claim is unresolved — no study was found that directly tests cable-fly pulley height against measured regional pec activation or growth. It's a reasonable inference from the incline/decline press evidence (the cable's line of pull at each height roughly mirrors those bench angles), but it hasn't been tested as a fly specifically. Treat it as a coaching cue, not a settled finding, until direct evidence turns up.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=taI4XduLpBe
-  video_creator: Renaissance Periodization
-  video_title: Cable Flye Technique Guide
+  video_link: https://www.youtube.com/watch?v=ETtXO4FW1EU
+  video_creator: Wavvy Fitness
+  video_title: "TUTORIAL: How To Properly Do Cable Flyes"
   video_status: verified
 - id: dumbbell-pullover-chest-biased
   name: Dumbbell Pullover (Chest-Biased)
@@ -924,9 +924,9 @@
     - No research was found on the pullover's regional pec bias specifically — the "general/costal-biased" framing is an inference from the movement's shoulder-extension arc, not a tested finding. Left as an open claim rather than asserted with confidence.
     - Separately, the "strong stretch-mediated stimulus" claim about the overhead-arc range itself draws on the general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly in this same file (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle about training a muscle at long length, not a pullover-specific finding.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=5Y2xbhMwn_A
-  video_creator: ATHLEAN-X
-  video_title: How to Do Pullovers for Chest vs Lats
+  video_link: https://www.youtube.com/watch?v=Q8l6ykgnmPM
+  video_creator: Colossus Fitness
+  video_title: "How to PROPERLY Dumbbell Pullover for a BIG Chest | Fix Your Dumbbell Pullover Form NOW!"
   video_status: verified
 - id: dip-chest-biased
   name: Dip (Chest-Biased, Forward Lean)
@@ -979,9 +979,9 @@
   evidence_notes:
     - Same lower-chest evidence tier as decline-dumbbell-fly — see that record's evidence_notes. EMG on dips specifically shows high lower-pec activation with a forward lean, but no MRI or ultrasound hypertrophy trial isolating the dip's lower-chest effect was located, so this stays a moderate-confidence, EMG-only claim rather than the stronger hypertrophy-trial support the upper-chest claim has.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=dX_nSOFJCAE
-  video_creator: Renaissance Periodization
-  video_title: Chest Dip Technique Guide
+  video_link: https://www.youtube.com/watch?v=OTrnGYPAZcY
+  video_creator: OriGym
+  video_title: "How To Do Forward Lean Dips | Exercise Demo"
   video_status: verified
 - id: push-up-chest
   name: Push-Up
@@ -1037,5 +1037,5 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=IODxDxX7oi4
   video_creator: Calisthenicmovement
-  video_title: How to Do a Push Up Correctly
+  video_title: "The Perfect Push Up | Do it right!"
   video_status: verified

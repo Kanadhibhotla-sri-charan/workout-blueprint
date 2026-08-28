@@ -42,9 +42,9 @@
     - machine-crunch
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=2fO41lFqK1w
-  video_creator: Renaissance Periodization
-  video_title: Cable Crunch Technique Guide
+  video_link: https://www.youtube.com/watch?v=aBd6T01PBqw
+  video_creator: Colossus Fitness
+  video_title: How to PROPERLY Perform A Cable Crunch to Shape Your Abs (Kneeling Cable Abdominal Crunch)
   video_status: verified
 - id: machine-crunch
   name: Machine Crunch
@@ -91,9 +91,9 @@
     - cable-crunch
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=Bq3Q9fD4jM0
-  video_creator: Renaissance Periodization
-  video_title: Machine Crunch Technique Guide
+  video_link: https://www.youtube.com/watch?v=G8937xqkxDo
+  video_creator: FIT.nl
+  video_title: "Machine Crunch | Proper Form Tutorial for Stronger Abs"
   video_status: verified
 - id: hanging-knee-leg-raise
   name: Hanging Knee or Leg Raise
@@ -143,8 +143,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Pr1ieGZ5atk
-  video_creator: Renaissance Periodization
-  video_title: Hanging Leg Raise Technique Guide
+  video_creator: ATHLEAN-X™
+  video_title: "Hanging Leg Raise | HOW-TO"
   video_status: verified
 - id: plank
   name: Plank
@@ -197,8 +197,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=pSHjTRCQxIw
-  video_creator: ATHLEAN-X
-  video_title: How to Plank Properly for Core Strength
+  video_creator: ScottHermanFitness
+  video_title: "How To: Plank"
   video_status: verified
 - id: ab-wheel-rollout
   name: Ab Wheel Rollout
@@ -248,8 +248,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=rqiTPdK1c_I
-  video_creator: Jeff Nippard
-  video_title: How to Ab Wheel Rollout
+  video_creator: Mind Pump TV
+  video_title: "Ab Wheel- How to PROPERLY Use an Ab Wheel | MIND PUMP"
   video_status: verified
 - id: pallof-press
   name: Pallof Press
@@ -300,9 +300,9 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=AH_QZLM_0-s
-  video_creator: ATHLEAN-X
-  video_title: How to Do the Pallof Press
+  video_link: https://www.youtube.com/watch?v=xeFp4MXad98
+  video_creator: FIT.nl
+  video_title: "Cable Pallof Press | Proper Form Tutorial for Core Stability"
   video_status: verified
 - id: suitcase-carry
   name: Suitcase Carry
@@ -353,9 +353,9 @@
     - farmers-carry (forearms module)
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=F3_6Q9yZ2Xw
-  video_creator: Alan Thrall
-  video_title: Suitcase Carry Technique
+  video_link: https://www.youtube.com/watch?v=y-hn_Ha1-RE
+  video_creator: Dr. Carl Baird
+  video_title: How To Perform The Suitcase Carry
   video_status: verified
 - id: cable-woodchop
   name: Cable Woodchop
@@ -403,9 +403,9 @@
     - russian-twist
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=pZap7Mv_W4w
-  video_creator: ATHLEAN-X
-  video_title: How to Do Cable Woodchops for Obliques
+  video_link: https://www.youtube.com/watch?v=Gwcf4TOj1hc
+  video_creator: FIT.nl
+  video_title: "Cable Woodchop | Proper Form Tutorial for Core Rotation"
   video_status: verified
 - id: russian-twist
   name: Russian Twist
@@ -457,6 +457,6 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=wkD8rjkodUI
-  video_creator: ATHLEAN-X
-  video_title: How to Do Russian Twists (Safely)
+  video_creator: Howcast
+  video_title: "How to Do a Russian Twist | Ab Workout"
   video_status: verified

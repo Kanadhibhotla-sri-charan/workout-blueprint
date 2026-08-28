@@ -49,8 +49,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=2yjwXTZQDDI
-  video_creator: Alan Thrall
-  video_title: How To Overhead Press (Proper Form)
+  video_creator: ScottHermanFitness
+  video_title: "How To: Standing Straight-Bar Military / Overhead Press"
   video_status: verified
 - id: smith-machine-shoulder-press
   name: Smith Machine Shoulder Press
@@ -98,9 +98,9 @@
     - cable-shoulder-press
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=y3_1K9zL7vQ
-  video_creator: Renaissance Periodization
-  video_title: Smith Machine Overhead Press Technique Guide
+  video_link: https://www.youtube.com/watch?v=cEBAJ6lAQS4
+  video_creator: FIT.nl
+  video_title: "Smith Machine Shoulder Press | Proper Form Tutorial for Shoulder Strength"
   video_status: verified
 - id: cable-shoulder-press
   name: Cable Shoulder Press
@@ -148,9 +148,9 @@
     - smith-machine-shoulder-press
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=aG1k8fW6xK0
-  video_creator: Eugene Teo
-  video_title: Cable Overhead Press Execution
+  video_link: https://www.youtube.com/watch?v=Zy1dc-20Uik
+  video_creator: OriGym
+  video_title: "How To Do Cable Shoulder Press | Exercise Demo"
   video_status: verified
 - id: seated-machine-shoulder-press
   name: Seated Machine Shoulder Press
@@ -200,7 +200,7 @@
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=WvLMauqrnK8
   video_creator: Renaissance Periodization
-  video_title: Machine Overhead Press Technique Guide
+  video_title: Machine Shoulder Press
   video_status: verified
 - id: dumbbell-lateral-raise
   name: Dumbbell Lateral Raise
@@ -248,8 +248,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=3VcKaXpzqRo
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Side Lateral Raise Technique Guide
+  video_creator: ScottHermanFitness
+  video_title: "How To: Dumbbell Side Lateral Raise"
   video_status: verified
 - id: cable-lateral-raise
   name: Cable Lateral Raise
@@ -297,8 +297,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=PPrzBWZDOhA
-  video_creator: Renaissance Periodization
-  video_title: Cable Side Lateral Raise Technique Guide
+  video_creator: Testosterone Nation
+  video_title: Two Ways to Do Cable Lateral Raises
   video_status: verified
 - id: machine-lateral-raise
   name: Machine Lateral Raise
@@ -344,9 +344,9 @@
     - cable-lateral-raise
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=8y_5qK1X8o0
-  video_creator: Renaissance Periodization
-  video_title: Machine Lateral Raise Technique Guide
+  video_link: https://www.youtube.com/watch?v=IropE3iOk2c
+  video_creator: FIT.nl
+  video_title: "Machine Lateral Raise | Proper Form Tutorial for Shoulder Growth"
   video_status: verified
 - id: rear-delt-fly
   name: Rear-Delt Fly
@@ -397,9 +397,9 @@
   evidence_notes:
     - No hypertrophy trial specific to the rear-delt fly or posterior deltoid muscle length was located — this is a weaker claim than several of the other stretch-mediated claims in this dataset. It's an inference from the general stretch-mediated hypertrophy literature (Schoenfeld & Grgic, 2020, SAGE Open Medicine; Wolf et al., 2023, International Journal of Strength and Conditioning) and from the mechanical fact that resistance peaks near the horizontally abducted, stretched end of this movement's range, not a posterior-deltoid-specific finding. A later trial (Wolf et al., 2025, PubMed 39959841) found the general stretch advantage over full ROM is smaller than earlier work suggested, which further tempers how much weight this claim should carry.
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=nlkF_22pvCs
-  video_creator: Renaissance Periodization
-  video_title: Dumbbell Rear Delt Flye Technique Guide
+  video_link: https://www.youtube.com/watch?v=hwBu73GZn98
+  video_creator: Fit Father Project - Fitness For Busy Fathers
+  video_title: "How To Do Rear Delt Flys With Dumbbells - Proper Form, Sets & Reps"
   video_status: verified
 - id: machine-reverse-fly
   name: Machine Reverse Fly
@@ -445,9 +445,9 @@
     - rear-delt-fly
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=7y_1mZ8d9vQ
-  video_creator: Renaissance Periodization
-  video_title: Reverse Pec Deck / Rear Delt Flye Technique Guide
+  video_link: https://www.youtube.com/watch?v=nnn9kg33K2g
+  video_creator: ELEFITTV
+  video_title: How To Properly Target Rear Delts On Reverse Fly Machine
   video_status: verified
 - id: cable-rear-delt-builder
   name: Cable Rear Delt Builder
@@ -497,9 +497,9 @@
     - rear-delt-row
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=2_8y9kL1xZ4
-  video_creator: Eugene Teo
-  video_title: Cross-Body Cable Rear Delt Fly Technique
+  video_link: https://www.youtube.com/watch?v=ATSjVXoOgVg
+  video_creator: OriGym
+  video_title: "How To Do Cable Rear Delt Fly | Exercise Demo"
   video_status: verified
 - id: rear-delt-row
   name: Rear Delt Row
@@ -549,9 +549,9 @@
     - rear-delt-fly
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=bO8Z1rA_4hY
-  video_creator: Renaissance Periodization
-  video_title: Rear Delt Row Technique Guide
+  video_link: https://www.youtube.com/watch?v=ql_UKUg7Ke8
+  video_creator: OriGym
+  video_title: "How To Do Dumbbell Rear Delt Row | Exercise Demo"
   video_status: verified
 - id: face-pull
   name: Face Pull
@@ -604,8 +604,8 @@
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=rep-qVOkqgk
-  video_creator: ATHLEAN-X
-  video_title: How to Do Face Pulls Properly (Ultimate Guide)
+  video_creator: ScottHermanFitness
+  video_title: "How To: Face Pull"
   video_status: verified
 - id: cable-band-external-rotation
   name: Cable or Band External Rotation
@@ -652,9 +652,9 @@
     - face-pull
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=9_1k8fW6xZ4
-  video_creator: ATHLEAN-X
-  video_title: Shoulder External Rotation for Rotator Cuff
+  video_link: https://www.youtube.com/watch?v=LpNgc6Vx4iY
+  video_creator: Bodybuilding.com
+  video_title: "How To Do A Cable External Rotation | Exercise Guide"
   video_status: verified
 - id: push-up-plus
   name: Push-Up Plus
@@ -701,7 +701,7 @@
   overlaps_with: []
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=tY8m5zYq9wA
-  video_creator: ATHLEAN-X
-  video_title: Push-Up Plus for Serratus Anterior
+  video_link: https://www.youtube.com/watch?v=RR5xJ1mXEV4
+  video_creator: Matthew Stevens
+  video_title: "Push-Up Plus | Push-Up Variation"
   video_status: verified
