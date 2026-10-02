@@ -352,3 +352,77 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: single-leg-romanian-deadlift
+  name: Single-Leg Romanian Deadlift
+  summary: A one-leg hip hinge with a dumbbell, loading the hamstrings and glutes in a lengthened position while the standing hip controls balance and rotation.
+  why_this_exists: Every other hinge in the library is bilateral. Training one leg at a time exposes and evens out side-to-side differences, needs only a single dumbbell, and reaches a strong hamstring and glute stretch with far less load on the spine than a barbell RDL.
+  body_regions:
+    - hamstrings
+    - hips
+  primary_targets:
+    - hamstrings
+    - gluteus maximus
+  secondary_targets:
+    - gluteus medius (as a hip stabilizer)
+    - spinal erectors
+  physique_targets:
+    - hamstrings
+    - gluteus-maximus
+  aesthetic_characteristics:
+    - lengthened-biased
+  movement_patterns:
+    - hip hinge
+    - single-leg stance
+    - moderate knee bend
+  equipment:
+    - dumbbell
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - unilateral
+    - lengthened-position-emphasis
+    - skill-coordination
+  resistance_profile: One free weight, usually held opposite the standing leg; hardest at the bottom stretch. A kettlebell works the same way.
+  stability_demand: high
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - A hinge is wanted with only a single dumbbell, or with much less spinal load than a barbell RDL.
+    - One side's hamstrings or glutes lag behind, or the hips feel uneven under two-leg hinging.
+  less_suitable_when:
+    - Balance on one leg is still unreliable — sets end on balance, not on the hamstrings.
+    - Maximal hamstring loading is the goal; a two-leg RDL moves far more weight.
+  mirror_effect: Tends to show up as fuller hamstrings and lower glutes from the side and back, and can help even out a visibly uneven side — as a lighter, balance-limited hinge its effect is usually smaller than a heavy two-leg hinge's.
+  advantages: []
+  limitations:
+    - Balance usually gives out before the hamstrings are fatigued, especially early on, which limits how hard a set can be pushed.
+    - Load is limited to what one hand can hold and one leg can balance, so it can't match a two-leg hinge's loading ceiling.
+    - The free leg's hip tends to rotate open toward the ceiling, which changes the movement without obviously feeling wrong.
+  technique_cues:
+    - Stand on one leg with a soft knee and hold the dumbbell in the opposite hand.
+    - Hinge forward from the hip, letting the free leg travel straight back so the torso and back leg move as one line.
+    - Keep both hips square to the floor, with the back foot's toes pointing down.
+    - Lower until you feel a strong stretch in the standing leg's hamstring with a flat back, then drive the hip forward to stand.
+    - Keep the dumbbell close to the standing leg throughout.
+  common_mistakes:
+    - "Hip opening so the back leg and pelvis rotate toward the ceiling: the hinge becomes a twist and the standing-leg hamstring loses its stretch."
+    - "Bending the standing knee more on the way down: it turns into a single-leg squat and the hamstring stretch shrinks."
+    - "Rounding the back to reach lower: depth should stop where a flat back stops."
+    - "Rushing reps to stay balanced: speed replaces control and cuts short the lowering phase, where most of the hamstring work happens."
+  programming_notes:
+    - Lightly hold a fixed support (a rack or wall) with the free hand until balance stops ending sets, so the hamstrings rather than balance set the limit. Start each set with the weaker side.
+  alternatives: []
+  complements:
+    - Knee-flexion hamstring work such as seated or lying leg curls, which load the hamstrings at the knee rather than the hip.
+  overlaps_with:
+    - romanian-deadlift
+    - bulgarian-split-squat-hip-dominant (hips module) — also single-leg and glute/hamstring-biased, but a split squat with much more knee bend rather than a hinge.
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=iS7atZhcRnw
+  video_creator: Dr. Jacob Goodin
+  video_title: Single Leg Romanian Deadlift (1 Dumbbell) | Exercise Technique Library
+  video_status: verified
+  video_verified_on: "2026-10-02"
+  video_verification_method: metadata

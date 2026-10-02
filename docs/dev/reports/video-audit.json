@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-02T07:15:19.753Z",
-    "total_records": 123,
-    "live": 123,
+    "audited_at": "2026-10-02T08:23:57.297Z",
+    "total_records": 126,
+    "live": 126,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -376,6 +376,19 @@
       "notes": ""
     },
     {
+      "exercise_id": "copenhagen-plank",
+      "exercise_name": "Copenhagen Plank (Adduction)",
+      "muscle_group": "hips",
+      "current_video_url": "https://www.youtube.com/watch?v=HXGuE3Ay5s4",
+      "video_id": "HXGuE3Ay5s4",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How To Do A COPENHAGEN HIP ADDUCTION | Exercise Demonstration Video and Guide",
+      "resolved_author": "Live Lean TV Daily Exercises",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
       "exercise_id": "cross-body-hammer-curl",
       "exercise_name": "Cross-Body Hammer Curl",
       "muscle_group": "arms",
@@ -580,6 +593,19 @@
       "http_result": 200,
       "resolved_title": "How To Properly Do A Barbell Front Squat - Full Video Tutorial & Exercise Guide",
       "resolved_author": "Fit Father Project - Fitness For Busy Fathers",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "glute-bridge",
+      "exercise_name": "Glute Bridge",
+      "muscle_group": "hips",
+      "current_video_url": "https://www.youtube.com/watch?v=cvKZXsz-QIA",
+      "video_id": "cvKZXsz-QIA",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How To Do A Glute Bridge (4 EASY TIPS)",
+      "resolved_author": "Redefining Strength",
       "classification": "LIVE",
       "notes": ""
     },
@@ -1347,6 +1373,19 @@
       "http_result": 200,
       "resolved_title": "Single Leg Body Weight Calf Raise",
       "resolved_author": "FITASTIC",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "single-leg-romanian-deadlift",
+      "exercise_name": "Single-Leg Romanian Deadlift",
+      "muscle_group": "hamstrings",
+      "current_video_url": "https://www.youtube.com/watch?v=iS7atZhcRnw",
+      "video_id": "iS7atZhcRnw",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "Single Leg Romanian Deadlift (1 Dumbbell) | Exercise Technique Library",
+      "resolved_author": "Dr. Jacob Goodin",
       "classification": "LIVE",
       "notes": ""
     },

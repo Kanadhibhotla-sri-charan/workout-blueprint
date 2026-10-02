@@ -403,3 +403,139 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: glute-bridge
+  name: Glute Bridge
+  summary: A floor-based hip extension that loads the glutes in their shortened position with no equipment, the low-setup counterpart to the hip thrust.
+  why_this_exists: The hip thrust's shortened-position glute stimulus needs a bench and a padded bar. The bridge trains the same hip extension from the floor with bodyweight, so the glutes can be worked directly with no equipment, almost no setup, and little fatigue.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus maximus
+  secondary_targets:
+    - hamstrings
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip extension
+    - shortened range (hip fully extended)
+    - shoulders on the floor
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - shortened-position-emphasis
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight, hardest at the top with the hips fully extended. A pause at the top, a single-leg version, or a dumbbell or plate on the hips adds difficulty without changing the movement.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No bench, barbell or machine is available and the glutes need direct work.
+    - A low-fatigue glute finisher or warm-up is wanted alongside heavier squats and hinges.
+  less_suitable_when:
+    - A heavy, progressively loaded glute stimulus is the goal and a hip-thrust setup is available — bodyweight stops being challenging quickly.
+  mirror_effect: Tends to show up, over time and alongside heavier glute work, as fuller glutes from the side — unloaded it's a modest stimulus, so expect it to support glute development rather than drive it on its own.
+  advantages: []
+  limitations:
+    - Bodyweight alone stops being challenging quickly for trained lifters, and loading it from the floor (a dumbbell or plate on the hips) caps out well below what a barbell hip thrust allows.
+    - The range of motion is shorter than a hip thrust's because the shoulders stay on the floor, so the hips start from less bend.
+    - The hamstrings readily take over if the feet sit too far from the hips, and that isn't always obvious from how the rep feels.
+  technique_cues:
+    - Lie on your back with knees bent and feet flat about hip width, heels close enough that your fingertips can just touch them.
+    - Tuck the pelvis slightly and keep the ribs down before you lift.
+    - Drive through the heels to lift the hips until knees, hips and shoulders form a straight line.
+    - Squeeze the glutes and hold the top for one to two seconds, then lower until the glutes lightly touch the floor.
+  common_mistakes:
+    - "Arching the lower back to get the hips higher: the spine extends instead of the hips, so the lower back works and the glutes don't."
+    - "Feet too far from the hips: the hamstrings take over and often cramp before the glutes have done much."
+    - "Pushing through the toes: shifts work toward the quads and takes tension off the glutes."
+    - "Dropping straight back down: skips the controlled lowering, which is half of each rep's glute work."
+  programming_notes:
+    - "Progress in this order before loading: a pause at the top, then single-leg bridges, then a dumbbell or plate on the hips. Move to a hip thrust once a bench is available and those stop being challenging."
+  alternatives: []
+  complements:
+    - Glute work in the lengthened, hip-bent position, such as Romanian deadlifts or long-stance split squats.
+  overlaps_with:
+    - hip-thrust
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=cvKZXsz-QIA
+  video_creator: Redefining Strength
+  video_title: How To Do A Glute Bridge (4 EASY TIPS)
+  video_status: verified
+  video_verified_on: "2026-10-02"
+  video_verification_method: metadata
+- id: copenhagen-plank
+  name: Copenhagen Plank (Adduction)
+  summary: A side plank with the top leg on a bench, raising and lowering the body to load the adductors directly with no machine.
+  why_this_exists: The only other direct adductor exercise in the library needs a hip-adduction machine. The Copenhagen variation loads the adductors hard with bodyweight and a bench, scales from a short lever (knee on the bench) to a long lever (ankle on the bench), and is the exercise behind a trial that reduced groin problems in football players (see evidence_notes).
+  body_regions:
+    - hips
+  primary_targets:
+    - adductors (top leg)
+  secondary_targets:
+    - obliques and lateral trunk
+    - bottom-leg hip abductors
+  physique_targets:
+    - adductors
+  functional_goals:
+    - hip-stability
+  movement_patterns:
+    - hip adduction
+    - side-plank support
+    - bodyweight lever
+  equipment:
+    - bodyweight
+    - bench
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - isolation
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: "Bodyweight lever: the farther the support point is from the hip (knee, then ankle), the heavier the load. Hardest at the top with the body in a straight line."
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No adduction machine is available and the adductors need direct work.
+    - Groin resilience matters, for example in sports with sprinting, kicking or quick changes of direction.
+  less_suitable_when:
+    - There's current or recent groin pain — the long-lever version loads the adductors heavily and has to be built up to.
+    - Small, finely adjustable load increases are wanted — the lever steps are large.
+  mirror_effect: Tends to show up, alongside other leg training, as fuller inner thighs from the front — inner-thigh appearance depends heavily on body composition, so treat this as shaping the adductors rather than changing the look on its own.
+  advantages: []
+  limitations:
+    - Load progresses in large jumps (short lever to long lever), which can be too big a step without an in-between option.
+    - Bench height and body length have to roughly match for a clean straight-line position, and not every bench allows it.
+    - The bottom shoulder carries the body on the forearm, so shoulder discomfort can end a set before the adductors are worked.
+  technique_cues:
+    - "Lie on your side propped on the bottom forearm, elbow under the shoulder, with the top leg on the bench: inner knee for the short lever, inner ankle for the long lever."
+    - Press the top leg down into the bench to lift the hips until the body is straight from head to feet.
+    - Bring the bottom leg up to meet the bench underneath, then lower it as you lower the hips back toward the floor.
+    - Keep the hips stacked and the body facing straight ahead; finish all reps, then switch sides.
+  common_mistakes:
+    - "Hips sagging or the body rotating toward the floor: the trunk and shoulder hold the position and the adductors do less."
+    - "Starting with the long-lever version: loads the groin heavily before the adductors are ready — the trial programme built up through easier levels first."
+    - "Bottom shoulder sinking away from the elbow: loads the shoulder joint instead of keeping it stacked and stable."
+  programming_notes:
+    - "Progress lever length before anything else: short lever (knee on the bench) until the planned reps are easy, then long lever (ankle on the bench). A few seconds' hold at the top is a middle step between the two."
+  alternatives: []
+  complements:
+    - Hip abduction work, so both sides of the hip are trained directly.
+  overlaps_with:
+    - hip-adduction
+  evidence_notes:
+    - "Harøy J, et al. 'The Adductor Strengthening Programme prevents groin problems among male football players: a cluster-randomised controlled trial.' Br J Sports Med 2019;53(3):150-157 (doi:10.1136/bjsports-2017-098937). 652 semi-professional players on 35 teams; the intervention was one Copenhagen adduction exercise with three progression levels. Average groin-problem prevalence was 13.5% vs 21.3% in controls (OR 0.59, 95% CI 0.40-0.86). Evidence quality: one well-designed randomised trial in male footballers, supporting injury-prevention value in that population. It did not measure muscle size, so it says nothing about this record's inner-thigh appearance framing."
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=HXGuE3Ay5s4
+  video_creator: Live Lean TV Daily Exercises
+  video_title: How To Do A COPENHAGEN HIP ADDUCTION | Exercise Demonstration Video and Guide
+  video_status: verified
+  video_verified_on: "2026-10-02"
+  video_verification_method: metadata

@@ -308,7 +308,11 @@ describe('makeRecommendation — 4I full-body taxonomy expansion', () => {
     }
   });
 
-  it('adductors and gluteus-medius-minimus resolve from their single dedicated exercises (narrow but genuine support)', () => {
+  // Phase 7 pilot: adductors gained a second dedicated exercise
+  // (copenhagen-plank). Which of the two ranks first is decided by the
+  // engine's alphabetical tiebreak, not by merit, so this asserts the pair
+  // rather than an order.
+  it('adductors resolve to their two dedicated exercises; gluteus-medius-minimus to its single one', () => {
     const adductors = makeRecommendation(
       { ...BASE_INPUT, bodyRegion: 'hips', physiqueTarget: 'adductors', goal: 'build-base' },
       exercises
@@ -320,7 +324,8 @@ describe('makeRecommendation — 4I full-body taxonomy expansion', () => {
     expect(adductors.status).toBe('ok');
     expect(abduction.status).toBe('ok');
     if (adductors.status === 'ok' && abduction.status === 'ok') {
-      expect(adductors.bestFit.id).toBe('hip-adduction');
+      expect([adductors.bestFit.id, adductors.alternative?.id].sort()).toEqual(['copenhagen-plank', 'hip-adduction']);
+      expect(adductors.target?.id).toBe('adductors');
       expect(abduction.bestFit.id).toBe('hip-abduction');
     }
   });
