@@ -426,6 +426,10 @@
   equipment:
     - dumbbell
     - barbell
+    - bench
+  equipment_setups:
+    - [dumbbell, bench]
+    - [barbell, bench]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
@@ -545,6 +549,10 @@
     - barbell
     - dumbbell
     - sandbag
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [sandbag]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
@@ -599,6 +607,10 @@
     - barbell
     - dumbbell
     - sandbag
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [sandbag]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
@@ -653,6 +665,10 @@
     - barbell
     - dumbbell
     - sandbag
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [sandbag]
   exercise_type: compound
   laterality: alternating
   coverage_categories:
@@ -707,6 +723,9 @@
   equipment:
     - dumbbell
     - kettlebell
+  equipment_setups:
+    - [dumbbell]
+    - [kettlebell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:

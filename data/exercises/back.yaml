@@ -310,6 +310,10 @@
   equipment:
     - machine
     - bench
+    - dumbbell
+  equipment_setups:
+    - [machine]
+    - [bench, dumbbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -550,6 +554,10 @@
   equipment:
     - t-bar
     - landmine
+    - barbell
+  equipment_setups:
+    - [t-bar]
+    - [landmine, barbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -883,6 +891,10 @@
     - barbell
     - dumbbell
     - cable
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:

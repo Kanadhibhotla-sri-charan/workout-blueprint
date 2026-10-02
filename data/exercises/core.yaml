@@ -296,6 +296,9 @@
   equipment:
     - band
     - cable
+  equipment_setups:
+    - [band]
+    - [cable]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -360,6 +363,9 @@
   equipment:
     - dumbbell
     - kettlebell
+  equipment_setups:
+    - [dumbbell]
+    - [kettlebell]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -472,6 +478,10 @@
     - dumbbell
     - plate
     - medicine ball
+  equipment_setups:
+    - [dumbbell]
+    - [plate]
+    - [medicine ball]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:

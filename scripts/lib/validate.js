@@ -500,6 +500,53 @@ function validate(records) {
       }
     }
 
+    // --- Schema: equipment_setups (Phase 7 Stage 3.5) ---
+    // Optional. Each inner list is one complete way to equip the exercise
+    // (every item required); the setups are alternatives. Absent means the
+    // record's `equipment` list is a single setup, all items required.
+    // `bodyweight` is a valid item but is always treated as available.
+    if (record.equipment_setups !== undefined && record.equipment_setups !== null) {
+      const setups = record.equipment_setups;
+      if (!Array.isArray(setups) || setups.length < 2) {
+        report(record, 'schema', '"equipment_setups" must list at least 2 alternative setups — a single setup belongs in "equipment" alone');
+      } else {
+        const setupKeys = [];
+        let wellFormed = true;
+        setups.forEach((setup, index) => {
+          if (!Array.isArray(setup) || setup.length === 0 || !setup.every((item) => typeof item === 'string' && item.trim() !== '')) {
+            report(record, 'schema', `"equipment_setups[${index}]" must be a non-empty list of equipment names`);
+            wellFormed = false;
+            return;
+          }
+          if (new Set(setup).size !== setup.length) {
+            report(record, 'schema', `"equipment_setups[${index}]" lists the same equipment more than once`);
+          }
+          setupKeys.push(new Set(setup));
+        });
+        if (wellFormed) {
+          for (let a = 0; a < setupKeys.length; a++) {
+            for (let b = a + 1; b < setupKeys.length; b++) {
+              const aInB = [...setupKeys[a]].every((item) => setupKeys[b].has(item));
+              const bInA = [...setupKeys[b]].every((item) => setupKeys[a].has(item));
+              if (aInB && bInA) {
+                report(record, 'schema', `"equipment_setups[${a}]" and "[${b}]" are the same setup`);
+              } else if (aInB || bInA) {
+                const [small, big] = aInB ? [a, b] : [b, a];
+                report(record, 'schema', `"equipment_setups[${big}]" contains every item of "[${small}]" — the larger setup is never needed, so it misstates what is required`);
+              }
+            }
+          }
+          const union = new Set(setups.flat());
+          const listed = new Set(Array.isArray(record.equipment) ? record.equipment : []);
+          const missing = [...union].filter((item) => !listed.has(item));
+          const extra = [...listed].filter((item) => !union.has(item));
+          if (missing.length || extra.length) {
+            report(record, 'schema', `"equipment" must equal the union of "equipment_setups" (missing from equipment: ${JSON.stringify(missing)}; not in any setup: ${JSON.stringify(extra)})`);
+          }
+        }
+      }
+    }
+
     // --- Schema: closed-enum scalar fields ---
     if (!EXERCISE_TYPES.has(record.exercise_type)) {
       report(record, 'schema', `"exercise_type" must be one of ${[...EXERCISE_TYPES].join('|')}, got ${JSON.stringify(record.exercise_type)}`);

@@ -86,8 +86,12 @@ describe('makeRecommendation — §24 representative scenarios', () => {
   });
 
   it('6. an impossible constraint combination returns no-candidates, not a fabricated pick', () => {
+    // Forearms with only a sandbag: every forearm exercise needs a bar,
+    // dumbbell, cable, band or handle. (Chest with only a sandbag stopped
+    // being impossible in Phase 7 Stage 3.5 — bodyweight is always
+    // available, so push-ups qualify.)
     const result = makeRecommendation(
-      { ...BASE_INPUT, equipmentAvailable: ['sandbag'] },
+      { ...BASE_INPUT, bodyRegion: 'forearms', equipmentAvailable: ['sandbag'] },
       exercises
     );
     expect(result.status).toBe('no-candidates');

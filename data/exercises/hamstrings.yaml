@@ -20,6 +20,10 @@
     - barbell
     - dumbbell
     - smith machine
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [smith machine]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -88,6 +92,9 @@
   equipment:
     - barbell
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:

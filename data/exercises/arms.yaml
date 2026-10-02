@@ -16,6 +16,9 @@
   equipment:
     - barbell
     - ez-bar
+  equipment_setups:
+    - [barbell]
+    - [ez-bar]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -192,6 +195,10 @@
     - ez-bar
     - dumbbell
     - preacher bench
+  equipment_setups:
+    - [barbell, preacher bench]
+    - [ez-bar, preacher bench]
+    - [dumbbell, preacher bench]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -525,6 +532,9 @@
   equipment:
     - barbell
     - ez-bar
+  equipment_setups:
+    - [barbell]
+    - [ez-bar]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -685,6 +695,11 @@
   equipment:
     - barbell
     - smith machine
+    - bench
+    - rack
+  equipment_setups:
+    - [barbell, bench, rack]
+    - [smith machine, bench]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -746,6 +761,10 @@
     - barbell
     - ez-bar
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [ez-bar]
+    - [dumbbell]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -808,6 +827,10 @@
     - barbell
     - ez-bar
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [ez-bar]
+    - [dumbbell]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -1032,6 +1055,9 @@
   equipment:
     - dumbbell
     - cable
+  equipment_setups:
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:

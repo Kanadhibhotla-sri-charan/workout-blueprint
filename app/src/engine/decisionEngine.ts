@@ -1,6 +1,6 @@
 import type { Exercise } from '../types/exercise';
 import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal, type RecommendationTrace, type TargetMatch } from './types';
-import { isEquipmentFeasible } from './equipment';
+import { equipmentNeed, isEquipmentFeasible, smallestUsableSetup } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
@@ -221,8 +221,10 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
   }
 
   if (input.goal === 'different-stimulus' || input.goal === 'complement-current') {
-    const resolved = resolveComplements(currentExercise!, allExercises, input.equipmentAvailable).filter(
-      (exercise) => regionCandidates.some((candidate) => candidate.id === exercise.id)
+    const regionCandidateIds = new Set(regionCandidates.map((candidate) => candidate.id));
+    const inRegionCandidates = (exercise: Exercise) => regionCandidateIds.has(exercise.id);
+    const resolved = resolveComplements(currentExercise!, allExercises, input.equipmentAvailable, inRegionCandidates).filter(
+      inRegionCandidates
     );
     return buildResultFromRanked(
       sortByTargetTier(sortByAestheticRole(sortByAestheticSuitability(resolved))),
@@ -241,10 +243,10 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     );
   }
 
-  const ranked = sortByTargetTier(sortByAestheticRole(sortByAestheticSuitability(rankByGoal(input.goal, candidates))));
+  const ranked = sortByTargetTier(sortByAestheticRole(sortByAestheticSuitability(rankByGoal(input.goal, candidates, input.equipmentAvailable))));
   return buildResultFromRanked(
     ranked,
-    (exercise) => explainGoalPick(input.goal, exercise),
+    (exercise) => explainGoalPick(input.goal, exercise, input.equipmentAvailable),
     () => 'No exercise in this region meets every constraint you gave.',
     allExercises,
     input,
@@ -420,7 +422,7 @@ function buildResultFromRanked(
     programming,
     alternative: alt ?? null,
     alternativeWhy: alt ? `A close second under the same constraints: ${explainBest(alt)}` : null,
-    watchOut: buildWatchOut(bestFit),
+    watchOut: buildWatchOut(bestFit, input.equipmentAvailable),
     // Capped per §16 ("do not overwhelm the user with ten recommendations")
     // — the structural fallback in resolveComplements can return many
     // eligible matches; a curated `complements` field (when present) is
@@ -431,7 +433,7 @@ function buildResultFromRanked(
 
 // Deterministic fixed-priority key per goal, ascending (lower = ranked
 // first), with an alphabetical id tiebreak — never a blended score.
-function goalKey(goal: Goal, exercise: Exercise): number {
+function goalKey(goal: Goal, exercise: Exercise, equipmentAvailable: string[] | null): number {
   switch (goal) {
     case 'build-base':
       if (exercise.coverage_categories.includes('heavy-compound')) return 0;
@@ -448,21 +450,23 @@ function goalKey(goal: Goal, exercise: Exercise): number {
     case 'low-fatigue':
       return DEMAND_LEVELS.indexOf(exercise.fatigue_cost as (typeof DEMAND_LEVELS)[number]);
     case 'limited-equipment':
-      return exercise.equipment.length;
+      // Size of the smallest setup this user can actually complete — for a
+      // single-setup record that's just equipment.length, as before.
+      return (smallestUsableSetup(exercise, equipmentAvailable) ?? exercise.equipment).length;
     default:
       return 0;
   }
 }
 
-function rankByGoal(goal: Goal, candidates: Exercise[]): Exercise[] {
+function rankByGoal(goal: Goal, candidates: Exercise[], equipmentAvailable: string[] | null): Exercise[] {
   return [...candidates].sort((a, b) => {
-    const keyDiff = goalKey(goal, a) - goalKey(goal, b);
+    const keyDiff = goalKey(goal, a, equipmentAvailable) - goalKey(goal, b, equipmentAvailable);
     if (keyDiff !== 0) return keyDiff;
     return a.id.localeCompare(b.id);
   });
 }
 
-function explainGoalPick(goal: Goal, exercise: Exercise): string {
+function explainGoalPick(goal: Goal, exercise: Exercise, equipmentAvailable: string[] | null): string {
   switch (goal) {
     case 'build-base':
       return exercise.coverage_categories.includes('heavy-compound')
@@ -472,10 +476,11 @@ function explainGoalPick(goal: Goal, exercise: Exercise): string {
       return exercise.mirror_effect;
     case 'low-fatigue':
       return `${humanize(exercise.fatigue_cost)} fatigue cost and ${humanize(exercise.setup_time)} setup — light on your session's fatigue budget.`;
-    case 'limited-equipment':
-      return exercise.equipment.length === 1 && exercise.equipment[0] === 'bodyweight'
-        ? 'Needs no equipment at all.'
-        : `Needs only: ${exercise.equipment.join(', ')}.`;
+    case 'limited-equipment': {
+      const need = equipmentNeed(exercise, equipmentAvailable);
+      if (need.kind === 'none') return 'Needs no equipment at all.';
+      return need.kind === 'setup' ? `Needs only: ${need.setup.join(', ')}.` : `Needs only one of: ${need.text}.`;
+    }
     default:
       return exercise.why_this_exists;
   }
@@ -485,14 +490,14 @@ function explainGoalPick(goal: Goal, exercise: Exercise): string {
 // requirements, or another relevant limitation — every note traces to an
 // actual field value, nothing inferred, per §17's recommendation-safety
 // rule.
-function buildWatchOut(exercise: Exercise): string[] {
+function buildWatchOut(exercise: Exercise, equipmentAvailable: string[] | null): string[] {
   const notes: string[] = [];
   if (exercise.fatigue_cost === 'high') {
     notes.push('High fatigue cost — budget recovery accordingly.');
   }
-  if (!(exercise.equipment.length === 1 && exercise.equipment[0] === 'bodyweight')) {
-    notes.push(`Requires: ${exercise.equipment.join(', ')}.`);
-  }
+  const need = equipmentNeed(exercise, equipmentAvailable);
+  if (need.kind === 'setup') notes.push(`Requires: ${need.setup.join(', ')}.`);
+  if (need.kind === 'one-of') notes.push(`Requires one of: ${need.text}.`);
   if (exercise.overlaps_with && exercise.overlaps_with.length > 0) {
     notes.push('Overlaps with other exercises already in the dataset — avoid stacking both in one routine.');
   }

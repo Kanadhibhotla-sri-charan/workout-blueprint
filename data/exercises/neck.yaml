@@ -15,6 +15,10 @@
     - bodyweight
     - band
     - manual resistance
+  equipment_setups:
+    - [bodyweight]
+    - [band]
+    - [manual resistance]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -67,6 +71,9 @@
     - harness
     - plate
     - machine
+  equipment_setups:
+    - [harness, plate]
+    - [machine]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -119,6 +126,9 @@
   equipment:
     - plate
     - band
+  equipment_setups:
+    - [plate]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -170,6 +180,10 @@
     - bodyweight
     - band
     - manual resistance
+  equipment_setups:
+    - [bodyweight]
+    - [band]
+    - [manual resistance]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:

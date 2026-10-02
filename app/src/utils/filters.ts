@@ -1,4 +1,5 @@
 import type { Exercise } from '../types/exercise';
+import { usesEquipment } from '../engine/equipment';
 
 // Demand-level fields are a fixed 3-value enum defined by the schema itself
 // (scripts/lib/taxonomy.js DEMAND_LEVELS) — the low/medium/high *order* is
@@ -32,7 +33,9 @@ export const EMPTY_FILTERS: Filters = {
 export function applyFilters(exercises: Exercise[], filters: Filters): Exercise[] {
   return exercises.filter((exercise) => {
     if (filters.region && !exercise.body_regions.includes(filters.region)) return false;
-    if (filters.equipment && !exercise.equipment.includes(filters.equipment)) return false;
+    // Same setup semantics as Decide (engine/equipment.ts): an exercise is
+    // listed under an item when one of its complete setups uses that item.
+    if (filters.equipment && !usesEquipment(exercise, filters.equipment)) return false;
     if (filters.exerciseType && exercise.exercise_type !== filters.exerciseType) return false;
     if (filters.laterality && exercise.laterality !== filters.laterality) return false;
     if (filters.setupTime && exercise.setup_time !== filters.setupTime) return false;

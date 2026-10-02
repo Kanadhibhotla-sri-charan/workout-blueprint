@@ -93,6 +93,7 @@ const ALL_FIELDS = new Set([
   'physique_targets', 'functional_goals', 'aesthetic_characteristics',
   'video_link', 'video_creator', 'video_title', 'video_status',
   'video_verified_on', 'video_verification_method',
+  'equipment_setups',
 ]);
 
 // How a `verified` video reference was confirmed to match its exercise.

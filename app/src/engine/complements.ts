@@ -69,13 +69,20 @@ export function rankStructuralComplements(
 // Prefers the record's own resolvable `complements` entries; falls back to
 // the structural match when there are none (the common case). Same
 // explicit-data-first precedence as resolveAlternative in alternatives.ts.
+//
+// `isEligible` lets the caller apply its other constraints (tolerance
+// limits, region) *before* the declared-vs-structural decision. Without it,
+// a declared complement that the caller would filter out afterwards still
+// suppressed the structural fallback, leaving no complement at all (Phase 7
+// equipment investigation, §6).
 export function resolveComplements(
   target: Exercise,
   allExercises: Exercise[],
-  equipmentAvailable: string[] | null = null
+  equipmentAvailable: string[] | null = null,
+  isEligible: (exercise: Exercise) => boolean = () => true
 ): Exercise[] {
-  const declared = resolveDeclaredComplements(target, allExercises).filter((exercise) =>
-    isEquipmentFeasible(exercise, equipmentAvailable)
+  const declared = resolveDeclaredComplements(target, allExercises).filter(
+    (exercise) => isEquipmentFeasible(exercise, equipmentAvailable) && isEligible(exercise)
   );
   if (declared.length > 0) return declared;
   return rankStructuralComplements(target, allExercises, equipmentAvailable);

@@ -103,6 +103,14 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** yes — equipment-availability filtering is an obvious future application feature.
 - **Required for `reviewed`:** yes
 
+### `equipment_setups`
+- **Type:** list of lists of strings
+- **Required:** no — omit it when every item in `equipment` is needed together (the common case)
+- **Format:** each inner list is one complete way to do the exercise; every item inside a setup is required, and the setups are alternatives. Written in flow style, one setup per line (`- [barbell, bench]`). Rules (enforced by `npm run validate-data`): at least 2 setups; each setup a non-empty list of non-empty strings with no duplicate items; no two identical setups; no setup that contains another (it would never be the deciding one); and the union of all setups must equal `equipment` exactly.
+- **Meaning when absent:** a single setup equal to `equipment` — all items required. `bodyweight` always counts as available.
+- **Decision-making impact:** yes — Decide feasibility, "limited equipment" ranking and equipment text, plus Explore's equipment filter (see `docs/dev/reports/DECISION-ENGINE-RULES.md` §1).
+- **Required for `reviewed`:** no
+
 ### `exercise_type`
 - **Type:** string (scalar)
 - **Required:** yes
@@ -272,6 +280,7 @@ One external YouTube execution reference per exercise. The app renders it as a p
 | `aesthetic_characteristics` | list | no | closed (5, Phase 4C) | yes | no |
 | `movement_patterns` | list | yes | first item closed (49), rest open | yes | yes |
 | `equipment` | list | yes | open | yes | yes |
+| `equipment_setups` | list of lists | no | open (union must equal `equipment`) | yes | no |
 | `exercise_type` | string | yes | closed (2) | yes | yes |
 | `laterality` | string | yes | closed (3) | yes | yes |
 | `coverage_categories` | list | yes | closed (10) | yes | yes |

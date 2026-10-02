@@ -28,6 +28,13 @@ export interface Exercise {
   aesthetic_characteristics: string[] | null;
   movement_patterns: string[];
   equipment: string[];
+  /**
+   * Alternative ways to equip the exercise (Phase 7 Stage 3.5): every item
+   * inside one setup is required; the setups are alternatives. Absent when
+   * `equipment` is itself the only setup. When present, `equipment` is the
+   * union of all setups. Interpret only through engine/equipment.ts.
+   */
+  equipment_setups?: string[][] | null;
   exercise_type: ExerciseType;
   laterality: Laterality;
   coverage_categories: string[];

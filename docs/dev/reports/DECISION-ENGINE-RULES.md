@@ -18,13 +18,18 @@ Every rule below is a strict boolean predicate or a fixed-priority tiebreak over
 isEquipmentFeasible(exercise, equipmentAvailable):
   if equipmentAvailable is null:
     return true                      # constraint not engaged — no filtering
-  return exercise.equipment is a subset of equipmentAvailable
-         (every item in exercise.equipment appears, as an exact string
-          match, in equipmentAvailable)
+  setups = exercise.equipment_setups, or [exercise.equipment] when absent
+  return some setup in setups where every item is either
+         "bodyweight" or appears, as an exact string match,
+         in equipmentAvailable
 ```
 
-- **Exact string match only** against the values already present in the dataset's `equipment` field (34 open-vocabulary values — see `SCHEMA.md`). No normalization, no partial/synonym matching (e.g. "dumbbell" does not match "dumbbells" or "DB" — the UI only ever offers the exact values that exist in the data, via `equipmentOptions` in `src/data/index.ts`, so this can't arise from user input).
-- `equipment` is a required, non-empty field on every record (`REQUIRED_LIST_FIELDS` in `scripts/lib/taxonomy.js`), and bodyweight-only exercises explicitly list `equipment: [bodyweight]` rather than an empty list — so the subset test is well-defined for every one of the 123 records with no special-casing needed for "no equipment."
+- **Revised in Phase 7 Stage 3.5** (see `EQUIPMENT-MODEL-INVESTIGATION.md` and `PHASE-7-STAGE-3.5-EQUIPMENT-SETUPS.md`). The original rule — `exercise.equipment` must be a subset of `equipmentAvailable` — is still exactly what happens for every record without `equipment_setups` (a single setup equal to `equipment`). Records whose equipment is a set of *alternatives* (barbell OR EZ-bar OR dumbbell) declare `equipment_setups`; any one complete setup makes the exercise feasible, and every item inside a setup is required.
+- **Bodyweight is always available.** An empty selection means bodyweight-only, as Decide's picker tells the user, so `bodyweight` never blocks a setup.
+- **Exact string match only** against the values already present in the dataset's `equipment` field (open vocabulary — see `SCHEMA.md`). No normalization, no partial/synonym matching (e.g. "dumbbell" does not match "dumbbells" or "DB" — the UI only ever offers the exact values that exist in the data, via `equipmentOptions` in `src/data/index.ts`, so this can't arise from user input).
+- `equipment` is a required, non-empty field on every record (`REQUIRED_LIST_FIELDS` in `scripts/lib/taxonomy.js`), and bodyweight-only exercises explicitly list `equipment: [bodyweight]` rather than an empty list.
+- **"Limited equipment" ranking** counts the items in the smallest setup the user can complete (unrestricted: the smallest setup overall), not the length of the `equipment` union.
+- **Single source of truth:** `app/src/engine/equipment.ts` is the only place equipment is interpreted — Decide feasibility, ranking, explanation/watch-out text, Explore's equipment filter (an exercise is listed under an item when any setup uses it) and the detail page.
 
 ## 2. Deterministic structural-alternative matching rule
 

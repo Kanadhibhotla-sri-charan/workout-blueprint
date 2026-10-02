@@ -18,6 +18,10 @@
     - smith machine
     - dumbbell
     - block or plate
+  equipment_setups:
+    - [machine]
+    - [smith machine]
+    - [dumbbell, block or plate]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -254,6 +258,10 @@
     - wall
     - band
     - dedicated device
+  equipment_setups:
+    - [wall]
+    - [band]
+    - [dedicated device]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:

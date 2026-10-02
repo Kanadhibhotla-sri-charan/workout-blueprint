@@ -17,6 +17,9 @@
   equipment:
     - barbell
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -400,6 +403,9 @@
   equipment:
     - dumbbell
     - machine
+  equipment_setups:
+    - [dumbbell]
+    - [machine]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -622,6 +628,9 @@
   equipment:
     - cable
     - band
+  equipment_setups:
+    - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -682,6 +691,9 @@
   equipment:
     - cable
     - band
+  equipment_setups:
+    - [cable]
+    - [band]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:

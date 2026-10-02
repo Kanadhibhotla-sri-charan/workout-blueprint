@@ -15,6 +15,10 @@
     - barbell
     - dumbbell
     - cable
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -74,6 +78,10 @@
     - barbell
     - dumbbell
     - cable
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -138,6 +146,10 @@
     - barbell
     - ez-bar
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [ez-bar]
+    - [dumbbell]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -253,6 +265,9 @@
   equipment:
     - dumbbell
     - farmer's handles
+  equipment_setups:
+    - [dumbbell]
+    - ["farmer's handles"]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -304,6 +319,10 @@
     - band
     - cable
     - offset-loaded handle
+  equipment_setups:
+    - [band]
+    - [cable]
+    - [offset-loaded handle]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:

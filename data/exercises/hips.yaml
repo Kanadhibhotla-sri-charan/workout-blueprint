@@ -19,6 +19,10 @@
     - bench
     - hip-thrust machine
     - smith machine
+  equipment_setups:
+    - [barbell, bench]
+    - [hip-thrust machine]
+    - [smith machine, bench]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -136,6 +140,9 @@
     - dumbbell
     - barbell
     - bench
+  equipment_setups:
+    - [dumbbell, bench]
+    - [barbell, bench]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
@@ -257,6 +264,9 @@
   equipment:
     - machine
     - band
+  equipment_setups:
+    - [machine]
+    - [band]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
