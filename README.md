@@ -47,11 +47,14 @@ If you ever see `Error: Cannot find module 'js-yaml'` while running `npm run dev
 ```
 cd app
 npm run test      # Vitest — engine, programming, and UI golden-slice tests
+npm run test:e2e  # Playwright smoke test against the production build (Chromium)
 npm run lint       # oxlint
 npm run build      # tsc -b && vite build — type-checks and produces app/dist/
 cd ..
 npm run validate-data   # schema/taxonomy/relationship validation for data/exercises/**
 ```
+
+The smoke test builds the app and serves it with `vite preview` itself. On a new machine, run `npx playwright install chromium` once (from `app/`) first.
 
 All four must pass before any change is considered done; CI (`.github/workflows/validate-data.yml`) enforces data validation on every push/PR that touches `data/exercises/**` or `scripts/**`.
 

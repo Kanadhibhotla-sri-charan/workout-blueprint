@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { UserEvent } from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { DecisionMakerPage } from './DecisionMakerPage';
 
 // @testing-library/react's automatic afterEach cleanup only registers
@@ -568,5 +568,92 @@ describe('DecisionMakerPage', () => {
 
     const bestFitLink = screen.getAllByRole('link').find((link) => link.className.includes('decision-result-name'));
     expect(bestFitLink?.textContent).toBe('Standing Calf Raise');
+  });
+});
+
+// Phase 7 Stage 4 — the submitted decision lives in the URL.
+function LocationProbe() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  return (
+    <>
+      <output data-testid="search">{location.search}</output>
+      <button type="button" onClick={() => navigate(-1)}>history back</button>
+      <button type="button" onClick={() => navigate(1)}>history forward</button>
+    </>
+  );
+}
+
+function renderAt(url: string) {
+  return render(
+    <MemoryRouter initialEntries={[url]}>
+      <Routes>
+        <Route path="/decide" element={<><DecisionMakerPage /><LocationProbe /></>} />
+      </Routes>
+    </MemoryRouter>
+  );
+}
+
+const bestFitName = () =>
+  document.querySelector('.decision-result-best .decision-result-name')?.textContent ?? null;
+
+describe('DecisionMakerPage — URL state', () => {
+  it('opening a decision URL restores the form and the recommendation without submitting', () => {
+    renderAt('/decide?outcome=calf-width-shape&goal=build-base&equipment=&fatigue=low');
+
+    expect(screen.getByRole('radio', { name: /appearance/i })).toBeChecked();
+    expect(screen.getByLabelText(/body area/i)).toHaveValue('calves');
+    expect(screen.getByLabelText(/how do you want it to look/i)).toHaveValue('calf-width-shape');
+    expect(screen.getByLabelText(/what are you trying to accomplish/i)).toHaveValue('build-base');
+    expect(screen.getByLabelText(/limit by equipment/i)).toBeChecked();
+    expect(screen.getByLabelText(/fatigue tolerance/i)).toHaveValue('low');
+    expect(bestFitName()).not.toBeNull();
+  });
+
+  it('submitting writes a canonical URL; editing without submitting does not', async () => {
+    const user = userEvent.setup();
+    renderAt('/decide');
+    expect(screen.getByTestId('search')).toHaveTextContent(/^$/);
+
+    await useAdvancedMode(user);
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'target:triceps-long-head');
+    await user.selectOptions(screen.getByLabelText(/what are you trying to accomplish/i), 'build-base');
+    await user.click(screen.getByLabelText(/limit by equipment/i));
+    await user.selectOptions(screen.getByLabelText(/equipment available/i), ['dumbbell', 'bench']);
+    expect(screen.getByTestId('search')).toHaveTextContent(/^$/);
+
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+    expect(screen.getByTestId('search')).toHaveTextContent(
+      '?target=triceps-long-head&goal=build-base&equipment=bench&equipment=dumbbell'
+    );
+    expect(bestFitName()).not.toBeNull();
+  });
+
+  it('back/forward moves between submitted decisions and restores each form', async () => {
+    const user = userEvent.setup();
+    renderAt('/decide?region=chest&goal=build-base');
+    const first = bestFitName();
+
+    await user.selectOptions(screen.getByLabelText(/region or physique target/i), 'region:back');
+    await user.click(screen.getByRole('button', { name: /get recommendation/i }));
+    expect(screen.getByTestId('search')).toHaveTextContent('?region=back&goal=build-base');
+    const second = bestFitName();
+    expect(second).not.toBe(first);
+
+    await user.click(screen.getByRole('button', { name: 'history back' }));
+    expect(screen.getByLabelText(/region or physique target/i)).toHaveValue('region:chest');
+    expect(bestFitName()).toBe(first);
+
+    await user.click(screen.getByRole('button', { name: 'history forward' }));
+    expect(screen.getByLabelText(/region or physique target/i)).toHaveValue('region:back');
+    expect(bestFitName()).toBe(second);
+  });
+
+  it('a malformed URL falls back to the normal empty form instead of crashing', () => {
+    renderAt('/decide?outcome=nope&goal=%&region=nowhere&equipment=laser&setup=extreme&current=nope');
+    expect(screen.getByRole('radio', { name: /appearance/i })).toBeChecked();
+    expect(screen.getByLabelText(/what are you trying to accomplish/i)).toHaveValue('');
+    expect(screen.getByRole('button', { name: /get recommendation/i })).toBeInTheDocument();
+    expect(bestFitName()).toBeNull();
   });
 });

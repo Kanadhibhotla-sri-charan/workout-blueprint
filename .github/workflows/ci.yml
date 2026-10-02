@@ -51,3 +51,37 @@ jobs:
       - name: Build
         working-directory: app
         run: npm run build
+
+  # Browser smoke test (Phase 7 Stage 4): the built bundle served under the
+  # Pages base path, driven through Explore → Detail → Decide → Build →
+  # Detail plus Decide URL state. Off-origin requests are blocked inside the
+  # test, so it stays network-independent like the rest of this gate.
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+            app/package-lock.json
+      - name: Install root dependencies
+        run: npm ci
+      - name: Install app dependencies
+        working-directory: app
+        run: npm ci
+      - name: Install Chromium
+        working-directory: app
+        run: npx playwright install --with-deps chromium
+      - name: Smoke test
+        working-directory: app
+        run: npm run test:e2e
+      - name: Upload Playwright traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: app/test-results/
+          retention-days: 7

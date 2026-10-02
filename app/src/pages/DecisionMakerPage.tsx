@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { useMemo, useState, type FormEvent } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import {
   aestheticOutcomes,
   bodyRegions,
@@ -14,13 +14,20 @@ import {
 } from '../data';
 import { makeRecommendation } from '../engine/decisionEngine';
 import { GOAL_LABELS, GOALS, GOALS_REQUIRING_CURRENT_EXERCISE } from '../engine/types';
-import type { DecisionInput, DecisionResult, DemandLevel, Goal } from '../engine/types';
+import type { DecisionInput, DecisionResult, Goal } from '../engine/types';
 import type { AestheticOutcome } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 import { VideoReference } from '../components/VideoReference';
+import {
+  decodeDecisionParams,
+  encodeDecisionInput,
+  toDecisionInput,
+  type DecisionFormState,
+  type DemandChoice,
+  type EntryMode,
+} from '../utils/decisionUrl';
 
-type DemandChoice = DemandLevel | '';
 // Appearance is the primary physique-goal entry point (Phase 4 Corrections
 // §2-5): a user should reach a recommendation without knowing a muscle's
 // anatomical name, and the first physique-oriented problem presented
@@ -30,45 +37,80 @@ type DemandChoice = DemandLevel | '';
 // (§5's "Appearance and Function remain clearly separated") feeding the
 // same downstream engine through its own functionalGoal input (4J) —
 // never mixed into the aesthetic outcome selector.
-type EntryMode = 'appearance' | 'function' | 'advanced';
-
-function toDemandLevel(value: DemandChoice): DemandLevel | null {
-  return value === '' ? null : value;
-}
 
 function formatRange([low, high]: [number, number]): string {
   return low === high ? `${low}` : `${low}–${high}`;
 }
 
+// The submitted decision lives in the URL (Phase 7 Stage 4 — see
+// utils/decisionUrl.ts), so a refresh, a shared link, or back/forward
+// reproduces it. The result is always computed from the URL; submitting
+// just writes the form's input there.
 export function DecisionMakerPage() {
-  const [bodyRegion, setBodyRegion] = useState('');
-  const [physiqueTarget, setPhysiqueTarget] = useState('');
-  const [goal, setGoal] = useState<Goal | ''>('');
-  const [restrictEquipment, setRestrictEquipment] = useState(false);
-  const [equipmentAvailable, setEquipmentAvailable] = useState<string[]>([]);
-  const [maxSetupTime, setMaxSetupTime] = useState<DemandChoice>('');
-  const [maxFatigueCost, setMaxFatigueCost] = useState<DemandChoice>('');
-  const [maxStabilityDemand, setMaxStabilityDemand] = useState<DemandChoice>('');
-  const [maxSkillDemand, setMaxSkillDemand] = useState<DemandChoice>('');
-  const [currentExerciseId, setCurrentExerciseId] = useState('');
-  const [result, setResult] = useState<DecisionResult | null>(null);
-  const [entryMode, setEntryMode] = useState<EntryMode>('appearance');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const search = searchParams.toString();
+  const decoded = useMemo(() => decodeDecisionParams(new URLSearchParams(search)), [search]);
+  const result = useMemo(() => (decoded.input ? makeRecommendation(decoded.input, exercises) : null), [decoded]);
+  const resultAestheticOutcome = decoded.input?.aestheticOutcome
+    ? getAestheticOutcomeById(decoded.input.aestheticOutcome) ?? null
+    : null;
+
+  function handleDecide(input: DecisionInput) {
+    const next = encodeDecisionInput(input);
+    // Re-submitting the same decision shouldn't stack a duplicate history entry.
+    setSearchParams(next, { replace: next.toString() === search });
+  }
+
+  // Keyed on the URL so back/forward (or any other URL change) restores
+  // the form to the decision being shown, not whatever was last typed.
+  return (
+    <DecisionWorkspace
+      key={search}
+      initial={decoded.form}
+      result={result}
+      resultAestheticOutcome={resultAestheticOutcome}
+      onDecide={handleDecide}
+    />
+  );
+}
+
+function DecisionWorkspace({
+  initial,
+  result,
+  resultAestheticOutcome,
+  onDecide,
+}: {
+  initial: DecisionFormState;
+  result: DecisionResult | null;
+  resultAestheticOutcome: AestheticOutcome | null;
+  onDecide: (input: DecisionInput) => void;
+}) {
+  const [bodyRegion, setBodyRegion] = useState(initial.bodyRegion);
+  const [physiqueTarget, setPhysiqueTarget] = useState(initial.physiqueTarget);
+  const [goal, setGoal] = useState<Goal | ''>(initial.goal);
+  const [restrictEquipment, setRestrictEquipment] = useState(initial.restrictEquipment);
+  const [equipmentAvailable, setEquipmentAvailable] = useState<string[]>(initial.equipmentAvailable);
+  const [maxSetupTime, setMaxSetupTime] = useState<DemandChoice>(initial.maxSetupTime);
+  const [maxFatigueCost, setMaxFatigueCost] = useState<DemandChoice>(initial.maxFatigueCost);
+  const [maxStabilityDemand, setMaxStabilityDemand] = useState<DemandChoice>(initial.maxStabilityDemand);
+  const [maxSkillDemand, setMaxSkillDemand] = useState<DemandChoice>(initial.maxSkillDemand);
+  const [currentExerciseId, setCurrentExerciseId] = useState(initial.currentExerciseId);
+  const [entryMode, setEntryMode] = useState<EntryMode>(initial.entryMode);
   // "region -> aesthetic outcome" resolves into the same bodyRegion/
   // physiqueTarget state the direct/advanced picker also writes into, plus
   // supportingPhysiqueTargets for the outcome's supporting targets (Phase 4
   // Corrections §7-8) — contributing targets that broaden the candidate
   // pool rather than being silently discarded, without driving the main
   // recommendation the way the primary target does.
-  const [appearanceRegion, setAppearanceRegion] = useState('');
-  const [aestheticOutcomeId, setAestheticOutcomeId] = useState('');
-  const [supportingPhysiqueTargets, setSupportingPhysiqueTargets] = useState<string[]>([]);
-  const [resultAestheticOutcome, setResultAestheticOutcome] = useState<AestheticOutcome | null>(null);
+  const [appearanceRegion, setAppearanceRegion] = useState(initial.appearanceRegion);
+  const [aestheticOutcomeId, setAestheticOutcomeId] = useState(initial.aestheticOutcomeId);
+  const [supportingPhysiqueTargets, setSupportingPhysiqueTargets] = useState<string[]>(initial.supportingPhysiqueTargets);
   // Function branch (4J): "region -> functional goal" mirrors the
   // Appearance selector's structure, but resolves into its own
   // functionalGoal state rather than physiqueTarget — kept fully separate
   // so a functional recommendation is never displayed as an aesthetic one.
-  const [functionalRegion, setFunctionalRegion] = useState('');
-  const [functionalGoalId, setFunctionalGoalId] = useState('');
+  const [functionalRegion, setFunctionalRegion] = useState(initial.functionalRegion);
+  const [functionalGoalId, setFunctionalGoalId] = useState(initial.functionalGoalId);
 
   const goalNeedsCurrentExercise = goal !== '' && GOALS_REQUIRING_CURRENT_EXERCISE.includes(goal);
   const currentExerciseOptions = bodyRegion
@@ -173,22 +215,26 @@ export function DecisionMakerPage() {
     event.preventDefault();
     if (!bodyRegion || !goal) return;
 
-    const input: DecisionInput = {
-      bodyRegion,
-      physiqueTarget: physiqueTarget || null,
-      supportingPhysiqueTargets: supportingPhysiqueTargets.length > 0 ? supportingPhysiqueTargets : null,
-      aestheticOutcome: aestheticOutcomeId || null,
-      functionalGoal: functionalGoalId || null,
-      goal,
-      equipmentAvailable: restrictEquipment ? equipmentAvailable : null,
-      maxSetupTime: toDemandLevel(maxSetupTime),
-      maxFatigueCost: toDemandLevel(maxFatigueCost),
-      maxStabilityDemand: toDemandLevel(maxStabilityDemand),
-      maxSkillDemand: toDemandLevel(maxSkillDemand),
-      currentExerciseId: currentExerciseId || null,
-    };
-    setResult(makeRecommendation(input, exercises));
-    setResultAestheticOutcome(getAestheticOutcomeById(aestheticOutcomeId) ?? null);
+    onDecide(
+      toDecisionInput({
+        entryMode,
+        appearanceRegion,
+        aestheticOutcomeId,
+        functionalRegion,
+        functionalGoalId,
+        bodyRegion,
+        physiqueTarget,
+        supportingPhysiqueTargets,
+        goal,
+        restrictEquipment,
+        equipmentAvailable,
+        maxSetupTime,
+        maxFatigueCost,
+        maxStabilityDemand,
+        maxSkillDemand,
+        currentExerciseId,
+      })
+    );
   }
 
   // Purely presentational — drives the progress indicator only, never a
