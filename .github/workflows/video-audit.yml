@@ -1,0 +1,111 @@
+name: Weekly video-reference audit
+
+# Checks every exercise's video_link against YouTube once a week and keeps a
+# single tracking issue (label: video-audit) in sync with the result.
+#
+# - Separate from CI and deploy: it needs the network, so it never gates a
+#   merge or a deployment. A failure here only means the audit itself broke.
+# - One consolidated report per run (job summary + downloadable artifact).
+# - One issue, not one per dead video. It's created when problems first
+#   appear, updated only when the set of problems changes (tracked by a
+#   fingerprint in the issue body), and closed once everything resolves.
+#   Runs where many links can't be checked (network trouble) are treated as
+#   inconclusive and leave the issue untouched.
+
+on:
+  schedule:
+    - cron: '17 6 * * 1' # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: video-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: 'npm'
+      - name: Install root dependencies
+        run: npm ci
+      - name: Audit video links against YouTube
+        run: node scripts/audit-video-links.mjs --out "$RUNNER_TEMP/video-audit.json"
+      - name: Build consolidated report
+        run: |
+          node scripts/summarize-video-audit.mjs \
+            "$RUNNER_TEMP/video-audit.json" \
+            "$RUNNER_TEMP/video-audit-report.md" \
+            "$RUNNER_TEMP/video-audit-meta.json"
+          cat "$RUNNER_TEMP/video-audit-report.md" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-audit-report
+          path: |
+            ${{ runner.temp }}/video-audit.json
+            ${{ runner.temp }}/video-audit-report.md
+      - name: Create, update, or close the tracking issue
+        uses: actions/github-script@v7
+        env:
+          REPORT_PATH: ${{ runner.temp }}/video-audit-report.md
+          META_PATH: ${{ runner.temp }}/video-audit-meta.json
+        with:
+          script: |
+            const fs = require('fs');
+            const meta = JSON.parse(fs.readFileSync(process.env.META_PATH, 'utf8'));
+            const report = fs.readFileSync(process.env.REPORT_PATH, 'utf8');
+            const { owner, repo } = context.repo;
+            const label = 'video-audit';
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+
+            if (meta.inconclusive) {
+              core.notice(`Inconclusive run (${meta.unresolved} links unchecked) — tracking issue left unchanged.`);
+              return;
+            }
+
+            const open = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'open', labels: label, per_page: 100,
+            });
+            const issue = open[0];
+            const previous = issue?.body?.match(/<!-- video-audit-fingerprint: (\S+) -->/)?.[1];
+            const title = `Video references: ${meta.failing_verified} failing, ${meta.backlog} awaiting review`;
+            const body = `${report}\n_Last updated by [this run](${runUrl})._\n`;
+
+            if (meta.problem_count === 0) {
+              if (issue) {
+                await github.rest.issues.createComment({ owner, repo, issue_number: issue.number,
+                  body: `All verified video references resolve again and there is no review backlog ([run](${runUrl})). Closing.` });
+                await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+              }
+              core.info('Clean audit.');
+              return;
+            }
+
+            if (!issue) {
+              try {
+                await github.rest.issues.createLabel({ owner, repo, name: label, color: 'd93f0b',
+                  description: 'Tracking issue maintained by the weekly video audit' });
+              } catch (err) {
+                if (err.status !== 422) throw err; // 422 = label already exists
+              }
+              const created = await github.rest.issues.create({ owner, repo, title, body, labels: [label] });
+              core.notice(`Opened #${created.data.number}`);
+              return;
+            }
+
+            if (previous === meta.fingerprint) {
+              core.info(`No change since last report on #${issue.number}.`);
+              return;
+            }
+
+            await github.rest.issues.update({ owner, repo, issue_number: issue.number, title, body });
+            await github.rest.issues.createComment({ owner, repo, issue_number: issue.number,
+              body: `The set of problem references changed — report above updated ([run](${runUrl})).` });
+            core.notice(`Updated #${issue.number}`);

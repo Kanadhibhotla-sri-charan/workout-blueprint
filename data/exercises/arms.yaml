@@ -50,6 +50,8 @@
   video_creator: Colossus Fitness
   video_title: How To EZ Bar Curl With Perfect Form (Grow Your Biceps)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-curl
   name: Dumbbell Curl
   summary: The same standing curl as the barbell version, with independent arms for a fuller supination path and a bit more stretch.
@@ -101,6 +103,8 @@
   video_creator: Howcast
   video_title: "How to Do a Dumbbell Biceps Curl | Arm Workout"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-dumbbell-curl
   name: Incline Dumbbell Curl
   summary: Places the upper arm behind the body for the strongest available stretch-mediated biceps growth stimulus.
@@ -152,6 +156,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Seated Incline Dumbbell Bicep Curl"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: preacher-curl
   name: Preacher Curl
   summary: Fixes the upper arm forward on a pad, removing swing for a strict, shortened-position biceps stimulus.
@@ -207,6 +213,8 @@
   video_creator: KAGED
   video_title: "Preacher Curls | How To Perform It Correctly"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: preacher-curl-machine
   name: Preacher Curl Machine
   summary: A fixed-path preacher curl, well suited to pushing the strict shortened-position stimulus safely to true failure.
@@ -258,6 +266,8 @@
   video_creator: Renaissance Periodization
   video_title: Machine Preacher Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hammer-curl
   name: Hammer Curl
   summary: A neutral-grip curl shifting work toward the brachialis and brachioradialis for arm thickness rather than biceps peak.
@@ -310,6 +320,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Hammer Curl"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-hammer-curl-rope
   name: Cable Hammer Curl (Rope)
   summary: A rope-attachment neutral-grip curl keeping constant tension on the brachialis and brachioradialis, a pump-oriented arm-thickness finisher.
@@ -362,6 +374,8 @@
   video_creator: James Harrison
   video_title: Rope Hammer Curl - Exercise Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cross-body-hammer-curl
   name: Cross-Body Hammer Curl
   summary: A diagonal-path hammer curl variation toward the opposite shoulder, for a different line of pull once straight hammer curls plateau.
@@ -414,6 +428,8 @@
   video_creator: OriGym
   video_title: "How To Do Cross Body Hammer Curl | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-curl
   name: Cable Curl
   summary: A curl with constant biceps tension through the whole range, including the top, for a pump-oriented stimulus.
@@ -463,6 +479,8 @@
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: How To Do Cable Bicep Curls - Full Video Tutorial and Step-by-Step Guide
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: drag-curl
   name: Drag Curl
   summary: Dragging the bar up along the torso lets the elbows travel behind the body for a stricter, more isolated biceps stimulus.
@@ -514,6 +532,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Barbell Drag Curl (Increase Bicep Peaks!)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-drag-curl
   name: Cable Drag Curl
   summary: Combines the drag curl's elbows-behind-the-body path with constant cable tension for a pump-oriented, strict biceps stimulus.
@@ -564,6 +584,8 @@
   video_creator: ChadMollickDotCom
   video_title: Cable Drag Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: zottman-curl
   name: Zottman Curl
   summary: Curls up supinated like a standard curl, then rotates pronated and lowers like a reverse curl — one movement for biceps and forearm.
@@ -616,6 +638,8 @@
   video_creator: Buff Dudes Workouts
   video_title: "How to Perform Zottman Curls | Bicep / Forearms Exercise Tutorial"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: close-grip-bench-press
   name: Close-Grip Bench Press
   summary: The heaviest, most mechanical-tension-driven triceps stimulus available, under loads single-joint extensions cannot reach.
@@ -667,6 +691,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Close-Grip Barbell Bench Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: overhead-triceps-extension
   name: Overhead Triceps Extension
   summary: Trains elbow extension with the shoulder flexed, commonly cited as the strongest stretch-mediated stimulus for the triceps long head.
@@ -722,6 +748,8 @@
   video_creator: PrazeNation
   video_title: "Overhead Dumbbell Tricep Extension | Proper Form & Triceps Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lying-triceps-extension-skull-crusher
   name: Lying Triceps Extension (Skull Crusher)
   summary: Loads the triceps in a lengthened position with the shoulder at roughly 90 degrees, a partial stretch distinct from the overhead position.
@@ -773,6 +801,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Skull Crushers"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dip-triceps-biased
   name: Dip (Triceps-Biased, Upright Torso)
   summary: An upright-torso dip shifting emphasis toward the triceps rather than the lower chest, a heavy bodyweight compound stimulus.
@@ -824,6 +854,8 @@
   video_creator: Jonathan Bonnet
   video_title: Triceps - (Upright) Dips (Proper Form)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-pushdown
   name: Cable Pushdown
   summary: A low-cost, pump-oriented triceps finisher with easy load adjustment and a fast setup.
@@ -875,6 +907,8 @@
   video_creator: Renaissance Periodization
   video_title: Cable Triceps Pushdown
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-triceps-extension
   name: Machine Triceps Extension
   summary: A fixed-path elbow extension removing cable-height and attachment setup, well suited to a triceps pump pushed to true failure.
@@ -923,6 +957,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A SEATED MACHINE TRICEPS EXTENSION | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: triceps-kickback
   name: Triceps Kickback
   summary: Holds the upper arm still and extends only the forearm, a light, low-fatigue mind-muscle-connection finisher.
@@ -974,6 +1010,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Tricep Kickback (Dumbbell)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-overhead-extension-leaning-forward
   name: Cable Overhead Extension (Leaning Forward)
   summary: Leaning forward away from the stack while extending overhead keeps constant tension through the triceps long head's stretch.
@@ -1027,3 +1065,5 @@
   video_creator: STYRK
   video_title: Cable overhead lean away triceps extension, rope
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

@@ -58,6 +58,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Incline Chest Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-barbell-press
   name: Incline Barbell Press
   summary: A fixed-path incline press offering the heaviest loadable upper-chest stimulus of the incline family.
@@ -114,6 +116,8 @@
   video_creator: Buff Dudes Workouts
   video_title: "Incline Barbell Press | Upper Chest | How-To Exercise Tutorial"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-machine-press
   name: Incline Machine Press
   summary: A stable, fixed-path incline press that removes free-weight balance demand, well suited to pushing an upper-chest set to true failure.
@@ -169,6 +173,8 @@
   video_creator: FIT.nl
   video_title: "Incline Machine Chest Press | Proper Form Tutorial for Upper Chest"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-incline-press
   name: Smith Machine Incline Press
   summary: A barbell on a fixed vertical rail, removing the spotter requirement and most of the balance demand of a free barbell incline press.
@@ -225,6 +231,8 @@
   video_creator: James Harrison
   video_title: Incline Smith Machine Bench Press - Exercise Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-cable-press
   name: Incline Cable Press
   summary: A standing incline-angled cable press with constant tension through the range, for a pump-oriented upper-chest stimulus.
@@ -280,6 +288,8 @@
   video_creator: HASfit
   video_title: Incline Cable Chest Press - HASfit Upper Chest Exercise Demonstration - Incline Cable Bench Press
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: flat-barbell-bench-press
   name: Flat Barbell Bench Press
   summary: The reference horizontal chest press and the primary mechanical- tension, strength-building mid-chest stimulus.
@@ -337,6 +347,8 @@
   video_creator: Jeremy Ethier
   video_title: How to PROPERLY Bench Press for Growth (5 Easy Steps)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-bench-press
   name: Smith Machine Bench Press
   summary: A barbell on a fixed vertical rail, removing the spotter requirement and most of the balance demand of a free barbell bench press.
@@ -393,6 +405,8 @@
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Smith Machine Bench Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: flat-dumbbell-press
   name: Flat Dumbbell Press
   summary: A general horizontal chest press with independently moving arms, for a mid-chest mechanical-tension stimulus with extra stretch.
@@ -450,6 +464,8 @@
   video_creator: PrazeNation
   video_title: "Flat Bench Dumbbell Press | Proper Form & Chest Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-chest-press
   name: Machine Chest Press
   summary: A stable, fixed-path horizontal press well suited to pushing a mid-chest set to true failure without free-weight balance demand.
@@ -504,6 +520,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Chest Press (Cybex)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-chest-press
   name: Cable Chest Press
   summary: A standing cable press with constant tension through the range, for a pump-oriented mid-chest stimulus with a converging path.
@@ -556,6 +574,8 @@
   video_creator: Howcast
   video_title: "How to Do a Cable Chest Press | Chest Workout"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hex-press
   name: Hex Press
   summary: Pressing two dumbbells while squeezing them together, adding constant isometric adduction tension for an inner-chest pump stimulus.
@@ -609,6 +629,8 @@
   video_creator: Train With Cuz
   video_title: Dumbbell Hex Press
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: flat-dumbbell-fly
   name: Flat Dumbbell Fly
   summary: A free-weight, mid-chest-biased adduction movement with a strong bottom-range stretch stimulus, performed flat.
@@ -663,6 +685,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Flys On A Flat Bench"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-dumbbell-fly
   name: Incline Dumbbell Fly
   summary: Angling the bench up shifts a free-weight fly's stretch and tension toward the upper chest.
@@ -718,6 +742,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Incline Dumbbell Fly || Hit Your Chest HARD!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: decline-dumbbell-fly
   name: Decline Dumbbell Fly
   summary: Angling the bench down shifts a free-weight fly's stretch and tension toward the lower chest.
@@ -771,6 +797,8 @@
   video_creator: LIVESTRONG
   video_title: How to Do a Decline Dumbbell Fly
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-fly-pec-deck
   name: Machine Fly (Pec Deck)
   summary: A fixed-path fly that removes balance demand, well suited to a pump-oriented mid-chest finisher pushed to true failure.
@@ -822,6 +850,8 @@
   video_creator: Renaissance Periodization
   video_title: Machine Flye
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-fly
   name: Cable Fly
   summary: A cable-based chest adduction option with adjustable pulley height, the only fly variation that can target upper or lower chest directly.
@@ -875,6 +905,8 @@
   video_creator: Wavvy Fitness
   video_title: "TUTORIAL: How To Properly Do Cable Flyes"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-pullover-chest-biased
   name: Dumbbell Pullover (Chest-Biased)
   summary: A straight-arm overhead arc that loads the chest in a shoulder- extension role no press or fly reaches.
@@ -928,6 +960,8 @@
   video_creator: Colossus Fitness
   video_title: "How to PROPERLY Dumbbell Pullover for a BIG Chest | Fix Your Dumbbell Pullover Form NOW!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dip-chest-biased
   name: Dip (Chest-Biased, Forward Lean)
   summary: A bodyweight press that, with a forward torso lean, is one of the few ways to load the lower chest heavily.
@@ -983,6 +1017,8 @@
   video_creator: OriGym
   video_title: "How To Do Forward Lean Dips | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: push-up-chest
   name: Push-Up
   summary: An accessible, scalable horizontal press that trains the chest at low equipment cost.
@@ -1039,3 +1075,5 @@
   video_creator: Calisthenicmovement
   video_title: "The Perfect Push Up | Do it right!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

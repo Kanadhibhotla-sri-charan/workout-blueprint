@@ -49,6 +49,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A STANDING BARBELL WRIST CURL | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-wrist-curl
   name: Reverse Wrist Curl
   summary: Trains the wrist extensors, which little else in a normal routine loads directly.
@@ -101,6 +103,8 @@
   video_creator: LIVESTRONG
   video_title: How to Do Dumbbell Reverse Wrist Curls
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-curl
   name: Reverse Curl
   summary: Loads the brachioradialis and forearm extensors through an elbow- flexion pattern, adding arm and forearm work at once.
@@ -158,6 +162,8 @@
   video_creator: LivestrongWoman
   video_title: Dumbbell Reverse Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-reverse-curl
   name: Cable Reverse Curl
   summary: A cable keeps tension on the forearm extensors and brachioradialis through the whole range, for a pump-oriented reverse curl.
@@ -209,6 +215,8 @@
   video_creator: Health Hunt
   video_title: Reverse Cable Curl - For Amazing Bicep Gains
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: farmers-carry
   name: Farmer's Carry
   summary: Trains grip under load for time, matching how grip actually limits rows, pulldowns, and hinges — a function-and-endurance tool, not primarily a hypertrophy driver.
@@ -259,6 +267,8 @@
   video_creator: Dr. Carl Baird
   video_title: "How to Perform the Farmer's Carry"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: pronation-supination-work
   name: Pronation and Supination Work
   summary: Loads forearm rotation directly, a function-and-durability role more than a primary hypertrophy driver.
@@ -310,3 +320,5 @@
   video_creator: Hugh Simson
   video_title: Forearm Pronation and Supination exercise
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

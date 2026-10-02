@@ -8,7 +8,7 @@
 
 const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
-  REVIEW_STATUSES, VIDEO_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
+  REVIEW_STATUSES, VIDEO_STATUSES, VIDEO_VERIFICATION_METHODS, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
   AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
 } = require('./taxonomy');
@@ -51,6 +51,14 @@ const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const QUOTED_MODULE_REF = /^([a-z0-9]+(-[a-z0-9]+)*) \(.*module.*\)/;
 const REP_RANGE_PATTERN = /^\d+-\d+$/;
+
+function isValidPastIsoDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== value) return false;
+  return date.getTime() <= Date.now();
+}
+
 const YOUTUBE_URL_PATTERN = /^https:\/\/(www\.|m\.)?(youtube\.com\/(watch\?v=[a-zA-Z0-9_-]{11}|shorts\/[a-zA-Z0-9_-]{11})|youtu\.be\/[a-zA-Z0-9_-]{11})(\S*)?$/;
 
 const DEMAND_ORDER = ['low', 'medium', 'high'];
@@ -508,6 +516,23 @@ function validate(records) {
       }
     } else if (record.video_link !== null && record.video_link !== undefined) {
       report(record, 'schema', `"video_link" must be null when "video_status" is not "verified" (got status ${JSON.stringify(record.video_status)} with link ${JSON.stringify(record.video_link)}) — a dead/unconfirmed URL must not be preserved as if it were a working reference`);
+    }
+    // Verification provenance lives on the record itself, so a QA report
+    // generated from the data can say exactly how (and when) each
+    // reference was confirmed instead of relying on a hardcoded id list.
+    if (record.video_status === 'verified') {
+      if (!VIDEO_VERIFICATION_METHODS.has(record.video_verification_method)) {
+        report(record, 'schema', `"video_verification_method" must be one of ${[...VIDEO_VERIFICATION_METHODS].join('|')} when "video_status" is "verified", got ${JSON.stringify(record.video_verification_method)}`);
+      }
+      if (!isValidPastIsoDate(record.video_verified_on)) {
+        report(record, 'schema', `"video_verified_on" must be a quoted ISO date (YYYY-MM-DD) not in the future when "video_status" is "verified", got ${JSON.stringify(record.video_verified_on)}`);
+      }
+    } else {
+      for (const field of ['video_verification_method', 'video_verified_on']) {
+        if (record[field] !== null && record[field] !== undefined) {
+          report(record, 'schema', `"${field}" must be null when "video_status" is not "verified" — an unverified reference has no verification to describe`);
+        }
+      }
     }
     if (record.video_link && typeof record.video_link === 'string' && YOUTUBE_URL_PATTERN.test(record.video_link)) {
       const existing = videoLinkCounts.get(record.video_link) || [];

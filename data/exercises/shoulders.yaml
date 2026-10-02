@@ -52,6 +52,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Standing Straight-Bar Military / Overhead Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-shoulder-press
   name: Smith Machine Shoulder Press
   summary: A barbell on a fixed vertical rail, removing most of the balance and bracing demand of a standing or seated overhead press.
@@ -102,6 +104,8 @@
   video_creator: FIT.nl
   video_title: "Smith Machine Shoulder Press | Proper Form Tutorial for Shoulder Strength"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-shoulder-press
   name: Cable Shoulder Press
   summary: A standing cable press with constant tension through the range, for a pump-oriented front-delt stimulus.
@@ -152,6 +156,8 @@
   video_creator: OriGym
   video_title: "How To Do Cable Shoulder Press | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-machine-shoulder-press
   name: Seated Machine Shoulder Press
   summary: A stable vertical press well suited to pushing a front-delt set to true failure without managing balance or bar path.
@@ -202,6 +208,8 @@
   video_creator: Renaissance Periodization
   video_title: Machine Shoulder Press
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-lateral-raise
   name: Dumbbell Lateral Raise
   summary: The most available direct side-delt option, a mechanical-tension and pump stimulus that peaks near the top of the range.
@@ -251,6 +259,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Side Lateral Raise"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-lateral-raise
   name: Cable Lateral Raise
   summary: A side-delt option whose resistance stays meaningful in the stretched bottom position, unlike a dumbbell raise.
@@ -300,6 +310,8 @@
   video_creator: Testosterone Nation
   video_title: Two Ways to Do Cable Lateral Raises
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-lateral-raise
   name: Machine Lateral Raise
   summary: A fixed-path abduction option that removes balance and momentum, well suited to pushing a side-delt set to true failure.
@@ -348,6 +360,8 @@
   video_creator: FIT.nl
   video_title: "Machine Lateral Raise | Proper Form Tutorial for Shoulder Growth"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: rear-delt-fly
   name: Rear-Delt Fly
   summary: Direct, stretch-mediated rear-delt work that pressing-heavy routines commonly leave short.
@@ -401,6 +415,8 @@
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: "How To Do Rear Delt Flys With Dumbbells - Proper Form, Sets & Reps"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-reverse-fly
   name: Machine Reverse Fly
   summary: A fixed-path rear-delt fly that removes balance demand, well suited to a rear-delt pump pushed to true failure.
@@ -449,6 +465,8 @@
   video_creator: ELEFITTV
   video_title: How To Properly Target Rear Delts On Reverse Fly Machine
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-rear-delt-builder
   name: Cable Rear Delt Builder
   summary: A cable row keeping the elbows below the wrists throughout the pull, holding the resistance angle specifically on the rear delt.
@@ -501,6 +519,8 @@
   video_creator: OriGym
   video_title: "How To Do Cable Rear Delt Fly | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: rear-delt-row
   name: Rear Delt Row
   summary: A seated dumbbell row from a dead hang, elbows down and thumbs rotating back and up, driving the rear delts through extension.
@@ -553,6 +573,8 @@
   video_creator: OriGym
   video_title: "How To Do Dumbbell Rear Delt Row | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: face-pull
   name: Face Pull
   summary: Combines a moderate rear-delt stimulus with a shoulder-rotation, joint-health component in one movement.
@@ -607,6 +629,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Face Pull"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-band-external-rotation
   name: Cable or Band External Rotation
   summary: Isolates shoulder external rotation for joint durability, not a primary size driver.
@@ -656,6 +680,8 @@
   video_creator: Bodybuilding.com
   video_title: "How To Do A Cable External Rotation | Exercise Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: push-up-plus
   name: Push-Up Plus
   summary: A low-equipment scapular-protraction drill, a durability and movement-quality tool rather than a primary size driver.
@@ -705,3 +731,5 @@
   video_creator: Matthew Stevens
   video_title: "Push-Up Plus | Push-Up Variation"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

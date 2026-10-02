@@ -236,6 +236,23 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 - **Decision-making impact:** yes, definitionally — only `reviewed` records may be consumed by future recommendation logic.
 - **Required for `reviewed`:** N/A (this is the field itself)
 
+### Video reference fields (Phase 6, revised Phase 7)
+
+One external YouTube execution reference per exercise. The app renders it as a plain link, never an embed. Full current state: [`docs/dev/reports/VIDEO-CURATION-QA.md`](../dev/reports/VIDEO-CURATION-QA.md).
+
+| Field | When `video_status` is `verified` | When `needs-review` / `broken` |
+|---|---|---|
+| `video_status` | closed enum: `verified` \| `needs-review` \| `broken` | same |
+| `video_link` | required — a well-formed YouTube URL, unique across the dataset | must be `null` (a dead or unconfirmed URL is never kept as if it worked) |
+| `video_creator`, `video_title` | the channel and title the URL actually resolves to | optional |
+| `video_verification_method` | required — `metadata` (title/channel checked against `name`/`equipment`/`laterality`; footage **not** watched) or `visual` (a person watched it and confirmed the movement) | must be `null` |
+| `video_verified_on` | required — quoted ISO date (`"YYYY-MM-DD"`), not in the future | must be `null` |
+
+- **Why method and date live on the record:** so reports are generated from what was actually done, and nothing can claim a stronger kind of verification than the data records.
+- **URL liveness** is checked separately and on a schedule (`npm run audit-videos`, `.github/workflows/video-audit.yml`). It never runs during builds or tests.
+- **UI:** only `verified` renders as a clickable "Click here for video". `needs-review`/`broken` render as "Video reference under review".
+- **Required for `reviewed`:** no. A missing video doesn't make the exercise knowledge wrong; it's tracked as `needs-review` instead.
+
 ## Summary table
 
 | Field | Type | Required | Controlled vocabulary | Decision-relevant | Required for `reviewed` |
@@ -273,6 +290,11 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 | `overlaps_with` | list | no | IDs, must resolve | yes | conditional |
 | `evidence_notes` | list | conditional | — | yes | conditional |
 | `review_status` | string | yes | closed (3) | yes (definitional) | N/A |
+| `video_status` | string | yes | closed (3) | no | no |
+| `video_link` | string \| null | when `verified` | YouTube URL, unique | no | no |
+| `video_creator`, `video_title` | string \| null | no | — | no | no |
+| `video_verification_method` | string \| null | when `verified` | closed (2) | no | no |
+| `video_verified_on` | string \| null | when `verified` | ISO date | no | no |
 
 ## Resolved items (Phase 2 Open Decisions, architect-approved)
 

@@ -46,6 +46,8 @@
   video_creator: Colossus Fitness
   video_title: How to PROPERLY Perform A Cable Crunch to Shape Your Abs (Kneeling Cable Abdominal Crunch)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-crunch
   name: Machine Crunch
   summary: A fixed-path trunk-flexion movement, well suited to pushing an ab mechanical-tension stimulus safely to true failure.
@@ -95,6 +97,8 @@
   video_creator: FIT.nl
   video_title: "Machine Crunch | Proper Form Tutorial for Stronger Abs"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hanging-knee-leg-raise
   name: Hanging Knee or Leg Raise
   summary: Trains hip flexion with trunk control, scaling from bent knees to straight legs without changing equipment.
@@ -146,6 +150,8 @@
   video_creator: ATHLEAN-X™
   video_title: "Hanging Leg Raise | HOW-TO"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: plank
   name: Plank
   summary: The lowest-barrier anti-extension option, a stability-and-endurance tool rather than a growth stimulus.
@@ -200,6 +206,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Plank"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: ab-wheel-rollout
   name: Ab Wheel Rollout
   summary: An anti-extension movement through range rather than a held position, a real mechanical-tension and eccentric-control stimulus.
@@ -251,6 +259,8 @@
   video_creator: Mind Pump TV
   video_title: "Ab Wheel- How to PROPERLY Use an Ab Wheel | MIND PUMP"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: pallof-press
   name: Pallof Press
   summary: Loads anti-rotation directly, a control-and-durability tool rather than a primary hypertrophy driver.
@@ -304,6 +314,8 @@
   video_creator: FIT.nl
   video_title: "Cable Pallof Press | Proper Form Tutorial for Core Stability"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: suitcase-carry
   name: Suitcase Carry
   summary: Loads one side at a time so the trunk resists lateral pull, while also training grip — a stability-and-durability tool.
@@ -357,6 +369,8 @@
   video_creator: Dr. Carl Baird
   video_title: How To Perform The Suitcase Carry
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-woodchop
   name: Cable Woodchop
   summary: Trains trunk rotation through a range with constant tension, a pump-oriented rotational stimulus for the obliques.
@@ -407,6 +421,8 @@
   video_creator: FIT.nl
   video_title: "Cable Woodchop | Proper Form Tutorial for Core Rotation"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: russian-twist
   name: Russian Twist
   summary: A free-weight rotation option loaded hardest at the ends of the range, the opposite feel from a cable woodchop's constant tension.
@@ -460,3 +476,5 @@
   video_creator: Howcast
   video_title: "How to Do a Russian Twist | Ab Workout"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

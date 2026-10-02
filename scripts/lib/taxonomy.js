@@ -92,7 +92,16 @@ const ALL_FIELDS = new Set([
   'alternatives', 'complements', 'overlaps_with', 'evidence_notes', 'review_status',
   'physique_targets', 'functional_goals', 'aesthetic_characteristics',
   'video_link', 'video_creator', 'video_title', 'video_status',
+  'video_verified_on', 'video_verification_method',
 ]);
+
+// How a `verified` video reference was confirmed to match its exercise.
+// `metadata`: the video's own title/channel were checked against the
+// exercise's name/equipment/laterality — no one watched the footage.
+// `visual`: a person actually watched it and confirmed the movement.
+// Kept as data (not hardcoded in a report script) so the QA report can
+// never claim a stronger kind of verification than was performed.
+const VIDEO_VERIFICATION_METHODS = new Set(['metadata', 'visual']);
 
 module.exports = {
   BODY_REGIONS,
@@ -102,6 +111,7 @@ module.exports = {
   COVERAGE_CATEGORIES,
   REVIEW_STATUSES,
   VIDEO_STATUSES,
+  VIDEO_VERIFICATION_METHODS,
   AESTHETIC_CHARACTERISTICS,
   AESTHETIC_ROLES,
   FUNDAMENTAL_MOVEMENT_PATTERNS,

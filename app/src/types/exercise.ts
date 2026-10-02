@@ -54,6 +54,10 @@ export interface Exercise {
   video_creator?: string | null;
   video_title?: string | null;
   video_status?: VideoStatus | null;
+  /** ISO date (YYYY-MM-DD) the reference was last confirmed; null unless verified. */
+  video_verified_on?: string | null;
+  /** How it was confirmed: title/channel metadata only, or a person watched it. */
+  video_verification_method?: 'metadata' | 'visual' | null;
   /** Source file basename, e.g. "chest.yaml" — added by the generator, not part of the canonical schema. */
   _file: string;
 }

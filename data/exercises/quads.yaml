@@ -56,6 +56,8 @@
   video_creator: MSP Fitness
   video_title: "How to BACK SQUAT: How to Barbell Back Squat properly - exercise demo with perfect technique"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-squat
   name: Smith Machine Squat
   summary: A fixed vertical bar path removing balance and bracing demand, well suited to training closer to failure without a spotter.
@@ -108,6 +110,8 @@
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Smith Machine Squat"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: front-squat
   name: Front Squat
   summary: The front-loaded bar position keeps the torso more upright, shifting more mechanical-tension demand onto the quads than a back squat.
@@ -161,6 +165,8 @@
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: "How To Properly Do A Barbell Front Squat - Full Video Tutorial & Exercise Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: sumo-squat
   name: Sumo Squat
   summary: A wide stance changes joint angles enough to bring the adductors in as a real mechanical-tension target, not just a stabilizer.
@@ -214,6 +220,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL SUMO SQUAT | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: sumo-deadlift
   name: Sumo Deadlift
   summary: A wide-stance floor pull with real quad and adductor involvement and less lower-back range than a conventional deadlift.
@@ -272,6 +280,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL SUMO DEADLIFT | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hack-squat
   name: Hack Squat
   summary: A guided squat path biasing the quads, well suited to pushing close to failure without a spotter.
@@ -324,6 +334,8 @@
   video_creator: Bodybuilding.com
   video_title: "Hack Squat | Exercise Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: leg-press
   name: Leg Press
   summary: Allows high loads with minimal balance and trunk demand, for heavy quad volume at much less systemic fatigue than a free squat.
@@ -377,6 +389,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Seated Leg Press (Cybex)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: bulgarian-split-squat-knee-dominant
   name: Bulgarian Split Squat (Short-Stance, Knee-Dominant Execution)
   summary: A short-stance, knee-dominant unilateral pattern biasing the quads, distinct from the hips module's long-stance version.
@@ -432,6 +446,8 @@
   video_creator: AFPTnorge
   video_title: Bulgarian Split-Squat (Knee Dominant)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-bulgarian-split-squat
   name: Smith Machine Bulgarian Split Squat
   summary: Fixing the bar to a vertical rail removes most of the balance demand that limits the free-weight version, letting the stimulus reach the muscles rather than being capped by wobble.
@@ -483,6 +499,8 @@
   video_creator: Prep Coach UK
   video_title: SMITH MACHINE BULGARIAN SPLIT SQUAT TUTORIAL
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: static-lunge
   name: Static Lunge
   summary: A fixed-stance, in-place lunge removing the coordination and balance demand of a walking or reverse lunge.
@@ -536,6 +554,8 @@
   video_creator: HASfit
   video_title: Stationary Lunge - HASfit Lunge Exercise Demonstration - Dumbbell Lunge - Barbell Lunge Workout
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-lunge
   name: Reverse Lunge
   summary: Stepping backward keeps the front knee from traveling far past the toes, often kinder on the knee than a forward-stepping lunge.
@@ -588,6 +608,8 @@
   video_creator: IronmasterPro
   video_title: Dumbbell Reverse Lunge Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: walking-lunge
   name: Walking Lunge
   summary: Continuous forward stepping adds a coordination and conditioning demand on top of the per-leg quad stimulus.
@@ -641,6 +663,8 @@
   video_creator: CrossFit
   video_title: The Walking Lunge
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: goblet-squat
   name: Goblet Squat
   summary: An accessible squat pattern needing only a single dumbbell or kettlebell, useful as a first loaded squat or for home training.
@@ -694,6 +718,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Goblet Squat"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-squat-sides
   name: Dumbbell Squat (Sides)
   summary: Dumbbells held at the sides remove the anti-flexion bracing demand a goblet squat adds and allow more total load.
@@ -743,6 +769,8 @@
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Dumbbell Squat"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: leg-extension
   name: Leg Extension
   summary: The only common movement that loads knee extension without the hip, a targeted, pump-oriented quad stimulus at low systemic cost.
@@ -791,6 +819,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Leg Extension (Cybex)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-nordic-curl
   name: Reverse Nordic Curl
   summary: Loads knee extension with the hip extended, so the rectus femoris works in a lengthened position — a strong stretch-mediated stimulus.
@@ -843,3 +873,5 @@
   video_creator: Aleks Physio
   video_title: How To Do Reverse Nordic Curls For Quad Strength
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

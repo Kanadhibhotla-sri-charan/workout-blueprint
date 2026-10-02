@@ -55,6 +55,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Standing Calf (BM)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-calf-raise
   name: Seated Calf Raise
   summary: The bent knee takes the gastrocnemius mostly out of play, so the soleus carries the load — a soleus-specific stimulus.
@@ -108,6 +110,8 @@
   video_creator: LIVESTRONG
   video_title: How to Do Seated Calf Raises
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: leg-press-calf-raise
   name: Leg-Press Calf Raise
   summary: Lets calf work be tacked onto the end of a leg-press set at almost no extra cost, for accumulating extra volume.
@@ -160,6 +164,8 @@
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Calf Raise On Leg Press Machine"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: single-leg-calf-raise
   name: Single-Leg Calf Raise
   summary: Bodyweight on one leg is often load enough, and training one side at a time closes side-to-side gaps a bilateral raise can hide.
@@ -210,6 +216,8 @@
   video_creator: FITASTIC
   video_title: Single Leg Body Weight Calf Raise
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: tibialis-raise
   name: Tibialis Raise
   summary: Directly trains the front of the shin, which no common lower-body lift loads, rounding out lower-leg development.
@@ -258,3 +266,5 @@
   video_creator: All Strength Training
   video_title: "Bodyweight Tibialis Raise | Fix Shin Splits"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

@@ -47,6 +47,8 @@
   video_creator: U.S. Forces Fitness
   video_title: How to - Isometric Neck Exercise (Front and Back)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: neck-extension
   name: Neck Extension
   summary: Loads the back of the neck, the region most responsible for visible neck thickness.
@@ -99,6 +101,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Seated Head Harness Neck Extension"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: neck-flexion
   name: Neck Flexion
   summary: Loads the front of the neck, which shrugs, rows, and extension work do not cover.
@@ -149,6 +153,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Weight Plate Neck Curl"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lateral-neck-flexion
   name: Lateral Neck Flexion
   summary: Covers side-to-side neck strength, which straight flexion and extension leave out.
@@ -197,3 +203,5 @@
   video_creator: Steve Smith
   video_title: "Lateral Neck Flexion Exercise | Neck Exercise | Dr. Steven Smith"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

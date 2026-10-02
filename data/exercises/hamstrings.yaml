@@ -60,6 +60,8 @@
   video_creator: Steev
   video_title: "Barbell Romanian Deadlift - Proper Form & Technique [4K]"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: stiff-leg-deadlift
   name: Stiff-Leg Deadlift
   summary: Keeping the knees much straighter than an RDL pushes nearly all the stretch and tension onto the hamstrings specifically.
@@ -113,6 +115,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Barbell Stiff-Leg Deadlift"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-leg-curl
   name: Seated Leg Curl
   summary: Trains knee flexion with the hip bent, a stretch-biased mechanical- tension stimulus a hinge alone doesn't provide.
@@ -165,6 +169,8 @@
   video_creator: Renaissance Periodization
   video_title: Seated Leg Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lying-leg-curl
   name: Lying Leg Curl
   summary: Trains knee flexion with the hip closer to straight, a distinct growth emphasis from the seated version.
@@ -215,6 +221,8 @@
   video_creator: FIT.nl
   video_title: "Lying Leg Curl | Proper Form Tutorial for Hamstrings"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: nordic-hamstring-curl
   name: Nordic Hamstring Curl
   summary: Produces high hamstring tension during the lowering phase with no machine, commonly cited for growth and injury-resilience benefits.
@@ -268,6 +276,8 @@
   video_creator: The Kneesovertoesguy
   video_title: How to Do a Nordic Hamstring Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: back-extension-45-hip-dominant
   name: 45° Back Extension (Hip-Hinge-Dominant Execution)
   summary: A loaded hip-extension pattern executed with bent knees and a neutral lower back, biasing the hamstrings and glutes specifically.
@@ -320,3 +330,5 @@
   video_creator: James Harrison
   video_title: 45 Degree Hip Extension - Exercise Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

@@ -53,6 +53,8 @@
   video_creator: Jeff Nippard
   video_title: "How To Build Great Glutes with Perfect Hip Thrust Technique (Fix Mistakes!)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-romanian-deadlift
   name: Smith Machine Romanian Deadlift
   summary: Fixing the bar to a vertical rail keeps it automatically close to the body, easing the technical cue beginners struggle with most in a free-bar RDL.
@@ -104,6 +106,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A SMITH MACHINE ROMANIAN DEADLIFT | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: bulgarian-split-squat-hip-dominant
   name: Bulgarian Split Squat (Long-Stance, Hip-Dominant Execution)
   summary: A long-stance, hip-dominant unilateral pattern biasing the glutes and hamstrings, distinct from the quads module's short-stance version.
@@ -160,6 +164,8 @@
   video_creator: AFPTnorge
   video_title: Bulgarian Split-Squat (Hip Dominant)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-kickback-glute
   name: Cable Kickback
   summary: A single-joint hip-extension option, a low-fatigue, pump-oriented glute finisher.
@@ -207,6 +213,8 @@
   video_creator: Physique Development
   video_title: "How to: Cable Kickback (Glute Max) | Form Tutorial for Bigger Glutes"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hip-abduction
   name: Hip Abduction
   summary: Directly loads the gluteus medius and minimus, which most squats and hinges train only as stabilizers.
@@ -261,6 +269,8 @@
   video_creator: Tim Bullici
   video_title: "Hip Abduction Machine | Exercise Tutorial for Gym Beginners"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hip-adduction
   name: Hip Adduction
   summary: Loads the adductors directly, a group that contributes to squatting and leg size but is rarely trained on its own.
@@ -311,6 +321,8 @@
   video_creator: Hammer Fitness
   video_title: "Hip Adduction Machine: How To"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: standing-cable-hip-flexion
   name: Standing Cable Hip Flexion
   summary: Trains hip flexion under load, which most lower-body routines leave entirely to stretching.
@@ -360,3 +372,5 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Standing Cable Hip Flexion"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

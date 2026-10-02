@@ -54,6 +54,8 @@
   video_creator: Calisthenicmovement
   video_title: "The Perfect Pull Up  - Do it right!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: chin-up-supinated
   name: Chin-Up (Supinated Grip)
   summary: The same bodyweight vertical pull as the pull-up, with an underhand grip that brings the biceps in more directly.
@@ -110,6 +112,8 @@
   video_creator: Mike Campbell Man Coach
   video_title: Chin ups- supinated grip
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lat-pulldown-wide-pronated
   name: Lat Pulldown (Wide, Pronated Grip)
   summary: A vertical pull with adjustable load and a wide overhand grip, the default most people mean by "lat pulldown."
@@ -165,6 +169,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Lat Pulldown | 3 GOLDEN RULES"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-grip-lat-pulldown
   name: Reverse-Grip Lat Pulldown
   summary: A supinated, closer-than-wide pulldown grip that brings the biceps into the pull more, with adjustable cable load.
@@ -218,6 +224,8 @@
   video_creator: PureGym
   video_title: How To Do A Reverse Grip Lat Pulldown
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: neutral-grip-lat-pulldown
   name: Neutral-Grip Lat Pulldown
   summary: A parallel or angled pulldown grip that avoids the shoulder's end-range external rotation, often the kindest grip on the joints.
@@ -271,6 +279,8 @@
   video_creator: josh cowan
   video_title: Exercise Tutorial - Neutral Grip Lat Pulldown
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: chest-supported-row
   name: Chest-Supported Row
   summary: A horizontal pull where the bench removes lower-back and balance demand, pushing a back-thickness set closer to true failure.
@@ -328,6 +338,8 @@
   video_creator: Testosterone Nation
   video_title: Chest-Supported Row Machine
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: barbell-bent-over-row-pronated
   name: Barbell Bent-Over Row (Pronated Grip)
   summary: The reference free-weight horizontal pull, the heaviest, most mechanical-tension-driven back-thickness stimulus available.
@@ -384,6 +396,8 @@
   video_creator: The Fitting Rooms Personal Training Gym
   video_title: How to do the Bent Over Row with a barbell (pronated grip)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-grip-barbell-row
   name: Reverse-Grip (Underhand) Barbell Row
   summary: The same heavy free-weight row with an underhand grip, shifting emphasis more toward the lats and biceps.
@@ -437,6 +451,8 @@
   video_creator: Dr. Allan Bacon
   video_title: Reverse-grip Bent-over Barbell Row Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-cable-row
   name: Seated Cable Row
   summary: A horizontal pull with the trunk supported by the seated position, for back-thickness work without the hinge's stability demand.
@@ -490,6 +506,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Seated Low Row (LF Cable)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: t-bar-row
   name: T-Bar Row
   summary: A free-standing row with a fixed, close, mostly neutral grip and a heavy, mechanical-tension-driven stimulus.
@@ -546,6 +564,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: T-Bar Row"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: conventional-deadlift
   name: Conventional Deadlift
   summary: Loads the whole posterior chain from a dead stop on the floor — the single heaviest mechanical-tension stimulus available for it.
@@ -599,6 +619,8 @@
   video_creator: PureGym
   video_title: How to Do A Conventional Deadlift Correctly
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: rack-pull
   name: Rack Pull
   summary: A partial-range deadlift from an elevated start, overloading the top-of-pull position past what a full deadlift allows.
@@ -652,6 +674,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL RACK PULL | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: single-arm-dumbbell-row
   name: Single-Arm Dumbbell Row
   summary: A unilateral horizontal pull that lets each side work through its own range and exposes side-to-side differences.
@@ -705,6 +729,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Bent-Over Row (Single-Arm)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: straight-arm-pulldown
   name: Straight-Arm Pulldown
   summary: A lat-focused, cable-based option with the elbow mostly fixed, a stretch-mediated stimulus independent of grip or biceps endurance.
@@ -754,6 +780,8 @@
   video_creator: Steev
   video_title: "Cable Straight Arm Pulldown - Proper Form & Technique [4K]"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-pullover-lat-biased
   name: Dumbbell Pullover (Lat-Biased)
   summary: A free-weight lat-focused option with more elbow bend than the chest-biased version, loading an overhead range no pulldown reaches.
@@ -807,6 +835,8 @@
   video_creator: Seriously Strong Training
   video_title: How to do Dumbbell Pullovers for Massive Lats
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: barbell-dumbbell-shrug
   name: Barbell / Dumbbell Shrug
   summary: Direct upper-trap loading, a mechanical-tension, size-focused stimulus rows and pulls only train indirectly.
@@ -858,6 +888,8 @@
   video_creator: The Strength Institute
   video_title: Barbell Shrugs - Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: back-extension-45-spinal-dominant
   name: 45° Back Extension (Spinal-Extension-Dominant Execution)
   summary: A loaded hip-extension pattern executed with straighter legs and controlled lumbar extension, biasing the spinal erectors specifically.
@@ -908,3 +940,5 @@
   video_creator: Renaissance Periodization
   video_title: 45 Degree Back Raise
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
