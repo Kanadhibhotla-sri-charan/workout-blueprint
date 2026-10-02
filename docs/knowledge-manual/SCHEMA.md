@@ -176,18 +176,21 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 
 ### `technique_cues`
 - **Type:** list of strings
-- **Required:** no — currently `[]` on every record.
-- **Required for `reviewed`:** no, per current practice — see Task D
+- **Required:** only for `reviewed` (Phase 7). `[]` is valid on a `needs-review` record.
+- **Purpose:** how to set up and perform this specific exercise and variation, as 3–5 actionable, observable cues. Quality bar: [COACHING-CONTENT-STANDARD.md](COACHING-CONTENT-STANDARD.md).
+- **Required for `reviewed`:** yes — at least 3 items. The validator also rejects duplicates, items under 20 characters, and stock filler phrases.
 
 ### `common_mistakes`
 - **Type:** list of strings
-- **Required:** no — currently `[]` on every record.
-- **Required for `reviewed`:** no, per current practice — see Task D
+- **Required:** only for `reviewed` (Phase 7). `[]` is valid on a `needs-review` record.
+- **Purpose:** 2–4 execution errors specific to this exercise, each with its consequence (`error: consequence`). Inherent downsides belong in `limitations`, not here. Quality bar: [COACHING-CONTENT-STANDARD.md](COACHING-CONTENT-STANDARD.md).
+- **Required for `reviewed`:** yes — at least 2 items, with the same mechanical checks as `technique_cues`.
 
 ### `programming_notes`
 - **Type:** list of strings
 - **Required:** no — `[]` is valid; populated with 1+ folded-block entries on a minority of records where there's a specific programming call-out (e.g. an evidence caveat that belongs in programming context, not `evidence_notes` itself).
 - **Note:** Phase 2's schema audit found and fixed 4 records where this had drifted to a scalar string instead of a list (`preacher-curl`, `standing-calf-raise`, `romanian-deadlift`, `seated-leg-curl`) — exactly the kind of type violation `validate-data` now catches automatically.
+- **Standard:** exercise-specific guidance not already supplied by the programming profile or packages — never restate or override rep ranges, RIR, sets or frequency. See [COACHING-CONTENT-STANDARD.md](COACHING-CONTENT-STANDARD.md).
 - **Required for `reviewed`:** no
 
 ### The three relationship fields, defined precisely
@@ -282,8 +285,8 @@ One external YouTube execution reference per exercise. The app renders it as a p
 | `mirror_effect` | string | yes | — | yes | yes |
 | `advantages` | list | no | — | no (retirement candidate) | no |
 | `limitations` | list | yes | — | yes | yes |
-| `technique_cues` | list | no | — | no (unused) | no |
-| `common_mistakes` | list | no | — | no (unused) | no |
+| `technique_cues` | list | for `reviewed` | — | no (coaching) | yes (≥3) |
+| `common_mistakes` | list | for `reviewed` | — | no (coaching) | yes (≥2) |
 | `programming_notes` | list | no | — | some | no |
 | `alternatives` | list | no | — | yes (use selectively, not bulk) | no |
 | `complements` | list | yes | free text by design | yes | yes |

@@ -32,8 +32,15 @@
   limitations:
     - The hips readily take over the movement once the load gets challenging, and it isn't always obvious from how the rep feels that this has happened.
     - Cable-station setup and pulley height add real setup time compared to a bodyweight ab movement, which matters if abs are being trained as a quick add-on.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Kneel facing the stack with the rope held beside your head, hips stacked over the knees.
+    - Curl the spine down, bringing the ribs toward the pelvis and the head toward the knees.
+    - Keep the hips fixed in place; the movement comes from the spine, not from sitting back.
+    - Return until the spine is extended and the abs are stretched before the next rep.
+  common_mistakes:
+    - "Sitting the hips back toward the heels: the crunch becomes a hip hinge and bodyweight moves the stack instead of the abs."
+    - "Pulling the rope down with the arms: the hands should stay fixed at the head; arm pulling steals tension from the abs."
+    - "Short pulses at the bottom only: skips the extended position, so the abs never work through full flexion."
   programming_notes: []
   alternatives: []
   complements:
@@ -92,7 +99,7 @@
   overlaps_with:
     - cable-crunch
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=G8937xqkxDo
   video_creator: FIT.nl
   video_title: "Machine Crunch | Proper Form Tutorial for Stronger Abs"
@@ -137,9 +144,17 @@
   limitations:
     - Grip endurance often runs out before the abs or hip flexors do for lifters who haven't built grip capacity elsewhere, ending the set on the wrong limiter.
     - The skill and shoulder-stability demand of hanging control is nontrivial — swinging is an easy failure mode that quietly drains the set of its intended tension.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - Hang with straight arms and the shoulders pulled slightly down, legs still.
+    - "Lift by curling the pelvis up: tilt the hips back so the knees rise toward the chest and the lower back rounds slightly at the top."
+    - Raise the knees, or straight legs once you're ready, as high as you can control, then lower slowly to a dead hang.
+    - Pause at the bottom to stop any swing before the next rep.
+  common_mistakes:
+    - "Swinging to get the legs up: momentum does the work, not the abs."
+    - "Lifting the thighs only to horizontal without curling the pelvis: mostly trains the hip flexors. The abs work when the pelvis tilts up."
+    - "Letting grip end the set: use straps if grip gives out before the abs."
+  programming_notes:
+    - Progress from bent knees to straight legs before adding load. After that, a light dumbbell held between the feet or ankle weights can add resistance.
   alternatives: []
   complements:
     - A loaded trunk-flexion movement.
@@ -201,7 +216,7 @@
   overlaps_with:
     - ab-wheel-rollout
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=pSHjTRCQxIw
   video_creator: ScottHermanFitness
   video_title: "How To: Plank"
@@ -254,7 +269,7 @@
   overlaps_with:
     - plank
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=rqiTPdK1c_I
   video_creator: Mind Pump TV
   video_title: "Ab Wheel- How to PROPERLY Use an Ab Wheel | MIND PUMP"
@@ -301,9 +316,17 @@
   limitations:
     - The stimulus is inherently light — this is a control-and-durability tool, not a movement that drives meaningful oblique hypertrophy on its own.
     - Band or cable resistance is hard to load heavily in a way that keeps adding real challenge over time, unlike a barbell-based progression.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - Set a cable or band at chest height and stand side-on, feet about shoulder width, far enough away that there's tension at the start.
+    - Hold the handle at your sternum with both hands, ribs down and glutes tight.
+    - Press the handle straight out from your chest and hold for a few seconds without letting the torso turn toward the anchor.
+    - Bring it back to the chest under control, then finish all reps before switching sides.
+  common_mistakes:
+    - "Letting the torso or hips twist toward the anchor: the anti-rotation demand, the whole point of the exercise, disappears."
+    - "Standing so close there's little tension: the press feels easy and does little."
+    - "Pressing up or out to the side instead of straight forward from the sternum: shortens the lever, so the trunk has less rotation to resist."
+  programming_notes:
+    - Progress by standing farther from the anchor or holding each press longer, rather than only adding stack weight.
   alternatives: []
   complements:
     - Trunk flexion and anti-extension work.
@@ -364,7 +387,7 @@
   overlaps_with:
     - farmers-carry (forearms module)
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=y-hn_Ha1-RE
   video_creator: Dr. Carl Baird
   video_title: How To Perform The Suitcase Carry
@@ -407,8 +430,15 @@
   limitations:
     - It's easy for the arms to do most of the work instead of the trunk, especially as fatigue sets in, which shifts the stimulus away from the obliques without an obvious form breakdown.
     - Requires a cable station with adjustable pulley height, which limits where this can be done compared to free-weight rotational options.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the pulley high, stand side-on with feet wider than the shoulders, and hold the handle with both hands above the near shoulder.
+    - Keep the arms long and fairly still; rotate the trunk to pull the handle diagonally down across your body.
+    - Let the back heel pivot so the hips can turn, but start the movement from the trunk.
+    - Return slowly against the cable, resisting the pull back to the start.
+  common_mistakes:
+    - "Pulling with the arms instead of rotating: the arms tire out and the obliques barely work."
+    - "Rushing the return: the controlled return under cable tension is half the stimulus."
+    - "Rounding forward into a crunch: the target is rotation, not flexion."
   programming_notes: []
   alternatives: []
   complements:
@@ -471,7 +501,7 @@
   overlaps_with:
     - cable-woodchop
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=wkD8rjkodUI
   video_creator: Howcast
   video_title: "How to Do a Russian Twist | Ab Workout"

@@ -38,8 +38,15 @@
     - Calf size is notoriously slow to respond even with consistent, well- executed training — genetics set a large part of the ceiling here more than with most muscle groups.
     - The range of motion quietly shrinks under fatigue or heavy load, since bouncing off the bottom stretch is an easy way to move more weight without feeling like technique broke down.
     - The dumbbell/block version caps load at what can be held and balanced on, which limits the mechanical-tension ceiling well below what a loaded machine allows.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Stand with the balls of your feet on the platform edge and the knees straight but not locked.
+    - Lower the heels as far as possible and pause briefly in the stretch.
+    - Rise as high as you can onto your toes and pause at the top.
+    - Keep the knees straight throughout so the gastrocnemius stays involved.
+  common_mistakes:
+    - "Bouncing out of the bottom: the Achilles tendon does the work and the range shrinks."
+    - "Bending the knees to help lift the load: shifts work to the legs and away from the calf."
+    - "Letting the range shrink as the set goes on under heavy load: the last reps skip the stretch and the top squeeze, where most of the calf work happens."
   programming_notes:
     - The toe-angle inner/outer head-bias cue now has real hypertrophy evidence behind it — see evidence_notes — though it was only tested with a machine calf raise, not this record's free-standing version.
   alternatives: []
@@ -96,8 +103,15 @@
   limitations:
     - How cleanly the gastrocnemius gets excluded depends on the machine's pad and knee-angle design — a poorly built machine lets it creep back into the movement.
     - The seated position removes bodyweight as a loading option, so the achievable stimulus is capped entirely by the machine's available load.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the knee pad snug on your lower thighs with the balls of your feet on the platform edge.
+    - Lower the heels as far as possible and pause briefly in the stretch.
+    - Push up onto your toes as high as you can and squeeze at the top.
+    - Keep each rep slow; don't bounce out of the bottom.
+  common_mistakes:
+    - "Bouncing out of the stretch: the Achilles tendon's rebound does the work instead of the soleus."
+    - "Half reps in the middle of the range: skips both the stretch and the top squeeze."
+    - "Pushing the pad up with your hands or hips: the calves skip the start of each rep, which is the hardest part."
   programming_notes: []
   alternatives: []
   complements:
@@ -159,7 +173,7 @@
     - standing-calf-raise
     - seated-calf-raise
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=OMUvfMZOcSA
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Calf Raise On Leg Press Machine"
@@ -202,8 +216,15 @@
   limitations:
     - Bodyweight alone stops being an adequate stimulus for a well-trained lifter well before the calf is genuinely challenged, and there's no easy way to add load beyond holding a dumbbell.
     - Balance demand can become the limiting factor before the calf itself is meaningfully fatigued, especially for beginners.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Stand on one foot on a step with the heel hanging off the edge, holding something lightly for balance.
+    - Keep the working knee straight.
+    - Lower the heel as far as possible and pause in the stretch.
+    - Rise as high as you can onto the ball of the foot.
+  common_mistakes:
+    - "Bouncing at the bottom: tendon rebound replaces calf work."
+    - "Gripping the support hard enough to pull yourself up: the arms take load off the calf, so the set looks harder than the calf work it delivers."
+    - "Rolling onto the outside edge of the foot at the top: the ankle wobbles and the calf finishes the rep through a shorter, less stable range."
   programming_notes: []
   alternatives: []
   complements:
@@ -261,7 +282,7 @@
     - Plantarflexion work.
   overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=pz70FwVRDJE
   video_creator: All Strength Training
   video_title: "Bodyweight Tibialis Raise | Fix Shin Splits"

@@ -35,8 +35,15 @@
   limitations:
     - The fixed bar path doesn't let the wrists find their own natural rotation through the rep, which is part of why a straight bar in particular bothers some lifters' wrists and elbows.
     - Momentum from the shoulders and lower back is an easy substitute for elbow-flexor tension once the load gets heavy, and it's not always obvious from the outside that this has happened.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Grip the bar about shoulder width with palms up; on an EZ-bar use the angled grip that keeps your wrists comfortable.
+    - Pin the upper arms to your sides and keep them there; only the forearms move.
+    - Curl until the forearms are close to vertical and squeeze, then lower until the elbows are fully straight.
+    - Keep knees soft and glutes tight so the hips and lower back stay still.
+  common_mistakes:
+    - "Swinging the torso back to start the rep: the hips and lower back move the bar and the biceps skip the hardest part of the range."
+    - "Elbows drifting forward at the top: the front delts take over and tension leaves the biceps where the contraction should peak."
+    - "Stopping short of straight arms at the bottom: skips the lengthened part of the curl and makes heavier loads look possible."
   programming_notes: []
   alternatives: []
   complements:
@@ -98,7 +105,7 @@
     - barbell-ez-bar-curl
     - cable-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=ykJmrZ5v0Oo
   video_creator: Howcast
   video_title: "How to Do a Dumbbell Biceps Curl | Arm Workout"
@@ -141,8 +148,15 @@
   limitations:
     - The extended shoulder position is genuinely uncomfortable for some lifters, which caps how much of the intended stretch can actually be loaded.
     - Load ceiling is modest compared to a standing curl, since the stretched shoulder position is the limiting factor rather than raw biceps strength.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the bench to about 45 to 60 degrees and sit back with your upper back and head on the pad.
+    - Let the arms hang straight down behind the torso, palms facing forward.
+    - Curl without bringing the upper arms forward; keep the elbows pointing at the floor.
+    - Lower all the way to straight arms so the stretched position is loaded.
+  common_mistakes:
+    - "Bringing the elbows forward as you curl: removes the arm-behind-the-body position that makes this variation distinct."
+    - "Lifting the head and shoulders off the bench to help the curl: the arms move in front of the body and the stretch is lost."
+    - "Using weight too heavy to lower slowly into the stretch: the stretched position is the point of this exercise."
   programming_notes: []
   alternatives: []
   complements:
@@ -208,7 +222,7 @@
     - preacher-curl-machine
   evidence_notes:
     - "Same shoulder-position evidence as the incline curl's long-head claim, applied in reverse: shoulder flexion (preacher) vs. shoulder extension (incline) is the mechanism cited. Kassiano et al. (2024, PMC11906226) is the closest direct hypertrophy comparison. Evidence quality: moderate."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=fIWP-FRFNU0
   video_creator: KAGED
   video_title: "Preacher Curls | How To Perform It Correctly"
@@ -261,7 +275,7 @@
     - preacher-curl
   evidence_notes:
     - "Same shoulder-position evidence as the free-weight preacher curl (this is the same shortened shoulder position on a fixed path). See preacher-curl's evidence_notes. Evidence quality: moderate."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Ja6ZlIDONac
   video_creator: Renaissance Periodization
   video_title: Machine Preacher Curl
@@ -305,8 +319,14 @@
   limitations:
     - Because it shifts emphasis away from the biceps peak, it's a weaker choice than a supinated curl when biceps size specifically (rather than overall arm thickness) is the goal.
     - Same momentum-substitution risk as other standing curls — swinging is an easy way to move more weight without adding real tension to the target muscles.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Hold the dumbbells at your sides with palms facing each other.
+    - Curl with the thumbs leading, keeping the palms facing in for the whole rep.
+    - Keep the elbows at your sides and lower all the way to straight arms.
+  common_mistakes:
+    - "Swinging to move heavier dumbbells: the hips, not the elbow flexors, lift the weight."
+    - "Rotating the palms up during the curl: removes the neutral grip that shifts work to the brachialis and brachioradialis."
+    - "Elbows drifting forward at the top: the shoulders take part of the load."
   programming_notes: []
   alternatives: []
   complements:
@@ -369,7 +389,7 @@
     - hammer-curl
     - cross-body-hammer-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=T8YbgwwGxaA
   video_creator: James Harrison
   video_title: Rope Hammer Curl - Exercise Tutorial
@@ -414,8 +434,15 @@
   limitations:
     - The diagonal path is a coordination demand on top of the curl itself, and it's easy for that path to degrade into swinging once the load or fatigue increases.
     - It's a variation on an already-established movement rather than a distinct growth driver, so its main value is breaking a plateau, not adding a new stimulus category.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Hold the dumbbells at your sides with palms facing in.
+    - Curl one dumbbell across the body toward the opposite chest, keeping the palm facing in.
+    - Keep the upper arm against your side; only the forearm moves along the diagonal.
+    - Lower to a straight arm, then repeat on the other side.
+  common_mistakes:
+    - "Swinging the torso to get the weight across: the diagonal path turns into momentum and the elbow flexors lose tension."
+    - "Turning the palm up during the curl: it becomes a regular curl and loses the neutral-grip emphasis."
+    - "Elbow travelling forward and across with the dumbbell: the shoulder finishes the rep."
   programming_notes: []
   alternatives: []
   complements:
@@ -474,7 +501,7 @@
     - barbell-ez-bar-curl
     - dumbbell-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=NFzTWp2qpiE
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: How To Do Cable Bicep Curls - Full Video Tutorial and Step-by-Step Guide
@@ -527,7 +554,7 @@
     - cable-drag-curl
   evidence_notes:
     - "The common coaching cue calls this short-head-biased, but that contradicts the biomechanical principle the incline-curl evidence supports: drawing the elbows behind the torso extends the shoulder, the same direction incline curls use, which the EMG evidence ties to a long-head bias, not short. No study specifically testing drag curls was found to resolve the contradiction. Treat the head-bias claim as unresolved rather than asserting either side; the movement's real, better-supported value is the stricter, swing-free path (see why_this_exists), not a specific head bias."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=LMdNTHH6G8I
   video_creator: ScottHermanFitness
   video_title: "How To: Barbell Drag Curl (Increase Bicep Peaks!)"
@@ -579,7 +606,7 @@
     - cable-curl
   evidence_notes:
     - Same unresolved head-bias question as the free-weight drag curl — see drag-curl's evidence_notes. The cable's constant tension is a resistance-profile difference, not new evidence on head bias.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=3ib-M9kKSvU
   video_creator: ChadMollickDotCom
   video_title: Cable Drag Curl
@@ -633,7 +660,7 @@
     - barbell-ez-bar-curl
     - reverse-curl (forearms module) — the eccentric half of this movement.
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=D7bMA4WEKMI
   video_creator: Buff Dudes Workouts
   video_title: "How to Perform Zottman Curls | Bicep / Forearms Exercise Tutorial"
@@ -676,8 +703,15 @@
   limitations:
     - The narrow grip places real stress on the wrists and elbows, and some lifters simply can't tolerate it even with otherwise good bench-press technique.
     - A spotter or safety bars are genuinely needed to train close to failure safely, same as a regular-grip bench press.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Grip about shoulder width, just inside the shoulders. Going narrower stresses the wrists without adding triceps work.
+    - Keep the elbows tucked close to the torso as you lower the bar.
+    - Touch the bar to the lower chest, a little lower than on a regular bench press.
+    - Press to full lockout with the wrists stacked over the elbows.
+  common_mistakes:
+    - "Hands so close they nearly touch: strains the wrists and elbows with no extra triceps benefit."
+    - "Flaring the elbows out: the lift turns back into a regular bench press and the chest and shoulders take over."
+    - "Bouncing the bar off the chest: the rebound, not the triceps, gets the bar through the hardest part of the lift."
   programming_notes: []
   alternatives: []
   complements:
@@ -731,8 +765,15 @@
   limitations:
     - The overhead shoulder position demands real mobility, and lifters without it either can't reach the position safely or lose meaningful range trying.
     - Elbow stress at the bottom of the stretch is real, and load has to be added conservatively compared to a pushdown or a compound press.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Seated or standing, hold an EZ-bar, or one dumbbell in both hands, overhead with straight arms.
+    - Keep the upper arms close to your head and pointing up; only the elbows bend.
+    - Lower the weight behind your head until the triceps are fully stretched, as far as your elbows and shoulders tolerate.
+    - Extend back to straight arms without letting the upper arms drift forward.
+  common_mistakes:
+    - "Elbows flaring wide: reduces triceps tension and loads the elbow."
+    - "Arching the lower back to get the weight overhead: brace the core, or sit with back support."
+    - "Adding load faster than the elbows tolerate: elbow pain usually starts at the bottom of the stretch."
   programming_notes: []
   alternatives: []
   complements:
@@ -796,7 +837,7 @@
     - overhead-triceps-extension
   evidence_notes:
     - "Inferred, not directly tested. Maeo et al. (2023) — see overhead-triceps-extension's evidence note — compared only two endpoints: fully overhead vs. arm-at-side. No study located tests the roughly 90-degree shoulder position a skull crusher uses, so this record's \"partial long-head stretch\" claim is a reasonable inference from where 90 degrees sits between those two tested positions, not a finding from a study that actually used this exercise."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=d_KZxkY_0cM
   video_creator: ScottHermanFitness
   video_title: "How To: Skull Crushers"
@@ -838,9 +879,17 @@
   limitations:
     - Shoulder tolerance for a deep dip varies a lot between lifters, and forcing depth without adequate mobility raises real injury risk.
     - Bodyweight alone can be too much load to complete a useful number of reps for a beginner, and adding assistance or reducing range both come with their own setup complexity.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - Use narrow bars if available and start at the top with straight arms and the body vertical.
+    - Keep the torso upright and the elbows tucked, pointing straight back. The upright torso is what shifts this toward the triceps.
+    - Lower until the upper arms are about parallel to the floor, or as deep as your shoulders tolerate.
+    - Press up to full elbow lockout.
+  common_mistakes:
+    - "Leaning forward as fatigue builds: the dip turns into the chest-biased version."
+    - "Elbows flaring out: less triceps work and more shoulder stress."
+    - "Half reps near the top: misses most of the elbow range the triceps work through."
+  programming_notes:
+    - Once bodyweight reps go past the planned rep range, add load with a dip belt. If bodyweight is too much, use an assisted dip machine or a band rather than cutting depth.
   alternatives: []
   complements:
     - A pressing movement or a pushdown.
@@ -890,8 +939,15 @@
   limitations:
     - Load ceiling is modest relative to a compound press, since a single- joint, elbow-fixed movement can't move the same absolute weight.
     - It's easy for the elbows to drift away from the torso as the load increases, which brings the shoulders into the movement and dilutes the intended triceps isolation.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Stand tall facing a high pulley with the elbows pinned to your sides.
+    - Push the attachment down until the elbows are fully straight and squeeze the triceps at lockout.
+    - Let the forearms come back up to about horizontal while the upper arms stay still.
+    - With a rope, pull the ends apart at the bottom.
+  common_mistakes:
+    - "Elbows drifting forward and up as the load increases: the shoulders and lats join in and the triceps do less."
+    - "Leaning over the bar to push it down with bodyweight: the weight moves without the elbows doing the work."
+    - "Stopping short of full lockout: skips the end of the range where the triceps are fully contracted."
   programming_notes: []
   alternatives: []
   complements:
@@ -952,7 +1008,7 @@
     - cable-pushdown
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a lateral-head-specific bias here — see that record's evidence_notes for the full reasoning."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=j4XSuFLiZ6I
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A SEATED MACHINE TRICEPS EXTENSION | Exercise Demonstration Video and Guide"
@@ -1005,7 +1061,7 @@
     - cable-pushdown
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a differential lateral/medial-head bias here — see that record's evidence_notes for the full reasoning. The shoulder stays extended and roughly still through a kickback, so this movement doesn't put the long head through the stretched, shoulder-flexed position the overhead-extension evidence is actually about either."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=6SS6K3lAwZ8
   video_creator: ScottHermanFitness
   video_title: "How To: Tricep Kickback (Dumbbell)"
@@ -1049,8 +1105,15 @@
   limitations:
     - Setting up the leaning-forward position away from the stack takes more space and setup time than a standard pushdown or free-weight extension.
     - Absolute load is capped below what a barbell or EZ-bar overhead extension allows, so this can't fully substitute for that version's mechanical- tension ceiling.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the pulley high, face away from the stack, and lean forward in a staggered stance so the cable runs over your head.
+    - Start with elbows bent and hands behind your head, upper arms beside the head and pointing forward.
+    - Extend the elbows fully in front of you without moving the upper arms.
+    - Let the hands travel back until the triceps are deeply stretched before the next rep.
+  common_mistakes:
+    - "Upper arms dropping toward the torso as you extend: turns it into a pushdown and loses the overhead stretch on the long head."
+    - "Elbows flaring wide: reduces triceps tension and puts more stress on the elbow."
+    - "Rocking the torso to move the handle: the lean should stay fixed; body sway replaces elbow extension."
   programming_notes: []
   alternatives: []
   complements:

@@ -59,6 +59,21 @@ function isValidPastIsoDate(value) {
   return date.getTime() <= Date.now();
 }
 
+// Coaching content gate — see docs/knowledge-manual/COACHING-CONTENT-STANDARD.md.
+const COACHING_MINIMUMS = { technique_cues: 3, common_mistakes: 2 };
+const COACHING_FIELDS = ['technique_cues', 'common_mistakes', 'programming_notes'];
+const COACHING_MIN_ITEM_LENGTH = 20;
+// Phrases that are true of every exercise and therefore say nothing about
+// this one. Deliberately short — a false positive here would block real
+// content, so only unambiguous stock phrases belong.
+const COACHING_FILLER_PATTERNS = [
+  /\b(good|proper|correct|perfect) (form|technique)\b/i,
+  /\blisten to your body\b/i,
+  /\bmind[- ]muscle connection\b/i,
+  /\bstay (safe|focused)\b/i,
+  /\b(always )?warm up (properly|first)\b/i,
+];
+
 const YOUTUBE_URL_PATTERN = /^https:\/\/(www\.|m\.)?(youtube\.com\/(watch\?v=[a-zA-Z0-9_-]{11}|shorts\/[a-zA-Z0-9_-]{11})|youtu\.be\/[a-zA-Z0-9_-]{11})(\S*)?$/;
 
 const DEMAND_ORDER = ['low', 'medium', 'high'];
@@ -618,6 +633,37 @@ function validate(records) {
       // architect's Phase 2 Open Decisions memo (docs/architecture/
       // PHASE-2-OPEN-DECISIONS.md): the field is a retirement candidate,
       // not a content gap, and its emptiness must never block `reviewed`.
+
+      // Phase 7 coaching gate (docs/knowledge-manual/COACHING-CONTENT-STANDARD.md):
+      // an exercise can't be `reviewed` without enough coaching to act on.
+      for (const [field, min] of Object.entries(COACHING_MINIMUMS)) {
+        const count = Array.isArray(record[field]) ? record[field].length : 0;
+        if (count < min) {
+          report(record, 'governance', `reviewed record fails coaching gate: "${field}" needs at least ${min} items, has ${count} — populate it or set review_status to needs-review`);
+        }
+      }
+    }
+
+    // Mechanical quality checks on any coaching content present, whatever the
+    // review status. Exercise-specificity and accuracy remain a human review
+    // responsibility — these only catch what a script reliably can.
+    for (const field of COACHING_FIELDS) {
+      if (!Array.isArray(record[field])) continue;
+      const seen = new Set();
+      for (const item of record[field]) {
+        if (typeof item !== 'string') continue; // list-of-strings shape is checked elsewhere
+        const text = item.trim();
+        if (text.length < COACHING_MIN_ITEM_LENGTH) {
+          report(record, 'governance', `"${field}" item is too short to be useful coaching (${text.length} chars, minimum ${COACHING_MIN_ITEM_LENGTH}): ${JSON.stringify(text)}`);
+        }
+        const key = text.toLowerCase();
+        if (seen.has(key)) report(record, 'governance', `"${field}" contains a duplicate item: ${JSON.stringify(text)}`);
+        seen.add(key);
+        const filler = COACHING_FILLER_PATTERNS.find((pattern) => pattern.test(text));
+        if (filler) {
+          report(record, 'governance', `"${field}" item uses stock filler (${filler}) instead of exercise-specific coaching: ${JSON.stringify(text)}`);
+        }
+      }
     }
   }
 

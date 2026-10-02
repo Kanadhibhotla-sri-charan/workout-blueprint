@@ -40,8 +40,16 @@
     - Technical demand is real — hips-back, spine-neutral, bar-close-to-the- legs all have to happen together, and it takes real practice to load heavily without the lower back rounding.
     - Grip often fails before the hamstrings do at heavier loads, capping the set short of the target muscles' true limit unless straps or a mixed/hook grip are used.
     - Hamstring flexibility limits how deep the hinge can go while keeping the back neutral, so a stiff lifter may not reach a meaningful stretch even with good technique.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Start standing with the bar at your hips, feet hip width, knees softly bent.
+    - Push the hips straight back, keeping the bar against or close to your thighs as it travels down.
+    - Keep the back flat and the knee bend roughly the same all the way down. This is a hip hinge, not a squat.
+    - Lower until you feel a strong hamstring stretch or your back starts to round, often around mid-shin, then drive the hips forward to stand.
+  common_mistakes:
+    - "Rounding the lower back to reach lower: depth should stop where a flat back stops."
+    - "Letting the bar drift away from the legs: increases the load on the lower back."
+    - "Bending the knees more as you descend: it turns into a deadlift and the hamstring stretch shrinks."
+    - "Letting grip end the set before the hamstrings: use straps at heavier loads."
   programming_notes:
     - Unlike the 45-degree back extension or Bulgarian split squat, an RDL doesn't have a clean discrete technique switch that biases glutes vs. hamstrings — the moderate knee bend trains both together by design throughout the whole movement. For a more hamstring-isolated stimulus, see stiff-leg-deadlift below. For a more glute-isolated, shortened-position stimulus, see hip-thrust in the hips module.
   alternatives: []
@@ -110,7 +118,7 @@
     - romanian-deadlift
   evidence_notes:
     - Same general stretch-mediated hypertrophy grounding as romanian-deadlift above — see that record's evidence_notes. No study specific to the stiff-leg deadlift was located.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=1uDiW5--rAE
   video_creator: ScottHermanFitness
   video_title: "How To: Barbell Stiff-Leg Deadlift"
@@ -152,8 +160,14 @@
   limitations:
     - Machine availability and design vary a lot — a poorly fitted thigh pad or pivot point lets the hips creep up during the set, quietly trading away the stretch position that makes this exercise distinct.
     - The fixed pad position doesn't accommodate every body size well, which can create uncomfortable pressure points before the hamstrings are meaningfully fatigued.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the back pad so your knees line up with the pivot and lock the thigh pad down firmly just above the knees.
+    - Sit tall or lean slightly forward to increase the hamstring stretch.
+    - Curl the heels down and back as far as possible, then return slowly to nearly straight legs.
+  common_mistakes:
+    - "Thigh pad left loose: the hips rise and the stretched, hip-bent position that makes this exercise distinct is lost."
+    - "Letting the stack slam between reps: tension drops at the stretched end."
+    - "Short reps that never return to the stretched position: drops the lengthened range this machine is chosen for."
   programming_notes:
     - This hip-flexed knee-flexion position is close to what a 2024 direct trial (see evidence_notes) found to be a particularly effective lengthened-position stimulus for the hamstrings — more effective, by that trial's numbers, than the Nordic hamstring curl. See nordic-hamstring-curl below for the comparison.
   alternatives: []
@@ -207,8 +221,14 @@
   limitations:
     - The hips have a strong tendency to rise off the pad as the load gets heavy, which lets other muscles compensate and undercuts the isolation this exercise is meant to provide.
     - A prone position is uncomfortable or inaccessible for some body types and for anyone with hip-flexor or lower-back sensitivity to being face-down under load.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Line your knees up with the machine's pivot and set the pad just above the heels.
+    - Press the hips into the pad and hold the handles.
+    - Curl the heels toward your glutes as far as you can, then lower slowly to straight legs.
+  common_mistakes:
+    - "Hips rising off the pad: the lower back and hips assist and undercut the isolation."
+    - "Dropping the weight quickly on the way down: loses the lowering phase."
+    - "Partial reps that never reach straight legs: skips the lengthened part of the curl."
   programming_notes: []
   alternatives: []
   complements:
@@ -271,7 +291,7 @@
     - lying-leg-curl
   evidence_notes:
     - "Worth a correction to the popular framing, not just a citation: the same 2024 trial cited on seated-leg-curl (PMC11419281) directly compared the Nordic curl against lengthened-state training in a hip-flexed position (essentially a loaded seated leg curl) and found the hip-flexed version produced substantially more hamstrings growth (+18% vs. +11% total, +19% vs. +5% biceps femoris long head). The Nordic curl was still an effective hypertrophy stimulus in absolute terms — this isn't a claim that it doesn't work — but \"commonly cited for growth\" undersells that a simpler, less technically demanding machine exercise outperformed it in this trial. The Nordic curl's real, distinct value shown by this and other research is training the eccentric strength and fascicle adaptations tied to injury resilience, which a leg curl doesn't replicate — not necessarily the largest hypertrophy stimulus available."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=6NCN6kOagfY
   video_creator: The Kneesovertoesguy
   video_title: How to Do a Nordic Hamstring Curl
@@ -325,7 +345,7 @@
     - romanian-deadlift
     - back-extension-45-spinal-dominant (back module) — same equipment, spinal-extension-dominant execution, erector bias instead.
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=8Jg5iqTCehg
   video_creator: James Harrison
   video_title: 45 Degree Hip Extension - Exercise Tutorial
