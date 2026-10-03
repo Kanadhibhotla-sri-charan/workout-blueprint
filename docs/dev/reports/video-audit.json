@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-03T05:24:35.719Z",
-    "total_records": 127,
-    "live": 127,
+    "audited_at": "2026-10-03T05:39:19.438Z",
+    "total_records": 128,
+    "live": 128,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1360,6 +1360,19 @@
       "http_result": 200,
       "resolved_title": "Machine Shoulder Press",
       "resolved_author": "Renaissance Periodization",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "side-plank",
+      "exercise_name": "Side Plank",
+      "muscle_group": "core",
+      "current_video_url": "https://www.youtube.com/watch?v=44ND4bOB-T0",
+      "video_id": "44ND4bOB-T0",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How to do a Side Plank  | Proper Form & Technique | NASM",
+      "resolved_author": "National Academy of Sports Medicine (NASM)",
       "classification": "LIVE",
       "notes": ""
     },

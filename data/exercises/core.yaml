@@ -400,6 +400,73 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: side-plank
+  name: Side Plank
+  summary: A bodyweight side-lying hold that trains the obliques by resisting sideways bending, the no-equipment counterpart to the suitcase carry.
+  why_this_exists: Every other obliques exercise in the library needs a cable, band, dumbbell or kettlebell. The side plank trains the same lateral-flexion resistance as a suitcase carry with bodyweight alone, at low fatigue, so the obliques can be worked directly anywhere.
+  body_regions:
+    - core
+  primary_targets:
+    - obliques
+    - quadratus lumborum
+  secondary_targets:
+    - gluteus medius
+  physique_targets:
+    - obliques
+  movement_patterns:
+    - anti-lateral flexion under load
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight isometric hold, one side at a time. Difficulty rises with the lever — knees down is easiest, feet stacked is harder, and elevating the feet or holding a weight on the hip adds more.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No cable, band, dumbbell or kettlebell is available and the obliques need direct work.
+    - A low-fatigue lateral-trunk exercise is wanted alongside heavier training, or as the bodyweight alternative to a suitcase carry.
+  less_suitable_when:
+    - Holds already last well over a minute per side — the stimulus has drifted toward endurance, and a harder lever or a loaded carry gives the obliques more to work against.
+    - Shoulder pain limits weight-bearing on the bottom forearm.
+  mirror_effect: Modest shaping effect on its own — as an isometric hold it builds lateral-trunk strength and endurance more than oblique size, so any sharper definition at the sides of the waist depends mostly on body-fat level.
+  advantages: []
+  limitations:
+    - As an isometric hold, it plateaus once long holds become easy; progressing needs a longer lever, elevated feet or added load rather than more time.
+    - The bottom shoulder carries much of the body's weight, which can limit the set before the obliques do.
+    - Each side is trained separately, so a full set takes twice as long as a bilateral hold.
+  technique_cues:
+    - Lie on one side with the elbow directly under the shoulder and the forearm flat on the floor.
+    - Stack the feet, or stagger them for a wider base, and keep the body in one straight line from head to heels.
+    - Lift the hips until there is no sag at the waist, and hold them high for the whole set.
+    - Brace the trunk and keep breathing steadily rather than holding the breath.
+    - Hold for time, then switch sides and match the hold on the other side.
+  common_mistakes:
+    - "Letting the hips sag toward the floor: the trunk bends sideways instead of resisting it, which takes the load off the obliques."
+    - "Rolling the top hip forward or back: the body twists out of line and the hold turns into a partial front plank."
+    - "Shrugging into the bottom shoulder instead of pushing the floor away: the shoulder ends up taking the strain before the trunk is challenged."
+  programming_notes:
+    - "Progress in this order: knees down, then feet staggered, then feet stacked, then feet elevated or a weight held on the hip. Once a long hold is easy, move to a harder lever or a loaded carry rather than holding longer."
+  alternatives: []
+  complements:
+    - Rotation or anti-rotation work, such as a woodchop or Pallof press, which loads the obliques in a different direction.
+  overlaps_with:
+    - suitcase-carry
+    - copenhagen-plank (hips module)
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=44ND4bOB-T0
+  video_creator: National Academy of Sports Medicine (NASM)
+  video_title: "How to do a Side Plank | Proper Form & Technique | NASM"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: cable-woodchop
   name: Cable Woodchop
   summary: Trains trunk rotation through a range with constant tension, a pump-oriented rotational stimulus for the obliques.

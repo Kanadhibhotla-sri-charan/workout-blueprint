@@ -1,6 +1,6 @@
 # Phase 7 Stage 5.5 — Side Plank Evaluation
 
-_Analysis only. Nothing in the repository was changed apart from this report. The other bodyweight candidates and the tagging and outcome questions are out of scope._
+_The analysis below was simulated (sections 1–5). After approval, the exercise was implemented; the real-record results are in [§6](#6-implemented-real-record-results), and they reproduce the simulation exactly. The other bodyweight candidates, the tagging and outcome questions, and the `core-anti-lateral-flexion` definition remain out of scope._
 
 ## Method
 
@@ -214,3 +214,117 @@ _Analysis only. Nothing in the repository was changed apart from this report. Th
 | Playwright | 3 / 3 |
 
 The analysis ran twice with byte-identical output. The temporary harness was deleted, and only this report was added.
+
+## 6. Implemented: real-record results
+
+### The record (`data/exercises/core.yaml`, `side-plank`)
+
+Built to the approved specification:
+
+| Field | Value |
+|---|---|
+| `physique_targets` | `[obliques]` only |
+| `primary_targets` | obliques, quadratus lumborum |
+| `secondary_targets` | gluteus medius (not a physique target) |
+| `movement_patterns[0]` | `anti-lateral flexion under load` (existing value) |
+| Type / laterality | isolation, unilateral |
+| `equipment` | `[bodyweight]` |
+| Coverage tags | `low-setup`, `low-fatigue`, `equipment-limited-substitute` |
+| Fatigue / setup / skill / stability | low / low / low / medium |
+| `overlaps_with` | `suitcase-carry`, `copenhagen-plank (hips module)` |
+
+- **`overlaps_with` notation:** the Copenhagen plank lives in `hips.yaml`. `validate-data` requires a cross-file reference to carry its module note, the same convention as the suitcase carry's `farmers-carry (forearms module)`.
+- **Not tagged:** rectus abdominis, glute medius/minimus as a physique target, any functional goal. The `core-anti-lateral-flexion` definition is unchanged.
+- **Coaching content:**
+  - 5 technique cues and 3 common mistakes (`error: consequence`);
+  - honest limitations;
+  - a progression note;
+  - a hedged mirror effect ("builds lateral-trunk strength and endurance more than oblique size").
+- **Review status:** `reviewed`. It passes the coaching gate.
+- **Evidence notes:** left empty rather than citing studies that weren't checked.
+- **Video:**
+  - Sourced by search, then checked with the YouTube oEmbed endpoint (HTTP 200): "How to do a Side Plank | Proper Form & Technique | NASM" by the National Academy of Sports Medicine (`44ND4bOB-T0`).
+  - The title and channel match the record's name, equipment and laterality.
+  - Recorded as `metadata` on `2026-10-03`: **the footage was not watched.** The URL is unique.
+  - The audit then reported 128 / 128 LIVE, and `VIDEO-CURATION-QA.md` and `KNOWLEDGE-QA.md` were regenerated.
+
+### Coverage on the real record (two runs, byte-identical)
+
+| | Before (Stage 5.4 real) | Real side plank |
+|---|---:|---:|
+| Scenarios | 36,504 | 36,720 (+216 with the side plank as current) |
+| Answered | 20,581 | **21,064** (20,893 of the original 36,504, plus 171 of the new) |
+| Empty | 15,923 | 15,656 |
+| Answers lost | — | **0** |
+
+| Metric | Count |
+|---|---:|
+| Opened, of the original space | 312 |
+| Selection cells opened | 16 (obliques and `waist-side-definition`, bodyweight and nothing-selected, every tolerance) |
+| **Best Fits changed** | **204** |
+| Alternatives changed | 718 |
+| Complement lists changed | 1,189 |
+| Side plank in complement lists | 1,017 |
+
+Best Fit transitions, as simulated:
+
+| From → side plank | Scenarios |
+|---|---:|
+| Pallof press | 92 |
+| Plank | 52 |
+| Russian twist | 32 |
+| Hanging knee raise | 28 |
+
+### Match tiers and Appearance
+
+| Where the side plank is Best Fit | Scenarios | Tier |
+|---|---:|---|
+| Obliques target | 158 | primary |
+| `waist-side-definition` | 158 | primary |
+| Core region | 122 | general |
+| Rectus abdominis / `ab-front-definition` / `core-anti-extension` | 12 each | general — complement goals with the plank as current |
+| `core-anti-rotation` | 10 | general — complement goals with the Pallof press as current |
+
+- **No primary or supporting-tier match outside obliques.**
+- **Appearance:**
+  - It is a primary-tier Best Fit for `waist-side-definition` (158), plus alternatives (66) and complements (148) there.
+  - In `ab-front-definition` it appears only as a general-tier complement-goal Best Fit (12), plus alternatives (86) and complements (117).
+  - 587 mentions in total, as simulated.
+
+### Functional-goal behaviour
+
+- The side plank carries no `functional_goals`. Every result still resolves the functional goal the user selected.
+- It is a Best Fit for a functional goal only through complement goals, at the general tier: anti-rotation 10, anti-extension 12.
+- **`core-anti-lateral-flexion` is unchanged as a goal.**
+  - Its pool and Best Fits are the same; the suitcase carry is still its only exercise, so its full-gym low-fatigue cell stays empty.
+  - The side plank appears in 18 of its results, only inside the *complement lists* of the woodchop or Pallof press Best Fit, in the complement goals with the suitcase carry as current.
+
+### Empty-result messages
+
+- **48 still-empty scenarios change**: obliques and `waist-side-definition` replace-exercise in bodyweight and nothing-selected contexts.
+  - They now show the replace goal's own "…has no substitute…" message, because the selection has a bodyweight option.
+  - This is the same as simulated.
+- **Bodyweight-gap empties** fall from 3,440 to 3,312: obliques and `waist-side-definition` are no longer bodyweight gaps.
+
+### Real record vs simulation
+
+- **0 differences** across all 36,720 scenarios in status, Best Fit, alternative, complement list, match tier and functional goal.
+- The simulated record lacked real explanation and watch-out text, so those were not compared.
+
+### Other effects
+
+- Explore lists the side plank under Core and the `bodyweight` equipment filter.
+- Build packages are unchanged.
+- `data/index.test.ts` now expects 128 records. No engine test needed changing.
+
+### Checks (real record)
+
+| Check | Result |
+|---|---|
+| validate-data | PASS (128 records) |
+| Vitest | 298 / 298 |
+| lint | clean |
+| build | OK |
+| Playwright | 3 / 3 |
+| Fresh clone (`npm ci`, then validate, test, lint, build and e2e) | all pass |
+
