@@ -310,6 +310,71 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: side-lying-hip-abduction
+  name: Side-Lying Hip Abduction
+  summary: A floor-based hip abduction lying on one side, the no-equipment way to train the gluteus medius and minimus directly.
+  why_this_exists: The hip-abduction machine and band versions need equipment. Lying on the side and lifting the top leg trains the same hip abduction against gravity, so the side glutes can be worked anywhere.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus medius
+    - gluteus minimus
+  secondary_targets: []
+  physique_targets:
+    - gluteus-medius-minimus
+  movement_patterns:
+    - hip abduction
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - isolation
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Leg weight against gravity, hardest at the top of the lift. An ankle weight or a band around the knees or ankles adds resistance without changing the movement.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No machine or band is available and the side glutes need direct work.
+    - A low-fatigue glute-medius exercise is wanted as a warm-up or finisher alongside squats and hinges.
+  less_suitable_when:
+    - High reps have become easy with leg weight alone and no ankle weight or band is available — the stimulus becomes mostly endurance.
+  mirror_effect: Tends to show up, over time, as slightly more fullness at the upper side of the hips — modest unloaded, and only visible alongside heavier glute work and a low enough body-fat level.
+  advantages: []
+  limitations:
+    - Leg weight alone is light, so it needs an ankle weight or a band to keep progressing.
+    - It is easy to roll the hips backward and turn the lift into a hip-flexor movement without noticing.
+    - Each side is trained separately, which doubles the time per set.
+  technique_cues:
+    - Lie on one side with the hips stacked vertically, the bottom knee bent for balance and the top leg straight.
+    - Turn the top toes slightly down so the heel leads, keeping the leg in line with the body or slightly behind it.
+    - Lift the top leg toward the ceiling until the side of the hip works hard, without letting the hips roll back.
+    - Lower slowly under control, without resting the leg between reps.
+  common_mistakes:
+    - "Rolling the top hip backward: the leg swings forward and the hip flexors take over from the gluteus medius."
+    - "Lifting the leg as high as it will go: past a moderate height the trunk tilts and the side-bend replaces hip abduction."
+    - "Dropping the leg quickly: skips the lowering, which is half of each rep's glute-medius work."
+  programming_notes:
+    - "Work to high reps first, then add an ankle weight or a band. A machine or cable abduction is the loaded progression once one is available."
+  alternatives: []
+  complements:
+    - Heavier hip extension such as hip thrusts or squats, which train the gluteus maximus this movement leaves out.
+  overlaps_with:
+    - hip-abduction
+  evidence_notes:
+    - "Distefano et al. (2009, Journal of Orthopaedic & Sports Physical Therapy 39(7):532-540, PMID 19574661) measured surface EMG in 21 healthy, active subjects across 12 exercises: gluteus medius activity was highest in side-lying hip abduction (81% ± 42% MVIC), significantly greater than both hip clams, lunges and hops. EMG amplitude shows activation, not hypertrophy, and the wide spread shows how much individuals vary."
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=HePuOF1v9-0
+  video_creator: Travis Tarrant
+  video_title: "Exercise Tutorial: Side Lying Hip Abduction"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: hip-adduction
   name: Hip Adduction
   summary: Loads the adductors directly, a group that contributes to squatting and leg size but is rarely trained on its own.

@@ -107,9 +107,12 @@ describe('tolerance-blocked and other empty results', () => {
   });
 
   it('a functional goal is named as the subject', () => {
-    const result = empty({ bodyRegion: 'core', functionalGoal: 'core-anti-lateral-flexion', maxFatigueCost: 'low' });
-    expect(result.subject).toBe('Core Anti-Lateral-Flexion');
-    expect(result.blockingLimits).toEqual(['fatigue']);
+    // (Core anti-lateral-flexion under a low-fatigue limit used to be the
+    // example here; the side plank answers it since Phase 7 Stage 5.6/5.7.)
+    const result = empty({ bodyRegion: 'shoulders', functionalGoal: 'rotator-cuff', maxSkillDemand: 'low' });
+    expect(result.kind).toBe('tolerance');
+    expect(result.subject).toBe('Rotator Cuff');
+    expect(result.blockingLimits).toEqual(['skill']);
   });
 
   it('a selection with no exercises at all says so', () => {

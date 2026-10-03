@@ -1115,3 +1115,69 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+
+- id: feet-elevated-push-up
+  name: Feet-Elevated Push-Up
+  summary: A push-up with the feet raised on a bench, turning the press into an incline press relative to the torso so it leans toward the upper chest with no equipment beyond something to stand the feet on.
+  why_this_exists: Every upper-chest press in the library needs a barbell, dumbbells, a cable or a machine. Raising the feet changes the pressing angle the same way an incline bench does, so the upper chest can be trained with bodyweight and a bench, step or box.
+  body_regions:
+    - chest
+  primary_targets:
+    - chest (commonly cited as upper/clavicular-biased)
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - bodyweight
+    - bench
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight-scaled; raising the feet both steepens the pressing angle and puts more bodyweight on the hands. Hardest at the bottom, with the chest near the floor.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No barbell, dumbbells, cable or machine is available and the upper chest needs a direct pressing stimulus.
+    - A regular push-up has become easy and a harder bodyweight press is wanted.
+  less_suitable_when:
+    - An incline barbell or dumbbell press is available and heavy, finely adjustable loading is the goal — bodyweight caps the load.
+    - Sets run to very high reps without real difficulty, which signals the stimulus has drifted toward endurance.
+  mirror_effect: Tends to show up, over time, as more fullness in the upper chest near the collarbone — modest at bodyweight for a trained lifter, so it works best where no loaded incline press is available.
+  advantages: []
+  limitations:
+    - Load is capped by bodyweight and foot height, so progression comes in steps (higher feet, a weight vest, a deficit) rather than small increments.
+    - Very high foot positions turn it into a shoulder-dominant press, closer to a pike push-up than an upper-chest press.
+    - The lower back sags easily as the feet go higher, which shifts strain away from the chest.
+  technique_cues:
+    - Put the feet on a bench or box and the hands on the floor slightly wider than shoulder width.
+    - Hold one straight line from head to heels, with the glutes and trunk braced.
+    - Lower until the chest is just above the floor, keeping the elbows at roughly 45 degrees from the body.
+    - Press the floor away until the arms are straight, without letting the hips drop or pike up.
+  common_mistakes:
+    - "Letting the hips sag: the lower back takes the strain and the press loses its incline angle."
+    - "Piking the hips up: the press turns more vertical, shifting the work from the upper chest to the shoulders."
+    - "Stopping well short of the floor: skips the stretched bottom of the rep, where the chest works hardest."
+  programming_notes:
+    - "Progress by raising the feet a little at a time, then by adding a weight vest or a deficit with the hands on blocks; keep the feet low enough that the hips stay in line."
+  alternatives: []
+  complements:
+    - A flat press or chest fly, which covers the mid and lower chest this angle leans away from.
+  overlaps_with:
+    - push-up-chest
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=4aUUcfwyfE0
+  video_creator: Horton Barbell
+  video_title: Feet Elevated Push-ups (Exercise Library)
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+

@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-03T05:39:19.438Z",
-    "total_records": 128,
-    "live": 128,
+    "audited_at": "2026-10-03T06:10:05.227Z",
+    "total_records": 131,
+    "live": 131,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -363,6 +363,19 @@
       "notes": ""
     },
     {
+      "exercise_id": "close-grip-push-up",
+      "exercise_name": "Close-Grip Push-Up",
+      "muscle_group": "arms",
+      "current_video_url": "https://www.youtube.com/watch?v=0LZF3OY87uU",
+      "video_id": "0LZF3OY87uU",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "Close Grip Push-Up | Proper Form Tutorial for Triceps Strength",
+      "resolved_author": "FIT.nl",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
       "exercise_id": "conventional-deadlift",
       "exercise_name": "Conventional Deadlift",
       "muscle_group": "back",
@@ -541,6 +554,19 @@
       "http_result": 200,
       "resolved_title": "How to Perform the Farmer’s Carry",
       "resolved_author": "Dr. Carl Baird",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "feet-elevated-push-up",
+      "exercise_name": "Feet-Elevated Push-Up",
+      "muscle_group": "chest",
+      "current_video_url": "https://www.youtube.com/watch?v=4aUUcfwyfE0",
+      "video_id": "4aUUcfwyfE0",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "Feet Elevated Push-ups (Exercise Library)",
+      "resolved_author": "Horton Barbell",
       "classification": "LIVE",
       "notes": ""
     },
@@ -1360,6 +1386,19 @@
       "http_result": 200,
       "resolved_title": "Machine Shoulder Press",
       "resolved_author": "Renaissance Periodization",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "side-lying-hip-abduction",
+      "exercise_name": "Side-Lying Hip Abduction",
+      "muscle_group": "hips",
+      "current_video_url": "https://www.youtube.com/watch?v=HePuOF1v9-0",
+      "video_id": "HePuOF1v9-0",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "Exercise Tutorial: Side Lying Hip Abduction",
+      "resolved_author": "Travis Tarrant",
       "classification": "LIVE",
       "notes": ""
     },

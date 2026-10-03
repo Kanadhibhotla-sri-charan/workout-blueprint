@@ -112,4 +112,12 @@ The top-ranked candidate is *the* structural alternative. This produces at most 
 
 **Stage 2, equipment-constrained** — if the user's available equipment is `[smith machine, bench]` only, rule 6 removes the other three candidates at Stage 1 (each needs equipment — `barbell`+`rack`, `cable`, or `machine` — outside that set), leaving `smith-machine-incline-press` as the sole eligible candidate and therefore the pick, with no ranking needed. This is the scenario that actually matches the architect's example outcome, and it demonstrates the equipment-feasibility rule (§1) and the structural-alternative rule (§2) composing correctly, per Stage 1 rule 6.
 
+> **Update (Phase 7 Stage 5.6/5.7):** this worked example predates the bodyweight `feet-elevated-push-up` (`incline horizontal press`, `[bodyweight, bench]`). With `[smith machine, bench]` that record is eligible too, because bodyweight is always available.
+>
+> - It ties with `smith-machine-incline-press` on every Stage 2 criterion: the same `primary_targets` wording, and no coverage category shared with the dumbbell press.
+> - So the alphabetical fallback ranks it first.
+> - The test in `app/src/engine/alternatives.test.ts` pins this.
+>
+> See the tie analysis in `PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md`.
+
 Both scenarios above are asserted as automated tests in `app/src/engine/alternatives.test.ts`, not just hand-traced here — see the 3F dev-log entry.

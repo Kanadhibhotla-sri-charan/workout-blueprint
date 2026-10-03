@@ -742,6 +742,71 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: close-grip-push-up
+  name: Close-Grip Push-Up
+  summary: A push-up with the hands close together and the elbows kept tight, shifting the press toward elbow extension so the triceps can be trained with bodyweight alone.
+  why_this_exists: The close-grip bench press and triceps-biased dip need a barbell and bench or dip bars. Narrowing the hands on a push-up biases the same press toward the triceps with no equipment at all.
+  body_regions:
+    - arms
+  primary_targets:
+    - triceps
+    - chest
+  secondary_targets:
+    - anterior deltoids
+  physique_targets:
+    - triceps
+  movement_patterns:
+    - horizontal press
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight-scaled; the narrow hand position and tucked elbows put more of each rep on elbow extension than a regular push-up. Hardest at the bottom.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No barbell, dip bars, cable or dumbbells are available and the triceps need direct pressing work.
+    - A triceps-biased press is wanted at the end of a session with little setup or fatigue.
+  less_suitable_when:
+    - Wrist or elbow discomfort appears with the hands close together — a slightly wider grip or a pushdown suits better.
+    - Long overhead triceps work is the goal — this press doesn't take the shoulder overhead, so it isn't long-head emphasis.
+  mirror_effect: Tends to show up, over time, as fuller triceps at the back and side of the upper arm — modest at bodyweight for a trained lifter, so it works best where no loaded triceps exercise is available.
+  advantages: []
+  limitations:
+    - Load is capped by bodyweight, so progression needs elevated feet, a weight vest or slower reps rather than small load increments.
+    - It doesn't take the shoulder overhead, so it won't emphasize the triceps long head.
+    - Hands placed too close together strain the wrists before the triceps are challenged.
+  technique_cues:
+    - Place the hands under the shoulders or slightly narrower, with the fingers pointing forward.
+    - Keep the elbows tucked close to the ribs on the way down.
+    - Hold a straight line from head to heels with the glutes and trunk braced.
+    - Lower until the chest is just above the hands, then press until the elbows lock out.
+  common_mistakes:
+    - "Letting the elbows flare out: the press turns back into a regular push-up and the chest takes over from the triceps."
+    - "Placing the hands in a tight diamond under the face: loads the wrists and elbows awkwardly for most people without adding triceps work."
+    - "Cutting the lockout short: skips the part of the rep where the triceps finish the elbow extension."
+  programming_notes:
+    - "Progress by elevating the feet, then by adding a weight vest; regress with the hands on a bench or the knees down."
+  alternatives: []
+  complements:
+    - Overhead triceps work, which loads the long head in the stretched position this press doesn't reach.
+  overlaps_with:
+    - push-up-chest (chest module)
+    - close-grip-bench-press
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=0LZF3OY87uU
+  video_creator: FIT.nl
+  video_title: "Close Grip Push-Up | Proper Form Tutorial for Triceps Strength"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: overhead-triceps-extension
   name: Overhead Triceps Extension
   summary: Trains elbow extension with the shoulder flexed, commonly cited as the strongest stretch-mediated stimulus for the triceps long head.

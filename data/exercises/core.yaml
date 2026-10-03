@@ -413,6 +413,8 @@
     - gluteus medius
   physique_targets:
     - obliques
+  functional_goals:
+    - core-anti-lateral-flexion
   movement_patterns:
     - anti-lateral flexion under load
   equipment:

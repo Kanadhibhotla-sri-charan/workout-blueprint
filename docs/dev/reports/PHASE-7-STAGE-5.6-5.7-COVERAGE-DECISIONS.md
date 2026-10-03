@@ -1,6 +1,6 @@
 # Phase 7 Stage 5.6/5.7 — Remaining Bodyweight & Definition Decisions
 
-_Analysis only. Nothing in the repository was changed except this report: no exercise data, target definitions, ranking, engine or videos._
+_Parts A–C below are the original analysis. The approved items were then implemented, **except chin-up → biceps, which is held** (see [Implementation results](#implementation-results)). That section and the [focused heavy-compound analysis](#focused-analysis-heavy-compound-and-tie-behaviour) were added afterwards._
 
 ## Method
 
@@ -431,3 +431,172 @@ The anti-lateral-flexion limited-equipment change is counted in the first row.
 | Playwright | 3 / 3 |
 
 Both simulation passes were run twice with byte-identical output. Temporary harnesses deleted; only this report was added.
+
+---
+
+# Implementation results
+
+## What was implemented
+
+**New records** (all `reviewed`, all pass the coaching gate):
+
+| Record | File | Target | Equipment | Coverage tags | `overlaps_with` |
+|---|---|---|---|---|---|
+| `feet-elevated-push-up` | `chest.yaml` | `upper-pec` | `[bodyweight, bench]` | `low-setup`, `equipment-limited-substitute` | `push-up-chest` |
+| `close-grip-push-up` | `arms.yaml` | `triceps` | `[bodyweight]` | `low-setup`, `equipment-limited-substitute` | `push-up-chest (chest module)`, `close-grip-bench-press` |
+| `side-lying-hip-abduction` | `hips.yaml` | `gluteus-medius-minimus` | `[bodyweight]` | `isolation`, `low-setup`, `low-fatigue`, `equipment-limited-substitute` | `hip-abduction` |
+
+- **No `heavy-compound`** on either push-up.
+- **Side-lying hip abduction `evidence_notes`:** the EMG citation was checked against the primary abstract (PubMed, via NCBI E-utilities) **before** being written. Distefano et al., 2009, *JOSPT* 39(7):532–540, PMID 19574661: 21 subjects; glute medius activity was highest in side-lying hip abduction (81% ± 42% MVIC) of the 12 exercises tested. The note states that EMG shows activation, not hypertrophy.
+
+**Retag:** `side-plank` now carries `functional_goals: [core-anti-lateral-flexion]`.
+
+**Definitions (wording only):**
+- **`core-anti-lateral-flexion`:** now "…carries…, or side-lying holds such as the side plank that resist bending toward the floor". `why_it_matters` now attributes grip endurance to carries only.
+- **`rectus-abdominis`:** adds "and through anti-extension bracing that resists the lower back arching".
+- **`triceps`:** adds "including triceps-biased presses such as close-grip pressing and triceps-biased dips".
+
+**Videos:** sourced by search and checked with YouTube oEmbed (HTTP 200). The titles and channels match each record's name, equipment and laterality. All are recorded as `metadata`, `2026-10-03`, **footage not watched**. URLs are unique.
+
+| Record | Video | Channel | ID |
+|---|---|---|---|
+| Feet-elevated push-up | "Feet Elevated Push-ups (Exercise Library)" | Horton Barbell | `4aUUcfwyfE0` |
+| Close-grip push-up | "Close Grip Push-Up \| Proper Form Tutorial for Triceps Strength" | FIT.nl | `0LZF3OY87uU` |
+| Side-lying hip abduction | "Exercise Tutorial: Side Lying Hip Abduction" | Travis Tarrant | `HePuOF1v9-0` |
+
+The audit then reported 131 / 131 LIVE. `VIDEO-CURATION-QA.md` and `KNOWLEDGE-QA.md` were regenerated.
+
+**Not changed, as instructed:** heavy-compound behaviour, neck-hold targeting, Nordic representation, front-delt Appearance coverage, triceps-long-head ratings, replace-exercise strictness. Sliding leg curl, inverted row and bodyweight triceps extension were not added.
+
+## Held: chin-up → biceps (and the biceps wording)
+
+Implementing the tag broke an **existing taxonomy invariant** that the Part B simulation didn't model (`app/src/data/physique-targets.test.ts`): an exercise's physique targets must share a `body_regions` value with each target's parent region. The chin-up is `back`; `biceps` belongs to `arms`.
+
+The real data was measured all three ways (full analysis, two runs, byte-identical):
+
+| Chin-up option | Full-gym default changes | vs approved simulation | Invariant |
+|---|---:|---|---|
+| Tag, `body_regions: [back]` | **15** (as approved) | 0 differences | **Violated** (test fails) |
+| Tag + add `arms` (the Romanian-deadlift multi-region convention) | **16** | 3,370 differences | Satisfied |
+| Not tagged | **13** | 0 differences | Satisfied |
+
+The 16th change is the **arms region's full-gym build-base, which would move from the close-grip bench press to the chin-up**. It is decided only by the alphabetical fallback: "chin-up" sorts before "close-grip-bench-press".
+
+- Neither tagged form was within the approved scope: one breaks a rule, the other adds an unapproved default change.
+- So the tag **and** the biceps wording that names the chin-up are held for a decision.
+- The other biceps wording points don't depend on this.
+
+**Options:**
+1. Accept the `[back, arms]` region with its extra arms-region default.
+2. Relax the invariant (a taxonomy-rule change).
+3. Leave the chin-up untagged.
+
+## Test updates
+
+| Test | Change | Reason |
+|---|---|---|
+| `data/index.test.ts` | Expects 131 records | Three new records |
+| `engine/alternatives.test.ts` | "Replace incline dumbbell press with only Smith + bench" now ranks `[feet-elevated-push-up, smith-machine-incline-press]` | The new push-up is eligible (bodyweight always available) and ties with the Smith press on every structural criterion: same `primary_targets` wording, no coverage overlap. The alphabetical fallback picks it. |
+| `engine/emptyResult.test.ts` | The "functional goal named as the subject" example now uses `rotator-cuff` under low skill | The old example (anti-lateral-flexion under low fatigue) is answered by the side plank now, which is the intended effect |
+
+- The alternatives test pins the new behaviour, and a dated note was added under `DECISION-ENGINE-RULES.md` §2's worked example. This case is part of the tie analysis below.
+- **No engine test needed changing.**
+
+## Real-record coverage (two runs, byte-identical)
+
+| | Before (`47c5f28`) | After |
+|---|---:|---:|
+| Scenarios | 36,720 | 37,512 (+792 with the new exercises as current) |
+| Answered | 21,064 | **23,477** |
+| Answered on the original 36,720 | 21,064 | 22,958 (**+1,894**) |
+| **Answers lost** | — | **0** |
+| Best Fits changed | — | 1,643 |
+| Alternatives changed | — | 3,025 |
+| Complement lists changed | — | 4,939 |
+| Bodyweight-gap empties | 3,312 | **2,696** |
+| Targets with a strict-bodyweight option | 7 / 25 | **9 / 25** |
+| Targets with a bodyweight + fixtures option | 11 / 25 | **13 / 25** (14 with the held chin-up tag) |
+
+### vs simulation
+
+- **0 differences** across all 37,512 scenarios against the Part C simulation without the chin-up tag.
+- This covers status, Best Fit, alternative, complements, match tier and functional goal.
+
+### Full-gym default changes: 13
+
+That is the expected 15 minus the 2 chin-up changes:
+
+| Cause | Selections affected | Count |
+|---|---|---:|
+| Limited-equipment (bodyweight costs 0) | arms; triceps / `triceps-back-depth` (close-grip push-up); upper-pec / `chest-upper-shelf` (feet-elevated push-up); glute med / `hip-width-side` (side-lying hip abduction); anti-lateral-flexion (side plank) | 8 |
+| Low-fatigue (cost tie-break) | upper-pec / `chest-upper-shelf` | 2 |
+| Anti-lateral-flexion definition | build-base, visual-area, low-fatigue | 3 |
+
+### Targeting leakage: none
+
+Every primary- or supporting-tier pick of a new exercise is its own target, or a target its outcome declares as supporting:
+
+| Exercise | Outcome / target | Tier | Scenarios | Why allowed |
+|---|---|---|---:|---|
+| Feet-elevated push-up | upper-pec target, `chest-upper-shelf`, `chest-side-projection` | primary | 170 / 170 / 86 | Own target |
+| Feet-elevated push-up | `chest-front-width` | supporting | 70 | Declares `upper-pec` as supporting |
+| Close-grip push-up | triceps target, `triceps-back-depth` | primary | 368 / 368 | Own target |
+| Close-grip push-up | `arm-side-thickness` | supporting | 146 | Declares `triceps` as supporting |
+| Side-lying hip abduction | glute-med target, `hip-width-side` | primary | 72 / 72 | Own target |
+
+- **Functional goals:** the side plank is the selection pick for `core-anti-lateral-flexion` in 96 scenarios. No other functional goal resolves to a new exercise except through region-wide complement goals.
+
+## Checks
+
+| Check | Result |
+|---|---|
+| validate-data | PASS (131 records) |
+| Vitest | 298 / 298 |
+| lint | clean |
+| build | OK |
+| Playwright | 3 / 3 |
+| Fresh clone (`npm ci`, then validate, test, lint, build and e2e) | all pass |
+
+---
+
+# Focused analysis: heavy-compound and tie behaviour
+
+_Analysis only; nothing implemented._ It covers the build-base goal across all 69 entries × 6 contexts × 4 tolerances on the current data, with two runs, byte-identical.
+
+## The behaviour
+
+- **Build-base ranks** `heavy-compound` (key 0) before `stable-compound` (1) before everything else (2). Target tier, aesthetic role and suitability still apply first.
+- **Within a key, the alphabetical id decides.**
+- **`heavy-compound` has no written definition** (`SCHEMA.md` only lists it).
+- **24 records carry it. 6 are bodyweight-loaded:** chin-up, pull-up, both dips, push-up, pike push-up.
+
+So a bodyweight press tagged `heavy-compound` ties with the barbell presses, and **the alphabet picks between them**:
+
+- **Already happening:** the chest region's full-gym build-base is the **chest dip** ("dip…" before "flat-barbell…"), the Stage 5 "material" tie case.
+- **Avoided only by name:** the push-up stays behind the bench press ("flat-barbell…" before "push-up"), and the pike push-up stays behind the overhead press ("overhead…" before "pike…").
+- **Would happen if tagged:** the new feet-elevated push-up would take the full-gym upper-pec / `chest-upper-shelf` build-base from the incline barbell press ("feet…" before "incline…"). That is why it was authored without the tag.
+- **The same family of tie in alternatives:** the feet-elevated push-up outranks the Smith incline press for "replace incline dumbbell press with Smith + bench" (see Test updates).
+
+## Options measured (build-base Best Fits vs current)
+
+| Option | Build-base changes | Lost | Full-gym defaults changed | Notes |
+|---|---:|---:|---|---|
+| **R1** Engine: in any build-base tie, prefer setups without `bodyweight` | 84 | 0 | 7 — chest dip → **flat barbell bench**; chin-up → reverse-grip barbell row; Copenhagen → hip adduction / abduction; side plank → suitcase carry; neck hold → neck extension | **Too crude.** "No bodyweight item" isn't "externally loaded": a wall-based tibialis raise beats the single-leg calf raise for calves in bodyweight contexts, and a band abduction beats the glute bridge in the minimal kit |
+| **R2** Data: untag bodyweight presses (push-up, pike) | 34 | 0 | none | Some limited-tolerance answers get worse (minimal-kit shoulders → band external rotation instead of the pike push-up) |
+| **R3** Engine: a bodyweight-loaded `heavy-compound` ranks with `stable-compound` (key 1) in build-base | **18** | 0 | 2 — **chest: dip → flat barbell bench**; **lat width: chin-up → reverse-grip barbell row** | **No bodyweight-context changes.** It makes tagging bodyweight presses `heavy-compound` safe: with the new push-ups tagged *and* R3, upper-pec's gym build-base stays the incline barbell press |
+| New push-ups tagged, current engine | 54 | 0 | 2 — upper-pec and `chest-upper-shelf` → feet-elevated push-up | The regression avoided by authoring them untagged |
+
+## Assessment
+
+- **The root cause is general:** build-base has no notion of external loadability, and ties between loaded and bodyweight compounds fall to the alphabet. That is a general rule, not a muscle-specific one.
+- **R3 is the smallest general rule that fixes it.** 18 build-base changes, nothing lost, no bodyweight-context change.
+  - It fixes the existing chest-dip default.
+  - It changes lat width's gym build-base from the chin-up to the reverse-grip barbell row. That is debatable: a vertical pull is the more canonical lat-width base.
+- **R1 and R2 are not recommended.**
+
+## Recommendation (for decision, not implemented)
+
+1. **Define `heavy-compound` in `SCHEMA.md`.** For example: "a multi-joint movement that can be loaded heavily and progressively (external load, or bodyweight plus added weight)". Documentation only.
+2. **Keep the current authoring rule:** bodyweight variants of an existing loaded pattern are not tagged `heavy-compound` (as done for both new push-ups).
+3. **If a build-base fix is wanted, R3 is the candidate.** It needs a product decision on whether the lat-width gym build-base should move from the chin-up to the reverse-grip barbell row. A ranking change like this would also deserve its own regression tests and coverage re-run.
+
