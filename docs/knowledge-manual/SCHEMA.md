@@ -129,6 +129,11 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Type:** list of strings
 - **Required:** yes, non-empty
 - **Allowed values (closed vocabulary, 10 values currently in use):** `isolation`, `low-setup`, `low-fatigue`, `heavy-compound`, `stable-compound`, `lengthened-position-emphasis`, `skill-coordination`, `unilateral`, `equipment-limited-substitute`, `shortened-position-emphasis`
+- **`heavy-compound` (semantic definition, Phase 7 Stage 5.6/5.7):** a multi-joint movement that can be loaded heavily and progressively — external load, or bodyweight plus added weight.
+  - **Authoring convention:** a bodyweight variant of a loaded pattern (for example a push-up variation of a barbell press) does **not** automatically receive the tag. The feet-elevated and close-grip push-ups are authored without it.
+  - **Engine use:** the "build the main training base" goal ranks `heavy-compound` first, and ties fall to the alphabetical id. Tagging a bodyweight variant can therefore change which exercise a full gym is offered (see `docs/dev/reports/PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md`).
+  - **Existing tags are unchanged.** That includes the push-up, the pike push-up, the dips, the chin-up and the pull-up.
+  - **Status:** this definition documents meaning only and does not change any behaviour. Any ranking change needs its own Build-base analysis first.
 - **Note:** `isolation` appears both here and as an `exercise_type` value; they're independent fields answering different questions (mechanical role vs. a broader descriptive tag) and this overlap is intentional, not a duplication bug.
 - **Evaluated for restructuring in Phase 2, Task I** — kept as a flat list; see the Task I write-up in the Phase 2 dev log for why.
 - **Decision-making impact:** yes

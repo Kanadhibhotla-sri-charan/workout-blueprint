@@ -1,6 +1,6 @@
 # Phase 7 Stage 5.6/5.7 — Remaining Bodyweight & Definition Decisions
 
-_Parts A–C below are the original analysis. The approved items were then implemented, **except chin-up → biceps, which is held** (see [Implementation results](#implementation-results)). That section and the [focused heavy-compound analysis](#focused-analysis-heavy-compound-and-tie-behaviour) were added afterwards._
+_Parts A–C below are the original analysis. The approved items were then implemented (see [Implementation results](#implementation-results)), and the [focused heavy-compound analysis](#focused-analysis-heavy-compound-and-tie-behaviour) was added. **Final architecture decisions are in [Final decisions](#final-decisions-stage-closed).** Chin-up → biceps was **not adopted**._
 
 ## Method
 
@@ -599,4 +599,64 @@ So a bodyweight press tagged `heavy-compound` ties with the barbell presses, and
 1. **Define `heavy-compound` in `SCHEMA.md`.** For example: "a multi-joint movement that can be loaded heavily and progressively (external load, or bodyweight plus added weight)". Documentation only.
 2. **Keep the current authoring rule:** bodyweight variants of an existing loaded pattern are not tagged `heavy-compound` (as done for both new push-ups).
 3. **If a build-base fix is wanted, R3 is the candidate.** It needs a product decision on whether the lat-width gym build-base should move from the chin-up to the reverse-grip barbell row. A ranking change like this would also deserve its own regression tests and coverage re-run.
+
+---
+
+# Final decisions (stage closed)
+
+## Kept
+
+| Item | Status |
+|---|---|
+| Feet-elevated push-up | Kept |
+| Close-grip push-up | Kept |
+| Side-lying hip abduction | Kept |
+| Side plank → `core-anti-lateral-flexion` (with the widened definition) | Kept |
+| Rectus abdominis wording clarification | Kept |
+| Triceps wording clarification | Kept |
+
+## Chin-up → biceps: not adopted
+
+- The chin-up stays `physique_targets: [lat-width]`, `body_regions: [back]`, and is otherwise unchanged.
+- It is not added to the arms region.
+- The biceps wording change that existed only to support that tag is not made; the biceps definition is unchanged.
+
+## Rejected and unchanged
+
+- **Rejected:** sliding leg curl, inverted row, bodyweight triceps extension.
+- **Unchanged:** neck hold, Nordic anchor representation, front-delt Appearance coverage, triceps-long-head ratings, replace-exercise strictness.
+
+## heavy-compound
+
+- **Documented in `SCHEMA.md` (meaning only, no behaviour change):** "A multi-joint movement that can be loaded heavily and progressively — external load, or bodyweight plus added weight."
+- **Authoring convention kept:** bodyweight variants of a loaded pattern don't automatically receive the tag.
+- **No ranking change.** R3 is not accepted as a package.
+
+### Before any future heavy-compound ranking change
+
+A dedicated Build-base analysis must look at Build-base intent and **every affected full-gym default**. It must explicitly resolve, separately:
+- **chest:** dip vs flat barbell bench press;
+- **lat width:** chin-up vs reverse-grip barbell row.
+
+This is the next architecture discussion.
+
+**No further exercise additions in this batch.**
+
+## Final real-record validation
+
+The data is unchanged since the implementation commit; only `SCHEMA.md` and this report changed. The full analysis was re-run twice, and both runs were byte-identical **and byte-identical to the implementation run**.
+
+| Check | Result |
+|---|---|
+| Scenarios | 37,512 |
+| Answered | 23,477 |
+| Answers lost | **0** |
+| Full-gym default changes | 13 |
+| Targeting leakage | **none** |
+| validate-data | PASS (131 records) |
+| Vitest | 298 / 298 |
+| lint | clean |
+| build | OK |
+| Playwright | 3 / 3 |
+| Fresh clone | all pass |
 
