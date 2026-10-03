@@ -57,6 +57,72 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: pike-push-up
+  name: Pike Push-Up
+  summary: A bodyweight vertical press done from an inverted-V position, the no-equipment way to load the front delts through overhead-style pressing.
+  why_this_exists: Every loaded vertical press needs a barbell, dumbbells, a cable or a machine. Piking the hips up turns a push-up into a steep, overhead-direction press, so the front delts can be trained directly with no equipment, and progressed by raising the feet toward a handstand push-up.
+  body_regions:
+    - shoulders
+  primary_targets:
+    - anterior deltoids
+  secondary_targets:
+    - triceps
+    - upper chest
+  physique_targets:
+    - front-delt
+  movement_patterns:
+    - vertical press
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - heavy-compound
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight-scaled; the higher the hips and the more the feet are elevated, the larger the share of bodyweight on the hands and the more vertical the press. Hardest at the bottom, with the head near the floor.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No barbell, dumbbells or machine is available and the front delts need a direct pressing stimulus.
+    - A low-fatigue vertical press is wanted in a home or travel session, with a clear progression path (feet elevated, then toward a handstand push-up).
+  less_suitable_when:
+    - A barbell or dumbbells are available and heavy, finely adjustable overhead loading is the goal — bodyweight leverage changes in steps, not small increments.
+    - Wrist extension under load is uncomfortable, since the hands carry the press in a fully extended wrist position.
+  mirror_effect: Tends to show up, over time, as more roundness on the front of the shoulder — modest at bodyweight for a trained lifter, and front delts already get indirect work from chest pressing, so it is most useful where no loaded press is available.
+  advantages: []
+  limitations:
+    - Load is capped by bodyweight and body angle, so progression comes in discrete steps (higher hips, elevated feet, deficit) rather than small load increments.
+    - It easily drifts toward an ordinary push-up as the hips drop, which moves the work to the chest without it being obvious.
+    - The hands bear the press with the wrists fully extended, which limits some lifters before the shoulders are challenged.
+  technique_cues:
+    - From a push-up position, walk the feet in and lift the hips until the body forms an inverted V, arms roughly in line with the torso.
+    - Place the hands slightly wider than shoulder width with the fingers spread, and keep the hips high for the whole set.
+    - Lower the top of the head toward a point just in front of the hands, so head and hands form a triangle.
+    - Keep the elbows at roughly 45 degrees from the body rather than flared straight out to the sides.
+    - Press the floor away until the arms are straight, keeping the hips where they started.
+  common_mistakes:
+    - "Letting the hips drop toward a plank: the press turns horizontal, so the chest takes over and the front delts lose the load."
+    - "Lowering the head straight down between the hands: the elbows flare and the shoulders finish in a cramped position instead of a strong pressing line."
+    - "Stopping well short of the floor: skips the bottom of the rep, where the press is hardest and the front delts work most."
+  programming_notes:
+    - "Progress in this order: feet closer to the hands for a steeper body angle, then feet on a bench or box, then hands on blocks for extra depth, working toward a wall-supported handstand push-up."
+  alternatives: []
+  complements:
+    - Side- and rear-delt work, which vertical pressing does not replace.
+  overlaps_with:
+    - overhead-press
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=paCOGgmLCA0
+  video_creator: Paul Twyman
+  video_title: "PIKE PUSH UP Tutorial for the Complete Beginner"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: smith-machine-shoulder-press
   name: Smith Machine Shoulder Press
   summary: A barbell on a fixed vertical rail, removing most of the balance and bracing demand of a standing or seated overhead press.

@@ -1,6 +1,6 @@
 # Phase 7 Stage 5.4 — Pike Push-Up Evaluation
 
-_Analysis only. No data, ranking or engine change. The other bodyweight candidates and the tagging and outcome questions are out of scope._
+_The analysis below was simulated (sections 1–4). The exercise was then implemented after approval; the real-record results are in [§6](#6-implemented-real-record-results), and they reproduce the simulation. The other bodyweight candidates and the tagging and outcome questions remain out of scope._
 
 ## Method
 
@@ -39,7 +39,7 @@ Two sensitivity variants were also run:
 |---|---:|---:|
 | Answered (of the same 36,360) | 20,227 | **20,481 (+254)** |
 | Answers lost | — | **0** |
-| Empty-result messages changed | — | 0 |
+| Empty-result messages changed | — | 0 by kind and unlock list (see the correction in §6: 48 message texts change) |
 
 ### Opened scenarios (254)
 
@@ -185,3 +185,131 @@ The machine-press displacement is decided by the existing structural complement 
 | Playwright | 3 / 3 |
 
 No data, engine or ranking change. The temporary harness was deleted, and only this report was added.
+
+## 6. Implemented: real-record results
+
+### The record (`data/exercises/shoulders.yaml`, `pike-push-up`)
+
+**Classification** (library conventions):
+
+| Field | Value |
+|---|---|
+| Region | shoulders |
+| `physique_targets` | `[front-delt]` only |
+| `primary_targets` | `[anterior deltoids]` |
+| `secondary_targets` | `[triceps, upper chest]` |
+| Movement and type | `vertical press`, compound, bilateral |
+| `equipment` | `[bodyweight]` |
+| `overlaps_with` | `[overhead-press]` |
+
+**Ratings and tags**, following how the library rates its existing bodyweight compounds:
+
+| Field | Value | Basis |
+|---|---|---|
+| Fatigue | low | Like the push-up: bodyweight, upper body only |
+| Setup | low | — |
+| Skill | medium | Above the push-up's low, for hip position and head path; below chin-ups and dips, which are high |
+| Stability | medium | Like the push-up |
+| Coverage tags | `heavy-compound`, `low-setup`, `equipment-limited-substitute` | The push-up's tags. `skill-coordination` is used only for high-skill movements |
+
+**Not added:** side-delt, rear-delt, triceps or upper-pec targeting; aesthetic characteristics; a functional goal; declared complement ids; an Appearance outcome reference; any ranking rule. No target definition was changed.
+
+**Content and review status:**
+- 5 technique cues and 3 common mistakes (each `error: consequence`), honest limitations, a hedged mirror effect and one programming note.
+- `review_status: reviewed`. It passes the coaching gate via `validate-data`.
+- `evidence_notes` is left empty rather than citing studies that weren't checked.
+
+**Video:**
+- Sourced by search, then checked like every other reference: the YouTube oEmbed endpoint returned HTTP 200 for "PIKE PUSH UP Tutorial for the Complete Beginner" by Paul Twyman (`paCOGgmLCA0`).
+- The title and channel match the record's name, equipment and laterality.
+- Recorded as `video_verification_method: metadata` on `2026-10-03`. **The footage was not watched**, which is exactly what `metadata` means.
+- The URL is unique in the dataset.
+- `npm run audit-videos` then reported 127 / 127 LIVE, and `VIDEO-CURATION-QA.md` was regenerated.
+
+### Coverage: full space on the real record (two runs, byte-identical)
+
+| | Stage 5.3 baseline | Real record |
+|---|---:|---:|
+| Scenarios | 36,360 | 36,504 (+144 with the pike push-up as the current exercise) |
+| Answered | 20,227 | **20,581** (20,481 of the original 36,360, plus 100 of the 144 new) |
+| Empty | 16,133 | 15,923 |
+| Answers lost | — | **0** |
+
+| Metric | Count |
+|---|---:|
+| Opened, of the original space | 254 |
+| …front-delt target | 181 |
+| …shoulders region | 61 |
+| …scapular-stability (complement goals) | 12 |
+| Selection cells opened | the same 11 front-delt cells as simulated |
+| **Best Fits changed** | **381** |
+| Alternatives changed | 622 |
+| Complement lists changed | 1,140 |
+
+The Best Fit transitions are the same as simulated:
+
+| From → pike push-up | Scenarios |
+|---|---:|
+| Push-up Plus | 336 |
+| Cable shoulder press | 18 |
+| Seated machine shoulder press | 18 |
+| Band/cable external rotation | 7 |
+| Overhead press | 2 |
+
+### Reach and match tiers
+
+| Where the pike push-up is Best Fit | Scenarios | Match tier |
+|---|---:|---|
+| `front-delt` target | 121 | **primary** (all) |
+| Shoulders region | 300 | general |
+| Side delt / `shoulder-width-front` | 24 / 24 | general, complement goals only |
+| Rear delt / `shoulder-3d-shape` | 24 / 24 | general, complement goals only |
+| `rotator-cuff` functional goal | 18 | general |
+| `scapular-stability` functional goal | 12 | general |
+
+- **No primary or supporting-target match for any target other than front delt.**
+- **Appearance:**
+  - It is never in an outcome's candidate pool.
+  - It is Best Fit for an outcome in 48 scenarios, all in the two complement goals, at the general tier.
+  - It appears in 246 alternative or complement slots through region-wide complements.
+  - This matches the simulation exactly.
+- **Complement lists:** it appears in 931 lists. It displaces Push-up Plus (329), the seated machine shoulder press (242) and the dumbbell lateral raise (63), the same as simulated.
+
+### Empty-result messages (correction to §1)
+
+The simulation compared only each empty result's kind and unlock list, so it reported no change. The full text comparison shows:
+
+- **48 still-empty scenarios change their message:** front delt under a **low-skill** limit in the bodyweight, nothing-selected and minimal-kit contexts.
+- They now add: "Relaxing your skill preference would also allow one with your current equipment."
+- This is because a bodyweight option now exists but is rated medium skill.
+- **No kind or unlock list changes.**
+- In the nothing-selected context, front delt is **no longer reported as a bodyweight gap**, which is correct under Policy B. Gap-flagged empties drop from 3,504 to 3,440 across the original space.
+
+### Real record vs simulation
+
+On the original 36,360 scenarios:
+
+| Measure | Result |
+|---|---|
+| Scenarios that differ | 19 |
+| Status, Best Fit, alternative or complements that differ | **0** |
+| What differs | Only the visual-area "why" text, which is the record's own `mirror_effect` instead of the copied overhead-press text |
+| Pike-as-current scenarios | 144, 100 answered, in both |
+
+### Other effects
+
+- Explore lists the new record under Shoulders and under the `bodyweight` equipment filter.
+- Build packages are unchanged (explicit `exercise_id` lists).
+- `data/index.test.ts` now expects 127 records. No engine test needed changing.
+
+### Checks (real record)
+
+| Check | Result |
+|---|---|
+| validate-data | PASS (127 records) |
+| Vitest | 298 / 298 |
+| lint | clean |
+| build | OK |
+| Playwright | 3 / 3 |
+| Fresh clone (`npm ci`, then validate, test, lint, build and e2e) | all pass |
+

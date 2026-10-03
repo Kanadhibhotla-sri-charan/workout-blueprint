@@ -8,8 +8,8 @@ import { bodyRegions, exercises, getExerciseById, getExercisesByBodyRegion } fro
 // (scripts/generate-data.mjs -> exercises.generated.json -> this loader)
 // actually wires up correctly, not just that the source YAML is valid.
 describe('data loader', () => {
-  it('loads all 126 canonical exercises', () => {
-    expect(exercises.length).toBe(126);
+  it('loads all 127 canonical exercises', () => {
+    expect(exercises.length).toBe(127);
   });
 
   it('has no duplicate ids', () => {

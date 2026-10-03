@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-02T08:23:57.297Z",
-    "total_records": 126,
-    "live": 126,
+    "audited_at": "2026-10-03T05:24:35.719Z",
+    "total_records": 127,
+    "live": 127,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1061,6 +1061,19 @@
       "http_result": 200,
       "resolved_title": "Cable Pallof Press | Proper Form Tutorial for Core Stability",
       "resolved_author": "FIT.nl",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "pike-push-up",
+      "exercise_name": "Pike Push-Up",
+      "muscle_group": "shoulders",
+      "current_video_url": "https://www.youtube.com/watch?v=paCOGgmLCA0",
+      "video_id": "paCOGgmLCA0",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "PIKE PUSH UP Tutorial for the Complete Beginner",
+      "resolved_author": "Paul Twyman",
       "classification": "LIVE",
       "notes": ""
     },
