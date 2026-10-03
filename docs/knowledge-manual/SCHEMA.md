@@ -103,6 +103,14 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** yes — equipment-availability filtering is an obvious future application feature.
 - **Required for `reviewed`:** yes
 
+### `equipment_setups`
+- **Type:** list of lists of strings
+- **Required:** no — omit it when every item in `equipment` is needed together (the common case)
+- **Format:** each inner list is one complete way to do the exercise; every item inside a setup is required, and the setups are alternatives. Written in flow style, one setup per line (`- [barbell, bench]`). Rules (enforced by `npm run validate-data`): at least 2 setups; each setup a non-empty list of non-empty strings with no duplicate items; no two identical setups; no setup that contains another (it would never be the deciding one); and the union of all setups must equal `equipment` exactly.
+- **Meaning when absent:** a single setup equal to `equipment` — all items required. `bodyweight` always counts as available.
+- **Decision-making impact:** yes — Decide feasibility, "limited equipment" ranking and equipment text, plus Explore's equipment filter (see `docs/dev/reports/DECISION-ENGINE-RULES.md` §1).
+- **Required for `reviewed`:** no
+
 ### `exercise_type`
 - **Type:** string (scalar)
 - **Required:** yes
@@ -121,6 +129,11 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Type:** list of strings
 - **Required:** yes, non-empty
 - **Allowed values (closed vocabulary, 10 values currently in use):** `isolation`, `low-setup`, `low-fatigue`, `heavy-compound`, `stable-compound`, `lengthened-position-emphasis`, `skill-coordination`, `unilateral`, `equipment-limited-substitute`, `shortened-position-emphasis`
+- **`heavy-compound` (semantic definition, Phase 7 Stage 5.6/5.7):** a multi-joint movement that can be loaded heavily and progressively — external load, or bodyweight plus added weight.
+  - **Authoring convention:** a bodyweight variant of a loaded pattern (for example a push-up variation of a barbell press) does **not** automatically receive the tag. The feet-elevated and close-grip push-ups are authored without it.
+  - **Engine use:** the "build the main training base" goal ranks `heavy-compound` first, and ties fall to the alphabetical id. Tagging a bodyweight variant can therefore change which exercise a full gym is offered (see `docs/dev/reports/PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md`).
+  - **Existing tags are unchanged.** That includes the push-up, the pike push-up, the dips, the chin-up and the pull-up.
+  - **Status:** this definition documents meaning only and does not change any behaviour. Any ranking change needs its own Build-base analysis first.
 - **Note:** `isolation` appears both here and as an `exercise_type` value; they're independent fields answering different questions (mechanical role vs. a broader descriptive tag) and this overlap is intentional, not a duplication bug.
 - **Evaluated for restructuring in Phase 2, Task I** — kept as a flat list; see the Task I write-up in the Phase 2 dev log for why.
 - **Decision-making impact:** yes
@@ -176,18 +189,21 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 
 ### `technique_cues`
 - **Type:** list of strings
-- **Required:** no — currently `[]` on every record.
-- **Required for `reviewed`:** no, per current practice — see Task D
+- **Required:** only for `reviewed` (Phase 7). `[]` is valid on a `needs-review` record.
+- **Purpose:** how to set up and perform this specific exercise and variation, as 3–5 actionable, observable cues. Quality bar: [COACHING-CONTENT-STANDARD.md](COACHING-CONTENT-STANDARD.md).
+- **Required for `reviewed`:** yes — at least 3 items. The validator also rejects duplicates, items under 20 characters, and stock filler phrases.
 
 ### `common_mistakes`
 - **Type:** list of strings
-- **Required:** no — currently `[]` on every record.
-- **Required for `reviewed`:** no, per current practice — see Task D
+- **Required:** only for `reviewed` (Phase 7). `[]` is valid on a `needs-review` record.
+- **Purpose:** 2–4 execution errors specific to this exercise, each with its consequence (`error: consequence`). Inherent downsides belong in `limitations`, not here. Quality bar: [COACHING-CONTENT-STANDARD.md](COACHING-CONTENT-STANDARD.md).
+- **Required for `reviewed`:** yes — at least 2 items, with the same mechanical checks as `technique_cues`.
 
 ### `programming_notes`
 - **Type:** list of strings
 - **Required:** no — `[]` is valid; populated with 1+ folded-block entries on a minority of records where there's a specific programming call-out (e.g. an evidence caveat that belongs in programming context, not `evidence_notes` itself).
 - **Note:** Phase 2's schema audit found and fixed 4 records where this had drifted to a scalar string instead of a list (`preacher-curl`, `standing-calf-raise`, `romanian-deadlift`, `seated-leg-curl`) — exactly the kind of type violation `validate-data` now catches automatically.
+- **Standard:** exercise-specific guidance not already supplied by the programming profile or packages — never restate or override rep ranges, RIR, sets or frequency. See [COACHING-CONTENT-STANDARD.md](COACHING-CONTENT-STANDARD.md).
 - **Required for `reviewed`:** no
 
 ### The three relationship fields, defined precisely
@@ -236,6 +252,23 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 - **Decision-making impact:** yes, definitionally — only `reviewed` records may be consumed by future recommendation logic.
 - **Required for `reviewed`:** N/A (this is the field itself)
 
+### Video reference fields (Phase 6, revised Phase 7)
+
+One external YouTube execution reference per exercise. The app renders it as a plain link, never an embed. Full current state: [`docs/dev/reports/VIDEO-CURATION-QA.md`](../dev/reports/VIDEO-CURATION-QA.md).
+
+| Field | When `video_status` is `verified` | When `needs-review` / `broken` |
+|---|---|---|
+| `video_status` | closed enum: `verified` \| `needs-review` \| `broken` | same |
+| `video_link` | required — a well-formed YouTube URL, unique across the dataset | must be `null` (a dead or unconfirmed URL is never kept as if it worked) |
+| `video_creator`, `video_title` | the channel and title the URL actually resolves to | optional |
+| `video_verification_method` | required — `metadata` (title/channel checked against `name`/`equipment`/`laterality`; footage **not** watched) or `visual` (a person watched it and confirmed the movement) | must be `null` |
+| `video_verified_on` | required — quoted ISO date (`"YYYY-MM-DD"`), not in the future | must be `null` |
+
+- **Why method and date live on the record:** so reports are generated from what was actually done, and nothing can claim a stronger kind of verification than the data records.
+- **URL liveness** is checked separately and on a schedule (`npm run audit-videos`, `.github/workflows/video-audit.yml`). It never runs during builds or tests.
+- **UI:** only `verified` renders as a clickable "Click here for video". `needs-review`/`broken` render as "Video reference under review".
+- **Required for `reviewed`:** no. A missing video doesn't make the exercise knowledge wrong; it's tracked as `needs-review` instead.
+
 ## Summary table
 
 | Field | Type | Required | Controlled vocabulary | Decision-relevant | Required for `reviewed` |
@@ -252,6 +285,7 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 | `aesthetic_characteristics` | list | no | closed (5, Phase 4C) | yes | no |
 | `movement_patterns` | list | yes | first item closed (49), rest open | yes | yes |
 | `equipment` | list | yes | open | yes | yes |
+| `equipment_setups` | list of lists | no | open (union must equal `equipment`) | yes | no |
 | `exercise_type` | string | yes | closed (2) | yes | yes |
 | `laterality` | string | yes | closed (3) | yes | yes |
 | `coverage_categories` | list | yes | closed (10) | yes | yes |
@@ -265,14 +299,19 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 | `mirror_effect` | string | yes | — | yes | yes |
 | `advantages` | list | no | — | no (retirement candidate) | no |
 | `limitations` | list | yes | — | yes | yes |
-| `technique_cues` | list | no | — | no (unused) | no |
-| `common_mistakes` | list | no | — | no (unused) | no |
+| `technique_cues` | list | for `reviewed` | — | no (coaching) | yes (≥3) |
+| `common_mistakes` | list | for `reviewed` | — | no (coaching) | yes (≥2) |
 | `programming_notes` | list | no | — | some | no |
 | `alternatives` | list | no | — | yes (use selectively, not bulk) | no |
 | `complements` | list | yes | free text by design | yes | yes |
 | `overlaps_with` | list | no | IDs, must resolve | yes | conditional |
 | `evidence_notes` | list | conditional | — | yes | conditional |
 | `review_status` | string | yes | closed (3) | yes (definitional) | N/A |
+| `video_status` | string | yes | closed (3) | no | no |
+| `video_link` | string \| null | when `verified` | YouTube URL, unique | no | no |
+| `video_creator`, `video_title` | string \| null | no | — | no | no |
+| `video_verification_method` | string \| null | when `verified` | closed (2) | no | no |
+| `video_verified_on` | string \| null | when `verified` | ISO date | no | no |
 
 ## Resolved items (Phase 2 Open Decisions, architect-approved)
 

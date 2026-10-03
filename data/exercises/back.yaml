@@ -49,11 +49,13 @@
     - chin-up-supinated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=eGo4IYlbE5g
   video_creator: Calisthenicmovement
   video_title: "The Perfect Pull Up  - Do it right!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: chin-up-supinated
   name: Chin-Up (Supinated Grip)
   summary: The same bodyweight vertical pull as the pull-up, with an underhand grip that brings the biceps in more directly.
@@ -105,11 +107,13 @@
     - pull-up-pronated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=sNBS5iIu6Zg
   video_creator: Mike Campbell Man Coach
   video_title: Chin ups- supinated grip
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lat-pulldown-wide-pronated
   name: Lat Pulldown (Wide, Pronated Grip)
   summary: A vertical pull with adjustable load and a wide overhand grip, the default most people mean by "lat pulldown."
@@ -148,8 +152,15 @@
   limitations:
     - It's easy to lean back and use the trunk to help complete the pull once the load gets heavy, which shifts some of the work away from the lats without feeling like a technique breakdown.
     - The seated, supported position removes core and grip demand a bodyweight pull would add, so strength built here transfers only partially to a pull-up.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Grip the bar wider than shoulder width with palms forward and lock the thighs under the pads.
+    - Lean back slightly and start each rep by pulling the shoulders down, then drive the elbows down toward your hips.
+    - Pull the bar to your upper chest, not behind the neck.
+    - Let the arms straighten fully at the top so the lats stretch.
+  common_mistakes:
+    - "Leaning far back and swinging: the torso moves the weight and the lats do less."
+    - "Pulling with the hands rather than the elbows: the biceps and forearms tire before the lats."
+    - "Stopping before the arms are straight at the top: misses the stretched range."
   programming_notes: []
   alternatives: []
   complements:
@@ -165,6 +176,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Lat Pulldown | 3 GOLDEN RULES"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-grip-lat-pulldown
   name: Reverse-Grip Lat Pulldown
   summary: A supinated, closer-than-wide pulldown grip that brings the biceps into the pull more, with adjustable cable load.
@@ -213,11 +226,13 @@
     - chin-up-supinated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=SNiwpA13ZLU
   video_creator: PureGym
   video_title: How To Do A Reverse Grip Lat Pulldown
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: neutral-grip-lat-pulldown
   name: Neutral-Grip Lat Pulldown
   summary: A parallel or angled pulldown grip that avoids the shoulder's end-range external rotation, often the kindest grip on the joints.
@@ -266,11 +281,13 @@
     - lat-pulldown-wide-pronated
     - reverse-grip-lat-pulldown
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=L5ASC8r8_Fs
   video_creator: josh cowan
   video_title: Exercise Tutorial - Neutral Grip Lat Pulldown
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: chest-supported-row
   name: Chest-Supported Row
   summary: A horizontal pull where the bench removes lower-back and balance demand, pushing a back-thickness set closer to true failure.
@@ -293,6 +310,10 @@
   equipment:
     - machine
     - bench
+    - dumbbell
+  equipment_setups:
+    - [machine]
+    - [bench, dumbbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -312,8 +333,15 @@
   limitations:
     - The chest pad's angle and height often don't fit every torso length well, and a poor fit can cap the row's range of motion regardless of how heavy the load is.
     - Removing the hinge also removes the trunk-and-hip training stimulus a free-standing row provides, so strength here doesn't fully transfer to unsupported pulling.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the seat or bench so the pad sits on the upper chest and your arms hang straight at full stretch.
+    - Keep the chest on the pad for the whole set.
+    - Pull the elbows back past the torso, squeezing the shoulder blades together at the top.
+    - Lower until the arms are straight and the shoulder blades spread forward before the next rep.
+  common_mistakes:
+    - "Lifting the chest off the pad to finish reps: brings back the lower-back strain and momentum the pad exists to remove."
+    - "Stopping with the elbows level with the torso: misses the end range where the mid back squeezes hardest."
+    - "Shrugging toward the ears as you pull: the upper traps take over from the mid back."
   programming_notes: []
   alternatives: []
   complements:
@@ -328,6 +356,8 @@
   video_creator: Testosterone Nation
   video_title: Chest-Supported Row Machine
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: barbell-bent-over-row-pronated
   name: Barbell Bent-Over Row (Pronated Grip)
   summary: The reference free-weight horizontal pull, the heaviest, most mechanical-tension-driven back-thickness stimulus available.
@@ -379,11 +409,13 @@
     - t-bar-row
     - chest-supported-row
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Eg8DJz6kW68
   video_creator: The Fitting Rooms Personal Training Gym
   video_title: How to do the Bent Over Row with a barbell (pronated grip)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-grip-barbell-row
   name: Reverse-Grip (Underhand) Barbell Row
   summary: The same heavy free-weight row with an underhand grip, shifting emphasis more toward the lats and biceps.
@@ -432,11 +464,13 @@
   overlaps_with:
     - barbell-bent-over-row-pronated
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=tyHegMDIEbQ
   video_creator: Dr. Allan Bacon
   video_title: Reverse-grip Bent-over Barbell Row Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-cable-row
   name: Seated Cable Row
   summary: A horizontal pull with the trunk supported by the seated position, for back-thickness work without the hinge's stability demand.
@@ -476,8 +510,14 @@
   limitations:
     - The seated, foot-braced setup removes the hip-and-trunk training stimulus a free-standing row provides, so it builds pulling strength somewhat in isolation from that context.
     - It's easy to round the lower back or lean too far forward and back to add fake range, which can look like more range of motion without adding real back-muscle tension.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Sit with your feet on the platform, knees slightly bent and torso upright.
+    - Pull the handle toward your lower ribs, driving the elbows back and squeezing the shoulder blades together.
+    - Let the arms straighten and the shoulder blades move forward at the end of each rep while the torso stays upright.
+  common_mistakes:
+    - "Swinging the torso back and forth: looks like more range but the back muscles do less."
+    - "Rounding the lower back at the front of the rep: the spine takes the load instead of the back muscles stretching."
+    - "Shrugging at the end of the pull: the upper traps take over from the mid back."
   programming_notes: []
   alternatives: []
   complements:
@@ -490,6 +530,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Seated Low Row (LF Cable)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: t-bar-row
   name: T-Bar Row
   summary: A free-standing row with a fixed, close, mostly neutral grip and a heavy, mechanical-tension-driven stimulus.
@@ -512,6 +554,10 @@
   equipment:
     - t-bar
     - landmine
+    - barbell
+  equipment_setups:
+    - [t-bar]
+    - [landmine, barbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -541,11 +587,13 @@
     - reverse-grip-barbell-row
     - chest-supported-row
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=j3Igk5nyZE4
   video_creator: ScottHermanFitness
   video_title: "How To: T-Bar Row"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: conventional-deadlift
   name: Conventional Deadlift
   summary: Loads the whole posterior chain from a dead stop on the floor — the single heaviest mechanical-tension stimulus available for it.
@@ -594,11 +642,13 @@
     - romanian-deadlift (hamstrings module) — related but distinct hinge that starts from the top and never fully unloads.
     - sumo-deadlift (quads module) — same floor pull, wide stance, emphasis shifted toward quads and adductors.
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=GxsLrTzyGUU
   video_creator: PureGym
   video_title: How to Do A Conventional Deadlift Correctly
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: rack-pull
   name: Rack Pull
   summary: A partial-range deadlift from an elevated start, overloading the top-of-pull position past what a full deadlift allows.
@@ -647,11 +697,13 @@
   overlaps_with:
     - conventional-deadlift
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=WkfOa33J-QM
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL RACK PULL | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: single-arm-dumbbell-row
   name: Single-Arm Dumbbell Row
   summary: A unilateral horizontal pull that lets each side work through its own range and exposes side-to-side differences.
@@ -700,11 +752,13 @@
     - A bilateral row or vertical pull.
   overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=pYcpY20QaE8
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Bent-Over Row (Single-Arm)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: straight-arm-pulldown
   name: Straight-Arm Pulldown
   summary: A lat-focused, cable-based option with the elbow mostly fixed, a stretch-mediated stimulus independent of grip or biceps endurance.
@@ -739,8 +793,15 @@
   limitations:
     - Load ceiling is inherently modest — the fixed-elbow, straight-arm path is a mechanically weaker position than a bent-arm pull, so this can't substitute for a heavy compound pull's overall stimulus.
     - It's easy for the shoulders to hike up or the movement to turn into a shrug-like motion under fatigue, which shifts the stimulus away from the lats.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Face a high pulley, hinge slightly forward at the hips, and hold a bar or rope with nearly straight arms.
+    - Pull the bar down in an arc to your thighs, keeping a slight, fixed bend in the elbows.
+    - Keep the shoulders down, away from the ears.
+    - Let the arms rise back up until the lats stretch, without the torso moving.
+  common_mistakes:
+    - "Bending the elbows to push the bar down: it turns into a triceps pushdown."
+    - "Shrugging the shoulders up: shifts the stimulus away from the lats."
+    - "Rocking the torso to move the weight: the hips and body sway start the movement instead of the lats."
   programming_notes: []
   alternatives: []
   complements:
@@ -754,6 +815,8 @@
   video_creator: Steev
   video_title: "Cable Straight Arm Pulldown - Proper Form & Technique [4K]"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-pullover-lat-biased
   name: Dumbbell Pullover (Lat-Biased)
   summary: A free-weight lat-focused option with more elbow bend than the chest-biased version, loading an overhead range no pulldown reaches.
@@ -802,11 +865,13 @@
     - dumbbell-pullover-chest-biased (chest module) — same arc with straighter arms; elbow bend is what separates the two.
   evidence_notes:
     - Same general stretch-mediated hypertrophy grounding as straight-arm-pulldown above — see that record's evidence_notes. No study specific to the lat-biased pullover or lat length at the overhead position was located.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Cvsaj2AXevI
   video_creator: Seriously Strong Training
   video_title: How to do Dumbbell Pullovers for Massive Lats
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: barbell-dumbbell-shrug
   name: Barbell / Dumbbell Shrug
   summary: Direct upper-trap loading, a mechanical-tension, size-focused stimulus rows and pulls only train indirectly.
@@ -826,6 +891,10 @@
     - barbell
     - dumbbell
     - cable
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -845,8 +914,15 @@
   limitations:
     - The range of motion is small by nature, which limits how much mechanical work each rep can do compared to a full joint-range movement.
     - Grip commonly fails before the traps are meaningfully fatigued at heavier loads, capping the achievable stimulus without straps or a hook grip.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Stand tall with straight arms and let the weight pull the shoulders fully down at the start of each rep.
+    - Shrug straight up toward the ears, not in a forward or backward roll.
+    - Hold the top for about a second with the shoulders as high as they go, then lower under control to the full bottom stretch.
+    - Keep the elbows straight; the arms only hold the weight.
+  common_mistakes:
+    - "Rolling the shoulders at the top: adds no trap work and puts the shoulder joint through extra motion under load."
+    - "Bending the elbows to help lift: part of the rep becomes a curl or upright row and the traps travel less."
+    - "Going so heavy the range shrinks to a short bounce: the traps do far less work per rep than with a lighter, full, paused shrug."
   programming_notes: []
   alternatives: []
   complements:
@@ -858,6 +934,8 @@
   video_creator: The Strength Institute
   video_title: Barbell Shrugs - Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: back-extension-45-spinal-dominant
   name: 45° Back Extension (Spinal-Extension-Dominant Execution)
   summary: A loaded hip-extension pattern executed with straighter legs and controlled lumbar extension, biasing the spinal erectors specifically.
@@ -903,8 +981,10 @@
     - romanian-deadlift (hamstrings module)
     - back-extension-45-hip-dominant (hamstrings module) — same equipment, hip-hinge-dominant execution, hamstring/glute bias instead.
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=5_ejbGfdAQE
   video_creator: Renaissance Periodization
   video_title: 45 Degree Back Raise
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

@@ -28,6 +28,13 @@ export interface Exercise {
   aesthetic_characteristics: string[] | null;
   movement_patterns: string[];
   equipment: string[];
+  /**
+   * Alternative ways to equip the exercise (Phase 7 Stage 3.5): every item
+   * inside one setup is required; the setups are alternatives. Absent when
+   * `equipment` is itself the only setup. When present, `equipment` is the
+   * union of all setups. Interpret only through engine/equipment.ts.
+   */
+  equipment_setups?: string[][] | null;
   exercise_type: ExerciseType;
   laterality: Laterality;
   coverage_categories: string[];
@@ -54,6 +61,10 @@ export interface Exercise {
   video_creator?: string | null;
   video_title?: string | null;
   video_status?: VideoStatus | null;
+  /** ISO date (YYYY-MM-DD) the reference was last confirmed; null unless verified. */
+  video_verified_on?: string | null;
+  /** How it was confirmed: title/channel metadata only, or a person watched it. */
+  video_verification_method?: 'metadata' | 'visual' | null;
   /** Source file basename, e.g. "chest.yaml" — added by the generator, not part of the canonical schema. */
   _file: string;
 }

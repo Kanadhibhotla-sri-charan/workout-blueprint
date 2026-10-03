@@ -8,7 +8,7 @@
 
 const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
-  REVIEW_STATUSES, VIDEO_STATUSES, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
+  REVIEW_STATUSES, VIDEO_STATUSES, VIDEO_VERIFICATION_METHODS, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
   AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
 } = require('./taxonomy');
@@ -51,6 +51,29 @@ const ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const BARE_ID_REF = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const QUOTED_MODULE_REF = /^([a-z0-9]+(-[a-z0-9]+)*) \(.*module.*\)/;
 const REP_RANGE_PATTERN = /^\d+-\d+$/;
+
+function isValidPastIsoDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== value) return false;
+  return date.getTime() <= Date.now();
+}
+
+// Coaching content gate — see docs/knowledge-manual/COACHING-CONTENT-STANDARD.md.
+const COACHING_MINIMUMS = { technique_cues: 3, common_mistakes: 2 };
+const COACHING_FIELDS = ['technique_cues', 'common_mistakes', 'programming_notes'];
+const COACHING_MIN_ITEM_LENGTH = 20;
+// Phrases that are true of every exercise and therefore say nothing about
+// this one. Deliberately short — a false positive here would block real
+// content, so only unambiguous stock phrases belong.
+const COACHING_FILLER_PATTERNS = [
+  /\b(good|proper|correct|perfect) (form|technique)\b/i,
+  /\blisten to your body\b/i,
+  /\bmind[- ]muscle connection\b/i,
+  /\bstay (safe|focused)\b/i,
+  /\b(always )?warm up (properly|first)\b/i,
+];
+
 const YOUTUBE_URL_PATTERN = /^https:\/\/(www\.|m\.)?(youtube\.com\/(watch\?v=[a-zA-Z0-9_-]{11}|shorts\/[a-zA-Z0-9_-]{11})|youtu\.be\/[a-zA-Z0-9_-]{11})(\S*)?$/;
 
 const DEMAND_ORDER = ['low', 'medium', 'high'];
@@ -477,6 +500,53 @@ function validate(records) {
       }
     }
 
+    // --- Schema: equipment_setups (Phase 7 Stage 3.5) ---
+    // Optional. Each inner list is one complete way to equip the exercise
+    // (every item required); the setups are alternatives. Absent means the
+    // record's `equipment` list is a single setup, all items required.
+    // `bodyweight` is a valid item but is always treated as available.
+    if (record.equipment_setups !== undefined && record.equipment_setups !== null) {
+      const setups = record.equipment_setups;
+      if (!Array.isArray(setups) || setups.length < 2) {
+        report(record, 'schema', '"equipment_setups" must list at least 2 alternative setups — a single setup belongs in "equipment" alone');
+      } else {
+        const setupKeys = [];
+        let wellFormed = true;
+        setups.forEach((setup, index) => {
+          if (!Array.isArray(setup) || setup.length === 0 || !setup.every((item) => typeof item === 'string' && item.trim() !== '')) {
+            report(record, 'schema', `"equipment_setups[${index}]" must be a non-empty list of equipment names`);
+            wellFormed = false;
+            return;
+          }
+          if (new Set(setup).size !== setup.length) {
+            report(record, 'schema', `"equipment_setups[${index}]" lists the same equipment more than once`);
+          }
+          setupKeys.push(new Set(setup));
+        });
+        if (wellFormed) {
+          for (let a = 0; a < setupKeys.length; a++) {
+            for (let b = a + 1; b < setupKeys.length; b++) {
+              const aInB = [...setupKeys[a]].every((item) => setupKeys[b].has(item));
+              const bInA = [...setupKeys[b]].every((item) => setupKeys[a].has(item));
+              if (aInB && bInA) {
+                report(record, 'schema', `"equipment_setups[${a}]" and "[${b}]" are the same setup`);
+              } else if (aInB || bInA) {
+                const [small, big] = aInB ? [a, b] : [b, a];
+                report(record, 'schema', `"equipment_setups[${big}]" contains every item of "[${small}]" — the larger setup is never needed, so it misstates what is required`);
+              }
+            }
+          }
+          const union = new Set(setups.flat());
+          const listed = new Set(Array.isArray(record.equipment) ? record.equipment : []);
+          const missing = [...union].filter((item) => !listed.has(item));
+          const extra = [...listed].filter((item) => !union.has(item));
+          if (missing.length || extra.length) {
+            report(record, 'schema', `"equipment" must equal the union of "equipment_setups" (missing from equipment: ${JSON.stringify(missing)}; not in any setup: ${JSON.stringify(extra)})`);
+          }
+        }
+      }
+    }
+
     // --- Schema: closed-enum scalar fields ---
     if (!EXERCISE_TYPES.has(record.exercise_type)) {
       report(record, 'schema', `"exercise_type" must be one of ${[...EXERCISE_TYPES].join('|')}, got ${JSON.stringify(record.exercise_type)}`);
@@ -508,6 +578,23 @@ function validate(records) {
       }
     } else if (record.video_link !== null && record.video_link !== undefined) {
       report(record, 'schema', `"video_link" must be null when "video_status" is not "verified" (got status ${JSON.stringify(record.video_status)} with link ${JSON.stringify(record.video_link)}) — a dead/unconfirmed URL must not be preserved as if it were a working reference`);
+    }
+    // Verification provenance lives on the record itself, so a QA report
+    // generated from the data can say exactly how (and when) each
+    // reference was confirmed instead of relying on a hardcoded id list.
+    if (record.video_status === 'verified') {
+      if (!VIDEO_VERIFICATION_METHODS.has(record.video_verification_method)) {
+        report(record, 'schema', `"video_verification_method" must be one of ${[...VIDEO_VERIFICATION_METHODS].join('|')} when "video_status" is "verified", got ${JSON.stringify(record.video_verification_method)}`);
+      }
+      if (!isValidPastIsoDate(record.video_verified_on)) {
+        report(record, 'schema', `"video_verified_on" must be a quoted ISO date (YYYY-MM-DD) not in the future when "video_status" is "verified", got ${JSON.stringify(record.video_verified_on)}`);
+      }
+    } else {
+      for (const field of ['video_verification_method', 'video_verified_on']) {
+        if (record[field] !== null && record[field] !== undefined) {
+          report(record, 'schema', `"${field}" must be null when "video_status" is not "verified" — an unverified reference has no verification to describe`);
+        }
+      }
     }
     if (record.video_link && typeof record.video_link === 'string' && YOUTUBE_URL_PATTERN.test(record.video_link)) {
       const existing = videoLinkCounts.get(record.video_link) || [];
@@ -593,6 +680,37 @@ function validate(records) {
       // architect's Phase 2 Open Decisions memo (docs/architecture/
       // PHASE-2-OPEN-DECISIONS.md): the field is a retirement candidate,
       // not a content gap, and its emptiness must never block `reviewed`.
+
+      // Phase 7 coaching gate (docs/knowledge-manual/COACHING-CONTENT-STANDARD.md):
+      // an exercise can't be `reviewed` without enough coaching to act on.
+      for (const [field, min] of Object.entries(COACHING_MINIMUMS)) {
+        const count = Array.isArray(record[field]) ? record[field].length : 0;
+        if (count < min) {
+          report(record, 'governance', `reviewed record fails coaching gate: "${field}" needs at least ${min} items, has ${count} — populate it or set review_status to needs-review`);
+        }
+      }
+    }
+
+    // Mechanical quality checks on any coaching content present, whatever the
+    // review status. Exercise-specificity and accuracy remain a human review
+    // responsibility — these only catch what a script reliably can.
+    for (const field of COACHING_FIELDS) {
+      if (!Array.isArray(record[field])) continue;
+      const seen = new Set();
+      for (const item of record[field]) {
+        if (typeof item !== 'string') continue; // list-of-strings shape is checked elsewhere
+        const text = item.trim();
+        if (text.length < COACHING_MIN_ITEM_LENGTH) {
+          report(record, 'governance', `"${field}" item is too short to be useful coaching (${text.length} chars, minimum ${COACHING_MIN_ITEM_LENGTH}): ${JSON.stringify(text)}`);
+        }
+        const key = text.toLowerCase();
+        if (seen.has(key)) report(record, 'governance', `"${field}" contains a duplicate item: ${JSON.stringify(text)}`);
+        seen.add(key);
+        const filler = COACHING_FILLER_PATTERNS.find((pattern) => pattern.test(text));
+        if (filler) {
+          report(record, 'governance', `"${field}" item uses stock filler (${filler}) instead of exercise-specific coaching: ${JSON.stringify(text)}`);
+        }
+      }
     }
   }
 

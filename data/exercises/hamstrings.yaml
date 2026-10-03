@@ -20,6 +20,10 @@
     - barbell
     - dumbbell
     - smith machine
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [smith machine]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -40,8 +44,16 @@
     - Technical demand is real — hips-back, spine-neutral, bar-close-to-the- legs all have to happen together, and it takes real practice to load heavily without the lower back rounding.
     - Grip often fails before the hamstrings do at heavier loads, capping the set short of the target muscles' true limit unless straps or a mixed/hook grip are used.
     - Hamstring flexibility limits how deep the hinge can go while keeping the back neutral, so a stiff lifter may not reach a meaningful stretch even with good technique.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Start standing with the bar at your hips, feet hip width, knees softly bent.
+    - Push the hips straight back, keeping the bar against or close to your thighs as it travels down.
+    - Keep the back flat and the knee bend roughly the same all the way down. This is a hip hinge, not a squat.
+    - Lower until you feel a strong hamstring stretch or your back starts to round, often around mid-shin, then drive the hips forward to stand.
+  common_mistakes:
+    - "Rounding the lower back to reach lower: depth should stop where a flat back stops."
+    - "Letting the bar drift away from the legs: increases the load on the lower back."
+    - "Bending the knees more as you descend: it turns into a deadlift and the hamstring stretch shrinks."
+    - "Letting grip end the set before the hamstrings: use straps at heavier loads."
   programming_notes:
     - Unlike the 45-degree back extension or Bulgarian split squat, an RDL doesn't have a clean discrete technique switch that biases glutes vs. hamstrings — the moderate knee bend trains both together by design throughout the whole movement. For a more hamstring-isolated stimulus, see stiff-leg-deadlift below. For a more glute-isolated, shortened-position stimulus, see hip-thrust in the hips module.
   alternatives: []
@@ -60,6 +72,8 @@
   video_creator: Steev
   video_title: "Barbell Romanian Deadlift - Proper Form & Technique [4K]"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: stiff-leg-deadlift
   name: Stiff-Leg Deadlift
   summary: Keeping the knees much straighter than an RDL pushes nearly all the stretch and tension onto the hamstrings specifically.
@@ -78,6 +92,9 @@
   equipment:
     - barbell
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -108,11 +125,13 @@
     - romanian-deadlift
   evidence_notes:
     - Same general stretch-mediated hypertrophy grounding as romanian-deadlift above — see that record's evidence_notes. No study specific to the stiff-leg deadlift was located.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=1uDiW5--rAE
   video_creator: ScottHermanFitness
   video_title: "How To: Barbell Stiff-Leg Deadlift"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-leg-curl
   name: Seated Leg Curl
   summary: Trains knee flexion with the hip bent, a stretch-biased mechanical- tension stimulus a hinge alone doesn't provide.
@@ -148,8 +167,14 @@
   limitations:
     - Machine availability and design vary a lot — a poorly fitted thigh pad or pivot point lets the hips creep up during the set, quietly trading away the stretch position that makes this exercise distinct.
     - The fixed pad position doesn't accommodate every body size well, which can create uncomfortable pressure points before the hamstrings are meaningfully fatigued.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the back pad so your knees line up with the pivot and lock the thigh pad down firmly just above the knees.
+    - Sit tall or lean slightly forward to increase the hamstring stretch.
+    - Curl the heels down and back as far as possible, then return slowly to nearly straight legs.
+  common_mistakes:
+    - "Thigh pad left loose: the hips rise and the stretched, hip-bent position that makes this exercise distinct is lost."
+    - "Letting the stack slam between reps: tension drops at the stretched end."
+    - "Short reps that never return to the stretched position: drops the lengthened range this machine is chosen for."
   programming_notes:
     - This hip-flexed knee-flexion position is close to what a 2024 direct trial (see evidence_notes) found to be a particularly effective lengthened-position stimulus for the hamstrings — more effective, by that trial's numbers, than the Nordic hamstring curl. See nordic-hamstring-curl below for the comparison.
   alternatives: []
@@ -165,6 +190,8 @@
   video_creator: Renaissance Periodization
   video_title: Seated Leg Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lying-leg-curl
   name: Lying Leg Curl
   summary: Trains knee flexion with the hip closer to straight, a distinct growth emphasis from the seated version.
@@ -201,8 +228,14 @@
   limitations:
     - The hips have a strong tendency to rise off the pad as the load gets heavy, which lets other muscles compensate and undercuts the isolation this exercise is meant to provide.
     - A prone position is uncomfortable or inaccessible for some body types and for anyone with hip-flexor or lower-back sensitivity to being face-down under load.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Line your knees up with the machine's pivot and set the pad just above the heels.
+    - Press the hips into the pad and hold the handles.
+    - Curl the heels toward your glutes as far as you can, then lower slowly to straight legs.
+  common_mistakes:
+    - "Hips rising off the pad: the lower back and hips assist and undercut the isolation."
+    - "Dropping the weight quickly on the way down: loses the lowering phase."
+    - "Partial reps that never reach straight legs: skips the lengthened part of the curl."
   programming_notes: []
   alternatives: []
   complements:
@@ -215,6 +248,8 @@
   video_creator: FIT.nl
   video_title: "Lying Leg Curl | Proper Form Tutorial for Hamstrings"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: nordic-hamstring-curl
   name: Nordic Hamstring Curl
   summary: Produces high hamstring tension during the lowering phase with no machine, commonly cited for growth and injury-resilience benefits.
@@ -263,11 +298,13 @@
     - lying-leg-curl
   evidence_notes:
     - "Worth a correction to the popular framing, not just a citation: the same 2024 trial cited on seated-leg-curl (PMC11419281) directly compared the Nordic curl against lengthened-state training in a hip-flexed position (essentially a loaded seated leg curl) and found the hip-flexed version produced substantially more hamstrings growth (+18% vs. +11% total, +19% vs. +5% biceps femoris long head). The Nordic curl was still an effective hypertrophy stimulus in absolute terms — this isn't a claim that it doesn't work — but \"commonly cited for growth\" undersells that a simpler, less technically demanding machine exercise outperformed it in this trial. The Nordic curl's real, distinct value shown by this and other research is training the eccentric strength and fascicle adaptations tied to injury resilience, which a leg curl doesn't replicate — not necessarily the largest hypertrophy stimulus available."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=6NCN6kOagfY
   video_creator: The Kneesovertoesguy
   video_title: How to Do a Nordic Hamstring Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: back-extension-45-hip-dominant
   name: 45° Back Extension (Hip-Hinge-Dominant Execution)
   summary: A loaded hip-extension pattern executed with bent knees and a neutral lower back, biasing the hamstrings and glutes specifically.
@@ -315,8 +352,84 @@
     - romanian-deadlift
     - back-extension-45-spinal-dominant (back module) — same equipment, spinal-extension-dominant execution, erector bias instead.
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=8Jg5iqTCehg
   video_creator: James Harrison
   video_title: 45 Degree Hip Extension - Exercise Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: single-leg-romanian-deadlift
+  name: Single-Leg Romanian Deadlift
+  summary: A one-leg hip hinge with a dumbbell, loading the hamstrings and glutes in a lengthened position while the standing hip controls balance and rotation.
+  why_this_exists: Every other hinge in the library is bilateral. Training one leg at a time exposes and evens out side-to-side differences, needs only a single dumbbell, and reaches a strong hamstring and glute stretch with far less load on the spine than a barbell RDL.
+  body_regions:
+    - hamstrings
+    - hips
+  primary_targets:
+    - hamstrings
+    - gluteus maximus
+  secondary_targets:
+    - gluteus medius (as a hip stabilizer)
+    - spinal erectors
+  physique_targets:
+    - hamstrings
+    - gluteus-maximus
+  aesthetic_characteristics:
+    - lengthened-biased
+  movement_patterns:
+    - hip hinge
+    - single-leg stance
+    - moderate knee bend
+  equipment:
+    - dumbbell
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - unilateral
+    - lengthened-position-emphasis
+    - skill-coordination
+  resistance_profile: One free weight, usually held opposite the standing leg; hardest at the bottom stretch. A kettlebell works the same way.
+  stability_demand: high
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - A hinge is wanted with only a single dumbbell, or with much less spinal load than a barbell RDL.
+    - One side's hamstrings or glutes lag behind, or the hips feel uneven under two-leg hinging.
+  less_suitable_when:
+    - Balance on one leg is still unreliable — sets end on balance, not on the hamstrings.
+    - Maximal hamstring loading is the goal; a two-leg RDL moves far more weight.
+  mirror_effect: Tends to show up as fuller hamstrings and lower glutes from the side and back, and can help even out a visibly uneven side — as a lighter, balance-limited hinge its effect is usually smaller than a heavy two-leg hinge's.
+  advantages: []
+  limitations:
+    - Balance usually gives out before the hamstrings are fatigued, especially early on, which limits how hard a set can be pushed.
+    - Load is limited to what one hand can hold and one leg can balance, so it can't match a two-leg hinge's loading ceiling.
+    - The free leg's hip tends to rotate open toward the ceiling, which changes the movement without obviously feeling wrong.
+  technique_cues:
+    - Stand on one leg with a soft knee and hold the dumbbell in the opposite hand.
+    - Hinge forward from the hip, letting the free leg travel straight back so the torso and back leg move as one line.
+    - Keep both hips square to the floor, with the back foot's toes pointing down.
+    - Lower until you feel a strong stretch in the standing leg's hamstring with a flat back, then drive the hip forward to stand.
+    - Keep the dumbbell close to the standing leg throughout.
+  common_mistakes:
+    - "Hip opening so the back leg and pelvis rotate toward the ceiling: the hinge becomes a twist and the standing-leg hamstring loses its stretch."
+    - "Bending the standing knee more on the way down: it turns into a single-leg squat and the hamstring stretch shrinks."
+    - "Rounding the back to reach lower: depth should stop where a flat back stops."
+    - "Rushing reps to stay balanced: speed replaces control and cuts short the lowering phase, where most of the hamstring work happens."
+  programming_notes:
+    - Lightly hold a fixed support (a rack or wall) with the free hand until balance stops ending sets, so the hamstrings rather than balance set the limit. Start each set with the weaker side.
+  alternatives: []
+  complements:
+    - Knee-flexion hamstring work such as seated or lying leg curls, which load the hamstrings at the knee rather than the hip.
+  overlaps_with:
+    - romanian-deadlift
+    - bulgarian-split-squat-hip-dominant (hips module) — also single-leg and glute/hamstring-biased, but a split squat with much more knee bend rather than a hinge.
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=iS7atZhcRnw
+  video_creator: Dr. Jacob Goodin
+  video_title: Single Leg Romanian Deadlift (1 Dumbbell) | Exercise Technique Library
+  video_status: verified
+  video_verified_on: "2026-10-02"
+  video_verification_method: metadata

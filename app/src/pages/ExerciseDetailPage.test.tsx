@@ -100,4 +100,11 @@ describe('ExerciseDetailPage — Programming & Universal Intensity Techniques', 
 
     expect(screen.getByRole('heading', { level: 1, name: /exercise not found/i })).toBeInTheDocument();
   });
+
+  it('shows the coaching cues and common mistakes for a populated exercise', () => {
+    renderWithRoute('/exercises/chest-supported-row');
+    expect(screen.getByRole('heading', { name: /technique cues/i })).toBeInTheDocument();
+    expect(screen.getByText(/keep the chest on the pad for the whole set/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /common mistakes/i })).toBeInTheDocument();
+  });
 });

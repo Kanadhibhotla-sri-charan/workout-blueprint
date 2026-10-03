@@ -17,6 +17,9 @@
   equipment:
     - barbell
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -47,11 +50,79 @@
     - cable-shoulder-press
     - seated-machine-shoulder-press
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=2yjwXTZQDDI
   video_creator: ScottHermanFitness
   video_title: "How To: Standing Straight-Bar Military / Overhead Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: pike-push-up
+  name: Pike Push-Up
+  summary: A bodyweight vertical press done from an inverted-V position, the no-equipment way to load the front delts through overhead-style pressing.
+  why_this_exists: Every loaded vertical press needs a barbell, dumbbells, a cable or a machine. Piking the hips up turns a push-up into a steep, overhead-direction press, so the front delts can be trained directly with no equipment, and progressed by raising the feet toward a handstand push-up.
+  body_regions:
+    - shoulders
+  primary_targets:
+    - anterior deltoids
+  secondary_targets:
+    - triceps
+    - upper chest
+  physique_targets:
+    - front-delt
+  movement_patterns:
+    - vertical press
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - heavy-compound
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight-scaled; the higher the hips and the more the feet are elevated, the larger the share of bodyweight on the hands and the more vertical the press. Hardest at the bottom, with the head near the floor.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No barbell, dumbbells or machine is available and the front delts need a direct pressing stimulus.
+    - A low-fatigue vertical press is wanted in a home or travel session, with a clear progression path (feet elevated, then toward a handstand push-up).
+  less_suitable_when:
+    - A barbell or dumbbells are available and heavy, finely adjustable overhead loading is the goal — bodyweight leverage changes in steps, not small increments.
+    - Wrist extension under load is uncomfortable, since the hands carry the press in a fully extended wrist position.
+  mirror_effect: Tends to show up, over time, as more roundness on the front of the shoulder — modest at bodyweight for a trained lifter, and front delts already get indirect work from chest pressing, so it is most useful where no loaded press is available.
+  advantages: []
+  limitations:
+    - Load is capped by bodyweight and body angle, so progression comes in discrete steps (higher hips, elevated feet, deficit) rather than small load increments.
+    - It easily drifts toward an ordinary push-up as the hips drop, which moves the work to the chest without it being obvious.
+    - The hands bear the press with the wrists fully extended, which limits some lifters before the shoulders are challenged.
+  technique_cues:
+    - From a push-up position, walk the feet in and lift the hips until the body forms an inverted V, arms roughly in line with the torso.
+    - Place the hands slightly wider than shoulder width with the fingers spread, and keep the hips high for the whole set.
+    - Lower the top of the head toward a point just in front of the hands, so head and hands form a triangle.
+    - Keep the elbows at roughly 45 degrees from the body rather than flared straight out to the sides.
+    - Press the floor away until the arms are straight, keeping the hips where they started.
+  common_mistakes:
+    - "Letting the hips drop toward a plank: the press turns horizontal, so the chest takes over and the front delts lose the load."
+    - "Lowering the head straight down between the hands: the elbows flare and the shoulders finish in a cramped position instead of a strong pressing line."
+    - "Stopping well short of the floor: skips the bottom of the rep, where the press is hardest and the front delts work most."
+  programming_notes:
+    - "Progress in this order: feet closer to the hands for a steeper body angle, then feet on a bench or box, then hands on blocks for extra depth, working toward a wall-supported handstand push-up."
+  alternatives: []
+  complements:
+    - Side- and rear-delt work, which vertical pressing does not replace.
+  overlaps_with:
+    - overhead-press
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=paCOGgmLCA0
+  video_creator: Paul Twyman
+  video_title: "PIKE PUSH UP Tutorial for the Complete Beginner"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: smith-machine-shoulder-press
   name: Smith Machine Shoulder Press
   summary: A barbell on a fixed vertical rail, removing most of the balance and bracing demand of a standing or seated overhead press.
@@ -97,11 +168,13 @@
     - seated-machine-shoulder-press
     - cable-shoulder-press
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=cEBAJ6lAQS4
   video_creator: FIT.nl
   video_title: "Smith Machine Shoulder Press | Proper Form Tutorial for Shoulder Strength"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-shoulder-press
   name: Cable Shoulder Press
   summary: A standing cable press with constant tension through the range, for a pump-oriented front-delt stimulus.
@@ -147,11 +220,13 @@
     - seated-machine-shoulder-press
     - smith-machine-shoulder-press
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Zy1dc-20Uik
   video_creator: OriGym
   video_title: "How To Do Cable Shoulder Press | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: seated-machine-shoulder-press
   name: Seated Machine Shoulder Press
   summary: A stable vertical press well suited to pushing a front-delt set to true failure without managing balance or bar path.
@@ -197,11 +272,13 @@
     - cable-shoulder-press
     - smith-machine-shoulder-press
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=WvLMauqrnK8
   video_creator: Renaissance Periodization
   video_title: Machine Shoulder Press
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-lateral-raise
   name: Dumbbell Lateral Raise
   summary: The most available direct side-delt option, a mechanical-tension and pump stimulus that peaks near the top of the range.
@@ -236,8 +313,15 @@
   limitations:
     - The load ceiling is low relative to how heavy it can feel — most lifters plateau on usable weight quickly since the leverage at the top of the range is poor.
     - Trap and upper-shoulder involvement can creep in and take over the movement, especially under fatigue, without an obvious change in how the rep looks.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Stand tall with a slight forward lean and a soft bend in the elbows.
+    - Raise the dumbbells out to the sides, leading with the elbows, until the arms are about parallel to the floor.
+    - Keep the shoulders down, away from the ears.
+    - Lower slowly and don't rest the dumbbells against your legs between reps.
+  common_mistakes:
+    - "Using a weight that needs a body swing to get moving: momentum carries the easy bottom range and the delts do less."
+    - "Shrugging as the arms rise: the traps take over."
+    - "Lifting well above shoulder height with heavy dumbbells: adds trap work rather than side-delt work."
   programming_notes: []
   alternatives: []
   complements:
@@ -251,6 +335,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Side Lateral Raise"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-lateral-raise
   name: Cable Lateral Raise
   summary: A side-delt option whose resistance stays meaningful in the stretched bottom position, unlike a dumbbell raise.
@@ -285,8 +371,15 @@
   limitations:
     - Requires a low cable pulley and enough station space to stand at the right distance and angle, which is a real setup constraint most gyms can accommodate but not instantly.
     - The line of pull only stays ideal for part of the range unless the pulley height and standing position are tuned carefully, which takes more setup attention than a dumbbell raise.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the pulley at its lowest point, stand side-on, and hold the handle in the far hand so the cable crosses in front of your body.
+    - Lean slightly away from the stack and keep a soft bend in the elbow.
+    - Raise the arm out to the side, leading with the elbow, to about shoulder height.
+    - Lower slowly until the hand crosses your midline. That stretched bottom position is where a cable beats a dumbbell.
+  common_mistakes:
+    - "Shrugging the shoulder up as the arm rises: the upper traps take over the lift."
+    - "Bending the elbow more as you lift: the raise turns into a row and the side delt does less."
+    - "Cutting the bottom short: skips the stretched range that is the reason to use a cable for this."
   programming_notes: []
   alternatives: []
   complements:
@@ -300,6 +393,8 @@
   video_creator: Testosterone Nation
   video_title: Two Ways to Do Cable Lateral Raises
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-lateral-raise
   name: Machine Lateral Raise
   summary: A fixed-path abduction option that removes balance and momentum, well suited to pushing a side-delt set to true failure.
@@ -333,8 +428,15 @@
   limitations:
     - Machine design varies significantly, and a poor pivot-point match for a given torso size can create an uncomfortable pinch or a line of resistance that never really loads the side delt well.
     - Availability is a real constraint — this specific machine is less universal in gyms than a cable station or a simple pair of dumbbells.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Adjust the seat so your shoulders line up with the machine's pivot points.
+    - Press against the pads with the outsides of your arms or elbows, not your hands.
+    - Raise the arms out to about shoulder height, then lower slowly.
+    - Keep the shoulders down and your chest against the pad, if there is one.
+  common_mistakes:
+    - "Seat height wrong for your torso: the shoulder pinches and the delt never gets a clean line of pull."
+    - "Shrugging into the pads: the traps take over."
+    - "Letting the stack touch down between reps: tension drops at the bottom."
   programming_notes: []
   alternatives: []
   complements:
@@ -348,6 +450,8 @@
   video_creator: FIT.nl
   video_title: "Machine Lateral Raise | Proper Form Tutorial for Shoulder Growth"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: rear-delt-fly
   name: Rear-Delt Fly
   summary: Direct, stretch-mediated rear-delt work that pressing-heavy routines commonly leave short.
@@ -365,6 +469,9 @@
   equipment:
     - dumbbell
     - machine
+  equipment_setups:
+    - [dumbbell]
+    - [machine]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -396,11 +503,13 @@
     - machine-reverse-fly
   evidence_notes:
     - No hypertrophy trial specific to the rear-delt fly or posterior deltoid muscle length was located — this is a weaker claim than several of the other stretch-mediated claims in this dataset. It's an inference from the general stretch-mediated hypertrophy literature (Schoenfeld & Grgic, 2020, SAGE Open Medicine; Wolf et al., 2023, International Journal of Strength and Conditioning) and from the mechanical fact that resistance peaks near the horizontally abducted, stretched end of this movement's range, not a posterior-deltoid-specific finding. A later trial (Wolf et al., 2025, PubMed 39959841) found the general stretch advantage over full ROM is smaller than earlier work suggested, which further tempers how much weight this claim should carry.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=hwBu73GZn98
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: "How To Do Rear Delt Flys With Dumbbells - Proper Form, Sets & Reps"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-reverse-fly
   name: Machine Reverse Fly
   summary: A fixed-path rear-delt fly that removes balance demand, well suited to a rear-delt pump pushed to true failure.
@@ -444,11 +553,13 @@
   overlaps_with:
     - rear-delt-fly
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=nnn9kg33K2g
   video_creator: ELEFITTV
   video_title: How To Properly Target Rear Delts On Reverse Fly Machine
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-rear-delt-builder
   name: Cable Rear Delt Builder
   summary: A cable row keeping the elbows below the wrists throughout the pull, holding the resistance angle specifically on the rear delt.
@@ -496,11 +607,13 @@
     - seated-cable-row (back module)
     - rear-delt-row
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=ATSjVXoOgVg
   video_creator: OriGym
   video_title: "How To Do Cable Rear Delt Fly | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: rear-delt-row
   name: Rear Delt Row
   summary: A seated dumbbell row from a dead hang, elbows down and thumbs rotating back and up, driving the rear delts through extension.
@@ -538,8 +651,15 @@
   limitations:
     - The bent-over seated position places real demand on the lower back to stay braced, which can become the limiting factor before the rear delts are.
     - It's easy to let the elbows flare up and out under fatigue, which shifts the stimulus toward the upper back and traps instead of the rear delts.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Sit at the end of a bench and hinge forward with a flat back until the torso is close to the thighs, letting the dumbbells hang straight down.
+    - Row the dumbbells back toward your hips with the elbows staying down, not flaring out to the sides.
+    - As the elbows travel back, rotate the thumbs back and up to finish the movement.
+    - Keep the lower back braced and the torso still throughout.
+  common_mistakes:
+    - "Elbows flaring up and out as fatigue sets in: the upper back and traps take over from the rear delts."
+    - "Sitting up as the set gets hard: the torso angle changes and the rear delts lose their line of pull."
+    - "Shrugging the dumbbells up: the traps do the lifting."
   programming_notes: []
   alternatives: []
   complements:
@@ -553,6 +673,8 @@
   video_creator: OriGym
   video_title: "How To Do Dumbbell Rear Delt Row | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: face-pull
   name: Face Pull
   summary: Combines a moderate rear-delt stimulus with a shoulder-rotation, joint-health component in one movement.
@@ -572,6 +694,9 @@
   equipment:
     - cable
     - band
+  equipment_setups:
+    - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -591,8 +716,15 @@
   limitations:
     - The rotation component that gives this movement its joint-health value is the first thing to break down as load increases, so it stops delivering its full intended benefit exactly when it's loaded hardest.
     - The rear-delt stimulus on its own is moderate at best — this isn't a substitute for dedicated rear-delt work when hypertrophy is the specific goal.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set a rope at upper-chest to face height and hold it with palms facing down or thumbs pointing back.
+    - Pull the rope toward your face, separating the ends so the hands finish beside the ears.
+    - Finish with the elbows high and the hands rotated back behind the elbows, like a double-biceps pose.
+    - Return slowly with the shoulders kept down.
+  common_mistakes:
+    - "Pulling to the chest with low elbows: it becomes a row and the rotation component disappears."
+    - "Going heavy enough to lean back for each rep: the rotation, the main reason to do face pulls, is the first thing lost."
+    - "Shrugging during the pull: the upper traps replace the rear delts."
   programming_notes: []
   alternatives: []
   complements:
@@ -607,6 +739,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Face Pull"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-band-external-rotation
   name: Cable or Band External Rotation
   summary: Isolates shoulder external rotation for joint durability, not a primary size driver.
@@ -623,6 +757,9 @@
   equipment:
     - cable
     - band
+  equipment_setups:
+    - [cable]
+    - [band]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -651,11 +788,13 @@
   overlaps_with:
     - face-pull
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=LpNgc6Vx4iY
   video_creator: Bodybuilding.com
   video_title: "How To Do A Cable External Rotation | Exercise Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: push-up-plus
   name: Push-Up Plus
   summary: A low-equipment scapular-protraction drill, a durability and movement-quality tool rather than a primary size driver.
@@ -700,8 +839,10 @@
     - Overhead pressing and horizontal pulling.
   overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=RR5xJ1mXEV4
   video_creator: Matthew Stevens
   video_title: "Push-Up Plus | Push-Up Variation"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

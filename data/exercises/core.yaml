@@ -32,8 +32,15 @@
   limitations:
     - The hips readily take over the movement once the load gets challenging, and it isn't always obvious from how the rep feels that this has happened.
     - Cable-station setup and pulley height add real setup time compared to a bodyweight ab movement, which matters if abs are being trained as a quick add-on.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Kneel facing the stack with the rope held beside your head, hips stacked over the knees.
+    - Curl the spine down, bringing the ribs toward the pelvis and the head toward the knees.
+    - Keep the hips fixed in place; the movement comes from the spine, not from sitting back.
+    - Return until the spine is extended and the abs are stretched before the next rep.
+  common_mistakes:
+    - "Sitting the hips back toward the heels: the crunch becomes a hip hinge and bodyweight moves the stack instead of the abs."
+    - "Pulling the rope down with the arms: the hands should stay fixed at the head; arm pulling steals tension from the abs."
+    - "Short pulses at the bottom only: skips the extended position, so the abs never work through full flexion."
   programming_notes: []
   alternatives: []
   complements:
@@ -46,6 +53,8 @@
   video_creator: Colossus Fitness
   video_title: How to PROPERLY Perform A Cable Crunch to Shape Your Abs (Kneeling Cable Abdominal Crunch)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-crunch
   name: Machine Crunch
   summary: A fixed-path trunk-flexion movement, well suited to pushing an ab mechanical-tension stimulus safely to true failure.
@@ -90,11 +99,13 @@
   overlaps_with:
     - cable-crunch
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=G8937xqkxDo
   video_creator: FIT.nl
   video_title: "Machine Crunch | Proper Form Tutorial for Stronger Abs"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hanging-knee-leg-raise
   name: Hanging Knee or Leg Raise
   summary: Trains hip flexion with trunk control, scaling from bent knees to straight legs without changing equipment.
@@ -133,9 +144,17 @@
   limitations:
     - Grip endurance often runs out before the abs or hip flexors do for lifters who haven't built grip capacity elsewhere, ending the set on the wrong limiter.
     - The skill and shoulder-stability demand of hanging control is nontrivial — swinging is an easy failure mode that quietly drains the set of its intended tension.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - Hang with straight arms and the shoulders pulled slightly down, legs still.
+    - "Lift by curling the pelvis up: tilt the hips back so the knees rise toward the chest and the lower back rounds slightly at the top."
+    - Raise the knees, or straight legs once you're ready, as high as you can control, then lower slowly to a dead hang.
+    - Pause at the bottom to stop any swing before the next rep.
+  common_mistakes:
+    - "Swinging to get the legs up: momentum does the work, not the abs."
+    - "Lifting the thighs only to horizontal without curling the pelvis: mostly trains the hip flexors. The abs work when the pelvis tilts up."
+    - "Letting grip end the set: use straps if grip gives out before the abs."
+  programming_notes:
+    - Progress from bent knees to straight legs before adding load. After that, a light dumbbell held between the feet or ankle weights can add resistance.
   alternatives: []
   complements:
     - A loaded trunk-flexion movement.
@@ -146,6 +165,8 @@
   video_creator: ATHLEAN-X™
   video_title: "Hanging Leg Raise | HOW-TO"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: plank
   name: Plank
   summary: The lowest-barrier anti-extension option, a stability-and-endurance tool rather than a growth stimulus.
@@ -195,11 +216,13 @@
   overlaps_with:
     - ab-wheel-rollout
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=pSHjTRCQxIw
   video_creator: ScottHermanFitness
   video_title: "How To: Plank"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: ab-wheel-rollout
   name: Ab Wheel Rollout
   summary: An anti-extension movement through range rather than a held position, a real mechanical-tension and eccentric-control stimulus.
@@ -246,11 +269,13 @@
   overlaps_with:
     - plank
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=rqiTPdK1c_I
   video_creator: Mind Pump TV
   video_title: "Ab Wheel- How to PROPERLY Use an Ab Wheel | MIND PUMP"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: pallof-press
   name: Pallof Press
   summary: Loads anti-rotation directly, a control-and-durability tool rather than a primary hypertrophy driver.
@@ -271,6 +296,9 @@
   equipment:
     - band
     - cable
+  equipment_setups:
+    - [band]
+    - [cable]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -291,9 +319,17 @@
   limitations:
     - The stimulus is inherently light — this is a control-and-durability tool, not a movement that drives meaningful oblique hypertrophy on its own.
     - Band or cable resistance is hard to load heavily in a way that keeps adding real challenge over time, unlike a barbell-based progression.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - Set a cable or band at chest height and stand side-on, feet about shoulder width, far enough away that there's tension at the start.
+    - Hold the handle at your sternum with both hands, ribs down and glutes tight.
+    - Press the handle straight out from your chest and hold for a few seconds without letting the torso turn toward the anchor.
+    - Bring it back to the chest under control, then finish all reps before switching sides.
+  common_mistakes:
+    - "Letting the torso or hips twist toward the anchor: the anti-rotation demand, the whole point of the exercise, disappears."
+    - "Standing so close there's little tension: the press feels easy and does little."
+    - "Pressing up or out to the side instead of straight forward from the sternum: shortens the lever, so the trunk has less rotation to resist."
+  programming_notes:
+    - Progress by standing farther from the anchor or holding each press longer, rather than only adding stack weight.
   alternatives: []
   complements:
     - Trunk flexion and anti-extension work.
@@ -304,6 +340,8 @@
   video_creator: FIT.nl
   video_title: "Cable Pallof Press | Proper Form Tutorial for Core Stability"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: suitcase-carry
   name: Suitcase Carry
   summary: Loads one side at a time so the trunk resists lateral pull, while also training grip — a stability-and-durability tool.
@@ -325,6 +363,9 @@
   equipment:
     - dumbbell
     - kettlebell
+  equipment_setups:
+    - [dumbbell]
+    - [kettlebell]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -352,11 +393,82 @@
   overlaps_with:
     - farmers-carry (forearms module)
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=y-hn_Ha1-RE
   video_creator: Dr. Carl Baird
   video_title: How To Perform The Suitcase Carry
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: side-plank
+  name: Side Plank
+  summary: A bodyweight side-lying hold that trains the obliques by resisting sideways bending, the no-equipment counterpart to the suitcase carry.
+  why_this_exists: Every other obliques exercise in the library needs a cable, band, dumbbell or kettlebell. The side plank trains the same lateral-flexion resistance as a suitcase carry with bodyweight alone, at low fatigue, so the obliques can be worked directly anywhere.
+  body_regions:
+    - core
+  primary_targets:
+    - obliques
+    - quadratus lumborum
+  secondary_targets:
+    - gluteus medius
+  physique_targets:
+    - obliques
+  functional_goals:
+    - core-anti-lateral-flexion
+  movement_patterns:
+    - anti-lateral flexion under load
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight isometric hold, one side at a time. Difficulty rises with the lever — knees down is easiest, feet stacked is harder, and elevating the feet or holding a weight on the hip adds more.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No cable, band, dumbbell or kettlebell is available and the obliques need direct work.
+    - A low-fatigue lateral-trunk exercise is wanted alongside heavier training, or as the bodyweight alternative to a suitcase carry.
+  less_suitable_when:
+    - Holds already last well over a minute per side — the stimulus has drifted toward endurance, and a harder lever or a loaded carry gives the obliques more to work against.
+    - Shoulder pain limits weight-bearing on the bottom forearm.
+  mirror_effect: Modest shaping effect on its own — as an isometric hold it builds lateral-trunk strength and endurance more than oblique size, so any sharper definition at the sides of the waist depends mostly on body-fat level.
+  advantages: []
+  limitations:
+    - As an isometric hold, it plateaus once long holds become easy; progressing needs a longer lever, elevated feet or added load rather than more time.
+    - The bottom shoulder carries much of the body's weight, which can limit the set before the obliques do.
+    - Each side is trained separately, so a full set takes twice as long as a bilateral hold.
+  technique_cues:
+    - Lie on one side with the elbow directly under the shoulder and the forearm flat on the floor.
+    - Stack the feet, or stagger them for a wider base, and keep the body in one straight line from head to heels.
+    - Lift the hips until there is no sag at the waist, and hold them high for the whole set.
+    - Brace the trunk and keep breathing steadily rather than holding the breath.
+    - Hold for time, then switch sides and match the hold on the other side.
+  common_mistakes:
+    - "Letting the hips sag toward the floor: the trunk bends sideways instead of resisting it, which takes the load off the obliques."
+    - "Rolling the top hip forward or back: the body twists out of line and the hold turns into a partial front plank."
+    - "Shrugging into the bottom shoulder instead of pushing the floor away: the shoulder ends up taking the strain before the trunk is challenged."
+  programming_notes:
+    - "Progress in this order: knees down, then feet staggered, then feet stacked, then feet elevated or a weight held on the hip. Once a long hold is easy, move to a harder lever or a loaded carry rather than holding longer."
+  alternatives: []
+  complements:
+    - Rotation or anti-rotation work, such as a woodchop or Pallof press, which loads the obliques in a different direction.
+  overlaps_with:
+    - suitcase-carry
+    - copenhagen-plank (hips module)
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=44ND4bOB-T0
+  video_creator: National Academy of Sports Medicine (NASM)
+  video_title: "How to do a Side Plank | Proper Form & Technique | NASM"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: cable-woodchop
   name: Cable Woodchop
   summary: Trains trunk rotation through a range with constant tension, a pump-oriented rotational stimulus for the obliques.
@@ -393,8 +505,15 @@
   limitations:
     - It's easy for the arms to do most of the work instead of the trunk, especially as fatigue sets in, which shifts the stimulus away from the obliques without an obvious form breakdown.
     - Requires a cable station with adjustable pulley height, which limits where this can be done compared to free-weight rotational options.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the pulley high, stand side-on with feet wider than the shoulders, and hold the handle with both hands above the near shoulder.
+    - Keep the arms long and fairly still; rotate the trunk to pull the handle diagonally down across your body.
+    - Let the back heel pivot so the hips can turn, but start the movement from the trunk.
+    - Return slowly against the cable, resisting the pull back to the start.
+  common_mistakes:
+    - "Pulling with the arms instead of rotating: the arms tire out and the obliques barely work."
+    - "Rushing the return: the controlled return under cable tension is half the stimulus."
+    - "Rounding forward into a crunch: the target is rotation, not flexion."
   programming_notes: []
   alternatives: []
   complements:
@@ -407,6 +526,8 @@
   video_creator: FIT.nl
   video_title: "Cable Woodchop | Proper Form Tutorial for Core Rotation"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: russian-twist
   name: Russian Twist
   summary: A free-weight rotation option loaded hardest at the ends of the range, the opposite feel from a cable woodchop's constant tension.
@@ -426,6 +547,10 @@
     - dumbbell
     - plate
     - medicine ball
+  equipment_setups:
+    - [dumbbell]
+    - [plate]
+    - [medicine ball]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -455,8 +580,10 @@
   overlaps_with:
     - cable-woodchop
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=wkD8rjkodUI
   video_creator: Howcast
   video_title: "How to Do a Russian Twist | Ab Workout"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

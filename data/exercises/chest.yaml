@@ -53,11 +53,13 @@
     - incline-cable-press
   evidence_notes:
     - "Strong evidence, among the best-supported region-bias claims in this dataset. Chaves et al. (2020, International Journal of Exercise Science, PMC7449336) trained untrained men on flat, 44-degree incline, or a combination of both for 8 weeks and measured pec thickness by ultrasound/MRI-style imaging: the incline group gained upper-chest thickness far beyond the flat group (a very large, outlier-sized effect — over 60% relative increase), while mid-chest growth was similar across groups. This is direct regional- hypertrophy data, not just EMG. It's backed by EMG evidence too: Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head activation rose with incline angle across five bench inclinations. Evidence quality: strong — a real hypertrophy trial plus consistent EMG, though still a single hypertrophy trial with an unusually large effect size that hasn't yet been replicated."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=8iPEnn-ltC8
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Incline Chest Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-barbell-press
   name: Incline Barbell Press
   summary: A fixed-path incline press offering the heaviest loadable upper-chest stimulus of the incline family.
@@ -97,8 +99,15 @@
   limitations:
     - The fixed grip width and bar path mean the bottom-range stretch is shallower than a dumbbell version allows, trading away some of the incline's lengthened-position value.
     - Unracking and re-racking at a steep incline angle is more awkward and has a higher missed-rep risk than a flat bench press.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the bench to a moderate incline, about 30 to 45 degrees. Steeper angles shift work to the front delts.
+    - Pull the shoulder blades back and plant the feet before unracking; use a spotter for the lift-off if you can.
+    - Lower the bar to the upper chest, just below the collarbones, with the elbows slightly tucked.
+    - Press straight up so the bar finishes over the shoulders.
+  common_mistakes:
+    - "Bench set too steep: the lift turns into a shoulder press."
+    - "Lowering the bar to the mid chest: the bar path drifts and the upper-chest emphasis is lost."
+    - "Arching until the hips leave the bench: flattens the effective angle back toward a flat press."
   programming_notes: []
   alternatives: []
   complements:
@@ -114,6 +123,8 @@
   video_creator: Buff Dudes Workouts
   video_title: "Incline Barbell Press | Upper Chest | How-To Exercise Tutorial"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-machine-press
   name: Incline Machine Press
   summary: A stable, fixed-path incline press that removes free-weight balance demand, well suited to pushing an upper-chest set to true failure.
@@ -164,11 +175,13 @@
     - smith-machine-incline-press
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the equipment.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=LiDArz1R2NU
   video_creator: FIT.nl
   video_title: "Incline Machine Chest Press | Proper Form Tutorial for Upper Chest"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-incline-press
   name: Smith Machine Incline Press
   summary: A barbell on a fixed vertical rail, removing the spotter requirement and most of the balance demand of a free barbell incline press.
@@ -220,11 +233,13 @@
     - incline-cable-press
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the fixed rail.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=yFQshytandQ
   video_creator: James Harrison
   video_title: Incline Smith Machine Bench Press - Exercise Tutorial
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-cable-press
   name: Incline Cable Press
   summary: A standing incline-angled cable press with constant tension through the range, for a pump-oriented upper-chest stimulus.
@@ -275,11 +290,13 @@
     - incline-machine-press
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the cable's constant tension.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=qctZmqNhkfU
   video_creator: HASfit
   video_title: Incline Cable Chest Press - HASfit Upper Chest Exercise Demonstration - Incline Cable Bench Press
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: flat-barbell-bench-press
   name: Flat Barbell Bench Press
   summary: The reference horizontal chest press and the primary mechanical- tension, strength-building mid-chest stimulus.
@@ -319,8 +336,17 @@
   limitations:
     - A spotter or safety bars are genuinely needed to train close to failure safely, which limits how hard this can be pushed when training alone.
     - Shoulder or elbow discomfort at a full range is common for some lifters, and grip width or bar path often has to be individually adjusted to manage it.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Lie with your eyes under the bar, feet planted, and shoulder blades squeezed together and down. Keep that position for the whole set.
+    - Grip slightly wider than shoulder width so the forearms are vertical when the bar touches your chest.
+    - Lower under control to the lower chest with the elbows tucked to roughly 45 degrees from the torso, not flared straight out.
+    - Press up and slightly back so the bar finishes over the shoulders.
+    - Drive the feet into the floor and keep the glutes on the bench.
+  common_mistakes:
+    - "Elbows flared straight out at 90 degrees: raises shoulder stress, a common source of the shoulder discomfort this lift is known for."
+    - "Bouncing the bar off the chest: the rebound skips the hardest part of the lift and risks a hard impact on the sternum."
+    - "Shoulder blades coming apart during the set: the shoulders roll forward and take load off the chest."
+    - "Training close to failure alone without safety bars set just below chest height: a missed rep can pin the bar on the chest or throat."
   programming_notes: []
   alternatives: []
   complements:
@@ -337,6 +363,8 @@
   video_creator: Jeremy Ethier
   video_title: How to PROPERLY Bench Press for Growth (5 Easy Steps)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-bench-press
   name: Smith Machine Bench Press
   summary: A barbell on a fixed vertical rail, removing the spotter requirement and most of the balance demand of a free barbell bench press.
@@ -388,11 +416,13 @@
     - cable-chest-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=7FyJdsXeta8
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Smith Machine Bench Press"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: flat-dumbbell-press
   name: Flat Dumbbell Press
   summary: A general horizontal chest press with independently moving arms, for a mid-chest mechanical-tension stimulus with extra stretch.
@@ -445,11 +475,13 @@
     - smith-machine-bench-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=sXk7lP7eN8Q
   video_creator: PrazeNation
   video_title: "Flat Bench Dumbbell Press | Proper Form & Chest Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-chest-press
   name: Machine Chest Press
   summary: A stable, fixed-path horizontal press well suited to pushing a mid-chest set to true failure without free-weight balance demand.
@@ -499,11 +531,13 @@
     - smith-machine-bench-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=xUm0BiZCWlQ
   video_creator: ScottHermanFitness
   video_title: "How To: Chest Press (Cybex)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-chest-press
   name: Cable Chest Press
   summary: A standing cable press with constant tension through the range, for a pump-oriented mid-chest stimulus with a converging path.
@@ -551,11 +585,13 @@
     - machine-chest-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=FVWJglwid4I
   video_creator: Howcast
   video_title: "How to Do a Cable Chest Press | Chest Workout"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hex-press
   name: Hex Press
   summary: Pressing two dumbbells while squeezing them together, adding constant isometric adduction tension for an inner-chest pump stimulus.
@@ -604,11 +640,13 @@
     - flat-dumbbell-fly
   evidence_notes:
     - "The mid/sternal-biased part carries the same evidence as flat-barbell-bench-press — see that record's evidence_notes. The \"extra emphasis toward the inner chest\" claim is separate and unresolved: no research was found isolating an \"inner chest\" as a distinct region within the sternocostal head, and no direct study of the hex press's squeeze-adduction effect on regional hypertrophy was located. It's a widely repeated coaching cue based on where lifters report feeling the squeeze, not a settled finding."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=f7N_JpIOgOk
   video_creator: Train With Cuz
   video_title: Dumbbell Hex Press
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: flat-dumbbell-fly
   name: Flat Dumbbell Fly
   summary: A free-weight, mid-chest-biased adduction movement with a strong bottom-range stretch stimulus, performed flat.
@@ -658,11 +696,13 @@
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press applies to the mid-bias claim here — see that record's evidence_notes. No study specific to the fly (adduction) pattern rather than a press was located, so this is an extrapolation from press data to a fly, not a direct finding.
     - "Separately, the \"strong stretch-mediated growth stimulus\" claim draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so \"strong\" should be read as a well-supported direction, not a settled magnitude. This is a general principle, not a fly-specific finding."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=eozdVDA78K0
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Flys On A Flat Bench"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: incline-dumbbell-fly
   name: Incline Dumbbell Fly
   summary: Angling the bench up shifts a free-weight fly's stretch and tension toward the upper chest.
@@ -701,8 +741,15 @@
   limitations:
     - Same shoulder-vulnerability concern as the flat version, and the steeper angle can make the stretched bottom position even less forgiving.
     - Load ceiling is low, similar to the flat fly, since the stretched shoulder position is the limiting factor rather than chest strength.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Set the bench to a low incline, about 15 to 30 degrees, and start with the dumbbells over your chest, palms facing each other.
+    - Keep a slight, fixed bend in the elbows and lower the dumbbells out to the sides in a wide arc.
+    - Stop when you feel a strong chest stretch, around chest level, and no deeper than your shoulders allow.
+    - Bring the dumbbells back up along the same arc, squeezing the chest.
+  common_mistakes:
+    - "Bending the elbows more on the way down and then pressing up: the fly becomes a press."
+    - "Letting the dumbbells drop too deep: the shoulder, not the chest, absorbs the stretch."
+    - "Clanking the dumbbells together at the top: tension leaves the chest at the top of the arc."
   programming_notes: []
   alternatives: []
   complements:
@@ -718,6 +765,8 @@
   video_creator: ScottHermanFitness
   video_title: "How To: Incline Dumbbell Fly || Hit Your Chest HARD!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: decline-dumbbell-fly
   name: Decline Dumbbell Fly
   summary: Angling the bench down shifts a free-weight fly's stretch and tension toward the lower chest.
@@ -766,11 +815,13 @@
   evidence_notes:
     - "Weaker evidence than the upper-chest claim. EMG support only: Rodríguez-Ridao et al. (2020, PMC7579505) and the earlier Barnett et al. (1995, JSCR) both found greater lower/sternocostal-region pectoral activation during decline pressing than incline or flat. No MRI or ultrasound hypertrophy trial isolating a decline-specific lower-chest growth effect was located — unlike the upper-chest claim, this one rests on EMG alone. Evidence quality: moderate, similar tier to the biceps head-bias claims in the arms module."
     - The "stretch-mediated growth stimulus" framing draws on the same general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle, not a fly-specific or decline-specific finding.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=IMALXhhHRKM
   video_creator: LIVESTRONG
   video_title: How to Do a Decline Dumbbell Fly
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: machine-fly-pec-deck
   name: Machine Fly (Pec Deck)
   summary: A fixed-path fly that removes balance demand, well suited to a pump-oriented mid-chest finisher pushed to true failure.
@@ -817,11 +868,13 @@
     - decline-dumbbell-fly
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press applies here — see that record's evidence_notes, and the same press-to-fly extrapolation caveat noted on flat-dumbbell-fly.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=FDay9wFe5uE
   video_creator: Renaissance Periodization
   video_title: Machine Flye
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-fly
   name: Cable Fly
   summary: A cable-based chest adduction option with adjustable pulley height, the only fly variation that can target upper or lower chest directly.
@@ -857,8 +910,15 @@
   limitations:
     - Requires a cable station with adjustable pulley height and, ideally, two stations facing each other, which not every gym has set up conveniently.
     - Standing balance and cable-path control add a coordination demand that a bench-supported fly doesn't have.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - "Set the pulleys for the target: high-to-low for lower chest, low-to-high for upper chest, around shoulder height for mid chest."
+    - Stand in a split stance a step in front of the cables, chest up and shoulder blades pulled back and down.
+    - Keep a slight, fixed bend in the elbows and sweep the hands together in a wide arc.
+    - Bring the hands together in front of the chest and squeeze, then return until you feel a stretch across the chest without the shoulders rolling forward.
+  common_mistakes:
+    - "Bending and straightening the elbows during the rep: the fly becomes a press and the triceps take over."
+    - "Letting the shoulders roll forward at the end of the stretch: strains the front of the shoulder instead of stretching the chest."
+    - "Leaning into the handles and using bodyweight to pull them: the torso does the work and the chest never reaches a full stretch."
   programming_notes: []
   alternatives: []
   complements:
@@ -875,6 +935,8 @@
   video_creator: Wavvy Fitness
   video_title: "TUTORIAL: How To Properly Do Cable Flyes"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dumbbell-pullover-chest-biased
   name: Dumbbell Pullover (Chest-Biased)
   summary: A straight-arm overhead arc that loads the chest in a shoulder- extension role no press or fly reaches.
@@ -923,11 +985,13 @@
   evidence_notes:
     - No research was found on the pullover's regional pec bias specifically — the "general/costal-biased" framing is an inference from the movement's shoulder-extension arc, not a tested finding. Left as an open claim rather than asserted with confidence.
     - Separately, the "strong stretch-mediated stimulus" claim about the overhead-arc range itself draws on the general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly in this same file (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle about training a muscle at long length, not a pullover-specific finding.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Q8l6ykgnmPM
   video_creator: Colossus Fitness
   video_title: "How to PROPERLY Dumbbell Pullover for a BIG Chest | Fix Your Dumbbell Pullover Form NOW!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: dip-chest-biased
   name: Dip (Chest-Biased, Forward Lean)
   summary: A bodyweight press that, with a forward torso lean, is one of the few ways to load the lower chest heavily.
@@ -968,9 +1032,17 @@
   limitations:
     - Shoulder range and tolerance genuinely limit how deep the dip can go for many lifters, and a shallow dip loses most of what makes this movement distinct.
     - The forward-lean, deep-stretch bottom position is demanding on the shoulder joint, and going too heavy too soon carries real injury risk.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - Use bars about shoulder width or slightly wider and start at the top with straight arms.
+    - Lean the torso forward and let the elbows flare slightly as you descend. The lean is what shifts this toward the chest.
+    - Lower until you feel a stretch across the chest, around upper arms parallel to the floor or as deep as your shoulders tolerate.
+    - Press back up while keeping the forward lean.
+  common_mistakes:
+    - "Staying upright: shifts the work to the triceps and loses the lower-chest emphasis."
+    - "Dropping fast into the bottom or going deeper than your shoulders tolerate: the stretched bottom is where shoulder injuries happen."
+    - "Shoulders shrugging up toward the ears at the bottom: loads the front of the shoulder joint instead of the chest."
+  programming_notes:
+    - Once bodyweight reps go past the planned rep range, add load with a dip belt. If bodyweight is too much, use an assisted dip machine or a band rather than cutting depth.
   alternatives: []
   complements:
     - An incline press, which covers the opposite end of the chest.
@@ -983,6 +1055,8 @@
   video_creator: OriGym
   video_title: "How To Do Forward Lean Dips | Exercise Demo"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: push-up-chest
   name: Push-Up
   summary: An accessible, scalable horizontal press that trains the chest at low equipment cost.
@@ -1034,8 +1108,76 @@
     - flat-dumbbell-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=IODxDxX7oi4
   video_creator: Calisthenicmovement
   video_title: "The Perfect Push Up | Do it right!"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+
+- id: feet-elevated-push-up
+  name: Feet-Elevated Push-Up
+  summary: A push-up with the feet raised on a bench, turning the press into an incline press relative to the torso so it leans toward the upper chest with no equipment beyond something to stand the feet on.
+  why_this_exists: Every upper-chest press in the library needs a barbell, dumbbells, a cable or a machine. Raising the feet changes the pressing angle the same way an incline bench does, so the upper chest can be trained with bodyweight and a bench, step or box.
+  body_regions:
+    - chest
+  primary_targets:
+    - chest (commonly cited as upper/clavicular-biased)
+  secondary_targets:
+    - anterior deltoids
+    - triceps
+  physique_targets:
+    - upper-pec
+  movement_patterns:
+    - incline horizontal press
+  equipment:
+    - bodyweight
+    - bench
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight-scaled; raising the feet both steepens the pressing angle and puts more bodyweight on the hands. Hardest at the bottom, with the chest near the floor.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No barbell, dumbbells, cable or machine is available and the upper chest needs a direct pressing stimulus.
+    - A regular push-up has become easy and a harder bodyweight press is wanted.
+  less_suitable_when:
+    - An incline barbell or dumbbell press is available and heavy, finely adjustable loading is the goal — bodyweight caps the load.
+    - Sets run to very high reps without real difficulty, which signals the stimulus has drifted toward endurance.
+  mirror_effect: Tends to show up, over time, as more fullness in the upper chest near the collarbone — modest at bodyweight for a trained lifter, so it works best where no loaded incline press is available.
+  advantages: []
+  limitations:
+    - Load is capped by bodyweight and foot height, so progression comes in steps (higher feet, a weight vest, a deficit) rather than small increments.
+    - Very high foot positions turn it into a shoulder-dominant press, closer to a pike push-up than an upper-chest press.
+    - The lower back sags easily as the feet go higher, which shifts strain away from the chest.
+  technique_cues:
+    - Put the feet on a bench or box and the hands on the floor slightly wider than shoulder width.
+    - Hold one straight line from head to heels, with the glutes and trunk braced.
+    - Lower until the chest is just above the floor, keeping the elbows at roughly 45 degrees from the body.
+    - Press the floor away until the arms are straight, without letting the hips drop or pike up.
+  common_mistakes:
+    - "Letting the hips sag: the lower back takes the strain and the press loses its incline angle."
+    - "Piking the hips up: the press turns more vertical, shifting the work from the upper chest to the shoulders."
+    - "Stopping well short of the floor: skips the stretched bottom of the rep, where the chest works hardest."
+  programming_notes:
+    - "Progress by raising the feet a little at a time, then by adding a weight vest or a deficit with the hands on blocks; keep the feet low enough that the hips stay in line."
+  alternatives: []
+  complements:
+    - A flat press or chest fly, which covers the mid and lower chest this angle leans away from.
+  overlaps_with:
+    - push-up-chest
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=4aUUcfwyfE0
+  video_creator: Horton Barbell
+  video_title: Feet Elevated Push-ups (Exercise Library)
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+

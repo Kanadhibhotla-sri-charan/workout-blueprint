@@ -25,6 +25,8 @@ A record may carry `review_status: reviewed` only when every applicable item bel
 - [ ] Limitations are realistic (non-empty).
 - [ ] Relationships are valid (`overlaps_with` entries all resolve to a real ID).
 - [ ] Evidence notes exist where material claims require support.
+- [ ] Technique cues are exercise-specific and actionable (at least 3) — Phase 7, see [COACHING-CONTENT-STANDARD.md](../../knowledge-manual/COACHING-CONTENT-STANDARD.md).
+- [ ] Common mistakes name a real error and its consequence (at least 2) — Phase 7.
 - [ ] No unresolved taxonomy issue exists.
 - [ ] No unresolved identity issue exists.
 
@@ -51,3 +53,15 @@ The automated heuristic (matching claim-language like "biased") flagged `back-ex
 ## Conclusion
 
 21 of 22 records-wide checks pass cleanly with zero exceptions. The 22nd (`advantages`) is now resolved by architect decision, not left open: `review_status: reviewed` stays in place on all 123 records, the gate item is satisfied by design (an intentionally-unpopulated, retirement-candidate field never blocks it), and this is documented rather than silently accepted. See the "Advantages are meaningful" section above and [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../../architecture/PHASE-2-OPEN-DECISIONS.md) for the full decision.
+
+## Phase 7 update — coaching gate (2026-10-02)
+
+Two items were added to the gate: technique cues (at least 3) and common mistakes (at least 2), meeting [COACHING-CONTENT-STANDARD.md](../../knowledge-manual/COACHING-CONTENT-STANDARD.md). `validate-data` enforces the counts plus basic quality checks (no duplicates, no near-empty items, no stock filler phrases). Exercise-specificity and accuracy still need a human reviewer.
+
+Both fields were empty on all 123 records, so the conclusion above no longer holds as written:
+
+- **46 records stay `reviewed`.** These are every exercise used by a Build package, now with coaching content.
+- **77 records moved to `needs-review`.** Nothing about their existing content was found wrong — they just don't have coaching content yet.
+
+The Decide engine excludes only `draft` exercises, so this changed no recommendation. That was checked by running all 822 goal × region/target/outcome/functional-goal combinations against the data before and after the change: all 822 results were identical.
+

@@ -132,6 +132,7 @@ function main() {
   add('## Known, logged exceptions (not bugs — see the linked reasoning)');
   add();
   add('- **`advantages` is empty on all 123 records.** Resolved by architect decision, not a gap: kept as a retirement candidate, deliberately not bulk-populated, its emptiness never blocks `reviewed` — see [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../architecture/PHASE-2-OPEN-DECISIONS.md) and [`docs/dev/reports/REVIEW-PROMOTION-GATE.md`](reports/REVIEW-PROMOTION-GATE.md).');
+  add('- **Coaching content (`technique_cues`, `common_mistakes`) is populated on Build-package exercises only.** Required for `reviewed` since Phase 7 — records without it are `needs-review`, which the Decide engine still uses (it excludes only `draft`). Quality bar: [`COACHING-CONTENT-STANDARD.md`](../knowledge-manual/COACHING-CONTENT-STANDARD.md).');
   add('- **`alternatives` is empty on all 123 records.** Resolved by architect decision: the field is kept (not retired) and precisely defined against `complements`/`overlaps_with`, to be populated selectively when a genuine substitution exists rather than bulk-filled — see [`docs/architecture/PHASE-2-OPEN-DECISIONS.md`](../architecture/PHASE-2-OPEN-DECISIONS.md) and [`SCHEMA.md`](../knowledge-manual/SCHEMA.md#the-three-relationship-fields-defined-precisely).');
   add();
 

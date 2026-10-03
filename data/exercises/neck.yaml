@@ -15,6 +15,10 @@
     - bodyweight
     - band
     - manual resistance
+  equipment_setups:
+    - [bodyweight]
+    - [band]
+    - [manual resistance]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -42,11 +46,13 @@
     - Loaded neck work introduced gradually afterward.
   overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=PSwHo-kcfhc
   video_creator: U.S. Forces Fitness
   video_title: How to - Isometric Neck Exercise (Front and Back)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: neck-extension
   name: Neck Extension
   summary: Loads the back of the neck, the region most responsible for visible neck thickness.
@@ -65,6 +71,9 @@
     - harness
     - plate
     - machine
+  equipment_setups:
+    - [harness, plate]
+    - [machine]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -94,11 +103,13 @@
     - neck-flexion
   evidence_notes:
     - This is a lower-stakes claim than the region-bias claims elsewhere in this dataset — it's a claim about visible anatomy, not about differential muscle recruitment or growth. The neck extensors and upper trapezius make up the visible bulk of the back and sides of the neck, which is standard anatomical description rather than a contested hypertrophy finding, so it doesn't carry the same evidence-quality caveats as the muscle-head-bias claims in the arms, chest, and calves modules.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=VLdIkr2Gfdc
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Seated Head Harness Neck Extension"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: neck-flexion
   name: Neck Flexion
   summary: Loads the front of the neck, which shrugs, rows, and extension work do not cover.
@@ -115,6 +126,9 @@
   equipment:
     - plate
     - band
+  equipment_setups:
+    - [plate]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -144,11 +158,13 @@
   overlaps_with:
     - neck-extension
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=o78kjeBJUBQ
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Weight Plate Neck Curl"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: lateral-neck-flexion
   name: Lateral Neck Flexion
   summary: Covers side-to-side neck strength, which straight flexion and extension leave out.
@@ -164,6 +180,10 @@
     - bodyweight
     - band
     - manual resistance
+  equipment_setups:
+    - [bodyweight]
+    - [band]
+    - [manual resistance]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -192,8 +212,10 @@
     - Flexion and extension work.
   overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=YgG2DTr5Qhc
   video_creator: Steve Smith
   video_title: "Lateral Neck Flexion Exercise | Neck Exercise | Dr. Steven Smith"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

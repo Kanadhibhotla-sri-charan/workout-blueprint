@@ -15,6 +15,10 @@
     - barbell
     - dumbbell
     - cable
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -35,8 +39,14 @@
   limitations:
     - The wrist's small range of motion caps how much mechanical work each rep can do, so this exercise is inherently a slow-growth, high-volume tool rather than a heavy-load one.
     - Elbow-region tendons can take on real strain if load increases faster than the tendons adapt, since the forearm musculature is small relative to the loads gripping and pulling exercises expose it to.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Sit with your forearms on your thighs or a bench, palms up and wrists just past the edge.
+    - Let the bar roll down toward your fingertips, then curl the fingers and wrist up as high as possible.
+    - Move only the wrists and fingers; keep the forearms down.
+  common_mistakes:
+    - "Lifting the forearms off the support: the elbows and shoulders help move the weight."
+    - "Raising load faster than the forearm tendons adapt: elbow pain is the usual result."
+    - "Short, fast reps that skip the full wrist range: the forearm flexors miss the stretched and fully curled positions, which are most of what the exercise trains."
   programming_notes: []
   alternatives: []
   complements:
@@ -49,6 +59,8 @@
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A STANDING BARBELL WRIST CURL | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-wrist-curl
   name: Reverse Wrist Curl
   summary: Trains the wrist extensors, which little else in a normal routine loads directly.
@@ -66,6 +78,10 @@
     - barbell
     - dumbbell
     - cable
+  equipment_setups:
+    - [barbell]
+    - [dumbbell]
+    - [cable]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -86,8 +102,14 @@
   limitations:
     - The wrist extensors are considerably weaker than the flexors, so usable load is low even for a lifter who is otherwise strong — the exercise can feel trivial in weight compared to everything else in a session.
     - This is a common site for elbow-tendon irritation (a lateral-elbow, "tennis elbow"-type strain) if volume or load increases too quickly.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Sit with your forearms on your thighs or a bench, palms down and wrists just past the edge.
+    - Let the hands lower slowly, then raise the backs of the hands as high as they go.
+    - Move only at the wrist; keep the forearms flat on the support.
+  common_mistakes:
+    - "Using too much weight: the forearms or elbows lift to help and the wrist extensors do little."
+    - "Raising load or volume quickly: a common route to irritation on the outside of the elbow (tennis-elbow type)."
+    - "Bouncing at the bottom: momentum replaces the controlled lowering."
   programming_notes: []
   alternatives: []
   complements:
@@ -101,6 +123,8 @@
   video_creator: LIVESTRONG
   video_title: How to Do Dumbbell Reverse Wrist Curls
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: reverse-curl
   name: Reverse Curl
   summary: Loads the brachioradialis and forearm extensors through an elbow- flexion pattern, adding arm and forearm work at once.
@@ -122,6 +146,10 @@
     - barbell
     - ez-bar
     - dumbbell
+  equipment_setups:
+    - [barbell]
+    - [ez-bar]
+    - [dumbbell]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
@@ -141,8 +169,15 @@
   limitations:
     - Usable load is capped well below a standard supinated curl's, since the pronated grip is a mechanically weaker position for elbow flexion.
     - Wrist discomfort with a straight bar is common at this grip angle, which is part of why an EZ-bar or dumbbell version often has to substitute in for it.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Hold the bar or dumbbells with an overhand grip, palms down, hands about shoulder width.
+    - Keep the wrists straight, in line with the forearms; don't let them bend back.
+    - Curl with the elbows fixed at your sides, then lower all the way down.
+    - Switch to an EZ-bar or dumbbells if a straight bar bothers your wrists.
+  common_mistakes:
+    - "Wrists bending back under the load: stresses the wrist and takes tension off the forearm muscles."
+    - "Loading it like a regular curl: the overhand grip is weaker, so too much weight turns into swinging."
+    - "Elbows drifting forward: the shoulders help lift the weight."
   programming_notes: []
   alternatives: []
   complements:
@@ -158,6 +193,8 @@
   video_creator: LivestrongWoman
   video_title: Dumbbell Reverse Curl
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-reverse-curl
   name: Cable Reverse Curl
   summary: A cable keeps tension on the forearm extensors and brachioradialis through the whole range, for a pump-oriented reverse curl.
@@ -204,11 +241,13 @@
   overlaps_with:
     - reverse-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=8uQdYcCUOu8
   video_creator: Health Hunt
   video_title: Reverse Cable Curl - For Amazing Bicep Gains
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: farmers-carry
   name: Farmer's Carry
   summary: Trains grip under load for time, matching how grip actually limits rows, pulldowns, and hinges — a function-and-endurance tool, not primarily a hypertrophy driver.
@@ -226,6 +265,9 @@
   equipment:
     - dumbbell
     - farmer's handles
+  equipment_setups:
+    - [dumbbell]
+    - ["farmer's handles"]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -254,11 +296,13 @@
   overlaps_with:
     - barbell-dumbbell-shrug (back module)
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=z7E_YU9P1jU
   video_creator: Dr. Carl Baird
   video_title: "How to Perform the Farmer's Carry"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: pronation-supination-work
   name: Pronation and Supination Work
   summary: Loads forearm rotation directly, a function-and-durability role more than a primary hypertrophy driver.
@@ -275,6 +319,10 @@
     - band
     - cable
     - offset-loaded handle
+  equipment_setups:
+    - [band]
+    - [cable]
+    - [offset-loaded handle]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -305,8 +353,10 @@
     - hammer-curl (arms module)
     - reverse-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=QcWHURpW_GY
   video_creator: Hugh Simson
   video_title: Forearm Pronation and Supination exercise
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata

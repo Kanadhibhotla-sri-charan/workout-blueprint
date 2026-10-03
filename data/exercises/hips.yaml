@@ -19,6 +19,10 @@
     - bench
     - hip-thrust machine
     - smith machine
+  equipment_setups:
+    - [barbell, bench]
+    - [hip-thrust machine]
+    - [smith machine, bench]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -39,8 +43,15 @@
     - Setup is genuinely awkward without a dedicated machine — rolling a loaded barbell into position across the hips takes real practice and a pad to avoid bruising.
     - Barbell versions cap out at what the lifter's hip flexibility and bar comfort allow before the movement breaks down, well before the glutes reach their true strength limit for some lifters.
     - The shortened top position that gives this exercise its value also means the resistance is lightest at the bottom, so mechanical tension isn't constant through the range.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Sit with the bench edge just below the shoulder blades, the bar padded across the hip crease, and the feet flat about hip width.
+    - Place the feet so the shins are vertical at the top of the rep.
+    - Tuck the chin and keep the ribs down, then drive through the heels until the torso and thighs form a straight line.
+    - Squeeze the glutes and hold the top for a second before lowering.
+  common_mistakes:
+    - "Arching the lower back to get the bar higher: the spine extends instead of the hips, moving load from the glutes to the lower back."
+    - "Feet too far forward or too close: too far shifts work to the hamstrings, too close to the quads."
+    - "Short reps near the top only: the hips should travel from fully bent to fully extended every rep."
   programming_notes: []
   alternatives: []
   complements:
@@ -53,6 +64,8 @@
   video_creator: Jeff Nippard
   video_title: "How To Build Great Glutes with Perfect Hip Thrust Technique (Fix Mistakes!)"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: smith-machine-romanian-deadlift
   name: Smith Machine Romanian Deadlift
   summary: Fixing the bar to a vertical rail keeps it automatically close to the body, easing the technical cue beginners struggle with most in a free-bar RDL.
@@ -99,11 +112,13 @@
     - romanian-deadlift (hamstrings module) — distinguish by how much the setup controls the bar path.
   evidence_notes:
     - Same evidence as the free-bar romanian-deadlift (hamstrings module) — see that record's evidence_notes for the general stretch-mediated hypertrophy literature. The fixed rail changes bar-path control, not the hip position the stretch claim is actually about.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=nmGzbW15qYo
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A SMITH MACHINE ROMANIAN DEADLIFT | Exercise Demonstration Video and Guide"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: bulgarian-split-squat-hip-dominant
   name: Bulgarian Split Squat (Long-Stance, Hip-Dominant Execution)
   summary: A long-stance, hip-dominant unilateral pattern biasing the glutes and hamstrings, distinct from the quads module's short-stance version.
@@ -125,6 +140,9 @@
     - dumbbell
     - barbell
     - bench
+  equipment_setups:
+    - [dumbbell, bench]
+    - [barbell, bench]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
@@ -144,9 +162,17 @@
     - Balance and stability demand is high, which for many lifters becomes the limiting factor before the glutes or hamstrings are meaningfully fatigued.
     - The rear-foot-elevated setup is genuinely awkward to get into and adjust, adding real setup time and a fall risk that a bilateral movement doesn't have.
     - Keeping the hip-dominant technique consistent under fatigue is harder than it looks — the knee tends to drift forward late in a set, sliding the emphasis toward the quads.
-  technique_cues: []
-  common_mistakes: []
-  programming_notes: []
+  technique_cues:
+    - "Take a long stance: step far enough forward from the bench that the front shin can stay close to vertical at the bottom."
+    - Lean the torso forward over the front thigh as you descend, keeping the back flat. This lean is what makes it hip-dominant.
+    - Sink down and back until the front thigh is about parallel and you feel the stretch in the front-leg glute.
+    - Drive up through the front heel and midfoot; the rear foot is only there for balance.
+  common_mistakes:
+    - "Front knee sliding forward as the set fatigues: the work shifts to the quads and it becomes the knee-dominant version."
+    - "Staying bolt upright: removes the hip bend that loads the glutes and hamstrings in this variation."
+    - "Pushing hard off the rear foot: offloads the front leg and wastes the single-leg stimulus."
+  programming_notes:
+    - Start each set with the weaker leg and match its reps on the stronger side, so a side-to-side gap shrinks rather than grows.
   alternatives: []
   complements:
     - A bilateral squat or hinge.
@@ -160,6 +186,8 @@
   video_creator: AFPTnorge
   video_title: Bulgarian Split-Squat (Hip Dominant)
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: cable-kickback-glute
   name: Cable Kickback
   summary: A single-joint hip-extension option, a low-fatigue, pump-oriented glute finisher.
@@ -194,8 +222,15 @@
   limitations:
     - The single-joint, unilateral setup means load per side is inherently light — this isn't a movement that can substitute for a compound's overall stimulus.
     - It's very easy to substitute lower-back extension for hip extension, especially as fatigue sets in, which shifts the stimulus away from the target muscle without feeling obviously wrong.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - Attach an ankle cuff, face the stack, and hinge slightly forward holding the frame, with the standing knee softly bent.
+    - Drive the working leg back by squeezing the glute, keeping the knee slightly bent and the pelvis square to the stack.
+    - Stop when the hip is fully extended, just behind the body, and hold for a second.
+    - Keep the lower back still; the hip should be the only joint moving.
+  common_mistakes:
+    - "Arching the lower back to kick higher: the extra range comes from the spine, not the hip, and work moves off the glute."
+    - "Rotating the pelvis open as the leg goes back: lets the lower back and hip flexors substitute."
+    - "Swinging the leg: with loads this light, momentum quickly does most of the work."
   programming_notes: []
   alternatives: []
   complements:
@@ -207,6 +242,8 @@
   video_creator: Physique Development
   video_title: "How to: Cable Kickback (Glute Max) | Form Tutorial for Bigger Glutes"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: hip-abduction
   name: Hip Abduction
   summary: Directly loads the gluteus medius and minimus, which most squats and hinges train only as stabilizers.
@@ -227,6 +264,9 @@
   equipment:
     - machine
     - band
+  equipment_setups:
+    - [machine]
+    - [band]
   exercise_type: isolation
   laterality: unilateral
   coverage_categories:
@@ -247,8 +287,15 @@
   limitations:
     - The gluteus medius and minimus are comparatively small muscles, so the absolute loads involved — and therefore the mechanical-tension ceiling — stay modest even with good technique.
     - Trunk lean is an easy, often unconscious way to fake more range of motion, which quietly shifts the stimulus away from the hip and reduces the exercise's value.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - On the machine, sit with your back against the pad and the pads on the outside of your knees.
+    - Push the knees apart in a controlled arc and pause briefly at the widest point.
+    - Return slowly until the legs are nearly together, keeping tension on the hips.
+    - With a band, standing or side-lying, lift the leg out to the side with the toes pointing forward, not up.
+  common_mistakes:
+    - "Leaning the torso or shifting your weight to fake more range: the stimulus moves away from the glute medius."
+    - "Letting the pads slam back together: tension drops at the inner end of the range."
+    - "Turning the toes up in band or side-lying versions: it becomes hip flexion and the front of the hip takes over."
   programming_notes: []
   alternatives: []
   complements:
@@ -261,6 +308,73 @@
   video_creator: Tim Bullici
   video_title: "Hip Abduction Machine | Exercise Tutorial for Gym Beginners"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: side-lying-hip-abduction
+  name: Side-Lying Hip Abduction
+  summary: A floor-based hip abduction lying on one side, the no-equipment way to train the gluteus medius and minimus directly.
+  why_this_exists: The hip-abduction machine and band versions need equipment. Lying on the side and lifting the top leg trains the same hip abduction against gravity, so the side glutes can be worked anywhere.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus medius
+    - gluteus minimus
+  secondary_targets: []
+  physique_targets:
+    - gluteus-medius-minimus
+  movement_patterns:
+    - hip abduction
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - isolation
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Leg weight against gravity, hardest at the top of the lift. An ankle weight or a band around the knees or ankles adds resistance without changing the movement.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No machine or band is available and the side glutes need direct work.
+    - A low-fatigue glute-medius exercise is wanted as a warm-up or finisher alongside squats and hinges.
+  less_suitable_when:
+    - High reps have become easy with leg weight alone and no ankle weight or band is available — the stimulus becomes mostly endurance.
+  mirror_effect: Tends to show up, over time, as slightly more fullness at the upper side of the hips — modest unloaded, and only visible alongside heavier glute work and a low enough body-fat level.
+  advantages: []
+  limitations:
+    - Leg weight alone is light, so it needs an ankle weight or a band to keep progressing.
+    - It is easy to roll the hips backward and turn the lift into a hip-flexor movement without noticing.
+    - Each side is trained separately, which doubles the time per set.
+  technique_cues:
+    - Lie on one side with the hips stacked vertically, the bottom knee bent for balance and the top leg straight.
+    - Turn the top toes slightly down so the heel leads, keeping the leg in line with the body or slightly behind it.
+    - Lift the top leg toward the ceiling until the side of the hip works hard, without letting the hips roll back.
+    - Lower slowly under control, without resting the leg between reps.
+  common_mistakes:
+    - "Rolling the top hip backward: the leg swings forward and the hip flexors take over from the gluteus medius."
+    - "Lifting the leg as high as it will go: past a moderate height the trunk tilts and the side-bend replaces hip abduction."
+    - "Dropping the leg quickly: skips the lowering, which is half of each rep's glute-medius work."
+  programming_notes:
+    - "Work to high reps first, then add an ankle weight or a band. A machine or cable abduction is the loaded progression once one is available."
+  alternatives: []
+  complements:
+    - Heavier hip extension such as hip thrusts or squats, which train the gluteus maximus this movement leaves out.
+  overlaps_with:
+    - hip-abduction
+  evidence_notes:
+    - "Distefano et al. (2009, Journal of Orthopaedic & Sports Physical Therapy 39(7):532-540, PMID 19574661) measured surface EMG in 21 healthy, active subjects across 12 exercises: gluteus medius activity was highest in side-lying hip abduction (81% ± 42% MVIC), significantly greater than both hip clams, lunges and hops. EMG amplitude shows activation, not hypertrophy, and the wide spread shows how much individuals vary."
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=HePuOF1v9-0
+  video_creator: Travis Tarrant
+  video_title: "Exercise Tutorial: Side Lying Hip Abduction"
+  video_status: verified
+  video_verified_on: "2026-10-03"
+  video_verification_method: metadata
+
 - id: hip-adduction
   name: Hip Adduction
   summary: Loads the adductors directly, a group that contributes to squatting and leg size but is rarely trained on its own.
@@ -306,11 +420,13 @@
   overlaps_with:
     - hip-abduction
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=ScqpbvOZWe8
   video_creator: Hammer Fitness
   video_title: "Hip Adduction Machine: How To"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
 - id: standing-cable-hip-flexion
   name: Standing Cable Hip Flexion
   summary: Trains hip flexion under load, which most lower-body routines leave entirely to stretching.
@@ -355,8 +471,146 @@
   overlaps_with:
     - hanging-knee-leg-raise (core module)
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=m-7bfUhHOH4
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Standing Cable Hip Flexion"
   video_status: verified
+  video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: glute-bridge
+  name: Glute Bridge
+  summary: A floor-based hip extension that loads the glutes in their shortened position with no equipment, the low-setup counterpart to the hip thrust.
+  why_this_exists: The hip thrust's shortened-position glute stimulus needs a bench and a padded bar. The bridge trains the same hip extension from the floor with bodyweight, so the glutes can be worked directly with no equipment, almost no setup, and little fatigue.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus maximus
+  secondary_targets:
+    - hamstrings
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip extension
+    - shortened range (hip fully extended)
+    - shoulders on the floor
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - shortened-position-emphasis
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight, hardest at the top with the hips fully extended. A pause at the top, a single-leg version, or a dumbbell or plate on the hips adds difficulty without changing the movement.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No bench, barbell or machine is available and the glutes need direct work.
+    - A low-fatigue glute finisher or warm-up is wanted alongside heavier squats and hinges.
+  less_suitable_when:
+    - A heavy, progressively loaded glute stimulus is the goal and a hip-thrust setup is available — bodyweight stops being challenging quickly.
+  mirror_effect: Tends to show up, over time and alongside heavier glute work, as fuller glutes from the side — unloaded it's a modest stimulus, so expect it to support glute development rather than drive it on its own.
+  advantages: []
+  limitations:
+    - Bodyweight alone stops being challenging quickly for trained lifters, and loading it from the floor (a dumbbell or plate on the hips) caps out well below what a barbell hip thrust allows.
+    - The range of motion is shorter than a hip thrust's because the shoulders stay on the floor, so the hips start from less bend.
+    - The hamstrings readily take over if the feet sit too far from the hips, and that isn't always obvious from how the rep feels.
+  technique_cues:
+    - Lie on your back with knees bent and feet flat about hip width, heels close enough that your fingertips can just touch them.
+    - Tuck the pelvis slightly and keep the ribs down before you lift.
+    - Drive through the heels to lift the hips until knees, hips and shoulders form a straight line.
+    - Squeeze the glutes and hold the top for one to two seconds, then lower until the glutes lightly touch the floor.
+  common_mistakes:
+    - "Arching the lower back to get the hips higher: the spine extends instead of the hips, so the lower back works and the glutes don't."
+    - "Feet too far from the hips: the hamstrings take over and often cramp before the glutes have done much."
+    - "Pushing through the toes: shifts work toward the quads and takes tension off the glutes."
+    - "Dropping straight back down: skips the controlled lowering, which is half of each rep's glute work."
+  programming_notes:
+    - "Progress in this order before loading: a pause at the top, then single-leg bridges, then a dumbbell or plate on the hips. Move to a hip thrust once a bench is available and those stop being challenging."
+  alternatives: []
+  complements:
+    - Glute work in the lengthened, hip-bent position, such as Romanian deadlifts or long-stance split squats.
+  overlaps_with:
+    - hip-thrust
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=cvKZXsz-QIA
+  video_creator: Redefining Strength
+  video_title: How To Do A Glute Bridge (4 EASY TIPS)
+  video_status: verified
+  video_verified_on: "2026-10-02"
+  video_verification_method: metadata
+- id: copenhagen-plank
+  name: Copenhagen Plank (Adduction)
+  summary: A side plank with the top leg on a bench, raising and lowering the body to load the adductors directly with no machine.
+  why_this_exists: The only other direct adductor exercise in the library needs a hip-adduction machine. The Copenhagen variation loads the adductors hard with bodyweight and a bench, scales from a short lever (knee on the bench) to a long lever (ankle on the bench), and is the exercise behind a trial that reduced groin problems in football players (see evidence_notes).
+  body_regions:
+    - hips
+  primary_targets:
+    - adductors (top leg)
+  secondary_targets:
+    - obliques and lateral trunk
+    - bottom-leg hip abductors
+  physique_targets:
+    - adductors
+  functional_goals:
+    - hip-stability
+  movement_patterns:
+    - hip adduction
+    - side-plank support
+    - bodyweight lever
+  equipment:
+    - bodyweight
+    - bench
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - isolation
+    - low-setup
+    - equipment-limited-substitute
+  resistance_profile: "Bodyweight lever: the farther the support point is from the hip (knee, then ankle), the heavier the load. Hardest at the top with the body in a straight line."
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - No adduction machine is available and the adductors need direct work.
+    - Groin resilience matters, for example in sports with sprinting, kicking or quick changes of direction.
+  less_suitable_when:
+    - There's current or recent groin pain — the long-lever version loads the adductors heavily and has to be built up to.
+    - Small, finely adjustable load increases are wanted — the lever steps are large.
+  mirror_effect: Tends to show up, alongside other leg training, as fuller inner thighs from the front — inner-thigh appearance depends heavily on body composition, so treat this as shaping the adductors rather than changing the look on its own.
+  advantages: []
+  limitations:
+    - Load progresses in large jumps (short lever to long lever), which can be too big a step without an in-between option.
+    - Bench height and body length have to roughly match for a clean straight-line position, and not every bench allows it.
+    - The bottom shoulder carries the body on the forearm, so shoulder discomfort can end a set before the adductors are worked.
+  technique_cues:
+    - "Lie on your side propped on the bottom forearm, elbow under the shoulder, with the top leg on the bench: inner knee for the short lever, inner ankle for the long lever."
+    - Press the top leg down into the bench to lift the hips until the body is straight from head to feet.
+    - Bring the bottom leg up to meet the bench underneath, then lower it as you lower the hips back toward the floor.
+    - Keep the hips stacked and the body facing straight ahead; finish all reps, then switch sides.
+  common_mistakes:
+    - "Hips sagging or the body rotating toward the floor: the trunk and shoulder hold the position and the adductors do less."
+    - "Starting with the long-lever version: loads the groin heavily before the adductors are ready — the trial programme built up through easier levels first."
+    - "Bottom shoulder sinking away from the elbow: loads the shoulder joint instead of keeping it stacked and stable."
+  programming_notes:
+    - "Progress lever length before anything else: short lever (knee on the bench) until the planned reps are easy, then long lever (ankle on the bench). A few seconds' hold at the top is a middle step between the two."
+  alternatives: []
+  complements:
+    - Hip abduction work, so both sides of the hip are trained directly.
+  overlaps_with:
+    - hip-adduction
+  evidence_notes:
+    - "Harøy J, et al. 'The Adductor Strengthening Programme prevents groin problems among male football players: a cluster-randomised controlled trial.' Br J Sports Med 2019;53(3):150-157 (doi:10.1136/bjsports-2017-098937). 652 semi-professional players on 35 teams; the intervention was one Copenhagen adduction exercise with three progression levels. Average groin-problem prevalence was 13.5% vs 21.3% in controls (OR 0.59, 95% CI 0.40-0.86). Evidence quality: one well-designed randomised trial in male footballers, supporting injury-prevention value in that population. It did not measure muscle size, so it says nothing about this record's inner-thigh appearance framing."
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=HXGuE3Ay5s4
+  video_creator: Live Lean TV Daily Exercises
+  video_title: How To Do A COPENHAGEN HIP ADDUCTION | Exercise Demonstration Video and Guide
+  video_status: verified
+  video_verified_on: "2026-10-02"
+  video_verification_method: metadata

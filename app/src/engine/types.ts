@@ -182,4 +182,46 @@ export type DecisionResult =
       complements: Exercise[];
     }
   | { status: 'missing-current-exercise'; reason: string }
-  | { status: 'no-candidates'; reason: string };
+  | {
+      status: 'no-candidates';
+      reason: string;
+      /**
+       * Why the selection itself came back empty (Phase 7 Stage 5.3).
+       * Present only for the selection-level empty result; the
+       * current-exercise goals' own "no substitute/complement" results
+       * carry just `reason`.
+       */
+      explanation?: EmptyResultExplanation;
+    };
+
+export type ToleranceLimit = 'setup' | 'fatigue' | 'stability' | 'skill';
+
+/** One exercise in the selection a different equipment setup would unlock, with its existing equipment options. */
+export interface EquipmentUnlock {
+  exerciseId: string;
+  exerciseName: string;
+  /** formatEquipmentOptions() of the record — its own data, nothing inferred. */
+  equipment: string;
+}
+
+export interface EmptyResultExplanation {
+  /**
+   * no-exercises: the selection has no exercises at all.
+   * equipment: exercises fit the user's limits, but none with the selected equipment.
+   * tolerance: exercises fit the equipment, but none fit the limits.
+   * equipment-and-tolerance: no exercise fits either on its own.
+   */
+  kind: 'no-exercises' | 'equipment' | 'tolerance' | 'equipment-and-tolerance';
+  /** What the user selected, in words: the target, functional goal or region. */
+  subject: string;
+  /**
+   * Bodyweight-only selection, and no exercise for this selection has a
+   * bodyweight-only setup — a legitimate gap under the bodyweight coverage
+   * policy, not a fault.
+   */
+  bodyweightGap: boolean;
+  /** Limits that, relaxed on their own, would admit an exercise the equipment already allows. */
+  blockingLimits: ToleranceLimit[];
+  /** For kind 'equipment': exercises that fit the limits but need different equipment, sorted by name. */
+  unlocks: EquipmentUnlock[];
+}

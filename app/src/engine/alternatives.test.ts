@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { findStructuralAlternative } from './alternatives';
+import { findStructuralAlternative, rankStructuralAlternatives } from './alternatives';
 import { exercises, getExerciseById } from '../data';
 
 // Asserts the exact scenarios hand-computed in
@@ -14,9 +14,16 @@ describe('findStructuralAlternative — incline-dumbbell-press', () => {
     expect(result?.id).toBe('incline-barbell-press');
   });
 
-  it('constrained to only a Smith machine + bench: narrows to smith-machine-incline-press', () => {
-    const result = findStructuralAlternative(target, exercises, ['smith machine', 'bench']);
-    expect(result?.id).toBe('smith-machine-incline-press');
+  it('constrained to only a Smith machine + bench: narrows to the incline presses that setup allows', () => {
+    // Since Phase 7 Stage 5.6/5.7 the feet-elevated push-up (bodyweight +
+    // bench) is eligible too. It ties with the Smith incline press on every
+    // structural criterion (same primary-target wording, no shared coverage
+    // category with the dumbbell press), so the alphabetical id fallback
+    // ranks it first — see the tie analysis in PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md
+    // for the tie analysis. This pins the current behaviour.
+    const ranked = rankStructuralAlternatives(target, exercises, ['smith machine', 'bench']);
+    expect(ranked.map((e) => e.id)).toEqual(['feet-elevated-push-up', 'smith-machine-incline-press']);
+    expect(findStructuralAlternative(target, exercises, ['smith machine', 'bench'])?.id).toBe('feet-elevated-push-up');
   });
 
   it('never returns the target itself', () => {

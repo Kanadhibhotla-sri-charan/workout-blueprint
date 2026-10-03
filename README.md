@@ -47,11 +47,14 @@ If you ever see `Error: Cannot find module 'js-yaml'` while running `npm run dev
 ```
 cd app
 npm run test      # Vitest — engine, programming, and UI golden-slice tests
+npm run test:e2e  # Playwright smoke test against the production build (Chromium)
 npm run lint       # oxlint
 npm run build      # tsc -b && vite build — type-checks and produces app/dist/
 cd ..
 npm run validate-data   # schema/taxonomy/relationship validation for data/exercises/**
 ```
+
+The smoke test builds the app and serves it with `vite preview` itself. On a new machine, run `npx playwright install chromium` once (from `app/`) first.
 
 All four must pass before any change is considered done; CI (`.github/workflows/validate-data.yml`) enforces data validation on every push/PR that touches `data/exercises/**` or `scripts/**`.
 
@@ -73,6 +76,7 @@ Physique Blueprint is a **renderer of knowledge, not a second knowledge base** �
 | Programming rules (rep ranges, programming profiles, intensity-technique eligibility) | `data/programming/programming-profiles.yaml`, `data/programming/rep-ranges.yaml`, `data/programming/intensity-techniques.yaml` |
 | All-round development packages (the "Build the Muscle" entry point) | `data/programming/development-packages.yaml` |
 | Schema definition | [`docs/knowledge-manual/SCHEMA.md`](docs/knowledge-manual/SCHEMA.md) |
+| Equipment / bodyweight coverage policy | [`docs/knowledge-manual/EQUIPMENT-COVERAGE-POLICY.md`](docs/knowledge-manual/EQUIPMENT-COVERAGE-POLICY.md) |
 
 ### Safe knowledge-update process
 

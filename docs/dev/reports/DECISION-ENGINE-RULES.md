@@ -18,13 +18,20 @@ Every rule below is a strict boolean predicate or a fixed-priority tiebreak over
 isEquipmentFeasible(exercise, equipmentAvailable):
   if equipmentAvailable is null:
     return true                      # constraint not engaged — no filtering
-  return exercise.equipment is a subset of equipmentAvailable
-         (every item in exercise.equipment appears, as an exact string
-          match, in equipmentAvailable)
+  setups = exercise.equipment_setups, or [exercise.equipment] when absent
+  return some setup in setups where every item is either
+         "bodyweight" or appears, as an exact string match,
+         in equipmentAvailable
 ```
 
-- **Exact string match only** against the values already present in the dataset's `equipment` field (34 open-vocabulary values — see `SCHEMA.md`). No normalization, no partial/synonym matching (e.g. "dumbbell" does not match "dumbbells" or "DB" — the UI only ever offers the exact values that exist in the data, via `equipmentOptions` in `src/data/index.ts`, so this can't arise from user input).
-- `equipment` is a required, non-empty field on every record (`REQUIRED_LIST_FIELDS` in `scripts/lib/taxonomy.js`), and bodyweight-only exercises explicitly list `equipment: [bodyweight]` rather than an empty list — so the subset test is well-defined for every one of the 123 records with no special-casing needed for "no equipment."
+- **Revised in Phase 7 Stage 3.5** (see `EQUIPMENT-MODEL-INVESTIGATION.md` and `PHASE-7-STAGE-3.5-EQUIPMENT-SETUPS.md`). The original rule — `exercise.equipment` must be a subset of `equipmentAvailable` — is still exactly what happens for every record without `equipment_setups` (a single setup equal to `equipment`). Records whose equipment is a set of *alternatives* (barbell OR EZ-bar OR dumbbell) declare `equipment_setups`; any one complete setup makes the exercise feasible, and every item inside a setup is required.
+- **Bodyweight is always available.** An empty selection means bodyweight-only, as Decide's picker tells the user, so `bodyweight` never blocks a setup.
+- **Coverage expectations** (what equipment-limited and bodyweight-only users can expect, and how empty results explain themselves) are defined by the equipment coverage policy, Policy B: `docs/knowledge-manual/EQUIPMENT-COVERAGE-POLICY.md`.
+- **Exact string match only** against the values already present in the dataset's `equipment` field (open vocabulary — see `SCHEMA.md`). No normalization, no partial/synonym matching (e.g. "dumbbell" does not match "dumbbells" or "DB" — the UI only ever offers the exact values that exist in the data, via `equipmentOptions` in `src/data/index.ts`, so this can't arise from user input).
+- `equipment` is a required, non-empty field on every record (`REQUIRED_LIST_FIELDS` in `scripts/lib/taxonomy.js`), and bodyweight-only exercises explicitly list `equipment: [bodyweight]` rather than an empty list.
+- **"Limited equipment" ranking** counts the items in the cheapest setup the user can complete (unrestricted: the cheapest setup overall), not the length of the `equipment` union. Since Phase 7 Stage 5.1, `bodyweight` counts as 0 items, because it is always available: a bodyweight-only exercise costs 0, and a pull-up (`pull-up bar` + `bodyweight`) costs 1.
+- **Cost tie-break (Phase 7 Stage 5.1).** For the **low-fatigue** and **limited-equipment** goals only, candidates that tie on every existing ranking criterion are ordered by lower fatigue, then lower setup time, then lower skill demand, then lower stability demand. Only after that does the alphabetical `id` fallback apply. Every other goal (build-base, visual-area, replace, complements) keeps the plain `id` fallback. See `PHASE-7-STAGE-5-DECISION-COVERAGE-REVIEW.md` §6 and `PHASE-7-STAGE-5.1-RANKING-CONSISTENCY.md`.
+- **Single source of truth:** `app/src/engine/equipment.ts` is the only place equipment is interpreted — Decide feasibility, ranking, explanation/watch-out text, Explore's equipment filter (an exercise is listed under an item when any setup uses it) and the detail page.
 
 ## 2. Deterministic structural-alternative matching rule
 
@@ -104,5 +111,13 @@ The top-ranked candidate is *the* structural alternative. This produces at most 
 `incline-barbell-press` and `incline-cable-press` tie at the top; tiebreak (c) (alphabetical id) resolves it to **`incline-barbell-press`**. This is a defensible result, not a flaw to paper over: Phase 1's coverage-category classification already placed the free-weight-adjacent press variants (barbell, cable) in categories that overlap the dumbbell press's own (`heavy-compound`, `lengthened-position-emphasis`), while the fixed-path machine and Smith-machine variants both landed in `stable-compound` — a genuinely different loading character. The ranking is reflecting a real distinction already present in the reviewed data, not an artifact of the algorithm.
 
 **Stage 2, equipment-constrained** — if the user's available equipment is `[smith machine, bench]` only, rule 6 removes the other three candidates at Stage 1 (each needs equipment — `barbell`+`rack`, `cable`, or `machine` — outside that set), leaving `smith-machine-incline-press` as the sole eligible candidate and therefore the pick, with no ranking needed. This is the scenario that actually matches the architect's example outcome, and it demonstrates the equipment-feasibility rule (§1) and the structural-alternative rule (§2) composing correctly, per Stage 1 rule 6.
+
+> **Update (Phase 7 Stage 5.6/5.7):** this worked example predates the bodyweight `feet-elevated-push-up` (`incline horizontal press`, `[bodyweight, bench]`). With `[smith machine, bench]` that record is eligible too, because bodyweight is always available.
+>
+> - It ties with `smith-machine-incline-press` on every Stage 2 criterion: the same `primary_targets` wording, and no coverage category shared with the dumbbell press.
+> - So the alphabetical fallback ranks it first.
+> - The test in `app/src/engine/alternatives.test.ts` pins this.
+>
+> See the tie analysis in `PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md`.
 
 Both scenarios above are asserted as automated tests in `app/src/engine/alternatives.test.ts`, not just hand-traced here — see the 3F dev-log entry.

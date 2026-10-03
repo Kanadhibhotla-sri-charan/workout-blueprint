@@ -5,6 +5,7 @@ import { OptionalList } from '../components/OptionalList';
 import { RelationshipList } from '../components/RelationshipList';
 import { buildProgramming, getEligibleIntensityTechniques } from '../engine/programmingEngine';
 import { VideoReference } from '../components/VideoReference';
+import { formatEquipmentOptions } from '../engine/equipment';
 
 export function ExerciseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -85,7 +86,7 @@ export function ExerciseDetailPage() {
           </div>
           <div>
             <dt>Equipment</dt>
-            <dd>{exercise.equipment.join(', ')}</dd>
+            <dd>{formatEquipmentOptions(exercise)}</dd>
           </div>
           <div>
             <dt>Setup time</dt>
