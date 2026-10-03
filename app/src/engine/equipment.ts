@@ -38,15 +38,27 @@ export function isEquipmentFeasible(exercise: Exercise, equipmentAvailable: stri
   return usableSetups(exercise, equipmentAvailable).length > 0;
 }
 
-// The fewest-item setup the user can complete (or, unrestricted, the
-// fewest-item setup overall). Ties keep the record's listed order, so the
+// How much equipment a setup actually asks of the user: its items, not
+// counting bodyweight, which is always available (Phase 7 Stage 5.1).
+export function setupCost(setup: string[]): number {
+  return setup.filter((item) => item !== ALWAYS_AVAILABLE).length;
+}
+
+// The lowest-cost setup the user can complete (or, unrestricted, the
+// lowest-cost setup overall). Ties keep the record's listed order, so the
 // choice is deterministic. Null when no setup is usable.
 export function smallestUsableSetup(exercise: Exercise, equipmentAvailable: string[] | null): string[] | null {
   let best: string[] | null = null;
   for (const setup of usableSetups(exercise, equipmentAvailable)) {
-    if (best === null || setup.length < best.length) best = setup;
+    if (best === null || setupCost(setup) < setupCost(best)) best = setup;
   }
   return best;
+}
+
+// The "limited equipment" ranking key: the cost of the smallest setup this
+// user can complete. Bodyweight-only work costs 0.
+export function equipmentCost(exercise: Exercise, equipmentAvailable: string[] | null): number {
+  return setupCost(smallestUsableSetup(exercise, equipmentAvailable) ?? exercise.equipment);
 }
 
 // Explore's equipment filter: does any complete setup use this item? For a

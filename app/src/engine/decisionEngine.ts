@@ -1,6 +1,6 @@
 import type { Exercise } from '../types/exercise';
 import { GOAL_LABELS, GOALS_REQUIRING_CURRENT_EXERCISE, type DecisionInput, type DecisionResult, type Goal, type RecommendationTrace, type TargetMatch } from './types';
-import { equipmentNeed, isEquipmentFeasible, smallestUsableSetup } from './equipment';
+import { equipmentCost, equipmentNeed, isEquipmentFeasible } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
@@ -432,7 +432,8 @@ function buildResultFromRanked(
 }
 
 // Deterministic fixed-priority key per goal, ascending (lower = ranked
-// first), with an alphabetical id tiebreak — never a blended score.
+// first), with an alphabetical id tiebreak (after a cost tiebreak for
+// COST_TIEBREAK_GOALS) — never a blended score.
 function goalKey(goal: Goal, exercise: Exercise, equipmentAvailable: string[] | null): number {
   switch (goal) {
     case 'build-base':
@@ -450,18 +451,42 @@ function goalKey(goal: Goal, exercise: Exercise, equipmentAvailable: string[] | 
     case 'low-fatigue':
       return DEMAND_LEVELS.indexOf(exercise.fatigue_cost as (typeof DEMAND_LEVELS)[number]);
     case 'limited-equipment':
-      // Size of the smallest setup this user can actually complete — for a
-      // single-setup record that's just equipment.length, as before.
-      return (smallestUsableSetup(exercise, equipmentAvailable) ?? exercise.equipment).length;
+      // Items in the cheapest setup this user can actually complete, with
+      // bodyweight counted as 0 (it's always available) — Phase 7 Stage 5.1.
+      return equipmentCost(exercise, equipmentAvailable);
     default:
       return 0;
   }
 }
 
+// Goals that are about an exercise's cost resolve their ties by cost too,
+// before the alphabetical fallback (Phase 7 Stage 5 review §6): lower
+// fatigue, then setup, then skill, then stability. Every other goal keeps
+// the plain id fallback — their ties need curated preference, not a rule.
+const COST_TIEBREAK_GOALS: Goal[] = ['low-fatigue', 'limited-equipment'];
+
+function demandRank(level: string): number {
+  return DEMAND_LEVELS.indexOf(level as (typeof DEMAND_LEVELS)[number]);
+}
+
+function compareCost(a: Exercise, b: Exercise): number {
+  return (
+    demandRank(a.fatigue_cost) - demandRank(b.fatigue_cost) ||
+    demandRank(a.setup_time) - demandRank(b.setup_time) ||
+    demandRank(a.skill_demand) - demandRank(b.skill_demand) ||
+    demandRank(a.stability_demand) - demandRank(b.stability_demand)
+  );
+}
+
 function rankByGoal(goal: Goal, candidates: Exercise[], equipmentAvailable: string[] | null): Exercise[] {
+  const breakTiesByCost = COST_TIEBREAK_GOALS.includes(goal);
   return [...candidates].sort((a, b) => {
     const keyDiff = goalKey(goal, a, equipmentAvailable) - goalKey(goal, b, equipmentAvailable);
     if (keyDiff !== 0) return keyDiff;
+    if (breakTiesByCost) {
+      const costDiff = compareCost(a, b);
+      if (costDiff !== 0) return costDiff;
+    }
     return a.id.localeCompare(b.id);
   });
 }
