@@ -76,6 +76,7 @@ Physique Blueprint is a **renderer of knowledge, not a second knowledge base** â
 | Programming rules (rep ranges, programming profiles, intensity-technique eligibility) | `data/programming/programming-profiles.yaml`, `data/programming/rep-ranges.yaml`, `data/programming/intensity-techniques.yaml` |
 | All-round development packages (the "Build the Muscle" entry point) | `data/programming/development-packages.yaml` |
 | Schema definition | [`docs/knowledge-manual/SCHEMA.md`](docs/knowledge-manual/SCHEMA.md) |
+| Equipment / bodyweight coverage policy | [`docs/knowledge-manual/EQUIPMENT-COVERAGE-POLICY.md`](docs/knowledge-manual/EQUIPMENT-COVERAGE-POLICY.md) |
 
 ### Safe knowledge-update process
 

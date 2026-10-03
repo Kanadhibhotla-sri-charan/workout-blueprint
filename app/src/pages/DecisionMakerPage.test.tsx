@@ -657,3 +657,21 @@ describe('DecisionMakerPage — URL state', () => {
     expect(bestFitName()).toBeNull();
   });
 });
+
+// Phase 7 Stage 5.3 — empty results explain themselves.
+describe('DecisionMakerPage — empty-result messaging', () => {
+  it('a legitimate bodyweight gap says so and links the exercises that equipment would unlock', () => {
+    renderAt('/decide?target=upper-traps&goal=build-base&equipment=');
+    expect(screen.getByText(/no bodyweight-only exercise that directly trains Upper Traps/)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Barbell / Dumbbell Shrug' })).toHaveAttribute('href', '/exercises/barbell-dumbbell-shrug');
+    expect(screen.getByText(/barbell, dumbbell, or cable/)).toBeInTheDocument();
+    expect(bestFitName()).toBeNull();
+  });
+
+  it('lists at most five unlocking exercises, then a count', () => {
+    renderAt('/decide?region=forearms&goal=build-base&equipment=');
+    const list = document.querySelector('.decision-result-unlocks')!;
+    expect(list.querySelectorAll('a')).toHaveLength(5);
+    expect(list).toHaveTextContent('and 1 more');
+  });
+});

@@ -4,6 +4,7 @@ import { equipmentCost, equipmentNeed, isEquipmentFeasible } from './equipment';
 import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
+import { explainEmptySelection } from './emptyResult';
 import { buildProgramming } from './programmingEngine';
 import { getAestheticOutcomeById, getFunctionalGoalById, getPhysiqueTargetById } from '../data';
 import type { AestheticOutcome, FunctionalGoal, PhysiqueTarget } from '../types/programming';
@@ -87,17 +88,16 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
   // structural-alternative/complement rules, applied here up front so it
   // covers every goal, not just the ones that call into those rules).
   candidates = candidates.filter((exercise) => exercise.review_status !== 'draft');
+  // The selection's pool before equipment and tolerance — only used to
+  // explain an empty result, never to rank (Phase 7 Stage 5.3).
+  const selectionPool = candidates;
 
   // Step 3: equipment constraint.
   candidates = candidates.filter((exercise) => isEquipmentFeasible(exercise, input.equipmentAvailable));
 
   // Step 6: setup/fatigue/stability/skill tolerance constraints ("at most"
   // the stated level — see constraints.ts).
-  const meetsConstraints = (exercise: Exercise) =>
-    meetsMaxDemand(exercise.setup_time, input.maxSetupTime) &&
-    meetsMaxDemand(exercise.fatigue_cost, input.maxFatigueCost) &&
-    meetsMaxDemand(exercise.stability_demand, input.maxStabilityDemand) &&
-    meetsMaxDemand(exercise.skill_demand, input.maxSkillDemand);
+  const meetsConstraints = (exercise: Exercise) => meetsToleranceLimits(exercise, input);
   candidates = candidates.filter(meetsConstraints);
 
   // A separate, broader (region-only, never target-narrowed) constraint-
@@ -127,10 +127,8 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
   }
 
   if (candidates.length === 0) {
-    return {
-      status: 'no-candidates',
-      reason: 'No exercise in this region meets every constraint you gave. Try relaxing one — equipment and fatigue tolerance are the most common blockers.',
-    };
+    const subject = target?.name ?? functionalGoal?.name ?? humanize(input.bodyRegion);
+    return { status: 'no-candidates', ...explainEmptySelection(selectionPool, input, subject, meetsToleranceLimits) };
   }
 
   // Target-match tier (Phase 4B §3-4): a direct primary-target match must
@@ -257,6 +255,15 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     supportingTargetIdList,
     preferredCharacteristics,
     resolvedAestheticOutcome
+  );
+}
+
+function meetsToleranceLimits(exercise: Exercise, input: DecisionInput): boolean {
+  return (
+    meetsMaxDemand(exercise.setup_time, input.maxSetupTime) &&
+    meetsMaxDemand(exercise.fatigue_cost, input.maxFatigueCost) &&
+    meetsMaxDemand(exercise.stability_demand, input.maxStabilityDemand) &&
+    meetsMaxDemand(exercise.skill_demand, input.maxSkillDemand)
   );
 }
 

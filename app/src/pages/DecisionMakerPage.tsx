@@ -38,6 +38,11 @@ import {
 // same downstream engine through its own functionalGoal input (4J) —
 // never mixed into the aesthetic outcome selector.
 
+// Exercises listed under an equipment-blocked empty result, in name order
+// (Phase 7 Stage 5.3) — enough to show what would unlock an answer without
+// turning the empty state into a second exercise list.
+const MAX_UNLOCKS_SHOWN = 5;
+
 function formatRange([low, high]: [number, number]): string {
   return low === high ? `${low}` : `${low}–${high}`;
 }
@@ -590,9 +595,20 @@ function DecisionResultView({
   aestheticOutcome: AestheticOutcome | null;
 }) {
   if (result.status === 'missing-current-exercise' || result.status === 'no-candidates') {
+    const unlocks = result.status === 'no-candidates' ? (result.explanation?.unlocks ?? []) : [];
     return (
       <div className="decision-result decision-result-empty">
         <p>{result.reason}</p>
+        {unlocks.length > 0 && (
+          <ul className="decision-result-unlocks">
+            {unlocks.slice(0, MAX_UNLOCKS_SHOWN).map((unlock) => (
+              <li key={unlock.exerciseId}>
+                <Link to={`/exercises/${unlock.exerciseId}`}>{unlock.exerciseName}</Link> — {unlock.equipment}
+              </li>
+            ))}
+            {unlocks.length > MAX_UNLOCKS_SHOWN && <li>and {unlocks.length - MAX_UNLOCKS_SHOWN} more</li>}
+          </ul>
+        )}
       </div>
     );
   }
