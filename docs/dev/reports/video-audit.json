@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-03T06:10:05.227Z",
-    "total_records": 131,
-    "live": 131,
+    "audited_at": "2026-10-08T05:57:01.067Z",
+    "total_records": 132,
+    "live": 132,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1438,6 +1438,19 @@
       "http_result": 200,
       "resolved_title": "Single Leg Body Weight Calf Raise",
       "resolved_author": "FITASTIC",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "single-leg-hip-thrust",
+      "exercise_name": "Single-Leg Hip Thrust",
+      "muscle_group": "hips",
+      "current_video_url": "https://www.youtube.com/watch?v=GoqoWSAiOsA",
+      "video_id": "GoqoWSAiOsA",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "Single leg hip thrust: shoulders on bench",
+      "resolved_author": "ashleybordenfitness",
       "classification": "LIVE",
       "notes": ""
     },
