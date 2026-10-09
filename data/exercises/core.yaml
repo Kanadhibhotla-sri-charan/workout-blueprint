@@ -404,6 +404,70 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: plank-shoulder-tap
+  name: Plank Shoulder Tap
+  summary: A high plank with alternating hand lifts to touch the opposite shoulder, keeping the hips still against the rotation each lift creates.
+  why_this_exists: The only anti-rotation exercise in the library, the Pallof press, needs a band or cable. Lifting one hand at a time from a high plank makes the trunk resist rotation with nothing but bodyweight, so anti-rotation control can be trained anywhere.
+  body_regions:
+    - core
+  primary_targets:
+    - obliques
+    - transverse abdominis
+  secondary_targets:
+    - shoulders
+  physique_targets: []
+  functional_goals:
+    - core-anti-rotation
+  movement_patterns:
+    - anti-rotation isometric
+    - alternating hand lifts from a high plank
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: alternating
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight. The rotational challenge peaks while one hand is off the floor; a narrower foot stance or a slower tap makes it harder.
+  stability_demand: high
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Anti-rotation control is wanted with no band or cable available.
+    - A low-fatigue core exercise is wanted as a warm-up or finisher.
+  less_suitable_when:
+    - A loadable anti-rotation exercise is available and progression by load is wanted — bodyweight taps progress only through stance and tempo.
+  mirror_effect: Minimal shaping effect on its own — this builds trunk control against rotation more than muscle size.
+  advantages: []
+  limitations:
+    - Progression is limited to a narrower stance, slower taps or longer sets.
+    - The wrists and shoulders carry the bodyweight throughout, which some lifters find uncomfortable.
+  technique_cues:
+    - Set up in a high plank with hands under the shoulders and feet about hip width apart.
+    - Brace the trunk and squeeze the glutes so the body forms a straight line.
+    - Lift one hand to touch the opposite shoulder, keeping the hips level and still.
+    - Return the hand to the floor under control and alternate sides.
+  common_mistakes:
+    - "Rocking the hips side to side with each tap: the trunk gives in to the rotation the exercise is meant to resist."
+    - "Feet too close together at first: the rotational demand outruns trunk control and the hips swing."
+    - "Rushing the taps: momentum hides the rotation instead of the trunk resisting it."
+  programming_notes:
+    - "Start with the feet wide; bring them closer together, or slow each tap, once the hips stay still."
+  alternatives: []
+  complements:
+    - An anti-extension hold such as a plank, and a lateral-flexion hold such as a side plank.
+  overlaps_with:
+    - pallof-press
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=NV55raYCP0E
+  video_creator: Nottingham Physio
+  video_title: "How to Do Plank Shoulder Taps (Core Stability + Control)"
+  video_status: verified
+  video_verified_on: "2026-10-09"
+  video_verification_method: metadata
 - id: suitcase-carry
   name: Suitcase Carry
   summary: Loads one side at a time so the trunk resists lateral pull, while also training grip — a stability-and-durability tool.

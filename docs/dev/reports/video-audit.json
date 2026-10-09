@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-09T08:31:21.743Z",
-    "total_records": 138,
-    "live": 138,
+    "audited_at": "2026-10-09T11:34:01.091Z",
+    "total_records": 139,
+    "live": 139,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1126,6 +1126,19 @@
       "http_result": 200,
       "resolved_title": "How To: Plank",
       "resolved_author": "ScottHermanFitness",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "plank-shoulder-tap",
+      "exercise_name": "Plank Shoulder Tap",
+      "muscle_group": "core",
+      "current_video_url": "https://www.youtube.com/watch?v=NV55raYCP0E",
+      "video_id": "NV55raYCP0E",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How to Do Plank Shoulder Taps (Core Stability + Control)",
+      "resolved_author": "Nottingham Physio",
       "classification": "LIVE",
       "notes": ""
     },
