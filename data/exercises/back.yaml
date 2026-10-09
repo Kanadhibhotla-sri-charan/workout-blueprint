@@ -893,16 +893,18 @@
     - barbell
     - dumbbell
     - cable
+    - band
   equipment_setups:
     - [barbell]
     - [dumbbell]
     - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - low-setup
-  resistance_profile: Free weight or cable; the "why choose this" answer is the same across barbell, dumbbell, and cable.
+  resistance_profile: Free weight or cable; the "why choose this" answer is the same across barbell, dumbbell, and cable. A band stood on gets heavier as the shoulders rise, so it is hardest at the top of the shrug.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -925,7 +927,8 @@
     - "Rolling the shoulders at the top: adds no trap work and puts the shoulder joint through extra motion under load."
     - "Bending the elbows to help lift: part of the rep becomes a curl or upright row and the traps travel less."
     - "Going so heavy the range shrinks to a short bounce: the traps do far less work per rep than with a lighter, full, paused shrug."
-  programming_notes: []
+  programming_notes:
+    - "Band version: stand on the middle of a band with the feet about hip width and hold the ends at your sides. A wider stance or a shorter grip on the band adds resistance."
   alternatives: []
   complements:
     - Mid- and lower-trap work such as rows or face pulls.

@@ -71,7 +71,10 @@ describe('legitimate bodyweight gap', () => {
   });
 
   it('is not claimed when some equipment beyond bodyweight was selected', () => {
-    expect(empty({ bodyRegion: 'back', physiqueTarget: 'upper-traps', equipmentAvailable: ['band'] }).bodyweightGap).toBe(false);
+    // (Upper traps with a band used to be the example here; the band shrug
+    // answers it since Exercise Expansion Batch 2.)
+    expect(empty({ ...LONG_HEAD, equipmentAvailable: [] }).bodyweightGap).toBe(true);
+    expect(empty({ ...LONG_HEAD, equipmentAvailable: ['band'] }).bodyweightGap).toBe(false);
   });
 
   it('is not claimed when a bodyweight exercise exists but the limits exclude it', () => {

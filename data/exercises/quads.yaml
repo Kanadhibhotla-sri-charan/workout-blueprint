@@ -550,15 +550,17 @@
     - barbell
     - dumbbell
     - sandbag
+    - bodyweight
   equipment_setups:
     - [barbell]
     - [dumbbell]
     - [sandbag]
+    - [bodyweight]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
     - unilateral
-  resistance_profile: A barbell on the back allows the heaviest load on a fixed path; dumbbells at the sides are a lighter, more accessible setup with independent arms; a shouldered sandbag adds a shifting, unstable load that raises the trunk-bracing demand beyond either.
+  resistance_profile: A barbell on the back allows the heaviest load on a fixed path; dumbbells at the sides are a lighter, more accessible setup with independent arms; a shouldered sandbag adds a shifting, unstable load that raises the trunk-bracing demand beyond either. Bodyweight alone is the entry point and the no-equipment version.
   stability_demand: medium
   skill_demand: medium
   setup_time: low
@@ -574,7 +576,8 @@
     - Load options are somewhat limited compared to a bilateral squat — grip and trunk-bracing demand from a shouldered or side-held load cap how heavy this can go before those become the limiter.
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes:
+    - "Bodyweight version: the same split-stance squat with the hands on the hips or held in front. Once high reps are easy, slow the lowering or add a pause at the bottom before reaching for weights."
   alternatives: []
   complements:
     - A bilateral squat or press.
@@ -666,16 +669,18 @@
     - barbell
     - dumbbell
     - sandbag
+    - bodyweight
   equipment_setups:
     - [barbell]
     - [dumbbell]
     - [sandbag]
+    - [bodyweight]
   exercise_type: compound
   laterality: alternating
   coverage_categories:
     - unilateral
     - skill-coordination
-  resistance_profile: A barbell on the back allows a fixed path but adds the most balance demand of the three loading options; dumbbells at the sides are the easier entry point; a shouldered sandbag adds a shifting, unstable load on top of a movement that's already balance-demanding.
+  resistance_profile: A barbell on the back allows a fixed path but adds the most balance demand of the three loading options; dumbbells at the sides are the easier entry point; a shouldered sandbag adds a shifting, unstable load on top of a movement that's already balance-demanding. Bodyweight alone is the no-equipment version and the way to learn the stepping pattern.
   stability_demand: high
   skill_demand: high
   setup_time: low
@@ -691,7 +696,8 @@
     - Space requirements (a clear walking lane) make it harder to fit into a typical gym session than a stationary lunge or squat variation.
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes:
+    - "Bodyweight version: walk the lunges with the hands on the hips. It needs only floor space for several steps; add weight once the stepping pattern is steady."
   alternatives: []
   complements:
     - A bilateral squat or press.
@@ -705,6 +711,70 @@
   video_title: The Walking Lunge
   video_status: verified
   video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: step-up
+  name: Step-Up
+  summary: A single-leg step onto a box or bench, driving through the front foot to stand on top, trainable with bodyweight or dumbbells.
+  why_this_exists: Single-leg quad work in the library needed weights or a long lunge walk. Stepping onto a bench or sturdy box loads one leg at a time with nothing but bodyweight, with little skill and little soreness, and dumbbells extend it when available.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+    - glutes
+  secondary_targets:
+    - adductors
+  physique_targets:
+    - quads
+  movement_patterns:
+    - unilateral knee-dominant
+    - stepping up onto a box
+  equipment:
+    - bench
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - unilateral
+    - low-setup
+  resistance_profile: Bodyweight, or dumbbells held at the sides once bodyweight is easy, hardest as the front leg starts to push from the bottom. A higher box increases the knee and hip bend at the start; a knee-height box suits most lifters.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - Single-leg leg work is wanted with only a bench, step or sturdy chair.
+    - A single-leg exercise with little skill and little soreness is wanted alongside squats or leg presses.
+  less_suitable_when:
+    - Heavy loading is the goal — balance on one leg limits the load well before the legs do.
+  mirror_effect: Tends to show up, over time and alongside other leg work, as fuller quads and glutes — a supporting stimulus at bodyweight loads.
+  advantages: []
+  limitations:
+    - Pushing off the back foot is easy to do without noticing, and it takes much of the work away from the front leg.
+    - Each side is trained separately, which doubles the time per set.
+    - It needs a stable box or bench of a suitable height.
+  technique_cues:
+    - Stand facing a knee-height bench or box and place the whole working foot on top.
+    - Lean the torso slightly forward and drive through the front heel to stand up on the box.
+    - Bring the back foot up lightly beside the front one without pushing off the floor with it.
+    - Lower slowly under control on the same leg, touching the trailing foot to the floor before the next rep.
+  common_mistakes:
+    - "Pushing off the back foot: the trailing leg does the work and the front leg's quads barely get loaded."
+    - "Dropping down off the box: skips the controlled lowering, which is half of each rep's leg work."
+    - "Front knee caving inward on the way up: shifts the load away from the quads and stresses the knee."
+  programming_notes:
+    - "Work the weaker leg first and match its reps on the stronger side. Progress from bodyweight to dumbbells at the sides, then to a slightly higher box."
+  alternatives: []
+  complements:
+    - A hip-hinge movement such as a Romanian deadlift.
+  overlaps_with:
+    - static-lunge
+    - reverse-lunge
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=0I76rnOH_1k
+  video_creator: FITBODY with Julie Lohre
+  video_title: "How to Do Bench Step Ups for Quads & Glutes"
+  video_status: verified
+  video_verified_on: "2026-10-09"
   video_verification_method: metadata
 - id: goblet-squat
   name: Goblet Squat
