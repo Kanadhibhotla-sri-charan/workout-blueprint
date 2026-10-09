@@ -113,3 +113,32 @@ The tie-break / role question remains the main blocker for the pull-through band
 | Playwright | 3 / 3 |
 | Video audit (oEmbed) | 137 / 137 LIVE |
 | Fresh clone of the batch commit (before pushing) | validate PASS; `npm test` 298/298; lint 0; build OK; Playwright 3/3 |
+
+## Release
+
+| | Result |
+|---|---|
+| Commit pushed to `main` | `4435763` |
+| GitHub Pages deploy | Success |
+| CI on `main` | Success |
+| Production smoke test | Pass |
+
+**Production smoke test details:**
+- Explore shows 137 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+- Detail pages load for the pull-through and every edited record.
+
+**Decide on the live site:**
+
+| Request | Answer |
+|---|---|
+| Triceps long head, band + pull-up bar | Overhead extension |
+| Brachialis, band + pull-up bar | Hammer curl |
+| Rear delt, band + pull-up bar, low skill | Rear-delt fly |
+| Lat width, band + pull-up bar, low fatigue | Straight-arm pulldown |
+| Soleus, dumbbells + bench | Seated calf raise |
+| Quads, bench only | Bulgarian split squat |
+| "Replace my glute bridge", low fatigue | Pull-through |
+| Glute max with a band | Still the glute bridge (the pull-through is not a band default) |
+
+The first smoke run flagged one scenario only because its expected text read "Rear Delt Fly" instead of the record's actual name, "Rear-Delt Fly". Re-run with the correct name, it passed.
