@@ -103,3 +103,47 @@ Every deferred item except the last four is blocked by the same thing: ties betw
 | Playwright | 3 / 3 |
 | Video audit (oEmbed) | 136 / 136 LIVE |
 | Fresh clone of `975b419` | validate PASS; `npm test` 298/298; lint 0; build OK; Playwright 3/3 |
+
+## Release review (before merging PR #5)
+
+**The two alphabetical Best Fit changes:** back region, visual area, band + pull-up bar, with no limit or a low-setup limit. The pick moves from the chin-up to the shrug.
+
+- **Why they tie:** visual area ranks only the lengthened- or shortened-position-emphasis tags first. The chin-up, pull-up and shrug carry neither, so the ID decides.
+- **The previous answer was alphabetical too:** the chin-up only beat the pull-up by ID. There was never a merit-based winner for this cell.
+- **What the user sees:**
+  - the shrug as Best Fit, the chin-up as alternative, and the chin-up and pull-up as complements;
+  - an explanation that says the shrug "changes the line from neck to shoulder more than it changes back width or thickness".
+- **More specific requests are unaffected:** lat width and the V-taper outcome still return the chin-up (verified).
+- **Same pattern already in production:** before this batch, the shrug was already the back-region visual-area pick under a low-skill limit (any, gym and home contexts). It was also the back-region low-fatigue and limited-equipment pick in those contexts. Batch 2 extends existing behaviour to minimal kit.
+
+**Decision: acceptable, not ideal.** For an unqualified "back" request, a vertical pull is the more representative answer. But:
+- the only in-scope correction is removing the shrug's band setup. That would give up the batch's main gain (8 upper-traps cells and about 180 answers) to change 2 cells whose previous answer was also arbitrary;
+- the real fix is a visual-area tie-break for region-level requests, a global ranking change outside this batch.
+
+No data change was made.
+
+**The other back-region changes are merit-based:**
+- Minimal-kit low-fatigue (chin-up is high fatigue) and limited-equipment (equal item count, shrug lower fatigue) follow the goal's own key and the existing cost rule.
+- The cells opened under fatigue or skill limits had no answer before.
+
+## Release
+
+| | Result |
+|---|---|
+| Merge commit | `f822673f8d9c839fda255f4c5da3e27b1a7543ed` (PR #5) |
+| GitHub Pages deploy | Success |
+| CI on `main` | Success |
+| Production smoke test | 10 / 10 |
+
+Production smoke test details:
+- Explore shows 136 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward restore the same answers.
+- The step-up detail page loads, as do the six edited records' pages.
+- Decide answers as intended:
+  - upper traps with band + bar → shrug;
+  - forearm flexors with a band → wrist curl;
+  - forearm extensors with a band → a band reverse curl or reverse wrist curl;
+  - quads with a bench under a low-skill limit → step-up;
+  - quads, limited equipment, nothing selected → static lunge;
+  - "replace my sissy squat" with no equipment → a lunge;
+  - lat width, visual area, band + bar → still the chin-up.
