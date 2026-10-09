@@ -329,7 +329,8 @@
     - Availability is a real constraint — this specific machine isn't as universal in gyms as a barbell squat rack or a leg press.
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes:
+    - "Pendulum squat variation: a pendulum squat machine moves the body through an arc instead of a straight track, keeping the torso upright and allowing deep knee bend. It fills the same role as the hack squat where one is available."
   alternatives: []
   complements:
     - A hinge pattern, since the hack squat does little for the back of the legs.
@@ -934,4 +935,67 @@
   video_title: How To Do Reverse Nordic Curls For Quad Strength
   video_status: verified
   video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: sissy-squat
+  name: Sissy Squat
+  summary: A bodyweight knee-dominant squat where the heels rise, the knees travel far forward and the body leans back in one line from knee to shoulder.
+  why_this_exists: Bodyweight quad options are scarce once lunges and split squats need weights. The sissy squat loads the quads through deep knee bend with the hips kept straight, giving a hard quad stimulus with nothing but bodyweight and something to hold for balance.
+  body_regions:
+    - quads
+  primary_targets:
+    - quads
+  secondary_targets: []
+  physique_targets:
+    - quads
+  movement_patterns:
+    - knee extension
+    - hips stay extended
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - lengthened-position-emphasis
+    - skill-coordination
+  resistance_profile: Bodyweight, hardest at the bottom with the knees fully bent and the body leaning furthest back. Holding a weight to the chest adds load once bodyweight is easy.
+  stability_demand: high
+  skill_demand: high
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - The quads need direct work and no weights or leg extension machine are available.
+    - A deep-knee-bend quad exercise is wanted alongside squats or lunges.
+  less_suitable_when:
+    - Deep knee bend under load aggravates the knees — a leg extension through a comfortable range is gentler.
+  mirror_effect: Tends to show up, over time and alongside other quad work, as fuller quads above the knee — a supporting contribution at bodyweight loads.
+  advantages: []
+  limitations:
+    - It puts high load on the front of the knee in deep flexion, which some knees don't tolerate.
+    - Balance and confidence limit the first sessions more than the quads do, so holding a support is usually needed at first.
+    - Loading beyond bodyweight is limited to a weight held at the chest.
+  technique_cues:
+    - Stand with the feet hip width apart and hold a rack, door frame or post with one hand for balance.
+    - Rise onto the balls of the feet and push the knees forward while leaning back, keeping knees, hips and shoulders in one straight line.
+    - Lower as far as the knees comfortably allow without bending at the hips.
+    - Drive the knees back to return to standing, keeping the hips straight all the way up.
+  common_mistakes:
+    - "Bending at the hips on the way down: turns it into a partial squat and takes the stretch off the quads."
+    - "Going deeper than the knees tolerate on the first sessions: the knee load is high and needs building up gradually."
+    - "Pulling on the support to stand up: the arms do the work the quads are meant to do."
+  programming_notes:
+    - "Start with a partial range while holding a support, deepen over sessions, and only add a weight at the chest once the full range is controlled."
+  alternatives: []
+  complements:
+    - A hip-dominant movement such as a Romanian deadlift or hip thrust.
+  overlaps_with:
+    - reverse-nordic-curl
+    - leg-extension
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=H9f3dt6fJ8A
+  video_creator: MDFit
+  video_title: "How to Do the Sissy Squat (Complete Beginner Tutorial)"
+  video_status: verified
+  video_verified_on: "2026-10-09"
   video_verification_method: metadata

@@ -41,7 +41,9 @@
     - Load progression is comparatively slow next to other big lifts, since the muscles moving the bar are smaller than a squat or deadlift's.
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes:
+    - "Arnold press variation (dumbbells): start with the palms facing you at shoulder height and rotate them to face forward as you press. The rotation adds little beyond a standard dumbbell press, so treat it as a preference, not a separate stimulus."
+    - "Landmine press variation: pressing the end of an anchored barbell up and forward on one arm gives an angled path that many lifters tolerate when pressing straight overhead is uncomfortable. It needs a landmine and a barbell, and the arc makes it easier at the top."
   alternatives: []
   complements:
     - Side- and rear-delt work, which overhead pressing does not replace.
@@ -452,6 +454,78 @@
   video_title: "Machine Lateral Raise | Proper Form Tutorial for Shoulder Growth"
   video_status: verified
   video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: upright-row-wide-grip
+  name: Upright Row (Wide Grip)
+  summary: A wide-grip pull from the thighs to about chest height, training the side delts through abduction with the elbows leading, from a bar, dumbbells, cable or a band.
+  why_this_exists: The lateral raises are the side delts' main isolation work, but all need a dumbbell, cable or machine. The wide-grip upright row trains the same abduction as a multi-joint pull that also works from a band, so side delts can be trained with minimal kit.
+  body_regions:
+    - shoulders
+  primary_targets:
+    - lateral deltoids
+  secondary_targets:
+    - upper trapezius
+  physique_targets:
+    - side-delt
+  movement_patterns:
+    - shoulder abduction
+    - scapular elevation
+  equipment:
+    - cable
+    - ez-bar
+    - barbell
+    - dumbbell
+    - band
+  equipment_setups:
+    - [cable]
+    - [ez-bar]
+    - [barbell]
+    - [dumbbell]
+    - [band]
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+  resistance_profile: Hardest toward the top as the elbows rise out to the sides. A cable keeps tension at the bottom; a band gets heavier the higher it is pulled, which matches the top-loaded shape of the movement.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Side delts need direct work and only a band or a bar is available.
+    - A heavier, multi-joint side-delt movement is wanted alongside lateral raises.
+  less_suitable_when:
+    - Pulling the elbows up toward shoulder height is uncomfortable for the shoulders — a lateral raise trains the same muscle with less internal rotation.
+  mirror_effect: Tends to show up, over time, as wider-looking shoulders from the front — the same side-delt contribution as lateral raises, from a movement that also loads the upper traps.
+  advantages: []
+  limitations:
+    - The elbows rise with the upper arm turned inward, which some shoulders tolerate poorly, especially with a narrow grip or when pulling above chest height.
+    - The upper traps share the work, so it is a less isolated side-delt stimulus than a lateral raise.
+  technique_cues:
+    - Hold the bar or handles with a grip clearly wider than shoulder width, arms hanging straight in front of the thighs.
+    - Lead with the elbows, pulling them up and out to the sides while the hands stay close to the body.
+    - Stop when the upper arms are about parallel to the floor, with the elbows level with or just above the hands.
+    - Lower slowly back to straight arms, keeping the torso still throughout.
+  common_mistakes:
+    - "Narrow grip and pulling to the chin: turns the shoulder further inward at the top and makes it the uncomfortable version of the exercise."
+    - "Leaning back and heaving the weight: momentum and the lower back move the load instead of the side delts."
+    - "Hands rising above the elbows: the biceps and forearms take over and the elbows stop leading the abduction."
+  programming_notes:
+    - "With a band, stand on the middle with the feet about hip width; a wider stance or a shorter grip on the band adds resistance."
+  alternatives: []
+  complements:
+    - Rear-delt work such as reverse flyes or face pulls.
+  overlaps_with:
+    - dumbbell-lateral-raise
+    - cable-lateral-raise
+    - machine-lateral-raise
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=Xpu0C50pD-U
+  video_creator: PureGym
+  video_title: "How To Do A Barbell Wide Grip Upright Row"
+  video_status: verified
+  video_verified_on: "2026-10-09"
   video_verification_method: metadata
 - id: rear-delt-fly
   name: Rear-Delt Fly
