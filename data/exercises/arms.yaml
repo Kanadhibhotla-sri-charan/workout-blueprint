@@ -487,11 +487,16 @@
     - elbow flexion
   equipment:
     - cable
+    - band
+  equipment_setups:
+    - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
-  resistance_profile: Constant tension through the whole range.
+  selection_role: secondary
+  resistance_profile: Constant tension through the whole range. A band, standing on it or anchored low, also keeps the top loaded but gets heavier toward the top instead of staying constant.
   stability_demand: low
   skill_demand: low
   setup_time: medium
@@ -504,11 +509,12 @@
   advantages: []
   limitations:
     - Absolute load is capped below what a barbell allows, so this isn't a strong option for building maximal biceps strength.
-    - Requires a cable station and the right attachment, which is a real setup dependency a barbell or dumbbells don't have.
+    - The cable version requires a cable station and the right attachment, which is a real setup dependency a barbell or dumbbells don't have. The band version needs no station, but its resistance is light at the bottom of the curl and hard to load precisely.
   technique_cues: []
   common_mistakes: []
   programming_notes:
     - "Bayesian variation: stand facing away from a low pulley and curl with the working arm angled behind the body. The biceps start the rep fully stretched and the cable keeps tension there, which a dumbbell incline curl loses at the bottom."
+    - "Band version: stand on the middle of a band (or anchor it low) and curl the handles up with the elbows pinned at your sides. It is the home stand-in for a loaded curl; with dumbbells or a cable available, use those."
   alternatives: []
   complements:
     - A free-weight curl with a different resistance profile.

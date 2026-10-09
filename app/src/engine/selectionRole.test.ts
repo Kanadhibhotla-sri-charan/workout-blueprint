@@ -51,6 +51,7 @@ describe('selection_role: secondary', () => {
     // Each classification is its own reviewed change with a coverage check
     // (SCHEMA.md selection_role). Adding a record here is that review.
     expect(exercises.filter((e) => e.selection_role != null).map((e) => e.id).sort()).toEqual([
+      'cable-curl', // Final Exercise Expansion Pass
       'cable-pull-through', // Exercise Expansion Batch 7
       'hamstring-bridge', // Exercise Expansion Batch 7
     ]);
