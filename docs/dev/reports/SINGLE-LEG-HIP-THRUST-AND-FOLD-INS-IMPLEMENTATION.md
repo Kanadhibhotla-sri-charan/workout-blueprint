@@ -22,7 +22,7 @@ Record-level diff of the generated data, before (`50ab237`) vs after:
 
   | Record | Fields |
   |---|---|
-  | `glute-bridge` | `equipment`, `equipment_setups`, `resistance_profile`, `limitations`, `programming_notes` |
+  | `glute-bridge` | `equipment`, `equipment_setups`, `resistance_profile`, `programming_notes` |
   | `cable-lateral-raise`, `goblet-squat`, `standing-calf-raise`, `push-up-chest` | `programming_notes` only |
 
 - No other record changed.
@@ -117,7 +117,7 @@ Record-level diff of the generated data, before (`50ab237`) vs after:
 
 | Fold-in | Implemented as | Decide-relevant change |
 |---|---|---|
-| Barbell glute bridge | `equipment: [bodyweight, barbell]`, `equipment_setups: [[bodyweight], [barbell]]`. `resistance_profile`, the first `limitations` item and a new `programming_notes` item describe the barbell version. **No retagging** (no `heavy-compound`, no `high-loadable`), targeting unchanged, no new record | None to ranking or feasibility (bodyweight is always available). The glute bridge now also appears under "barbell" in Explore's equipment filter. See "Differences" for the watch-out text |
+| Barbell glute bridge | `equipment: [bodyweight, barbell]`, `equipment_setups: [[bodyweight], [barbell]]`. `resistance_profile` and a new `programming_notes` item describe the barbell version. **No retagging** (no `heavy-compound`, no `high-loadable`), targeting unchanged, no new record | None: ranking, feasibility and Decide text are all unchanged (bodyweight is always available). The glute bridge now also appears under "barbell" in Explore's equipment filter |
 | Lean-away cable lateral raise | `programming_notes` item on `cable-lateral-raise`. The record already had a mild-lean cue ("Lean slightly away from the stack"); the note describes the full lean-away variation | None |
 | Heel-elevated goblet squat | `programming_notes` item on `goblet-squat` | None |
 | Smith / donkey calf raise | **No new setup.** `standing-calf-raise` already has `[machine]`, `[smith machine]`, `[dumbbell, block or plate]`. Donkey variation added as a `programming_notes` item only | None |
@@ -160,6 +160,7 @@ Same scenario space as the analysis reports. Run twice, byte-identical (SHA-256 
 | Complement changes | 397 (389 incl. it) | 397 (389 incl. it) | Yes |
 | Empty-message changes | 0 | 0 | Yes |
 | `why` text changes with unchanged pick | — | 0 | — |
+| Watch-out text changes | 8 (the new Best Fits) | 8 (the new Best Fits) | Yes |
 
 **Targeting:**
 - The single-leg hip thrust is a Best Fit **only** under the four glute-max entries: hips region, glute-max target, glute-roundness and glute-side-projection outcomes.
@@ -178,11 +179,11 @@ Same scenario space as the analysis reports. Run twice, byte-identical (SHA-256 
 
 ## Differences from the approved analysis
 
-1. **Watch-out text on glute-bridge answers (text only, no ranking effect).**
-   - Decide's watch-out shows a record's first `limitations` item.
-   - The glute bridge's first limitation was reworded to describe barbell loading honestly. The old wording said loading "caps out well below what a barbell hip thrust allows", which no longer fits a record that lists a barbell option.
-   - So 1,179 answers where the glute bridge is the pick show the new sentence. The analysis measured the equipment change alone, which changes no watch-out.
-   - The other 8 watch-out changes are the 8 new single-leg hip thrust Best Fits.
+1. **Glute-bridge limitation wording (resolved).**
+   - The first implementation commit reworded the glute bridge's first `limitations` item. Decide shows that item as a watch-out, so 1,179 answers' watch-out text changed: beyond the approved "display only" scope of this fold-in.
+   - Resolution: the original sentence is restored verbatim. It remains accurate, because its "caps out" claim is explicitly about dumbbell or plate loading.
+   - The barbell version is described in `resistance_profile` and the new `programming_notes` item, which Decide doesn't display.
+   - With that, watch-out changes are exactly the 8 new single-leg hip thrust Best Fits, as approved.
 2. **Lean-away was already partly present.** `cable-lateral-raise` already cued a slight lean away from the stack. The fold-in adds the full lean-away variation as a programming note rather than a duplicate cue.
 3. **Video and review status.** The approved record left the video to be sourced at implementation; it is now verified by metadata (see above). Review status stays `needs-review` as approved, though the record meets the `reviewed` gate.
 
