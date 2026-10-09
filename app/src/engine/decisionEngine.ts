@@ -494,8 +494,20 @@ function rankByGoal(goal: Goal, candidates: Exercise[], equipmentAvailable: stri
       const costDiff = compareCost(a, b);
       if (costDiff !== 0) return costDiff;
     }
+    const roleDiff = selectionRoleRank(a) - selectionRoleRank(b);
+    if (roleDiff !== 0) return roleDiff;
     return a.id.localeCompare(b.id);
   });
+}
+
+// Build-base tie resolution (docs/dev/reports/BUILD-BASE-TIE-RESOLUTION-
+// ASSESSMENT.md): when every earlier key ties, an exercise classified as a
+// secondary stand-in or accessory yields to an unclassified one before the
+// alphabetical id decides. Applies to all four selection goals; it never
+// overrides the goal key, the cost tie-break, or the target / aesthetic
+// sorts layered on top of this ranking.
+function selectionRoleRank(exercise: Exercise): number {
+  return exercise.selection_role === 'secondary' ? 1 : 0;
 }
 
 function explainGoalPick(goal: Goal, exercise: Exercise, equipmentAvailable: string[] | null): string {

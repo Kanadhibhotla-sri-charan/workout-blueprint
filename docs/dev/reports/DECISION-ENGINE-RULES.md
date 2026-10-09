@@ -31,6 +31,11 @@ isEquipmentFeasible(exercise, equipmentAvailable):
 - `equipment` is a required, non-empty field on every record (`REQUIRED_LIST_FIELDS` in `scripts/lib/taxonomy.js`), and bodyweight-only exercises explicitly list `equipment: [bodyweight]` rather than an empty list.
 - **"Limited equipment" ranking** counts the items in the cheapest setup the user can complete (unrestricted: the cheapest setup overall), not the length of the `equipment` union. Since Phase 7 Stage 5.1, `bodyweight` counts as 0 items, because it is always available: a bodyweight-only exercise costs 0, and a pull-up (`pull-up bar` + `bodyweight`) costs 1.
 - **Cost tie-break (Phase 7 Stage 5.1).** For the **low-fatigue** and **limited-equipment** goals only, candidates that tie on every existing ranking criterion are ordered by lower fatigue, then lower setup time, then lower skill demand, then lower stability demand. Only after that does the alphabetical `id` fallback apply. Every other goal (build-base, visual-area, replace, complements) keeps the plain `id` fallback. See `PHASE-7-STAGE-5-DECISION-COVERAGE-REVIEW.md` §6 and `PHASE-7-STAGE-5.1-RANKING-CONSISTENCY.md`.
+- **Selection-role tie-break (Build-base tie resolution).** In all four selection goals (build-base, visual-area, low-fatigue, limited-equipment), candidates that still tie after the goal key and the cost tie-break are ordered **unclassified before `selection_role: secondary`**. Only then does the alphabetical `id` fallback apply.
+  - It is the last real key, so it never overrides the goal key, the cost tie-break, or the target-tier / aesthetic-role / aesthetic-suitability sorts layered on top.
+  - Replace, different-stimulus and complement answers use the structural rankers (§2–3) and are unaffected.
+  - With no record classified it changes nothing; verified across all 39,456 scenarios.
+  - See `BUILD-BASE-TIE-RESOLUTION-IMPLEMENTATION.md`.
 - **Single source of truth:** `app/src/engine/equipment.ts` is the only place equipment is interpreted — Decide feasibility, ranking, explanation/watch-out text, Explore's equipment filter (an exercise is listed under an item when any setup uses it) and the detail page.
 
 ## 2. Deterministic structural-alternative matching rule

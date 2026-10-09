@@ -10,7 +10,7 @@ const {
   BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
   REVIEW_STATUSES, VIDEO_STATUSES, VIDEO_VERIFICATION_METHODS, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
-  AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES,
+  AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES, SELECTION_ROLES,
 } = require('./taxonomy');
 const {
   loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals,
@@ -626,6 +626,9 @@ function validate(records) {
           report(record, 'taxonomy', `"coverage_categories" contains unrecognized value "${v}" — not in the controlled set`);
         }
       }
+    }
+    if (record.selection_role !== undefined && record.selection_role !== null && !SELECTION_ROLES.has(record.selection_role)) {
+      report(record, 'taxonomy', `"selection_role" must be one of ${[...SELECTION_ROLES].join('|')} when present, got ${JSON.stringify(record.selection_role)}`);
     }
     if (Array.isArray(record.aesthetic_characteristics)) {
       for (const v of record.aesthetic_characteristics) {

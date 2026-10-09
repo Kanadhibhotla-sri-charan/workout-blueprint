@@ -35,6 +35,14 @@ export interface Exercise {
    * union of all setups. Interpret only through engine/equipment.ts.
    */
   equipment_setups?: string[][] | null;
+  /**
+   * Optional programming-role classification. "secondary" marks a stand-in
+   * or accessory variant that should not be the default pick when an
+   * equally ranked, non-secondary exercise is available. Read only by the
+   * selection ranking's final tie-break (engine/decisionEngine.ts
+   * rankByGoal); absent means unclassified. Not a quality score.
+   */
+  selection_role?: 'secondary' | null;
   exercise_type: ExerciseType;
   laterality: Laterality;
   coverage_categories: string[];

@@ -111,6 +111,25 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** yes — Decide feasibility, "limited equipment" ranking and equipment text, plus Explore's equipment filter (see `docs/dev/reports/DECISION-ENGINE-RULES.md` §1).
 - **Required for `reviewed`:** no
 
+### `selection_role`
+- **Type:** string, or absent / `null`
+- **Required:** no. Absent means unclassified, the default for every record.
+- **Allowed values (closed vocabulary):** `secondary`. `npm run validate-data` rejects any other value.
+- **Meaning:** a programming-role classification. `secondary` marks a stand-in or accessory variant that should not be the default pick when an equally ranked, non-secondary exercise is available.
+- **What it is not:**
+  - not a quality score;
+  - not a personal preference;
+  - not a way to choose which exercise wins.
+  - Set it only when the exercise's role is genuinely secondary relative to the established alternatives for its target, and record why in the change that sets it.
+  - Never set it, or leave it off, to steer a particular recommendation.
+- **Decision-making impact:** yes, but only as the **last selection-ranking key before the alphabetical `id`**, in all four selection goals (build-base, visual-area, low-fatigue, limited-equipment).
+  - It is compared only after the goal key and the cost tie-break.
+  - It never overrides target tiers, aesthetic roles, the goal key, or fatigue / setup / skill / stability.
+  - It does not affect replace, different-stimulus or complement answers, or feasibility. A `secondary` exercise is still recommended whenever it is the best or only fit.
+  - See `docs/dev/reports/DECISION-ENGINE-RULES.md` §1 and `docs/dev/reports/BUILD-BASE-TIE-RESOLUTION-ASSESSMENT.md`.
+- **Classification discipline:** marking an existing record changes current recommendations. Each classification is its own reviewed change with a focused coverage check. Bulk classification was measured and rejected (assessment §3a).
+- **Required for `reviewed`:** no
+
 ### `exercise_type`
 - **Type:** string (scalar)
 - **Required:** yes

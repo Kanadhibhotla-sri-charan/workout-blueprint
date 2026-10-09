@@ -43,6 +43,13 @@ const AESTHETIC_CHARACTERISTICS = new Set([
 // so it deliberately isn't a valid key here.
 const AESTHETIC_ROLES = ['primary', 'direct', 'secondary', 'supporting'];
 
+// Optional programming-role classification (Build-base tie resolution).
+// "secondary": a stand-in or accessory variant that should not be the
+// default pick when an equally ranked, non-secondary exercise is
+// available. A role, never a quality score or a preference; absent means
+// unclassified. See SCHEMA.md `selection_role`.
+const SELECTION_ROLES = new Set(['secondary']);
+
 // The first item of movement_patterns must be one of these fundamental
 // patterns (Phase 1 taxonomy normalization). Subsequent items are
 // free-form modifiers and are not validated against a closed list —
@@ -94,6 +101,7 @@ const ALL_FIELDS = new Set([
   'video_link', 'video_creator', 'video_title', 'video_status',
   'video_verified_on', 'video_verification_method',
   'equipment_setups',
+  'selection_role',
 ]);
 
 // How a `verified` video reference was confirmed to match its exercise.
@@ -115,6 +123,7 @@ module.exports = {
   VIDEO_VERIFICATION_METHODS,
   AESTHETIC_CHARACTERISTICS,
   AESTHETIC_ROLES,
+  SELECTION_ROLES,
   FUNDAMENTAL_MOVEMENT_PATTERNS,
   REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS,
