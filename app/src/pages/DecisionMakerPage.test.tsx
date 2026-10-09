@@ -664,7 +664,7 @@ describe('DecisionMakerPage — empty-result messaging', () => {
     renderAt('/decide?target=upper-traps&goal=build-base&equipment=');
     expect(screen.getByText(/no bodyweight-only exercise that directly trains Upper Traps/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Barbell / Dumbbell Shrug' })).toHaveAttribute('href', '/exercises/barbell-dumbbell-shrug');
-    expect(screen.getByText(/barbell, dumbbell, or cable/)).toBeInTheDocument();
+    expect(screen.getByText(/barbell, dumbbell, cable, or band/)).toBeInTheDocument();
     expect(bestFitName()).toBeNull();
   });
 

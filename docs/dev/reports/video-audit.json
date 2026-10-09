@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-09T05:53:35.051Z",
-    "total_records": 135,
-    "live": 135,
+    "audited_at": "2026-10-09T06:16:26.237Z",
+    "total_records": 136,
+    "live": 136,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1607,6 +1607,19 @@
       "http_result": 200,
       "resolved_title": "Stationary Lunge - HASfit Lunge Exercise Demonstration - Dumbbell Lunge - Barbell Lunge Workout",
       "resolved_author": "HASfit",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "step-up",
+      "exercise_name": "Step-Up",
+      "muscle_group": "quads",
+      "current_video_url": "https://www.youtube.com/watch?v=0I76rnOH_1k",
+      "video_id": "0I76rnOH_1k",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How to Do Bench Step Ups for Quads & Glutes",
+      "resolved_author": "FITBODY with Julie Lohre",
       "classification": "LIVE",
       "notes": ""
     },

@@ -15,17 +15,19 @@
     - barbell
     - dumbbell
     - cable
+    - band
   equipment_setups:
     - [barbell]
     - [dumbbell]
     - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - low-setup
     - low-fatigue
-  resistance_profile: Barbell allows the heaviest fixed-path load; dumbbells let each wrist move independently; a cable keeps tension through the whole range at the cost of a less natural wrist path.
+  resistance_profile: Barbell allows the heaviest fixed-path load; dumbbells let each wrist move independently; a cable keeps tension through the whole range at the cost of a less natural wrist path. A band anchored under the foot is lightest at the bottom and heaviest as the wrist curls up.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -47,7 +49,8 @@
     - "Lifting the forearms off the support: the elbows and shoulders help move the weight."
     - "Raising load faster than the forearm tendons adapt: elbow pain is the usual result."
     - "Short, fast reps that skip the full wrist range: the forearm flexors miss the stretched and fully curled positions, which are most of what the exercise trains."
-  programming_notes: []
+  programming_notes:
+    - "Band version: sit with the forearm on the thigh, palm up, and the band anchored under the foot. Shorten the band to add resistance."
   alternatives: []
   complements:
     - Wrist extension work, which balances the other side of the forearm.
@@ -78,17 +81,19 @@
     - barbell
     - dumbbell
     - cable
+    - band
   equipment_setups:
     - [barbell]
     - [dumbbell]
     - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - low-setup
     - low-fatigue
-  resistance_profile: Barbell, dumbbells, or a cable all work the same way a wrist curl's equipment choice does.
+  resistance_profile: Barbell, dumbbells, or a cable all work the same way a wrist curl's equipment choice does. A band anchored under the foot is lightest at the bottom and heaviest as the wrist extends.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -110,7 +115,8 @@
     - "Using too much weight: the forearms or elbows lift to help and the wrist extensors do little."
     - "Raising load or volume quickly: a common route to irritation on the outside of the elbow (tennis-elbow type)."
     - "Bouncing at the bottom: momentum replaces the controlled lowering."
-  programming_notes: []
+  programming_notes:
+    - "Band version: sit with the forearm on the thigh, palm down, and the band anchored under the foot. Shorten the band to add resistance."
   alternatives: []
   complements:
     - Wrist curls and grip work.
@@ -146,16 +152,18 @@
     - barbell
     - ez-bar
     - dumbbell
+    - band
   equipment_setups:
     - [barbell]
     - [ez-bar]
     - [dumbbell]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - low-setup
-  resistance_profile: Barbell or EZ-bar allows the heaviest load on a fixed path; dumbbells allow independent arms and let each wrist find its own comfortable angle.
+  resistance_profile: Barbell or EZ-bar allows the heaviest load on a fixed path; dumbbells allow independent arms and let each wrist find its own comfortable angle. A band stood on gets heavier toward the top of the curl.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -178,7 +186,8 @@
     - "Wrists bending back under the load: stresses the wrist and takes tension off the forearm muscles."
     - "Loading it like a regular curl: the overhand grip is weaker, so too much weight turns into swinging."
     - "Elbows drifting forward: the shoulders help lift the weight."
-  programming_notes: []
+  programming_notes:
+    - "Band version: stand on the middle of a band and curl the ends with an overhand grip, elbows pinned at the sides. A wider stance adds resistance."
   alternatives: []
   complements:
     - A supinated curl and direct wrist work.
