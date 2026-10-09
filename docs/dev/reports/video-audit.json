@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-08T05:57:01.067Z",
-    "total_records": 132,
-    "live": 132,
+    "audited_at": "2026-10-09T05:53:35.051Z",
+    "total_records": 135,
+    "live": 135,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1234,6 +1234,19 @@
       "notes": ""
     },
     {
+      "exercise_id": "reverse-crunch",
+      "exercise_name": "Reverse Crunch",
+      "muscle_group": "core",
+      "current_video_url": "https://www.youtube.com/watch?v=XY8KzdDcMFg",
+      "video_id": "XY8KzdDcMFg",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How To Do A Reverse Crunch",
+      "resolved_author": "PureGym",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
       "exercise_id": "reverse-curl",
       "exercise_name": "Reverse Curl",
       "muscle_group": "forearms",
@@ -1468,6 +1481,19 @@
       "notes": ""
     },
     {
+      "exercise_id": "sissy-squat",
+      "exercise_name": "Sissy Squat",
+      "muscle_group": "quads",
+      "current_video_url": "https://www.youtube.com/watch?v=H9f3dt6fJ8A",
+      "video_id": "H9f3dt6fJ8A",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How to Do the Sissy Squat (Complete Beginner Tutorial)",
+      "resolved_author": "MDFit",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
       "exercise_id": "smith-machine-bench-press",
       "exercise_name": "Smith Machine Bench Press",
       "muscle_group": "chest",
@@ -1685,6 +1711,19 @@
       "http_result": 200,
       "resolved_title": "How To: Tricep Kickback (Dumbbell)",
       "resolved_author": "ScottHermanFitness",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "upright-row-wide-grip",
+      "exercise_name": "Upright Row (Wide Grip)",
+      "muscle_group": "shoulders",
+      "current_video_url": "https://www.youtube.com/watch?v=Xpu0C50pD-U",
+      "video_id": "Xpu0C50pD-U",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How To Do A Barbell Wide Grip Upright Row",
+      "resolved_author": "PureGym",
       "classification": "LIVE",
       "notes": ""
     },

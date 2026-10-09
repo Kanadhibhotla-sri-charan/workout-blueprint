@@ -106,6 +106,68 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: reverse-crunch
+  name: Reverse Crunch
+  summary: A floor crunch from the bottom up, curling the pelvis toward the ribs by lifting the hips, trunk flexion with no equipment.
+  why_this_exists: The library's loaded trunk-flexion options need a cable, a machine or a pull-up bar. The reverse crunch trains the same rib-to-pelvis flexion lying on the floor, so the abs can be worked through flexion, not only braced, with no equipment.
+  body_regions:
+    - core
+  primary_targets:
+    - rectus abdominis
+  secondary_targets:
+    - hip flexors
+  physique_targets:
+    - rectus-abdominis
+  movement_patterns:
+    - trunk flexion
+    - pelvis curls toward the ribs
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Leg and pelvis weight, hardest as the hips leave the floor and the pelvis curls up. Straighter legs increase the lever and the difficulty.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The abs need direct flexion work and no cable, machine or pull-up bar is available.
+    - A low-fatigue ab exercise is wanted alongside bracing work such as planks.
+  less_suitable_when:
+    - Reps have become easy and a loaded crunch is available — bodyweight loading is hard to progress beyond straighter legs and slower tempo.
+  mirror_effect: Tends to show up, over time and at a low enough body-fat level, as more visible ab definition — the same rectus-abdominis stimulus as other crunches, without load.
+  advantages: []
+  limitations:
+    - The hip flexors can do much of the work if the knees swing toward the chest without the pelvis curling, and that's hard to feel at first.
+    - Progression is limited to leverage and tempo unless a bench or incline is available.
+  technique_cues:
+    - Lie on your back with the hips and knees bent at about 90 degrees and the arms flat by your sides.
+    - Curl the pelvis toward the ribs so the hips lift a few centimetres off the floor, rather than just bringing the knees in.
+    - Pause briefly with the lower back rounded off the floor.
+    - Lower the hips slowly until the lower back touches down, without letting the legs drop.
+  common_mistakes:
+    - "Swinging the knees toward the chest without lifting the hips: the hip flexors move the legs and the abs barely work."
+    - "Pushing the arms into the floor to lever the hips up: the arms do the lifting instead of the abs."
+    - "Dropping the hips quickly: skips the lowering, which is half of each rep's ab work."
+  programming_notes:
+    - "Progress by straightening the legs a little, then by slowing the lowering. On a decline bench, gravity adds load once the floor version is easy."
+  alternatives: []
+  complements:
+    - An anti-extension hold such as a plank, and an anti-rotation movement.
+  overlaps_with:
+    - hanging-knee-leg-raise
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=XY8KzdDcMFg
+  video_creator: PureGym
+  video_title: "How To Do A Reverse Crunch"
+  video_status: verified
+  video_verified_on: "2026-10-09"
+  video_verification_method: metadata
 - id: hanging-knee-leg-raise
   name: Hanging Knee or Leg Raise
   summary: Trains hip flexion with trunk control, scaling from bent knees to straight legs without changing equipment.
