@@ -95,3 +95,28 @@ Replace, different-stimulus and complement answers use the structural rankers an
 | Playwright | 3 / 3 |
 | Zero-change check | 0 / 39,456 answers differ |
 | Fresh clone of the commit (before pushing) | validate PASS; `npm test` 310/310; lint 0; build OK; Playwright 3/3 |
+
+## 8. Release
+
+| | Result |
+|---|---|
+| Commit pushed to `main` | `3a4a343` |
+| GitHub Pages deploy | Success |
+| CI on `main` | Success |
+| Production smoke test | 4 / 4 |
+
+**Production smoke test details:**
+- Explore shows 139 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+
+Existing answers are unchanged on the live site:
+
+| Request | Answer |
+|---|---|
+| Chest region, build base | Still the dip |
+| Biceps, build base | Still the barbell / EZ-bar curl |
+| Glutes, band + pull-up bar | Still the glute bridge |
+| Core anti-rotation, limited equipment | Still the shoulder tap |
+| Hamstrings, nothing selected | Still the bodyweight-gap message |
+
+The first smoke run flagged one scenario only because its URL was missing the `decide?` prefix, an error in the test input. Re-run with the corrected URL, it passed.
