@@ -97,3 +97,32 @@ These match the predictions in the tie-resolution implementation report (42 and 
 ## Unexpected differences
 
 None beyond those predicted. The two representation points above (a per-record role, and the anchored-band convention) are stated rather than hidden.
+
+## Release
+
+| | Result |
+|---|---|
+| Commit pushed to `main` | `7aa1195` |
+| GitHub Pages deploy | Success |
+| CI on `main` | Success |
+| Production smoke test | Pass |
+
+**Production smoke test details:**
+- Explore shows 140 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+- The hamstring bridge and cable pull-through detail pages load.
+
+**Decide on the live site:**
+
+| Request | Answer |
+|---|---|
+| Hamstrings, build base, bodyweight context (with bench) | Hamstring bridge (new coverage) |
+| Hamstrings, build base, full equipment, low skill | Still the lying leg curl (the ID takeover is avoided) |
+| Hamstrings, nothing selected | Still the bodyweight-gap message (no bench) |
+| Glutes, build base, band + pull-up bar | Still the glute bridge |
+| Glutes, low fatigue, home + band | Still the glute bridge |
+| Glutes, build base, full equipment | Still the hip thrust |
+| "Replace my single-leg RDL", band + pull-up bar | Band pull-through (newly opened) |
+| "Replace my cable pull-through", band + pull-up bar | Single-leg RDL |
+
+**Smoke-test input correction:** one scenario first expected the pull-through to replace the glute bridge. That premise was wrong: "replace" requires the same first movement pattern, and the glute bridge is hip extension while the pull-through is a hip hinge, so the bridge correctly has no substitute there. The 60 opened replace answers serve the hinge exercises. Re-checked against those (local engine run, then production), they pass. Production behaviour was correct throughout.
