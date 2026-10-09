@@ -133,3 +133,29 @@ Unmodified engine; same 69-entry × 6-context × 4-tolerance × 7-goal space as 
 3. **Suspension / low-bar equipment item.** Unlocks the inverted row, the main remaining real gap (back thickness for bodyweight users).
 4. **Per-setup role or belt-squat equipment item.** Only if band chest flies or the belt squat become priorities.
 5. **Optional taxonomy additions:** grip goal, lower-traps target, conditioning goal. Low priority; each is a scope decision, not a data fix.
+
+## 9. Release
+
+| | Result |
+|---|---|
+| Fresh clone of the commit (before pushing) | validate PASS; `npm test` 310/310; lint 0; build OK; Playwright 3/3 |
+| Commit pushed to `main` | `871fafd` |
+| CI on `main` | Success |
+| GitHub Pages deploy | Success |
+| Production smoke test | 4 / 4 |
+
+**Production smoke test details:**
+- Explore shows 140 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+- The cable curl detail page loads.
+
+**Decide on the live site (Best Fit):**
+
+| Request | Answer |
+|---|---|
+| Biceps, build base, band + pull-up bar | Cable Curl, band setup (new coverage) |
+| Biceps, low fatigue, band + pull-up bar | Cable Curl, band setup (new coverage) |
+| "Replace my drag curl", band + pull-up bar | Cable Curl, band setup (was the hammer curl) |
+| Biceps, build base, full equipment | Still the barbell or EZ-bar curl |
+| Biceps, build base, home with dumbbells + band | Still the dumbbell curl (the secondary role holds) |
+| Brachialis, build base, band + pull-up bar | Still the hammer curl |
