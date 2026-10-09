@@ -265,12 +265,17 @@
   equipment:
     - cable
     - rope attachment
+    - band
+  equipment_setups:
+    - [cable, rope attachment]
+    - [band]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
     - low-setup
     - low-fatigue
-  resistance_profile: The cable pulls backward through the legs, so the load is greatest when the hips are bent and stays on through the lockout.
+  selection_role: secondary
+  resistance_profile: The cable pulls backward through the legs, so the load is greatest when the hips are bent and stays on through the lockout. A band anchored low behind the lifter works the same hinge but gets heavier toward the top instead of staying constant.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -295,7 +300,7 @@
     - "Leaning back at the top: arches the lower back instead of finishing with the hips."
     - "Pulling the rope with the arms: the arms take load the hips are meant to move."
   programming_notes:
-    - "A band anchored low behind you trains the same hinge at home; it gets heavier toward the top instead of staying constant."
+    - "Band version: anchor a band low behind you (around a post or a heavy object), face away, and stand far enough forward that it stays taut at the bottom of the hinge."
   alternatives: []
   complements:
     - Glute work in the shortened position, such as hip thrusts or glute bridges.

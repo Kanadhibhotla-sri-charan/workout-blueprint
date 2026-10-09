@@ -360,6 +360,70 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: hamstring-bridge
+  name: Hamstring Bridge
+  summary: A bridge with the heels up on a bench and the knees nearly straight, driving the hips up so the hamstrings rather than the glutes do most of the work — bodyweight hamstring training with only a bench.
+  why_this_exists: Every hamstring exercise in the library needs a weight, a band, a machine, a 45-degree bench or a partner to anchor the feet. Raising the heels on a bench with the knees nearly straight turns a bridge into a hamstring exercise, so the back of the thigh can be trained with bodyweight and a bench, sofa or step.
+  body_regions:
+    - hamstrings
+  primary_targets:
+    - hamstrings
+  secondary_targets:
+    - glutes
+  physique_targets:
+    - hamstrings
+  movement_patterns:
+    - hip extension
+    - heels on a bench, knees nearly straight
+  equipment:
+    - bodyweight
+    - bench
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  selection_role: secondary
+  resistance_profile: Bodyweight, hardest at the top with the hips fully extended. The straighter the knees, the more the hamstrings work; one leg at a time roughly doubles the load.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The hamstrings need direct work and only bodyweight and a bench, step or sofa are available.
+    - A low-fatigue hamstring exercise is wanted as an accessory to heavier hinges or leg curls.
+  less_suitable_when:
+    - Leg curls or a Romanian deadlift are available and a loadable hamstring stimulus is the goal — this is the bodyweight stand-in for those.
+  mirror_effect: Tends to show up, over time and alongside heavier hamstring work, as fuller hamstrings from the side — a supporting stimulus at bodyweight loads.
+  advantages: []
+  limitations:
+    - Bodyweight loading is modest, so trained lifters need the single-leg version or slow lowering to keep it challenging.
+    - The hamstrings can cramp in this position before they have done much work, especially early on.
+  technique_cues:
+    - Lie on your back with your heels on a bench or step and the knees almost straight, arms on the floor by your sides.
+    - Tuck the pelvis slightly and keep the ribs down before you lift.
+    - Press the heels down into the bench to lift the hips until the body forms a straight line from shoulders to heels.
+    - Hold briefly at the top, then lower the hips slowly until they lightly touch the floor.
+  common_mistakes:
+    - "Bending the knees a lot: turns it back into a glute bridge and takes the work off the hamstrings."
+    - "Arching the lower back to get the hips higher: the spine extends instead of the hips, and the hamstrings do less."
+    - "Dropping the hips quickly: skips the controlled lowering, which is half of each rep's hamstring work."
+  programming_notes:
+    - "Progress from two legs to one leg, then slow the lowering. Leg curls or a Romanian deadlift are the loaded progression once equipment is available."
+  alternatives: []
+  complements:
+    - A hip hinge such as a single-leg Romanian deadlift.
+  overlaps_with:
+    - glute-bridge (hips module)
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=4Xke4jdfpkM
+  video_creator: Flint House Police Rehabilitation
+  video_title: "Hamstring Bridge (Heel Elevated)"
+  video_status: verified
+  video_verified_on: "2026-10-09"
+  video_verification_method: metadata
 - id: single-leg-romanian-deadlift
   name: Single-Leg Romanian Deadlift
   summary: A one-leg hip hinge with a dumbbell, loading the hamstrings and glutes in a lengthened position while the standing hip controls balance and rotation.

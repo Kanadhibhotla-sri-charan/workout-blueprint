@@ -47,8 +47,13 @@ function bestFit(pool: Exercise[], input: Partial<DecisionInput> = {}): string {
 }
 
 describe('selection_role: secondary', () => {
-  it('no production record is classified yet, so current recommendations are unchanged', () => {
-    expect(exercises.filter((e) => e.selection_role != null)).toEqual([]);
+  it('only deliberately reviewed records are classified secondary', () => {
+    // Each classification is its own reviewed change with a coverage check
+    // (SCHEMA.md selection_role). Adding a record here is that review.
+    expect(exercises.filter((e) => e.selection_role != null).map((e) => e.id).sort()).toEqual([
+      'cable-pull-through', // Exercise Expansion Batch 7
+      'hamstring-bridge', // Exercise Expansion Batch 7
+    ]);
   });
 
   it('unmarked records keep the existing alphabetical fallback', () => {

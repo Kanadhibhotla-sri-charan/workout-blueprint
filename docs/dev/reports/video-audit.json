@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-09T11:34:01.091Z",
-    "total_records": 139,
-    "live": 139,
+    "audited_at": "2026-10-09T14:59:18.155Z",
+    "total_records": 140,
+    "live": 140,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -684,6 +684,19 @@
       "http_result": 200,
       "resolved_title": "How To: Dumbbell Hammer Curl",
       "resolved_author": "ScottHermanFitness",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "hamstring-bridge",
+      "exercise_name": "Hamstring Bridge",
+      "muscle_group": "hamstrings",
+      "current_video_url": "https://www.youtube.com/watch?v=4Xke4jdfpkM",
+      "video_id": "4Xke4jdfpkM",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "Hamstring Bridge (Heel Elevated)",
+      "resolved_author": "Flint House Police Rehabilitation",
       "classification": "LIVE",
       "notes": ""
     },
