@@ -428,14 +428,16 @@
     - dumbbell
     - barbell
     - bench
+    - bodyweight
   equipment_setups:
     - [dumbbell, bench]
     - [barbell, bench]
+    - [bodyweight, bench]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
     - unilateral
-  resistance_profile: Free-weight profile, short stance.
+  resistance_profile: Free-weight profile, short stance. Bodyweight with the rear foot on a bench is the entry version and needs no weights at all.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
@@ -460,6 +462,7 @@
     - "Bouncing out of the bottom: skips the deep knee bend where the quads are most stretched."
   programming_notes:
     - Start each set with the weaker leg and match its reps on the stronger side, so a side-to-side gap shrinks rather than grows.
+    - "Bodyweight version: the same short-stance split squat with the hands on the hips; add dumbbells once bodyweight reps are easy."
   alternatives: []
   complements:
     - A bilateral squat or press.

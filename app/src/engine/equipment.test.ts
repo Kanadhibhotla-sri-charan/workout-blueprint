@@ -67,9 +67,9 @@ describe('1. alternative equipment — barbell OR EZ-bar OR dumbbell', () => {
     );
     expect(result.status).toBe('ok');
     if (result.status === 'ok' && result.bestFit.id === 'overhead-triceps-extension') {
-      expect(result.why).toBe('Needs only one of: barbell, ez-bar, or dumbbell.');
+      expect(result.why).toBe('Needs only one of: barbell, ez-bar, dumbbell, or band.');
     }
-    expect(formatEquipmentOptions(ote)).toBe('barbell, ez-bar, or dumbbell');
+    expect(formatEquipmentOptions(ote)).toBe('barbell, ez-bar, dumbbell, or band');
   });
 });
 

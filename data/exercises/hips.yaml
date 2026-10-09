@@ -140,14 +140,16 @@
     - dumbbell
     - barbell
     - bench
+    - bodyweight
   equipment_setups:
     - [dumbbell, bench]
     - [barbell, bench]
+    - [bodyweight, bench]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
     - unilateral
-  resistance_profile: Free-weight profile, long stance.
+  resistance_profile: Free-weight profile, long stance. Bodyweight with the rear foot on a bench is the entry version and needs no weights at all.
   stability_demand: high
   skill_demand: medium
   setup_time: medium
@@ -173,6 +175,7 @@
     - "Pushing hard off the rear foot: offloads the front leg and wastes the single-leg stimulus."
   programming_notes:
     - Start each set with the weaker leg and match its reps on the stronger side, so a side-to-side gap shrinks rather than grows.
+    - "Bodyweight version: the same long-stance, forward-leaning split squat with the hands on the hips; add dumbbells once bodyweight reps are easy."
   alternatives: []
   complements:
     - A bilateral squat or hinge.
@@ -243,6 +246,68 @@
   video_title: "How to: Cable Kickback (Glute Max) | Form Tutorial for Bigger Glutes"
   video_status: verified
   video_verified_on: "2026-08-28"
+  video_verification_method: metadata
+- id: cable-pull-through
+  name: Cable Pull-Through
+  summary: A hip hinge facing away from a low cable, pulling a rope through the legs by driving the hips forward to stand tall.
+  why_this_exists: The glute hinges in the library load the spine and grip through a bar or dumbbells. The pull-through trains the same hip extension with the cable pulling from behind at the hips, so the glutes can be worked through a hinge with little lower-back load and very little to learn.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus maximus
+  secondary_targets:
+    - hamstrings
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip hinge
+    - load pulls from behind
+  equipment:
+    - cable
+    - rope attachment
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+  resistance_profile: The cable pulls backward through the legs, so the load is greatest when the hips are bent and stays on through the lockout.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A glute hinge is wanted without loading the spine or grip heavily.
+    - Learning the hip hinge before Romanian deadlifts.
+  less_suitable_when:
+    - Heavy, progressively loaded hip extension is the goal — the cable stack and balance limit the load well below a Romanian deadlift or hip thrust.
+  mirror_effect: Tends to show up, over time and alongside heavier glute work, as fuller glutes from the side — a supporting stimulus rather than a main driver.
+  advantages: []
+  limitations:
+    - The load is limited by the cable stack and by how much can be held without being pulled backward.
+    - It's easy to turn into a squat by bending the knees too much, which shifts work to the quads.
+  technique_cues:
+    - Set the cable at the lowest point with a rope, face away from the stack, and hold the rope between the legs with the feet a little wider than hips.
+    - Walk forward until the weight lifts, then push the hips back with soft knees until the torso leans well forward and the rope passes between the thighs.
+    - Drive the hips forward to stand tall, squeezing the glutes at the top.
+    - Keep the back flat throughout and let the hips, not the arms, move the rope.
+  common_mistakes:
+    - "Squatting down instead of hinging: the knees bend too much and the quads take over from the glutes."
+    - "Leaning back at the top: arches the lower back instead of finishing with the hips."
+    - "Pulling the rope with the arms: the arms take load the hips are meant to move."
+  programming_notes:
+    - "A band anchored low behind you trains the same hinge at home; it gets heavier toward the top instead of staying constant."
+  alternatives: []
+  complements:
+    - Glute work in the shortened position, such as hip thrusts or glute bridges.
+  overlaps_with:
+    - romanian-deadlift (hamstrings module)
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=4oZ_0_bQcOg
+  video_creator: Chris and Eric Martinez
+  video_title: "How to Do Cable Pull Throughs"
+  video_status: verified
+  video_verified_on: "2026-10-09"
   video_verification_method: metadata
 - id: hip-abduction
   name: Hip Abduction

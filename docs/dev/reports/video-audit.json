@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-09T06:16:26.237Z",
-    "total_records": 136,
-    "live": 136,
+    "audited_at": "2026-10-09T07:48:15.812Z",
+    "total_records": 137,
+    "live": 137,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -255,6 +255,19 @@
       "http_result": 200,
       "resolved_title": "Cable overhead lean away triceps extension, rope",
       "resolved_author": "STYRK",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "cable-pull-through",
+      "exercise_name": "Cable Pull-Through",
+      "muscle_group": "hips",
+      "current_video_url": "https://www.youtube.com/watch?v=4oZ_0_bQcOg",
+      "video_id": "4oZ_0_bQcOg",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How to Do Cable Pull Throughs",
+      "resolved_author": "Chris and Eric Martinez",
       "classification": "LIVE",
       "notes": ""
     },

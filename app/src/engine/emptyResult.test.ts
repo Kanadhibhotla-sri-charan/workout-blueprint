@@ -22,7 +22,9 @@ const LONG_HEAD = { bodyRegion: 'arms', physiqueTarget: 'triceps-long-head' };
 
 describe('equipment-blocked empty result', () => {
   it('names the selection and lists the existing exercises a different setup would unlock, with their own equipment', () => {
-    const result = empty({ ...LONG_HEAD, equipmentAvailable: ['band'] });
+    // (A band alone used to be the example here; the band overhead
+    // extension answers it since Exercise Expansion Batch 3.)
+    const result = empty({ ...LONG_HEAD, equipmentAvailable: ['pull-up bar'] });
     expect(result.kind).toBe('equipment');
     expect(result.bodyweightGap).toBe(false);
     expect(result.subject).toBe('Triceps — Long-Head Emphasis');
@@ -31,7 +33,7 @@ describe('equipment-blocked empty result', () => {
     );
     expect(result.unlocks).toEqual([
       { exerciseId: 'cable-overhead-extension-leaning-forward', exerciseName: 'Cable Overhead Extension (Leaning Forward)', equipment: 'cable' },
-      { exerciseId: 'overhead-triceps-extension', exerciseName: 'Overhead Triceps Extension', equipment: 'barbell, ez-bar, or dumbbell' },
+      { exerciseId: 'overhead-triceps-extension', exerciseName: 'Overhead Triceps Extension', equipment: 'barbell, ez-bar, dumbbell, or band' },
     ]);
   });
 
@@ -74,7 +76,7 @@ describe('legitimate bodyweight gap', () => {
     // (Upper traps with a band used to be the example here; the band shrug
     // answers it since Exercise Expansion Batch 2.)
     expect(empty({ ...LONG_HEAD, equipmentAvailable: [] }).bodyweightGap).toBe(true);
-    expect(empty({ ...LONG_HEAD, equipmentAvailable: ['band'] }).bodyweightGap).toBe(false);
+    expect(empty({ ...LONG_HEAD, equipmentAvailable: ['pull-up bar'] }).bodyweightGap).toBe(false);
   });
 
   it('is not claimed when a bodyweight exercise exists but the limits exclude it', () => {

@@ -544,14 +544,16 @@
   equipment:
     - dumbbell
     - machine
+    - band
   equipment_setups:
     - [dumbbell]
     - [machine]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
-  resistance_profile: Free-weight or fixed-path machine, depending on equipment.
+  resistance_profile: Free-weight or fixed-path machine, depending on equipment. A band held in front at shoulder height and pulled apart gets heavier as the arms open, so it is hardest at the end of the fly.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -567,7 +569,8 @@
     - Elbow bend tends to creep in as the weight gets heavier, sliding the exercise toward a row and away from the isolated stimulus that's the point of this record.
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes:
+    - "Band version: hold a band in front at shoulder height with straight arms and pull it apart until the hands are level with the shoulders, leading with the backs of the hands. A narrower grip on the band adds resistance."
   alternatives: []
   complements:
     - Horizontal pulling and side-delt work.

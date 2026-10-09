@@ -88,13 +88,18 @@
     - knee bent
   equipment:
     - machine
+    - dumbbell
+    - bench
+  equipment_setups:
+    - [machine]
+    - [dumbbell, bench]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - stable-compound
     - low-fatigue
-  resistance_profile: Fixed-path machine.
+  resistance_profile: Fixed-path machine. Seated on a bench with dumbbells resting on the lower thighs is the free-weight equivalent — the same bent-knee position, with the load capped by what can be balanced on the knees.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -117,7 +122,8 @@
     - "Bouncing out of the stretch: the Achilles tendon's rebound does the work instead of the soleus."
     - "Half reps in the middle of the range: skips both the stretch and the top squeeze."
     - "Pushing the pad up with your hands or hips: the calves skip the start of each rep, which is the hardest part."
-  programming_notes: []
+  programming_notes:
+    - "Dumbbell version: sit on the end of a bench with the balls of the feet on a plate or step and a dumbbell on each lower thigh, just above the knee. A towel under the dumbbells makes heavier loads more comfortable."
   alternatives: []
   complements:
     - A straight-knee raise.

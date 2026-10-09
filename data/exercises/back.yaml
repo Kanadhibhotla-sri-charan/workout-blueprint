@@ -776,12 +776,16 @@
     - shoulder extension
   equipment:
     - cable
+    - band
+  equipment_setups:
+    - [cable]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - low-fatigue
-  resistance_profile: Constant cable tension.
+  resistance_profile: Constant cable tension. A band anchored overhead (for example looped over a pull-up bar) gets lighter as the hands approach the thighs, so it is hardest near the start, in the stretched position.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -804,7 +808,8 @@
     - "Bending the elbows to push the bar down: it turns into a triceps pushdown."
     - "Shrugging the shoulders up: shifts the stimulus away from the lats."
     - "Rocking the torso to move the weight: the hips and body sway start the movement instead of the lats."
-  programming_notes: []
+  programming_notes:
+    - "Band version: loop a band over a pull-up bar or a high door anchor, step back and pull the ends down to the thighs with straight arms. Stepping further back adds resistance."
   alternatives: []
   complements:
     - A vertical or horizontal pull.

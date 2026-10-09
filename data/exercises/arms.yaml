@@ -309,12 +309,16 @@
     - neutral grip
   equipment:
     - dumbbell
+    - band
+  equipment_setups:
+    - [dumbbell]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - low-setup
-  resistance_profile: Free-weight profile, neutral grip.
+  resistance_profile: Free-weight profile, neutral grip. A band stood on gets heavier toward the top of the curl.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -336,7 +340,8 @@
     - "Swinging to move heavier dumbbells: the hips, not the elbow flexors, lift the weight."
     - "Rotating the palms up during the curl: removes the neutral grip that shifts work to the brachialis and brachioradialis."
     - "Elbows drifting forward at the top: the shoulders take part of the load."
-  programming_notes: []
+  programming_notes:
+    - "Band version: stand on the middle of a band and curl the ends with a neutral (palms-facing) grip, elbows pinned at the sides. A wider stance adds resistance."
   alternatives: []
   complements:
     - A supinated curl.
@@ -502,7 +507,8 @@
     - Requires a cable station and the right attachment, which is a real setup dependency a barbell or dumbbells don't have.
   technique_cues: []
   common_mistakes: []
-  programming_notes: []
+  programming_notes:
+    - "Bayesian variation: stand facing away from a low pulley and curl with the working arm angled behind the body. The biceps start the rep fully stretched and the cable keeps tension there, which a dumbbell incline curl loses at the bottom."
   alternatives: []
   complements:
     - A free-weight curl with a different resistance profile.
@@ -829,16 +835,18 @@
     - barbell
     - ez-bar
     - dumbbell
+    - band
   equipment_setups:
     - [barbell]
     - [ez-bar]
     - [dumbbell]
+    - [band]
   exercise_type: isolation
   laterality: bilateral
   coverage_categories:
     - isolation
     - lengthened-position-emphasis
-  resistance_profile: Free-weight profile; barbell or EZ-bar allows the heaviest load on a fixed path, dumbbells allow independent arms.
+  resistance_profile: Free-weight profile; barbell or EZ-bar allows the heaviest load on a fixed path, dumbbells allow independent arms. A band anchored under the back foot in a split stance gets heavier as the arms straighten overhead, so it loads the top of the extension more than the stretched bottom.
   stability_demand: medium
   skill_demand: medium
   setup_time: medium
@@ -861,7 +869,8 @@
     - "Elbows flaring wide: reduces triceps tension and loads the elbow."
     - "Arching the lower back to get the weight overhead: brace the core, or sit with back support."
     - "Adding load faster than the elbows tolerate: elbow pain usually starts at the bottom of the stretch."
-  programming_notes: []
+  programming_notes:
+    - "Band version: stand in a split stance with the band under the back foot, hold the ends behind the head and extend overhead. Step further from the anchor or shorten the band to add resistance."
   alternatives: []
   complements:
     - A pressing movement or a pushdown.
