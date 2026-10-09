@@ -496,6 +496,10 @@
     - shoulders on the floor
   equipment:
     - bodyweight
+    - barbell
+  equipment_setups:
+    - [bodyweight]
+    - [barbell]
   exercise_type: compound
   laterality: bilateral
   coverage_categories:
@@ -503,7 +507,7 @@
     - low-setup
     - low-fatigue
     - equipment-limited-substitute
-  resistance_profile: Bodyweight, hardest at the top with the hips fully extended. A pause at the top, a single-leg version, or a dumbbell or plate on the hips adds difficulty without changing the movement.
+  resistance_profile: Bodyweight, hardest at the top with the hips fully extended. A pause at the top, a single-leg version, a dumbbell or plate on the hips, or a barbell across the hips adds difficulty without changing the movement.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -531,6 +535,7 @@
     - "Dropping straight back down: skips the controlled lowering, which is half of each rep's glute work."
   programming_notes:
     - "Progress in this order before loading: a pause at the top, then single-leg bridges, then a dumbbell or plate on the hips. Move to a hip thrust once a bench is available and those stop being challenging."
+    - "The barbell version is the same movement with a padded bar rolled over the hips: it allows far more load than a dumbbell, but the shoulders stay on the floor, so the range is still shorter than a barbell hip thrust's."
   alternatives: []
   complements:
     - Glute work in the lengthened, hip-bent position, such as Romanian deadlifts or long-stance split squats.
@@ -543,6 +548,74 @@
   video_title: How To Do A Glute Bridge (4 EASY TIPS)
   video_status: verified
   video_verified_on: "2026-10-02"
+  video_verification_method: metadata
+- id: single-leg-hip-thrust
+  name: Single-Leg Hip Thrust
+  summary: A hip thrust on one leg with the upper back on a bench, the bodyweight progression that keeps the glute bridge's shortened-position stimulus challenging once two legs become easy.
+  why_this_exists: The glute bridge stops being challenging quickly, and the loaded hip thrust needs a barbell and a padded setup. Working one leg at a time puts roughly twice the load on each glute with nothing but a bench, so home and low-setup lifters can keep progressing direct glute work.
+  body_regions:
+    - hips
+  primary_targets:
+    - gluteus maximus
+  secondary_targets:
+    - hamstrings
+    - gluteus medius
+  physique_targets:
+    - gluteus-maximus
+  movement_patterns:
+    - hip extension
+    - shortened range (hip fully extended)
+    - single leg, upper back on a bench
+  equipment:
+    - bodyweight
+    - bench
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - shortened-position-emphasis
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: Bodyweight on one leg, hardest at the top with the hip fully extended. The range is longer than the floor bridge's because the upper back is raised on a bench, so the hip starts from more bend.
+  stability_demand: medium
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The two-leg glute bridge has become easy and no barbell or hip-thrust setup is available.
+    - A low-fatigue glute finisher is wanted that also shows up left-right differences.
+  less_suitable_when:
+    - A heavy, progressively loaded glute stimulus is the goal and a barbell hip thrust is available.
+  mirror_effect: Tends to show up, over time and alongside other glute work, as fuller glutes from the side — the same shortened-position stimulus as the hip thrust, at bodyweight loads.
+  advantages: []
+  limitations:
+    - Loading beyond bodyweight is awkward on one leg; once bodyweight reps are easy, a loaded two-leg hip thrust is the next step.
+    - Balance and keeping the pelvis level limit the set before the glute does for some lifters, especially early on.
+    - Each side is trained separately, which doubles the time per set.
+  technique_cues:
+    - Sit with the lower edge of your shoulder blades on the bench, the working foot flat and roughly under the knee, and the other leg lifted.
+    - Keep the ribs down and the chin tucked so the hip moves rather than the lower back.
+    - Drive through the heel of the working leg until hip, knee and shoulder line up, and hold the top for a second.
+    - Keep the pelvis level from side to side throughout the rep, then lower under control until the hip is just above the floor.
+  common_mistakes:
+    - "Arching the lower back at the top: the spine extends instead of the hip, and the glute does less of the work."
+    - "Letting the free-leg side of the pelvis drop: the rep turns into a twist and the working glute unloads."
+    - "Working foot too far forward: the hamstrings take over, often cramping before the glute has done much."
+  programming_notes:
+    - "Progress from the two-leg glute bridge: add a pause at the top, then move to this, then add a load on the working hip or switch to a barbell hip thrust when one is available. Start each set with the weaker side and match its reps on the stronger side."
+  alternatives: []
+  complements:
+    - Glute work in the lengthened, hip-bent position, such as Romanian deadlifts or single-leg Romanian deadlifts.
+  overlaps_with:
+    - glute-bridge
+    - hip-thrust
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=GoqoWSAiOsA
+  video_creator: ashleybordenfitness
+  video_title: "Single leg hip thrust: shoulders on bench"
+  video_status: verified
+  video_verified_on: "2026-10-08"
   video_verification_method: metadata
 - id: copenhagen-plank
   name: Copenhagen Plank (Adduction)
