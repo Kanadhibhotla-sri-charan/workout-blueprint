@@ -99,3 +99,28 @@ Unmodified engine; same 69-entry × 6-context × 4-tolerance × 7-goal space as 
 | Playwright | 3 / 3 |
 | Video audit (oEmbed) | 138 / 138 LIVE |
 | Fresh clone of the batch commit (before pushing) | validate PASS; `npm test` 298/298; lint 0; build OK; Playwright 3/3 |
+
+## Release
+
+| | Result |
+|---|---|
+| Commit pushed to `main` | `b85d1dd` |
+| GitHub Pages deploy | Success |
+| CI on `main` | Success |
+| Production smoke test | 6 / 6 |
+
+**Production smoke test details:**
+- Explore shows 138 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+- Detail pages load for the seated band row, single-leg RDL and cable fly.
+
+**Decide on the live site:**
+
+| Request | Answer |
+|---|---|
+| Back thickness, band + pull-up bar | Seated band row |
+| Hamstrings, band + pull-up bar | Single-leg Romanian deadlift |
+| Back thickness, limited equipment, dumbbell + bench + band | Seated band row |
+| Glute max, band + pull-up bar | Still the glute bridge |
+| Lat width, low fatigue, band + pull-up bar | Still the straight-arm pulldown |
+| Biceps, build base, full equipment | Still the barbell / EZ-bar curl |
