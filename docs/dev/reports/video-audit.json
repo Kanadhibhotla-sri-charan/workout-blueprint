@@ -1,8 +1,8 @@
 {
   "summary": {
-    "audited_at": "2026-10-09T07:48:15.812Z",
-    "total_records": 137,
-    "live": 137,
+    "audited_at": "2026-10-09T08:31:21.743Z",
+    "total_records": 138,
+    "live": 138,
     "restricted": 0,
     "dead_or_unavailable": 0,
     "malformed": 0,
@@ -1360,6 +1360,19 @@
       "http_result": 200,
       "resolved_title": "How to Do a Russian Twist | Ab Workout",
       "resolved_author": "Howcast",
+      "classification": "LIVE",
+      "notes": ""
+    },
+    {
+      "exercise_id": "seated-band-row",
+      "exercise_name": "Seated Band Row",
+      "muscle_group": "back",
+      "current_video_url": "https://www.youtube.com/watch?v=TBNt2DBvkl4",
+      "video_id": "TBNt2DBvkl4",
+      "current_video_status": "verified",
+      "http_result": 200,
+      "resolved_title": "How To: Resistance Band Seated Row",
+      "resolved_author": "Live Lean TV Daily Exercises",
       "classification": "LIVE",
       "notes": ""
     },

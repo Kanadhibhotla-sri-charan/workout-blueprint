@@ -534,6 +534,72 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+- id: seated-band-row
+  name: Seated Band Row
+  summary: A horizontal pull sitting on the floor with a band looped around the feet, the no-anchor way to train back thickness with only a band.
+  why_this_exists: Every row in the library needs a cable, machine, barbell or dumbbells and a bench. Sitting with legs extended and a band around the feet gives a horizontal pull with nothing to anchor to, so back thickness can be trained with only a band.
+  body_regions:
+    - back
+  primary_targets:
+    - mid-back
+    - rhomboids
+  secondary_targets:
+    - lats
+    - elbow flexors
+  physique_targets:
+    - back-thickness
+  aesthetic_characteristics:
+    - horizontal-pull
+  movement_patterns:
+    - horizontal pull
+    - band looped around the feet
+  equipment:
+    - band
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  resistance_profile: The band gets heavier as it stretches, so the row is hardest at the end of the pull with the elbows back and lightest with the arms extended.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Back thickness needs direct work and only a band is available.
+    - A low-fatigue row is wanted for extra back volume at home or while travelling.
+  less_suitable_when:
+    - A heavy, progressively loaded row is available — band tension is light at the start of each rep and hard to increase in small steps.
+  mirror_effect: Tends to show up, over time and alongside heavier rowing, as more density through the mid-back viewed from the side — a supporting stimulus at band loads.
+  advantages: []
+  limitations:
+    - Tension is lowest at the start of the pull, where the band is slack, so the stretched position is barely loaded.
+    - Progression comes in band-sized jumps or by shortening the band, which is less precise than adding plates.
+  technique_cues:
+    - Sit on the floor with legs extended and knees slightly bent, and loop the middle of the band around the soles of both feet.
+    - Hold the ends with arms straight, sitting tall with the chest up.
+    - Pull the hands toward the lower ribs, driving the elbows back and squeezing the shoulder blades together.
+    - Return slowly until the arms are straight without letting the torso fold forward.
+  common_mistakes:
+    - "Leaning back to finish the pull: the torso does the work and the mid-back barely shortens."
+    - "Shrugging the shoulders up as you pull: the upper traps take over from the mid-back."
+    - "Letting the band snap the arms forward: loses the controlled return, which is half of each rep's work."
+  programming_notes:
+    - "Shorten the band by wrapping it once more around the feet, or switch to a heavier band, once the top of the rep range is easy."
+  alternatives: []
+  complements:
+    - A vertical pull such as a chin-up or a band straight-arm pulldown.
+  overlaps_with:
+    - seated-cable-row
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=TBNt2DBvkl4
+  video_creator: Live Lean TV Daily Exercises
+  video_title: "How To: Resistance Band Seated Row"
+  video_status: verified
+  video_verified_on: "2026-10-09"
+  video_verification_method: metadata
 - id: t-bar-row
   name: T-Bar Row
   summary: A free-standing row with a fixed, close, mostly neutral grip and a heavy, mechanical-tension-driven stimulus.

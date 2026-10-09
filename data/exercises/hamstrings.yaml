@@ -384,13 +384,17 @@
     - moderate knee bend
   equipment:
     - dumbbell
+    - band
+  equipment_setups:
+    - [dumbbell]
+    - [band]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
     - unilateral
     - lengthened-position-emphasis
     - skill-coordination
-  resistance_profile: One free weight, usually held opposite the standing leg; hardest at the bottom stretch. A kettlebell works the same way.
+  resistance_profile: One free weight, usually held opposite the standing leg; hardest at the bottom stretch. A kettlebell works the same way. A band stood on under the standing foot gets heavier as the hips straighten, so it loads the top of the hinge more than the stretched bottom.
   stability_demand: high
   skill_demand: medium
   setup_time: low
@@ -420,6 +424,7 @@
     - "Rushing reps to stay balanced: speed replaces control and cuts short the lowering phase, where most of the hamstring work happens."
   programming_notes:
     - Lightly hold a fixed support (a rack or wall) with the free hand until balance stops ending sets, so the hamstrings rather than balance set the limit. Start each set with the weaker side.
+    - "Band version: stand on the middle of a band with the working foot and hold both ends, then hinge on that leg. A shorter grip on the band adds resistance."
   alternatives: []
   complements:
     - Knee-flexion hamstring work such as seated or lying leg curls, which load the hamstrings at the knee rather than the hip.
