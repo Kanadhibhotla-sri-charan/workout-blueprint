@@ -108,3 +108,28 @@ The remaining 176 are merit-based (structural ranking).
 | Playwright | 3 / 3 |
 | Video audit (oEmbed) | 139 / 139 LIVE |
 | Fresh clone of the batch commit (before pushing) | validate PASS; `npm test` 298/298; lint 0; build OK; Playwright 3/3 |
+
+## Release
+
+| | Result |
+|---|---|
+| Commit pushed to `main` | `105d16c` |
+| GitHub Pages deploy | Success |
+| CI on `main` | Success |
+| Production smoke test | 5 / 5 |
+
+**Production smoke test details:**
+- Explore shows 139 exercises.
+- Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+- The shoulder tap and glute bridge detail pages load.
+
+**Decide on the live site:**
+
+| Request | Answer |
+|---|---|
+| Core anti-rotation, build base, nothing selected | Plank shoulder tap |
+| Core anti-rotation, limited equipment | Plank shoulder tap |
+| Core anti-rotation, build base, full equipment | Still the Pallof press |
+| Obliques, nothing selected | Still the side plank |
+| Abs, nothing selected | Still the plank |
+| Hamstrings, nothing selected | Still the documented bodyweight-gap message |
