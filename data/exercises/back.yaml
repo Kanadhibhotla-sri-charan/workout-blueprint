@@ -362,7 +362,7 @@
   video_verification_method: metadata
 - id: barbell-bent-over-row-pronated
   name: Barbell Bent-Over Row (Pronated Grip)
-  summary: The reference free-weight horizontal pull, the heaviest, most mechanical-tension-driven back-thickness stimulus available.
+  summary: The reference free-weight horizontal pull and one of the most heavily loadable back-thickness exercises.
   why_this_exists: The reference free-weight horizontal pull, loadable with small increments and useful when a user wants one row that also demands trunk and hip control. The overhand grip is the default most people mean by "barbell row," and it flares the elbows wider than an underhand grip, biasing the upper back and rear delts somewhat more.
   body_regions:
     - back
@@ -392,16 +392,23 @@
   setup_time: medium
   fatigue_cost: high
   best_used_when:
-    - The heaviest, most mechanical-tension-driven back-thickness stimulus available is the goal, with the hinge itself adding a secondary training demand on the spinal erectors.
+    - 'A heavily loaded back-thickness stimulus is the goal, with the hinge itself adding a secondary training demand on the spinal erectors.'
   less_suitable_when:
     - Lower-back fatigue from other work already limits how much can safely be loaded, capping the mechanical-tension ceiling this movement can deliver.
-  mirror_effect: Same thickness-building visible direction as any row — mass and density through the mid-back viewed from the side — and, being the heaviest loadable row option, often the biggest single contributor to that thickness.
+  mirror_effect: 'Same thickness-building visible direction as any row — mass and density through the mid-back viewed from the side — and, as one of the most heavily loadable rows, often a major contributor to that thickness.'
   advantages: []
   limitations:
     - The bent-over hinge position places real demand on the lower back, which can become the limiting factor before the target back muscles are.
     - Technical demand is high — maintaining a neutral spine under load while pulling takes real practice, and poor form here carries real injury risk.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand with the feet about hip width apart, grip the bar overhand just outside the knees, and hinge at the hips with soft knees until the torso is well inclined, with the back flat.'
+    - 'Let the bar hang at arm''s length below the shoulders, then brace the trunk before each rep.'
+    - 'Pull the bar toward the lower ribs, driving the elbows back and out, until it touches or nearly touches the body.'
+    - 'Lower under control to straight arms while keeping the torso angle fixed.'
+  common_mistakes:
+    - 'The torso rising with each rep: the row turns into a shrug-and-lean, and the back muscles move less of the weight.'
+    - 'Rounding the lower back under load: the main injury risk on this lift, and the reason the record rates its skill demand high.'
+    - 'Jerking the bar up with the hips: momentum moves the weight instead of the back muscles.'
   programming_notes:
     - "Pendlay row variation: the torso is close to parallel with the floor and each rep starts from the bar resting on the floor, so every rep begins without momentum. It trades some time under tension for a stricter start."
   alternatives: []
@@ -413,7 +420,7 @@
     - chest-supported-row
     - single-arm-dumbbell-row
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Eg8DJz6kW68
   video_creator: The Fitting Rooms Personal Training Gym
   video_title: How to do the Bent Over Row with a barbell (pronated grip)

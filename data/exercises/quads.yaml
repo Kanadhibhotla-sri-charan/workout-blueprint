@@ -320,13 +320,20 @@
     - A quad-biased mechanical-tension stimulus is wanted pushed close to failure, without a spotter and without the balance demand of a free squat competing for effort.
   less_suitable_when:
     - The machine's fixed path doesn't suit the individual, which can blunt the tension felt regardless of how heavy the sled is loaded.
-  mirror_effect: Similar front-of-thigh mass direction to a back squat, but more isolated toward the quads specifically, with less glute involvement than a free- weight squat.
+  mirror_effect: Similar front-of-thigh mass direction to a back squat, but more isolated toward the quads specifically, with less glute involvement than a free-weight squat.
   advantages: []
   limitations:
     - The fixed pad and shoulder-harness position doesn't accommodate every body size or limb-length ratio well, and a poor fit can create discomfort or awkward loading before the quads are the limiter.
     - Availability is a real constraint — this specific machine isn't as universal in gyms as a barbell squat rack or a leg press.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the shoulders under the pads with the back flat against the backrest, and place the feet about shoulder width apart in the middle of the platform.'
+    - 'Release the safety handles and lower under control by bending the knees, letting them travel forward over the toes while the back stays on the pad.'
+    - 'Go as deep as the hips and lower back stay against the pad, then drive up through the whole foot.'
+    - 'Stop just short of locking the knees out at the top, and re-engage the safety handles before stepping out.'
+  common_mistakes:
+    - 'The lower back peeling off the pad at the bottom: the spine rounds under load, which is the main injury risk on this machine.'
+    - 'Heels lifting off the platform: the load shifts onto the toes and the front of the knee.'
+    - 'Bouncing out of the bottom: the rebound skips the hardest part of the rep and jars the knees.'
   programming_notes:
     - "Pendulum squat variation: a pendulum squat machine moves the body through an arc instead of a straight track, keeping the torso upright and allowing deep knee bend. It fills the same role as the hack squat where one is available."
   alternatives: []
@@ -337,7 +344,7 @@
     - leg-press
     - smith-machine-squat
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=0tn5K9NlCfo
   video_creator: Bodybuilding.com
   video_title: "Hack Squat | Exercise Guide"
@@ -696,14 +703,21 @@
   best_used_when:
     - A higher-rep, pump-and-conditioning-oriented per-leg stimulus with athletic carryover is wanted, rather than a controlled mechanical-tension set.
   less_suitable_when:
-    - Balance and coordination limit the load before the legs are meaningfully fatigued, capping how much of the intended stimulus the set can deliver — a static or reverse lunge removes that limiter.
-  mirror_effect: Same per-leg quad direction as other lunges, but the continuous, higher-rep nature of this version tends to contribute more to an overall leaner, more conditioned look than to raw mass, compared to a heavier, lower-rep compound.
+    - Balance and coordination limit the load before the legs are meaningfully fatigued, capping how much of the intended stimulus the set can deliver — a static or reverse lunge reduces that limiter.
+  mirror_effect: Same per-leg quad direction as other lunges. It is usually trained for higher reps as a conditioning-style set, so it tends to support quad development rather than be the heaviest quad loading in a programme.
   advantages: []
   limitations:
     - The continuous, alternating-leg demand makes balance and coordination the limiting factor for many lifters well before the quads are meaningfully fatigued.
     - Space requirements (a clear walking lane) make it harder to fit into a typical gym session than a stationary lunge or squat variation.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand tall holding the load (dumbbells at the sides, a barbell on the upper back, a sandbag on one shoulder, or hands on the hips), with a clear lane ahead.'
+    - 'Take a long step forward and lower straight down until the back knee nearly touches the floor, keeping the torso upright.'
+    - 'Push through the whole front foot to rise, bringing the back foot through into the next step.'
+    - 'Keep the feet about hip width apart side to side on every step, alternating legs through the set.'
+  common_mistakes:
+    - 'Steps too short: the knees end up cramped and the torso tips forward to stay balanced.'
+    - 'Stepping along one narrow line, as on a tightrope: balance fails and the hips twist, ending the set before the legs are worked.'
+    - 'Rushing the steps to stay balanced: momentum carries the body forward and the controlled lowering gets skipped, cutting the quad work in each rep.'
   programming_notes:
     - "Bodyweight version: walk the lunges with the hands on the hips. It needs only floor space for several steps; add weight once the stepping pattern is steady."
   alternatives: []
@@ -713,7 +727,7 @@
     - static-lunge
     - reverse-lunge
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=L8fvypPrzzs
   video_creator: CrossFit
   video_title: The Walking Lunge
@@ -829,8 +843,15 @@
   limitations:
     - A single dumbbell or kettlebell caps the achievable load well below what a barbell allows, so this stops being a strong mechanical-tension stimulus for an intermediate or advanced lifter.
     - Grip and the front-loaded core-bracing demand often become the limiting factor before the legs are genuinely fatigued, especially at the top of the weight range this setup allows.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Hold one dumbbell vertically by its top end, or a kettlebell by the horns, close against the chest with the elbows pointing down.'
+    - 'Stand with the feet about shoulder width apart and the toes turned slightly out.'
+    - 'Sit down between the heels, keeping the chest up and the weight against the chest, until the elbows come close to the inside of the knees or as deep as the back stays flat.'
+    - 'Drive up through the whole foot to standing, keeping the knees tracking in line with the toes.'
+  common_mistakes:
+    - 'Letting the weight drift away from the chest: the torso tips forward and the lower back takes over the bracing.'
+    - 'Knees caving inward on the way up: shifts the load away from the quads and stresses the knee.'
+    - 'Heels lifting at the bottom: the load moves onto the toes and the squat loses balance.'
   programming_notes:
     - "Heel-elevated variation: stand with the heels on a small plate or wedge. The knees can then travel further forward while the torso stays upright, which helps when ankle mobility limits depth and makes the squat more knee-dominant."
   alternatives: []
@@ -841,7 +862,7 @@
     - front-squat
     - dumbbell-squat-sides
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=MeIiIdhvXT4
   video_creator: ScottHermanFitness
   video_title: "How To: Goblet Squat"

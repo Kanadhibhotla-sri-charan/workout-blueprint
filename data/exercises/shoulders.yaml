@@ -39,8 +39,15 @@
     - Shoulder mobility limits are common and can cap how heavy or how deep this can safely be loaded, well before the delts and triceps reach their true strength ceiling.
     - The trunk-bracing and stability demand is high, so a weak core or poor bracing technique can become the limiting factor before the shoulders are.
     - Load progression is comparatively slow next to other big lifts, since the muscles moving the bar are smaller than a squat or deadlift's.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Start with the bar resting on the front of the shoulders, hands just outside shoulder width and forearms vertical (or dumbbells at shoulder height, palms forward), with the feet about hip width apart.'
+    - 'Brace the abs and squeeze the glutes so the lower back doesn''t arch as you press.'
+    - 'Press straight up, moving the head back slightly to let the bar pass the face, then bring the head through once the bar clears it.'
+    - 'Finish with the arms locked overhead and the weight over the middle of the foot, then lower under control to the shoulders.'
+  common_mistakes:
+    - 'Leaning back and arching the lower back to finish the press: shifts the load onto the lower back and turns it into a steep incline press.'
+    - 'Pressing the bar forward around the face instead of straight up: the weight ends up in front of the body, making it heavier on the shoulders and harder to lock out.'
+    - 'Dipping the knees and driving with the legs without meaning to: it becomes a push press, and the shoulders do less of the work.'
   programming_notes:
     - "Arnold press variation (dumbbells): start with the palms facing you at shoulder height and rotate them to face forward as you press. The rotation adds little beyond a standard dumbbell press, so treat it as a preference, not a separate stimulus."
     - "Landmine press variation: pressing the end of an anchored barbell up and forward on one arm gives an angled path that many lifters tolerate when pressing straight overhead is uncomfortable. It needs a landmine and a barbell, and the arc makes it easier at the top."
@@ -52,7 +59,7 @@
     - cable-shoulder-press
     - seated-machine-shoulder-press
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=2yjwXTZQDDI
   video_creator: ScottHermanFitness
   video_title: "How To: Standing Straight-Bar Military / Overhead Press"

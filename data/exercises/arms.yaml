@@ -228,11 +228,17 @@
   limitations:
     - The bottom of the range can feel uncomfortable at the elbow for some lifters, especially near full extension under load, which can limit how much of the strict range gets used.
     - Requires a preacher bench, which isn't available in every gym or home setup the way a standing curl is.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit at the preacher bench with the armpits snug against the top of the pad and the backs of the upper arms flat on it, holding the bar or dumbbells with an underhand grip.'
+    - 'Curl the weight up by bending only at the elbows, keeping the upper arms pressed into the pad.'
+    - 'Stop when the forearms are close to vertical, before the load comes off at the top.'
+    - 'Lower under control until the elbows are almost straight, without letting the weight drop the last part of the way.'
+  common_mistakes:
+    - 'Dropping quickly into the bottom: jolts the elbow at near-full extension, where the load is heaviest and elbow discomfort is most common.'
+    - 'Lifting the elbows or shoulders off the pad to finish the rep: brings back the swing the pad exists to remove.'
+    - 'Sitting too low, so only the forearms rest on the pad: the upper arm isn''t fixed and the curl loses its strictness.'
   programming_notes:
-    - "EMG shows preacher curls produce a short, bottom-loaded activation window (high activation early in the concentric phase, dropping off as the elbow flexes) compared to the sustained activation of an incline curl through the whole range. Source: Oliveira et al. (2009, Journal of Sports Science and Medicine 8(1):24-29, PMC3737788), dumbbell preacher curl at 40% of maximal voluntary contraction: biceps activation was highest in the first third of the concentric range, near full extension, and fell toward the top, while incline and standing curls stayed high through the range. The paper does not report the pad angle. EMG shows activation, not growth, and the one direct hypertrophy comparison found no short-head advantage (see evidence_notes)."
-    - "Spider curl variation: lying chest-down on an incline bench with the arms hanging straight down gives the same arm-in-front position without a preacher pad. Tension is highest near the top instead of at the bottom."
+    - "Spider curl variation: lying chest-down on an incline bench with the arms hanging straight down gives the same arm-in-front position without a preacher pad. Resistance is lowest with the arms straight and peaks partway up, instead of near straight arms as on the preacher pad."
   alternatives: []
   complements:
     - A lengthened-position curl such as an incline curl.
@@ -241,7 +247,7 @@
   evidence_notes:
     - "Same shoulder-position question as the incline curl's long-head claim, applied in reverse: shoulder flexion (preacher) vs. shoulder extension (incline). The closest direct hypertrophy comparison, Attarieh et al. (2025, European Journal of Sport Science, PMC11906226), trained a preacher cable curl against a Bayesian cable curl and found similar growth at every measured biceps and brachialis site, with no regional difference, so a short-head or base-width bias is not confirmed by hypertrophy data. Evidence quality: low."
     - "Where the free-weight preacher curl is hardest: Oliveira et al. (2009, Journal of Sports Science and Medicine 8(1):24-29, PMC3737788) measured the highest biceps EMG near full extension, falling toward the top. Nunes et al. (2020, International Journal of Environmental Research and Public Health 17(16):5859, PMC7460162) describe barbell preacher curls as applying greater torque with the elbows extended and cable preacher curls with the elbows flexed (a qualitative description, not a measured torque curve); in their 10-week trial biceps thickness grew similarly in both (8% vs 7%). Neither paper reports the pad angle. Evidence quality: moderate for where the free-weight version is hardest; no support for a growth advantage either way."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=fIWP-FRFNU0
   video_creator: KAGED
   video_title: "Preacher Curls | How To Perform It Correctly"
@@ -483,7 +489,7 @@
   video_verification_method: metadata
 - id: cable-curl
   name: Cable Curl
-  summary: A curl with constant biceps tension through the whole range, including the top, for a pump-oriented stimulus.
+  summary: A curl that keeps biceps tension through the whole range, including the top, for a pump-oriented stimulus.
   why_this_exists: A cable keeps tension on the biceps through the whole range, including the top, where a dumbbell or barbell curl loses load.
   body_regions:
     - arms
@@ -506,7 +512,7 @@
   coverage_categories:
     - isolation
   selection_role: secondary
-  resistance_profile: Constant tension through the whole range. A band, standing on it or anchored low, also keeps the top loaded but gets heavier toward the top instead of staying constant.
+  resistance_profile: The cable pulls with the same force through the whole range, so the top stays loaded where a free weight goes slack. A band, standing on it or anchored low, also keeps the top loaded but gets heavier toward the top instead of staying the same.
   stability_demand: low
   skill_demand: low
   setup_time: medium
@@ -520,8 +526,15 @@
   limitations:
     - Absolute load is capped below what a barbell allows, so this isn't a strong option for building maximal biceps strength.
     - The cable version requires a cable station and the right attachment, which is a real setup dependency a barbell or dumbbells don't have. The band version needs no station, but its resistance is light at the bottom of the curl and hard to load precisely.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Attach a straight or EZ bar to a low pulley, stand a short step back facing the stack, and hold the bar with an underhand, shoulder-width grip and straight arms.'
+    - 'Pin the elbows at the sides and curl the bar up by bending only at the elbows.'
+    - 'Finish with the bar near the shoulders, without letting the elbows drift forward.'
+    - 'Lower under control until the arms are fully straight, keeping the weight stack off its rest between reps.'
+  common_mistakes:
+    - 'Leaning back to pull the weight up: the torso and momentum do the work instead of the biceps.'
+    - 'Elbows drifting forward at the top: the front of the shoulder takes over and the biceps unload.'
+    - 'Letting the stack touch down between reps: the tension drops off at the bottom, removing the cable''s main advantage.'
   programming_notes:
     - "Bayesian variation: stand facing away from a low pulley and curl with the working arm angled behind the body. The biceps start the rep fully stretched and the cable keeps tension there, which a dumbbell incline curl loses at the bottom."
     - "Band version: stand on the middle of a band (or anchor it low) and curl the handles up with the elbows pinned at your sides. It is the home stand-in for a loaded curl; with dumbbells or a cable available, use those."
@@ -532,7 +545,7 @@
     - barbell-ez-bar-curl
     - dumbbell-curl
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=NFzTWp2qpiE
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: How To Do Cable Bicep Curls - Full Video Tutorial and Step-by-Step Guide

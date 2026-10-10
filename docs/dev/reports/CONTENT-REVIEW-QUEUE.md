@@ -1,6 +1,6 @@
 # Content Review Queue
 
-> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. Batch 2a: all 11 Tier 1–2 records signed off by the owner and `reviewed` (`CONTENT-REVIEW-BATCH-2A-SIGNOFF-LOG.md`); videos still `metadata` (not watched). Batch 2b: push-up-chest, static-lunge, rear-delt-fly, dumbbell-curl signed off and `reviewed` (`CONTENT-REVIEW-BATCH-2B-SIGNOFF-LOG.md`). Library: 67 `reviewed` / 73 `needs-review`. The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
+> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. Batch 2a: all 11 Tier 1–2 records signed off by the owner and `reviewed` (`CONTENT-REVIEW-BATCH-2A-SIGNOFF-LOG.md`); videos still `metadata` (not watched). Batch 2b: push-up-chest, static-lunge, rear-delt-fly, dumbbell-curl signed off and `reviewed` (`CONTENT-REVIEW-BATCH-2B-SIGNOFF-LOG.md`). Batch 2c: the remaining seven Tier 3 records signed off and `reviewed` (`CONTENT-REVIEW-BATCH-2C-SIGNOFF-LOG.md`); Tier 3 complete. Library: 74 `reviewed` / 66 `needs-review` (Tier 4). The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
 
 _Single maintained queue for the content-review phase. Procedure: `CONTENT-REVIEW-CHECKLIST.md`. Evidence: `EVIDENCE-LEDGER.md`. Open findings: `CONTENT-REVIEW-P3-FINDINGS.md`._
 
