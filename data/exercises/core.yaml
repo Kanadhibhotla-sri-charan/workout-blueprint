@@ -710,9 +710,16 @@
   advantages: []
   limitations:
     - Momentum is an easy substitute for controlled rotation once the load or pace increases, which trades the growth stimulus for speed without feeling like a technique failure.
-    - The seated, often feet-elevated setup can aggravate lower-back or hip- flexor sensitivity in some lifters, independent of the rotational work itself.
-  technique_cues: []
-  common_mistakes: []
+    - The seated, often feet-elevated setup can aggravate lower-back or hip-flexor sensitivity in some lifters, independent of the rotational work itself.
+  technique_cues:
+    - 'Sit on the floor with the knees bent and heels down, holding the weight in both hands close to the chest.'
+    - 'Lean the torso back to about 45 degrees with a straight back, bracing the abs to hold that position.'
+    - 'Rotate the torso to one side, turning the shoulders and the weight together until the weight is beside the hip, then rotate through to the other side.'
+    - 'Keep the pace slow enough to stop and reverse at each end, and lift the feet off the floor only once that''s easy.'
+  common_mistakes:
+    - 'Swinging the weight with the arms while the torso stays still: the arms move the load and the obliques barely rotate the trunk.'
+    - 'Rounding the lower back as the lean gets tiring: the back takes the strain of holding the position instead of the abs.'
+    - 'Rushing from side to side: momentum carries the weight through the ends of the range, where the rotation is hardest.'
   programming_notes: []
   alternatives: []
   complements:
@@ -720,7 +727,7 @@
   overlaps_with:
     - cable-woodchop
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=wkD8rjkodUI
   video_creator: Howcast
   video_title: "How to Do a Russian Twist | Ab Workout"

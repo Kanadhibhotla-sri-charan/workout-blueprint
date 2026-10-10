@@ -174,8 +174,15 @@
   limitations:
     - The fixed foot platform limits how far the ankle can move into the bottom stretch compared to a dedicated calf raise, capping the range of motion.
     - Tacked onto the end of a leg-press set, technique quality tends to degrade as leg fatigue from the main lift bleeds into the calf work.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit in the leg press and place only the balls of the feet on the lower edge of the platform, about hip width apart, with the heels hanging free.'
+    - 'Straighten the legs without locking the knees, and keep that knee angle the same for the whole set.'
+    - 'Let the platform push the toes back toward you, lowering the heels into a full stretch.'
+    - 'Push through the balls of the feet to point the toes as far as possible, pause briefly, then lower under control.'
+  common_mistakes:
+    - 'Bending and straightening the knees during the set: the leg press does the work instead of the calves, and the emphasis keeps changing.'
+    - 'Letting the feet creep down the platform edge: the balls of the feet can slip off under load, dropping the sled toward the body.'
+    - 'Bouncing out of the bottom stretch: the rebound skips the stretched part of the rep and jolts the Achilles.'
   programming_notes: []
   alternatives: []
   complements:
@@ -184,7 +191,7 @@
     - standing-calf-raise
     - seated-calf-raise
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=OMUvfMZOcSA
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Calf Raise On Leg Press Machine"

@@ -648,8 +648,15 @@
   limitations:
     - The step-back motion demands a level of balance and hip control that can be a genuine barrier for less-coordinated or deconditioned lifters starting out.
     - It's easy to let the step-back distance vary between reps, which changes the knee angle and muddies consistent progressive overload.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand tall with the feet about hip width apart, holding the load: dumbbells at the sides, a barbell on the upper back, or a sandbag on one shoulder.'
+    - 'Take a long step straight back with one foot, landing on the ball of that foot, and lower until the back knee nearly touches the floor.'
+    - 'Keep most of the weight on the front foot, with the torso upright and the front knee tracking in line with the toes.'
+    - 'Push through the whole front foot to bring the back foot forward to standing, then repeat on the same side or alternate.'
+  common_mistakes:
+    - 'Stepping straight behind the front foot, as if on a tightrope: the stance gets unstable and the hips twist.'
+    - 'Pushing off mainly with the back leg to stand up: the work shifts away from the front leg''s quads.'
+    - 'Changing the step length from rep to rep: the knee angle keeps changing, so progress is hard to compare.'
   programming_notes: []
   alternatives: []
   complements:
@@ -658,7 +665,7 @@
     - static-lunge
     - walking-lunge
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=MpfeGnBFEo8
   video_creator: IronmasterPro
   video_title: Dumbbell Reverse Lunge Tutorial
