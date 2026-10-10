@@ -730,7 +730,12 @@
     - unilateral knee-dominant
     - stepping up onto a box
   equipment:
+    - bodyweight
     - bench
+    - dumbbell
+  equipment_setups:
+    - [bodyweight, bench]
+    - [dumbbell, bench]
   exercise_type: compound
   laterality: unilateral
   coverage_categories:
@@ -770,7 +775,7 @@
     - static-lunge
     - reverse-lunge
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=0I76rnOH_1k
   video_creator: FITBODY with Julie Lohre
   video_title: "How to Do Bench Step Ups for Quads & Glutes"
@@ -1030,7 +1035,7 @@
     - lengthened-position-emphasis
     - skill-coordination
   resistance_profile: Bodyweight, hardest at the bottom with the knees fully bent and the body leaning furthest back. Holding a weight to the chest adds load once bodyweight is easy.
-  stability_demand: high
+  stability_demand: medium
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
@@ -1063,7 +1068,7 @@
     - reverse-nordic-curl
     - leg-extension
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=H9f3dt6fJ8A
   video_creator: MDFit
   video_title: "How to Do the Sissy Squat (Complete Beginner Tutorial)"

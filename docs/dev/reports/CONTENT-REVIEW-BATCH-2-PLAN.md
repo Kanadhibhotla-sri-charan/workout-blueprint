@@ -14,6 +14,8 @@ None substitutes for another:
 
 **A record is never promoted because its diff was checked by AI.** AI pre-review notes only speed up the human review.
 
+> **Status:** Tiers 1–2 signed off and `reviewed` in Batch 2a (`CONTENT-REVIEW-BATCH-2A-SIGNOFF-LOG.md`). Videos remain `metadata`.
+
 ## Tier 1: the nine new exercises (human review + watched video)
 
 Ordered by exposure. All have coaching counts; none has evidence notes (no empirical claims); all videos are metadata-checked only.

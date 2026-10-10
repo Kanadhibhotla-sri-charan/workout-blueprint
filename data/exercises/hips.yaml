@@ -307,7 +307,7 @@
   overlaps_with:
     - romanian-deadlift (hamstrings module)
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=4oZ_0_bQcOg
   video_creator: Chris and Eric Martinez
   video_title: "How to Do Cable Pull Throughs"
@@ -610,8 +610,9 @@
     - Glute work in the lengthened, hip-bent position, such as Romanian deadlifts or long-stance split squats.
   overlaps_with:
     - hip-thrust
+    - hamstring-bridge (hamstrings module)
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=cvKZXsz-QIA
   video_creator: Redefining Strength
   video_title: How To Do A Glute Bridge (4 EASY TIPS)
@@ -679,7 +680,7 @@
     - glute-bridge
     - hip-thrust
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=GoqoWSAiOsA
   video_creator: ashleybordenfitness
   video_title: "Single leg hip thrust: shoulders on bench"

@@ -1,6 +1,6 @@
 # Content Review Batch 2a — Human Sign-Off Log
 
-_Decisions by the project owner, one record at a time. AI pre-review: `CONTENT-REVIEW-BATCH-2A.md`. **Nothing here is applied until the final approval at the end of the batch.**_
+_Decisions by the project owner, one record at a time. AI pre-review: `CONTENT-REVIEW-BATCH-2A.md`. **Final approval given ("go"); applied as recorded below.**_
 
 | # | Record | Decision | Correction | Rationale | Video watched? |
 |---|---|---|---|---|---|
@@ -15,3 +15,25 @@ _Decisions by the project owner, one record at a time. AI pre-review: `CONTENT-R
 | 9 | single-leg-hip-thrust | **Approve as-is** | None | No issues flagged; watch-out, cues and mistakes consistent; shortened tag consistent with its own text (unverified, position-tag audit closed) | No (stays `metadata`) |
 | 10 | glute-bridge | **Approve as-is** (incl. Batch 2a fix) | None further. Duplicate range limitation already resolved in `1674be7` and approved here; gains the hamstring-bridge overlap from decision 2 | Main watch-out now covers load only; range point kept once in limitation 2 | No (stays `metadata`) |
 | 11 | single-leg-romanian-deadlift | **Approve as-is** | None | Summary and cues describe the main (dumbbell) version; the band version has its own note. Summary and cues do not appear in Decide answers (measured: 0 changes) | No (stays `metadata`) |
+
+## Applied
+
+| Item | What changed |
+|---|---|
+| Human content review | All 11 records → `review_status: reviewed` (owner sign-off above). Library: **63 `reviewed` / 77 `needs-review`** |
+| sissy-squat | `stability_demand: medium` |
+| glute-bridge | `overlaps_with` gains `hamstring-bridge (hamstrings module)` |
+| step-up | Written as `equipment: [bodyweight, bench, dumbbell]`, `equipment_setups: [[bodyweight, bench], [dumbbell, bench]]`. The measured form `[[bench], [bench, dumbbell]]` failed validation (a setup may not contain another setup), so the library's existing pattern (Bulgarian split squat) is used instead. Same eligibility, same measured effect |
+| Video verification | Unchanged: all 11 stay `metadata`. No footage was watched |
+| Citation verification | Not applicable: no evidence notes on these records |
+
+**Measured** (all 39,672 scenarios vs `1674be7`; two byte-identical runs):
+- 0 Best Fit changes, 0 empty / filled changes.
+- 24 alternative-list changes. Step-up replaces the walking lunge as the alternative when replacing a static or reverse lunge under a setup limit.
+- Text-only changes:
+  - 476 sissy-squat programming explanations;
+  - 430 step-up watch-out equipment lines ("Requires one of: bodyweight + bench or dumbbell + bench");
+  - 464 empty quads answers whose equipment hint now lists the step-up's two setups;
+  - 24 list answers.
+- Glute-bridge overlap: 0 Decide changes (detail page only).
+

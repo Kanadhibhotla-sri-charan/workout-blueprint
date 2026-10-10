@@ -1,6 +1,6 @@
 # Content Review Queue
 
-> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. Batch 2a pre-review done (`CONTENT-REVIEW-BATCH-2A.md`); Tiers 1–2 await human sign-off and watched video. The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
+> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. Batch 2a: all 11 Tier 1–2 records signed off by the owner and `reviewed` (`CONTENT-REVIEW-BATCH-2A-SIGNOFF-LOG.md`); videos still `metadata` (not watched). Library: 63 `reviewed` / 77 `needs-review`. The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
 
 _Single maintained queue for the content-review phase. Procedure: `CONTENT-REVIEW-CHECKLIST.md`. Evidence: `EVIDENCE-LEDGER.md`. Open findings: `CONTENT-REVIEW-P3-FINDINGS.md`._
 
