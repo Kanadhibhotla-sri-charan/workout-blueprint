@@ -373,7 +373,8 @@
   overlaps_with:
     - romanian-deadlift
     - back-extension-45-spinal-dominant (back module) — same equipment, spinal-extension-dominant execution, erector bias instead.
-  evidence_notes: []
+  evidence_notes:
+    - "Unverified. The claim that bending the knees slightly shifts this movement's emphasis onto the hamstrings and glutes has no direct support: the available studies use different movements and give mixed, indirect evidence. Yamamoto et al. (2015, Japanese Journal of Physical Fitness and Sports Medicine 64(3):289–294; abstract checked), using maximal isometric prone hip extension, found higher hamstring EMG at 15° than at 90° of knee flexion and higher gluteus maximus EMG at 90°. Keerasomboon et al. (2020, Journal of Sports Science and Medicine 19:630–636; full text checked), using a kneeling 45° hip extension, found higher biceps femoris long head and semitendinosus EMG at 45° and 90° than at 0° of knee flexion. Andersen et al. (2021, Journal of Sports Science and Medicine 20:181–187; abstract checked) found high hamstring and gluteus maximus EMG in a 45° Roman-chair back extension but did not report knee position. No study tested a slight knee bend on a 45° back-extension bench."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=8Jg5iqTCehg
   video_creator: James Harrison

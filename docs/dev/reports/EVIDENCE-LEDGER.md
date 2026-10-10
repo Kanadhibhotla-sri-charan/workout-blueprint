@@ -60,6 +60,8 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 
 **Unresolved citations are labelled in the note itself** ("citation unresolved: …"). Nothing was guessed or substituted. Open: incline-dumbbell-curl (EMG, formerly "Lehman, 2005-era"); hip-thrust (EMG, formerly "Contreras et al.-era", and its 2-3x figure). Resolved in the P3 preacher review: preacher-curl EMG activation-window note → Oliveira et al. 2009, checked against the PMC full text.
 
+> **Update (evidence verification phase, 2026-10-10):** both open citations are now resolved. See "Evidence verification phase" below: incline-curl EMG → no supporting source, clause removed; hip-thrust EMG → Contreras et al. 2015, figure corrected to ~1.7–2.4×.
+
 ### Not yet re-checked
 
 The remaining sources cited only by `needs-review` records, and any note not listed above. Every `reviewed` status predates this ledger, so it does **not** imply its citations were re-checked, except where a row above says so.
@@ -130,3 +132,37 @@ The **authoritative** status of every remaining position tag after the audit. It
 | preacher-curl | shortened | Contradicted by two verified sources |
 | cable-overhead-extension-leaning-forward | lengthened | Its own text states constant tension |
 | incline-cable-press | lengthened | Its own text states constant tension and emphasises the top |
+
+## Evidence verification phase (2026-10-10, baseline `bc7c41a`)
+
+**Method:** each source was opened and compared with the record's exact claim. The "Access" column states what was actually read; "abstract" means the full text was **not** checked.
+
+### Citations checked
+
+| Source (as now cited) | Access | Claim in the record (before) | Verdict | Record change |
+|---|---|---|---|---|
+| Barnett C, Kippers V, Turner P. J Strength Cond Res 1995;9(4):222–227. *Effects of variation of the bench press exercise on the EMG activity of five shoulder muscles.* 6 trained men, bench **press** at 80%, four trunk inclinations, two hand spacings | Abstract (BISp record) | decline-dumbbell-fly: found "greater lower/sternocostal-region pectoral activation during decline pressing than incline or flat" | **Does not support; contradicts.** The abstract reports the sternocostal head **more** active on a horizontal than a decline bench, and the clavicular head less active on decline. Press, not fly | Note rewritten; claim marked **unsupported** |
+| Rodríguez-Ridao D et al. Int J Environ Res Public Health 2020;17(19):7339, PMC7579505 | Full text (PMC) | decline-dumbbell-fly: same claim as above | **Does not support.** Tested 0°, 15°, 30°, 45°, 60° only; **no decline condition**. Press, not fly. (Its existing ledger row, "sternocostal head more active at 0° than inclines", still matches) | Same note |
+| Oliveira LF et al. J Sports Sci Med 2009;8(1):24–29, PMC3737788 | Full text (PMC) | incline-dumbbell-curl: long-head bias rests partly "on EMG work on shoulder position (citation unresolved, formerly 'Lehman, 2005-era')" | **Does not establish the claim.** Electrodes on the biceps **long head only**; no long- vs short-head comparison. No head-comparison EMG study across shoulder positions was located | Unsupported EMG attribution removed; rests on mechanics + Attarieh 2025; evidence quality **low** (unchanged) |
+| Contreras B, Vigotsky AD, Schoenfeld BJ, Beardsley C, Cronin J. J Appl Biomech 2015;31(6):452–458, doi:10.1123/jab.2014-0301 | Abstract (ECU repository) + Europe PMC metadata; PubMed blocked automated access; full text not read | hip-thrust: "much higher" glute EMG vs back squat, "often-quoted 2-3x figure" (citation unresolved) | **Supports the direction; the figure was overstated.** 13 trained women, estimated 10RM. Hip thrust vs squat, % MVIC: upper GM mean 69.5 vs 29.4 (2.4×), peak 172 vs 84.9 (2.0×); lower GM mean 86.8 vs 45.4 (1.9×), peak 216 vs 130 (1.7×). The authors call for longitudinal studies on hypertrophy | Cited; "2-3x" → "roughly 1.7–2.4×, varying by region and mean vs peak"; hypertrophy caveat and Plotkin 2023 kept |
+
+### Back-extension knee-bend claim (`back-extension-45-hip-dominant`)
+
+| Source | Access | Movement tested | Finding | Bearing on the claim |
+|---|---|---|---|---|
+| Yamamoto Y et al. Jpn J Phys Fitness Sports Med 2015;64(3):289–294, doi:10.7600/jspfsm.64.289 | Abstract (J-STAGE) | Maximal isometric prone hip extension, knee 15° vs 90° | Hamstring EMG higher at 15°; glute max EMG higher at 90° | Indirect; suggests knee bend shifts work toward the glutes, away from the hamstrings |
+| Keerasomboon T, Mineta S, Hirose N. J Sports Sci Med 2020;19:630–636 | Full text (JSSM) | Kneeling 45° hip extension, knee 0°, 45°, 90° | BFl and ST EMG higher at 45° / 90° than 0° (the abstract and results conflict in places; glute direction not stated in the text) | Indirect; points the other way for the hamstrings |
+| Andersen V et al. J Sports Sci Med 2021;20:181–187, doi:10.52082/jssm.2021.181 | Abstract (JSSM) | 45° Roman-chair back extension vs RDL vs seated machine | Roman chair: high hamstring and glute EMG; knee position not reported | Does not address knee angle |
+
+**Verdict:** unverified; mixed, indirect evidence. A D1 evidence note was added. The hip / spinal sister-record split, tags, ranking and packages are unchanged.
+
+### Evidence-quality changes in this phase
+
+| Record | Before | After |
+|---|---|---|
+| decline-dumbbell-fly (lower-chest EMG claim) | "moderate" (EMG only) | **unsupported** (the lower-pec target, summary and mirror text are unchanged; they are in the product-decision queue) |
+| incline-dumbbell-curl | low | low (unchanged; unsupported EMG clause removed) |
+| hip-thrust | caveated; EMG citation unresolved | caveated; EMG cited (Contreras 2015), figure corrected |
+| back-extension-45-hip-dominant | no evidence note | **unverified** (mixed, indirect) |
+
+**Open citations after this phase:** none of the three targets remain open.
