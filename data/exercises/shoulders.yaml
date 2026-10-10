@@ -391,7 +391,7 @@
     - dumbbell-lateral-raise
     - machine-lateral-raise
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=PPrzBWZDOhA
   video_creator: Testosterone Nation
   video_title: Two Ways to Do Cable Lateral Raises
@@ -682,7 +682,6 @@
   overlaps_with:
     - rear-delt-fly
     - face-pull
-    - seated-cable-row (back module)
     - rear-delt-row
   evidence_notes: []
   review_status: needs-review

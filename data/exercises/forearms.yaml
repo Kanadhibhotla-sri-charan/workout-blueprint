@@ -54,10 +54,9 @@
   alternatives: []
   complements:
     - Wrist extension work, which balances the other side of the forearm.
-  overlaps_with:
-    - reverse-wrist-curl
+  overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=r5-nYE_1CXo
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A STANDING BARBELL WRIST CURL | Exercise Demonstration Video and Guide"
@@ -121,10 +120,9 @@
   complements:
     - Wrist curls and grip work.
   overlaps_with:
-    - wrist-curl
     - reverse-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=krZ6pWGZ8xo
   video_creator: LIVESTRONG
   video_title: How to Do Dumbbell Reverse Wrist Curls
@@ -197,7 +195,7 @@
     - cable-reverse-curl
     - zottman-curl (arms module)
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=EoYWMB856cA
   video_creator: LivestrongWoman
   video_title: Dumbbell Reverse Curl

@@ -108,6 +108,8 @@
   overlaps_with:
     - barbell-ez-bar-curl
     - cable-curl
+    - zottman-curl
+    - incline-dumbbell-curl
   evidence_notes: []
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=ykJmrZ5v0Oo
@@ -165,7 +167,8 @@
   alternatives: []
   complements:
     - A shortened-position curl such as a preacher curl.
-  overlaps_with: []
+  overlaps_with:
+    - dumbbell-curl
   evidence_notes:
     - "EMG evidence supports a long-head bias in the shoulder-extended position: incline curls maintain higher, more sustained biceps brachii activation through the range than shoulder-flexed variants (Lehman, 2005-era EMG shoulder-position studies). The clearest direct hypertrophy evidence for this shoulder-position effect is Kassiano et al. (2024, PMC11906226), which compared a shoulder- flexed (preacher) vs. shoulder-extended (Bayesian cable curl) position for regional hypertrophy. Evidence quality: moderate — real EMG and one hypertrophy trial, not yet a large body of literature."
     - "Separate from the shoulder-position/long-head evidence above, this record's \"strongest stretch-mediated stimulus\" framing also draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training, with both beating shortened-position training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM in trained lifters — so \"strongest\" should be read as a well-supported direction, not a settled magnitude. This is a general training-science principle, not a finding from a study that used this specific exercise."
@@ -349,7 +352,7 @@
     - cable-hammer-curl-rope
     - cross-body-hammer-curl
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=zC3nLlEvin4
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Hammer Curl"
@@ -683,6 +686,7 @@
   overlaps_with:
     - barbell-ez-bar-curl
     - reverse-curl (forearms module) — the eccentric half of this movement.
+    - dumbbell-curl
   evidence_notes: []
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=D7bMA4WEKMI
@@ -750,7 +754,7 @@
     - dip-triceps-biased
   evidence_notes:
     - "The \"lateral- and medial-head-biased\" claim carried by this record (and by dip-triceps-biased, cable-pushdown, machine-triceps- extension, and triceps-kickback below) is corrected here: it isn't supported by the same kind of evidence as the long-head claim. The long head crosses the shoulder joint, so its length — and therefore its bias — changes with shoulder position, which is what Maeo et al. (2023, see overhead-triceps-extension) actually measured. The lateral and medial heads only cross the elbow, so shoulder position does not change their length the same way, and no equivalent study was found showing these two heads are differentially biased by grip, shoulder-extension, or non-overhead elbow-extension movements specifically. The safest claim these movements support is that they train the triceps as a whole, with the long head under less stretch than an overhead position provides — not a specific lateral/medial split."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=nEF0bv2FW94
   video_creator: ScottHermanFitness
   video_title: "How To: Close-Grip Barbell Bench Press"
@@ -886,7 +890,7 @@
   evidence_notes:
     - "Strong evidence, and stronger than the biceps head-bias claims above: Maeo et al. (2023, European Journal of Sport Science) used MRI to measure triceps long-head growth after 12 weeks of overhead extension training vs. a non-overhead (arm-at-side) extension, at matched volume. The overhead group gained roughly 28.5% long-head cross- sectional area at the site closest to the shoulder vs. roughly 19.6% for the non-overhead group, with the gap most pronounced proximally, consistent with the long head being stretched at the shoulder in the overhead position. This is direct MRI-measured hypertrophy data, not just EMG, which is why this claim is stated more confidently than the biceps incline/preacher claims. It only establishes the long head's bias, not any lateral- or medial-head effect — see the notes on close-grip-bench-press, dip-triceps-biased, cable-pushdown, machine-triceps-extension, and triceps-kickback below for why those heads' bias claims are treated differently."
     - This record's "strongest stretch-mediated growth stimulus" framing is also consistent with the broader stretch-mediated hypertrophy literature — see incline-dumbbell-curl's evidence_notes above for the general citations (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025). The Maeo et al. (2023) finding above is the stronger, exercise-specific evidence; this is additional general-principle grounding, not a separate direct finding.
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=O7e8j8K3cJo
   video_creator: PrazeNation
   video_title: "Overhead Dumbbell Tricep Extension | Proper Form & Triceps Exercise Demo"

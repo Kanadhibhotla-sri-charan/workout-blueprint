@@ -253,7 +253,8 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 - **Required:** no — `[]` is valid and common (a genuinely standalone record with nothing that overlaps it).
 - **Format — this is the actual ID-reference field:** same-file references are bare `id` strings (e.g. `chin-up-supinated`); cross-file references are quoted strings with a parenthetical module note (e.g. `"hammer-curl (arms module)"`), per the convention established and enforced in Phase 1's reconciliation pass. 233 of 233 non-empty entries in the current dataset are ID-like; this is a field where 100% resolvability is enforced by `validate-data`.
 - **Meaning:** substantially similar ground already covered — distinct from `alternatives` (same role, used *instead*) and `complements` (different stimulus, used *alongside*). See the relationship-field definitions above.
-- **Decision-making impact:** yes — this is the field a future "here's what else covers similar ground" or gap-detection feature reads.
+- **Symmetric:** two exercises overlap when **either** record lists the other (`exercisesOverlap` in `app/src/utils/relationships.ts`). Listing the pair on only one side is enough.
+- **Decision-making impact:** yes. A record with a non-empty list gets the "avoid stacking" watch-out note in Decide. The audited relationship set is pinned in `app/src/data/audited-overlaps.json`, so every edit is deliberate.
 - **Required for `reviewed`:** conditionally — required to resolve cleanly when non-empty; empty is fine.
 
 ### `evidence_notes`
@@ -268,7 +269,12 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 - **Required:** yes
 - **Allowed values (closed enum):** `draft` | `needs-review` | `reviewed`
 - **Governance:** see [Task C](../architecture/PHASE-2-SCHEMA-AND-DATA-GOVERNANCE.md) and the Phase 2 Review Promotion Gate in `docs/dev/` for what promotion to `reviewed` actually requires.
-- **Decision-making impact:** yes, definitionally — only `reviewed` records may be consumed by future recommendation logic.
+- **Meaning:** a content-quality marker, not a recommendation gate (Next Quality Gate, `docs/dev/reports/NEXT-QUALITY-GATE-ASSESSMENT.md` §2).
+  - `reviewed`: the record passed the [Review Promotion Gate](../dev/reports/REVIEW-PROMOTION-GATE.md) and nothing has been edited since without re-review.
+  - `needs-review`: eligible for every recommendation, but some content (coaching, an edited field, a new record) has not been reviewed yet.
+  - `draft`: **the only exclusion gate.** Decide never recommends a `draft` record, as Best Fit, alternative or complement. Use it to withdraw a record whose content is found to be wrong.
+- **Decision-making impact:** yes, through `draft` only. `needs-review` and `reviewed` records rank identically.
+- **Build packages:** every package exercise must be `reviewed`, apart from an explicit, shrinking pending-diff-review list pinned in `app/src/data/coaching.test.ts`. Coaching-count checks apply to all package exercises.
 - **Required for `reviewed`:** N/A (this is the field itself)
 
 ### Video reference fields (Phase 6, revised Phase 7)
@@ -325,7 +331,7 @@ One external YouTube execution reference per exercise. The app renders it as a p
 | `complements` | list | yes | free text by design | yes | yes |
 | `overlaps_with` | list | no | IDs, must resolve | yes | conditional |
 | `evidence_notes` | list | conditional | — | yes | conditional |
-| `review_status` | string | yes | closed (3) | yes (definitional) | N/A |
+| `review_status` | string | yes | closed (3) | yes (`draft` excluded) | N/A |
 | `video_status` | string | yes | closed (3) | no | no |
 | `video_link` | string \| null | when `verified` | YouTube URL, unique | no | no |
 | `video_creator`, `video_title` | string \| null | no | — | no | no |

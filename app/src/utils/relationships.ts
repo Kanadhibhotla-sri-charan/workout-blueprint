@@ -28,3 +28,23 @@ export function parseRelationshipEntry(entry: string): RelationshipRef | null {
   }
   return null;
 }
+
+// The exercise ids a record's `overlaps_with` field references, parsed with
+// the same rules as above (bare id, or "id (module) — note"). Entries that
+// aren't id references are ignored.
+export function overlapIds(exercise: { overlaps_with: string[] | null }): string[] {
+  return (exercise.overlaps_with ?? [])
+    .map((entry) => parseRelationshipEntry(entry)?.id)
+    .filter((id): id is string => id != null);
+}
+
+// `overlaps_with` is a symmetric relationship ("covers substantially similar
+// ground"), but the data often records it on only one of the two records.
+// Two exercises overlap when either one lists the other (Next Quality Gate,
+// docs/dev/reports/NEXT-QUALITY-GATE-ASSESSMENT.md §3).
+export function exercisesOverlap(
+  a: { id: string; overlaps_with: string[] | null },
+  b: { id: string; overlaps_with: string[] | null }
+): boolean {
+  return overlapIds(a).includes(b.id) || overlapIds(b).includes(a.id);
+}

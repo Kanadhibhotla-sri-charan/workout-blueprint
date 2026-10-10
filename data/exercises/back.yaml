@@ -351,8 +351,9 @@
     - seated-cable-row
     - barbell-bent-over-row-pronated
     - t-bar-row
+    - single-arm-dumbbell-row
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=bmWA2yO9Aa0
   video_creator: Testosterone Nation
   video_title: Chest-Supported Row Machine
@@ -410,6 +411,7 @@
     - reverse-grip-barbell-row
     - t-bar-row
     - chest-supported-row
+    - single-arm-dumbbell-row
   evidence_notes: []
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Eg8DJz6kW68
@@ -818,7 +820,9 @@
   alternatives: []
   complements:
     - A bilateral row or vertical pull.
-  overlaps_with: []
+  overlaps_with:
+    - barbell-bent-over-row-pronated
+    - chest-supported-row
   evidence_notes: []
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=pYcpY20QaE8
@@ -883,7 +887,7 @@
     - dumbbell-pullover-lat-biased
   evidence_notes:
     - "No study specific to the straight-arm pulldown or lat length was located. The \"stretch-mediated\" framing draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so this is a well-supported general direction, not a settled, exercise-specific magnitude claim."
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=duHQk2PxNos
   video_creator: Steev
   video_title: "Cable Straight Arm Pulldown - Proper Form & Technique [4K]"
@@ -1005,7 +1009,7 @@
     - Mid- and lower-trap work such as rows or face pulls.
   overlaps_with: []
   evidence_notes: []
-  review_status: reviewed
+  review_status: needs-review
   video_link: https://www.youtube.com/watch?v=X26Ji1j9LWA
   video_creator: The Strength Institute
   video_title: Barbell Shrugs - Tutorial
