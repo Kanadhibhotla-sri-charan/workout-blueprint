@@ -46,3 +46,40 @@ _Base: `main` at `3200319`._
 | P4: untouched `needs-review` | 66 |
 | Evidence | 3 unresolved citations (incline-curl EMG, hip-thrust EMG and 2-3x figure, preacher-curl EMG note); sources cited only by `needs-review` records not yet re-checked |
 | Videos | 140 metadata-checked, 0 watched |
+
+## Corrections applied (owner-approved, P2 content corrections)
+
+| Record | Field | Before | After |
+|---|---|---|---|
+| glute-bridge | `limitations[0]` (Decide watch-out) | Bodyweight alone stops being challenging quickly for trained lifters, and loading it from the floor (a dumbbell or plate on the hips) caps out well below what a barbell hip thrust allows. | Bodyweight alone stops being challenging quickly for trained lifters, and a dumbbell or plate on the hips adds only modest load; even with a barbell, the range is shorter than a barbell hip thrust's because the shoulders stay on the floor. |
+| glute-bridge | `programming_notes[2]` | Hamstring-bias variation: rest the heels on a bench with the knees nearly straight and drive the hips up; the hamstrings take over much of the work from the glutes. One leg at a time makes it harder. | For a hamstring-biased version, see the hamstring bridge. |
+| romanian-deadlift | `best_used_when[0]` | The strongest available stretch-mediated growth stimulus for the hamstrings and glutes together is wanted, in a lengthened position no curl variation reaches. | Heavy hinge work is wanted that trains the hamstrings and glutes together at a long muscle length. |
+
+**The RDL wording:**
+- It drops both unsupported claims: "strongest available", and "no curl variation reaches". The seated leg curl's cited trial trains the hamstrings lengthened in a hip-flexed curl.
+- It asserts no alternative ranking.
+- It stays consistent with the record's evidence note: no RDL-specific study; the stretch-length literature is a direction, not a settled magnitude.
+
+**Status:**
+- glute-bridge and single-leg-romanian-deadlift stay `needs-review`; AI diff verification alone does not qualify them.
+- romanian-deadlift stays `reviewed` (exercise data); its citation status is in `EVIDENCE-LEDGER.md`.
+
+**New P3 findings file:** the preacher-curl tension inconsistency is recorded in `CONTENT-REVIEW-P3-FINDINGS.md`, together with the open target-string and citation items. Target strings are unchanged.
+
+### Measured effect (full scenario space vs `main` `c0da804`; two runs, byte-identical)
+
+| Check | Result |
+|---|---|
+| Best Fit / alternative / complements / answer status | **0 changes** |
+| Explanation and other non-watch-out text | **0 changes** |
+| Watch-out text | **1,382 changes**: every answer whose Best Fit is the glute bridge (its first limitation), and no others |
+| By goal | different stimulus 441, complement 441, replace 192, visual-area 96, limited-equipment 96, low-fatigue 64, build-base 52 |
+| RDL `best_used_when`, glute-bridge note | Detail pages only |
+
+| Gate | Result |
+|---|---|
+| `validate-data` | PASS, 140 |
+| Vitest | 345 / 345 |
+| oxlint | exit 0 |
+| Build | OK |
+| Playwright | 3 / 3 |
