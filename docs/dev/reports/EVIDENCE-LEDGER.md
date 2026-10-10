@@ -16,6 +16,7 @@ Results are recorded exactly as reported by the reviewer. Data changes (`metadat
 | Record | URL | Reviewer | Date watched | A plays | B movement | C setup | D execution | E clarity | F notes / timestamps | Outcome |
 |---|---|---|---|---|---|---|---|---|---|---|
 | cable-rear-delt-builder | https://www.youtube.com/watch?v=ATSjVXoOgVg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "ticks all boxes". The title says "rear delt fly", but the reviewer confirmed the footage matches the recorded movement. No timestamps given | **Pass**; `visual` proposed, pending approval |
+| cable-pull-through | https://www.youtube.com/watch?v=4oZ_0_bQcOg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "cool as well", read as passing all of A–E. Cable version only (band version described in text; kept by earlier owner decision). No timestamps given | **Pass**; `visual` proposed, pending approval |
 
 ## Citations
 
