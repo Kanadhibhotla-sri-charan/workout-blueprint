@@ -9,6 +9,14 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | `metadata`: title / channel checked via oEmbed; footage **not** watched | 140 |
 | `visual`: watched by a person | **0** |
 
+### Video verification batch 1: watch log (human review)
+
+Results are recorded exactly as reported by the reviewer. Data changes (`metadata` → `visual`) are applied only after owner approval, so the counts above stay unchanged until then.
+
+| Record | URL | Reviewer | Date watched | A plays | B movement | C setup | D execution | E clarity | F notes / timestamps | Outcome |
+|---|---|---|---|---|---|---|---|---|---|---|
+| cable-rear-delt-builder | https://www.youtube.com/watch?v=ATSjVXoOgVg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "ticks all boxes". The title says "rear delt fly", but the reviewer confirmed the footage matches the recorded movement. No timestamps given | **Pass**; `visual` proposed, pending approval |
+
 ## Citations
 
 - **Inventory:** 55 evidence notes on 48 records (18 `reviewed`, 30 `needs-review`). All were written before the exercise expansion.
