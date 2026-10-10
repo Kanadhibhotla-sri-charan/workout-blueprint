@@ -69,3 +69,11 @@ Changing a validation rule to allow a mismatch is not proposed.
 **Notes on the table:**
 - "Consistent as stated" means the record's own text matches the definition. It is **not** a source-verified resistance curve. Those rows still need an evidence check before a reviewer confirms them.
 - Already handled: preacher-curl (tag removed, O2).
+
+## Batch 2 (findings for approval: `POSITION-TAG-AUDIT-BATCH-2.md`)
+
+- **Clear contradictions:**
+  - incline-cable-press: proposed tag removal; no profile, package or pin effect.
+  - cable-lateral-raise: contradiction; B1 / B2 decision, package-blocked unless prescriptions are explicitly changed.
+  - flat-dumbbell-fly: internal text contradiction; proposed text-only fix, tag kept.
+- **All other remaining records:** no contradiction found. Tags preserved and uncertainty recorded (consistent as stated, or unverified).
