@@ -154,6 +154,19 @@ Every fact below (types, enum values, actual usage counts) was audited against t
   - **Engine use:** the "build the main training base" goal ranks `heavy-compound` first, and ties fall to the alphabetical id. Tagging a bodyweight variant can therefore change which exercise a full gym is offered (see `docs/dev/reports/PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md`).
   - **Existing tags are unchanged.** That includes the push-up, the pike push-up, the dips, the chin-up and the pull-up.
   - **Status:** this definition documents meaning only and does not change any behaviour. Any ranking change needs its own Build-base analysis first.
+- **`lengthened-position-emphasis` / `shortened-position-emphasis` (semantic definition, position-tag semantics correction):** where the **external resistance peaks within the movement's own range of motion**.
+  - `lengthened-position-emphasis`: the resistance is greatest at or near the stretched end of the working joint's range (for example the bottom of a dumbbell fly).
+  - `shortened-position-emphasis`: the resistance is greatest at or near the contracted end (for example the top of a hip thrust).
+  - **Not what the tags mean:**
+    - a joint position held throughout the set;
+    - the length a two-joint muscle is held at by another joint (such as a flexed or extended shoulder for the biceps, or a flexed hip for the hamstrings).
+    That belongs in `movement_patterns` (for example "shortened shoulder position").
+  - **Evidence:** a tag needs a stated basis for where resistance peaks for the record's own setups: the `resistance_profile`, or a source in `evidence_notes`. If a record has several setups with different curves (for example a band setup), the tag describes the record's primary loaded setup, and the difference is stated in the text.
+  - **Engine use:**
+    - the "visual-area" goal ranks either tag first;
+    - shared tags count in replace (more shared preferred) and complement (fewer shared preferred) ranking;
+    - for isolation records they select the `lengthened-position-isolation` / `shortened-position-isolation` programming profiles (`data/programming/programming-profiles.yaml`), whose definitions use the same "hardest point" meaning.
+  - **Existing tags:** records authored under the older shoulder- or hip-position reading are being re-checked record by record. A tag change is a ranking change and is measured before release. See `docs/dev/reports/POSITION-TAG-SEMANTICS-CORRECTION.md`.
 - **Note:** `isolation` appears both here and as an `exercise_type` value; they're independent fields answering different questions (mechanical role vs. a broader descriptive tag) and this overlap is intentional, not a duplication bug.
 - **Evaluated for restructuring in Phase 2, Task I** — kept as a flat list; see the Task I write-up in the Phase 2 dev log for why.
 - **Decision-making impact:** yes

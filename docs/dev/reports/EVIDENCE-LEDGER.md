@@ -63,3 +63,13 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 ### Not yet re-checked
 
 The remaining sources cited only by `needs-review` records, and any note not listed above. Every `reviewed` status predates this ledger, so it does **not** imply its citations were re-checked, except where a row above says so.
+
+## Position-tag evidence status (position-tag semantics correction)
+
+SCHEMA now defines `lengthened-` / `shortened-position-emphasis` as where the **external resistance peaks** in the movement's range. Status of the tags examined so far:
+
+| Record | Tag | Evidence status |
+|---|---|---|
+| preacher-curl | ~~shortened-position-emphasis~~ (removed, O2) | The two verified sources (Oliveira 2009 EMG; Nunes 2020, qualitative) place the free-weight version's hardest point near full extension, contradicting the tag. No positive tag asserted |
+| preacher-curl-machine | shortened-position-emphasis (kept) | **Unverified.** Neither source tested a machine; the curve depends on the cam. Not refuted |
+| incline-dumbbell-curl | lengthened-position-emphasis (kept, decision pending) | **Unverified under the new definition.** The tag was authored for the extended shoulder (long head lengthened at the shoulder), not for where resistance peaks. Oliveira 2009 measured incline-curl activation rising through the concentric phase, highest in the final third; that is EMG (activation), not resistance, so it neither confirms nor settles the resistance peak. No source on the incline curl's resistance curve has been identified |

@@ -181,7 +181,7 @@
   video_verification_method: metadata
 - id: preacher-curl
   name: Preacher Curl
-  summary: Fixes the upper arm forward on a pad, removing swing for a strict, shortened-position biceps stimulus.
+  summary: Fixes the upper arm forward on a pad, removing swing for a strict biceps curl that, with free weights, is hardest with the elbows near straight; the exact curve varies with the pad angle.
   why_this_exists: Fixes the upper arm forward on a pad, which removes swing. With a barbell, EZ-bar or dumbbells the curl is hardest with the elbows near straight and gets easier toward the top; the exact curve depends on the pad angle.
   body_regions:
     - arms
@@ -207,7 +207,6 @@
   laterality: bilateral
   coverage_categories:
     - isolation
-    - shortened-position-emphasis
   resistance_profile: Free-weight profile; barbell, EZ-bar, or dumbbells all work on the same bench — a grip and independent-arm preference, not a different movement.
   stability_demand: low
   skill_demand: low
