@@ -737,8 +737,8 @@
   video_creator: OriGym
   video_title: "How To Do Cable Rear Delt Fly | Exercise Demo"
   video_status: verified
-  video_verified_on: "2026-08-28"
-  video_verification_method: metadata
+  video_verified_on: "2026-10-10"
+  video_verification_method: visual
 - id: rear-delt-row
   name: Rear Delt Row
   summary: A seated dumbbell row from a dead hang, elbows down and thumbs rotating back and up, driving the rear delts through extension.

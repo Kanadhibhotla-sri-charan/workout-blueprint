@@ -319,8 +319,8 @@
   video_creator: Chris and Eric Martinez
   video_title: "How to Do Cable Pull Throughs"
   video_status: verified
-  video_verified_on: "2026-10-09"
-  video_verification_method: metadata
+  video_verified_on: "2026-10-10"
+  video_verification_method: visual
 - id: hip-abduction
   name: Hip Abduction
   summary: Directly loads the gluteus medius and minimus, which most squats and hinges train only as stabilizers.

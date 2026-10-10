@@ -6,8 +6,8 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 
 | Method | Records |
 |---|---:|
-| `metadata`: title / channel checked via oEmbed; footage **not** watched | 140 |
-| `visual`: watched by a person | **0** |
+| `metadata`: title / channel checked via oEmbed; footage **not** watched | 138 |
+| `visual`: watched by a person | **2** (cable-rear-delt-builder, cable-pull-through; owner review, 2026-10-10) |
 
 ### Video verification batch 1: watch log (human review)
 
@@ -15,8 +15,8 @@ Results are recorded exactly as reported by the reviewer. Data changes (`metadat
 
 | Record | URL | Reviewer | Date watched | A plays | B movement | C setup | D execution | E clarity | F notes / timestamps | Outcome |
 |---|---|---|---|---|---|---|---|---|---|---|
-| cable-rear-delt-builder | https://www.youtube.com/watch?v=ATSjVXoOgVg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "ticks all boxes". The title says "rear delt fly", but the reviewer confirmed the footage matches the recorded movement. No timestamps given | **Pass**; `visual` proposed, pending approval |
-| cable-pull-through | https://www.youtube.com/watch?v=4oZ_0_bQcOg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "cool as well", read as passing all of A–E. Cable version only (band version described in text; kept by earlier owner decision). No timestamps given | **Pass**; `visual` proposed, pending approval |
+| cable-rear-delt-builder | https://www.youtube.com/watch?v=ATSjVXoOgVg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "ticks all boxes". The title says "rear delt fly", but the reviewer confirmed the footage matches the recorded movement. No timestamps given | **Pass**; `visual` **applied** (owner approved) |
+| cable-pull-through | https://www.youtube.com/watch?v=4oZ_0_bQcOg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "cool as well", read as passing all of A–E. Cable version only (band version described in text; kept by earlier owner decision). No timestamps given | **Pass**; `visual` **applied** (owner approved) |
 | upright-row-wide-grip | https://www.youtube.com/watch?v=Xpu0C50pD-U | Project owner | 2026-10-10 (date of report) | not reported | **Unclear** | not reported | not reported | **Unclear** | Reviewer: "the grip is not properly visible as it is shot from the side". The defining detail (grip clearly wider than shoulder width) cannot be confirmed from the footage | **Not verified**; stays `metadata`. Not a confirmed mismatch. A replacement is an option only after a candidate is watched and passes A–E |
 | cable-band-external-rotation | https://www.youtube.com/watch?v=LpNgc6Vx4iY | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "nothing's wrong and everything is fine", but "the video is pretty old and is of 240p". Low resolution noted; the reviewer judged it clear enough. Cable version only (kept by earlier owner decision). No timestamps given | **Pass**; `visual` proposed, pending approval. Low-resolution footage is a candidate for a future higher-quality replacement (optional) |
 
