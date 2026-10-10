@@ -46,14 +46,14 @@ All lack coaching content (0 cues, 0 mistakes) and need diff verification of the
 | 1 | push-up-chest | 1070 | deficit note | 1 |
 | 2 | static-lunge | 324 | bodyweight setup, resistance text, note | 0 |
 | 3 | rear-delt-fly | 243 | band setup, resistance text, note | 1 |
-| 4 | dumbbell-curl | 189 | Zottman / incline overlap additions, notes | 0 |
+| 4 | dumbbell-curl | 189 | concentration-curl note | 0 |
 | 5 | hack-squat | 114 | pendulum note | 0 |
 | 6 | goblet-squat | 84 | heel-elevated note | 0 |
 | 7 | cable-curl | 83 | band setup, secondary role, resistance text, limitation, note | 0 |
 | 8 | overhead-press | 65 | Arnold / landmine notes | 0 |
 | 9 | preacher-curl | 18 | notes; Batch 1 and P3 evidence / text work; target string; tag removed (O2) | 2 |
 | 10 | walking-lunge | 16 | bodyweight setup, resistance text, note | 0 |
-| 11 | barbell-bent-over-row-pronated | 14 | Pendlay note; overlap with single-arm dumbbell row | 0 |
+| 11 | barbell-bent-over-row-pronated | 14 | Pendlay note | 0 |
 
 ## Tier 4: the 66 untouched `needs-review` records, by exposure
 

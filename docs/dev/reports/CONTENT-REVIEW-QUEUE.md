@@ -28,7 +28,7 @@ cable-pull-through, sissy-squat, hamstring-bridge, step-up, plank-shoulder-tap, 
 ## P3: expansion-edited `needs-review` (11)
 push-up-chest, static-lunge, cable-curl, rear-delt-fly, dumbbell-curl, overhead-press, hack-squat, goblet-squat, **preacher-curl**, walking-lunge, barbell-bent-over-row-pronated.
 - These need diff verification plus coaching.
-- **preacher-curl:** the evidence and text work from the P3 preacher review is done (see the P3 findings). It is still `needs-review` for human content review: coaching (no cues or mistakes yet) and the open coverage-tag question.
+- **preacher-curl:** the evidence and text work from the P3 preacher review is done (see the P3 findings). It is still `needs-review` for human content review: coaching (no cues or mistakes yet). The coverage-tag question is closed: tag removed (O2, `0b9381a`).
 - **Coverage tags:** O2 applied (preacher-curl tag removed). **Blocked:** the incline-dumbbell-curl tag removal fails validation, because the `biceps-complete` reps would have to change (8–15 → 10–20); decision returned. All legacy position tags are queued record by record in `POSITION-TAG-REVIEW-QUEUE.md`. preacher-curl-machine (P4) tag is unverified.
 
 ## P4: untouched `needs-review` (66), by exposure
