@@ -150,3 +150,44 @@ The unconstrained case (incline barbell press) is unchanged.
 | oxlint | exit 0 |
 | Production build | OK |
 | Playwright | 3 / 3 |
+
+## Stage 3 — Release
+
+| | Result |
+|---|---|
+| Fresh clone of `5c564f3` (before pushing) | validate PASS; `npm test` 344 / 344; lint 0; build OK; Playwright 3 / 3 |
+| Commits pushed to `main` | `d4e78e2` (Stage 1, content), `5c564f3` (Stage 2, ranking) |
+| CI on `main` | Success |
+| GitHub Pages deploy | Success |
+| Production smoke test | 6 / 6 Playwright tests |
+
+**Production smoke test details:**
+- Explore shows 140 exercises; Explore → detail → Decide → Build works; Decide URL reload and back/forward work.
+- The single-arm dumbbell row, hip abduction and cable curl detail pages load.
+
+**Pinned cases on the live site** (exact Best Fit match):
+
+| # | Request | Context | Best Fit |
+|---|---|---|---|
+| 1 | Replace chest-supported row | Gym | Seated Cable Row |
+| 2 | Replace incline barbell press | Gym, low skill | Incline Machine Press |
+| 3 | Replace back squat | Home | Goblet Squat |
+| 4 | Replace preacher curl | Home | Dumbbell Curl |
+| 5 | Replace machine reverse fly | Gym | Rear-Delt Fly |
+| 6 | Replace skull crusher | Gym | Overhead Triceps Extension |
+| 7 | Replace incline dumbbell curl | Gym | Dumbbell Curl |
+| 8 | Complement ab-wheel rollout | Home | Reverse Crunch |
+| 9 | Complement hip thrust | Band + pull-up bar | Single-Leg Romanian Deadlift (different stimulus: same) |
+
+**Default picks unchanged on the live site:**
+- Biceps, build base, any equipment → Barbell or EZ-Bar Curl.
+- Biceps, build base, home → Dumbbell Curl.
+
+## Unresolved, by design
+
+- **Still for the reviewer:**
+  - 13 ambiguous `overlaps_with` pairs;
+  - the 16 package exercises on the pending-diff-review list;
+  - the rest of the P1–P4 queue.
+- **Ties still decided by `id`:** 5,994, none with a strong signal. The next lever is curation of `overlaps_with`, not another rule.
+- **Watch-out wording:** the "avoid stacking" note still reads only a record's own `overlaps_with`, not the symmetric relationship.
