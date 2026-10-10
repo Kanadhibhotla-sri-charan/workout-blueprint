@@ -38,15 +38,22 @@
   limitations:
     - Without a load number or clear progression marker, it's genuinely hard to tell whether the hold is actually getting more demanding over time or has plateaued.
     - The stimulus is inherently mild — this is a starting point for building tolerance and control, not something that keeps producing meaningful growth once loaded neck work is well tolerated.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit or stand tall with the head in a neutral position, chin level and eyes forward.'
+    - 'Place a palm on the forehead (or use a band around the head, or a partner''s hand) and push the head into it while the hand pushes back equally, so the head doesn''t move.'
+    - 'Build the pressure gradually over a couple of seconds, hold it steadily, then ease off just as gradually.'
+    - 'Repeat against the back of the head and each side, using the same moderate effort in every direction.'
+  common_mistakes:
+    - 'Pushing hard straight away: a sudden jolt of force loads the neck before it''s braced and raises the risk of a strain.'
+    - 'Letting the head tilt or move: the hold turns into an uncontrolled movement under load instead of a steady brace.'
+    - 'Shrugging the shoulders or clenching the jaw: the upper traps and jaw take over the effort, so the neck muscles do less.'
   programming_notes: []
   alternatives: []
   complements:
     - Loaded neck work introduced gradually afterward.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=PSwHo-kcfhc
   video_creator: U.S. Forces Fitness
   video_title: How to - Isometric Neck Exercise (Front and Back)

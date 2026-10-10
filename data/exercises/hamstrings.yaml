@@ -343,8 +343,15 @@
   limitations:
     - The bent-knee, hip-driven technique this record describes is easy to blur into the straighter-leg, spinal-extension-dominant version without deliberate cueing, muddying which muscles actually get trained.
     - Loading options are limited on most equipment — a plate held to the chest or a light barbell across the back is usually the ceiling before stability becomes the limiting factor rather than the target muscles.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the pad so its top edge sits just below the hip crease, letting the hips bend freely, and hook the heels under the rollers with a slight bend in the knees.'
+    - 'Cross the arms over the chest, or hold a plate there, and set the lower back in a neutral position.'
+    - 'Hinge down from the hips until the hamstrings are stretched, keeping the back neutral rather than rounding it.'
+    - 'Drive the hips into the pad to raise the torso until it''s in line with the legs, stopping without arching the lower back past neutral.'
+  common_mistakes:
+    - 'Pad set too high, at the stomach: the hips can''t bend, so the lower back does the moving instead of the hips.'
+    - 'Arching the lower back at the top: turns it into the lower-back version and moves work off the hamstrings and glutes.'
+    - 'Rounding the back to get lower: the range comes from the spine rather than the hips.'
   programming_notes: []
   alternatives: []
   complements:
@@ -353,7 +360,7 @@
     - romanian-deadlift
     - back-extension-45-spinal-dominant (back module) — same equipment, spinal-extension-dominant execution, erector bias instead.
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=8Jg5iqTCehg
   video_creator: James Harrison
   video_title: 45 Degree Hip Extension - Exercise Tutorial

@@ -517,8 +517,15 @@
   limitations:
     - Grip commonly fails well before the trunk musculature does, especially without prior grip training, which can end the set before the intended stimulus is reached.
     - The whole-body fatigue cost is high relative to the trunk-specific stimulus delivered, making it an inefficient choice if trunk growth alone is the goal.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Pick up one dumbbell or kettlebell with a neutral grip and stand tall, the free arm relaxed at the side or held out slightly for balance.'
+    - 'Brace the trunk so the shoulders stay level and the torso leans neither toward nor away from the weight.'
+    - 'Walk with short, controlled steps, keeping the weight hanging still at the side without bumping the leg.'
+    - 'At the end of the distance or time, set the weight down with a flat back, switch hands and repeat on the other side.'
+  common_mistakes:
+    - 'Leaning toward the weight: the trunk gives in to the sideways pull the exercise is meant to resist.'
+    - 'Leaning away from the weight to counterbalance it: the trunk side-bends under load in the other direction instead of staying upright.'
+    - 'Shrugging the loaded shoulder toward the ear: the traps take over and the shoulders stop being level.'
   programming_notes: []
   alternatives: []
   complements:
@@ -526,7 +533,7 @@
   overlaps_with:
     - farmers-carry (forearms module)
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=y-hn_Ha1-RE
   video_creator: Dr. Carl Baird
   video_title: How To Perform The Suitcase Carry
