@@ -716,7 +716,7 @@
 - id: step-up
   name: Step-Up
   summary: A single-leg step onto a box or bench, driving through the front foot to stand on top, trainable with bodyweight or dumbbells.
-  why_this_exists: Single-leg quad work in the library needed weights or a long lunge walk. Stepping onto a bench or sturdy box loads one leg at a time with nothing but bodyweight, with little skill and little soreness, and dumbbells extend it when available.
+  why_this_exists: Most single-leg quad work in the library is a lunge or split squat. Stepping onto a bench or sturdy box loads one leg at a time with nothing but bodyweight, with little skill and little soreness, and dumbbells extend it when available.
   body_regions:
     - quads
   primary_targets:
@@ -1010,7 +1010,7 @@
 - id: sissy-squat
   name: Sissy Squat
   summary: A bodyweight knee-dominant squat where the heels rise, the knees travel far forward and the body leans back in one line from knee to shoulder.
-  why_this_exists: Bodyweight quad options are scarce once lunges and split squats need weights. The sissy squat loads the quads through deep knee bend with the hips kept straight, giving a hard quad stimulus with nothing but bodyweight and something to hold for balance.
+  why_this_exists: Most bodyweight quad options in the library are lunges and split squats. The sissy squat loads the quads through deep knee bend with the hips kept straight, giving a hard quad stimulus with nothing but bodyweight and something to hold for balance.
   body_regions:
     - quads
   primary_targets:

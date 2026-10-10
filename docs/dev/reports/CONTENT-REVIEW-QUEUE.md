@@ -1,6 +1,6 @@
 # Content Review Queue
 
-> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
+> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. Batch 2a pre-review done (`CONTENT-REVIEW-BATCH-2A.md`); Tiers 1–2 await human sign-off and watched video. The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
 
 _Single maintained queue for the content-review phase. Procedure: `CONTENT-REVIEW-CHECKLIST.md`. Evidence: `EVIDENCE-LEDGER.md`. Open findings: `CONTENT-REVIEW-P3-FINDINGS.md`._
 
@@ -20,7 +20,7 @@ cable-pull-through, sissy-squat, hamstring-bridge, step-up, plank-shoulder-tap, 
 
 | Record | Open items |
 |---|---|
-| glute-bridge | **Duplicate range limitation.** After the approved first-limitation correction, limitations 1 and 2 both say the range is shorter than a hip thrust's because the shoulders stay on the floor. Limitation 1 is the Decide watch-out (1,382 answers). The reviewer should decide whether to trim limitation 2 (detail page only) |
+| glute-bridge | ~~Duplicate range limitation~~ **Resolved in Batch 2a:** limitation 1 now covers load only; the range point stays once in limitation 2 ("even with a barbell"). 1,382 watch-out text changes, 0 recommendation changes (`CONTENT-REVIEW-BATCH-2A.md`). |
 | single-leg-romanian-deadlift | Coverage tag `lengthened-position-emphasis` fits the dumbbell version only (ranking input); technique cues are dumbbell-specific |
 
 **Position-tag item (`reviewed` record, outside the P tiers):** cable-lateral-raise is contradicted by its own resistance text. Its tag is kept because changing it would alter the shoulders-efficient and shoulders-complete prescriptions (8–15 → 10–20); that needs a separate product decision. See the evidence ledger, consolidated position-tag status.

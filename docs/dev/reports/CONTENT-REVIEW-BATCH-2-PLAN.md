@@ -34,7 +34,7 @@ Ordered by exposure. All have coaching counts; none has evidence notes (no empir
 
 | Record | Exposure | Open items |
 |---|---:|---|
-| glute-bridge | 1382 | AI diff verified; corrections applied. **Duplicate range limitation** (limitations 1 and 2); limitation 1 is the watch-out in 1382 answers |
+| glute-bridge | 1382 | AI diff verified; corrections applied. Duplicate range limitation resolved in Batch 2a (`CONTENT-REVIEW-BATCH-2A.md`) |
 | single-leg-romanian-deadlift | 632 | AI diff verified. Lengthened tag describes the dumbbell setup only (band loads the top, stated); technique cues are dumbbell-specific |
 
 ## Tier 3: the 11 edited `needs-review` records
