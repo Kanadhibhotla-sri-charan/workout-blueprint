@@ -549,12 +549,12 @@
     - machine-lateral-raise
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=Xpu0C50pD-U
-  video_creator: PureGym
-  video_title: "How To Do A Barbell Wide Grip Upright Row"
+  video_link: https://www.youtube.com/watch?v=IzBZ-9NSVVU
+  video_creator: Broser Built
+  video_title: "Wide Grip Barbell Upright Row"
   video_status: verified
-  video_verified_on: "2026-10-09"
-  video_verification_method: metadata
+  video_verified_on: "2026-10-10"
+  video_verification_method: visual
 - id: rear-delt-fly
   name: Rear-Delt Fly
   summary: Direct rear-delt isolation work that pressing-heavy routines commonly leave short.
@@ -921,12 +921,12 @@
     - face-pull
   evidence_notes: []
   review_status: reviewed
-  video_link: https://www.youtube.com/watch?v=LpNgc6Vx4iY
-  video_creator: Bodybuilding.com
-  video_title: "How To Do A Cable External Rotation | Exercise Guide"
+  video_link: https://www.youtube.com/watch?v=ZpD21ZOixQw
+  video_creator: MSP Fitness
+  video_title: "CABLE EXTERNAL ROTATION: Standing Cable Shoulder External Rot. How To - shoulder stability exercise"
   video_status: verified
-  video_verified_on: "2026-08-28"
-  video_verification_method: metadata
+  video_verified_on: "2026-10-10"
+  video_verification_method: visual
 - id: push-up-plus
   name: Push-Up Plus
   summary: A low-equipment scapular-protraction drill, a durability and movement-quality tool rather than a primary size driver.

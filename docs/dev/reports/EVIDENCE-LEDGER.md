@@ -6,8 +6,8 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 
 | Method | Records |
 |---|---:|
-| `metadata`: title / channel checked via oEmbed; footage **not** watched | 138 |
-| `visual`: watched by a person | **2** (cable-rear-delt-builder, cable-pull-through; owner review, 2026-10-10) |
+| `metadata`: title / channel checked via oEmbed; footage **not** watched | 136 |
+| `visual`: watched by a person | **4** (cable-rear-delt-builder, cable-pull-through, upright-row-wide-grip, cable-band-external-rotation; owner review, 2026-10-10) |
 
 ### Video verification batch 1: watch log (human review)
 
@@ -17,8 +17,10 @@ Results are recorded exactly as reported by the reviewer. Data changes (`metadat
 |---|---|---|---|---|---|---|---|---|---|---|
 | cable-rear-delt-builder | https://www.youtube.com/watch?v=ATSjVXoOgVg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "ticks all boxes". The title says "rear delt fly", but the reviewer confirmed the footage matches the recorded movement. No timestamps given | **Pass**; `visual` **applied** (owner approved) |
 | cable-pull-through | https://www.youtube.com/watch?v=4oZ_0_bQcOg | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "cool as well", read as passing all of A–E. Cable version only (band version described in text; kept by earlier owner decision). No timestamps given | **Pass**; `visual` **applied** (owner approved) |
-| upright-row-wide-grip | https://www.youtube.com/watch?v=Xpu0C50pD-U | Project owner | 2026-10-10 (date of report) | not reported | **Unclear** | not reported | not reported | **Unclear** | Reviewer: "the grip is not properly visible as it is shot from the side". The defining detail (grip clearly wider than shoulder width) cannot be confirmed from the footage | **Not verified**; stays `metadata`. Not a confirmed mismatch. A replacement is an option only after a candidate is watched and passes A–E |
-| cable-band-external-rotation | https://www.youtube.com/watch?v=LpNgc6Vx4iY | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "nothing's wrong and everything is fine", but "the video is pretty old and is of 240p". Low resolution noted; the reviewer judged it clear enough. Cable version only (kept by earlier owner decision). No timestamps given | **Pass**; `visual` proposed, pending approval. Low-resolution footage is a candidate for a future higher-quality replacement (optional) |
+| upright-row-wide-grip | https://www.youtube.com/watch?v=Xpu0C50pD-U | Project owner | 2026-10-10 (date of report) | not reported | **Unclear** | not reported | not reported | **Unclear** | Reviewer: "the grip is not properly visible as it is shot from the side". The defining detail (grip clearly wider than shoulder width) cannot be confirmed from the footage | **Not verified**; stays `metadata`. Not a confirmed mismatch. **Replaced** at the owner's request by the watched replacement below |
+| cable-band-external-rotation | https://www.youtube.com/watch?v=LpNgc6Vx4iY | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Reviewer: "nothing's wrong and everything is fine", but "the video is pretty old and is of 240p". Low resolution noted; the reviewer judged it clear enough. Cable version only (kept by earlier owner decision). No timestamps given | **Pass**; `visual` proposed, pending approval. **Not applied**: replaced at the owner's request (old, 240p footage) by the watched replacement below |
+| upright-row-wide-grip (replacement) | https://www.youtube.com/watch?v=IzBZ-9NSVVU (Broser Built, "Wide Grip Barbell Upright Row") | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Grip "slightly wider than shoulder width". The record's cue says "clearly wider"; the owner accepted slightly wider as a wide grip, since the cue's purpose is avoiding a narrow grip. The video description mentions the close-grip version, but the footage shows a wide grip | **Pass**; replaces Xpu0C50pD-U; `visual` applied |
+| cable-band-external-rotation (replacement) | https://www.youtube.com/watch?v=ZpD21ZOixQw (MSP Fitness, "CABLE EXTERNAL ROTATION: Standing Cable Shoulder External Rot. …") | Project owner | 2026-10-10 (date of report) | Y | Y | Y | Y | Y | Standing, cable. The elbow is not touching the body: a slight, steady gap, accepted as consistent with the record's folded-towel cue (the elbow stays in place, the forearm rotates outward) | **Pass**; replaces LpNgc6Vx4iY; `visual` applied |
 
 ## Citations
 
