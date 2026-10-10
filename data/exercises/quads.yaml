@@ -99,13 +99,20 @@
     - A quad-and-glute set is wanted pushed closer to true failure than could safely be handled unspotted with a free barbell.
   less_suitable_when:
     - The fixed vertical path doesn't match a user's natural squat path, which can shift stress onto the knees or lower back rather than the target muscles.
-  mirror_effect: Same visible direction as the free-weight back squat — overall front-of- thigh and glute mass — since the fixed rail changes balance demand, not which muscles carry the load.
+  mirror_effect: Same visible direction as the free-weight back squat — overall front-of-thigh and glute mass — since the fixed rail changes balance demand, not which muscles carry the load.
   advantages: []
   limitations:
     - The fixed vertical path doesn't match every lifter's natural squat arc, and a mismatch can shift stress onto the knees or lower back instead of the target muscles.
     - Removing the balance and bracing demand also removes the stabilizer training a free-weight squat provides, so strength here transfers only partially back to an unassisted squat.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the bar on the upper back and place the feet slightly in front of the bar, about shoulder width apart.'
+    - 'Unrack by rotating the bar off the hooks, and brace the trunk before each rep.'
+    - 'Squat down until the thighs are about parallel to the floor or as deep as the back stays flat, keeping the knees in line with the toes.'
+    - 'Drive up through the whole foot to standing, and rotate the bar back onto the hooks at the end of the set.'
+  common_mistakes:
+    - 'Feet directly under the bar: the fixed path pushes the knees far forward and the heels may lift.'
+    - 'Knees caving inward on the way up: shifts the load away from the quads and stresses the knee.'
+    - 'Not setting the safety stops: the fixed path still needs stops set just below the bottom position in case a rep fails.'
   programming_notes: []
   alternatives: []
   complements:
@@ -114,7 +121,7 @@
     - back-squat
     - hack-squat
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=iAcRGCsG_PY
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Smith Machine Squat"
@@ -154,13 +161,20 @@
     - A heavy, mechanical-tension squat stimulus is wanted with more of the load specifically directed at the quads than a back squat provides.
   less_suitable_when:
     - Wrist or shoulder mobility can't support the rack position, capping how much load can actually be used before form breaks down.
-  mirror_effect: Similar visible direction to a back squat — front-of-thigh and glute mass — but the more upright torso shifts the balance a little more toward quad- specific development relative to the glutes.
+  mirror_effect: Similar visible direction to a back squat — front-of-thigh and glute mass — but the more upright torso shifts the balance a little more toward quad-specific development relative to the glutes.
   advantages: []
   limitations:
     - The front-rack position demands real wrist, shoulder, and thoracic mobility, and lifters who lack it often can't hold the position long enough to complete a heavy set.
-    - Load capacity is meaningfully lower than a back squat's, since the front- rack position and upright torso become the limiting factor before the legs' full strength does.
-  technique_cues: []
-  common_mistakes: []
+    - Load capacity is meaningfully lower than a back squat's, since the front-rack position and upright torso become the limiting factor before the legs' full strength does.
+  technique_cues:
+    - 'Set the bar across the front of the shoulders, with the fingertips under the bar and the elbows high, or with the arms crossed.'
+    - 'Stand with the feet about shoulder width apart, brace the trunk and keep the elbows up.'
+    - 'Squat down between the heels with the torso upright, as deep as the back stays flat and the elbows stay high.'
+    - 'Drive up through the whole foot to standing, leading with the elbows.'
+  common_mistakes:
+    - 'Elbows dropping as the set gets hard: the torso tips forward and the bar can roll off the shoulders.'
+    - 'Knees caving inward on the way up: shifts the load away from the quads and stresses the knee.'
+    - 'Gripping the bar tightly with the whole hand and forcing the wrists: strains the wrists; let the bar rest on the shoulders with a fingertip grip.'
   programming_notes: []
   alternatives: []
   complements:
@@ -169,7 +183,7 @@
     - back-squat
     - hack-squat
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=0ect9ETE6t0
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: "How To Properly Do A Barbell Front Squat - Full Video Tutorial & Exercise Guide"
@@ -214,16 +228,23 @@
   limitations:
     - Hip external-rotation mobility genuinely limits how wide and how deep the stance can go, and forcing it without that mobility can push stress onto the knees.
     - The wide stance is a real technical departure from a standard squat, so it takes its own practice rather than transferring automatically from shoulder-width squatting experience.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the bar on the upper back and stand with a wide stance, the toes turned out.'
+    - 'Brace the trunk and keep the chest up before each rep.'
+    - 'Squat down by pushing the knees out in line with the toes, as deep as the hips allow with a flat back.'
+    - 'Drive up through the whole foot, keeping the knees pushed out until standing.'
+  common_mistakes:
+    - 'Knees caving inward: the wide stance loses its point and the knees take strain.'
+    - 'Forcing a stance wider than the hips allow: the knees are pushed out of line with the toes.'
+    - 'Leaning the torso far forward: turns it into a good-morning and loads the lower back.'
   programming_notes: []
   alternatives: []
   complements:
-    - A narrower-stance squat, which trains the adductors less directly.
+    - A hip-hinge movement such as a Romanian deadlift.
   overlaps_with:
     - back-squat
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=RKyiGw8Vyg0
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL SUMO SQUAT | Exercise Demonstration Video and Guide"
@@ -273,8 +294,15 @@
   limitations:
     - Hip mobility requirements are real and specific — a lifter without adequate external rotation can't set up the stance properly no matter how much they load the bar.
     - The technical demand is high, and the wide stance plus close grip inside the knees takes real practice to coordinate safely under heavy load.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand with a wide stance, toes turned out, and the shins close to the bar, then grip the bar with the hands inside the knees.'
+    - 'Push the knees out over the toes, drop the hips, and set a flat back with the chest up.'
+    - 'Push the floor apart with the feet and stand up, keeping the bar close to the legs until the hips and knees lock out together.'
+    - 'Lower the bar under control by pushing the hips back and bending the knees, keeping the back flat.'
+  common_mistakes:
+    - 'Knees caving inward as the bar leaves the floor: the hips lose their position and the knees take strain.'
+    - 'Hips shooting up first so the back does the lift: turns it into a stiff-legged pull and loads the lower back.'
+    - 'Rounding the lower back to reach the bar: the main injury risk of any heavy floor pull.'
   programming_notes: []
   alternatives: []
   complements:
@@ -282,7 +310,7 @@
   overlaps_with:
     - conventional-deadlift (back module)
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=TY_ofowC0DI
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL SUMO DEADLIFT | Exercise Demonstration Video and Guide"
@@ -522,8 +550,15 @@
   limitations:
     - The fixed rail path doesn't always match a lifter's natural lunge arc, and a mismatch can feel awkward or shift stress away from the target muscles.
     - Removing the balance demand also removes some of the stabilizer and coordination training the free-weight version provides.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the bar on the upper back, place the back foot on a bench behind you, and step the front foot forward so it''s a little in front of the bar.'
+    - 'Unrack the bar and keep most of the weight on the front foot.'
+    - 'Lower straight down until the back knee nearly touches the floor, with the front knee tracking in line with the toes.'
+    - 'Drive up through the whole front foot, finish all reps, then switch legs.'
+  common_mistakes:
+    - 'Front foot too close to the bench: the knee travels far forward and the heel lifts.'
+    - 'Pushing up off the back foot: the work shifts away from the front leg.'
+    - 'Not setting the safety stops: a failed rep has nowhere to go on the fixed rail.'
   programming_notes: []
   alternatives: []
   complements:
@@ -531,7 +566,7 @@
   overlaps_with:
     - bulgarian-split-squat-knee-dominant
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=oLi2QcD0B3M
   video_creator: Prep Coach UK
   video_title: SMITH MACHINE BULGARIAN SPLIT SQUAT TUTORIAL

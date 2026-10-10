@@ -290,8 +290,15 @@
   limitations:
     - Pad and handle position vary between machines, and a poor fit can blunt the tension felt or create elbow discomfort regardless of how heavy the stack is loaded.
     - Availability is a real constraint — this specific machine isn't as universal in gyms as a barbell, dumbbells, or even a preacher bench.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat so the armpits sit snugly over the top of the pad and the backs of the upper arms lie flat on it.'
+    - 'Grip the handles with the elbows lined up with the machine''s pivot.'
+    - 'Curl the handles up by bending only at the elbows, keeping the upper arms pressed into the pad.'
+    - 'Lower under control until the elbows are almost straight, without letting the stack drop.'
+  common_mistakes:
+    - 'Elbows not lined up with the machine''s pivot: the arc fights the elbow, causing discomfort and blunting the biceps tension.'
+    - 'Lifting the shoulders or chest off the pad to finish reps: brings back the swing the pad exists to remove.'
+    - 'Letting the stack drop into the bottom: jolts the elbow near full extension, where discomfort is most common.'
   programming_notes: []
   alternatives: []
   complements:
@@ -300,7 +307,7 @@
     - preacher-curl
   evidence_notes:
     - "Same shoulder-position question as the free-weight preacher curl (the same flexed shoulder position on a fixed path). See preacher-curl's evidence_notes: the one direct hypertrophy comparison found no regional difference. Evidence quality: low."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Ja6ZlIDONac
   video_creator: Renaissance Periodization
   video_title: Machine Preacher Curl
@@ -409,8 +416,15 @@
   limitations:
     - Absolute load is capped below what dumbbells allow, since the rope attachment and cable setup aren't built for very heavy loading.
     - Requires a cable station and rope attachment, which adds setup time and equipment dependency a simple pair of dumbbells doesn't have.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Attach a rope to a low pulley, stand a short step back, and hold the rope ends with the palms facing each other.'
+    - 'Pin the elbows at the sides and keep the wrists straight.'
+    - 'Curl the rope up by bending only at the elbows until the hands reach the shoulders, keeping the palms facing in.'
+    - 'Lower under control until the arms are fully straight, keeping the stack off its rest between reps.'
+  common_mistakes:
+    - 'Leaning back to pull the weight up: the torso does the work instead of the arms.'
+    - 'Elbows drifting forward at the top: the front of the shoulder helps lift and the target muscles unload.'
+    - 'Letting the stack touch down between reps: the tension drops off at the bottom, removing the cable''s main advantage.'
   programming_notes: []
   alternatives: []
   complements:
@@ -419,7 +433,7 @@
     - hammer-curl
     - cross-body-hammer-curl
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=T8YbgwwGxaA
   video_creator: James Harrison
   video_title: Rope Hammer Curl - Exercise Tutorial
@@ -590,8 +604,15 @@
   limitations:
     - Shoulder mobility genuinely limits how far back the elbows can travel, and forcing the position without that mobility defeats the strict path that's the point of the exercise.
     - It's a less intuitive movement pattern than a standard curl, and it takes real practice to keep the bar dragging along the torso rather than swinging forward.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand holding the bar underhand at shoulder width with the arms straight and the bar against the thighs.'
+    - 'As you curl, let the elbows travel back behind the torso so the bar stays in contact with the body.'
+    - 'Drag the bar up the front of the body to about the lower chest.'
+    - 'Lower the bar back down along the body under control until the arms are straight.'
+  common_mistakes:
+    - 'Letting the bar drift away from the body: the elbows come forward and it becomes a standard curl.'
+    - 'Leaning back to move the weight: the torso does the work instead of the biceps.'
+    - 'Forcing the elbows further back than the shoulders allow: the shoulder is strained before the biceps are worked.'
   programming_notes: []
   alternatives: []
   complements:
@@ -601,7 +622,7 @@
     - cable-drag-curl
   evidence_notes:
     - "The common coaching cue calls this short-head-biased, but that runs against the mechanical argument usually made for incline curls: drawing the elbows behind the torso extends the shoulder, the same direction incline curls use, which is argued to favour the long head, not the short. Neither side is confirmed: the one direct hypertrophy comparison of shoulder positions (Attarieh et al. 2025, see incline-dumbbell-curl) found no regional difference. No study specifically testing drag curls was found to resolve the contradiction. Treat the head-bias claim as unresolved rather than asserting either side; the movement's real, better-supported value is the stricter, swing-free path (see why_this_exists), not a specific head bias."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=LMdNTHH6G8I
   video_creator: ScottHermanFitness
   video_title: "How To: Barbell Drag Curl (Increase Bicep Peaks!)"
@@ -642,8 +663,15 @@
   limitations:
     - Same shoulder-mobility limitation as the free-weight drag curl — the elbows-behind-body path isn't accessible to everyone without practice.
     - Requires a cable station positioned appropriately for this path, which is a more specific setup requirement than the barbell version.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand facing a low pulley with a straight bar, holding it underhand at shoulder width with the arms straight.'
+    - 'Let the elbows drift back behind the torso as you begin to curl, keeping the bar close to the body.'
+    - 'Drag the bar up the front of the body to about the lower chest, with the elbows travelling back rather than forward.'
+    - 'Lower the bar back down along the body under control until the arms are straight.'
+  common_mistakes:
+    - 'Letting the elbows come forward as in a normal curl: the drag path is lost and it becomes a standard cable curl.'
+    - 'Leaning back to move the weight: the torso does the work instead of the biceps.'
+    - 'Forcing the elbows further back than the shoulders allow: the shoulder is strained before the biceps are worked.'
   programming_notes: []
   alternatives: []
   complements:
@@ -653,7 +681,7 @@
     - cable-curl
   evidence_notes:
     - Same unresolved head-bias question as the free-weight drag curl — see drag-curl's evidence_notes. The cable's constant tension is a resistance-profile difference, not new evidence on head bias.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=3ib-M9kKSvU
   video_creator: ChadMollickDotCom
   video_title: Cable Drag Curl
@@ -697,8 +725,15 @@
   limitations:
     - The grip rotation at the top is a coordination demand that breaks down under heavier load, which caps how much weight can be used for either half of the movement.
     - Because load is limited by the rotation, neither the concentric biceps stimulus nor the eccentric forearm stimulus reaches the intensity a dedicated single-purpose exercise could deliver.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand holding a dumbbell in each hand at the sides, palms facing forward.'
+    - 'Curl the dumbbells up with the palms facing up, keeping the elbows at the sides.'
+    - 'At the top, rotate the wrists so the palms face down.'
+    - 'Lower slowly with the palms facing down, then rotate back to palms-up at the bottom before the next rep.'
+  common_mistakes:
+    - 'Rotating the grip partway through the lowering instead of at the top: the reverse-curl half of the rep is cut short.'
+    - 'Dropping the dumbbells quickly on the way down: skips the slow palms-down lowering that is the point of the exercise.'
+    - 'Swinging the body to start the curl: momentum moves the weight instead of the biceps.'
   programming_notes: []
   alternatives: []
   complements:
@@ -708,7 +743,7 @@
     - reverse-curl (forearms module) — the eccentric half of this movement.
     - dumbbell-curl
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=D7bMA4WEKMI
   video_creator: Buff Dudes Workouts
   video_title: "How to Perform Zottman Curls | Bicep / Forearms Exercise Tutorial"
@@ -957,8 +992,15 @@
   limitations:
     - Bar path control near the head is a genuine technical demand, and losing control at the bottom of the range carries obvious risk.
     - Elbow tolerance is often the limiting factor before the triceps are meaningfully fatigued, especially at heavier loads or higher volume.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie on a flat bench holding the bar or dumbbells above the chest with straight arms, then tilt the arms back slightly so they point toward the top of the head.'
+    - 'Keeping the upper arms still, bend only at the elbows to lower the weight toward the forehead or just behind the head.'
+    - 'Stop when the elbows reach a comfortable limit, with the weight clear of the head.'
+    - 'Straighten the elbows to return the weight to the start, without letting the upper arms swing forward.'
+  common_mistakes:
+    - 'Elbows flaring out to the sides: shifts load onto the elbow joints and away from the triceps.'
+    - 'Upper arms swinging forward as the weight comes up: the shoulders help move the weight and the triceps do less.'
+    - 'Lowering quickly toward the head with a heavy weight: with the bar travelling near the face, there''s no margin if control is lost.'
   programming_notes: []
   alternatives: []
   complements:
@@ -967,7 +1009,7 @@
     - overhead-triceps-extension
   evidence_notes:
     - "Inferred, not directly tested. Maeo et al. (2023) — see overhead-triceps-extension's evidence note — compared only two endpoints: fully overhead vs. arm-at-side. No study located tests the roughly 90-degree shoulder position a skull crusher uses, so this record's \"partial long-head stretch\" claim is a reasonable inference from where 90 degrees sits between those two tested positions, not a finding from a study that actually used this exercise."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=d_KZxkY_0cM
   video_creator: ScottHermanFitness
   video_title: "How To: Skull Crushers"
@@ -1128,8 +1170,15 @@
   limitations:
     - Seat and handle position vary between machines, and a poor fit can blunt the tension felt regardless of how heavy the stack is loaded.
     - Availability is a real constraint — this specific machine isn't as universal in gyms as a cable station.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat so the upper arms rest flat on the pad with the elbows lined up with the machine''s pivot.'
+    - 'Grip the handles and sit tall with the back against the backrest if there is one.'
+    - 'Straighten the elbows to push the handles down until the arms are fully straight.'
+    - 'Return under control until the elbows are bent to about 90 degrees or a little more.'
+  common_mistakes:
+    - 'Elbows not lined up with the pivot: the arc fights the elbow, causing discomfort and blunting the triceps tension.'
+    - 'Lifting the upper arms off the pad to push: the shoulders help move the weight and the triceps do less.'
+    - 'Letting the stack drop back fast: the return is uncontrolled, losing half of each rep''s triceps work.'
   programming_notes: []
   alternatives: []
   complements:
@@ -1138,7 +1187,7 @@
     - cable-pushdown
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a lateral-head-specific bias here — see that record's evidence_notes for the full reasoning."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=j4XSuFLiZ6I
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A SEATED MACHINE TRICEPS EXTENSION | Exercise Demonstration Video and Guide"

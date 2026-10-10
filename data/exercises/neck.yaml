@@ -100,8 +100,15 @@
   limitations:
     - The neck is a small, structurally sensitive area — load has to increase far more conservatively here than in almost any other muscle group, or symptoms can appear well before a meaningful growth stimulus is reached.
     - Equipment for loading neck extension directly (a harness or dedicated machine) is uncommon in most gyms, which limits how heavily this can realistically be progressed for many people.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Seated with a harness on the head (or in the machine), lean the torso forward slightly with the hands on the thighs and the back flat.'
+    - 'Start with a very light plate or setting and let the head lower forward to a comfortable position, not as far as it will go.'
+    - 'Lift the head back up to a neutral position by extending the neck, without arching the upper back.'
+    - 'Lower slowly, and increase the load only in small steps, ending the set if any pain or symptoms appear.'
+  common_mistakes:
+    - 'Letting the head drop quickly at the bottom: the neck takes the load at the end of its range without control.'
+    - 'Throwing the head back past neutral at the top: the neck is pushed into extension under load further than the movement needs.'
+    - 'Adding weight quickly: the neck tolerates fast load increases poorly, and symptoms can appear before any real benefit.'
   programming_notes: []
   alternatives: []
   complements:
@@ -109,7 +116,7 @@
   overlaps_with: []
   evidence_notes:
     - This is a lower-stakes claim than the region-bias claims elsewhere in this dataset — it's a claim about visible anatomy, not about differential muscle recruitment or growth. The neck extensors and upper trapezius make up the visible bulk of the back and sides of the neck, which is standard anatomical description rather than a contested hypertrophy finding, so it doesn't carry the same evidence-quality caveats as the muscle-head-bias claims in the arms, chest, and calves modules.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=VLdIkr2Gfdc
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Seated Head Harness Neck Extension"
@@ -150,20 +157,27 @@
     - Neck extension is already trained and a balanced growth stimulus on both sides of the neck is wanted rather than one direction only.
   less_suitable_when:
     - Range or load can't be controlled, or symptoms appear at any point in the range — this is a stop signal, not something to push through for more stimulus.
-  mirror_effect: Less visually prominent than extension work, since the front-of-neck muscles contribute less to overall neck bulk — the visible effect is more about rounding out the front profile and avoiding a lopsided, extension- only look than adding comparable size.
+  mirror_effect: Less visually prominent than extension work, since the front-of-neck muscles contribute less to overall neck bulk — the visible effect is more about rounding out the front profile and avoiding a lopsided, extension-only look than adding comparable size.
   advantages: []
   limitations:
     - Usable load is low relative to the effort involved, since the neck flexors are comparatively weak and the safe range of motion is small.
     - Plate or band positioning at the forehead is awkward to set up consistently, which makes clean progressive overload harder to track than with most other exercises.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie face up on a bench with the head and upper neck off the end, holding a folded towel and a light plate on the forehead with both hands (or a band around the forehead anchored behind you).'
+    - 'Let the head lower back slowly to a comfortable, roughly level position, not as far as it will go.'
+    - 'Tuck the chin and curl the head up toward the chest, then lower it back under control.'
+    - 'Start very light and increase the load in small steps, ending the set if any pain or symptoms appear.'
+  common_mistakes:
+    - 'Letting the head drop quickly into the bottom: the neck takes the load at the end of its range without control.'
+    - 'Lifting the shoulders off the bench to raise the head: the abs and torso do the curling instead of the neck flexors.'
+    - 'Jumping up in plate size too quickly: the neck tolerates fast load increases poorly, and symptoms can appear before any real benefit.'
   programming_notes: []
   alternatives: []
   complements:
     - Neck extension work.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=o78kjeBJUBQ
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Weight Plate Neck Curl"
@@ -209,15 +223,22 @@
   limitations:
     - This is a niche addition for most lifters — it targets a comparatively minor muscle group and rarely drives visible neck-size goals compared to extension and flexion work.
     - Manual resistance (a training partner's hand) is inconsistent rep to rep, which makes progressive overload harder to track than with a fixed load.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit or stand tall with the head level, and place a hand on the side of the head above the ear (or use a band around the head anchored to the side).'
+    - 'Tilt the ear toward the shoulder against the resistance, without turning the face or shrugging the shoulder.'
+    - 'Move only through a comfortable range, then return the head to level under control.'
+    - 'Use light, gradual pressure, work both sides evenly, and end the set if any pain or symptoms appear.'
+  common_mistakes:
+    - 'Shrugging the shoulder up to meet the ear: the upper traps do the movement instead of the neck.'
+    - 'Turning the face toward the shoulder as you tilt: the movement becomes a rotation and loads the neck unevenly.'
+    - 'Jerking against the resistance: a sudden load on the neck raises the risk of a strain.'
   programming_notes: []
   alternatives: []
   complements:
     - Flexion and extension work.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=YgG2DTr5Qhc
   video_creator: Steve Smith
   video_title: "Lateral Neck Flexion Exercise | Neck Exercise | Dr. Steven Smith"

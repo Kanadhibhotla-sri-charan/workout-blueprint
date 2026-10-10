@@ -296,15 +296,22 @@
   limitations:
     - Loading options are limited without a dedicated device — bodyweight, band, and wall variations all cap out at a fairly light stimulus for a trained lifter.
     - It's a narrow, single-joint movement with no meaningful carryover to overall lower-body strength or size beyond the shin itself.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand with the back and hips against a wall and the heels about a foot''s length in front of it (or sit with a band looped over the top of the foot).'
+    - 'Keep the legs straight and the weight on the heels.'
+    - 'Pull the toes and the front of the feet up toward the shins as far as possible.'
+    - 'Lower the feet slowly until they almost touch the floor, without resting between reps.'
+  common_mistakes:
+    - 'Rocking the hips off the wall to lift the toes: the body leans forward and the shins do less of the work.'
+    - 'Dropping the feet quickly on the way down: skips the controlled lowering, which is half of each rep''s shin work.'
+    - 'Feet too close to the wall: the range is so small that the shins barely work; step the heels further out as it gets easier.'
   programming_notes: []
   alternatives: []
   complements:
     - Plantarflexion work.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=pz70FwVRDJE
   video_creator: All Strength Training
   video_title: "Bodyweight Tibialis Raise | Fix Shin Splits"

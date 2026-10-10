@@ -1,6 +1,6 @@
 - id: incline-dumbbell-press
   name: Incline Dumbbell Press
-  summary: A freely moving incline press for an upper-chest-biased mechanical- tension and stretch stimulus, using independent dumbbells.
+  summary: A freely moving incline press for an upper-chest-biased mechanical-tension and stretch stimulus, using independent dumbbells.
   why_this_exists: A freely moving incline press for users who want an incline-oriented chest press and can control independent dumbbells.
   body_regions:
     - chest
@@ -39,8 +39,15 @@
   limitations:
     - Shoulder mobility and comfort at a steep bench angle can limit how deep the stretch goes, capping the very stimulus this movement is chosen for.
     - Controlling two independent dumbbells at an incline is a real stability demand, and it caps the achievable load below what a barbell would allow at the same effort level.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the bench to a moderate incline and sit back with the dumbbells resting on the thighs, then lie back bringing them to the outside of the upper chest.'
+    - 'Keep the shoulder blades pulled back and down and the feet planted.'
+    - 'Press the dumbbells up over the upper chest until the arms are nearly straight, letting them move slightly toward each other.'
+    - 'Lower under control until the dumbbells are beside the upper chest, as deep as the shoulders comfortably allow.'
+  common_mistakes:
+    - 'Bench set so steep it''s close to upright: the press becomes a shoulder press and the front delts take over.'
+    - 'Elbows flared straight out at 90 degrees: raises shoulder stress at the bottom of the press.'
+    - 'Letting the dumbbells drift apart or wobble at the bottom: control is lost exactly where the stretch is deepest.'
   programming_notes: []
   alternatives: []
   complements:
@@ -52,8 +59,8 @@
     - smith-machine-incline-press
     - incline-cable-press
   evidence_notes:
-    - "Strong evidence, among the best-supported region-bias claims in this dataset. Chaves et al. (2020, International Journal of Exercise Science, PMC7449336) trained untrained men on flat, 44-degree incline, or a combination of both for 8 weeks and measured pec thickness by ultrasound/MRI-style imaging: the incline group gained upper-chest thickness far beyond the flat group (a very large, outlier-sized effect — over 60% relative increase), while mid-chest growth was similar across groups. This is direct regional- hypertrophy data, not just EMG. It's backed by EMG evidence too: Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head activation rose with incline angle across five bench inclinations. Evidence quality: strong — a real hypertrophy trial plus consistent EMG, though still a single hypertrophy trial with an unusually large effect size that hasn't yet been replicated."
-  review_status: needs-review
+    - "Strong evidence, among the best-supported region-bias claims in this dataset. Chaves et al. (2020, International Journal of Exercise Science, PMC7449336) trained untrained men on flat, 44-degree incline, or a combination of both for 8 weeks and measured pec thickness by ultrasound/MRI-style imaging: the incline group gained upper-chest thickness far beyond the flat group (a very large, outlier-sized effect — over 60% relative increase), while mid-chest growth was similar across groups. This is direct regional-hypertrophy data, not just EMG. It's backed by EMG evidence too: Rodríguez-Ridao et al. (2020, PMC7579505) found clavicular-head activation rose with incline angle across five bench inclinations. Evidence quality: strong — a real hypertrophy trial plus consistent EMG, though still a single hypertrophy trial with an unusually large effect size that hasn't yet been replicated."
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=8iPEnn-ltC8
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Incline Chest Press"
@@ -162,8 +169,15 @@
   limitations:
     - Machine handle position and pressing angle vary a lot between models, and a poor fit can shift stress onto the shoulder joint rather than the chest.
     - Removing free-weight balance demand also removes the stabilizer training a barbell or dumbbell version provides.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat so the handles start around the upper chest, then sit with the back and shoulder blades flat against the pad.'
+    - 'Grip the handles with the wrists stacked over the elbows and the elbows angled slightly below shoulder height.'
+    - 'Press up and forward until the arms are nearly straight, without shrugging the shoulders toward the ears.'
+    - 'Return under control until a stretch is felt across the upper chest before the next rep.'
+  common_mistakes:
+    - 'Seat set too low, so the handles start at the shoulders: the press turns into an overhead press and the front delts do most of the work.'
+    - 'Arching the lower back off the pad to finish reps: lowers the press angle and takes the upper-chest emphasis away.'
+    - 'Cutting the range short at the bottom: the stretched part of the press is skipped, so each rep does less chest work.'
   programming_notes: []
   alternatives: []
   complements:
@@ -175,7 +189,7 @@
     - smith-machine-incline-press
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the equipment.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=LiDArz1R2NU
   video_creator: FIT.nl
   video_title: "Incline Machine Chest Press | Proper Form Tutorial for Upper Chest"
@@ -220,8 +234,15 @@
   limitations:
     - The fixed rail path doesn't match every lifter's natural press arc, and a mismatch can load the shoulder joint rather than the chest.
     - Setting the bench angle and rack height correctly takes more fiddling than a standard incline bench, adding real setup time.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set an incline bench under the bar so the bar comes down to the upper chest, and lie back with the shoulder blades pulled back and down.'
+    - 'Grip the bar slightly wider than shoulder width and unrack it by rotating it off the hooks.'
+    - 'Lower the bar under control to the upper chest, with the elbows angled slightly below shoulder height.'
+    - 'Press back up until the arms are nearly straight, and set the safety stops just above the chest before starting.'
+  common_mistakes:
+    - 'Bench positioned so the bar lands on the neck or mid-chest: the press line misses the upper chest and can strain the shoulders.'
+    - 'Elbows flared straight out at 90 degrees: raises shoulder stress at the bottom of the press.'
+    - 'Bouncing the bar off the chest: the rebound skips the stretched part of the rep.'
   programming_notes: []
   alternatives: []
   complements:
@@ -233,7 +254,7 @@
     - incline-cable-press
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the fixed rail.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=yFQshytandQ
   video_creator: James Harrison
   video_title: Incline Smith Machine Bench Press - Exercise Tutorial
@@ -277,8 +298,15 @@
   limitations:
     - Absolute load is capped well below what a barbell or heavy dumbbells allow, so this can't substitute for a heavy press's strength-building role.
     - Requires dual cable stations set at the right height and angle, which not every gym has configured for this specific movement.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set both pulleys low, stand in a split stance between them facing away, and hold a handle in each hand beside the chest.'
+    - 'Lean the torso slightly forward and keep the elbows angled a little below shoulder height.'
+    - 'Press the handles up and forward on an upward angle until the arms are nearly straight and the hands come close together.'
+    - 'Return under control to the chest, keeping tension on the cables between reps.'
+  common_mistakes:
+    - 'Pressing straight forward instead of up and forward: the incline angle is lost and the upper-chest emphasis goes with it.'
+    - 'Leaning far forward to push the handles: the body weight helps finish the rep and the chest does less.'
+    - 'Letting the handles pull the arms back fast: the stretched end is uncontrolled and the shoulders take the strain.'
   programming_notes: []
   alternatives: []
   complements:
@@ -289,7 +317,7 @@
     - incline-machine-press
   evidence_notes:
     - Same upper-chest evidence as incline-dumbbell-press (Chaves et al., 2020, PMC7449336; Rodríguez-Ridao et al., 2020, PMC7579505) — the incline angle is what the evidence is about, not the cable's constant tension.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=qctZmqNhkfU
   video_creator: HASfit
   video_title: Incline Cable Chest Press - HASfit Upper Chest Exercise Demonstration - Incline Cable Bench Press
@@ -402,8 +430,15 @@
   limitations:
     - The fixed rail path doesn't match every lifter's natural press arc, and a mismatch can shift stress onto the shoulder joint rather than the chest.
     - Removing free-weight balance demand also removes the stabilizer training a barbell version provides, so strength here transfers only partially back to a free bench press.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set a flat bench under the bar so it comes down to the lower chest, and lie back with the shoulder blades pulled back and down.'
+    - 'Grip the bar slightly wider than shoulder width and unrack it by rotating it off the hooks.'
+    - 'Lower the bar under control to the lower chest with the elbows tucked to roughly 45 degrees.'
+    - 'Press back up until the arms are nearly straight, with the safety stops set just above the chest.'
+  common_mistakes:
+    - 'Bench positioned so the bar lands on the neck or upper chest: the fixed path forces an awkward press line.'
+    - 'Elbows flared straight out at 90 degrees: raises shoulder stress at the bottom of the press.'
+    - 'Bouncing the bar off the chest: the rebound skips the hardest part of the rep.'
   programming_notes: []
   alternatives: []
   complements:
@@ -415,7 +450,7 @@
     - cable-chest-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=7FyJdsXeta8
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Smith Machine Bench Press"
@@ -461,8 +496,15 @@
   limitations:
     - Controlling two independent dumbbells caps the achievable load below what a barbell allows, and getting a heavy pair into the starting position takes real technique and, at high weights, help from a spotter.
     - The higher stability demand can become the limiting factor before the chest itself is meaningfully fatigued, especially for less experienced lifters.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit on the end of a flat bench with the dumbbells on the thighs, then lie back, bringing them to the sides of the chest.'
+    - 'Keep the shoulder blades pulled back and down, the feet planted and the glutes on the bench.'
+    - 'Press the dumbbells up over the chest until the arms are nearly straight, letting them move slightly toward each other.'
+    - 'Lower under control until the dumbbells are beside the chest, as deep as the shoulders comfortably allow.'
+  common_mistakes:
+    - 'Elbows flared straight out at 90 degrees: raises shoulder stress at the bottom of the press.'
+    - 'Dropping the dumbbells out to the sides at the end of a set: a sudden, unloaded stretch on the shoulders; bring them back to the thighs or chest instead.'
+    - 'Letting the dumbbells drift apart or wobble at the bottom: control is lost exactly where the stretch is deepest.'
   programming_notes: []
   alternatives: []
   complements:
@@ -474,7 +516,7 @@
     - smith-machine-bench-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=sXk7lP7eN8Q
   video_creator: PrazeNation
   video_title: "Flat Bench Dumbbell Press | Proper Form & Chest Exercise Demo"
@@ -518,8 +560,15 @@
   limitations:
     - Machine handle position and pressing angle vary a lot between models, and a poor fit can blunt the chest tension regardless of how heavy the stack is loaded.
     - Removing free-weight balance demand also removes the stabilizer training a barbell or dumbbell press provides.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat so the handles line up with the middle of the chest, then sit with the back and shoulder blades flat against the pad.'
+    - 'Grip the handles with the wrists stacked over the elbows and the elbows angled slightly below shoulder height.'
+    - 'Press the handles forward until the arms are nearly straight, without letting the shoulders roll forward off the pad.'
+    - 'Return under control until the chest feels a stretch, keeping the weight stack from resting between reps.'
+  common_mistakes:
+    - 'Seat set so the handles sit at the neck or the stomach: the press line misses the chest and loads the shoulders or the lower chest instead.'
+    - 'Shoulders rolling forward off the pad at the end of each rep: the front delts take over the last part of the press.'
+    - 'Letting the stack touch down between reps: the tension drops at the stretched end, where the chest is meant to work hardest.'
   programming_notes: []
   alternatives: []
   complements:
@@ -530,7 +579,7 @@
     - smith-machine-bench-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=xUm0BiZCWlQ
   video_creator: ScottHermanFitness
   video_title: "How To: Chest Press (Cybex)"
@@ -572,8 +621,15 @@
   limitations:
     - Absolute load is capped well below what a barbell or heavy dumbbells allow, so this can't substitute for a heavy press's strength-building role.
     - Requires a cable station with the right pulley setup, which isn't as universally available as a bench and barbell.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set both pulleys at about chest height, stand in a split stance between them facing away, and hold a handle in each hand beside the chest.'
+    - 'Lean slightly forward with the chest up and the elbows a little below shoulder height.'
+    - 'Press the handles forward until the arms are nearly straight and the hands come close together in front of the chest.'
+    - 'Return under control to the chest, keeping tension on the cables between reps.'
+  common_mistakes:
+    - 'Leaning far forward to push the handles: the body weight helps finish the rep and the chest does less.'
+    - 'Letting the handles pull the arms back fast: the stretched end is uncontrolled and the shoulders take the strain.'
+    - 'Shrugging the shoulders forward at the end of each press: the front delts take over the last part of the movement.'
   programming_notes: []
   alternatives: []
   complements:
@@ -584,7 +640,7 @@
     - machine-chest-press
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=FVWJglwid4I
   video_creator: Howcast
   video_title: "How to Do a Cable Chest Press | Chest Workout"
@@ -628,8 +684,15 @@
   limitations:
     - The squeeze demand caps how heavy this can realistically be loaded compared to a standard press, so it isn't a strong option for building raw pressing strength.
     - Maintaining the isometric squeeze through the whole rep is a coordination demand that fatigues quickly and is easy to let slip without noticing under fatigue.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie on a flat bench holding two dumbbells pressed together over the chest, palms facing each other.'
+    - 'Squeeze the dumbbells together hard and keep that squeeze for the whole set.'
+    - 'Lower the pressed-together dumbbells to the middle of the chest, keeping the elbows close to the body.'
+    - 'Press back up to straight arms while keeping the dumbbells touching.'
+  common_mistakes:
+    - 'Letting the dumbbells drift apart during the rep: the squeeze that defines the exercise is lost and it becomes a narrow press.'
+    - 'Flaring the elbows out wide: shifts stress onto the shoulders and makes the squeeze harder to hold.'
+    - 'Using so much weight the squeeze can''t be held: the press continues but the adduction tension disappears.'
   programming_notes: []
   alternatives: []
   complements:
@@ -638,7 +701,7 @@
     - flat-dumbbell-press
   evidence_notes:
     - "The mid/sternal-biased part carries the same evidence as flat-barbell-bench-press — see that record's evidence_notes. The \"extra emphasis toward the inner chest\" claim is separate and unresolved: no research was found isolating an \"inner chest\" as a distinct region within the sternocostal head, and no direct study of the hex press's squeeze-adduction effect on regional hypertrophy was located. It's a widely repeated coaching cue based on where lifters report feeling the squeeze, not a settled finding."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=f7N_JpIOgOk
   video_creator: Train With Cuz
   video_title: Dumbbell Hex Press
@@ -808,8 +871,15 @@
   limitations:
     - The decline bench setup is less common and more awkward to adjust than a flat or incline bench, adding real setup time.
     - Same shoulder-vulnerability concern as other free-weight flies — the stretched bottom position caps safe loading regardless of decline angle.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie on a decline bench with the feet secured, holding the dumbbells above the lower chest with palms facing each other and a slight, fixed bend in the elbows.'
+    - 'Keep the shoulder blades pulled back and down against the bench.'
+    - 'Open the arms out to the sides in a wide arc until a comfortable stretch is felt across the chest.'
+    - 'Bring the dumbbells back up along the same arc without changing the elbow bend, stopping just before they touch.'
+  common_mistakes:
+    - 'Bending the elbows more on the way up: the fly turns into a press and the triceps take over.'
+    - 'Lowering past what the shoulders tolerate: the shoulder is loaded at its most stretched and vulnerable point.'
+    - 'Sitting up or getting off the decline bench while holding heavy dumbbells: the weights pull the body awkwardly; bring them to the chest first.'
   programming_notes: []
   alternatives: []
   complements:
@@ -820,7 +890,7 @@
   evidence_notes:
     - "Weaker evidence than the upper-chest claim. EMG support only: Rodríguez-Ridao et al. (2020, PMC7579505) and the earlier Barnett et al. (1995, JSCR) both found greater lower/sternocostal-region pectoral activation during decline pressing than incline or flat. No MRI or ultrasound hypertrophy trial isolating a decline-specific lower-chest growth effect was located — unlike the upper-chest claim, this one rests on EMG alone. Evidence quality: moderate, similar tier to the biceps head-bias claims in the arms module."
     - The "stretch-mediated growth stimulus" framing draws on the same general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle, not a fly-specific or decline-specific finding.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=IMALXhhHRKM
   video_creator: LIVESTRONG
   video_title: How to Do a Decline Dumbbell Fly
@@ -860,8 +930,15 @@
   limitations:
     - The machine's arc and pad position usually stop short of the deep stretch a dumbbell fly delivers, so it trades away some of a fly's distinct value for safety and stability.
     - Availability and fit vary by gym and by individual torso size, and a poor pad fit can blunt the tension felt regardless of load.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat so the handles or pads are at about chest height, and sit with the back flat against the pad.'
+    - 'Hold the handles with a slight bend in the elbows, letting the arms open until a comfortable stretch is felt across the chest.'
+    - 'Bring the handles together in a wide arc in front of the chest, keeping the elbow bend fixed.'
+    - 'Open back out under control to the same stretch before the next rep.'
+  common_mistakes:
+    - 'Seat set too high or too low: the arc misses the chest and loads the shoulders instead.'
+    - 'Bending and straightening the elbows during the rep: the fly turns into a press and the arms take over.'
+    - 'Letting the weight stack pull the arms back fast: the stretched end is uncontrolled, which is where the shoulder is most exposed.'
   programming_notes: []
   alternatives: []
   complements:
@@ -873,7 +950,7 @@
     - decline-dumbbell-fly
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press applies here — see that record's evidence_notes, and the same press-to-fly extrapolation caveat noted on flat-dumbbell-fly.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=FDay9wFe5uE
   video_creator: Renaissance Periodization
   video_title: Machine Flye
@@ -945,7 +1022,7 @@
   video_verification_method: metadata
 - id: dumbbell-pullover-chest-biased
   name: Dumbbell Pullover (Chest-Biased)
-  summary: A straight-arm overhead arc that loads the chest in a shoulder- extension role no press or fly reaches.
+  summary: A straight-arm overhead arc that loads the chest in a shoulder-extension role no press or fly reaches.
   why_this_exists: A straight-to-slightly-bent-arm arc that extends overhead loads the chest in a shoulder-extension role that no press or fly reaches, and is commonly associated with rib-cage and serratus involvement as well.
   body_regions:
     - chest
@@ -980,8 +1057,15 @@
   limitations:
     - Shoulder mobility limits how far overhead the weight can be lowered safely, which caps the very stretch position that gives this exercise its value for some lifters.
     - Keeping the elbow position consistently straight through the set takes real attention — under fatigue it's easy to drift toward more elbow bend, blurring the line with the lat-biased version.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie with the upper back across a bench and the feet flat on the floor, holding one dumbbell with both hands above the chest and the arms nearly straight.'
+    - 'Keeping the arms nearly straight, lower the dumbbell back in an arc over the head until the upper arms are roughly in line with the torso, or as far as the shoulders comfortably allow.'
+    - 'Keep the ribs down and the hips low so the lower back doesn''t arch as the weight goes overhead.'
+    - 'Pull the dumbbell back over the chest along the same arc without bending the elbows.'
+  common_mistakes:
+    - 'Letting the elbows bend more as the set gets hard: the movement drifts into the lat-biased pullover and the chest does less.'
+    - 'Arching the lower back to get the weight further overhead: the range comes from the spine, not the shoulders, and the lower back takes strain.'
+    - 'Lowering past what the shoulders tolerate: the deepest overhead position is where shoulder discomfort starts.'
   programming_notes: []
   alternatives: []
   complements:
@@ -991,7 +1075,7 @@
   evidence_notes:
     - No research was found on the pullover's regional pec bias specifically — the "general/costal-biased" framing is an inference from the movement's shoulder-extension arc, not a tested finding. Left as an open claim rather than asserted with confidence.
     - Separately, the "strong stretch-mediated stimulus" claim about the overhead-arc range itself draws on the general stretch-mediated hypertrophy literature cited on flat-dumbbell-fly in this same file (Schoenfeld & Grgic, 2020; Wolf et al., 2023, 2025) — a general principle about training a muscle at long length, not a pullover-specific finding.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Q8l6ykgnmPM
   video_creator: Colossus Fitness
   video_title: "How to PROPERLY Dumbbell Pullover for a BIG Chest | Fix Your Dumbbell Pullover Form NOW!"

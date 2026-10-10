@@ -90,8 +90,15 @@
   limitations:
     - Ab-specific machines vary widely in pad fit and pivot design; a poor fit can put pressure across the hips or lower back before the abs are meaningfully loaded.
     - Equipment access is a real constraint — this specific machine isn't as universally available as a cable station or bodyweight options.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat and pads so the chest or shoulder pads sit comfortably and the pivot lines up with the middle of the trunk.'
+    - 'Hold the handles lightly and keep the hips on the seat.'
+    - 'Curl the ribs down toward the pelvis by rounding the spine, rather than bending forward at the hips.'
+    - 'Return slowly until the trunk is upright again, keeping the stack off its rest between reps.'
+  common_mistakes:
+    - 'Bending forward at the hips instead of curling the spine: the hip flexors do the work and the abs barely shorten.'
+    - 'Pulling hard with the arms on the handles: the arms help move the stack instead of the abs.'
+    - 'Letting the stack yank the torso back up: the return is uncontrolled and half of each rep''s ab work is lost.'
   programming_notes: []
   alternatives: []
   complements:
@@ -99,7 +106,7 @@
   overlaps_with:
     - cable-crunch
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=G8937xqkxDo
   video_creator: FIT.nl
   video_title: "Machine Crunch | Proper Form Tutorial for Stronger Abs"
@@ -329,8 +336,15 @@
   limitations:
     - The skill and control demand is high, and the lower back is the first thing to give out under too much rollout distance too soon, which is a real injury risk if progressed carelessly.
     - There's a real floor to entry — a lifter with a weak core often can't control any useful range at all when starting out, unlike a plank which scales down more gracefully.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Kneel on a mat with the wheel on the floor under the shoulders, arms straight and hands on the handles.'
+    - 'Brace the abs and tuck the pelvis slightly so the lower back stays neutral to slightly rounded, never arched.'
+    - 'Roll the wheel forward slowly, letting the hips follow, only as far as the lower back stays in that position.'
+    - 'Pull the wheel back toward the knees using the abs, keeping the hips in line, until you''re back at the start.'
+  common_mistakes:
+    - 'Letting the lower back arch as the wheel rolls out: the spine takes the load the abs are meant to resist.'
+    - 'Rolling out further than the trunk can control: the set ends in a collapse, the injury risk the record warns about.'
+    - 'Hips staying high and pulling the wheel back with the hips first: the movement turns into a hip hinge and the abs do less.'
   programming_notes: []
   alternatives: []
   complements:
@@ -338,7 +352,7 @@
   overlaps_with:
     - plank
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=rqiTPdK1c_I
   video_creator: Mind Pump TV
   video_title: "Ab Wheel- How to PROPERLY Use an Ab Wheel | MIND PUMP"

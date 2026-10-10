@@ -102,8 +102,15 @@
   limitations:
     - The fixed rail path doesn't match every lifter's natural hip-hinge arc, which can force compensations at the knees or hips instead of removing them.
     - Once the bar-path-control training wheels are no longer needed, there's little further benefit over the free-bar version, so it's mainly useful as a stepping stone rather than a long-term staple.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand with the feet about hip width apart under the bar, holding it just outside the thighs with an overhand grip.'
+    - 'Unrack the bar and set a slight bend in the knees that stays the same throughout.'
+    - 'Push the hips back, letting the bar slide down the thighs on the rail, until a strong hamstring stretch is felt with a flat back.'
+    - 'Drive the hips forward to stand tall, then rack the bar at the end of the set.'
+  common_mistakes:
+    - 'Rounding the back to get the bar lower: depth should stop where a flat back stops.'
+    - 'Bending the knees more on the way down: turns it into a squat and the stretch on the hamstrings and glutes shrinks.'
+    - 'Standing too far in front of or behind the rail: the fixed path drags the bar away from the body or into the shins.'
   programming_notes: []
   alternatives: []
   complements:
@@ -112,7 +119,7 @@
     - romanian-deadlift (hamstrings module) — distinguish by how much the setup controls the bar path.
   evidence_notes:
     - Same evidence as the free-bar romanian-deadlift (hamstrings module) — see that record's evidence_notes for the general stretch-mediated hypertrophy literature. The fixed rail changes bar-path control, not the hip position the stretch claim is actually about.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=nmGzbW15qYo
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A SMITH MACHINE ROMANIAN DEADLIFT | Exercise Demonstration Video and Guide"
@@ -480,15 +487,22 @@
   limitations:
     - Machine availability is the main constraint — this movement is hard to replicate well with free weights, so its accessibility depends entirely on what a given gym has.
     - The adductors are a comparatively small muscle group, so the achievable loading and overall growth contribution stay modest next to a routine's compound lifts.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit in the machine with the back against the pad and the inner knees or thighs against the pads.'
+    - 'Set the starting width to a stretch the hips tolerate comfortably, not as wide as the machine allows.'
+    - 'Squeeze the legs together until the pads meet or nearly meet, keeping the hips on the seat.'
+    - 'Let the pads open back out under control to the starting stretch before the next rep.'
+  common_mistakes:
+    - 'Setting the start width wider than the hips tolerate: the inner thigh and groin are loaded at a range they aren''t ready for.'
+    - 'Letting the pads fly open on the way out: the stretched end is uncontrolled, which is where groin strains happen.'
+    - 'Rocking the torso forward to close the pads: the body weight helps finish the rep instead of the adductors.'
   programming_notes: []
   alternatives: []
   complements:
     - Abduction work and squatting patterns.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=ScqpbvOZWe8
   video_creator: Hammer Fitness
   video_title: "Hip Adduction Machine: How To"
@@ -528,10 +542,17 @@
   mirror_effect: Minor and specific — the hip flexors are small, so any visible effect shows up as slightly more definition at the front of the hip and top of the thigh rather than a noticeable size change; this is more a functional than an aesthetic addition.
   advantages: []
   limitations:
-    - The hip flexors are a small muscle group relative to most compound lower- body work, so this movement adds only a minor growth stimulus on its own.
+    - The hip flexors are a small muscle group relative to most compound lower-body work, so this movement adds only a minor growth stimulus on its own.
     - Anterior hip or lower-back symptoms can flare with hip-flexor-dominant work in general, making this one to reduce or drop rather than push through if that occurs.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Attach an ankle cuff to a low pulley, stand facing away from the stack, and hold a support for balance.'
+    - 'Stand tall on the non-working leg with the working leg straight or slightly bent behind the body.'
+    - 'Drive the working knee up and forward until the thigh is about level with the hip, keeping the torso upright.'
+    - 'Lower the leg back under control to the start, then finish all reps before switching sides.'
+  common_mistakes:
+    - 'Leaning the torso back to lift the knee higher: the lower back arches and takes over from the hip flexors.'
+    - 'Swinging the leg up with momentum: the hip flexors miss the controlled lift the exercise is for.'
+    - 'Letting the cable pull the leg back fast: the stretched end is uncontrolled, where the front of the hip is most exposed.'
   programming_notes: []
   alternatives: []
   complements:
@@ -539,7 +560,7 @@
   overlaps_with:
     - hanging-knee-leg-raise (core module)
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=m-7bfUhHOH4
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To: Standing Cable Hip Flexion"

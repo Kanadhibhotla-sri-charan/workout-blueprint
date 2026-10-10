@@ -39,8 +39,15 @@
   limitations:
     - Bodyweight is a large, all-or-nothing jump in load for anyone who can't yet do a full rep, and there's no easy way to fine-tune the resistance down without a band or assisted machine.
     - Grip strength commonly runs out before the lats do, especially for lifters who haven't built grip capacity separately.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Hang from the bar with an overhand grip slightly wider than the shoulders and the arms fully straight.'
+    - 'Draw the shoulder blades down, then pull the chest toward the bar by driving the elbows down to the sides.'
+    - 'Pull until the chin clears the bar, keeping the legs still beneath you.'
+    - 'Lower under control until the arms are fully straight before the next rep.'
+  common_mistakes:
+    - 'Kicking or swinging the legs to get up: momentum does the work the lats are meant to do.'
+    - 'Stopping short of straight arms at the bottom: cuts off the bottom of the range, so each rep does less work.'
+    - 'Craning the neck to get the chin over the bar: the rep looks complete while the body hasn''t actually risen.'
   programming_notes: []
   alternatives: []
   complements:
@@ -49,7 +56,7 @@
     - chin-up-supinated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=eGo4IYlbE5g
   video_creator: Calisthenicmovement
   video_title: "The Perfect Pull Up  - Do it right!"
@@ -223,8 +230,15 @@
   limitations:
     - Same lean-back and momentum risk as the wide pronated version — the seated position makes it easy to recruit the trunk once the load is heavy.
     - The closer grip and increased biceps involvement mean less of the pull's tension is specifically isolated to the back muscles.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit with the thighs under the pads and grip the bar underhand at about shoulder width.'
+    - 'Lean back slightly with the chest up and the arms straight.'
+    - 'Pull the bar to the upper chest by driving the elbows down and back toward the ribs.'
+    - 'Let the bar rise under control until the arms are fully straight before the next rep.'
+  common_mistakes:
+    - 'Leaning far back and rocking to pull the weight down: the trunk and momentum do the work instead of the lats.'
+    - 'Stopping short of straight arms at the top: cuts off the stretched part of the pull, so each rep does less work.'
+    - 'Pulling with the hands and wrists curled: the biceps and forearms take over more of the pull than the back.'
   programming_notes: []
   alternatives: []
   complements:
@@ -233,7 +247,7 @@
     - chin-up-supinated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=SNiwpA13ZLU
   video_creator: PureGym
   video_title: How To Do A Reverse Grip Lat Pulldown
@@ -278,8 +292,15 @@
   limitations:
     - Not every cable station has a neutral-grip attachment available, which limits how consistently this specific grip can be programmed.
     - The joint-friendlier angle comes at some cost to range of motion on certain machines, depending on where the handle attachment sits relative to the body.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Attach a neutral-grip handle, sit with the thighs under the pads, and hold the handles with the palms facing each other.'
+    - 'Lean back slightly with the chest up and the arms straight.'
+    - 'Pull the handle to the upper chest by driving the elbows down and back toward the ribs.'
+    - 'Let the handle rise under control until the arms are fully straight before the next rep.'
+  common_mistakes:
+    - 'Leaning far back and rocking to pull the weight down: the trunk and momentum do the work instead of the lats.'
+    - 'Stopping short of straight arms at the top: cuts off the stretched part of the pull, so each rep does less work.'
+    - 'Shrugging the shoulders up as the handle rises: the shoulders lose position and the lats stop working at the top.'
   programming_notes: []
   alternatives: []
   complements:
@@ -288,7 +309,7 @@
     - lat-pulldown-wide-pronated
     - reverse-grip-lat-pulldown
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=L5ASC8r8_Fs
   video_creator: josh cowan
   video_title: Exercise Tutorial - Neutral Grip Lat Pulldown
@@ -473,8 +494,15 @@
   limitations:
     - Same lower-back and technical demands as the overhand version — the hinge position doesn't get any easier or safer just because the grip changed.
     - The underhand grip can aggravate elbow or bicep-tendon sensitivity in some lifters at heavier loads.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Grip the bar underhand at about shoulder width and hinge at the hips with soft knees until the torso is well inclined, with the back flat.'
+    - 'Let the bar hang at arm''s length, then brace the trunk before each rep.'
+    - 'Pull the bar toward the lower stomach, driving the elbows back close to the sides.'
+    - 'Lower under control to straight arms while keeping the torso angle fixed.'
+  common_mistakes:
+    - 'The torso rising with each rep: the row turns into a shrug-and-lean, and the back muscles move less of the weight.'
+    - 'Rounding the lower back under load: the main injury risk on this lift.'
+    - 'Curling the bar up with the wrists and forearms: the biceps take over, and the elbow strain the record warns about increases.'
   programming_notes: []
   alternatives: []
   complements:
@@ -482,7 +510,7 @@
   overlaps_with:
     - barbell-bent-over-row-pronated
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=tyHegMDIEbQ
   video_creator: Dr. Allan Bacon
   video_title: Reverse-grip Bent-over Barbell Row Tutorial
@@ -660,8 +688,15 @@
   limitations:
     - The fixed handle position means grip width and hand angle can't be adjusted mid-set the way a barbell or dumbbell allows, which doesn't suit every lifter's shoulder mechanics.
     - Requires a dedicated T-bar station or a landmine attachment, which isn't available in every gym the way a barbell is.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Straddle the bar (or stand on the T-bar platform), grip the handle, and hinge at the hips with soft knees until the torso is well inclined with a flat back.'
+    - 'Let the weight hang at arm''s length, then brace the trunk before each rep.'
+    - 'Pull the handle toward the lower chest by driving the elbows back.'
+    - 'Lower under control to straight arms while keeping the torso angle fixed.'
+  common_mistakes:
+    - 'The torso rising with each rep: the row turns into a lean-back, and the back muscles move less of the weight.'
+    - 'Rounding the lower back under load: the main injury risk on any bent-over row.'
+    - 'Jerking the weight up with the hips: momentum moves the weight instead of the back muscles.'
   programming_notes: []
   alternatives: []
   complements:
@@ -671,7 +706,7 @@
     - reverse-grip-barbell-row
     - chest-supported-row
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=j3Igk5nyZE4
   video_creator: ScottHermanFitness
   video_title: "How To: T-Bar Row"
@@ -715,8 +750,15 @@
     - The technical demand and injury stakes are higher than almost any other lift in this dataset — poor bar path or a rounded back under heavy load carries real risk.
     - Recovery cost is high relative to most other back exercises, since the whole posterior chain and central nervous system are taxed, not just the back muscles.
     - Grip is often the first thing to fail at heavy loads, which can end a set before the back and legs reach their true strength limit unless straps or a mixed grip are used.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand with the feet about hip width apart and the bar over the middle of the feet, then grip it just outside the legs.'
+    - 'Bend the knees until the shins touch the bar, set a flat back with the chest up, and brace hard.'
+    - 'Push the floor away and stand up, keeping the bar against the legs until the hips and knees lock out together.'
+    - 'Lower the bar by pushing the hips back first, then bending the knees once it passes them, keeping the back flat.'
+  common_mistakes:
+    - 'Rounding the lower back off the floor: the main injury risk of the lift.'
+    - 'Letting the bar drift away from the legs: the lower back takes far more load and the lift gets harder.'
+    - 'Hips shooting up first: the legs straighten early and the back does the lifting.'
   programming_notes: []
   alternatives: []
   complements:
@@ -726,7 +768,7 @@
     - romanian-deadlift (hamstrings module) — related but distinct hinge that starts from the top and never fully unloads.
     - sumo-deadlift (quads module) — same floor pull, wide stance, emphasis shifted toward quads and adductors.
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=GxsLrTzyGUU
   video_creator: PureGym
   video_title: How to Do A Conventional Deadlift Correctly
@@ -772,16 +814,23 @@
   limitations:
     - Skipping the floor-level range means it does not build pulling strength or technique off the floor — it should not be mistaken for a full deadlift substitute.
     - The heavier loads this position allows can tempt lifters into using more back rounding or momentum than they would with a full-range pull, since the working range is shorter and the ego-load temptation is higher.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the safety pins or blocks so the bar starts at or just below the knees, then step up with the feet about hip width apart.'
+    - 'Grip the bar just outside the legs, set a flat back, and brace before each rep.'
+    - 'Drive the hips forward to stand tall, keeping the bar close to the thighs, and finish with the hips and knees straight.'
+    - 'Lower the bar back to the pins under control with a flat back.'
+  common_mistakes:
+    - 'Rounding the back because the load is heavy: the main injury risk, made worse by the bigger weights this position allows.'
+    - 'Leaning back hard at the top: the lower back is forced into extension instead of the hips finishing the lift.'
+    - 'Bouncing the bar off the pins between reps: momentum replaces the start of each pull.'
   programming_notes: []
   alternatives: []
   complements:
-    - A full-range deadlift or Romanian deadlift, which covers the bottom-range work this movement skips.
+    - A Romanian deadlift, which covers the bottom-range hinge work this movement skips.
   overlaps_with:
     - conventional-deadlift
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=WkfOa33J-QM
   video_creator: Live Lean TV Daily Exercises
   video_title: "How To Do A BARBELL RACK PULL | Exercise Demonstration Video and Guide"
@@ -823,13 +872,20 @@
     - A strong mechanical-tension stimulus per side is wanted, with the free arm and slight trunk rotation allowing a bit more range and stretch than a bilateral row, or a lagging side needs to be brought level with the other.
   less_suitable_when:
     - The extra per-side volume needed to match a bilateral row's total work makes this a less efficient way to accumulate back-thickness volume when session time or fatigue budget is tight.
-  mirror_effect: Same thickness-building visible direction as a bilateral row, trained and visible one side at a time — useful for closing a visible left-right back- thickness difference the bilateral versions can't target directly.
+  mirror_effect: Same thickness-building visible direction as a bilateral row, trained and visible one side at a time — useful for closing a visible left-right back-thickness difference the bilateral versions can't target directly.
   advantages: []
   limitations:
     - Per-side volume needs to roughly double to match a bilateral row's total work, which makes this a slower way to accumulate back-thickness volume when time is limited.
     - The free hand and knee typically brace on a bench, and a wobbly or poorly positioned base can cap how much weight can be handled safely before the target muscles are the limiter.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Place one hand and the same-side knee on a flat bench, with the other foot on the floor and the back flat and roughly parallel to the floor.'
+    - 'Let the dumbbell hang straight below the shoulder, with a slight stretch through the side of the back.'
+    - 'Pull the dumbbell toward the hip by driving the elbow back close to the body, until the elbow passes the torso.'
+    - 'Lower under control until the arm is straight again, then finish all reps before switching sides.'
+  common_mistakes:
+    - 'Twisting the torso open to lift the weight: momentum and trunk rotation move the dumbbell instead of the back.'
+    - 'Pulling the dumbbell toward the chest with the elbow flared: shifts the work toward the upper back and rear delt and away from the lats.'
+    - 'Shrugging the shoulder toward the ear at the top: the upper traps take over the end of the pull.'
   programming_notes: []
   alternatives: []
   complements:
@@ -838,7 +894,7 @@
     - barbell-bent-over-row-pronated
     - chest-supported-row
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=pYcpY20QaE8
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Bent-Over Row (Single-Arm)"
@@ -1072,8 +1128,15 @@
   limitations:
     - The controlled lumbar extension this execution deliberately uses is exactly the technique cue that's easy to overdo, so anyone new to the movement should build up load and range gradually rather than starting aggressively.
     - Loading options are limited on most equipment — a plate held to the chest or a light barbell across the back is usually the practical ceiling before stability becomes the limiter.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the pad at the hips so the legs stay fairly straight, hook the heels under the rollers, and cross the arms over the chest.'
+    - 'Lower the torso by rounding the back one section at a time, starting from the upper back, as far as is comfortable.'
+    - 'Raise the torso by uncurling the spine back to a straight line with the legs.'
+    - 'Start with bodyweight and add load only in small steps, ending the set if any back pain appears.'
+  common_mistakes:
+    - 'Arching hard past a straight line at the top: the lower back is forced into extension under load beyond what the movement needs.'
+    - 'Swinging up quickly from the bottom: momentum replaces the controlled spinal extension the exercise trains.'
+    - 'Adding load too soon: the lower back is the limiting tissue here, and it needs a gradual build-up.'
   programming_notes: []
   alternatives: []
   complements:
@@ -1082,7 +1145,7 @@
     - romanian-deadlift (hamstrings module)
     - back-extension-45-hip-dominant (hamstrings module) — same equipment, hip-hinge-dominant execution, hamstring/glute bias instead.
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=5_ejbGfdAQE
   video_creator: Renaissance Periodization
   video_title: 45 Degree Back Raise

@@ -166,8 +166,15 @@
   limitations:
     - The fixed rail path doesn't match every lifter's natural press arc, and pressing straight up rather than slightly forward can load the shoulder joint uncomfortably for some.
     - It removes the stabilizer training that a free-weight press provides, so strength built here transfers only partially back to an unassisted press.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set a bench with an upright back under the bar so it comes down just in front of the face, and sit with the back flat against the pad.'
+    - 'Grip the bar slightly wider than shoulder width and unrack it by rotating it off the hooks.'
+    - 'Lower the bar under control to about chin or upper-chest height.'
+    - 'Press back up until the arms are nearly straight, with the safety stops set just above the shoulders.'
+  common_mistakes:
+    - 'Bench placed so the bar comes down onto the head or behind it: the fixed path forces the shoulders into an awkward position.'
+    - 'Arching the lower back off the pad to finish reps: turns it into an incline press.'
+    - 'Shrugging the shoulders toward the ears at the top: the upper traps take over the end of the press.'
   programming_notes: []
   alternatives: []
   complements:
@@ -177,7 +184,7 @@
     - seated-machine-shoulder-press
     - cable-shoulder-press
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=cEBAJ6lAQS4
   video_creator: FIT.nl
   video_title: "Smith Machine Shoulder Press | Proper Form Tutorial for Shoulder Strength"
@@ -213,13 +220,20 @@
     - An overhead press that stays hard at the top of the range is wanted, or a lower-fatigue finisher after a heavier press.
   less_suitable_when:
     - The priority is the heaviest possible loading for a strength-driven stimulus, which free weights deliver more of.
-  mirror_effect: Same front-delt visible direction as a barbell or machine overhead press, just at a lighter load ceiling — a supplementary contributor to front- shoulder size rather than a primary one.
+  mirror_effect: Same front-delt visible direction as a barbell or machine overhead press, just at a lighter load ceiling — a supplementary contributor to front-shoulder size rather than a primary one.
   advantages: []
   limitations:
     - Absolute load is capped well below what a barbell or heavy dumbbells allow, so this isn't a strength-building substitute for a free-weight press.
     - Requires dual cable stations or a dedicated cable press setup, which isn't available in every gym the way a barbell or dumbbells are.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set both pulleys low, stand between them, and hold a handle in each hand at shoulder height with the palms facing forward.'
+    - 'Brace the abs and squeeze the glutes so the lower back stays neutral.'
+    - 'Press the handles up until the arms are nearly straight overhead.'
+    - 'Lower under control to shoulder height, keeping tension on the cables between reps.'
+  common_mistakes:
+    - 'Arching the lower back to finish the press: shifts the load onto the lower back and toward the upper chest.'
+    - 'Letting the handles drop fast to the shoulders: the bottom of the press is uncontrolled.'
+    - 'Shrugging the shoulders toward the ears at the top: the upper traps take over the end of the press.'
   programming_notes: []
   alternatives: []
   complements:
@@ -229,7 +243,7 @@
     - seated-machine-shoulder-press
     - smith-machine-shoulder-press
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Zy1dc-20Uik
   video_creator: OriGym
   video_title: "How To Do Cable Shoulder Press | Exercise Demo"
@@ -642,8 +656,15 @@
   limitations:
     - Machine pivot-point and pad fit vary a lot between models, and a poor match can blunt the rear-delt tension regardless of how heavy the stack is loaded.
     - Availability is a real constraint — this specific machine isn't as universal in gyms as a cable station or dumbbells.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Sit facing the pad with the chest against it and set the seat so the handles are at shoulder height.'
+    - 'Hold the handles with the arms nearly straight in front of the body and a slight, fixed bend in the elbows.'
+    - 'Sweep the arms out and back in a wide arc, leading with the backs of the hands, until the upper arms are level with the torso.'
+    - 'Return under control to the front before the next rep.'
+  common_mistakes:
+    - 'Squeezing the shoulder blades hard together to finish each rep: the mid-back takes over the end of the movement from the rear delts.'
+    - 'Bending the elbows more as the set gets hard: turns it into a row, and the back muscles take over.'
+    - 'Lifting the chest off the pad to swing the handles back: momentum moves the weight instead of the rear delts.'
   programming_notes: []
   alternatives: []
   complements:
@@ -651,7 +672,7 @@
   overlaps_with:
     - rear-delt-fly
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=nnn9kg33K2g
   video_creator: ELEFITTV
   video_title: How To Properly Target Rear Delts On Reverse Fly Machine
@@ -693,18 +714,25 @@
   limitations:
     - Keeping the elbows below the wrists throughout the pull takes real technical attention — it's an easy cue to lose under fatigue, at which point the movement drifts toward a standard row.
     - Requires a cable station and some trial and error with the angle and height to hold the resistance specifically on the rear delt, more setup than a simple fly.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set a pulley at about chest height with a rope or handle, step back until the arms are straight, and stand tall.'
+    - 'Pull back with the elbows travelling out to the sides and kept below the wrists throughout.'
+    - 'Pull until the upper arms are level with the shoulders and the hands are in line with or slightly behind the ears.'
+    - 'Return under control until the arms are straight, keeping the elbows below the wrists the whole way.'
+  common_mistakes:
+    - 'Letting the elbows rise above the wrists: the movement drifts toward a standard row and the rear-delt angle is lost.'
+    - 'Leaning back to pull the weight: the torso does the work instead of the rear delts.'
+    - 'Shrugging the shoulders toward the ears: the upper traps take over the pull.'
   programming_notes: []
   alternatives: []
   complements:
-    - A rear-delt fly and a face pull, which cover a stretched isolation position and a rotation component the row does not.
+    - Side-delt and pressing work.
   overlaps_with:
     - rear-delt-fly
     - face-pull
     - rear-delt-row
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=ATSjVXoOgVg
   video_creator: OriGym
   video_title: "How To Do Cable Rear Delt Fly | Exercise Demo"

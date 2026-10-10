@@ -237,8 +237,15 @@
   limitations:
     - Same load ceiling issue as the free-weight reverse curl — the pronated grip is inherently weaker, so even with constant cable tension the absolute stimulus stays modest.
     - Requires a low pulley and enough cable-station availability, which is a real setup constraint compared to the barbell or dumbbell version.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Attach a straight or EZ bar to a low pulley, stand a short step back, and hold the bar with an overhand grip at shoulder width.'
+    - 'Pin the elbows at the sides and keep the wrists straight, in line with the forearms.'
+    - 'Curl the bar up by bending only at the elbows until the forearms are close to vertical.'
+    - 'Lower under control until the arms are fully straight, keeping the stack off its rest between reps.'
+  common_mistakes:
+    - 'Letting the wrists bend back as the bar rises: the wrist extensors lose their position and the grip weakens.'
+    - 'Leaning back to lift the weight: the torso does the work instead of the forearms and upper arms.'
+    - 'Elbows drifting forward at the top: the front of the shoulder helps lift and the target muscles unload.'
   programming_notes: []
   alternatives: []
   complements:
@@ -246,7 +253,7 @@
   overlaps_with:
     - reverse-curl
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=8uQdYcCUOu8
   video_creator: Health Hunt
   video_title: Reverse Cable Curl - For Amazing Bicep Gains
@@ -292,8 +299,15 @@
     - The whole-body fatigue cost is disproportionate to the forearm-specific stimulus it delivers, so it's an inefficient choice when forearm growth alone is the goal.
     - Grip and traps usually fatigue well before the rest of the body does, so it doesn't double as meaningful leg or cardiovascular conditioning despite the systemic fatigue it produces.
     - Space and equipment requirements (a clear walking lane, loaded handles or dumbbells) make it harder to fit into a typical gym session than most forearm work.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Pick up a heavy dumbbell or farmer''s handle in each hand with a flat back, as in a deadlift, and stand tall.'
+    - 'Hold the weights at the sides with the shoulders down and back and the grip crushing the handles.'
+    - 'Walk with short, controlled steps, keeping the torso upright and the weights from swinging.'
+    - 'At the end of the distance or time, set the weights down with a flat back rather than dropping them.'
+  common_mistakes:
+    - 'Picking the weights up with a rounded back: the lower back takes the load before the carry even starts.'
+    - 'Letting the shoulders round forward and the traps shrug up: the posture collapses and the grip work becomes a shoulder strain.'
+    - 'Taking long, fast strides: the weights swing and the carry turns into a balance fight rather than a grip hold.'
   programming_notes: []
   alternatives: []
   complements:
@@ -301,7 +315,7 @@
   overlaps_with:
     - barbell-dumbbell-shrug (back module)
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=z7E_YU9P1jU
   video_creator: Dr. Carl Baird
   video_title: "How to Perform the Farmer's Carry"
@@ -348,15 +362,22 @@
   limitations:
     - The rotational range of motion is small and the muscles involved are minor, so the achievable mechanical-tension stimulus is inherently limited regardless of how it's loaded.
     - It's easy to substitute wrist or shoulder rotation for true forearm pronation/supination if the setup doesn't isolate the movement well, diluting the intended stimulus.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Rest the forearm on a bench or the thigh with the wrist just past the edge, holding the offset handle (or the band or cable handle) with the elbow bent.'
+    - 'Keep the forearm and elbow still on the support so only the forearm rotates.'
+    - 'Rotate the palm slowly down as far as it comfortably goes, then up as far as it comfortably goes.'
+    - 'Use a light load and complete the reps on one side before switching.'
+  common_mistakes:
+    - 'Lifting the elbow or rotating the shoulder to turn the handle: the shoulder does the rotation instead of the forearm.'
+    - 'Letting the handle drop through the range: the rotation is uncontrolled and the small forearm muscles lose the load.'
+    - 'Starting too heavy or too far from the hand on an offset handle: the wrist is strained before the forearm muscles are worked.'
   programming_notes: []
   alternatives: []
   complements:
     - Wrist curls, reverse wrist curls, and grip work.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=QcWHURpW_GY
   video_creator: Hugh Simson
   video_title: Forearm Pronation and Supination exercise
