@@ -9,6 +9,8 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | `metadata`: title / channel checked via oEmbed; footage **not** watched | 136 |
 | `visual`: watched by a person | **4** (cable-rear-delt-builder, cable-pull-through, upright-row-wide-grip, cable-band-external-rotation; owner review, 2026-10-10) |
 
+**Phase closed (2026-10-10):** the owner approved all remaining video references by default (`VIDEO-VERIFICATION-CLOSURE.md`). Owner-approved: 140 / 140. Watched (`visual`): 4 / 140. Metadata-only, approved by default and **not watched**: 136 / 140.
+
 ### Video verification batch 1: watch log (human review)
 
 Results are recorded exactly as reported by the reviewer. Data changes (`metadata` → `visual`) are applied only after owner approval, so the counts above stay unchanged until then.
