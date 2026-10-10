@@ -32,6 +32,8 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | Wolf et al. 2025, PMID 39959841 | PeerJ 13:e18904 | Lengthened partials produced similar, not greater, hypertrophy than full ROM in trained lifters | **Matches** |
 | Bloomquist et al. 2013 | Eur J Appl Physiol, PMID 23604798 | Deep (0–120°) vs shallow (0–60°) squat training, 12 weeks | Design **matches**; the regional-CSA detail was not checked against the full text |
 | Wolf et al. 2023 | Int J Strength Cond 3(1), systematic review / meta-analysis | Some notes: "lengthened partial-ROM training matched **or exceeded** full ROM, with both beating shortened-position training" | **Overstated.** The lengthened-partial subgroup estimate was inconclusive (CI spans zero); overall a trivial difference favouring full ROM. "Tends to match or beat" wording elsewhere is acceptable |
+| Oliveira et al. 2009, PMC3737788 (identified in the P3 preacher review; previously "citation unresolved") | J Sports Sci Med 8(1):24–29, PMID 24150552 | Dumbbell preacher curl: biceps EMG highest early in the concentric range (near full extension), falling toward the top; incline and standing curls high through the range | **Matches**, from the PMC full text. Caveats: pad angle not reported; the methods' posture labelling is unclear; 40% MVC load |
+| Nunes et al. 2020, PMC7460162 (new citation, P3 preacher review) | Int J Environ Res Public Health 17(16):5859 | Barbell preacher curl described as applying greater torque with the elbows extended, cable version with the elbows flexed; biceps thickness +8% vs +7% (no difference) | **Matches**. The torque statement is the authors' qualitative description, not a measured curve; pad angle not reported |
 | "Kassiano et al. (2024, PMC11906226)" | **Attarieh et al. 2025**, Eur J Sport Sci 25(4):e12279 (preacher vs Bayesian cable curl) | Cited as the clearest direct evidence **for** a shoulder-position (long-head) effect | **Misattributed and misstated.** Wrong authors and year; the study found **similar** growth at every measured site and no regional difference |
 
 ### Citations that cannot be verified as written
@@ -56,7 +58,7 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | preacher-curl-machine | needs-review | Evidence quality corrected from "moderate" to "low", consistent with preacher-curl (Batch 1 closure) |
 | drag-curl | needs-review | No longer claims EMG ties shoulder extension to a long-head bias; cites Attarieh et al. 2025 as finding no regional difference (Batch 1 closure) |
 
-**Unresolved citations are labelled in the note itself** ("citation unresolved: …"). Nothing was guessed or substituted. Open: incline-dumbbell-curl (EMG, formerly "Lehman, 2005-era"); hip-thrust (EMG, formerly "Contreras et al.-era", and its 2-3x figure); preacher-curl (EMG activation-window note, labelled in the Batch 1 closure).
+**Unresolved citations are labelled in the note itself** ("citation unresolved: …"). Nothing was guessed or substituted. Open: incline-dumbbell-curl (EMG, formerly "Lehman, 2005-era"); hip-thrust (EMG, formerly "Contreras et al.-era", and its 2-3x figure). Resolved in the P3 preacher review: preacher-curl EMG activation-window note → Oliveira et al. 2009, checked against the PMC full text.
 
 ### Not yet re-checked
 

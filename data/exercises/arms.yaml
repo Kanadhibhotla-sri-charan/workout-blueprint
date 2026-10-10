@@ -182,11 +182,11 @@
 - id: preacher-curl
   name: Preacher Curl
   summary: Fixes the upper arm forward on a pad, removing swing for a strict, shortened-position biceps stimulus.
-  why_this_exists: Fixes the upper arm forward on a pad, which removes swing and keeps tension nearer the top of the range.
+  why_this_exists: Fixes the upper arm forward on a pad, which removes swing. With a barbell, EZ-bar or dumbbells the curl is hardest with the elbows near straight and gets easier toward the top; the exact curve depends on the pad angle.
   body_regions:
     - arms
   primary_targets:
-    - biceps (short-head-biased, EMG-supported)
+    - biceps (short-head bias proposed, not confirmed by hypertrophy data)
   secondary_targets:
     - brachialis
   physique_targets:
@@ -225,7 +225,7 @@
   technique_cues: []
   common_mistakes: []
   programming_notes:
-    - "EMG shows preacher curls produce a short, bottom-loaded activation window (high activation early in the concentric phase, dropping off as the elbow flexes) compared to the sustained activation of an incline curl through the whole range — citation unresolved: the EMG source for this has not been identified. EMG shows activation, not growth, and the one direct hypertrophy comparison found no short-head advantage (see evidence_notes)."
+    - "EMG shows preacher curls produce a short, bottom-loaded activation window (high activation early in the concentric phase, dropping off as the elbow flexes) compared to the sustained activation of an incline curl through the whole range. Source: Oliveira et al. (2009, Journal of Sports Science and Medicine 8(1):24-29, PMC3737788), dumbbell preacher curl at 40% of maximal voluntary contraction: biceps activation was highest in the first third of the concentric range, near full extension, and fell toward the top, while incline and standing curls stayed high through the range. The paper does not report the pad angle. EMG shows activation, not growth, and the one direct hypertrophy comparison found no short-head advantage (see evidence_notes)."
     - "Spider curl variation: lying chest-down on an incline bench with the arms hanging straight down gives the same arm-in-front position without a preacher pad. Tension is highest near the top instead of at the bottom."
   alternatives: []
   complements:
@@ -234,6 +234,7 @@
     - preacher-curl-machine
   evidence_notes:
     - "Same shoulder-position question as the incline curl's long-head claim, applied in reverse: shoulder flexion (preacher) vs. shoulder extension (incline). The closest direct hypertrophy comparison, Attarieh et al. (2025, European Journal of Sport Science, PMC11906226), trained a preacher cable curl against a Bayesian cable curl and found similar growth at every measured biceps and brachialis site, with no regional difference, so a short-head or base-width bias is not confirmed by hypertrophy data. Evidence quality: low."
+    - "Where the free-weight preacher curl is hardest: Oliveira et al. (2009, Journal of Sports Science and Medicine 8(1):24-29, PMC3737788) measured the highest biceps EMG near full extension, falling toward the top. Nunes et al. (2020, International Journal of Environmental Research and Public Health 17(16):5859, PMC7460162) describe barbell preacher curls as applying greater torque with the elbows extended and cable preacher curls with the elbows flexed (a qualitative description, not a measured torque curve); in their 10-week trial biceps thickness grew similarly in both (8% vs 7%). Neither paper reports the pad angle. Evidence quality: moderate for where the free-weight version is hardest; no support for a growth advantage either way."
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=fIWP-FRFNU0
   video_creator: KAGED
@@ -248,7 +249,7 @@
   body_regions:
     - arms
   primary_targets:
-    - biceps (short-head-biased, EMG-supported)
+    - biceps (short-head bias proposed, not confirmed by hypertrophy data)
   secondary_targets:
     - brachialis
   physique_targets:
