@@ -352,7 +352,7 @@
     - cable-hammer-curl-rope
     - cross-body-hammer-curl
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=zC3nLlEvin4
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Hammer Curl"
@@ -754,7 +754,7 @@
     - dip-triceps-biased
   evidence_notes:
     - "The \"lateral- and medial-head-biased\" claim carried by this record (and by dip-triceps-biased, cable-pushdown, machine-triceps- extension, and triceps-kickback below) is corrected here: it isn't supported by the same kind of evidence as the long-head claim. The long head crosses the shoulder joint, so its length — and therefore its bias — changes with shoulder position, which is what Maeo et al. (2023, see overhead-triceps-extension) actually measured. The lateral and medial heads only cross the elbow, so shoulder position does not change their length the same way, and no equivalent study was found showing these two heads are differentially biased by grip, shoulder-extension, or non-overhead elbow-extension movements specifically. The safest claim these movements support is that they train the triceps as a whole, with the long head under less stretch than an overhead position provides — not a specific lateral/medial split."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=nEF0bv2FW94
   video_creator: ScottHermanFitness
   video_title: "How To: Close-Grip Barbell Bench Press"
@@ -880,7 +880,7 @@
     - "Arching the lower back to get the weight overhead: brace the core, or sit with back support."
     - "Adding load faster than the elbows tolerate: elbow pain usually starts at the bottom of the stretch."
   programming_notes:
-    - "Band version: stand in a split stance with the band under the back foot, hold the ends behind the head and extend overhead. Step further from the anchor or shorten the band to add resistance."
+    - "Band version: stand in a split stance with the band under the back foot, hold the ends behind the head and extend overhead. Shorten the band or use a stronger band to add resistance."
   alternatives: []
   complements:
     - A pressing movement or a pushdown.

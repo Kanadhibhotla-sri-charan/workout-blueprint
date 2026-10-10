@@ -353,7 +353,7 @@
     - t-bar-row
     - single-arm-dumbbell-row
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=bmWA2yO9Aa0
   video_creator: Testosterone Nation
   video_title: Chest-Supported Row Machine
@@ -855,7 +855,7 @@
   coverage_categories:
     - isolation
     - low-fatigue
-  resistance_profile: Constant cable tension. A band anchored overhead (for example looped over a pull-up bar) gets lighter as the hands approach the thighs, so it is hardest near the start, in the stretched position.
+  resistance_profile: Constant cable tension. A band anchored overhead (for example looped over a pull-up bar) stretches further as the hands approach the thighs, so it gets heavier through the pull and is hardest at the end, in the shortened position, unlike the even tension of a cable.
   stability_demand: low
   skill_demand: low
   setup_time: low
@@ -1009,7 +1009,7 @@
     - Mid- and lower-trap work such as rows or face pulls.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=X26Ji1j9LWA
   video_creator: The Strength Institute
   video_title: Barbell Shrugs - Tutorial
