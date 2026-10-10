@@ -270,8 +270,15 @@
   limitations:
     - Machine handle position and pressing angle vary a lot between models, and a poor fit can put more stress on the shoulder joint than the muscle.
     - Removing the balance and bracing demand also removes the stabilizer training a free-weight press provides, so the carryover to unassisted pressing is only partial.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the seat height so the handles start at about shoulder level, then sit with the back flat against the pad and the feet planted.'
+    - 'Grip the handles just outside shoulder width with the wrists stacked over the elbows.'
+    - 'Press the handles up until the arms are nearly straight, without shrugging the shoulders toward the ears.'
+    - 'Lower under control until the handles are back at about shoulder level before the next rep.'
+  common_mistakes:
+    - 'Seat set too low or too high: the press starts from an awkward shoulder position, putting more stress on the joint than on the delts.'
+    - 'Arching the lower back off the pad to finish reps: turns it into an incline press and shifts work onto the upper chest.'
+    - 'Cutting the range short at the bottom: misses the lower part of the press, so each rep does less work for the delts.'
   programming_notes: []
   alternatives: []
   complements:
@@ -281,7 +288,7 @@
     - cable-shoulder-press
     - smith-machine-shoulder-press
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=WvLMauqrnK8
   video_creator: Renaissance Periodization
   video_title: Machine Shoulder Press
@@ -928,15 +935,22 @@
   limitations:
     - The added protraction range is small and easy to skip without noticing, at which point it's functionally just a regular push-up.
     - As a durability and movement-quality drill, it contributes essentially nothing to shoulder size or strength on its own — it isn't a substitute for pressing volume.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set up in a high push-up position with the hands slightly wider than shoulder width and the body in one straight line from head to heels.'
+    - 'Do a normal push-up, lowering the chest toward the floor with the elbows angled back.'
+    - 'At the top, with the arms straight, push the floor further away so the upper back rounds slightly and the shoulder blades spread apart around the ribcage.'
+    - 'Let the shoulder blades settle back to neutral under control before starting the next rep.'
+  common_mistakes:
+    - 'Skipping the extra push at the top: it becomes an ordinary push-up and the serratus work is lost.'
+    - 'Hips sagging or piking during the plus: the trunk changes position instead of the shoulder blades moving.'
+    - 'Letting the shoulder blades snap back together between reps: the return is uncontrolled, so the drill loses the shoulder-blade control it''s meant to build.'
   programming_notes: []
   alternatives: []
   complements:
     - Overhead pressing and horizontal pulling.
   overlaps_with: []
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=RR5xJ1mXEV4
   video_creator: Matthew Stevens
   video_title: "Push-Up Plus | Push-Up Variation"

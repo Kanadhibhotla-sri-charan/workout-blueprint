@@ -680,8 +680,15 @@
   limitations:
     - The shoulder joint is placed in a vulnerable, widely stretched position at the bottom of the range, and going too heavy or too deep raises real injury risk.
     - Load progression is inherently limited — the stretched bottom position caps how much weight can be handled safely well below what a press allows.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie flat on a bench holding the dumbbells above the chest, palms facing each other, with a slight, fixed bend in the elbows.'
+    - 'Keep the shoulder blades pulled back and down against the bench, with the feet planted.'
+    - 'Open the arms out to the sides in a wide arc until the upper arms are about level with the body, or until you feel a comfortable stretch across the chest.'
+    - 'Bring the dumbbells back up along the same arc without changing the elbow bend, stopping just before they touch.'
+  common_mistakes:
+    - 'Bending the elbows more on the way up: the fly turns into a press and the triceps take over from the chest.'
+    - 'Lowering past what the shoulders tolerate, especially with heavy dumbbells: the shoulder is loaded at its most stretched and vulnerable point.'
+    - 'Clanking the dumbbells together at the top: momentum carries the top of the rep, where the load is already lightest.'
   programming_notes: []
   alternatives: []
   complements:
@@ -694,7 +701,7 @@
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press applies to the mid-bias claim here — see that record's evidence_notes. No study specific to the fly (adduction) pattern rather than a press was located, so this is an extrapolation from press data to a fly, not a direct finding.
     - "Separately, the \"strong stretch-mediated growth stimulus\" claim draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning, meta-analysis) found full and partial ROM produced broadly similar hypertrophy, with a possible but inconclusive advantage for partials at long muscle lengths. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so \"strong\" should be read as a well-supported direction, not a settled magnitude. This is a general principle, not a fly-specific finding."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=eozdVDA78K0
   video_creator: ScottHermanFitness
   video_title: "How To: Dumbbell Flys On A Flat Bench"
