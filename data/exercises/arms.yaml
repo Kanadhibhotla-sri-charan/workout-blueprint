@@ -64,7 +64,7 @@
   video_verification_method: metadata
 - id: dumbbell-curl
   name: Dumbbell Curl
-  summary: The same standing curl as the barbell version, with independent arms for a fuller supination path and a bit more stretch.
+  summary: The same standing curl as the barbell version, with independent arms that can rotate through a fuller supination path.
   why_this_exists: The same standing curl as the barbell version, but independent arms let each side move and rotate on its own path, which some find kinder on the wrists and elbows.
   body_regions:
     - arms
@@ -90,7 +90,7 @@
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A full supination path through the rep is wanted for a bit more range and stretch than a fixed bar allows, or side-to-side differences need spotting.
+    - A full supination path through the rep is wanted, or side-to-side differences need spotting.
   less_suitable_when:
     - The heavier loading and fixed path a barbell allows is wanted for a stronger mechanical-tension stimulus.
   mirror_effect: Same overall biceps mass and peak direction as a barbell curl.
@@ -98,8 +98,15 @@
   limitations:
     - Absolute load is capped somewhat below a barbell's, since each arm has to stabilize its own dumbbell independently rather than sharing a single fixed bar.
     - Same momentum risk as the barbell version — body swing is an easy way to move more weight without adding real biceps tension.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand tall with a dumbbell in each hand, arms straight at the sides, palms facing forward or in toward the body.'
+    - 'Keep the upper arms still at the sides and curl the weights up by bending the elbows, turning the palms up as they rise if they started facing in.'
+    - 'Finish with the palms facing the shoulders, without letting the elbows drift forward.'
+    - 'Lower under control until the arms are fully straight before the next rep.'
+  common_mistakes:
+    - 'Swinging the body to start the rep: momentum moves the weight instead of the biceps.'
+    - 'Elbows drifting forward at the top: the front of the shoulder takes over and the biceps get a rest at the top.'
+    - 'Stopping short of straight arms at the bottom: cuts off the lower part of the range, so the biceps do less work per rep.'
   programming_notes:
     - "Concentration curl variation: seated, with the back of the upper arm braced against the inner thigh, one arm at a time. Bracing the arm removes swing, which makes it a strict single-arm option rather than a different stimulus."
   alternatives: []
@@ -111,7 +118,7 @@
     - zottman-curl
     - incline-dumbbell-curl
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=ykJmrZ5v0Oo
   video_creator: Howcast
   video_title: "How to Do a Dumbbell Biceps Curl | Arm Workout"

@@ -533,8 +533,8 @@
   video_verification_method: metadata
 - id: static-lunge
   name: Static Lunge
-  summary: A fixed-stance, in-place lunge removing the coordination and balance demand of a walking or reverse lunge.
-  why_this_exists: A fixed stance lunge performed in place, without stepping, which removes the coordination and balance demand of a walking or reverse lunge and lets effort go directly into the working leg.
+  summary: A fixed-stance, in-place lunge removing the stepping coordination of a walking or reverse lunge.
+  why_this_exists: A fixed stance lunge performed in place, without stepping, which removes the stepping coordination of a walking or reverse lunge and lets effort go directly into the working leg.
   body_regions:
     - quads
   primary_targets:
@@ -575,8 +575,15 @@
   limitations:
     - The stationary stance still demands real hip and ankle mobility to keep the front knee tracking well, and poor mobility can push stress onto the knee joint.
     - Load options are somewhat limited compared to a bilateral squat — grip and trunk-bracing demand from a shouldered or side-held load cap how heavy this can go before those become the limiter.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Take a long split stance with the feet about hip width apart side to side and the back heel raised, holding the load: a barbell on the upper back, dumbbells at the sides, or hands on the hips.'
+    - 'Lower straight down by bending both knees until the back knee nearly touches the floor, keeping the torso upright.'
+    - 'Keep the front foot flat and the front knee tracking in line with the toes.'
+    - 'Drive up through the whole front foot, stay in the same stance for every rep, then switch legs.'
+  common_mistakes:
+    - 'Feet in one line, as on a tightrope: balance fails and the hips twist, so the set ends before the legs are worked.'
+    - 'Pushing up mainly off the back leg: shifts the work away from the front leg''s quads.'
+    - 'The front heel lifting at the bottom: the load moves onto the toes and the front of the knee.'
   programming_notes:
     - "Bodyweight version: the same split-stance squat with the hands on the hips or held in front. Once high reps are easy, slow the lowering or add a pause at the bottom before reaching for weights."
   alternatives: []
@@ -586,7 +593,7 @@
     - walking-lunge
     - reverse-lunge
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=pwZtB9tcIk4
   video_creator: HASfit
   video_title: Stationary Lunge - HASfit Lunge Exercise Demonstration - Dumbbell Lunge - Barbell Lunge Workout

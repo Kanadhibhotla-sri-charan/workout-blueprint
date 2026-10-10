@@ -529,7 +529,7 @@
   video_verification_method: metadata
 - id: rear-delt-fly
   name: Rear-Delt Fly
-  summary: Direct, stretch-mediated rear-delt work that pressing-heavy routines commonly leave short.
+  summary: Direct rear-delt isolation work that pressing-heavy routines commonly leave short.
   why_this_exists: Direct rear-delt work, which pressing-heavy routines commonly leave short.
   body_regions:
     - shoulders
@@ -559,7 +559,7 @@
   setup_time: low
   fatigue_cost: low
   best_used_when:
-    - A stretch-mediated, isolated growth stimulus for the rear delts is wanted without adding another heavy pull to the session.
+    - An isolated growth stimulus for the rear delts is wanted without adding another heavy pull to the session.
   less_suitable_when:
     - The elbows bend enough that the movement turns into a row — the stimulus shifts toward a more mechanical-tension, less isolated rear-delt effect, which may or may not be what was wanted.
   mirror_effect: Tends to show up as roundness on the back of the shoulder, most visible from behind or the side — this fills out the shoulder's "3D" look rather than adding to front-view width, which is what lateral-delt work does instead.
@@ -567,8 +567,15 @@
   limitations:
     - Usable load is low since the posterior deltoid is a small muscle, and it's easy to substitute momentum or trap involvement for real range without noticing.
     - Elbow bend tends to creep in as the weight gets heavier, sliding the exercise toward a row and away from the isolated stimulus that's the point of this record.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Hinge at the hips until the torso is nearly parallel to the floor with a flat back, letting the dumbbells hang under the shoulders with a slight, fixed bend in the elbows.'
+    - 'Raise the arms out to the sides, leading with the backs of the hands, until the upper arms are level with the torso.'
+    - 'Keep the torso and neck still so the movement happens only at the shoulders.'
+    - 'Lower under control until the arms hang straight down again.'
+  common_mistakes:
+    - 'Bending the elbows more as the set gets hard: turns it into a row, and the back muscles take over from the rear delts.'
+    - 'Swinging the torso up to start each rep: momentum moves the weight instead of the rear delts.'
+    - 'Shrugging the shoulders toward the ears: the upper traps take over from the rear delts.'
   programming_notes:
     - "Band version: hold a band in front at shoulder height with straight arms and pull it apart until the hands are level with the shoulders, leading with the backs of the hands. A narrower grip on the band adds resistance."
   alternatives: []
@@ -579,9 +586,8 @@
     - cable-rear-delt-builder
     - rear-delt-row
     - machine-reverse-fly
-  evidence_notes:
-    - No hypertrophy trial specific to the rear-delt fly or posterior deltoid muscle length was located — this is a weaker claim than several of the other stretch-mediated claims in this dataset. It's an inference from the general stretch-mediated hypertrophy literature (Schoenfeld & Grgic, 2020, SAGE Open Medicine; Wolf et al., 2023, International Journal of Strength and Conditioning) and from the mechanical fact that resistance peaks near the horizontally abducted, stretched end of this movement's range, not a posterior-deltoid-specific finding. A later trial (Wolf et al., 2025, PubMed 39959841) found the general stretch advantage over full ROM is smaller than earlier work suggested, which further tempers how much weight this claim should carry.
-  review_status: needs-review
+  evidence_notes: []
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=hwBu73GZn98
   video_creator: Fit Father Project - Fitness For Busy Fathers
   video_title: "How To Do Rear Delt Flys With Dumbbells - Proper Form, Sets & Reps"

@@ -1091,13 +1091,20 @@
     - High-rep, pump-oriented chest volume is wanted, or a technique or warm-up tool, or a genuine mechanical-tension stimulus once loaded with a weight vest or band — bodyweight alone caps how much raw tension it can deliver for a trained lifter.
   less_suitable_when:
     - A set can be done for very high reps without real difficulty, which signals the stimulus has dropped closer to muscular endurance than the tension needed to drive further growth.
-  mirror_effect: Same mid-chest visible direction as a flat bench press, but modest unless loaded with a vest or band — bodyweight alone caps how much of a mass- building effect this delivers for a trained lifter.
+  mirror_effect: Same mid-chest visible direction as a flat bench press, but modest unless loaded with a vest or band — bodyweight alone caps how much of a mass-building effect this delivers for a trained lifter.
   advantages: []
   limitations:
     - Bodyweight alone caps the achievable load, so this stops being a meaningful mechanical-tension stimulus for a trained lifter without added resistance.
     - Adding load (a vest, band, or elevated feet) is needed to keep progressing past a beginner level, and not every setting has that equipment available.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the hands slightly wider than shoulder width with the fingers pointing forward, and hold the body in one straight line from head to heels by tightening the glutes and abs.'
+    - 'Lower the chest toward the floor with the elbows angled back at roughly 45 degrees from the torso, not flared straight out.'
+    - 'Go down until the chest is just above the floor, or as deep as the shoulders comfortably allow, keeping the hips in line with the shoulders.'
+    - 'Push the floor away to straight arms, moving the body as one piece.'
+  common_mistakes:
+    - 'Hips sagging toward the floor: the lower back arches and takes strain the trunk is meant to hold.'
+    - 'Elbows flared straight out to the sides: raises shoulder stress, as on a flat bench press.'
+    - 'Stopping well short of the floor: shortens the range the chest works through, so the set gets easier without becoming more productive.'
   programming_notes:
     - "Deficit variation: place the hands on blocks, plates or push-up handles so the chest can sink below hand level. The deeper bottom position stretches the chest further; lower only as far as the shoulders stay comfortable."
   alternatives: []
@@ -1107,8 +1114,8 @@
     - flat-barbell-bench-press
     - flat-dumbbell-press
   evidence_notes:
-    - Same mid-chest evidence as flat-barbell-bench-press — see that record's evidence_notes.
-  review_status: needs-review
+    - 'Inferred from flat-barbell-bench-press: see that record''s evidence_notes. Those studies tested barbell bench pressing, not push-ups; the push-up is assumed to share the flat press''s mid-chest emphasis because it is the same horizontal pressing pattern.'
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=IODxDxX7oi4
   video_creator: Calisthenicmovement
   video_title: "The Perfect Push Up | Do it right!"
