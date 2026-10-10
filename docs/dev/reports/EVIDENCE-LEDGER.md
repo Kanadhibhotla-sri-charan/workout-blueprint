@@ -53,7 +53,10 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | flat-dumbbell-fly | needs-review | Wolf 2023 corrected |
 | straight-arm-pulldown | reviewed | Wolf 2023 corrected |
 
-**Unresolved citations are labelled in the note itself** ("citation unresolved: …"). Nothing was guessed or substituted.
+| preacher-curl-machine | needs-review | Evidence quality corrected from "moderate" to "low", consistent with preacher-curl (Batch 1 closure) |
+| drag-curl | needs-review | No longer claims EMG ties shoulder extension to a long-head bias; cites Attarieh et al. 2025 as finding no regional difference (Batch 1 closure) |
+
+**Unresolved citations are labelled in the note itself** ("citation unresolved: …"). Nothing was guessed or substituted. Open: incline-dumbbell-curl (EMG, formerly "Lehman, 2005-era"); hip-thrust (EMG, formerly "Contreras et al.-era", and its 2-3x figure); preacher-curl (EMG activation-window note, labelled in the Batch 1 closure).
 
 ### Not yet re-checked
 

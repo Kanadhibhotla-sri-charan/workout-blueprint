@@ -120,7 +120,7 @@
   video_verification_method: metadata
 - id: incline-dumbbell-curl
   name: Incline Dumbbell Curl
-  summary: Places the upper arm behind the body for the strongest available stretch-mediated biceps growth stimulus.
+  summary: Places the upper arm behind the body to load the biceps at a long muscle length, a stretch position the standing curl's resistance curve barely loads.
   why_this_exists: Places the upper arm behind the body, so the load stays meaningful with the elbow near full extension.
   body_regions:
     - arms
@@ -146,7 +146,7 @@
   setup_time: medium
   fatigue_cost: low
   best_used_when:
-    - A strong stretch-mediated growth stimulus is wanted, which the extended shoulder position delivers in a way a standing curl cannot replicate.
+    - Biceps work at a long muscle length is wanted. The extended shoulder position provides it; a standing curl carries little load at the bottom of the range.
   less_suitable_when:
     - The shoulder position is uncomfortable, capping how much of that stretch can actually be used under load.
   mirror_effect: Often credited with favouring the long head, the outer part of the biceps associated with peak height, but the one direct hypertrophy comparison of shoulder positions found similar growth across the biceps, so treat any peak-versus-width shape effect as unproven. Its clearer value is loading the biceps at a long muscle length.
@@ -171,7 +171,7 @@
     - dumbbell-curl
   evidence_notes:
     - "A long-head bias in the shoulder-extended position is a common claim. It rests on mechanics (the long head crosses the shoulder, so shoulder extension lengthens it) and on EMG work on shoulder position (citation unresolved: the EMG studies previously cited as \"Lehman, 2005-era\" have not been identified or verified). The closest direct hypertrophy comparison, Attarieh et al. (2025, European Journal of Sport Science, PMC11906226), trained a shoulder-flexed preacher cable curl against a shoulder-extended Bayesian cable curl and found similar growth at every measured biceps and brachialis site, with no regional difference. The long-head bias is therefore not confirmed by hypertrophy data. Evidence quality: low."
-    - "Separate from the shoulder-position/long-head evidence above, this record's \"strongest stretch-mediated stimulus\" framing also draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning, meta-analysis) found full and partial ROM produced broadly similar hypertrophy, with a possible but inconclusive advantage for partials at long muscle lengths. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM in trained lifters — so \"strongest\" should be read as a well-supported direction, not a settled magnitude. This is a general training-science principle, not a finding from a study that used this specific exercise."
+    - "Separate from the shoulder-position/long-head evidence above, this record's stretch-position framing draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning, meta-analysis) found full and partial ROM produced broadly similar hypertrophy, with a possible but inconclusive advantage for partials at long muscle lengths. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM in trained lifters — so training at a long muscle length is a well-supported direction, not a proven advantage in size or a claim that this exercise beats other curls. This is a general training-science principle, not a finding from a study that used this specific exercise."
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=soxrZlIl35U
   video_creator: ScottHermanFitness
@@ -217,7 +217,7 @@
     - A strict, swing-free mechanical-tension stimulus is wanted late in a session, when standing curls would start to rely on momentum.
   less_suitable_when:
     - The bottom of the range feels uncomfortable under load, which can limit how much of the strict range actually gets used.
-  mirror_effect: Tends to contribute more to fullness and width at the base of the biceps near the elbow than to peak height, since the short head sits more toward the inner arm — a different part of the biceps shape than an incline curl emphasizes.
+  mirror_effect: Often credited with favouring the short head and fullness near the base of the biceps, but the one direct hypertrophy comparison of shoulder positions found similar growth across the biceps, so treat any width-versus-peak shape effect as unproven. Its clearer value is a strict curl with the upper arm fixed and swing removed.
   advantages: []
   limitations:
     - The bottom of the range can feel uncomfortable at the elbow for some lifters, especially near full extension under load, which can limit how much of the strict range gets used.
@@ -225,7 +225,7 @@
   technique_cues: []
   common_mistakes: []
   programming_notes:
-    - EMG shows preacher curls produce a short, bottom-loaded activation window (high activation early in the concentric phase, dropping off as the elbow flexes) compared to the sustained activation of an incline curl through the whole range — consistent with, though not conclusive proof of, a short-head bias.
+    - "EMG shows preacher curls produce a short, bottom-loaded activation window (high activation early in the concentric phase, dropping off as the elbow flexes) compared to the sustained activation of an incline curl through the whole range — citation unresolved: the EMG source for this has not been identified. EMG shows activation, not growth, and the one direct hypertrophy comparison found no short-head advantage (see evidence_notes)."
     - "Spider curl variation: lying chest-down on an incline bench with the arms hanging straight down gives the same arm-in-front position without a preacher pad. Tension is highest near the top instead of at the bottom."
   alternatives: []
   complements:
@@ -272,7 +272,7 @@
     - The preacher curl's strict, swing-free stimulus is wanted pushed safely to true failure or a drop set, since the fixed path removes any chance of the bar drifting to help.
   less_suitable_when:
     - The machine's pad or handle position doesn't suit the individual, which can blunt the tension felt regardless of how heavy the stack is loaded.
-  mirror_effect: Same visible direction as the free-weight preacher curl — fullness and width near the base of the biceps.
+  mirror_effect: Same as the free-weight preacher curl — often credited with fullness near the base of the biceps, but that shape effect is unproven (see preacher-curl's evidence_notes).
   advantages: []
   limitations:
     - Pad and handle position vary between machines, and a poor fit can blunt the tension felt or create elbow discomfort regardless of how heavy the stack is loaded.
@@ -286,7 +286,7 @@
   overlaps_with:
     - preacher-curl
   evidence_notes:
-    - "Same shoulder-position evidence as the free-weight preacher curl (this is the same shortened shoulder position on a fixed path). See preacher-curl's evidence_notes. Evidence quality: moderate."
+    - "Same shoulder-position question as the free-weight preacher curl (the same flexed shoulder position on a fixed path). See preacher-curl's evidence_notes: the one direct hypertrophy comparison found no regional difference. Evidence quality: low."
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=Ja6ZlIDONac
   video_creator: Renaissance Periodization
@@ -580,7 +580,7 @@
     - barbell-ez-bar-curl
     - cable-drag-curl
   evidence_notes:
-    - "The common coaching cue calls this short-head-biased, but that contradicts the biomechanical principle the incline-curl evidence supports: drawing the elbows behind the torso extends the shoulder, the same direction incline curls use, which the EMG evidence ties to a long-head bias, not short. No study specifically testing drag curls was found to resolve the contradiction. Treat the head-bias claim as unresolved rather than asserting either side; the movement's real, better-supported value is the stricter, swing-free path (see why_this_exists), not a specific head bias."
+    - "The common coaching cue calls this short-head-biased, but that runs against the mechanical argument usually made for incline curls: drawing the elbows behind the torso extends the shoulder, the same direction incline curls use, which is argued to favour the long head, not the short. Neither side is confirmed: the one direct hypertrophy comparison of shoulder positions (Attarieh et al. 2025, see incline-dumbbell-curl) found no regional difference. No study specifically testing drag curls was found to resolve the contradiction. Treat the head-bias claim as unresolved rather than asserting either side; the movement's real, better-supported value is the stricter, swing-free path (see why_this_exists), not a specific head bias."
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=LMdNTHH6G8I
   video_creator: ScottHermanFitness
