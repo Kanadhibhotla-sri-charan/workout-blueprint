@@ -1,5 +1,7 @@
 # Content Review Queue
 
+> **Next batch:** see `CONTENT-REVIEW-BATCH-2-PLAN.md`. The position-tag audit is closed (`POSITION-TAG-AUDIT-CLOSURE.md`).
+
 _Single maintained queue for the content-review phase. Procedure: `CONTENT-REVIEW-CHECKLIST.md`. Evidence: `EVIDENCE-LEDGER.md`. Open findings: `CONTENT-REVIEW-P3-FINDINGS.md`._
 
 **Three separate requirements.** None substitutes for another:
