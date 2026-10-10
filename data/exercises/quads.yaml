@@ -904,16 +904,23 @@
   limitations:
     - Grip strength commonly becomes the limiting factor before the legs do, especially at heavier dumbbell weights, capping the achievable stimulus.
     - Two heavy dumbbells are awkward to get into position at the start of a set, and this setup cost adds up over multiple sets more than a barbell rack does.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand with the feet about shoulder width apart, holding a dumbbell in each hand at the sides with the arms straight and palms facing in.'
+    - 'Sit down by bending the knees and hips together, keeping the chest up and the dumbbells hanging straight down beside the body.'
+    - 'Lower until the thighs are about parallel to the floor or as deep as the back stays flat, without letting the dumbbells touch the floor.'
+    - 'Drive up through the whole foot to standing, keeping the knees tracking in line with the toes.'
+  common_mistakes:
+    - 'Leaning the torso far forward as the dumbbells pull down: the squat turns into a hinge and the lower back takes more of the load.'
+    - 'Knees caving inward on the way up: shifts the load away from the quads and stresses the knee.'
+    - 'Letting the dumbbells swing or drift forward: the balance shifts onto the toes and the squat loses its path.'
   programming_notes: []
   alternatives: []
   complements:
-    - A barbell squat or a goblet squat, depending on what's available.
+    - A hip-hinge movement such as a Romanian deadlift.
   overlaps_with:
     - goblet-squat
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=ZXwvmRSRRxY
   video_creator: Travis Tarrant
   video_title: "Exercise Tutorial: Dumbbell Squat"

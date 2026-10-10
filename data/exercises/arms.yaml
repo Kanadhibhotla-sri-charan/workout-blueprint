@@ -1184,8 +1184,15 @@
   limitations:
     - The load ceiling is very low by design — this is not a movement that will ever feel heavy, and using more than light weight usually means the upper arm is dropping to help.
     - Keeping the upper arm genuinely still takes real attention, and it's an easy cue to lose without noticing once the light weight starts to feel like real effort.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Brace one hand and knee on a bench with a flat back, holding the dumbbell in the other hand (or stand bent over at a low cable).'
+    - 'Lift the working upper arm until it''s alongside the torso, roughly parallel to the floor, with the elbow bent to about 90 degrees.'
+    - 'Straighten the elbow to push the weight back until the arm is fully straight, keeping the upper arm still.'
+    - 'Bend the elbow back to about 90 degrees under control before the next rep.'
+  common_mistakes:
+    - 'The upper arm dropping toward the floor as the set gets hard: the shoulder swings the weight and the triceps do less of the work.'
+    - 'Swinging the weight back with momentum: the rep skips the controlled straightening that makes the exercise worthwhile.'
+    - 'Stopping short of a straight arm: misses the end of the range, the part this exercise exists to train.'
   programming_notes: []
   alternatives: []
   complements:
@@ -1194,7 +1201,7 @@
     - cable-pushdown
   evidence_notes:
     - "Same correction as close-grip-bench-press: no evidence found for a differential lateral/medial-head bias here — see that record's evidence_notes for the full reasoning. The shoulder stays extended and roughly still through a kickback, so this movement doesn't put the long head through the stretched, shoulder-flexed position the overhead-extension evidence is actually about either."
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=6SS6K3lAwZ8
   video_creator: ScottHermanFitness
   video_title: "How To: Tricep Kickback (Dumbbell)"

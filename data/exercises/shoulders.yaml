@@ -855,7 +855,7 @@
   coverage_categories:
     - isolation
     - low-fatigue
-  resistance_profile: Cable or band, constant tension, light load.
+  resistance_profile: Light load either way. A cable keeps the pull steady through the rotation; a band gets heavier as it stretches toward the end of the rotation.
   stability_demand: low
   skill_demand: medium
   setup_time: low
@@ -869,8 +869,15 @@
   limitations:
     - Usable load is very light — the external rotators are small and this is not a movement that will ever feel heavy, which some lifters mistake for it being ineffective.
     - Technique is easy to get subtly wrong (letting the shoulder or trunk compensate for the rotation), and doing so quietly defeats the purpose without feeling obviously incorrect.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Stand side-on to a cable set at elbow height (or a band anchored at that height), holding the handle in the hand farther from the anchor.'
+    - 'Bend the elbow to 90 degrees and keep it pressed against the side, with a small folded towel between the elbow and the body if that helps keep it there.'
+    - 'Rotate the forearm outward, away from the body, as far as the shoulder comfortably allows, keeping the elbow in place.'
+    - 'Return slowly to the start, with the forearm across the stomach, before the next rep.'
+  common_mistakes:
+    - 'The elbow drifting away from the side: the shoulder lifts the arm instead of rotating it, and the rotator cuff does less of the work.'
+    - 'Twisting the torso to move the handle: the trunk does the rotation the shoulder is meant to do.'
+    - 'Using a load heavy enough to need momentum: control is lost, which defeats the purpose of this light, controlled movement.'
   programming_notes: []
   alternatives: []
   complements:
@@ -878,7 +885,7 @@
   overlaps_with:
     - face-pull
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=LpNgc6Vx4iY
   video_creator: Bodybuilding.com
   video_title: "How To Do A Cable External Rotation | Exercise Guide"
