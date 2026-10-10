@@ -95,10 +95,17 @@
   mirror_effect: Same width-building visible direction as the pull-up — the under-arm flare that creates a V-taper from behind — though with more of each rep's tension shared by the biceps, so the lat-specific stimulus per rep is somewhat less isolated.
   advantages: []
   limitations:
-    - The extra biceps involvement means some of each rep's tension lands on the elbow flexors rather than the back, which understates how hard the back itself is actually working.
+    - The extra biceps involvement means some of each rep's tension lands on the elbow flexors rather than the back, so how hard a set feels overstates how hard the back itself is working.
     - Same bodyweight-jump problem as the pull-up — there's no fine-grained way to scale load down for a lifter who can't yet do a full rep.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Hang from the bar with an underhand grip about shoulder width apart and the arms fully straight.'
+    - 'Draw the shoulder blades down, then pull the chest toward the bar by driving the elbows down to the sides.'
+    - 'Pull until the chin clears the bar, keeping the legs still beneath you.'
+    - 'Lower under control until the arms are fully straight before the next rep.'
+  common_mistakes:
+    - 'Kicking or swinging the legs to get up: momentum does the work the lats and biceps are meant to do.'
+    - 'Stopping short of straight arms at the bottom: cuts off the bottom of the range, so each rep does less work.'
+    - 'Craning the neck to get the chin over the bar: the rep looks complete while the body hasn''t actually risen.'
   programming_notes: []
   alternatives: []
   complements:
@@ -107,7 +114,7 @@
     - pull-up-pronated
     - lat-pulldown-wide-pronated
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=sNBS5iIu6Zg
   video_creator: Mike Campbell Man Coach
   video_title: Chin ups- supinated grip
@@ -938,8 +945,15 @@
   limitations:
     - Shoulder mobility limits how far overhead the weight can be lowered safely, which caps the very stretch position that gives this exercise its value for some lifters.
     - Keeping the elbow bend consistent through the set takes real attention — under fatigue it's easy to drift toward straighter arms, blurring the line with the chest-biased version.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Lie with the upper back across a bench and the feet flat on the floor, holding one dumbbell with both hands above the chest and a clear bend in the elbows.'
+    - 'Keeping that elbow bend fixed, lower the dumbbell back in an arc over the head until the upper arms are roughly in line with the torso, or as far as the shoulders comfortably allow.'
+    - 'Keep the ribs down and the lower back from arching as the weight goes overhead.'
+    - 'Pull the dumbbell back over the chest along the same arc by driving the upper arms down, not by bending and straightening the elbows.'
+  common_mistakes:
+    - 'Bending and straightening the elbows during the rep: it turns into a triceps extension and takes work off the lats.'
+    - 'Arching the lower back to get the weight further overhead: the range comes from the spine, not the shoulders, and the lower back takes strain.'
+    - 'Lowering past what the shoulders tolerate: the deepest overhead position is where shoulder discomfort starts.'
   programming_notes: []
   alternatives: []
   complements:
@@ -949,7 +963,7 @@
     - dumbbell-pullover-chest-biased (chest module) — same arc with straighter arms; elbow bend is what separates the two.
   evidence_notes:
     - Same general stretch-mediated hypertrophy grounding as straight-arm-pulldown above — see that record's evidence_notes. No study specific to the lat-biased pullover or lat length at the overhead position was located.
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=Cvsaj2AXevI
   video_creator: Seriously Strong Training
   video_title: How to do Dumbbell Pullovers for Massive Lats

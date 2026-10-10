@@ -269,8 +269,15 @@
   limitations:
     - It plateaus quickly for anyone with baseline trunk strength — once a hold can be sustained for a couple of minutes, added hold time stops translating into meaningful further adaptation.
     - There's no clean way to add load within the exercise itself; progressing past the beginner stage requires switching to a harder variation or a different movement entirely.
-  technique_cues: []
-  common_mistakes: []
+  technique_cues:
+    - 'Set the forearms on the floor with the elbows under the shoulders, the feet about hip width apart and the toes tucked under.'
+    - 'Lift the hips so the body forms one straight line from head to heels.'
+    - 'Brace the abs and squeeze the glutes, keeping the ribs pulled down toward the hips.'
+    - 'Breathe steadily through the hold, and end the set when the hips start to sag.'
+  common_mistakes:
+    - 'Hips sagging toward the floor: the lower back arches and takes the load the abs are meant to hold.'
+    - 'Hips piked up high: shortens the lever, so the hold gets easier without training the trunk.'
+    - 'Holding the breath: the brace can''t be kept for the whole set, and the hold ends early.'
   programming_notes: []
   alternatives: []
   complements:
@@ -278,7 +285,7 @@
   overlaps_with:
     - ab-wheel-rollout
   evidence_notes: []
-  review_status: needs-review
+  review_status: reviewed
   video_link: https://www.youtube.com/watch?v=pSHjTRCQxIw
   video_creator: ScottHermanFitness
   video_title: "How To: Plank"
