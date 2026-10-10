@@ -263,7 +263,6 @@
   laterality: bilateral
   coverage_categories:
     - isolation
-    - lengthened-position-emphasis
   resistance_profile: Constant tension through the whole range.
   stability_demand: medium
   skill_demand: medium
@@ -649,7 +648,7 @@
 - id: flat-dumbbell-fly
   name: Flat Dumbbell Fly
   summary: A free-weight, mid-chest-biased adduction movement with a strong bottom-range stretch stimulus, performed flat.
-  why_this_exists: A free-weight chest adduction option performed flat; the load is hardest around the mid-range and eases at the top, the opposite feel from a cable fly.
+  why_this_exists: A free-weight chest adduction option performed flat, the opposite feel from a cable fly.
   body_regions:
     - chest
   primary_targets:

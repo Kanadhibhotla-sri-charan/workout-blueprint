@@ -87,3 +87,46 @@ Tags of the records below are unchanged unless stated. "Unverified" means no sou
 | reverse-nordic-curl | lengthened-position-emphasis (kept) | **Unverified** |
 | seated-leg-curl | lengthened-position-emphasis (kept) | **Unverified.** Maeo 2024 supports the hip-flexed position, not a resistance peak |
 | incline-dumbbell-fly | lengthened-position-emphasis (kept) | **Consistent as stated, unverified.** "Hardest at the bottom stretch" matches the definition; no source on its curve |
+
+## Position tags: consolidated status (audit closure)
+
+The **authoritative** status of every remaining position tag after the audit. It supersedes the earlier per-step position-tag tables above. Definition (SCHEMA): a position tag means where the **external resistance peaks** in the movement's own range. **No tag below is source-verified.**
+
+**Statuses:**
+- **Contradicted:** the record's own text conflicts with the tag.
+- **Consistent as stated, but unverified:** the record's text states a peak matching the tag, but no source on the resistance curve has been identified.
+- **Unverified:** the record states no resistance peak (it describes a range, a shoulder or hip position, or nothing).
+
+| Record | Tag | Status | Note |
+|---|---|---|---|
+| cable-lateral-raise | lengthened | **Contradicted** | `resistance_profile` says "constant tension through the whole range"; the stretched-bottom emphasis is relative to the dumbbell. **Kept (approved B1):** removal would change its profile to 10–20 reps and break shoulders-efficient and shoulders-complete (8–15). A separate product decision on those prescriptions is needed before any change |
+| decline-dumbbell-fly | lengthened | Consistent as stated, unverified | "hardest at the bottom stretch" |
+| dip-chest-biased | lengthened | Consistent as stated, unverified | "hardest at the bottom stretch" |
+| dumbbell-pullover-chest-biased | lengthened | Consistent as stated, unverified | "hardest overhead" |
+| dumbbell-pullover-lat-biased | lengthened | Consistent as stated, unverified | "hardest overhead" |
+| flat-dumbbell-fly | lengthened | Consistent as stated, unverified | Conflicting "hardest around the mid-range" removed from `why_this_exists` (audit batch 2) |
+| incline-dumbbell-fly | lengthened | Consistent as stated, unverified | "hardest at the bottom stretch" |
+| sissy-squat | lengthened | Consistent as stated, unverified | "hardest at the bottom" |
+| single-leg-romanian-deadlift | lengthened | Consistent as stated, unverified | Primary (dumbbell) setup "hardest at the bottom stretch"; band setup loads the top (stated) |
+| glute-bridge | shortened | Consistent as stated, unverified | "hardest at the top" |
+| single-leg-hip-thrust | shortened | Consistent as stated, unverified | "hardest at the top" |
+| hip-thrust | shortened | Consistent as stated, unverified | "resistance is lightest at the bottom" |
+| flat-dumbbell-press | lengthened | Unverified | Describes a deeper range, not a peak |
+| incline-dumbbell-press | lengthened | Unverified | "Hardest through the middle" wording removed (follow-up); no peak stated |
+| lying-triceps-extension-skull-crusher | lengthened | Unverified | Lengthened-position framing, no peak |
+| overhead-triceps-extension | lengthened | Unverified | Overhead position (Maeo 2023 supports the position, not a peak); removal would affect pinned case #6 |
+| reverse-nordic-curl | lengthened | Unverified | Hip-extended framing, no peak |
+| seated-leg-curl | lengthened | Unverified | Hip-flexed position (Maeo 2024 supports the position); removal would break hamstrings packages (8–15) |
+| incline-dumbbell-curl | lengthened | Unverified | Shoulder-position framing; removal would break biceps-complete (8–15) |
+| romanian-deadlift | lengthened | Unverified | No peak stated |
+| stiff-leg-deadlift | lengthened | Unverified | No peak stated |
+| smith-machine-romanian-deadlift | lengthened | Unverified | "free-weight-like load curve" |
+| preacher-curl-machine | shortened | Unverified | Cam-dependent; no source tested a machine |
+
+**Tags removed during the audit:**
+
+| Record | Removed tag | Reason |
+|---|---|---|
+| preacher-curl | shortened | Contradicted by two verified sources |
+| cable-overhead-extension-leaning-forward | lengthened | Its own text states constant tension |
+| incline-cable-press | lengthened | Its own text states constant tension and emphasises the top |

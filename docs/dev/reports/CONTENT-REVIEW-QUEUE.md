@@ -21,6 +21,8 @@ cable-pull-through, sissy-squat, hamstring-bridge, step-up, plank-shoulder-tap, 
 | glute-bridge | **Duplicate range limitation.** After the approved first-limitation correction, limitations 1 and 2 both say the range is shorter than a hip thrust's because the shoulders stay on the floor. Limitation 1 is the Decide watch-out (1,382 answers). The reviewer should decide whether to trim limitation 2 (detail page only) |
 | single-leg-romanian-deadlift | Coverage tag `lengthened-position-emphasis` fits the dumbbell version only (ranking input); technique cues are dumbbell-specific |
 
+**Position-tag item (`reviewed` record, outside the P tiers):** cable-lateral-raise is contradicted by its own resistance text. Its tag is kept because changing it would alter the shoulders-efficient and shoulders-complete prescriptions (8–15 → 10–20); that needs a separate product decision. See the evidence ledger, consolidated position-tag status.
+
 ## P3: expansion-edited `needs-review` (11)
 push-up-chest, static-lunge, cable-curl, rear-delt-fly, dumbbell-curl, overhead-press, hack-squat, goblet-squat, **preacher-curl**, walking-lunge, barbell-bent-over-row-pronated.
 - These need diff verification plus coaching.
