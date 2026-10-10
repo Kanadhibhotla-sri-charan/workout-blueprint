@@ -1,6 +1,7 @@
 import type { Exercise } from '../types/exercise';
 import { parseRelationshipEntry } from '../utils/relationships';
 import { isEquipmentFeasible } from './equipment';
+import { compareStructuralTie } from './structuralTieBreak';
 
 // Resolves a record's own `complements` entries to real Exercise objects,
 // reusing the same id-shape parser the Exercise Detail page uses (3D).
@@ -62,7 +63,7 @@ export function rankStructuralComplements(
       countShared(b.coverage_categories, target.coverage_categories);
     if (coverageShare !== 0) return coverageShare;
 
-    return a.id.localeCompare(b.id);
+    return compareStructuralTie(target, a, b, 'complement', equipmentAvailable);
   });
 }
 

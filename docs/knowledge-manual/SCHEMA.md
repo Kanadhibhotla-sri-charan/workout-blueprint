@@ -123,6 +123,7 @@ Every fact below (types, enum values, actual usage counts) was audited against t
   - Set it only when the exercise's role is genuinely secondary relative to the established alternatives for its target, and record why in the change that sets it.
   - Never set it, or leave it off, to steer a particular recommendation.
 - **Decision-making impact:** yes, but only as the **last selection-ranking key before the alphabetical `id`**, in all four selection goals (build-base, visual-area, low-fatigue, limited-equipment).
+- **Also used by the structural tie-break** (replace / different stimulus / complement): it is the first key after the target and coverage keys (`DECISION-ENGINE-RULES.md` §2–3).
   - It is compared only after the goal key and the cost tie-break.
   - It never overrides target tiers, aesthetic roles, the goal key, or fatigue / setup / skill / stability.
   - It does not affect replace, different-stimulus or complement answers, or feasibility. A `secondary` exercise is still recommended whenever it is the best or only fit.
@@ -254,7 +255,10 @@ Worked example from the architect's memo — Incline Dumbbell Press: *alternativ
 - **Format — this is the actual ID-reference field:** same-file references are bare `id` strings (e.g. `chin-up-supinated`); cross-file references are quoted strings with a parenthetical module note (e.g. `"hammer-curl (arms module)"`), per the convention established and enforced in Phase 1's reconciliation pass. 233 of 233 non-empty entries in the current dataset are ID-like; this is a field where 100% resolvability is enforced by `validate-data`.
 - **Meaning:** substantially similar ground already covered — distinct from `alternatives` (same role, used *instead*) and `complements` (different stimulus, used *alongside*). See the relationship-field definitions above.
 - **Symmetric:** two exercises overlap when **either** record lists the other (`exercisesOverlap` in `app/src/utils/relationships.ts`). Listing the pair on only one side is enough.
-- **Decision-making impact:** yes. A record with a non-empty list gets the "avoid stacking" watch-out note in Decide. The audited relationship set is pinned in `app/src/data/audited-overlaps.json`, so every edit is deliberate.
+- **Decision-making impact:** yes.
+  - **Ranking:** a tie-break input in replace answers (an overlap is preferred as the substitute) and in complement / different-stimulus answers (an overlap is avoided). It applies only after the target and coverage keys tie (`DECISION-ENGINE-RULES.md` §2–3).
+  - **Watch-out:** a record with a non-empty list of its own gets the "avoid stacking" watch-out note.
+  - **Pinned:** the audited relationship set is pinned in `app/src/data/audited-overlaps.json`, so every edit is deliberate.
 - **Required for `reviewed`:** conditionally — required to resolve cleanly when non-empty; empty is fine.
 
 ### `evidence_notes`

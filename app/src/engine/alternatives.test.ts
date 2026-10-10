@@ -18,12 +18,14 @@ describe('findStructuralAlternative — incline-dumbbell-press', () => {
     // Since Phase 7 Stage 5.6/5.7 the feet-elevated push-up (bodyweight +
     // bench) is eligible too. It ties with the Smith incline press on every
     // structural criterion (same primary-target wording, no shared coverage
-    // category with the dumbbell press), so the alphabetical id fallback
-    // ranks it first — see the tie analysis in PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md
-    // for the tie analysis. This pins the current behaviour.
+    // category with the dumbbell press). That tie used to fall to the
+    // alphabetical id (feet-elevated push-up first). Since the Quality Gate
+    // structural tie-break, the curated overlap decides it: the Smith incline
+    // press is listed in the dumbbell press's `overlaps_with`, the push-up is
+    // not (QUALITY-GATE-IMPLEMENTATION.md, Stage 2).
     const ranked = rankStructuralAlternatives(target, exercises, ['smith machine', 'bench']);
-    expect(ranked.map((e) => e.id)).toEqual(['feet-elevated-push-up', 'smith-machine-incline-press']);
-    expect(findStructuralAlternative(target, exercises, ['smith machine', 'bench'])?.id).toBe('feet-elevated-push-up');
+    expect(ranked.map((e) => e.id)).toEqual(['smith-machine-incline-press', 'feet-elevated-push-up']);
+    expect(findStructuralAlternative(target, exercises, ['smith machine', 'bench'])?.id).toBe('smith-machine-incline-press');
   });
 
   it('never returns the target itself', () => {

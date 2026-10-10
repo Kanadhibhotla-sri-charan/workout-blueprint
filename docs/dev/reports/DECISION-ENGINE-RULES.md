@@ -30,7 +30,7 @@ isEquipmentFeasible(exercise, equipmentAvailable):
 - **Exact string match only** against the values already present in the dataset's `equipment` field (open vocabulary — see `SCHEMA.md`). No normalization, no partial/synonym matching (e.g. "dumbbell" does not match "dumbbells" or "DB" — the UI only ever offers the exact values that exist in the data, via `equipmentOptions` in `src/data/index.ts`, so this can't arise from user input).
 - `equipment` is a required, non-empty field on every record (`REQUIRED_LIST_FIELDS` in `scripts/lib/taxonomy.js`), and bodyweight-only exercises explicitly list `equipment: [bodyweight]` rather than an empty list.
 - **"Limited equipment" ranking** counts the items in the cheapest setup the user can complete (unrestricted: the cheapest setup overall), not the length of the `equipment` union. Since Phase 7 Stage 5.1, `bodyweight` counts as 0 items, because it is always available: a bodyweight-only exercise costs 0, and a pull-up (`pull-up bar` + `bodyweight`) costs 1.
-- **Cost tie-break (Phase 7 Stage 5.1).** For the **low-fatigue** and **limited-equipment** goals only, candidates that tie on every existing ranking criterion are ordered by lower fatigue, then lower setup time, then lower skill demand, then lower stability demand. Only after that does the alphabetical `id` fallback apply. Every other goal (build-base, visual-area, replace, complements) keeps the plain `id` fallback. See `PHASE-7-STAGE-5-DECISION-COVERAGE-REVIEW.md` §6 and `PHASE-7-STAGE-5.1-RANKING-CONSISTENCY.md`.
+- **Cost tie-break (Phase 7 Stage 5.1).** For the **low-fatigue** and **limited-equipment** goals only, candidates that tie on every existing ranking criterion are ordered by lower fatigue, then lower setup time, then lower skill demand, then lower stability demand. Only after that does the alphabetical `id` fallback apply. Build-base and visual-area keep the plain `id` fallback (after the selection-role key below); replace and complements use the structural tie-break in §2–3. See `PHASE-7-STAGE-5-DECISION-COVERAGE-REVIEW.md` §6 and `PHASE-7-STAGE-5.1-RANKING-CONSISTENCY.md`.
 - **Selection-role tie-break (Build-base tie resolution).** In all four selection goals (build-base, visual-area, low-fatigue, limited-equipment), candidates that still tie after the goal key and the cost tie-break are ordered **unclassified before `selection_role: secondary`**. Only then does the alphabetical `id` fallback apply.
   - It is the last real key, so it never overrides the goal key, the cost tie-break, or the target-tier / aesthetic-role / aesthetic-suitability sorts layered on top.
   - Replace, different-stimulus and complement answers use the structural rankers (§2–3) and are unaffected.
@@ -66,7 +66,13 @@ When more than one candidate passes Stage 1, rank by, in strict order, each leve
 
 1. Number of `primary_targets` entries shared with `A` (exact string match on the full entry, including any parenthetical annotation — see "known limitation" below), descending.
 2. Number of `coverage_categories` entries shared with `A`, descending.
-3. `id`, ascending (alphabetical) — final deterministic tiebreak. This guarantees the same input always produces the same output; there is no random or unordered pick among ties.
+3. **Structural tie-break (Quality Gate, `app/src/engine/structuralTieBreak.ts`)**, shared with §3. It applies only to candidates still tied on 1–2:
+   1. unclassified before `selection_role: secondary`;
+   2. a curated overlap with `A` first (`overlaps_with`, matched symmetrically: either record listing the other);
+   3. higher **equipment continuity**: the most items shared between a candidate setup usable in this context and any setup of `A`. All of `A`'s setups count, usable or not. With unrestricted equipment every candidate setup counts. `bodyweight`, `bench` and `incline bench` never count;
+   4. `id`, ascending (alphabetical): the final deterministic tiebreak. The same input always produces the same output; there is no random or unordered pick among ties.
+
+   Approved and measured in `NEXT-QUALITY-GATE-ASSESSMENT.md`; implemented in `QUALITY-GATE-IMPLEMENTATION.md` (2,088 Best Fit changes, all former alphabetical ties).
 
 The top-ranked candidate is *the* structural alternative. This produces at most one suggestion, matching §16's "one reasonable substitute where available" — the engine does not return a ranked list of alternatives, only the single best one (or none, if Stage 1 finds no eligible candidate).
 
@@ -92,7 +98,7 @@ The top-ranked candidate is *the* structural alternative. This produces at most 
 
 1. Number of shared `primary_targets` entries (exact string match), descending — still relevant to a related target.
 2. Number of shared `coverage_categories` entries, **ascending** (fewer shared = more different stimulus — the opposite of §2's alternatives ranking, which prefers similarity).
-3. `id`, ascending — final deterministic tiebreak.
+3. The structural tie-break from §2, with one difference: a curated overlap with `A` is **avoided** (ranked after a non-overlapping candidate), because an overlap covers substantially similar ground and is not a different stimulus. Order: unclassified before `secondary` → non-overlap before overlap → equipment continuity → `id`.
 
 **Precedence:** the engine prefers a record's own resolvable `complements` entries when present (2/123 records currently), and falls back to this structural match otherwise (the other ~121) — same explicit-data-first pattern as §2.
 
@@ -122,6 +128,8 @@ The top-ranked candidate is *the* structural alternative. This produces at most 
 > - It ties with `smith-machine-incline-press` on every Stage 2 criterion: the same `primary_targets` wording, and no coverage category shared with the dumbbell press.
 > - So the alphabetical fallback ranks it first.
 > - The test in `app/src/engine/alternatives.test.ts` pins this.
+>
+> **Update (Quality Gate):** the curated overlap now decides that tie. `smith-machine-incline-press` is in the dumbbell press's `overlaps_with` and the push-up is not, so the Smith incline press ranks first. The unconstrained result is unchanged: the barbell and cable presses are both curated overlaps, neither shares equipment with the dumbbell press, so the `id` still picks `incline-barbell-press`. Both are pinned in `alternatives.test.ts`.
 >
 > See the tie analysis in `PHASE-7-STAGE-5.6-5.7-COVERAGE-DECISIONS.md`.
 

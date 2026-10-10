@@ -73,3 +73,80 @@ _Implements the approved findings of `NEXT-QUALITY-GATE-ASSESSMENT.md` in separa
 | oxlint | exit 0 |
 | Production build | OK |
 | Playwright | 3 / 3 |
+
+## Stage 2 — Ranking implementation
+
+### What changed
+
+**New module:** `app/src/engine/structuralTieBreak.ts`, with `compareStructuralTie` and `equipmentContinuity`.
+- Used by `rankStructuralAlternatives` (mode `substitute`) and `rankStructuralComplements` (mode `complement`).
+- It replaces only their final `id` comparison. Their target and coverage keys, and the target-tier and aesthetic sorts layered on top, are untouched.
+
+**Key order** (it applies only to ties left by those keys):
+1. unclassified before `selection_role: secondary`;
+2. curated overlap: preferred for a substitute, avoided for a complement. Matched symmetrically with Stage 1's `exercisesOverlap`;
+3. equipment continuity (higher first);
+4. `id`, ascending.
+
+**Continuity:**
+- The most shared items between a candidate setup usable in this context and any setup of the current exercise; all of the current exercise's setups count.
+- `NON_CONTINUITY_ITEMS` = {bodyweight, bench, incline bench}, an engine constant.
+- A candidate with no usable setup throws; both rankers filter those out first, so this is unreachable.
+
+**Refactor:** `selectionRoleRank` moved from `decisionEngine.ts` to `engine/selectionRole.ts` so both rankers share it. Default-pick ranking is unchanged (measured below).
+
+**Docs:** `DECISION-ENGINE-RULES.md` §1–4; SCHEMA (`overlaps_with`, `selection_role`).
+
+### Measured against Stage 1
+
+Stage 1 itself changed 0 recommendations. Full scenario space, two runs, byte-identical (SHA-256 `17f3a8ea…bc34e`).
+
+| Check | Required | Measured |
+|---|---|---|
+| Best Fit changes | exactly 2,088 | **2,088**: replace 392, different stimulus 848, complement 848 |
+| Change list vs the approved simulation | identical | **byte-identical** (SHA-256 `5e68eff0…37e17`) |
+| Default-pick (selection-goal) Best Fit changes | 0 | **0** |
+| Answers becoming empty or filled | 0 | **0** |
+| Changes outside former alphabetical ties | 0 | **0** |
+| Material failures remaining | 0 | **0** (776 on the baseline) |
+| Ties still decided by `id` | — | 5,994 (no strong signal) |
+| Alternatives changed | — | 3,562 |
+| Complement lists changed on default-pick answers | — | 1,401 |
+| Flagged regressions | 12, intended | **12**: "replace my cable drag curl" at home / band kit. The band-only cable curl (`secondary`) yields to the dumbbell, hammer or cross-body hammer curl, as role-first intends |
+
+**Best Fit changes by context:**
+
+| Any | Gym | Home | Band + pull-up bar | Bodyweight | Nothing selected |
+|---:|---:|---:|---:|---:|---:|
+| 721 | 721 | 408 | 198 | 22 | 18 |
+
+### Tests (25 new in `engine/structuralTieBreak.test.ts`)
+
+| Area | Tests |
+|---|---|
+| Continuity | Unrestricted context; usable setups only; all of the current exercise's setups; best setup pair; nothing shared; bodyweight / bench / incline bench excluded; no usable setup throws |
+| Tie order | Role > overlap; overlap > continuity (substitute); overlap avoided (complement); symmetric overlap; continuity > id; id last |
+| Existing keys first | Replace: shared targets, then coverage, beat every tie-break key. Complement: fewer shared coverage categories beat every tie-break key |
+| Determinism | Replace and complement rankings identical across every rotation and the reverse of the library, in 3 equipment contexts |
+| Pinned cases | The 9 cases from the assessment through `makeRecommendation`; different stimulus equals complement for both complement cases |
+
+**Mutation check:** with the old `id` fallback temporarily restored, all 9 pinned cases fail and the other 16 pass.
+
+### Existing test updated, by design
+
+`alternatives.test.ts` › "constrained to only a Smith machine + bench":
+- **What it pinned:** an alphabetical tie. Replacing the incline dumbbell press with only a Smith machine + bench gave the feet-elevated push-up first.
+- **New behaviour:** the curated overlap decides, so the Smith incline press comes first. The assertion is still exact.
+- **Why the measurement didn't include it:** this equipment context is outside the six measured contexts, so it is not part of the 2,088.
+
+The unconstrained case (incline barbell press) is unchanged.
+
+### Validation
+
+| Check | Result |
+|---|---|
+| Data generation + `validate-data` | PASS, 140 records |
+| Vitest | 344 / 344 (319 + 25 new) |
+| oxlint | exit 0 |
+| Production build | OK |
+| Playwright | 3 / 3 |

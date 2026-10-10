@@ -1,5 +1,6 @@
 import type { Exercise } from '../types/exercise';
 import { isEquipmentFeasible } from './equipment';
+import { compareStructuralTie } from './structuralTieBreak';
 
 function countShared(a: string[], b: string[]): number {
   const bSet = new Set(b);
@@ -46,7 +47,7 @@ export function rankStructuralAlternatives(
       countShared(a.coverage_categories, target.coverage_categories);
     if (coverageShare !== 0) return coverageShare;
 
-    return a.id.localeCompare(b.id);
+    return compareStructuralTie(target, a, b, 'substitute', equipmentAvailable);
   });
 }
 

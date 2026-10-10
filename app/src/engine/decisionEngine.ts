@@ -5,6 +5,7 @@ import { meetsMaxDemand } from './constraints';
 import { rankStructuralAlternatives } from './alternatives';
 import { resolveComplements } from './complements';
 import { explainEmptySelection } from './emptyResult';
+import { selectionRoleRank } from './selectionRole';
 import { buildProgramming } from './programmingEngine';
 import { getAestheticOutcomeById, getFunctionalGoalById, getPhysiqueTargetById } from '../data';
 import type { AestheticOutcome, FunctionalGoal, PhysiqueTarget } from '../types/programming';
@@ -500,15 +501,6 @@ function rankByGoal(goal: Goal, candidates: Exercise[], equipmentAvailable: stri
   });
 }
 
-// Build-base tie resolution (docs/dev/reports/BUILD-BASE-TIE-RESOLUTION-
-// ASSESSMENT.md): when every earlier key ties, an exercise classified as a
-// secondary stand-in or accessory yields to an unclassified one before the
-// alphabetical id decides. Applies to all four selection goals; it never
-// overrides the goal key, the cost tie-break, or the target / aesthetic
-// sorts layered on top of this ranking.
-function selectionRoleRank(exercise: Exercise): number {
-  return exercise.selection_role === 'secondary' ? 1 : 0;
-}
 
 function explainGoalPick(goal: Goal, exercise: Exercise, equipmentAvailable: string[] | null): string {
   switch (goal) {
