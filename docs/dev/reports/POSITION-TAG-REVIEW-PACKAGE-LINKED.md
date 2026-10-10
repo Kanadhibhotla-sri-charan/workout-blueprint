@@ -122,3 +122,51 @@ Held unchanged by instruction. Measurements are in `POSITION-TAG-SEMANTICS-CORRE
 4. **Future:** any removal on cable-lateral-raise or seated-leg-curl would also require a Build-package reps change (8–15 → 10–20). Any removal on overhead-triceps-extension would require a decision on pinned case #6.
 
 No library, engine, package or test change was made in this task.
+
+## Follow-up: approved changes applied
+
+**Note on the instruction:** it named `shortened-position-emphasis` on "cable-overhead-extension". The record is `cable-overhead-extension-leaning-forward`, and its only position tag is `lengthened-position-emphasis`, the tag in the approved, measured proposal. That tag was removed.
+
+| Record | Change |
+|---|---|
+| cable-overhead-extension-leaning-forward | `coverage_categories`: `[isolation, lengthened-position-emphasis]` → `[isolation]`. Profile → elevated-stability-isolation (still 8–15), so triceps-complete stays valid |
+| incline-dumbbell-press | `resistance_profile`: "Free-weight profile, hardest through the middle of the range; independent arms allow…" → "Free-weight profile; independent arms allow…". Tag kept; ledger: unverified |
+| Ledger | Statuses recorded as approved (unverified ×4; incline fly "consistent as stated, unverified"). No other tag changed |
+
+**Unchanged:** package prescriptions, engine, ranking order, pinned expectations, review statuses.
+
+### Measured vs `main` `e128600` (two runs, byte-identical, SHA-256 `ac39d789…`)
+
+| Check | Expected | Measured |
+|---|---|---|
+| Best Fit changes | 16 | **16**, all from cable-overhead-extension-leaning-forward |
+| Alternative changes | 40 | **40** (replace 24, visual-area 16) |
+| Complement-list changes | 0 | **0** |
+| Empty ↔ filled | 0 | **0** |
+| Pinned cases | unchanged | **unchanged** (9 / 9) |
+| Incline-press recommendation changes | 0 | **0** |
+
+**Best Fit changes (all biceps / triceps visual-area, any equipment and gym, no limit and fatigue limit):**
+- `target:triceps`, `outcome:triceps-back-depth` → skull crusher (8);
+- `target:triceps-long-head` → overhead triceps extension (4);
+- `region:arms` → incline dumbbell curl (4).
+
+**Alternative changes:**
+- "replace my cable overhead extension": skull crusher → cable pushdown (12);
+- "replace my skull crusher": cable overhead extension → triceps kickback (12; the Best Fit, overhead triceps extension, is unchanged, so pinned case #6 holds);
+- visual-area (16).
+
+**Text-only changes (recommendations identical): 122 in total.**
+- 74: answers whose Best Fit is the incline dumbbell press show the edited stimulus text;
+- 48: answers whose Best Fit is the cable overhead extension show the elevated-stability-isolation programming guidance (rep range unchanged at 8–15).
+- By goal: replace 58, complement 17, different stimulus 17, build-base 13, low-fatigue 7, limited-equipment 7, visual-area 3.
+
+**Watch-out changes:** 16, in the 16 answers with a new Best Fit.
+
+| Gate | Result |
+|---|---|
+| `validate-data` (incl. Build-package reps) | PASS, 140 |
+| Vitest | 345 / 345 (pinned cases included) |
+| oxlint | exit 0 |
+| Build | OK |
+| Playwright | 3 / 3 |

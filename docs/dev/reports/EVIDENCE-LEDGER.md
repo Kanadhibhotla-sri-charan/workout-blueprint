@@ -73,3 +73,17 @@ SCHEMA now defines `lengthened-` / `shortened-position-emphasis` as where the **
 | preacher-curl | ~~shortened-position-emphasis~~ (removed, O2) | The two verified sources (Oliveira 2009 EMG; Nunes 2020, qualitative) place the free-weight version's hardest point near full extension, contradicting the tag. No positive tag asserted |
 | preacher-curl-machine | shortened-position-emphasis (kept) | **Unverified.** Neither source tested a machine; the curve depends on the cam. Not refuted |
 | incline-dumbbell-curl | lengthened-position-emphasis (kept; removal approved but blocked by the Build-package reps rule, see `POSITION-TAG-REVIEW-QUEUE.md`) | **Unverified under the new definition.** The tag was authored for the extended shoulder (long head lengthened at the shoulder), not for where resistance peaks. Oliveira 2009 measured incline-curl activation rising through the concentric phase, highest in the final third; that is EMG (activation), not resistance, so it neither confirms nor settles the resistance peak. No source on the incline curl's resistance curve has been identified |
+
+### Package-linked records and the incline press (position-tag review follow-up)
+
+Tags of the records below are unchanged unless stated. "Unverified" means no source on where the record's external resistance peaks has been identified.
+
+| Record | Tag | Evidence status |
+|---|---|---|
+| cable-overhead-extension-leaning-forward | ~~lengthened-position-emphasis~~ (removed) | Its own `resistance_profile` states constant tension through the whole range, so there is no peak to tag. Maeo 2023 supports the overhead *position* (recorded in `movement_patterns`), not a resistance peak |
+| incline-dumbbell-press | lengthened-position-emphasis (kept) | **Unverified.** The unsupported "hardest through the middle of the range" wording was removed from `resistance_profile`; no source on its resistance curve |
+| cable-lateral-raise | lengthened-position-emphasis (kept) | **Unverified** |
+| overhead-triceps-extension | lengthened-position-emphasis (kept) | **Unverified.** Maeo 2023 supports the overhead position, not a resistance peak. Removal would affect pinned case #6 |
+| reverse-nordic-curl | lengthened-position-emphasis (kept) | **Unverified** |
+| seated-leg-curl | lengthened-position-emphasis (kept) | **Unverified.** Maeo 2024 supports the hip-flexed position, not a resistance peak |
+| incline-dumbbell-fly | lengthened-position-emphasis (kept) | **Consistent as stated, unverified.** "Hardest at the bottom stretch" matches the definition; no source on its curve |

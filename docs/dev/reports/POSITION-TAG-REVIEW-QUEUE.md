@@ -42,9 +42,9 @@ Changing a validation rule to allow a mismatch is not proposed.
 |---|---|---|---|---|---|---:|---|---|
 | 1 | incline-dumbbell-curl | lengthened | isolation | (b) "lengthened shoulder position"; "hardest with the arm long" | biceps-complete 8–15 | 18 | reviewed | **Blocked above.** Oliveira 2009 EMG rose toward the top (activation, not resistance) |
 | 2 | overhead-triceps-extension | lengthened | isolation | (b) "shoulder flexed (overhead)"; no resistance peak stated | triceps-efficient, triceps-complete 8–15 | 128 | reviewed | Maeo 2023 supports long-head growth from the overhead *position*, which is sense (b), not a resistance peak |
-| 3 | cable-overhead-extension-leaning-forward | lengthened | isolation | (b) shoulder flexed; "constant tension" | triceps-complete 8–15 | 64 | reviewed | A constant-tension claim conflicts with any single peak |
+| 3 | cable-overhead-extension-leaning-forward | ~~lengthened~~ **removed** (follow-up) | isolation | (b) shoulder flexed; "constant tension" | triceps-complete 8–15 | 64 | reviewed | A constant-tension claim conflicts with any single peak |
 | 4 | seated-leg-curl | lengthened | isolation | (b) "hip flexed"; "fixed-path machine" | hamstrings-efficient, hamstrings-complete 8–15 | 108 | reviewed | Maeo 2024 supports the hip-flexed *position* (sense b) |
-| 5 | incline-dumbbell-press | lengthened | compound | (a) **"hardest through the middle of the range"** | — | 74 | needs-review | **Contradiction**: the record's own resistance text says mid-range |
+| 5 | incline-dumbbell-press | lengthened (kept, unverified) | compound | "hardest through the middle" **wording removed** (follow-up); no stated peak now | — | 74 | needs-review | **Contradiction**: the record's own resistance text says mid-range |
 | 6 | cable-lateral-raise | lengthened | isolation | "constant tension… meaningful even in the stretched bottom" | shoulders-efficient, shoulders-complete 8–15 | 94 | reviewed | A constant tension, not a peak |
 | 7 | incline-cable-press | lengthened | compound | "constant tension" | — | 62 | needs-review | Same |
 | 8 | preacher-curl-machine | shortened | isolation | (b) "shortened shoulder position"; "cam-adjusted" | — | 36 | needs-review | **Unverified** (ledger); kept as instructed |
