@@ -637,7 +637,6 @@
     - A heavier press movement.
   overlaps_with:
     - flat-dumbbell-press
-    - flat-dumbbell-fly
   evidence_notes:
     - "The mid/sternal-biased part carries the same evidence as flat-barbell-bench-press — see that record's evidence_notes. The \"extra emphasis toward the inner chest\" claim is separate and unresolved: no research was found isolating an \"inner chest\" as a distinct region within the sternocostal head, and no direct study of the hex press's squeeze-adduction effect on regional hypertrophy was located. It's a widely repeated coaching cue based on where lifters report feeling the squeeze, not a settled finding."
   review_status: needs-review
@@ -695,7 +694,7 @@
     - machine-fly-pec-deck
   evidence_notes:
     - Same mid-chest evidence as flat-barbell-bench-press applies to the mid-bias claim here — see that record's evidence_notes. No study specific to the fly (adduction) pattern rather than a press was located, so this is an extrapolation from press data to a fly, not a direct finding.
-    - "Separately, the \"strong stretch-mediated growth stimulus\" claim draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning) found lengthened partial-ROM training matched or exceeded full-ROM training. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so \"strong\" should be read as a well-supported direction, not a settled magnitude. This is a general principle, not a fly-specific finding."
+    - "Separately, the \"strong stretch-mediated growth stimulus\" claim draws on the broader stretch-mediated hypertrophy literature: Schoenfeld & Grgic (2020, SAGE Open Medicine) found full/longer-ROM training tends to match or beat partial-ROM training that avoids the stretch, and Wolf et al. (2023, International Journal of Strength and Conditioning, meta-analysis) found full and partial ROM produced broadly similar hypertrophy, with a possible but inconclusive advantage for partials at long muscle lengths. A later trial (Wolf et al., 2025, PubMed 39959841) found lengthened partials produced hypertrophy similar to, not clearly greater than, full ROM — so \"strong\" should be read as a well-supported direction, not a settled magnitude. This is a general principle, not a fly-specific finding."
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=eozdVDA78K0
   video_creator: ScottHermanFitness

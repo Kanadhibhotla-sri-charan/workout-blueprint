@@ -119,8 +119,7 @@
   alternatives: []
   complements:
     - Wrist curls and grip work.
-  overlaps_with:
-    - reverse-curl
+  overlaps_with: []
   evidence_notes: []
   review_status: reviewed
   video_link: https://www.youtube.com/watch?v=krZ6pWGZ8xo
@@ -191,7 +190,6 @@
     - A supinated curl and direct wrist work.
   overlaps_with:
     - hammer-curl (arms module)
-    - reverse-wrist-curl
     - cable-reverse-curl
     - zottman-curl (arms module)
   evidence_notes: []
@@ -356,9 +354,7 @@
   alternatives: []
   complements:
     - Wrist curls, reverse wrist curls, and grip work.
-  overlaps_with:
-    - hammer-curl (arms module)
-    - reverse-curl
+  overlaps_with: []
   evidence_notes: []
   review_status: needs-review
   video_link: https://www.youtube.com/watch?v=QcWHURpW_GY

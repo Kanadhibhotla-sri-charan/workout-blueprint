@@ -89,7 +89,6 @@
   "flat-barbell-bench-press|machine-chest-press",
   "flat-barbell-bench-press|push-up-chest",
   "flat-barbell-bench-press|smith-machine-bench-press",
-  "flat-dumbbell-fly|hex-press",
   "flat-dumbbell-fly|incline-dumbbell-fly",
   "flat-dumbbell-fly|machine-fly-pec-deck",
   "flat-dumbbell-press|hex-press",
@@ -103,7 +102,6 @@
   "glute-bridge|single-leg-hip-thrust",
   "hack-squat|leg-press",
   "hack-squat|smith-machine-squat",
-  "hammer-curl|pronation-supination-work",
   "hammer-curl|reverse-curl",
   "hanging-knee-leg-raise|reverse-crunch",
   "hanging-knee-leg-raise|standing-cable-hip-flexion",
@@ -140,9 +138,7 @@
   "overhead-press|smith-machine-shoulder-press",
   "pallof-press|plank-shoulder-tap",
   "preacher-curl|preacher-curl-machine",
-  "pronation-supination-work|reverse-curl",
   "rear-delt-fly|rear-delt-row",
-  "reverse-curl|reverse-wrist-curl",
   "reverse-curl|zottman-curl",
   "reverse-grip-barbell-row|t-bar-row",
   "reverse-lunge|static-lunge",
@@ -157,6 +153,5 @@
   "side-plank|suitcase-carry",
   "single-leg-calf-raise|standing-calf-raise",
   "static-lunge|step-up",
-  "static-lunge|walking-lunge",
-  "sumo-deadlift|sumo-squat"
+  "static-lunge|walking-lunge"
 ]

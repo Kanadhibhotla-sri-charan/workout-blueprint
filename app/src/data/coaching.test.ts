@@ -6,12 +6,9 @@ import { exercises, programming } from './index';
 // Quality Gate, docs/dev/reports/NEXT-QUALITY-GATE-ASSESSMENT.md §1.1).
 // This list may only shrink: once an entry's edited fields are reviewed and
 // the record is promoted back to `reviewed`, the assertion below fails until
-// the entry is removed here.
-const PENDING_DIFF_REVIEW = [
-  'overhead-triceps-extension', // band-note wording corrected in Content Review batch 1; awaiting owner confirmation
-  'seated-calf-raise', // dumbbell setup vs its "plate or step" note; awaiting owner decision
-  'straight-arm-pulldown', // band resistance direction corrected in Content Review batch 1; awaiting owner confirmation
-];
+// the entry is removed here. Emptied in Content Review batch 1 follow-up: all
+// 16 diffs verified, three of them after owner-approved corrections.
+const PENDING_DIFF_REVIEW: string[] = [];
 
 // Phase 7 Stage 2: Build packages tell a lifter exactly which exercises to
 // do, so every exercise a package uses must ship with real coaching — not

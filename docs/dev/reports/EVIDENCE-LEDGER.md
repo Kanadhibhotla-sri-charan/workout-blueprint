@@ -41,17 +41,19 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | incline-dumbbell-curl: "Lehman, 2005-era EMG shoulder-position studies" | No specific study named |
 | hip-thrust: "Contreras et al.-era EMG work … roughly 2–3× gluteus maximus activation" | No specific study named; not located with the search used |
 
-### Records affected by the findings above
+### Records affected by the findings above (corrected in the Batch 1 follow-up)
 
-| Record | Status | Finding |
+**Two separate statuses:** "Exercise data" is `review_status`; "Citations" is this ledger's verdict. Correcting a note does not by itself change `review_status`.
+
+| Record | Exercise data | Citations after correction |
 |---|---|---|
-| incline-dumbbell-curl | reviewed (Build package) | PMC11906226 misattributed and misstated; Lehman citation vague; Wolf 2023 overstated |
-| preacher-curl | needs-review | PMC11906226 misattributed and misstated |
-| hip-thrust | reviewed | Plotkin journal mis-cited; Contreras citation vague |
-| flat-dumbbell-fly | needs-review | Wolf 2023 overstated |
-| straight-arm-pulldown | needs-review (pending list) | Wolf 2023 overstated |
+| incline-dumbbell-curl | reviewed | PMC11906226 corrected to Attarieh et al. 2025 with its actual (null) finding, evidence quality "low"; Wolf 2023 corrected; **unresolved**: the EMG studies formerly cited as "Lehman, 2005-era". The long-head claim is softened in `primary_targets` and `mirror_effect` |
+| preacher-curl | needs-review | PMC11906226 corrected; evidence quality "low". Its short-head / base-width text (`mirror_effect`) still rests on the unconfirmed claim and is queued for its P3 review |
+| hip-thrust | reviewed | Plotkin corrected to Frontiers in Physiology 2023; **unresolved**: the EMG study formerly cited as "Contreras et al.-era" and its 2-3x figure |
+| flat-dumbbell-fly | needs-review | Wolf 2023 corrected |
+| straight-arm-pulldown | reviewed | Wolf 2023 corrected |
 
-The corrections are proposed in `CONTENT-REVIEW-BATCH-1.md`; none is applied yet.
+**Unresolved citations are labelled in the note itself** ("citation unresolved: …"). Nothing was guessed or substituted.
 
 ### Not yet re-checked
 

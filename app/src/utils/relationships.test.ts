@@ -42,12 +42,30 @@ describe('overlap matching', () => {
   });
 
   it('matches the audited relationship set exactly', () => {
-    // Pinned after the Next Quality Gate audit (4 removals, 4 additions).
+    // Pinned after the Next Quality Gate audit (4 removals, 4 additions) and
+    // the Content Review batch 1 overlap decisions (5 removals).
     // overlaps_with is a ranking input for replace / complement answers, so
     // any edit to it must update this snapshot deliberately.
     const pairs = new Set<string>();
     for (const a of exercises) for (const id of overlapIds(a)) pairs.add([a.id, id].sort().join('|'));
     expect([...pairs].sort()).toEqual(auditedOverlaps);
+  });
+
+  it('approved removals stay removed, on both sides', () => {
+    // Quality Gate (4 pairs) and Content Review batch 1 follow-up (5 pairs).
+    const removed = [
+      ['hip-abduction', 'hip-adduction'],
+      ['neck-extension', 'neck-flexion'],
+      ['wrist-curl', 'reverse-wrist-curl'],
+      ['cable-rear-delt-builder', 'seated-cable-row'],
+      ['hammer-curl', 'pronation-supination-work'],
+      ['pronation-supination-work', 'reverse-curl'],
+      ['reverse-curl', 'reverse-wrist-curl'],
+      ['sumo-deadlift', 'sumo-squat'],
+      ['flat-dumbbell-fly', 'hex-press'],
+    ];
+    const byId = new Map(exercises.map((e) => [e.id, e]));
+    for (const [a, b] of removed) expect(exercisesOverlap(byId.get(a)!, byId.get(b)!)).toBe(false);
   });
 
   it('every overlap reference resolves to a real exercise', () => {
