@@ -1152,3 +1152,68 @@
   video_status: verified
   video_verified_on: "2026-08-28"
   video_verification_method: metadata
+
+- id: single-arm-lat-pulldown
+  name: Single-Arm Lat Pulldown
+  summary: A one-arm cable pulldown that trains each lat on its own and exposes side-to-side differences.
+  why_this_exists: Working one side at a time lets each lat be trained and compared on its own, and lets the elbow travel down along the side of the body without a bar fixing the hand position.
+  body_regions:
+    - back
+  primary_targets:
+    - lats
+  secondary_targets:
+    - mid-back
+    - elbow flexors
+  physique_targets:
+    - lat-width
+  aesthetic_characteristics:
+    - vertical-pull
+  movement_patterns:
+    - vertical pull
+    - single arm
+  equipment:
+    - cable
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - unilateral
+    - stable-compound
+  resistance_profile: Cable stack, one arm at a time, small load increments.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: medium
+  best_used_when:
+    - One side's lat lags or a two-arm pulldown feels uneven, or a pulldown is wanted with the elbow free to travel down the side of the body.
+  less_suitable_when:
+    - Session time is tight and a two-arm pulldown covers the same work in half the sets.
+  mirror_effect: Same width-building direction as other pulldowns, the under-arm flare viewed from behind, and it can help even out a visibly uneven side.
+  advantages: []
+  limitations:
+    - Each side is trained separately, which doubles the time per set compared with a two-arm pulldown.
+    - It's easy to twist or lean the torso toward the working side to finish the pull, which shortens the lat's range without feeling like a technique breakdown.
+  technique_cues:
+    - Attach a single handle to a high pulley, sit (or kneel) facing the stack, and hold the handle with the arm straight overhead.
+    - Let the shoulder rise slightly at the top so the lat stretches, keeping the torso tall.
+    - Pull the elbow down and in toward the hip until the hand is beside the shoulder.
+    - Let the arm rise under control until it is fully straight, then finish all reps before switching sides.
+  common_mistakes:
+    - 'Twisting the torso toward the working side: the trunk rotation does part of the pull and the lat works through less range.'
+    - 'Pulling with the hand and wrist instead of driving the elbow down: the biceps and forearm take over.'
+    - 'Stopping short of a straight arm at the top: misses the stretched part of the pull.'
+  programming_notes:
+    - Start each set with the weaker side and match its reps on the stronger side.
+  alternatives: []
+  complements:
+    - A rowing pattern.
+  overlaps_with:
+    - lat-pulldown-wide-pronated
+    - neutral-grip-lat-pulldown
+  evidence_notes: []
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=LPahgWM7eUU
+  video_creator: PureGym
+  video_title: How To Do Single Lat Pulldowns
+  video_status: verified
+  video_verified_on: "2026-10-11"
+  video_verification_method: metadata

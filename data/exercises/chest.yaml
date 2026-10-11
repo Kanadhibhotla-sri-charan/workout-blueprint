@@ -1279,3 +1279,137 @@
   video_verified_on: "2026-10-03"
   video_verification_method: metadata
 
+- id: decline-barbell-bench-press
+  name: Decline Barbell Bench Press
+  summary: A barbell bench press on a decline bench, a heavy press variation with a shorter bar path than a flat press.
+  why_this_exists: A heavy horizontal-press option alongside the flat and incline versions. Many lifters find the decline angle comfortable on the shoulders, and the bar travels a shorter distance than on a flat bench.
+  body_regions:
+    - chest
+  primary_targets:
+    - chest (commonly cited as lower-biased; EMG evidence does not confirm this, see evidence_notes)
+  secondary_targets:
+    - triceps
+    - anterior deltoids
+  physique_targets:
+    - mid-pec
+    - lower-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+    - decline bench
+  equipment:
+    - barbell
+    - bench
+    - rack
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - heavy-compound
+  selection_role: secondary
+  resistance_profile: Free-weight profile, hardest off the chest and easiest at lockout; the decline shortens the bar path.
+  stability_demand: medium
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: medium
+  best_used_when:
+    - A heavy press variation is wanted by a lifter who finds the decline angle more comfortable than a flat or incline press, or as a different press angle within a chest routine.
+  less_suitable_when:
+    - 'A flat or incline press is available and comfortable: the decline adds setup and a head-down position without a confirmed lower-chest advantage.'
+  mirror_effect: Overall chest mass, like a flat bench press. It's often credited with building the lower edge of the chest, but EMG evidence doesn't confirm a lower-chest emphasis, so expect a general chest effect rather than a targeted one.
+  advantages: []
+  limitations:
+    - 'A spotter or safety arms are genuinely needed: unracking and re-racking from a head-down position is awkward, and a missed rep is harder to escape than on a flat bench.'
+    - The head-down position is uncomfortable for some lifters, and decline benches with a rack are less common than flat ones.
+  technique_cues:
+    - Hook the feet under the pads, lie back with the eyes under the bar, and pull the shoulder blades together and down.
+    - Grip the bar slightly wider than shoulder width and unrack it, ideally with a spotter, until it is over the lower chest with straight arms.
+    - Lower the bar under control to the lower chest with the elbows tucked to roughly 45 degrees from the torso.
+    - Press back up until the arms are straight over the lower chest, then re-rack with control.
+  common_mistakes:
+    - 'Bouncing the bar off the chest: the rebound skips the hardest part of the lift and risks a hard impact on the sternum.'
+    - 'Elbows flared straight out at 90 degrees: raises shoulder stress at the bottom of the press.'
+    - 'Training close to failure without a spotter or safety arms: a missed rep from a head-down position can pin the bar on the chest or neck.'
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An incline press or a fly variation selected for a distinct role.
+  overlaps_with:
+    - flat-barbell-bench-press
+    - decline-dumbbell-press
+  evidence_notes:
+    - "The lower-chest emphasis commonly credited to decline pressing is not confirmed by the EMG evidence checked for this library. Barnett et al. (1995, Journal of Strength and Conditioning Research 9(4):222–227; abstract checked) found the sternocostal head of pectoralis major less active during a decline bench press than during a horizontal one. Rodríguez-Ridao et al. (2020, PMC7579505; full text checked) found the middle and lower portions most active on a flat (0°) bench but tested no decline. Glass & Armstrong (1997, Journal of Strength and Conditioning Research 11(3):163), often cited for this claim, could not be accessed and is unverified. The record is listed under both mid and lower chest at the owner's decision; the lower-chest listing is not evidence-backed. Evidence quality: unsupported for a lower-chest bias."
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=zYBA82m9P9U
+  video_creator: HASfit
+  video_title: Barbell Decline Bench Press - HASfit Lower Chest Exercise Demonstration - Decline Press - Pectoral
+  video_status: verified
+  video_verified_on: "2026-10-11"
+  video_verification_method: metadata
+
+- id: decline-dumbbell-press
+  name: Decline Dumbbell Press
+  summary: A dumbbell press on a decline bench, with independent arms and a shorter range than a flat dumbbell press.
+  why_this_exists: A decline press option that needs only dumbbells and a decline bench, with independent arms that let each side find its own path. Many lifters find the decline angle comfortable on the shoulders.
+  body_regions:
+    - chest
+  primary_targets:
+    - chest (commonly cited as lower-biased; EMG evidence does not confirm this, see evidence_notes)
+  secondary_targets:
+    - triceps
+    - anterior deltoids
+  physique_targets:
+    - mid-pec
+    - lower-pec
+  aesthetic_characteristics:
+    - high-loadable
+  movement_patterns:
+    - horizontal press
+    - decline bench
+  equipment:
+    - dumbbell
+    - bench
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - heavy-compound
+  selection_role: secondary
+  resistance_profile: Free-weight profile; independent arms, with a lower load ceiling than a barbell decline press.
+  stability_demand: high
+  skill_demand: medium
+  setup_time: medium
+  fatigue_cost: medium
+  best_used_when:
+    - A decline press is wanted with only dumbbells, or with independent arms when a barbell decline press feels awkward on the shoulders.
+  less_suitable_when:
+    - 'A flat or incline press is available and comfortable: the decline adds setup and a head-down position without a confirmed lower-chest advantage.'
+  mirror_effect: Overall chest mass, like a flat dumbbell press. It's often credited with building the lower edge of the chest, but EMG evidence doesn't confirm a lower-chest emphasis, so expect a general chest effect rather than a targeted one.
+  advantages: []
+  limitations:
+    - Getting a heavy pair of dumbbells into position on a decline bench is awkward, and at high weights it needs a spotter to hand them over.
+    - Controlling two independent dumbbells caps the achievable load below what a barbell decline press allows.
+  technique_cues:
+    - Sit on the decline bench with the feet hooked under the pads and the dumbbells on the thighs, then lie back, bringing them to the sides of the lower chest.
+    - Pull the shoulder blades together and down against the bench.
+    - Press the dumbbells up over the lower chest until the arms are nearly straight, letting them move slightly toward each other.
+    - Lower under control until the dumbbells are beside the lower chest, as deep as the shoulders comfortably allow.
+  common_mistakes:
+    - 'Elbows flared straight out at 90 degrees: raises shoulder stress at the bottom of the press.'
+    - 'Letting the dumbbells drift apart or wobble at the bottom: control is lost where the press is hardest.'
+    - 'Sitting up from the decline while holding heavy dumbbells: the weights pull the body awkwardly; bring them to the chest and sit up with control, or have a spotter take them.'
+  programming_notes: []
+  alternatives: []
+  complements:
+    - An incline press or a fly variation selected for a distinct role.
+  overlaps_with:
+    - flat-dumbbell-press
+    - decline-barbell-bench-press
+  evidence_notes:
+    - "The lower-chest emphasis commonly credited to decline pressing is not confirmed by the EMG evidence checked for this library. Barnett et al. (1995, Journal of Strength and Conditioning Research 9(4):222–227; abstract checked) found the sternocostal head of pectoralis major less active during a decline bench press than during a horizontal one. Rodríguez-Ridao et al. (2020, PMC7579505; full text checked) found the middle and lower portions most active on a flat (0°) bench but tested no decline. Glass & Armstrong (1997, Journal of Strength and Conditioning Research 11(3):163), often cited for this claim, could not be accessed and is unverified. The record is listed under both mid and lower chest at the owner's decision; the lower-chest listing is not evidence-backed. Evidence quality: unsupported for a lower-chest bias."
+  review_status: needs-review
+  video_link: https://www.youtube.com/watch?v=n1uA2MEAPIU
+  video_creator: Travis Tarrant
+  video_title: 'Exercise Tutorial: Decline DB Chest Press'
+  video_status: verified
+  video_verified_on: "2026-10-11"
+  video_verification_method: metadata

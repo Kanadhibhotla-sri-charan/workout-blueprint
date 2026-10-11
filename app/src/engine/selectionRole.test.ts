@@ -53,6 +53,8 @@ describe('selection_role: secondary', () => {
     expect(exercises.filter((e) => e.selection_role != null).map((e) => e.id).sort()).toEqual([
       'cable-curl', // Final Exercise Expansion Pass
       'cable-pull-through', // Exercise Expansion Batch 7
+      'decline-barbell-bench-press', // Decline/single-arm expansion: decline variant of the flat press, no confirmed lower-chest advantage
+      'decline-dumbbell-press', // Decline/single-arm expansion: same rationale
       'hamstring-bridge', // Exercise Expansion Batch 7
     ]);
   });
