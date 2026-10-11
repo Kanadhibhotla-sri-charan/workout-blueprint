@@ -50,3 +50,8 @@ The single-arm lat pulldown changes no Best Fit with or without a role, so it is
 - **936** new scenarios (the new records as the current exercise).
 - **Best Fit counts of the new records:** decline-dumbbell-press 37, decline-barbell-bench-press 10, single-arm-lat-pulldown 0.
 - **Pinned cases:** unchanged (345/345 tests).
+
+## Sign-off (2026-10-11)
+
+The owner approved all three records as written, without an individual walkthrough ("I don't need to manually go through each description, just mark them as signed-off"). `review_status: reviewed` was set on that blanket approval, the same basis as the 49 records in `CONTENT-REVIEW-TIER4-REMAINDER-LOG.md`. **These three were not individually presented.** Their content was AI-drafted and accepted wholesale by the owner. Videos remain `metadata` (not watched; approved by default).
+
