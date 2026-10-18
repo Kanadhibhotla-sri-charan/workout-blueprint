@@ -19,6 +19,7 @@ import type { AestheticOutcome } from '../types/programming';
 import { DEMAND_LEVELS } from '../utils/filters';
 import { humanize } from '../utils/format';
 import { VideoReference } from '../components/VideoReference';
+import { ModePrescriptionGrid } from '../components/ModePrescriptionGrid';
 import {
   decodeDecisionParams,
   encodeDecisionInput,
@@ -734,27 +735,33 @@ function DecisionResultView({
         <p className="field-hint">
           <strong>Baseline</strong> — {programming.profile.name}
         </p>
-        <dl className="demand-grid">
-          <div>
-            <dt>Reps</dt>
-            <dd>{formatRange(programming.repRange.primaryRange)}</dd>
-          </div>
-          <div>
-            <dt>RIR</dt>
-            <dd>{formatRange(programming.rirTypicalRange)}</dd>
-          </div>
-          <div>
-            <dt>Weekly sets</dt>
-            <dd>{formatRange(programming.weeklyVolumeSets)}</dd>
-          </div>
-          <div>
-            <dt>Frequency</dt>
-            <dd>{formatRange(programming.frequencyPerWeek)}/week</dd>
-          </div>
-        </dl>
-        <p className="field-hint">{programming.repRange.reason}</p>
-        <p className="field-hint">{programming.rirGuidance}</p>
-        <p className="field-hint">{programming.progressionExplanation}</p>
+        {programming.modePrescription ? (
+          <ModePrescriptionGrid prescription={programming.modePrescription} />
+        ) : (
+          <>
+          <dl className="demand-grid">
+            <div>
+              <dt>Reps</dt>
+              <dd>{formatRange(programming.repRange.primaryRange)}</dd>
+            </div>
+            <div>
+              <dt>RIR</dt>
+              <dd>{formatRange(programming.rirTypicalRange)}</dd>
+            </div>
+            <div>
+              <dt>Weekly sets</dt>
+              <dd>{formatRange(programming.weeklyVolumeSets)}</dd>
+            </div>
+            <div>
+              <dt>Frequency</dt>
+              <dd>{formatRange(programming.frequencyPerWeek)}/week</dd>
+            </div>
+          </dl>
+          <p className="field-hint">{programming.repRange.reason}</p>
+          <p className="field-hint">{programming.rirGuidance}</p>
+          <p className="field-hint">{programming.progressionExplanation}</p>
+          </>
+        )}
         <p>{programming.profile.guidance_note}</p>
         {result.targetProgrammingContext && (
           <p className="field-hint">

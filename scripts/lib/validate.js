@@ -7,7 +7,7 @@
 // Promotion Gate from docs/architecture/PHASE-2-SCHEMA-AND-DATA-GOVERNANCE.md.
 
 const {
-  BODY_REGIONS, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
+  BODY_REGIONS, TRAINING_MODES, EXERCISE_TYPES, LATERALITY, DEMAND_LEVELS, COVERAGE_CATEGORIES,
   REVIEW_STATUSES, VIDEO_STATUSES, VIDEO_VERIFICATION_METHODS, FUNDAMENTAL_MOVEMENT_PATTERNS, REQUIRED_LIST_FIELDS,
   OPTIONAL_LIST_FIELDS, REQUIRED_SCALAR_STRING_FIELDS, ALL_FIELDS,
   AESTHETIC_CHARACTERISTICS, AESTHETIC_ROLES, SELECTION_ROLES,
@@ -84,6 +84,9 @@ const DEMAND_ORDER = ['low', 'medium', 'high'];
 // can't import the app's TypeScript engine directly. Any change to the
 // TS version must be mirrored here.
 function matchesProfileRule(exercise, match) {
+  // Athletic training modes: a mode rule matches only records of that mode,
+  // and records with a mode never fall into the hypertrophy rules.
+  if ((match.training_mode || null) !== (exercise.training_mode || null)) return false;
   if (match.exercise_type && exercise.exercise_type !== match.exercise_type) return false;
   if (
     match.coverage_categories_any &&
@@ -616,7 +619,7 @@ function validate(records) {
     if (Array.isArray(record.body_regions)) {
       for (const v of record.body_regions) {
         if (!BODY_REGIONS.has(v)) {
-          report(record, 'taxonomy', `"body_regions" contains unrecognized value "${v}" — not in the controlled 11-region set`);
+          report(record, 'taxonomy', `"body_regions" contains unrecognized value "${v}" — not in the controlled 12-region set`);
         }
       }
     }
@@ -625,6 +628,20 @@ function validate(records) {
         if (!COVERAGE_CATEGORIES.has(v)) {
           report(record, 'taxonomy', `"coverage_categories" contains unrecognized value "${v}" — not in the controlled set`);
         }
+      }
+    }
+    if (record.training_mode !== undefined && record.training_mode !== null) {
+      if (!TRAINING_MODES.has(record.training_mode)) {
+        report(record, 'taxonomy', `"training_mode" must be one of ${[...TRAINING_MODES].join('|')} when present, got ${JSON.stringify(record.training_mode)}`);
+      }
+      // Isolation guarantee: a training-mode record is reachable only
+      // through functional goals, so it must carry at least one and no
+      // physique targets (it would otherwise enter aesthetic answers).
+      if (!Array.isArray(record.functional_goals) || record.functional_goals.length === 0) {
+        report(record, 'governance', '"training_mode" records must list at least one functional_goals id');
+      }
+      if (Array.isArray(record.physique_targets) && record.physique_targets.length > 0) {
+        report(record, 'governance', '"training_mode" records must not carry physique_targets');
       }
     }
     if (record.selection_role !== undefined && record.selection_role !== null && !SELECTION_ROLES.has(record.selection_role)) {

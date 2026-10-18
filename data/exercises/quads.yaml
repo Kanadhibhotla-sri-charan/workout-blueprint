@@ -654,6 +654,8 @@
     - glutes
   physique_targets:
     - quads
+  functional_goals:
+    - landing-control
   movement_patterns:
     - unilateral knee-dominant
     - stepping backward
@@ -719,6 +721,8 @@
     - glutes
   physique_targets:
     - quads
+  functional_goals:
+    - landing-control
   movement_patterns:
     - unilateral knee-dominant
     - stepping forward continuously
@@ -789,6 +793,8 @@
     - adductors
   physique_targets:
     - quads
+  functional_goals:
+    - landing-control
   movement_patterns:
     - unilateral knee-dominant
     - stepping up onto a box

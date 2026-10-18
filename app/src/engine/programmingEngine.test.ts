@@ -52,8 +52,16 @@ describe('resolveProgrammingProfile — Phase 4C §13 exercise_type precedence',
   // the two calf records that motivated the fix — a permanent regression
   // guard against a future profile rule reintroducing the same class of
   // contradiction.
+  it('every training-mode exercise classifies into its own mode profile (athletic expansion)', () => {
+    for (const exercise of exercises.filter((e) => e.training_mode)) {
+      const profile = resolveProgrammingProfile(exercise);
+      expect(profile.training_mode, exercise.id).toBe(exercise.training_mode);
+    }
+  });
+
   it('every exercise in the database classifies into a profile family consistent with its own exercise_type', () => {
-    for (const exercise of exercises) {
+    // Hypertrophy records only; training-mode records use the mode profiles (test above).
+    for (const exercise of exercises.filter((e) => !e.training_mode)) {
       const profileId = resolveProgrammingProfile(exercise).id;
       const isCompoundProfile = COMPOUND_PROFILE_FAMILY.has(profileId);
       if (exercise.exercise_type === 'compound') {

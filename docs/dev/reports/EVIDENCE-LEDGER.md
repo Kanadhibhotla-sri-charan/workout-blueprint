@@ -9,7 +9,7 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | `metadata`: title / channel checked via oEmbed; footage **not** watched | 136 |
 | `visual`: watched by a person | **4** (cable-rear-delt-builder, cable-pull-through, upright-row-wide-grip, cable-band-external-rotation; owner review, 2026-10-10) |
 
-**Phase closed (2026-10-10):** the owner approved all remaining video references by default (`VIDEO-VERIFICATION-CLOSURE.md`). Owner-approved: 140 / 140. Watched (`visual`): 4 / 140. Metadata-only, approved by default and **not watched**: 136 / 140. **Update 2026-10-11:** three records added (143 total). Their videos are metadata-only and approved by default: 4 / 143 visual, 139 / 143 metadata.
+**Phase closed (2026-10-10):** the owner approved all remaining video references by default (`VIDEO-VERIFICATION-CLOSURE.md`). Owner-approved: 140 / 140. Watched (`visual`): 4 / 140. Metadata-only, approved by default and **not watched**: 136 / 140. **Update 2026-10-11:** three records added (143 total). Their videos are metadata-only and approved by default: 4 / 143 visual, 139 / 143 metadata. **Update 2026-10-18:** 20 athletic records added (163 total), videos metadata-only and approved by default: 4 / 163 visual, 159 / 163 metadata.
 
 ### Video verification batch 1: watch log (human review)
 

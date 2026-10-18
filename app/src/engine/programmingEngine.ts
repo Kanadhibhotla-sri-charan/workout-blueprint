@@ -29,6 +29,24 @@ export interface Programming {
   intensityTechniqueContext: string;
   /** The classified Programming Profile driving this exercise's guidance (Phase 4B §10-11). */
   profile: ProgrammingProfile;
+  /**
+   * Athletic-mode prescription (athletic expansion). Present only for
+   * exercises with a training_mode; when present, the UI shows these
+   * metrics instead of the hypertrophy reps / RIR / weekly-sets fields.
+   */
+  modePrescription?: ModePrescription;
+}
+
+export interface ModePrescription {
+  mode: string;
+  unit: 'reps' | 'seconds';
+  amount: [number, number];
+  /** True when the amount is counted per side (unilateral / alternating records). */
+  perSide: boolean;
+  sets: [number, number];
+  restSeconds: [number, number];
+  effort: string;
+  frequencyPerWeek: [number, number];
 }
 
 const FALLBACK_PROFILE: ProgrammingProfile = {
@@ -43,6 +61,10 @@ const FALLBACK_PROFILE: ProgrammingProfile = {
 };
 
 function matchesProfileRule(exercise: Exercise, match: ProgrammingProfileMatch): boolean {
+  // Athletic training modes: a mode rule matches only records of that
+  // mode, and a record with a mode never falls into the hypertrophy rules.
+  // Records without a mode (every pre-existing record) are unaffected.
+  if ((match.training_mode ?? null) !== (exercise.training_mode ?? null)) return false;
   if (match.exercise_type && exercise.exercise_type !== match.exercise_type) return false;
   if (
     match.coverage_categories_any &&
@@ -121,6 +143,9 @@ function demandIndex(level: DemandLevel | string): number {
 // conventional deadlift is correctly ineligible for every technique even
 // though "compound" alone would pass rest-pause's exercise_type check.
 function isTechniqueEligible(technique: IntensityTechnique, exercise: Exercise): boolean {
+  // Intensity techniques (drop sets, rest-pause, myo-reps) are hypertrophy
+  // tools; they never apply to athletic-mode work.
+  if (exercise.training_mode) return false;
   if (!technique.suitable_exercise_types.includes(exercise.exercise_type)) return false;
   if (demandIndex(exercise.fatigue_cost) > demandIndex(technique.suitable_when_fatigue_cost_at_most)) return false;
   if (demandIndex(exercise.skill_demand) > demandIndex(technique.suitable_when_skill_demand_at_most)) return false;
@@ -184,9 +209,24 @@ function explainNoIntensityTechnique(exercise: Exercise, maxFatigueCost: DemandL
   );
 }
 
+function resolveModePrescription(exercise: Exercise, profile: ProgrammingProfile): ModePrescription | null {
+  if (!exercise.training_mode || !profile.training_mode) return null;
+  return {
+    mode: profile.training_mode,
+    unit: profile.unit ?? 'reps',
+    amount: profile.primary_range,
+    perSide: exercise.laterality !== 'bilateral',
+    sets: profile.sets ?? [1, 1],
+    restSeconds: profile.rest_seconds ?? [0, 0],
+    effort: profile.effort ?? '',
+    frequencyPerWeek: profile.frequency_per_week ?? programming.globalPrinciples.frequency.typical_starting_range_per_week,
+  };
+}
+
 export function buildProgramming(exercise: Exercise, maxFatigueCost: DemandLevel | null): Programming {
   const { rir, progression } = programming.globalPrinciples;
   const profile = resolveProgrammingProfile(exercise);
+  const modePrescription = resolveModePrescription(exercise, profile);
   const eligible = maxFatigueCost === 'low' ? [] : eligibleTechniquesRanked(exercise);
   const intensityTechnique = eligible[0] ?? null;
   return {
@@ -201,7 +241,11 @@ export function buildProgramming(exercise: Exercise, maxFatigueCost: DemandLevel
     intensityTechnique,
     intensityTechniqueContext: intensityTechnique
       ? explainIntensityTechnique(intensityTechnique, exercise, profile)
-      : explainNoIntensityTechnique(exercise, maxFatigueCost),
+      : modePrescription
+        ? `Intensity techniques such as drop sets don't apply to ${profile.name.toLowerCase()} work — follow the sets, rest and effort guidance above instead.`
+        : explainNoIntensityTechnique(exercise, maxFatigueCost),
+    // Omitted entirely for hypertrophy records, so their output is unchanged.
+    ...(modePrescription ? { modePrescription } : {}),
   };
 }
 

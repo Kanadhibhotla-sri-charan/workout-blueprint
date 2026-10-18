@@ -21,7 +21,16 @@ const MAX_COMPLEMENTS_SHOWN = 3;
 // §14 ("do not use opaque numerical scoring unless necessary") and the
 // structural-matching rules defined in DECISION-ENGINE-RULES.md before
 // this file was written.
-export function makeRecommendation(input: DecisionInput, allExercises: Exercise[]): DecisionResult {
+export function makeRecommendation(input: DecisionInput, everyExercise: Exercise[]): DecisionResult {
+  // Athletic-mode drills (records with a training_mode) are recommended
+  // only for the functional goals they carry. They are removed from every
+  // other answer — physique-target, region and existing functional goals
+  // they don't carry, including alternatives and complements — so adding
+  // them never changes a pre-existing recommendation.
+  const athleticGoal = input.functionalGoal && !input.physiqueTarget ? input.functionalGoal : null;
+  const allExercises = everyExercise.filter(
+    (exercise) => !exercise.training_mode || (athleticGoal !== null && (exercise.functional_goals ?? []).includes(athleticGoal))
+  );
   // Step 1: filter by physique target when given and it has curated
   // exercises; otherwise (or when not given) fall back to body region —
   // this is what keeps Phase 3's body-region-only selection working
@@ -117,7 +126,7 @@ export function makeRecommendation(input: DecisionInput, allExercises: Exercise[
     .filter(meetsConstraints);
 
   const currentExercise = input.currentExerciseId
-    ? (allExercises.find((exercise) => exercise.id === input.currentExerciseId) ?? null)
+    ? (everyExercise.find((exercise) => exercise.id === input.currentExerciseId) ?? null)
     : null;
 
   if (GOALS_REQUIRING_CURRENT_EXERCISE.includes(input.goal) && !currentExercise) {

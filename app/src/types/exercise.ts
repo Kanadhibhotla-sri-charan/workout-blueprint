@@ -5,6 +5,7 @@
 export type ExerciseType = 'compound' | 'isolation';
 export type Laterality = 'bilateral' | 'unilateral' | 'alternating';
 export type DemandLevel = 'low' | 'medium' | 'high';
+export type TrainingMode = 'power' | 'agility' | 'movement-strength' | 'mobility-hold' | 'mobility-dynamic' | 'conditioning';
 export type ReviewStatus = 'draft' | 'needs-review' | 'reviewed';
 export type VideoStatus = 'verified' | 'needs-review' | 'broken';
 
@@ -43,6 +44,13 @@ export interface Exercise {
    * rankByGoal); absent means unclassified. Not a quality score.
    */
   selection_role?: 'secondary' | null;
+  /**
+   * Athletic training mode (athletic expansion). Absent = the existing
+   * hypertrophy-oriented programming. A record with a mode gets its own
+   * prescription profile and is recommended only for the functional goals
+   * it carries — never in physique-target or region answers.
+   */
+  training_mode?: TrainingMode | null;
   exercise_type: ExerciseType;
   laterality: Laterality;
   coverage_categories: string[];

@@ -8,8 +8,8 @@ import { bodyRegions, exercises, getExerciseById, getExercisesByBodyRegion } fro
 // (scripts/generate-data.mjs -> exercises.generated.json -> this loader)
 // actually wires up correctly, not just that the source YAML is valid.
 describe('data loader', () => {
-  it('loads all 143 canonical exercises', () => {
-    expect(exercises.length).toBe(143);
+  it('loads all 163 canonical exercises', () => {
+    expect(exercises.length).toBe(163);
   });
 
   it('has no duplicate ids', () => {
@@ -17,9 +17,10 @@ describe('data loader', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('exposes all 11 expected body regions', () => {
+  it('exposes all 12 expected body regions', () => {
+    // 'full-body' added by the athletic expansion (conditioning drills only).
     expect(bodyRegions).toEqual(
-      ['arms', 'back', 'calves', 'chest', 'core', 'forearms', 'hamstrings', 'hips', 'neck', 'quads', 'shoulders']
+      ['arms', 'back', 'calves', 'chest', 'core', 'forearms', 'full-body', 'hamstrings', 'hips', 'neck', 'quads', 'shoulders']
     );
   });
 

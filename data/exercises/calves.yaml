@@ -210,6 +210,8 @@
     - soleus
   physique_targets:
     - gastrocnemius
+  functional_goals:
+    - ankle-resilience
   movement_patterns:
     - unilateral ankle plantarflexion
   equipment:
@@ -266,6 +268,8 @@
   primary_targets:
     - tibialis anterior
   secondary_targets: []
+  functional_goals:
+    - ankle-resilience
   movement_patterns:
     - ankle dorsiflexion
   equipment:

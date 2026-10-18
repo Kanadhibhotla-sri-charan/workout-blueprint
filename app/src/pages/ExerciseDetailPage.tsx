@@ -5,6 +5,7 @@ import { OptionalList } from '../components/OptionalList';
 import { RelationshipList } from '../components/RelationshipList';
 import { buildProgramming, getEligibleIntensityTechniques } from '../engine/programmingEngine';
 import { VideoReference } from '../components/VideoReference';
+import { ModePrescriptionGrid } from '../components/ModePrescriptionGrid';
 import { formatEquipmentOptions } from '../engine/equipment';
 
 export function ExerciseDetailPage() {
@@ -125,33 +126,40 @@ export function ExerciseDetailPage() {
         <p className="field-hint">
           <strong>Baseline</strong> — {programming.profile.name}
         </p>
-        <dl className="demand-grid">
-          <div>
-            <dt>Reps</dt>
-            <dd>{formatRange(programming.repRange.primaryRange)}</dd>
-          </div>
-          <div>
-            <dt>RIR</dt>
-            <dd>{formatRange(programming.rirTypicalRange)}</dd>
-          </div>
-          <div>
-            <dt>Weekly sets</dt>
-            <dd>{formatRange(programming.weeklyVolumeSets)}</dd>
-          </div>
-          <div>
-            <dt>Frequency</dt>
-            <dd>{formatRange(programming.frequencyPerWeek)}/week</dd>
-          </div>
-        </dl>
-        <p className="field-hint">{programming.repRange.reason}</p>
-        <p className="field-hint">{programming.rirGuidance}</p>
-        <p className="field-hint">{programming.progressionExplanation}</p>
+        {programming.modePrescription ? (
+          <ModePrescriptionGrid prescription={programming.modePrescription} />
+        ) : (
+          <>
+          <dl className="demand-grid">
+            <div>
+              <dt>Reps</dt>
+              <dd>{formatRange(programming.repRange.primaryRange)}</dd>
+            </div>
+            <div>
+              <dt>RIR</dt>
+              <dd>{formatRange(programming.rirTypicalRange)}</dd>
+            </div>
+            <div>
+              <dt>Weekly sets</dt>
+              <dd>{formatRange(programming.weeklyVolumeSets)}</dd>
+            </div>
+            <div>
+              <dt>Frequency</dt>
+              <dd>{formatRange(programming.frequencyPerWeek)}/week</dd>
+            </div>
+          </dl>
+          <p className="field-hint">{programming.repRange.reason}</p>
+          <p className="field-hint">{programming.rirGuidance}</p>
+          <p className="field-hint">{programming.progressionExplanation}</p>
+          </>
+        )}
         {programming.profile.guidance_note && (
           <p className="field-hint">{programming.profile.guidance_note}</p>
         )}
       </section>
 
-      {/* Universal Intensity Techniques */}
+      {/* Universal Intensity Techniques (hypertrophy work only) */}
+      {!programming.modePrescription && (
       <section className="detail-section intensity-techniques-section">
         <h2>Intensity Techniques</h2>
         {eligibleTechniques.length > 0 ? (
@@ -177,6 +185,7 @@ export function ExerciseDetailPage() {
           </div>
         )}
       </section>
+      )}
 
       {/* 6–8: relationships */}
       {(exercise.alternatives?.length ||

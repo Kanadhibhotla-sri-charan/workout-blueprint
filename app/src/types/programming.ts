@@ -67,9 +67,22 @@ export interface ProgrammingProfile {
   acceptable_range: [number, number];
   rep_range_reason: string;
   guidance_note: string;
+  /**
+   * Athletic-mode prescription (athletic expansion). Present only on the
+   * training-mode profiles; hypertrophy profiles omit every field below
+   * and keep their existing reps / RIR / weekly-sets guidance.
+   */
+  training_mode?: string;
+  /** What primary_range / acceptable_range count: reps (default) or seconds. */
+  unit?: 'reps' | 'seconds';
+  sets?: [number, number];
+  rest_seconds?: [number, number];
+  effort?: string;
+  frequency_per_week?: [number, number];
 }
 
 export interface ProgrammingProfileMatch {
+  training_mode?: string;
   exercise_type?: string;
   coverage_categories_any?: string[];
   stability_demand_at_least?: 'low' | 'medium' | 'high';

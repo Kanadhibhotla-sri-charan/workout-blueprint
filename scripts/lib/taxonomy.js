@@ -6,7 +6,16 @@
 
 const BODY_REGIONS = new Set([
   'arms', 'back', 'calves', 'chest', 'core', 'forearms',
-  'hamstrings', 'hips', 'neck', 'quads', 'shoulders',
+  'full-body', 'hamstrings', 'hips', 'neck', 'quads', 'shoulders',
+]);
+
+// Athletic training modes (athletic expansion, 2026-10). Optional on an
+// exercise record; absent means the existing hypertrophy-oriented
+// programming. A record with a training_mode gets its own prescription
+// profile (programming-profiles.yaml) and is recommended only for the
+// functional goals it carries, never in physique-target or region answers.
+const TRAINING_MODES = new Set([
+  'power', 'agility', 'movement-strength', 'mobility-hold', 'mobility-dynamic', 'conditioning',
 ]);
 
 const EXERCISE_TYPES = new Set(['compound', 'isolation']);
@@ -68,6 +77,9 @@ const FUNDAMENTAL_MOVEMENT_PATTERNS = new Set([
   'shoulder horizontal adduction on an incline', 'squat / knee-dominant', 'trunk extension', 'trunk flexion',
   'trunk rotation', 'unilateral hip-dominant', 'unilateral knee- and hip-dominant', 'unilateral knee-dominant',
   'vertical press', 'vertical pull', 'wrist extension', 'wrist flexion',
+  // Athletic expansion (2026-10): patterns for training-mode records.
+  'jump and land', 'lateral locomotion', 'multidirectional footwork', 'running',
+  'mobility hold', 'mobility drill', 'full-body conditioning',
 ]);
 
 // Canonical field set, and which are required vs optional, per SCHEMA.md.
@@ -102,6 +114,7 @@ const ALL_FIELDS = new Set([
   'video_verified_on', 'video_verification_method',
   'equipment_setups',
   'selection_role',
+  'training_mode',
 ]);
 
 // How a `verified` video reference was confirmed to match its exercise.
@@ -114,6 +127,7 @@ const VIDEO_VERIFICATION_METHODS = new Set(['metadata', 'visual']);
 
 module.exports = {
   BODY_REGIONS,
+  TRAINING_MODES,
   EXERCISE_TYPES,
   LATERALITY,
   DEMAND_LEVELS,

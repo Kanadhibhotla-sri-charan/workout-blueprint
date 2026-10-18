@@ -111,3 +111,53 @@ goals:
       Lateral trunk control and durability — relevant to single-side
       carrying and loading tasks a bilateral, symmetric lift never
       challenges. Carries add grip endurance as a side effect.
+
+  # --- Athletic goals (athletic expansion, 2026-10): badminton-oriented ---
+
+  - id: lower-body-power
+    name: Lower-Body Power
+    parent_region: quads
+    definition: >-
+      Explosive force from the legs, trained through jumping, bounding and quick bouncing drills performed fast and fresh.
+    why_it_matters: >-
+      The explosive push-off behind fast first steps, jumping smashes and reaching shots, trained for speed rather than muscle size.
+
+  - id: agility-change-of-direction
+    name: Agility & Change of Direction
+    parent_region: hips
+    definition: >-
+      Quick, balanced footwork and fast changes of direction, trained through shuffles, bounds and court footwork patterns.
+    why_it_matters: >-
+      Court coverage depends on moving the feet quickly and changing direction without losing balance.
+
+  - id: landing-control
+    name: Landing Control
+    parent_region: quads
+    definition: >-
+      Absorbing force safely on one or two legs, trained through landing, hopping and lunging drills with the knee kept in line over the toes.
+    why_it_matters: >-
+      Landing and stopping well is relevant to knee and ankle resilience in sports with constant jumping, lunging and stopping.
+
+  - id: ankle-resilience
+    name: Ankle Resilience
+    parent_region: calves
+    definition: >-
+      Ankle range, stiffness and control, trained through quick bouncing, single-leg landing, mobility and calf and shin strength work.
+    why_it_matters: >-
+      Springy, mobile and well-controlled ankles support quick footwork and are relevant to ankle-sprain resilience.
+
+  - id: lower-body-mobility
+    name: Lower-Body Mobility
+    parent_region: hips
+    definition: >-
+      Comfortable range of motion at the hips and legs, trained through held stretches and controlled mobility drills.
+    why_it_matters: >-
+      Deep lunges, low pick-ups and fast direction changes need comfortable hip and leg range.
+
+  - id: full-body-conditioning
+    name: Full-Body Conditioning
+    parent_region: full-body
+    definition: >-
+      Whole-body endurance, trained through repeated intervals of running, skipping, rowing and court-movement drills.
+    why_it_matters: >-
+      The endurance to keep moving hard through long rallies and full sessions.
