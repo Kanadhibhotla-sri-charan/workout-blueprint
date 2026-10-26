@@ -5,7 +5,7 @@
 export type ExerciseType = 'compound' | 'isolation';
 export type Laterality = 'bilateral' | 'unilateral' | 'alternating';
 export type DemandLevel = 'low' | 'medium' | 'high';
-export type TrainingMode = 'power' | 'agility' | 'movement-strength' | 'mobility-hold' | 'mobility-dynamic' | 'conditioning';
+export type TrainingMode = 'power' | 'agility' | 'movement-strength' | 'mobility-hold' | 'mobility-dynamic' | 'conditioning' | 'soft-tissue';
 export type ReviewStatus = 'draft' | 'needs-review' | 'reviewed';
 export type VideoStatus = 'verified' | 'needs-review' | 'broken';
 

@@ -9,7 +9,7 @@ _What has actually been verified, and how. Updated each content-review batch. A 
 | `metadata`: title / channel checked via oEmbed; footage **not** watched | 136 |
 | `visual`: watched by a person | **4** (cable-rear-delt-builder, cable-pull-through, upright-row-wide-grip, cable-band-external-rotation; owner review, 2026-10-10) |
 
-**Phase closed (2026-10-10):** the owner approved all remaining video references by default (`VIDEO-VERIFICATION-CLOSURE.md`). Owner-approved: 140 / 140. Watched (`visual`): 4 / 140. Metadata-only, approved by default and **not watched**: 136 / 140. **Update 2026-10-11:** three records added (143 total). Their videos are metadata-only and approved by default: 4 / 143 visual, 139 / 143 metadata. **Update 2026-10-18:** 20 athletic records added (163 total), videos metadata-only and approved by default: 4 / 163 visual, 159 / 163 metadata.
+**Phase closed (2026-10-10):** the owner approved all remaining video references by default (`VIDEO-VERIFICATION-CLOSURE.md`). Owner-approved: 140 / 140. Watched (`visual`): 4 / 140. Metadata-only, approved by default and **not watched**: 136 / 140. **Update 2026-10-11:** three records added (143 total). Their videos are metadata-only and approved by default: 4 / 143 visual, 139 / 143 metadata. **Update 2026-10-18:** 20 athletic records added (163 total), videos metadata-only and approved by default: 4 / 163 visual, 159 / 163 metadata. **Update 2026-10-26:** 19 flexibility records added (182 total), videos metadata-only and approved by default: 4 / 182 visual, 178 / 182 metadata.
 
 ### Video verification batch 1: watch log (human review)
 
@@ -80,6 +80,15 @@ Results are recorded exactly as reported by the reviewer. Data changes (`metadat
 ### Not yet re-checked
 
 The remaining sources cited only by `needs-review` records, and any note not listed above. Every `reviewed` status predates this ledger, so it does **not** imply its citations were re-checked, except where a row above says so.
+
+### Flexibility expansion sources (2026-10-26)
+
+Not attached to any exercise's `evidence_notes`. Thomas 2018 supports the weekly guideline in the `mobility-hold` profile's `best_timing`. Lauersen 2014 was used only to answer the owner's question about injury prevention.
+
+| Source | Verified identity | Claim used | Result |
+|---|---|---|---|
+| Thomas, Bianco, Paoli, Palma 2018 | Int J Sports Med 39(4):243–254, PMID 29506306, doi 10.1055/s-0044-101146 (NCBI abstract) | Review of 23 studies: weekly stretching time (5 min or more) and weekly frequency were associated with range-of-motion gains; time per session was not. Authors suggest at least 5 days a week and at least 5 min per week of static stretching | **Matches** (abstract). The abstract does not say "per muscle group"; the profile text says "per area" as a practical reading |
+| Lauersen, Bertelsen, Andersen 2014 | Br J Sports Med 48(11):871–877, doi 10.1136/bjsports-2013-092538 (PEDro record 39522) | 25 RCTs, 26,610 participants: strength training RR 0.315 (0.207–0.480); proprioception RR 0.550 (0.347–0.869); stretching RR 0.963 (0.846–1.095), no clear effect | **Matches** (abstract-level). Not about badminton specifically |
 
 ## Position-tag evidence status (position-tag semantics correction)
 

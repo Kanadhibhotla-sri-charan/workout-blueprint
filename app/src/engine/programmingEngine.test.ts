@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildProgramming, getEligibleIntensityTechniques, resolveProgrammingProfile, resolveRepRange } from './programmingEngine';
-import { exercises, getExerciseById } from '../data';
+import { exercises, getExerciseById, programming } from '../data';
 
 const COMPOUND_PROFILE_FAMILY = new Set(['heavy-free-weight-compound', 'stable-compound', 'compound-general']);
 
@@ -56,6 +56,32 @@ describe('resolveProgrammingProfile — Phase 4C §13 exercise_type precedence',
     for (const exercise of exercises.filter((e) => e.training_mode)) {
       const profile = resolveProgrammingProfile(exercise);
       expect(profile.training_mode, exercise.id).toBe(exercise.training_mode);
+    }
+  });
+
+  it('a rep-ranges override sets a training-mode exercise\'s own amount (flexibility expansion)', () => {
+    const doorway = buildProgramming(getExerciseById('doorway-pec-stretch')!, null).modePrescription!;
+    expect(doorway.amount).toEqual([30, 45]);
+    expect(doorway.unit).toBe('seconds');
+    expect(doorway.perSide).toBe(true);
+    // No override: the profile's own range applies.
+    expect(buildProgramming(getExerciseById('deep-squat-hold')!, null).modePrescription!.amount).toEqual([30, 60]);
+  });
+
+  it('every rep-ranges override names a training-mode exercise and sits inside its acceptable range', () => {
+    for (const override of programming.repRanges.overrides) {
+      const exercise = getExerciseById(override.exercise_id);
+      expect(exercise?.training_mode, override.exercise_id).toBeTruthy();
+      expect(override.acceptable_range[0]).toBeLessThanOrEqual(override.primary_range[0]);
+      expect(override.acceptable_range[1]).toBeGreaterThanOrEqual(override.primary_range[1]);
+    }
+  });
+
+  it('mobility and soft-tissue prescriptions carry timing guidance; other modes do not', () => {
+    for (const exercise of exercises.filter((e) => e.training_mode)) {
+      const timing = buildProgramming(exercise, null).modePrescription!.bestTiming;
+      const expectTiming = ['mobility-hold', 'mobility-dynamic', 'soft-tissue'].includes(exercise.training_mode!);
+      expect(Boolean(timing), exercise.id).toBe(expectTiming);
     }
   });
 

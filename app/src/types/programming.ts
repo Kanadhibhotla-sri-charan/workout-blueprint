@@ -79,6 +79,8 @@ export interface ProgrammingProfile {
   rest_seconds?: [number, number];
   effort?: string;
   frequency_per_week?: [number, number];
+  /** When in the week or session this kind of work fits best (flexibility expansion). */
+  best_timing?: string;
 }
 
 export interface ProgrammingProfileMatch {

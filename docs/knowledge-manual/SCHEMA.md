@@ -135,15 +135,17 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 ### `training_mode`
 - **Type:** string, or absent / `null`
 - **Required:** no. Absent means the existing hypertrophy-oriented programming (every record before the athletic expansion).
-- **Allowed values (closed vocabulary):** `power`, `agility`, `movement-strength`, `mobility-hold`, `mobility-dynamic`, `conditioning`.
+- **Allowed values (closed vocabulary):** `power`, `agility`, `movement-strength`, `mobility-hold`, `mobility-dynamic`, `conditioning`, `soft-tissue` (foam rolling and other self-massage; flexibility expansion, 2026-10).
 - **Meaning:** the kind of athletic work the record is (athletic expansion, 2026-10, badminton-oriented).
 - **Programming:** each mode has its own profile in `programming-profiles.yaml`, with these fields:
   - `unit` (`reps` or `seconds`; `primary_range` counts this unit);
   - `sets`, `rest_seconds` and `frequency_per_week`;
-  - an `effort` description that replaces RIR.
+  - an `effort` description that replaces RIR;
+  - an optional `best_timing` note (the mobility and soft-tissue profiles: dynamic drills before training, holds after training or on rest days).
   - Intensity techniques never apply to these modes.
+- **Per-exercise amounts:** a `rep-ranges.yaml` override replaces the profile's `primary_range` for one record (for example a 30–45 s hold instead of the profile's 30–60 s). Overrides are used only for training-mode records; a test enforces this.
 - **Matching:** profile matching requires the mode to match exactly, so hypertrophy records never reach a mode profile, and mode records never reach a hypertrophy profile.
-- **Recommendation isolation:** a record with a mode is recommended only when the selected functional goal is one it lists. It is removed from every other Decide answer: physique targets, regions, other functional goals, and alternatives / complements within those answers. Adding mode records therefore never changes a pre-existing answer.
+- **Recommendation isolation:** a record with a mode is recommended only when the selected functional goal is one it lists. It is removed from every other Decide answer: physique targets, regions, other functional goals, and alternatives / complements within those answers. Adding mode records therefore never changes an answer outside the functional goals they list; it can change answers within those goals.
 - **Required with it:** at least one `functional_goals` entry and no `physique_targets`. The validator enforces both.
 - **Decision-making impact:** only within the athletic functional goals.
 

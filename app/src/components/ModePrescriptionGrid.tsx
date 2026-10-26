@@ -6,6 +6,7 @@ import { formatRange } from '../utils/format';
 // training_mode. Pure presentation of the resolved profile's own numbers.
 function amountLabel(p: ModePrescription): string {
   const side = p.perSide ? ' per side' : '';
+  if (p.mode === 'soft-tissue') return `Time per area (seconds${side})`;
   if (p.unit === 'seconds') return p.mode === 'conditioning' ? `Work (seconds${side})` : `Hold (seconds${side})`;
   return `Reps${side}`;
 }
@@ -32,6 +33,7 @@ export function ModePrescriptionGrid({ prescription }: { prescription: ModePresc
         </div>
       </dl>
       {prescription.effort && <p className="field-hint"><strong>Effort</strong> — {prescription.effort}</p>}
+      {prescription.bestTiming && <p className="field-hint"><strong>When</strong> — {prescription.bestTiming}</p>}
     </>
   );
 }

@@ -16,4 +16,68 @@
 # Ranges are starting points to adjust, not exact values — see the
 # wording_rules in global-principles.yaml.
 
-overrides: []
+# Flexibility expansion (2026-10): per-exercise amounts for training-mode
+# records, taken from the owner-approved flexibility plan. For a
+# training-mode record the primary_range is the per-item amount (seconds
+# for holds, reps for drills) shown in its prescription.
+overrides:
+  - exercise_id: thoracic-open-book
+    primary_range: [8, 10]
+    acceptable_range: [6, 12]
+    reason: >-
+      8 to 10 controlled reps per side, per the owner-approved flexibility plan.
+  - exercise_id: thread-the-needle
+    primary_range: [8, 10]
+    acceptable_range: [6, 12]
+    reason: >-
+      8 to 10 controlled reps per side, per the owner-approved flexibility plan.
+  - exercise_id: bench-thoracic-extension-prayer
+    primary_range: [30, 45]
+    acceptable_range: [20, 60]
+    reason: >-
+      Holds of 30 to 45 seconds, per the owner-approved flexibility plan.
+  - exercise_id: doorway-pec-stretch
+    primary_range: [30, 45]
+    acceptable_range: [20, 60]
+    reason: >-
+      Holds of 30 to 45 seconds per side, per the owner-approved flexibility plan.
+  - exercise_id: kneeling-lat-stretch
+    primary_range: [30, 45]
+    acceptable_range: [20, 60]
+    reason: >-
+      Holds of 30 to 45 seconds per side, per the owner-approved flexibility plan.
+  - exercise_id: cross-body-shoulder-stretch
+    primary_range: [30, 30]
+    acceptable_range: [20, 45]
+    reason: >-
+      Holds of about 30 seconds per side, per the owner-approved flexibility plan.
+  - exercise_id: band-shoulder-pass-through
+    primary_range: [10, 15]
+    acceptable_range: [8, 20]
+    reason: >-
+      10 to 15 smooth reps, per the owner-approved flexibility plan.
+  - exercise_id: wrist-flexor-extensor-stretch
+    primary_range: [30, 30]
+    acceptable_range: [20, 45]
+    reason: >-
+      About 30 seconds for each direction, per the owner-approved flexibility plan.
+  - exercise_id: wall-calf-stretch
+    primary_range: [30, 45]
+    acceptable_range: [20, 60]
+    reason: >-
+      Holds of 30 to 45 seconds for each knee position, per the owner-approved flexibility plan.
+  - exercise_id: adductor-rock-back
+    primary_range: [8, 10]
+    acceptable_range: [6, 12]
+    reason: >-
+      8 to 10 controlled reps per side, per the owner-approved flexibility plan.
+  - exercise_id: worlds-greatest-stretch
+    primary_range: [5, 5]
+    acceptable_range: [3, 6]
+    reason: >-
+      About 5 slow reps per side, per the owner-approved flexibility plan.
+  - exercise_id: leg-swings
+    primary_range: [10, 15]
+    acceptable_range: [8, 20]
+    reason: >-
+      10 to 15 swings per side in each direction, per the owner-approved flexibility plan.

@@ -60,6 +60,7 @@
   "chest-supported-row|seated-cable-row",
   "chest-supported-row|single-arm-dumbbell-row",
   "chest-supported-row|t-bar-row",
+  "childs-pose-side-reach|kneeling-lat-stretch",
   "chin-up-supinated|lat-pulldown-wide-pronated",
   "chin-up-supinated|pull-up-pronated",
   "chin-up-supinated|reverse-grip-lat-pulldown",
@@ -72,7 +73,9 @@
   "copenhagen-plank|hip-adduction",
   "copenhagen-plank|side-plank",
   "cossack-squat|lateral-lunge",
+  "couch-stretch|standing-quad-stretch",
   "cross-body-hammer-curl|hammer-curl",
+  "cross-body-shoulder-stretch|sleeper-stretch",
   "decline-barbell-bench-press|decline-dumbbell-press",
   "decline-barbell-bench-press|flat-barbell-bench-press",
   "decline-dumbbell-fly|flat-dumbbell-fly",
@@ -163,5 +166,6 @@
   "side-plank|suitcase-carry",
   "single-leg-calf-raise|standing-calf-raise",
   "static-lunge|step-up",
-  "static-lunge|walking-lunge"
+  "static-lunge|walking-lunge",
+  "thoracic-open-book|thread-the-needle"
 ]

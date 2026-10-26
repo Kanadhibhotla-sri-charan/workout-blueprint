@@ -16,6 +16,8 @@ const BODY_REGIONS = new Set([
 // functional goals it carries, never in physique-target or region answers.
 const TRAINING_MODES = new Set([
   'power', 'agility', 'movement-strength', 'mobility-hold', 'mobility-dynamic', 'conditioning',
+  // Flexibility expansion (2026-10): foam rolling and other self-massage.
+  'soft-tissue',
 ]);
 
 const EXERCISE_TYPES = new Set(['compound', 'isolation']);
@@ -80,6 +82,8 @@ const FUNDAMENTAL_MOVEMENT_PATTERNS = new Set([
   // Athletic expansion (2026-10): patterns for training-mode records.
   'jump and land', 'lateral locomotion', 'multidirectional footwork', 'running',
   'mobility hold', 'mobility drill', 'full-body conditioning',
+  // Flexibility expansion (2026-10).
+  'soft-tissue rolling',
 ]);
 
 // Canonical field set, and which are required vs optional, per SCHEMA.md.

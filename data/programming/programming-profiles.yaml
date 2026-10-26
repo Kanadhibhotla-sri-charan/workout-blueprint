@@ -266,6 +266,12 @@ profiles:
     guidance_note: >-
       Frequency matters more than intensity; short regular sessions work
       better than occasional hard stretching.
+    best_timing: >-
+      After training or on rest days, when the body is warm. For lasting
+      range, aim for about 5 minutes or more of stretching per area each
+      week, spread over most days: a 2018 review of 23 studies found that
+      weekly stretching time and frequency mattered more than time per
+      session.
 
   - id: mobility-dynamic
     training_mode: mobility-dynamic
@@ -287,6 +293,8 @@ profiles:
       strength set.
     guidance_note: >-
       Works well as a warm-up before court sessions or lower-body training.
+    best_timing: >-
+      Before training or court sessions, as part of the warm-up.
 
   - id: conditioning
     training_mode: conditioning
@@ -308,6 +316,32 @@ profiles:
       demand of rallies while staying repeatable.
     guidance_note: >-
       Progress by adding rounds or shortening rest, one change at a time.
+
+  - id: soft-tissue
+    training_mode: soft-tissue
+    name: Soft-tissue rolling
+    summary: >-
+      Foam rolling and similar self-massage, used to ease muscle tightness
+      around training.
+    unit: seconds
+    primary_range: [30, 60]
+    acceptable_range: [20, 120]
+    sets: [1, 2]
+    rest_seconds: [0, 15]
+    frequency_per_week: [2, 7]
+    effort: >-
+      Moderate, tolerable pressure while breathing normally; ease off on
+      sharp or tingling pain and never roll directly over a joint or bone.
+    rep_range_reason: >-
+      About half a minute to a minute per area is a common practical
+      starting point, not a measured dose.
+    guidance_note: >-
+      Any effect on range of motion or soreness is thought to be small and
+      short-lived, so rolling supports stretching and strength work rather
+      than replacing them.
+    best_timing: >-
+      Briefly as part of a warm-up, or for longer after training and on
+      rest days.
 
 classification:
   # Phase 4C §13's canonical rule: exercise_type gates the primary
@@ -341,6 +375,9 @@ classification:
     - profile_id: conditioning
       match:
         training_mode: conditioning
+    - profile_id: soft-tissue
+      match:
+        training_mode: soft-tissue
     - profile_id: heavy-free-weight-compound
       match:
         exercise_type: compound

@@ -1,0 +1,1245 @@
+# Flexibility and recovery (badminton-oriented) exercises — flexibility expansion, 2026-10.
+# Every record here carries a training_mode, so it is recommended only for the
+# functional goals it lists and never appears in physique-target or region answers.
+
+- id: thoracic-open-book
+  name: Thoracic Open Book
+  summary: Lying on one side with the knees bent and the arms together, opening the top arm across the body to rotate the upper back.
+  why_this_exists: Overhead clears and smashes need the upper back to rotate freely. The open book trains that rotation lying down, with the hips held still so the movement comes from the upper back.
+  body_regions:
+    - back
+    - shoulders
+  primary_targets:
+    - thoracic spine (rotation mobility)
+  secondary_targets:
+    - chest
+    - front of the shoulder
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility drill
+    - side-lying upper-back rotation
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Bodyweight; range is limited by upper-back rotation, not by load.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Upper-back rotation for overhead strokes is wanted, as part of a warm-up or a mobility session.
+  less_suitable_when:
+    - Lying on the side is uncomfortable for the shoulder underneath; thread the needle trains similar rotation on hands and knees.
+  mirror_effect: Not a physique exercise; it builds upper-back rotation.
+  advantages: []
+  limitations:
+    - If the knees drift apart, the lower back twists instead of the upper back, so the hips need to stay stacked.
+    - It trains range, not strength, at the end of the rotation.
+  technique_cues:
+    - Lie on one side with the hips and knees bent to about 90 degrees and the arms straight out in front, palms together.
+    - Keep the knees pressed together, or hold them down with the bottom hand.
+    - Open the top arm up and across, following the hand with the eyes, until the chest faces the ceiling as far as is comfortable.
+    - Breathe out at the end of the range, then return slowly and repeat.
+  common_mistakes:
+    - 'Knees lifting or sliding apart: the rotation moves to the lower back.'
+    - 'Forcing the arm to the floor: the shoulder gets stretched instead of the upper back rotating.'
+    - 'Rushing the reps: the drill works by easing a little further each time.'
+  programming_notes:
+    - Do both sides; if one side is clearly stiffer, give it a few extra reps.
+  alternatives: []
+  complements:
+    - Thread the needle, which trains the same rotation from hands and knees.
+  overlaps_with:
+    - thread-the-needle
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=peeW19ofFUg
+  video_creator: Elite Performance Institute
+  video_title: Thoracic Rotation Open Book
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: thread-the-needle
+  name: Thread the Needle
+  summary: From hands and knees, reaching one arm under the body and then up toward the ceiling, rotating the upper back each way.
+  why_this_exists: It trains upper-back rotation in both directions from a stable position on hands and knees, useful for the twisting involved in overhead and backhand strokes.
+  body_regions:
+    - back
+    - shoulders
+  primary_targets:
+    - thoracic spine (rotation mobility)
+  secondary_targets:
+    - rear shoulder
+    - upper back muscles
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility drill
+    - quadruped upper-back rotation
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Bodyweight; range is limited by upper-back rotation.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Upper-back rotation is wanted as a warm-up or between sets, with no equipment.
+  less_suitable_when:
+    - Kneeling or weight on one hand is uncomfortable; the open book trains similar rotation lying on the side.
+  mirror_effect: Not a physique exercise; it builds upper-back rotation.
+  advantages: []
+  limitations:
+    - The hips tend to shift sideways to fake extra range, so it needs a deliberate, slow tempo.
+    - Kneeling on a hard floor can be uncomfortable without a mat.
+  technique_cues:
+    - Start on hands and knees with the hands under the shoulders and the knees under the hips.
+    - Slide one arm under the body, palm up, letting the shoulder and side of the head lower toward the floor.
+    - Reverse the movement and reach the same arm up toward the ceiling, following the hand with the eyes.
+    - Keep the hips level over the knees throughout.
+  common_mistakes:
+    - 'Hips swaying sideways: the movement comes from the hips instead of the upper back.'
+    - 'Collapsing onto the supporting arm: the shoulder sags and the rotation shrinks.'
+    - 'Bouncing at the end of the range: controlled reps work better than momentum.'
+  programming_notes:
+    - A pause of a breath or two at the bottom turns it into a gentle held stretch.
+  alternatives: []
+  complements:
+    - The thoracic open book for the same rotation lying down.
+  overlaps_with:
+    - thoracic-open-book
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=aOFdI2oTTxU
+  video_creator: Suzanne Semanson
+  video_title: Thoracic rotation in quadruped - thread the needle
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: bench-thoracic-extension-prayer
+  name: Bench Thoracic Extension ("Prayer" Stretch)
+  summary: Kneeling in front of a bench with the elbows on it and the hands together, sinking the chest toward the floor to extend the upper back and stretch the lats.
+  why_this_exists: Reaching overhead for high shots needs the upper back to extend and the lats to lengthen. This stretch works both in one position using a bench.
+  body_regions:
+    - back
+    - shoulders
+  primary_targets:
+    - thoracic spine (extension mobility)
+    - lats
+  secondary_targets:
+    - triceps (long head)
+    - chest
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility hold
+    - kneeling upper-back extension on a bench
+  equipment:
+    - bench
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; how far the hips sit back sets the depth of the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Overhead reach and upper-back extension are wanted after training or on a rest day.
+  less_suitable_when:
+    - The shoulders are irritated in a fully overhead position; start with the doorway pec stretch or the cross-body stretch instead.
+  mirror_effect: Not a physique exercise; it builds overhead reach and upper-back extension.
+  advantages: []
+  limitations:
+    - The lower back can arch to fake depth, so the ribs need to stay down.
+    - It needs a bench or similar raised surface at about knee to hip height.
+  technique_cues:
+    - Kneel facing a bench with the elbows on its edge, shoulder width apart, and the palms together.
+    - Sit the hips back toward the heels until the arms are overhead relative to the body.
+    - Let the chest sink gently toward the floor while keeping the ribs drawn in.
+    - Bend the elbows so the hands drop behind the head to deepen the stretch, and breathe slowly.
+  common_mistakes:
+    - 'Arching the lower back: the stretch moves out of the upper back.'
+    - 'Elbows flaring wide: the lat stretch is lost.'
+    - Forcing the chest down into pain at the front of the shoulder.
+  programming_notes:
+    - Holding a light stick or band between the hands helps keep the elbows narrow.
+  alternatives: []
+  complements:
+    - The kneeling lat stretch for one side at a time.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=XgPLf5JArI0
+  video_creator: Swift Movement Academy
+  video_title: How To Do a Thoracic Extension Prayer Stretch
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: doorway-pec-stretch
+  name: Doorway Pec Stretch
+  summary: Placing a forearm on a door frame and stepping through, stretching the front of the chest and shoulder.
+  why_this_exists: A lot of hitting, pressing and sitting tightens the chest. This stretch opens the front of the shoulder and chest with nothing more than a door frame.
+  body_regions:
+    - chest
+    - shoulders
+  primary_targets:
+    - pectoralis major and minor
+  secondary_targets:
+    - front deltoid
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility hold
+    - door frame chest stretch
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; how far the body steps through the frame sets the depth.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Chest and front-shoulder tightness is the issue, after training or on rest days.
+  less_suitable_when:
+    - The front of the shoulder feels pinched or unstable in this position; lower the arm or skip it.
+  mirror_effect: Not a physique exercise; it builds chest and front-shoulder range.
+  advantages: []
+  limitations:
+    - Elbow height changes which part of the chest is stretched, so the position needs a little experimenting.
+    - Stepping too far through can stress the front of the shoulder joint rather than stretch the muscle.
+  technique_cues:
+    - Stand in a doorway and place one forearm on the frame with the elbow at about shoulder height and bent to 90 degrees.
+    - Step the same-side foot forward through the doorway.
+    - Turn the chest gently away from the arm until a stretch is felt across the chest.
+    - Keep the shoulder down and back, away from the ear, and breathe slowly.
+  common_mistakes:
+    - 'Shrugging the shoulder up: the stretch moves into the neck and the joint is less protected.'
+    - Leaning in hard enough to feel it at the front of the joint rather than the chest muscle.
+    - Arching the lower back to get further through the frame.
+  programming_notes:
+    - Try the elbow slightly below and slightly above shoulder height to stretch different parts of the chest.
+  alternatives: []
+  complements:
+    - Band shoulder pass-throughs to move the shoulder through range afterwards.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=B9uY01NoqBg
+  video_creator: Baptist Health
+  video_title: Doorway Stretch
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: kneeling-lat-stretch
+  name: Kneeling Overhead Lat Stretch
+  summary: Kneeling and holding a bench or a rack upright with one arm overhead, sitting the hips back to stretch the side of the back.
+  why_this_exists: Full overhead reach for clears and smashes is limited by tight lats. This stretch lengthens one side at a time.
+  body_regions:
+    - back
+    - shoulders
+  primary_targets:
+    - lats
+  secondary_targets:
+    - teres major
+    - side of the trunk
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility hold
+    - kneeling overhead lat stretch
+  equipment:
+    - bench
+    - rack
+  equipment_setups:
+    - [bench]
+    - [rack]
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; sitting the hips back and away from the arm deepens the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Overhead reach is limited by tightness down the side of the back, after training or on rest days.
+  less_suitable_when:
+    - Fully overhead positions irritate the shoulder; work at a lower arm angle first.
+  mirror_effect: Not a physique exercise; it builds overhead reach.
+  advantages: []
+  limitations:
+    - The lower back tends to arch, which reduces the lat stretch.
+    - It needs a fixed support such as a bench or a rack upright.
+  technique_cues:
+    - Kneel beside a bench or a rack upright and hold its edge with one hand, arm straight and overhead.
+    - Sit the hips back toward the heels and slightly away from the arm.
+    - Let the chest sink toward the floor while keeping the ribs drawn in.
+    - Turn the palm up or slightly outward to increase the stretch, and breathe slowly.
+  common_mistakes:
+    - 'Arching the lower back: the stretch moves away from the lats.'
+    - Shrugging the shoulder into the ear instead of letting it reach long.
+    - Bending the elbow, which takes tension off the lat.
+  programming_notes:
+    - A band looped around a rack works as an alternative and adds a gentle traction.
+  alternatives: []
+  complements:
+    - The bench thoracic extension stretch for both sides together.
+  overlaps_with:
+    - childs-pose-side-reach
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=5v9e1hPknvA
+  video_creator: Gos Training Systems
+  video_title: How To Do A Kneeling Lat Stretch On A Bench
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: cross-body-shoulder-stretch
+  name: Cross-Body Rear Shoulder Stretch
+  summary: Pulling one straight arm across the chest with the other hand to stretch the back of the shoulder.
+  why_this_exists: The back of the hitting shoulder works hard to slow the arm down after each stroke and can tighten over time. This is the simplest way to stretch it.
+  body_regions:
+    - shoulders
+  primary_targets:
+    - rear deltoid
+    - back of the shoulder
+  secondary_targets:
+    - upper back muscles
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility hold
+    - cross-body arm pull
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; the pulling hand sets the depth of the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The back of the hitting shoulder feels tight, after play or on rest days.
+  less_suitable_when:
+    - The front of the shoulder pinches when the arm crosses the body; the sleeper stretch or a lower arm height may suit better.
+  mirror_effect: Not a physique exercise; it builds range at the back of the shoulder.
+  advantages: []
+  limitations:
+    - The shoulder blade tends to slide forward, which takes the stretch off the back of the shoulder.
+    - It only stretches the back of the shoulder; overhead range needs other stretches.
+  technique_cues:
+    - Stand or sit tall and bring one straight arm across the chest at about shoulder height.
+    - Hold it just above the elbow with the other hand.
+    - Gently pull the arm closer to the chest until a stretch is felt at the back of the shoulder.
+    - Keep the shoulder blade down and back and breathe slowly.
+  common_mistakes:
+    - Pulling on the elbow joint itself instead of just above it.
+    - 'Letting the shoulder shrug or roll forward: the stretch is lost.'
+    - Twisting the trunk toward the arm instead of moving the arm.
+  programming_notes:
+    - Do both sides, with extra attention to the racket arm.
+  alternatives: []
+  complements:
+    - The sleeper stretch for shoulder rotation.
+  overlaps_with:
+    - sleeper-stretch
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=veZWtNGOxhE
+  video_creator: BSR Physical Therapy
+  video_title: Cross-Body Stretch
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: band-shoulder-pass-through
+  name: Band Shoulder Pass-Through
+  summary: Holding a band with a wide grip and taking straight arms overhead and behind the back, then returning, to move the shoulders through their full range.
+  why_this_exists: Overhead strokes need the shoulders to move freely through a big arc. Pass-throughs take both shoulders through that arc under light tension.
+  body_regions:
+    - shoulders
+    - chest
+  primary_targets:
+    - shoulders (flexion and extension mobility)
+  secondary_targets:
+    - chest
+    - upper back muscles
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility drill
+    - straight-arm overhead arc
+  equipment:
+    - band
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Light band tension; a wider grip makes it easier, a narrower grip harder.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A shoulder warm-up is wanted before overhead training or court sessions.
+  less_suitable_when:
+    - The shoulders are injured or unstable; a narrow grip or forced range can strain them.
+  mirror_effect: Not a physique exercise; it builds overhead shoulder range.
+  advantages: []
+  limitations:
+    - A grip that is too narrow forces the shoulders past their range, so the grip needs to be wide enough for smooth reps.
+    - A stick or broomstick works similarly but has no give.
+  technique_cues:
+    - Stand tall and hold a light band in front of the thighs with a wide grip and straight arms.
+    - Keep the ribs down and lift the band overhead in a slow arc.
+    - Continue behind the body as far as is comfortable, keeping the elbows straight.
+    - Return the same way to the front, and widen the grip if any rep feels forced.
+  common_mistakes:
+    - 'Bending the elbows to get the band over: the shoulders are no longer moving through range.'
+    - Arching the lower back to get the arms back.
+    - Gripping too narrowly and forcing the reps.
+  programming_notes:
+    - Narrow the grip gradually over weeks as range improves, never within a set.
+  alternatives: []
+  complements:
+    - The doorway pec stretch after training.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=riVxa9By-pM
+  video_creator: 66 Days Fitness Coaching
+  video_title: How To Do Band Dislocates / Pass-Throughs (Shoulder Mobility)
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: wrist-flexor-extensor-stretch
+  name: Wrist Flexor and Extensor Stretch
+  summary: Holding one straight arm out and gently bending the wrist back, then forward, with the other hand to stretch both sides of the forearm.
+  why_this_exists: Gripping a racket and snapping the wrist load the forearm muscles on both sides. These two stretches cover the front and back of the forearm.
+  body_regions:
+    - forearms
+  primary_targets:
+    - wrist flexors
+    - wrist extensors
+  secondary_targets:
+    - finger flexors
+  physique_targets: []
+  functional_goals:
+    - wrist-forearm-mobility
+  movement_patterns:
+    - wrist extension
+    - held forearm stretch
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; the other hand sets the depth of each stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The forearms feel tight after play, especially on the racket arm.
+  less_suitable_when:
+    - There is numbness, tingling or sharp pain in the wrist or elbow; that needs assessing rather than stretching.
+  mirror_effect: Not a physique exercise; it builds wrist and forearm range.
+  advantages: []
+  limitations:
+    - It stretches the forearm but does not build the grip and forearm strength that also matter for racket sports.
+    - Bending the elbow takes most of the stretch away.
+  technique_cues:
+    - Hold the arm straight out in front at shoulder height.
+    - 'For the front of the forearm: palm up, use the other hand to gently bend the fingers and wrist down toward the floor.'
+    - 'For the back of the forearm: palm down, gently bend the wrist down so the fingers point at the floor.'
+    - Keep the elbow straight and hold each stretch, then switch arms.
+  common_mistakes:
+    - 'Bending the elbow: most of the stretch is lost.'
+    - 'Pulling hard on the fingers: forearm stretches should be gentle.'
+    - Only stretching one side of the forearm.
+  programming_notes:
+    - Hold each direction for the full time; give the racket arm the most attention.
+    - Wrist curls and reverse wrist curls build the forearm strength this stretch does not.
+  alternatives: []
+  complements:
+    - Wrist curl and reverse wrist curl for forearm strength.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=ziIHMzpT0Lg
+  video_creator: Glen Abbey Physiotherapy
+  video_title: How to do the Wrist Flexor and Extensor Stretch- Oakville Physiotherapy
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: strap-hamstring-stretch
+  name: Lying Strap Hamstring Stretch
+  summary: Lying on the back and raising one straight leg with a strap or towel around the foot to stretch the back of the thigh.
+  why_this_exists: Lunging for low shots needs comfortable hamstring range. Lying down keeps the back supported so the stretch stays in the hamstrings.
+  body_regions:
+    - hamstrings
+    - hips
+  primary_targets:
+    - hamstrings
+  secondary_targets:
+    - calves
+  physique_targets: []
+  functional_goals:
+    - lower-body-mobility
+  movement_patterns:
+    - mobility hold
+    - lying straight-leg raise with a strap
+  equipment:
+    - strap or towel
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; the strap sets how far the leg is drawn up.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Hamstring range is wanted after training or on a rest day, with the back fully supported.
+  less_suitable_when:
+    - The stretch causes tingling down the leg or pain behind the knee; ease off or stop.
+  mirror_effect: Not a physique exercise; it builds hamstring range.
+  advantages: []
+  limitations:
+    - Pulling the leg too high bends the knee or lifts the hips, which ends the stretch rather than deepening it.
+    - It needs a strap, towel or band.
+  technique_cues:
+    - Lie on the back with one leg straight on the floor and the strap looped around the other foot.
+    - Raise the strapped leg with the knee straight until a stretch is felt behind the thigh.
+    - Keep the other leg flat and the hips level on the floor.
+    - Relax the leg into the strap and breathe slowly; draw it a little higher only as the stretch eases.
+  common_mistakes:
+    - 'Bending the knee to get the leg higher: the hamstring stretch is reduced.'
+    - Lifting the hips or the other leg off the floor.
+    - Yanking the strap instead of easing into the stretch.
+  programming_notes:
+    - A slight knee bend is fine if the back of the knee feels strained.
+  alternatives: []
+  complements:
+    - The figure-four glute stretch in the same lying position.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=Il1L75v6gq0
+  video_creator: AskDoctorJo
+  video_title: Hamstring Stretch with a Strap, Supine - Ask Doctor Jo
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: wall-calf-stretch
+  name: Wall Calf Stretch (Straight and Bent Knee)
+  summary: Leaning into a wall with one leg back, first with the back knee straight and then bent, to stretch both layers of the calf.
+  why_this_exists: Constant jumping, lunging and split-stepping load the calves and Achilles. Stretching with a straight and then a bent knee covers both the upper and lower calf muscles.
+  body_regions:
+    - calves
+  primary_targets:
+    - gastrocnemius (straight knee)
+    - soleus (bent knee)
+  secondary_targets:
+    - Achilles tendon
+  physique_targets: []
+  functional_goals:
+    - ankle-resilience
+  movement_patterns:
+    - ankle dorsiflexion
+    - wall lean calf stretch
+  equipment:
+    - wall
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; leaning further forward deepens the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The calves feel tight after play, or ankle range for deep lunges is wanted.
+  less_suitable_when:
+    - The Achilles is painful or swollen; that needs assessing rather than stretching.
+  mirror_effect: Not a physique exercise; it builds calf and ankle range.
+  advantages: []
+  limitations:
+    - The back heel tends to lift or the foot turns out, which reduces the stretch.
+    - It stretches the calf but does not build the calf strength that also protects it; calf raises do that.
+  technique_cues:
+    - Stand facing a wall with the hands on it and one foot well behind the other, both feet pointing forward.
+    - 'Straight knee: keep the back leg straight and the heel down, and lean forward until the upper calf stretches.'
+    - 'Bent knee: bring the back foot in a little, bend the back knee, and keep the heel down to feel the lower calf.'
+    - Hold each version and breathe slowly, then switch legs.
+  common_mistakes:
+    - 'Back heel lifting: the stretch is lost.'
+    - 'Back foot turning outward: the stretch moves off the calf.'
+    - Bouncing into the wall instead of holding.
+  programming_notes:
+    - Hold each version separately; the bent-knee version is often the one that feels tighter after court sessions.
+  alternatives: []
+  complements:
+    - Single-leg calf raise for calf strength.
+    - Knee-to-wall ankle mobility for ankle range.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=osYF1clbyMs
+  video_creator: Dr. Christy Lee
+  video_title: Standing Calf Stretch - Straight and Bent Knee
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: adductor-rock-back
+  name: Adductor Rock-Back
+  summary: From hands and knees with one leg straight out to the side, rocking the hips back and forward to open the inner thigh.
+  why_this_exists: Wide lunges and side steps in badminton need comfortable inner-thigh range. The rock-back works that range gradually without standing load.
+  body_regions:
+    - hips
+  primary_targets:
+    - adductors (mobility)
+  secondary_targets:
+    - hips
+  physique_targets: []
+  functional_goals:
+    - lower-body-mobility
+  movement_patterns:
+    - mobility drill
+    - quadruped rock-back with one leg out
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Bodyweight; how far the hips rock back sets the depth.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Inner-thigh range is wanted as part of a warm-up before court sessions or leg training.
+  less_suitable_when:
+    - The groin is strained or kneeling is painful.
+  mirror_effect: Not a physique exercise; it builds inner-thigh range.
+  advantages: []
+  limitations:
+    - The lower back tends to round at the end of the rock, which ends the useful range.
+    - It builds range only; the Copenhagen plank builds inner-thigh strength.
+  technique_cues:
+    - Start on hands and knees, then straighten one leg out to the side with the foot flat and pointing forward.
+    - Keep a flat back and the chest tall.
+    - Rock the hips back toward the bent-leg heel until the inner thigh of the straight leg stretches.
+    - Rock forward again under control and repeat.
+  common_mistakes:
+    - Rounding the lower back at the end of the rock.
+    - Turning the straight leg's foot up or out, which changes the stretch.
+    - Rocking fast and bouncing.
+  programming_notes:
+    - A short pause at the back of each rep adds a gentle hold.
+  alternatives: []
+  complements:
+    - The Copenhagen plank for inner-thigh strength.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=yF8o6I6aSZg
+  video_creator: Mike Reinold
+  video_title: Adductor Quadruped Rockback - Hip Mobility Drill
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: figure-four-glute-stretch
+  name: Figure-Four Glute Stretch
+  summary: Lying on the back with one ankle crossed over the other knee and pulling the legs in to stretch the outer hip and glute.
+  why_this_exists: Deep lunges and quick hip turns need comfortable range at the back and outside of the hip. The lying figure-four is an easy, supported way to stretch it; the pigeon stretch is a deeper option.
+  body_regions:
+    - hips
+  primary_targets:
+    - glutes
+    - piriformis and deep hip rotators
+  secondary_targets:
+    - outer hip
+  physique_targets: []
+  functional_goals:
+    - lower-body-mobility
+  movement_patterns:
+    - mobility hold
+    - lying figure-four hip stretch
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; pulling the legs closer deepens the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The hips or glutes feel tight after training or on rest days.
+  less_suitable_when:
+    - The knee of the crossed leg hurts; reduce the depth or try a seated version.
+  mirror_effect: Not a physique exercise; it builds hip range.
+  advantages: []
+  limitations:
+    - If the crossed foot is relaxed, the knee can twist, so the foot should stay flexed.
+    - The pigeon version is deeper but puts more load on the front knee.
+  technique_cues:
+    - Lie on the back with both knees bent and feet on the floor.
+    - Cross one ankle over the opposite knee, keeping that foot flexed.
+    - Reach through and hold the back of the lower thigh, then draw the legs toward the chest.
+    - Keep the head and lower back on the floor and breathe slowly.
+  common_mistakes:
+    - 'Letting the crossed foot go floppy: the knee takes strain.'
+    - Lifting the head and shoulders to pull harder.
+    - Pulling into pain instead of a clear stretch.
+  programming_notes:
+    - Progress to the pigeon stretch only if the knees are comfortable.
+  alternatives: []
+  complements:
+    - The 90/90 hip switches for moving hip rotation.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=VgjgTGnBkx0
+  video_creator: PureGym
+  video_title: How To Do Figure 4 Stretch
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: standing-quad-stretch
+  name: Standing Quad Stretch
+  summary: Standing on one leg and holding the other foot behind the body to stretch the front of the thigh.
+  why_this_exists: The quads work hard in every lunge and landing. This is a quick quad stretch that needs nothing but a wall to hold for balance.
+  body_regions:
+    - quads
+    - hips
+  primary_targets:
+    - quads
+  secondary_targets:
+    - hip flexors
+  physique_targets: []
+  functional_goals:
+    - lower-body-mobility
+  movement_patterns:
+    - mobility hold
+    - standing heel-to-glute stretch
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; tucking the pelvis deepens the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A quick quad stretch is wanted after play or training.
+  less_suitable_when:
+    - Bending the knee fully is painful; the couch stretch with padding or a lower range may suit better.
+  mirror_effect: Not a physique exercise; it builds quad range.
+  advantages: []
+  limitations:
+    - Balance can limit it, so holding a wall helps.
+    - It is gentler on the hip flexors than the couch stretch.
+  technique_cues:
+    - Stand tall next to a wall and hold it with one hand.
+    - Bend one knee and hold that foot or ankle behind the body.
+    - Keep the knees close together and gently tuck the pelvis under until the front of the thigh stretches.
+    - Stand tall and breathe slowly, then switch legs.
+  common_mistakes:
+    - 'Arching the lower back: the stretch is lost.'
+    - Letting the bent knee drift forward or out to the side.
+    - Pulling the heel hard into the buttock and straining the knee.
+  programming_notes:
+    - A strap around the foot helps if the foot is hard to reach.
+  alternatives: []
+  complements:
+    - The couch stretch for a deeper hip-flexor stretch.
+  overlaps_with:
+    - couch-stretch (athletic module)
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=Jb6JEEUGbDY
+  video_creator: Live Lean TV Daily Exercises
+  video_title: How To Do A STANDING QUAD STRETCH | Exercise Demonstration Video and Guide
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: leg-swings
+  name: Leg Swings (Front-to-Back and Side-to-Side)
+  summary: Holding a support and swinging one leg forward and back, then across the body and out to the side, to warm up the hips.
+  why_this_exists: Court movement takes the hips through big ranges at speed. Leg swings warm those ranges up gradually in the directions badminton uses.
+  body_regions:
+    - hips
+  primary_targets:
+    - hip flexors
+    - hamstrings
+    - adductors
+    - hip abductors
+  secondary_targets:
+    - glutes
+  physique_targets: []
+  functional_goals:
+    - lower-body-mobility
+  movement_patterns:
+    - mobility drill
+    - standing leg swings
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Bodyweight; swing height sets the range.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A hip warm-up is wanted right before court sessions or leg training.
+  less_suitable_when:
+    - A hamstring or groin strain is recent; big swings can aggravate it.
+  mirror_effect: Not a physique exercise; it warms up hip range for movement.
+  advantages: []
+  limitations:
+    - Swinging too hard too early turns it into ballistic stretching, so height should build gradually.
+    - The standing leg and trunk tend to move along with the swing.
+  technique_cues:
+    - Stand side-on to a wall or post for the front-to-back swings, holding it with one hand.
+    - Swing the outside leg forward and back in a relaxed arc, starting small and building height over the set.
+    - Turn to face the wall for side-to-side swings, swinging the leg across the body and out to the side.
+    - Keep the trunk upright and the standing knee soft.
+  common_mistakes:
+    - Swinging at full height from the first rep.
+    - 'Leaning the trunk to get more height: the hip range does not change.'
+    - Locking the standing knee.
+  programming_notes:
+    - Do both directions on each leg before switching.
+  alternatives: []
+  complements:
+    - The world's greatest stretch to finish the warm-up.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=difYoBtZi2s
+  video_creator: PureGym
+  video_title: How To Do Leg Swings
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: worlds-greatest-stretch
+  name: World's Greatest Stretch
+  summary: A deep lunge with the hand down, dropping the elbow toward the instep and then rotating the arm to the ceiling, linking hip, hamstring and upper-back mobility.
+  why_this_exists: It moves the hips, hamstrings and upper back in one flowing drill, which makes it an efficient warm-up before court sessions.
+  body_regions:
+    - full-body
+    - hips
+    - back
+  primary_targets:
+    - hip flexors
+    - hips (mobility)
+    - thoracic spine (rotation mobility)
+  secondary_targets:
+    - hamstrings
+    - adductors
+  physique_targets: []
+  functional_goals:
+    - full-body-mobility
+    - lower-body-mobility
+  movement_patterns:
+    - mobility drill
+    - lunge with elbow drop and rotation
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: alternating
+  coverage_categories:
+    - low-setup
+    - skill-coordination
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Bodyweight; the depth of the lunge and rotation sets the range.
+  stability_demand: low
+  skill_demand: medium
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A single, efficient whole-body warm-up drill is wanted before playing or training.
+  less_suitable_when:
+    - A deep lunge is uncomfortable on the knees or hips; do the parts separately at a smaller range.
+  mirror_effect: Not a physique exercise; it warms up hip and upper-back range together.
+  advantages: []
+  limitations:
+    - It has several steps, so rushing it shortens every part of the range.
+    - The back knee can be uncomfortable on a hard floor if it touches down.
+  technique_cues:
+    - Step one foot forward into a long lunge and place the opposite hand on the floor.
+    - Drop the same-side elbow down toward the inside of the front foot.
+    - Rotate that arm up toward the ceiling, following the hand with the eyes.
+    - Return the hand to the floor, then step back and repeat on the other side.
+  common_mistakes:
+    - 'A short lunge: the hip-flexor stretch on the back leg is lost.'
+    - Rotating from the lower back instead of the upper back.
+    - Rushing through the steps.
+  programming_notes:
+    - Some versions add a hamstring stretch by straightening the front leg before stepping back.
+  alternatives: []
+  complements:
+    - Leg swings earlier in the warm-up.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=uIFKmkvgw8w
+  video_creator: Panthera PT
+  video_title: How To Do The World's Greatest Stretch | Full Body Mobility | Emily Jones
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: cat-cow
+  name: Cat-Cow
+  summary: On hands and knees, slowly rounding the whole spine up and then arching it down, in time with the breath.
+  why_this_exists: It gently moves the whole spine through bending and arching, which makes it an easy warm-up or a way to loosen the back after play.
+  body_regions:
+    - full-body
+    - back
+  primary_targets:
+    - spine (flexion and extension mobility)
+  secondary_targets:
+    - abdominals
+    - upper back muscles
+  physique_targets: []
+  functional_goals:
+    - full-body-mobility
+  movement_patterns:
+    - mobility drill
+    - quadruped spine rounding and arching
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-dynamic
+  resistance_profile: Bodyweight; range is set by spinal mobility.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - A gentle spine warm-up is wanted, or the back feels stiff after playing or sitting.
+  less_suitable_when:
+    - Kneeling is painful; a standing version with the hands on the thighs works too.
+  mirror_effect: Not a physique exercise; it builds spine mobility.
+  advantages: []
+  limitations:
+    - The movement tends to stay in the lower back unless the upper back is deliberately rounded too.
+    - It is gentle, so it warms up but does not challenge end range much.
+  technique_cues:
+    - Start on hands and knees with the hands under the shoulders and the knees under the hips.
+    - Breathe out and round the whole back up toward the ceiling, tucking the chin and pelvis.
+    - Breathe in and let the belly lower and the chest lift, arching the back gently.
+    - Move slowly and smoothly between the two positions.
+  common_mistakes:
+    - Moving only the neck or only the lower back.
+    - Rushing the reps out of rhythm with the breath.
+    - Sinking into the shoulders instead of pushing the floor away.
+  programming_notes:
+    - Pause for a breath at each end for a slower, more relaxing version.
+  alternatives: []
+  complements:
+    - Thread the needle for upper-back rotation from the same position.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=cVmStkawvc8
+  video_creator: Ramazan Altun
+  video_title: Cat-Cow Yoga Pose
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: childs-pose-side-reach
+  name: Child's Pose with Side Reach
+  summary: Kneeling and sitting the hips back toward the heels with the arms stretched forward, then walking both hands to one side to stretch the lats and side of the trunk.
+  why_this_exists: It stretches the lats and the side of the trunk, which reach and twist on every overhead stroke, in a relaxed, supported position.
+  body_regions:
+    - back
+    - shoulders
+  primary_targets:
+    - lats
+    - side of the trunk
+  secondary_targets:
+    - lower back
+    - hips
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility hold
+    - kneeling forward reach to the side
+  equipment:
+    - bodyweight
+  exercise_type: compound
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; reaching further to the side deepens the stretch.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - The back and sides feel tight after play, or a relaxing cool-down stretch is wanted.
+  less_suitable_when:
+    - Kneeling or deep knee bending is painful.
+  mirror_effect: Not a physique exercise; it builds lat and side-trunk range.
+  advantages: []
+  limitations:
+    - Tight knees or ankles can make the base position uncomfortable before the stretch is felt.
+    - It is gentler than the kneeling lat stretch.
+  technique_cues:
+    - Kneel and sit the hips back toward the heels, with the knees slightly apart.
+    - Stretch both arms forward on the floor and let the chest sink down.
+    - Walk both hands toward one side until the opposite side of the back stretches.
+    - Keep the hips sitting back and breathe slowly into the stretched side, then switch.
+  common_mistakes:
+    - 'Hips lifting off the heels: the stretch is lost.'
+    - Reaching with only one arm and twisting the hips.
+    - 'Holding the breath: the trunk stays tense and the stretch does not ease.'
+  programming_notes:
+    - A cushion under the hips or knees makes the base position more comfortable.
+  alternatives: []
+  complements:
+    - Cat-cow beforehand to loosen the spine.
+  overlaps_with:
+    - kneeling-lat-stretch
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=YTAwpiX2Dsg
+  video_creator: Power Plant Gym
+  video_title: Child’s pose with side reach
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: sleeper-stretch
+  name: Sleeper Stretch (Shoulder Rotation)
+  summary: Lying on one side with the bottom arm bent to 90 degrees in front, gently pressing the forearm toward the floor to stretch shoulder rotation.
+  why_this_exists: Overhead hitting can stiffen the shoulder's inward rotation over time, especially on the racket arm. This stretch targets that rotation directly.
+  body_regions:
+    - shoulders
+  primary_targets:
+    - back of the shoulder (internal rotation range)
+  secondary_targets:
+    - rear deltoid
+  physique_targets: []
+  functional_goals:
+    - upper-body-mobility
+  movement_patterns:
+    - mobility hold
+    - side-lying shoulder internal rotation
+  equipment:
+    - bodyweight
+  exercise_type: isolation
+  laterality: unilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+    - equipment-limited-substitute
+  training_mode: mobility-hold
+  resistance_profile: Bodyweight; the top hand sets the depth.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Inward rotation of the racket shoulder feels limited, after play or on rest days.
+  less_suitable_when:
+    - The front of the shoulder pinches or the shoulder is already injured; a towel stretch behind the back or professional advice may suit better.
+  mirror_effect: Not a physique exercise; it builds shoulder rotation range.
+  advantages: []
+  limitations:
+    - Pressing too hard can irritate the front of the shoulder, so it should stay gentle.
+    - Rolling too far onto the shoulder blade takes the stretch away.
+  technique_cues:
+    - Lie on the side of the shoulder being stretched, with the head supported.
+    - Bend that elbow to 90 degrees with the upper arm straight out in front at shoulder height.
+    - Use the top hand to gently press the forearm toward the floor.
+    - Stop at a mild stretch at the back of the shoulder and breathe slowly.
+  common_mistakes:
+    - Pressing hard into pain at the front of the shoulder.
+    - Lifting the elbow off the floor or moving the upper arm.
+    - Rolling backwards off the shoulder.
+  programming_notes:
+    - A towel held behind the back, pulled upward by the top hand, is a standing alternative.
+  alternatives: []
+  complements:
+    - The cross-body stretch for the back of the shoulder.
+  overlaps_with:
+    - cross-body-shoulder-stretch
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=hNk4_l_kDlY
+  video_creator: GREATER THAN Performance & Rehab
+  video_title: The Sleeper Stretch - Walkthrough
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata
+
+- id: foam-rolling
+  name: Foam Rolling (Calves, Quads, Upper Back)
+  summary: Slowly rolling the calves, the front of the thighs and the upper back over a foam roller, pausing on tight spots.
+  why_this_exists: Badminton loads the calves, quads and upper back heavily. Rolling these areas is a common way to ease tightness around training.
+  body_regions:
+    - full-body
+    - calves
+    - quads
+    - back
+  primary_targets:
+    - calves
+    - quads
+    - upper back muscles
+  secondary_targets: []
+  physique_targets: []
+  functional_goals:
+    - full-body-mobility
+  movement_patterns:
+    - soft-tissue rolling
+    - foam roller self-massage
+  equipment:
+    - foam roller
+  exercise_type: compound
+  laterality: bilateral
+  coverage_categories:
+    - low-setup
+    - low-fatigue
+  training_mode: soft-tissue
+  resistance_profile: Bodyweight pressure on the roller; shifting weight onto or off the roller changes the pressure.
+  stability_demand: low
+  skill_demand: low
+  setup_time: low
+  fatigue_cost: low
+  best_used_when:
+    - Muscles feel tight or heavy after play, or as a short start to a warm-up.
+  less_suitable_when:
+    - An area is bruised, swollen or recently strained; do not roll directly over it.
+  mirror_effect: Not a physique exercise; it is used to ease muscle tightness.
+  advantages: []
+  limitations:
+    - Any change in range of motion is thought to be short-lived, so it does not replace stretching or strength work.
+    - The lower back and the joints themselves should not be rolled directly.
+  technique_cues:
+    - 'Calves: sit with the roller under one calf, hands behind you, and roll from just above the ankle to just below the knee.'
+    - 'Quads: lie face down with the roller under the front of the thighs and roll between the hip and just above the knee.'
+    - 'Upper back: lie with the roller across the upper back, hands supporting the head, hips down, and roll between the bottom of the shoulder blades and the top of the shoulders.'
+    - Roll slowly and pause for a few breaths on tight spots.
+  common_mistakes:
+    - 'Rolling fast back and forth: slow rolls and pauses work better.'
+    - Rolling over the knee, the ankle or the lower back.
+    - Pressing through sharp or tingling pain.
+  programming_notes:
+    - Count the time per area; do each leg separately for calves and quads.
+  alternatives: []
+  complements:
+    - Held stretches for the same areas afterwards.
+  overlaps_with: []
+  evidence_notes: []
+  review_status: reviewed
+  video_link: https://www.youtube.com/watch?v=hUk0nmH5TsU
+  video_creator: Movement As Medicine
+  video_title: Basic Full Body Foam Rolling Routine
+  video_status: verified
+  video_verified_on: "2026-10-26"
+  video_verification_method: metadata

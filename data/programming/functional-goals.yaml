@@ -154,6 +154,30 @@ goals:
     why_it_matters: >-
       Deep lunges, low pick-ups and fast direction changes need comfortable hip and leg range.
 
+  - id: upper-body-mobility
+    name: Upper-Body Mobility
+    parent_region: shoulders
+    definition: >-
+      Comfortable range of motion at the shoulders and upper back, trained through held stretches and controlled mobility drills.
+    why_it_matters: >-
+      Overhead clears, smashes and reaching shots need free shoulder and upper-back movement.
+
+  - id: wrist-forearm-mobility
+    name: Wrist & Forearm Mobility
+    parent_region: forearms
+    definition: >-
+      Comfortable range of motion at the wrist and forearm, trained through held stretches.
+    why_it_matters: >-
+      Gripping the racket and snapping the wrist load both sides of the forearm.
+
+  - id: full-body-mobility
+    name: Full-Body Mobility & Recovery
+    parent_region: full-body
+    definition: >-
+      Whole-body warm-up drills and recovery work, such as flowing mobility drills, spine mobility and foam rolling.
+    why_it_matters: >-
+      Quick whole-body warm-ups and recovery routines that cover several areas in one go.
+
   - id: full-body-conditioning
     name: Full-Body Conditioning
     parent_region: full-body

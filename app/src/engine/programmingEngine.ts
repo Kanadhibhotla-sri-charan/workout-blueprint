@@ -47,6 +47,8 @@ export interface ModePrescription {
   restSeconds: [number, number];
   effort: string;
   frequencyPerWeek: [number, number];
+  /** Present only when the profile defines best_timing. */
+  bestTiming?: string;
 }
 
 const FALLBACK_PROFILE: ProgrammingProfile = {
@@ -214,12 +216,15 @@ function resolveModePrescription(exercise: Exercise, profile: ProgrammingProfile
   return {
     mode: profile.training_mode,
     unit: profile.unit ?? 'reps',
-    amount: profile.primary_range,
+    // A rep-ranges.yaml override sets an exercise's own amount (e.g. a
+    // 30-45 s hold); otherwise the profile's range applies.
+    amount: resolveRepRange(exercise, profile).primaryRange,
     perSide: exercise.laterality !== 'bilateral',
     sets: profile.sets ?? [1, 1],
     restSeconds: profile.rest_seconds ?? [0, 0],
     effort: profile.effort ?? '',
     frequencyPerWeek: profile.frequency_per_week ?? programming.globalPrinciples.frequency.typical_starting_range_per_week,
+    ...(profile.best_timing ? { bestTiming: profile.best_timing } : {}),
   };
 }
 
