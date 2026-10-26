@@ -57,7 +57,9 @@ jobs:
   # Detail plus Decide URL state. Off-origin requests are blocked inside the
   # test, so it stays network-independent like the rest of this gate.
   e2e:
-    runs-on: ubuntu-latest
+    # Pinned: Playwright's --with-deps install failed on the Ubuntu 26 image
+    # that ubuntu-latest moved to from 2026-10-19.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
