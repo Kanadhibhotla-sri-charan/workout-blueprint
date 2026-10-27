@@ -1,10 +1,30 @@
-// Volume-model checks (Workout Logger change requests 1.1-1.3, 2026-10-27):
-// physique-targets.yaml's hierarchy, volume-targets.yaml, and each
-// exercise's target_credit. Returns issues in validate.js's shape.
+// Workout Logger data checks (change requests 1.1-3.3 and the release
+// checks, 2026-10-27): the volume model (hierarchy, volume-targets.yaml,
+// target_credit), planning fields, time costs, variants and families,
+// mobility dose, and the published id registry. Returns issues in
+// validate.js's shape.
+const fs = require('fs');
+const path = require('path');
+const yaml = require('js-yaml');
 const { loadVolumeModel, loadFunctionalGoals, loadAestheticOutcomes } = require('./load-programming');
 
 const LEVELS = new Set(['priority', 'efficient', 'bias']);
 const SPORTS = new Set(['badminton']);
+const LOAD_TYPES = new Set(['total', 'per_hand', 'stack', 'band', 'bodyweight', 'manual']);
+const WHEN = new Set(['warm_up', 'post_session', 'rest_day']);
+const DOSED_MODES = new Set(['mobility-hold', 'mobility-dynamic', 'soft-tissue']);
+const VARIANT_ID = /^[a-z0-9]+(-[a-z0-9]+)*\.[a-z0-9]+(-[a-z0-9]+)*$/;
+const DATA_DIR = path.join(__dirname, '..', '..', 'data');
+
+function readYaml(relPath) {
+  const file = path.join(DATA_DIR, relPath);
+  if (!fs.existsSync(file)) return { data: null, error: `data/${relPath}: file not found` };
+  try {
+    return { data: yaml.load(fs.readFileSync(file, 'utf8')), error: null };
+  } catch (err) {
+    return { data: null, error: `data/${relPath}: malformed YAML — ${err.message}` };
+  }
+}
 
 const SHARE_TOLERANCE = 0.011; // three children at 0.33 / 0.34 / 0.33
 
@@ -16,6 +36,8 @@ function validateVolume(records) {
   }
   const fileIssue = (file, message) =>
     issues.push({ record: null, category: 'volume', message: `data/programming/${file} :: ${message}` });
+  const registryIssue = (message) =>
+    issues.push({ record: null, category: 'release', message: `data/id-registry.yaml :: ${message}` });
   const recordIssue = (record, message) =>
     issues.push({ record, category: 'volume', message: `${record._file} :: ${record.id} :: ${message}` });
 
@@ -237,6 +259,98 @@ function validateVolume(records) {
       }
     }
   }
+  // --- 3.1 variants (in-record) and families (across records) ---
+  const recordById = new Map(records.map((r) => [r.id, r]));
+  const variantIds = new Set();
+  for (const record of records) {
+    if (record.variants === undefined) continue;
+    if (!Array.isArray(record.variants) || record.variants.length < 2) {
+      recordIssue(record, '"variants" must list at least two variants');
+      continue;
+    }
+    const equipment = new Set(record.equipment || []);
+    for (const v of record.variants) {
+      if (!v || !VARIANT_ID.test(v.id || '') || !v.id.startsWith(`${record.id}.`)) {
+        recordIssue(record, `variant id ${JSON.stringify(v && v.id)} must be "${record.id}.<equipment>"`);
+        continue;
+      }
+      if (variantIds.has(v.id)) recordIssue(record, `duplicate variant id "${v.id}"`);
+      variantIds.add(v.id);
+      if (!equipment.has(v.equipment)) recordIssue(record, `variant "${v.id}" uses equipment "${v.equipment}" not in the record's equipment`);
+      if (!LOAD_TYPES.has(v.load)) recordIssue(record, `variant "${v.id}" load must be one of ${[...LOAD_TYPES].join('|')}`);
+    }
+  }
+  const { data: familyFile, error: familyError } = readYaml('programming/exercise-families.yaml');
+  if (familyError) fileIssue('exercise-families.yaml', familyError);
+  const familyOf = new Map();
+  for (const family of (familyFile && familyFile.families) || []) {
+    const members = Array.isArray(family.members) ? family.members : [];
+    if (members.length < 2) fileIssue('exercise-families.yaml', `${family.id} :: needs at least two members`);
+    for (const id of members) {
+      const r = recordById.get(id);
+      if (!r) fileIssue('exercise-families.yaml', `${family.id} :: unknown exercise "${id}"`);
+      else if (r.training_mode) fileIssue('exercise-families.yaml', `${family.id} :: "${id}" is a training-mode record`);
+      if (familyOf.has(id)) fileIssue('exercise-families.yaml', `"${id}" is in both "${familyOf.get(id)}" and "${family.id}"`);
+      familyOf.set(id, family.id);
+    }
+  }
+
+  // --- 3.3 mobility dose and when tags ---
+  for (const record of records) {
+    const dosed = DOSED_MODES.has(record.training_mode);
+    if (record.when === undefined) {
+      if (dosed) recordIssue(record, `${record.training_mode} records need a "when" tag (warm_up / post_session / rest_day)`);
+      continue;
+    }
+    if (!Array.isArray(record.when) || record.when.length === 0 || record.when.some((w) => !WHEN.has(w))) {
+      recordIssue(record, `"when" must be a non-empty list of ${[...WHEN].join('|')}`);
+    }
+  }
+  const { data: volumeFile } = readYaml('programming/volume-targets.yaml');
+  for (const m of (volumeFile && volumeFile.mobility_targets) || []) {
+    if (!functionalGoalIds.has(m.goal_id)) fileIssue('volume-targets.yaml', `mobility target for unknown goal "${m.goal_id}"`);
+    else if (!records.some((r) => DOSED_MODES.has(r.training_mode) && (r.functional_goals || []).includes(m.goal_id))) {
+      fileIssue('volume-targets.yaml', `mobility target "${m.goal_id}" has no mobility or soft-tissue drills`);
+    }
+    if (!(Number.isInteger(m.weekly_minutes) && m.weekly_minutes > 0 && m.weekly_minutes <= 120)) {
+      fileIssue('volume-targets.yaml', `${m.goal_id} :: weekly_minutes must be whole minutes, 1-120`);
+    }
+    const spw = m.sessions_per_week;
+    if (!(Array.isArray(spw) && spw.length === 2 && spw.every(Number.isInteger) && spw[0] >= 1 && spw[0] <= spw[1] && spw[1] <= 7)) {
+      fileIssue('volume-targets.yaml', `${m.goal_id} :: sessions_per_week must be [low, high] with 1 <= low <= high <= 7`);
+    }
+  }
+
+  // --- release check: published ids never disappear without an alias ---
+  const { data: registry, error: registryError } = readYaml('id-registry.yaml');
+  if (registryError) {
+    issues.push({ record: null, category: 'release', message: registryError });
+  } else {
+    const { data: outcomeFile } = readYaml('programming/aesthetic-outcomes.yaml');
+    const current = {
+      exercises: new Set(records.map((r) => r.id)),
+      exercise_variants: variantIds,
+      exercise_families: new Set(((familyFile && familyFile.families) || []).map((f) => f.id)),
+      physique_targets: targetIds,
+      volume_groups: groupIds,
+      functional_goals: functionalGoalIds,
+      aesthetic_outcomes: new Set(((outcomeFile && outcomeFile.outcomes) || []).map((o) => o.id)),
+    };
+    const aliases = registry.aliases || {};
+    if (!Number.isInteger(registry.schema_version)) registryIssue('schema_version must be a whole number');
+    for (const [kind, ids] of Object.entries(current)) {
+      const published = new Set(registry[kind] || []);
+      for (const id of published) {
+        if (ids.has(id)) continue;
+        if (aliases[id] && ids.has(aliases[id])) continue;
+        registryIssue(`${kind} id "${id}" was published but no longer exists; add an alias (old: new) or restore it`);
+      }
+      for (const id of ids) {
+        if (!published.has(id)) registryIssue(`${kind} id "${id}" is not registered; add it to data/id-registry.yaml`);
+      }
+    }
+  }
+
   return issues;
 }
 

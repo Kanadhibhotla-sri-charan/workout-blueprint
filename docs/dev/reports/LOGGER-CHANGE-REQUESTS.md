@@ -142,3 +142,57 @@ Every exercise (182) has a `time` block, derived from its existing prescription 
 - **Sanity check.** A 5-exercise, 15-set upper session estimates 30–38 minutes. That puts a 60-minute session at about 8–9 exercises, or 16–22 sets with a warm-up, consistent with the logger's own figure in 3.2.
 - **Validator and test:** every record must have `time`. Ranges are checked: setup 0–10, seconds 5–300, rest 0–300 with low ≤ high, and `per_side` must match laterality.
 - **Measured:** Decide byte-identical to Step 2.
+
+## Step 4: variants, session rules, mobility dose, release checks (3.1–3.3)
+
+### 3.1 Exercise variants as data
+
+Two kinds, because Blueprint already has both:
+- **Variants inside one record.** 47 exercises list several equipment setups. Each now has `variants`:
+  - ids are `<exercise-id>.<equipment>`, e.g. `romanian-deadlift.barbell`, `.dumbbell`, `.smith-machine`;
+  - each has a `load` type;
+  - variants share the record's `target_credit` (the request's "share the parent's credit").
+- **Separate records that are the same movement:** `exercise-families.yaml`, 14 families. The request's own example is `decline-press`: decline barbell + decline dumbbell press. Existing ids are kept, so nothing the logger already stored breaks.
+- **No decline machine press** exists in Blueprint, so it is not invented here.
+- **Load steps** (`load_progression`, practical, not sourced): barbell 2.5 kg total; dumbbell 2 kg per hand; machine / cable 1 plate; band → next band; bodyweight → reps, then 2.5 kg.
+
+### 3.2 Session rules as numbers (`global-principles.yaml`)
+
+The rules are as requested:
+- order: compounds → goal muscles → isolations → core / forearms, with goal muscles allowed earlier;
+- 16–22 hard sets per 60-minute session;
+- the overlap rule (a target that got a full-credit compound set counts as trained that day);
+- deload every 5–7 weeks or on a performance drop: sets × 0.6, RIR +2, same exercises.
+
+Bell et al. 2023 (a Delphi consensus of coaches, verified abstract) supports only the definition of a deload. **The timing and amounts are practical defaults, not sourced.** The Step 3 time estimate (about 8–9 exercises / 16–22 sets per 60 minutes) agrees with the per-session limit.
+
+### 3.3 Mobility dose per area
+
+- **`mobility_targets`:**
+  - upper-body, lower-body and full-body mobility: 10 min/week each;
+  - wrist & forearm: 5 min/week;
+  - each over 3–5 sessions.
+- **Basis:** Thomas 2018 (verified): weekly time of 5 min or more and weekly frequency mattered, and the review suggests 5+ days. The lower bound of 3 follows the owner's plan.
+- **`when` tags on all 24 mobility and soft-tissue drills**, including the five from the athletic expansion:
+  - dynamic → `warm_up`;
+  - holds → `post_session`, `rest_day`;
+  - foam rolling → all three.
+- **Minutes per drill** = sets × `time.seconds_per_set` (× 2 when per side).
+
+### Release checks
+
+- **`schema_version: 2`** is in `data/id-registry.yaml` and in the generated programming data (`schemaVersion`).
+- **`CHANGELOG.md`** has one entry per release; no id has been renamed.
+- **The id registry** covers exercises, variants, families, targets, volume groups, functional goals and outcomes. Renaming without an alias, or adding an unregistered id, fails validation. Tested: renaming `hex-press` fails, and adding the alias passes.
+- **The validator also fails on:** a variant whose equipment isn't the record's, an unknown load type, a mobility drill without `when`, and an unknown family member.
+- **Deprecation:** nothing is removed. Deriving weekly volume from packages is marked deprecated for logger use.
+
+### Measured
+
+Every Decide answer is byte-identical to Step 3 (50,280 scenarios, two identical runs).
+
+## Not done / for the logger to confirm
+
+- `preferred_exercises` on outcomes (2.3): not added, see Step 2.
+- The 14-day "efficient" cycle: see the note under 1.1.
+- When the logger has switched over, tell Blueprint which old behaviours it no longer relies on, so they can be removed in a later release.

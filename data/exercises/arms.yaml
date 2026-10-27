@@ -14,6 +14,9 @@
   target_credit:
     biceps: 1.0
     brachialis-arm-thickness: 0.5
+  variants:
+    - { id: barbell-ez-bar-curl.barbell, equipment: barbell, load: total }
+    - { id: barbell-ez-bar-curl.ez-bar, equipment: ez-bar, load: total }
   movement_patterns:
     - elbow flexion
   equipment:
@@ -228,6 +231,10 @@
   target_credit:
     biceps: 1.0
     brachialis-arm-thickness: 0.5
+  variants:
+    - { id: preacher-curl.barbell, equipment: barbell, load: total }
+    - { id: preacher-curl.ez-bar, equipment: ez-bar, load: total }
+    - { id: preacher-curl.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - elbow flexion
     - shortened shoulder position
@@ -376,6 +383,9 @@
     brachialis-arm-thickness: 1.0
     biceps: 0.5
     forearm-extensors: 0.5
+  variants:
+    - { id: hammer-curl.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: hammer-curl.band, equipment: band, load: band }
   movement_patterns:
     - elbow flexion
     - neutral grip
@@ -591,6 +601,9 @@
   target_credit:
     biceps: 1.0
     brachialis-arm-thickness: 0.5
+  variants:
+    - { id: cable-curl.cable, equipment: cable, load: stack }
+    - { id: cable-curl.band, equipment: band, load: band }
   movement_patterns:
     - elbow flexion
   equipment:
@@ -664,6 +677,9 @@
   target_credit:
     biceps: 1.0
     brachialis-arm-thickness: 0.5
+  variants:
+    - { id: drag-curl.barbell, equipment: barbell, load: total }
+    - { id: drag-curl.ez-bar, equipment: ez-bar, load: total }
   movement_patterns:
     - elbow flexion
     - elbows drawn behind the torso
@@ -880,6 +896,9 @@
     chest: 0.5
     mid-pec: 0.5
     front-delt: 0.5
+  variants:
+    - { id: close-grip-bench-press.barbell, equipment: barbell, load: total }
+    - { id: close-grip-bench-press.smith-machine, equipment: smith machine, load: total }
   movement_patterns:
     - horizontal press
   equipment:
@@ -1030,6 +1049,11 @@
   target_credit:
     triceps: 1.0
     triceps-long-head: 1.0
+  variants:
+    - { id: overhead-triceps-extension.barbell, equipment: barbell, load: total }
+    - { id: overhead-triceps-extension.ez-bar, equipment: ez-bar, load: total }
+    - { id: overhead-triceps-extension.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: overhead-triceps-extension.band, equipment: band, load: band }
   movement_patterns:
     - elbow extension
     - shoulder flexed (overhead)
@@ -1109,6 +1133,10 @@
   target_credit:
     triceps: 1.0
     triceps-long-head: 0.5
+  variants:
+    - { id: lying-triceps-extension-skull-crusher.barbell, equipment: barbell, load: total }
+    - { id: lying-triceps-extension-skull-crusher.ez-bar, equipment: ez-bar, load: total }
+    - { id: lying-triceps-extension-skull-crusher.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - elbow extension
   equipment:
@@ -1386,6 +1414,9 @@
     - triceps
   target_credit:
     triceps: 1.0
+  variants:
+    - { id: triceps-kickback.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: triceps-kickback.cable, equipment: cable, load: stack }
   movement_patterns:
     - elbow extension
     - shoulder held in extension

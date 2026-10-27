@@ -15,6 +15,10 @@
     gluteus-maximus: 1.0
     hamstrings: 0.25
     quads: 0.25
+  variants:
+    - { id: hip-thrust.barbell, equipment: barbell, load: total }
+    - { id: hip-thrust.hip-thrust-machine, equipment: hip-thrust machine, load: stack }
+    - { id: hip-thrust.smith-machine, equipment: smith machine, load: total }
   movement_patterns:
     - hip extension
     - shortened range (hip fully extended)
@@ -164,6 +168,10 @@
     quads: 0.5
     hamstrings: 0.25
     adductors: 0.25
+  variants:
+    - { id: bulgarian-split-squat-hip-dominant.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: bulgarian-split-squat-hip-dominant.barbell, equipment: barbell, load: total }
+    - { id: bulgarian-split-squat-hip-dominant.bodyweight, equipment: bodyweight, load: bodyweight }
   movement_patterns:
     - unilateral hip-dominant
     - long-stance execution
@@ -307,6 +315,9 @@
   target_credit:
     gluteus-maximus: 1.0
     hamstrings: 0.5
+  variants:
+    - { id: cable-pull-through.cable, equipment: cable, load: stack }
+    - { id: cable-pull-through.band, equipment: band, load: band }
   movement_patterns:
     - hip hinge
     - load pulls from behind
@@ -385,6 +396,9 @@
     - hip-stability
   target_credit:
     gluteus-medius-minimus: 1.0
+  variants:
+    - { id: hip-abduction.machine, equipment: machine, load: stack }
+    - { id: hip-abduction.band, equipment: band, load: band }
   movement_patterns:
     - hip abduction
   equipment:
@@ -659,6 +673,9 @@
   target_credit:
     gluteus-maximus: 1.0
     hamstrings: 0.25
+  variants:
+    - { id: glute-bridge.bodyweight, equipment: bodyweight, load: bodyweight }
+    - { id: glute-bridge.barbell, equipment: barbell, load: total }
   movement_patterns:
     - hip extension
     - shortened range (hip fully extended)

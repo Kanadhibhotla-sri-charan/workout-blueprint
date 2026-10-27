@@ -60,10 +60,17 @@ function main() {
     .map((record) => ({ ...record, _file: basename(record._file) }))
     .sort((a, b) => a.id.localeCompare(b.id));
 
+  // Workout Logger release checks: the snapshot carries its schema version
+  // (data/id-registry.yaml) so a syncing app can detect format changes.
+  const { schema_version: schemaVersion } = yaml.load(readFileSync(join(dirname(PROGRAMMING_DIR), 'id-registry.yaml'), 'utf8'));
+
   const programming = {
+    schemaVersion,
     physiqueTargets: loadYaml('physique-targets.yaml').targets,
     volumeGroups: loadYaml('physique-targets.yaml').volume_groups,
     volumeTargets: loadYaml('volume-targets.yaml').volume_targets,
+    mobilityTargets: loadYaml('volume-targets.yaml').mobility_targets,
+    exerciseFamilies: loadYaml('exercise-families.yaml').families,
     globalPrinciples: loadYaml('global-principles.yaml'),
     repRanges: loadYaml('rep-ranges.yaml'),
     programmingProfiles: loadYaml('programming-profiles.yaml'),

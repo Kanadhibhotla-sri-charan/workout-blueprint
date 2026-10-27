@@ -66,6 +66,10 @@ export interface Exercise {
     per_side: boolean;
     superset_friendly: boolean;
   };
+  /** Change request 3.1: equipment variants of this record, ids "<exercise-id>.<equipment>". */
+  variants?: { id: string; equipment: string; load: 'total' | 'per_hand' | 'stack' | 'band' | 'bodyweight' | 'manual' }[];
+  /** Change request 3.3: where a mobility or soft-tissue drill fits. */
+  when?: ('warm_up' | 'post_session' | 'rest_day')[];
   /** Change request 2.4: sports this exercise carries over to (logger flag). */
   sport_carryover?: 'badminton'[];
   exercise_type: ExerciseType;

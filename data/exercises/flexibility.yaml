@@ -29,6 +29,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; range is limited by upper-back rotation, not by load.
   stability_demand: low
   skill_demand: low
@@ -101,6 +103,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; range is limited by upper-back rotation.
   stability_demand: low
   skill_demand: low
@@ -173,6 +177,9 @@
     - low-setup
     - low-fatigue
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; how far the hips sit back sets the depth of the stretch.
   stability_demand: low
   skill_demand: low
@@ -243,6 +250,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; how far the body steps through the frame sets the depth.
   stability_demand: low
   skill_demand: low
@@ -317,6 +327,9 @@
     - low-setup
     - low-fatigue
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; sitting the hips back and away from the arm deepens the stretch.
   stability_demand: low
   skill_demand: low
@@ -388,6 +401,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; the pulling hand sets the depth of the stretch.
   stability_demand: low
   skill_demand: low
@@ -460,6 +476,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Light band tension; a wider grip makes it easier, a narrower grip harder.
   stability_demand: low
   skill_demand: low
@@ -530,6 +548,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; the other hand sets the depth of each stretch.
   stability_demand: low
   skill_demand: low
@@ -600,6 +621,9 @@
     - low-setup
     - low-fatigue
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; the strap sets how far the leg is drawn up.
   stability_demand: low
   skill_demand: low
@@ -670,6 +694,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; leaning further forward deepens the stretch.
   stability_demand: low
   skill_demand: low
@@ -740,6 +767,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; how far the hips rock back sets the depth.
   stability_demand: low
   skill_demand: low
@@ -810,6 +839,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; pulling the legs closer deepens the stretch.
   stability_demand: low
   skill_demand: low
@@ -880,6 +912,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; tucking the pelvis deepens the stretch.
   stability_demand: low
   skill_demand: low
@@ -953,6 +988,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; swing height sets the range.
   stability_demand: low
   skill_demand: low
@@ -1028,6 +1065,8 @@
     - skill-coordination
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; the depth of the lunge and rotation sets the range.
   stability_demand: low
   skill_demand: medium
@@ -1099,6 +1138,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; range is set by spinal mobility.
   stability_demand: low
   skill_demand: low
@@ -1171,6 +1212,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; reaching further to the side deepens the stretch.
   stability_demand: low
   skill_demand: low
@@ -1241,6 +1285,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; the top hand sets the depth.
   stability_demand: low
   skill_demand: low
@@ -1314,6 +1361,10 @@
     - low-setup
     - low-fatigue
   training_mode: soft-tissue
+  when:
+    - warm_up
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight pressure on the roller; shifting weight onto or off the roller changes the pressure.
   stability_demand: low
   skill_demand: low

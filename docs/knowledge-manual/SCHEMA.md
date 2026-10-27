@@ -181,6 +181,25 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** none (logger only). The qualitative `setup_time` and `fatigue_cost` stay and still drive Decide.
 - **Required for `reviewed`:** no
 
+### `variants`
+- **Type:** list of `{ id, equipment, load }`, or absent. Workout Logger change request 3.1.
+- **Present on:** every strength record with `equipment_setups` (47). One variant per setup.
+- **`id`:** `<exercise-id>.<equipment>`, e.g. `romanian-deadlift.dumbbell`. The dot keeps variant ids apart from exercise ids.
+- **`equipment`:** the loading item of the setup; must be in the record's `equipment`.
+- **`load`:** `total` (barbell / Smith / landmine), `per_hand` (dumbbells, kettlebells), `stack` (machine / cable), `band`, `bodyweight` or `manual`. Load steps per type are in `global-principles.yaml` › `load_progression`.
+- **Credit:** variants share the record's `target_credit`.
+- **Separate records** that are the same movement with different equipment are grouped in `data/programming/exercise-families.yaml`.
+- **Decision-making impact:** none (logger only). `equipment_setups` still drives Decide.
+
+### `when`
+- **Type:** list, required on `mobility-hold`, `mobility-dynamic` and `soft-tissue` records. Workout Logger change request 3.3.
+- **Allowed values:** `warm_up`, `post_session`, `rest_day`.
+  - Dynamic drills: `[warm_up]`.
+  - Holds: `[post_session, rest_day]`.
+  - Foam rolling: all three.
+- **Weekly mobility dose per goal:** `volume-targets.yaml` › `mobility_targets`.
+- **Decision-making impact:** none (logger only).
+
 ### `sport_carryover`
 - **Type:** list of strings, or absent
 - **Allowed values (closed vocabulary):** `badminton`
@@ -382,6 +401,8 @@ One external YouTube execution reference per exercise. The app renders it as a p
 | `physique_targets` | list | no | IDs, must resolve to `data/programming/physique-targets.yaml` | yes | no |
 | `target_credit` | mapping | strength records with physique targets | IDs (targets and volume groups), weights in (0, 1] | no (logger only) | no |
 | `time` | mapping | yes | numeric ranges (validator) | no (logger only) | no |
+| `variants` | list | no | id pattern, load closed (6) | no (logger only) | no |
+| `when` | list | mobility / soft-tissue records | closed (3) | no (logger only) | no |
 | `sport_carryover` | list | no | closed (`badminton`) | no (logger only) | no |
 | `functional_goals` | list | no | IDs, must resolve to `data/programming/functional-goals.yaml` | yes | no |
 | `aesthetic_characteristics` | list | no | closed (5, Phase 4C) | yes | no |

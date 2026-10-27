@@ -11,6 +11,11 @@
     - forearm-flexors
   target_credit:
     forearm-flexors: 1.0
+  variants:
+    - { id: wrist-curl.barbell, equipment: barbell, load: total }
+    - { id: wrist-curl.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: wrist-curl.cable, equipment: cable, load: stack }
+    - { id: wrist-curl.band, equipment: band, load: band }
   movement_patterns:
     - wrist flexion
   equipment:
@@ -84,6 +89,11 @@
     - forearm-extensors
   target_credit:
     forearm-extensors: 1.0
+  variants:
+    - { id: reverse-wrist-curl.barbell, equipment: barbell, load: total }
+    - { id: reverse-wrist-curl.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: reverse-wrist-curl.cable, equipment: cable, load: stack }
+    - { id: reverse-wrist-curl.band, equipment: band, load: band }
   movement_patterns:
     - wrist extension
   equipment:
@@ -162,6 +172,11 @@
     forearm-extensors: 1.0
     brachialis-arm-thickness: 0.5
     biceps: 0.25
+  variants:
+    - { id: reverse-curl.barbell, equipment: barbell, load: total }
+    - { id: reverse-curl.ez-bar, equipment: ez-bar, load: total }
+    - { id: reverse-curl.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: reverse-curl.band, equipment: band, load: band }
   movement_patterns:
     - elbow flexion
     - pronated grip
@@ -312,6 +327,9 @@
     forearm-flexors: 0.5
     upper-traps: 0.5
     obliques: 0.25
+  variants:
+    - { id: farmers-carry.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: farmers-carry.farmers-handles, equipment: farmer's handles, load: per_hand }
   movement_patterns:
     - loaded carry
   equipment:
@@ -378,6 +396,10 @@
     - pronators
     - supinators of the forearm
   secondary_targets: []
+  variants:
+    - { id: pronation-supination-work.band, equipment: band, load: band }
+    - { id: pronation-supination-work.cable, equipment: cable, load: stack }
+    - { id: pronation-supination-work.offset-loaded-handle, equipment: offset-loaded handle, load: per_hand }
   movement_patterns:
     - forearm pronation and supination
   equipment:

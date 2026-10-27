@@ -529,6 +529,10 @@
     quads: 1.0
     gluteus-maximus: 0.5
     adductors: 0.25
+  variants:
+    - { id: bulgarian-split-squat-knee-dominant.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: bulgarian-split-squat-knee-dominant.barbell, equipment: barbell, load: total }
+    - { id: bulgarian-split-squat-knee-dominant.bodyweight, equipment: bodyweight, load: bodyweight }
   movement_patterns:
     - unilateral knee-dominant
     - short-stance execution
@@ -682,6 +686,11 @@
     quads: 1.0
     gluteus-maximus: 0.5
     adductors: 0.25
+  variants:
+    - { id: static-lunge.barbell, equipment: barbell, load: total }
+    - { id: static-lunge.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: static-lunge.sandbag, equipment: sandbag, load: total }
+    - { id: static-lunge.bodyweight, equipment: bodyweight, load: bodyweight }
   movement_patterns:
     - unilateral knee-dominant
     - stationary stance
@@ -761,6 +770,10 @@
   target_credit:
     quads: 1.0
     gluteus-maximus: 0.5
+  variants:
+    - { id: reverse-lunge.barbell, equipment: barbell, load: total }
+    - { id: reverse-lunge.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: reverse-lunge.sandbag, equipment: sandbag, load: total }
   movement_patterns:
     - unilateral knee-dominant
     - stepping backward
@@ -837,6 +850,11 @@
   target_credit:
     quads: 1.0
     gluteus-maximus: 0.5
+  variants:
+    - { id: walking-lunge.barbell, equipment: barbell, load: total }
+    - { id: walking-lunge.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: walking-lunge.sandbag, equipment: sandbag, load: total }
+    - { id: walking-lunge.bodyweight, equipment: bodyweight, load: bodyweight }
   movement_patterns:
     - unilateral knee-dominant
     - stepping forward continuously
@@ -918,6 +936,9 @@
   target_credit:
     quads: 1.0
     gluteus-maximus: 0.5
+  variants:
+    - { id: step-up.bodyweight, equipment: bodyweight, load: bodyweight }
+    - { id: step-up.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - unilateral knee-dominant
     - stepping up onto a box
@@ -996,6 +1017,9 @@
   target_credit:
     quads: 1.0
     gluteus-maximus: 0.5
+  variants:
+    - { id: goblet-squat.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: goblet-squat.kettlebell, equipment: kettlebell, load: per_hand }
   movement_patterns:
     - squat / knee-dominant
   equipment:

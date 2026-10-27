@@ -11,6 +11,10 @@
   secondary_targets: []
   target_credit:
     neck-thickness: 0.5
+  variants:
+    - { id: isometric-neck-hold.bodyweight, equipment: bodyweight, load: bodyweight }
+    - { id: isometric-neck-hold.band, equipment: band, load: band }
+    - { id: isometric-neck-hold.manual-resistance, equipment: manual resistance, load: manual }
   movement_patterns:
     - neck isometric
   equipment:
@@ -83,6 +87,9 @@
   target_credit:
     neck-thickness: 1.0
     upper-traps: 0.25
+  variants:
+    - { id: neck-extension.plate, equipment: plate, load: total }
+    - { id: neck-extension.machine, equipment: machine, load: stack }
   movement_patterns:
     - neck extension
   equipment:
@@ -153,6 +160,9 @@
     - neck-thickness
   target_credit:
     neck-thickness: 1.0
+  variants:
+    - { id: neck-flexion.plate, equipment: plate, load: total }
+    - { id: neck-flexion.band, equipment: band, load: band }
   movement_patterns:
     - neck flexion
   equipment:
@@ -220,6 +230,10 @@
   secondary_targets: []
   target_credit:
     neck-thickness: 0.5
+  variants:
+    - { id: lateral-neck-flexion.bodyweight, equipment: bodyweight, load: bodyweight }
+    - { id: lateral-neck-flexion.band, equipment: band, load: band }
+    - { id: lateral-neck-flexion.manual-resistance, equipment: manual resistance, load: manual }
   movement_patterns:
     - neck lateral flexion
   equipment:

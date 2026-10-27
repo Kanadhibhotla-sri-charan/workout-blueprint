@@ -44,6 +44,20 @@ export interface VolumeTarget {
   volume_from_parent?: string;
 }
 
+/** Change request 3.3: weekly minutes of drills for a mobility goal. */
+export interface MobilityTarget {
+  goal_id: string;
+  weekly_minutes: number;
+  sessions_per_week: [number, number];
+}
+
+/** Change request 3.1: separate records that are the same movement with different equipment. */
+export interface ExerciseFamily {
+  id: string;
+  name: string;
+  members: string[];
+}
+
 export interface GlobalPrinciples {
   rir: {
     full_range: [number, number];
@@ -205,9 +219,13 @@ export interface FunctionalGoal {
 }
 
 export interface ProgrammingData {
+  /** Snapshot format version (data/id-registry.yaml) — release checks. */
+  schemaVersion: number;
   physiqueTargets: PhysiqueTarget[];
   volumeGroups: VolumeGroup[];
   volumeTargets: VolumeTarget[];
+  mobilityTargets: MobilityTarget[];
+  exerciseFamilies: ExerciseFamily[];
   globalPrinciples: GlobalPrinciples;
   repRanges: RepRanges;
   programmingProfiles: ProgrammingProfileCatalog;

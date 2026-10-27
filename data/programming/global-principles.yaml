@@ -57,8 +57,61 @@ progression:
     typically drops back toward the bottom of the range — then repeat.
   scope_note: >-
     This is the only progression model Phase 4 introduces. Advanced
-    periodization, deload prediction, and recovery prediction are
-    explicitly out of scope (see the Phase 4 architecture spec §29).
+    periodization and recovery prediction remain out of scope (see the
+    Phase 4 architecture spec §29). A simple deload rule was added for the
+    Workout Logger in 2026-10 (see `deload` below).
+
+# Load steps per load type (Workout Logger change request 3.1). When the
+# top of the rep range is reached, increase the load by about one step;
+# compare progress within one exercise variant only. Practical defaults
+# from common gym equipment increments, not sourced figures.
+load_progression:
+  unit: kg
+  steps:
+    total: 2.5         # barbell / smith / landmine: total load (1.25 kg per side)
+    per_hand: 2        # dumbbells / kettlebells: next weight up, per hand
+    stack: 1_plate     # machine or cable: next pin on the stack
+    band: next_band    # move to the next band tension
+    bodyweight: reps_then_2.5   # add reps, then about 2.5 kg of added load
+    manual: none       # manual resistance has no load to track
+
+# Session rules (Workout Logger change request 3.2). Practical coaching
+# rules the logger's validators and planning prompt should quote.
+session_rules:
+  exercise_order:
+    - big compounds
+    - goal muscles
+    - isolations
+    - core and forearms
+  order_note: >-
+    Goal muscles may move earlier when they are that session's priority.
+  hard_sets_per_session:
+    sixty_minutes: [16, 22]
+    note: >-
+      Total hard sets that typically fit a 60-minute session with rest.
+      Sessions should stay under 90 minutes; exercise time costs are in
+      each exercise's `time` block.
+  overlap_rule: >-
+    A target that received a full (1.0 credit) hard set in a compound
+    counts as trained that day. Don't add an isolation for it the same day
+    unless it is a goal target. Per-target weekly numbers and per-session
+    ceilings are in volume-targets.yaml.
+
+# Deload (Workout Logger change request 3.2). Bell et al. 2023 (Delphi
+# consensus of strength and physique coaches) define deloading as "a
+# period of reduced training stress designed to mitigate physiological and
+# psychological fatigue, promote recovery, and enhance preparedness for
+# subsequent training". The timing and amounts below are practical
+# defaults, not sourced figures.
+deload:
+  every_weeks: [5, 7]
+  also_when: >-
+    Performance drops across several sessions despite normal sleep and
+    food.
+  sets_multiplier: 0.6
+  rir_change: 2
+  same_exercises: true
+  length_days: 7
 
 wording_rules:
   prefer:

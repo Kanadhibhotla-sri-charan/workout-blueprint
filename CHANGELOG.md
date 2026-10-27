@@ -2,6 +2,29 @@
 
 Data changes that matter to apps reading Blueprint (the Workout Logger syncs a snapshot). Each entry lists what changed and any renamed ids. **No id has been renamed so far.**
 
+## 2026-10-27: Variants, session rules, mobility dose, release checks (Logger change requests 3.1–3.3)
+
+**Schema version: 2.** `programming.generated.json` now carries `schemaVersion`, read from `data/id-registry.yaml`. Version 1 means every release before the logger changes.
+
+**Added (additive; no id renamed):**
+- **3.1 variants:**
+  - `variants` on 47 exercises: ids `<exercise-id>.<equipment>`, each with `equipment` and `load` (`total` / `per_hand` / `stack` / `band` / `bodyweight` / `manual`). Variants share the record's `target_credit`.
+  - New `data/programming/exercise-families.yaml`: 14 families of separate records that are the same movement with different equipment. Example: `decline-press` = decline-barbell-bench-press + decline-dumbbell-press.
+  - `global-principles.yaml` › `load_progression`: load steps per load type (kg).
+- **3.2 session rules** (`global-principles.yaml`):
+  - `session_rules`: exercise order, 16–22 hard sets for a 60-minute session, and the overlap rule;
+  - `deload`: every 5–7 weeks or on a performance drop; sets × 0.6, RIR +2, same exercises, 7 days.
+- **3.3 mobility dose:**
+  - `volume-targets.yaml` › `mobility_targets`: weekly minutes and sessions per mobility goal;
+  - `when` tags on all 24 mobility and soft-tissue drills.
+- **Release checks:**
+  - `data/id-registry.yaml` lists every published id, plus `aliases` for renames. `validate-data.js` fails when a published id disappears without an alias, or a new id isn't registered.
+  - Generated data: `mobilityTargets`, `exerciseFamilies`, `schemaVersion`.
+
+**Deprecated for logger use (not removed):** deriving weekly volume from `development-packages.yaml` (sets × frequency). Use `volume-targets.yaml`. The packages and their Build-page figures stay, because the Blueprint site uses them.
+
+**Unchanged:** every Decide answer (byte-identical).
+
 ## 2026-10-27: Time cost per exercise (Logger change request 2.2)
 
 **Added:** a `time` block on all 182 exercises: `setup_minutes`, `seconds_per_set`, `rest_seconds` [low, high], `per_side` and `superset_friendly`. It is derived from each exercise's existing prescription; see SCHEMA.md › `time` for the rules.

@@ -125,6 +125,8 @@ const ALL_FIELDS = new Set([
   'sport_carryover',
   // Workout Logger change request 2.2.
   'time',
+  // Workout Logger change requests 3.1 and 3.3.
+  'variants', 'when',
 ]);
 
 // How a `verified` video reference was confirmed to match its exercise.

@@ -394,6 +394,9 @@
     rear-delt: 0.25
     biceps: 0.25
     brachialis-arm-thickness: 0.25
+  variants:
+    - { id: chest-supported-row.machine, equipment: machine, load: stack }
+    - { id: chest-supported-row.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - horizontal pull
   equipment:
@@ -782,6 +785,9 @@
     rear-delt: 0.25
     biceps: 0.25
     brachialis-arm-thickness: 0.25
+  variants:
+    - { id: t-bar-row.t-bar, equipment: t-bar, load: total }
+    - { id: t-bar-row.barbell, equipment: barbell, load: total }
   movement_patterns:
     - horizontal pull
   equipment:
@@ -1078,6 +1084,9 @@
     - lat-width
   target_credit:
     lat-width: 1.0
+  variants:
+    - { id: straight-arm-pulldown.cable, equipment: cable, load: stack }
+    - { id: straight-arm-pulldown.band, equipment: band, load: band }
   movement_patterns:
     - shoulder extension
   equipment:
@@ -1225,6 +1234,11 @@
   target_credit:
     upper-traps: 1.0
     forearm-flexors: 0.25
+  variants:
+    - { id: barbell-dumbbell-shrug.barbell, equipment: barbell, load: total }
+    - { id: barbell-dumbbell-shrug.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: barbell-dumbbell-shrug.cable, equipment: cable, load: stack }
+    - { id: barbell-dumbbell-shrug.band, equipment: band, load: band }
   movement_patterns:
     - scapular elevation
   equipment:

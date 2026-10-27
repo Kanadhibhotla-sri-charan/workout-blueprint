@@ -124,6 +124,47 @@ describe('time cost (change request 2.2)', () => {
   });
 });
 
+describe('logging quality (change requests 3.1-3.3, release checks)', () => {
+  it('variants are unique, named after their record, and use the record\'s own equipment', () => {
+    const seen = new Set<string>();
+    for (const e of exercises.filter((x) => x.variants)) {
+      for (const v of e.variants!) {
+        expect(v.id.startsWith(`${e.id}.`), v.id).toBe(true);
+        expect(e.equipment, v.id).toContain(v.equipment);
+        expect(seen.has(v.id), v.id).toBe(false);
+        seen.add(v.id);
+      }
+    }
+    const rdl = exercises.find((e) => e.id === 'romanian-deadlift')!.variants!;
+    expect(rdl.map((v) => [v.id, v.load])).toEqual([
+      ['romanian-deadlift.barbell', 'total'],
+      ['romanian-deadlift.dumbbell', 'per_hand'],
+      ['romanian-deadlift.smith-machine', 'total'],
+    ]);
+  });
+
+  it('the decline press family links the two existing decline records without renaming them', () => {
+    const family = programming.exerciseFamilies.find((f) => f.id === 'decline-press')!;
+    expect(family.members).toEqual(['decline-barbell-bench-press', 'decline-dumbbell-press']);
+    const ids = new Set(exercises.map((e) => e.id));
+    for (const f of programming.exerciseFamilies) for (const m of f.members) expect(ids.has(m), m).toBe(true);
+  });
+
+  it('every mobility and soft-tissue drill has a when tag; dynamic drills are warm-ups', () => {
+    for (const e of exercises.filter((x) => ['mobility-hold', 'mobility-dynamic', 'soft-tissue'].includes(x.training_mode ?? ''))) {
+      expect(e.when?.length, e.id).toBeGreaterThan(0);
+      if (e.training_mode === 'mobility-dynamic') expect(e.when, e.id).toEqual(['warm_up']);
+    }
+    expect(programming.mobilityTargets.find((m) => m.goal_id === 'upper-body-mobility')).toEqual({
+      goal_id: 'upper-body-mobility', weekly_minutes: 10, sessions_per_week: [3, 5],
+    });
+  });
+
+  it('the snapshot carries a schema version', () => {
+    expect(programming.schemaVersion).toBe(2);
+  });
+});
+
 function getCredit(id: string, target: string): number | undefined {
   return exercises.find((e) => e.id === id)?.target_credit?.[target];
 }

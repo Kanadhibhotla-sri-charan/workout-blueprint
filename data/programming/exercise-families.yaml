@@ -1,0 +1,77 @@
+# Exercise families (Workout Logger change request 3.1, 2026-10-27).
+#
+# A family groups SEPARATE exercise records that are the same movement done
+# with different equipment, so the logger can offer a like-for-like swap
+# instead of a free-text note ("decline dumbbell press was actually the
+# barbell version"). Every member keeps its own id, target_credit and
+# prescription; nothing is renamed.
+#
+# Variants inside ONE record (one exercise with several equipment setups)
+# are listed on the record itself as `variants` (data/exercises/*.yaml),
+# with ids of the form <exercise-id>.<equipment>. They share that record's
+# target_credit.
+#
+# Progress should be compared within one member or one variant (like with
+# like). Load steps per load type are in global-principles.yaml ›
+# load_progression.
+#
+# Membership is conservative: only records that differ mainly by equipment.
+# Different movements that train the same muscle (e.g. front squat vs back
+# squat) are not families; the Decide engine's alternatives cover those.
+
+families:
+  - id: decline-press
+    name: Decline press
+    members: [decline-barbell-bench-press, decline-dumbbell-press]
+
+  - id: incline-press
+    name: Incline press
+    members: [incline-barbell-press, incline-dumbbell-press, smith-machine-incline-press, incline-machine-press, incline-cable-press]
+
+  - id: flat-press
+    name: Flat press
+    members: [flat-barbell-bench-press, flat-dumbbell-press, smith-machine-bench-press, machine-chest-press, cable-chest-press]
+
+  - id: chest-fly
+    name: Chest fly
+    members: [flat-dumbbell-fly, machine-fly-pec-deck]
+
+  - id: shoulder-press
+    name: Shoulder press
+    members: [overhead-press, smith-machine-shoulder-press, seated-machine-shoulder-press, cable-shoulder-press]
+
+  - id: lateral-raise
+    name: Lateral raise
+    members: [dumbbell-lateral-raise, cable-lateral-raise, machine-lateral-raise]
+
+  - id: rear-delt-fly
+    name: Rear-delt fly
+    members: [rear-delt-fly, machine-reverse-fly, cable-rear-delt-builder]
+
+  - id: biceps-curl
+    name: Biceps curl
+    members: [dumbbell-curl, barbell-ez-bar-curl, cable-curl]
+
+  - id: preacher-curl
+    name: Preacher curl
+    members: [preacher-curl, preacher-curl-machine]
+
+  - id: drag-curl
+    name: Drag curl
+    members: [drag-curl, cable-drag-curl]
+
+  - id: hammer-curl
+    name: Hammer curl
+    members: [hammer-curl, cable-hammer-curl-rope]
+
+  - id: reverse-curl
+    name: Reverse curl
+    members: [reverse-curl, cable-reverse-curl]
+
+  - id: squat
+    name: Back squat
+    members: [back-squat, smith-machine-squat]
+
+  - id: romanian-deadlift
+    name: Romanian deadlift
+    members: [romanian-deadlift, smith-machine-romanian-deadlift]

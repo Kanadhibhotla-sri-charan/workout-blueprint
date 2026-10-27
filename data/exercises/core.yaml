@@ -433,6 +433,9 @@
     rectus-abdominis: 0.25
   sport_carryover:
     - badminton
+  variants:
+    - { id: pallof-press.band, equipment: band, load: band }
+    - { id: pallof-press.cable, equipment: cable, load: stack }
   movement_patterns:
     - anti-rotation isometric
   equipment:
@@ -588,6 +591,9 @@
     upper-traps: 0.25
   sport_carryover:
     - badminton
+  variants:
+    - { id: suitcase-carry.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: suitcase-carry.kettlebell, equipment: kettlebell, load: per_hand }
   movement_patterns:
     - anti-lateral flexion under load
   equipment:
@@ -807,6 +813,10 @@
   target_credit:
     obliques: 1.0
     rectus-abdominis: 0.25
+  variants:
+    - { id: russian-twist.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: russian-twist.plate, equipment: plate, load: total }
+    - { id: russian-twist.medicine-ball, equipment: medicine ball, load: total }
   movement_patterns:
     - trunk rotation
   equipment:

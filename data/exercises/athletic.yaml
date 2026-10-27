@@ -692,6 +692,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight; holding a support makes it easier, letting go makes it harder.
   stability_demand: low
   skill_demand: low
@@ -766,6 +769,9 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-hold
+  when:
+    - post_session
+    - rest_day
   resistance_profile: Bodyweight stretch; how upright the torso is and how far the hips push forward set the intensity.
   stability_demand: low
   skill_demand: low
@@ -838,6 +844,8 @@
     - skill-coordination
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; depth and how much support is used set the challenge.
   stability_demand: medium
   skill_demand: medium
@@ -908,6 +916,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; the distance of the foot from the wall sets the range worked.
   stability_demand: low
   skill_demand: low
@@ -978,6 +988,8 @@
     - low-fatigue
     - equipment-limited-substitute
   training_mode: mobility-dynamic
+  when:
+    - warm_up
   resistance_profile: Bodyweight; hand support and how upright the torso is set the challenge.
   stability_demand: low
   skill_demand: low

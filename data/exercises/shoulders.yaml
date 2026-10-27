@@ -18,6 +18,9 @@
     side-delt: 0.25
     chest: 0.25
     upper-pec: 0.25
+  variants:
+    - { id: overhead-press.barbell, equipment: barbell, load: total }
+    - { id: overhead-press.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - vertical press
   equipment:
@@ -576,6 +579,12 @@
   target_credit:
     side-delt: 1.0
     upper-traps: 0.5
+  variants:
+    - { id: upright-row-wide-grip.cable, equipment: cable, load: stack }
+    - { id: upright-row-wide-grip.ez-bar, equipment: ez-bar, load: total }
+    - { id: upright-row-wide-grip.barbell, equipment: barbell, load: total }
+    - { id: upright-row-wide-grip.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: upright-row-wide-grip.band, equipment: band, load: band }
   movement_patterns:
     - shoulder abduction
     - scapular elevation
@@ -657,6 +666,10 @@
   target_credit:
     rear-delt: 1.0
     back-thickness: 0.25
+  variants:
+    - { id: rear-delt-fly.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: rear-delt-fly.machine, equipment: machine, load: stack }
+    - { id: rear-delt-fly.band, equipment: band, load: band }
   movement_patterns:
     - shoulder horizontal abduction
   equipment:
@@ -939,6 +952,9 @@
   target_credit:
     rear-delt: 1.0
     back-thickness: 0.5
+  variants:
+    - { id: face-pull.cable, equipment: cable, load: stack }
+    - { id: face-pull.band, equipment: band, load: band }
   movement_patterns:
     - shoulder horizontal abduction
     - external rotation
@@ -1009,6 +1025,9 @@
   secondary_targets: []
   functional_goals:
     - rotator-cuff
+  variants:
+    - { id: cable-band-external-rotation.cable, equipment: cable, load: stack }
+    - { id: cable-band-external-rotation.band, equipment: band, load: band }
   movement_patterns:
     - shoulder external rotation
   equipment:

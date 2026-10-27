@@ -311,3 +311,29 @@ volume_targets:
     rationale: >-
       A small, optional target; a few direct sets a week are a common
       practical starting point.
+
+# Mobility dose per goal (Workout Logger change request 3.3). Weekly
+# minutes of drills tagged with that functional goal, spread over the
+# stated number of sessions. Minutes per drill = sets x time.seconds_per_set
+# (x 2 when time.per_side). Each drill's `when` tag (warm_up /
+# post_session / rest_day) says where it fits.
+#
+# Basis: Thomas et al. 2018 (review of 23 studies) found range-of-motion
+# gains tracked weekly stretching time (5 min or more) and weekly frequency
+# rather than time per session, and suggested at least 5 days a week. The
+# lower bound of 3 sessions is the owner's plan (badminton days plus gym
+# warm-ups); 5 follows the review. Minutes per goal cover several areas,
+# hence 10 for the upper and lower body.
+mobility_targets:
+  - goal_id: upper-body-mobility
+    weekly_minutes: 10
+    sessions_per_week: [3, 5]
+  - goal_id: lower-body-mobility
+    weekly_minutes: 10
+    sessions_per_week: [3, 5]
+  - goal_id: wrist-forearm-mobility
+    weekly_minutes: 5
+    sessions_per_week: [3, 5]
+  - goal_id: full-body-mobility
+    weekly_minutes: 10
+    sessions_per_week: [3, 5]

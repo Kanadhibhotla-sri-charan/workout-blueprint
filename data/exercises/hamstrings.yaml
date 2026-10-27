@@ -16,6 +16,10 @@
   target_credit:
     hamstrings: 1.0
     gluteus-maximus: 1.0
+  variants:
+    - { id: romanian-deadlift.barbell, equipment: barbell, load: total }
+    - { id: romanian-deadlift.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: romanian-deadlift.smith-machine, equipment: smith machine, load: total }
   movement_patterns:
     - hip hinge
     - moderate knee bend
@@ -99,6 +103,9 @@
   target_credit:
     hamstrings: 1.0
     gluteus-maximus: 0.5
+  variants:
+    - { id: stiff-leg-deadlift.barbell, equipment: barbell, load: total }
+    - { id: stiff-leg-deadlift.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - hip hinge
     - straight-leg execution
@@ -528,6 +535,9 @@
     hamstrings: 1.0
     gluteus-maximus: 1.0
     gluteus-medius-minimus: 0.25
+  variants:
+    - { id: single-leg-romanian-deadlift.dumbbell, equipment: dumbbell, load: per_hand }
+    - { id: single-leg-romanian-deadlift.band, equipment: band, load: band }
   movement_patterns:
     - hip hinge
     - single-leg stance

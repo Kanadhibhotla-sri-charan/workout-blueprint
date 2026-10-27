@@ -14,6 +14,10 @@
     calves: 1.0
     gastrocnemius: 0.7
     soleus: 0.3
+  variants:
+    - { id: standing-calf-raise.machine, equipment: machine, load: stack }
+    - { id: standing-calf-raise.smith-machine, equipment: smith machine, load: total }
+    - { id: standing-calf-raise.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - ankle plantarflexion
     - knee straight
@@ -97,6 +101,9 @@
     calves: 1.0
     soleus: 0.8
     gastrocnemius: 0.2
+  variants:
+    - { id: seated-calf-raise.machine, equipment: machine, load: stack }
+    - { id: seated-calf-raise.dumbbell, equipment: dumbbell, load: per_hand }
   movement_patterns:
     - ankle plantarflexion
     - knee bent
@@ -310,6 +317,10 @@
   secondary_targets: []
   functional_goals:
     - ankle-resilience
+  variants:
+    - { id: tibialis-raise.wall, equipment: wall, load: bodyweight }
+    - { id: tibialis-raise.band, equipment: band, load: band }
+    - { id: tibialis-raise.dedicated-device, equipment: dedicated device, load: stack }
   movement_patterns:
     - ankle dorsiflexion
   equipment:
