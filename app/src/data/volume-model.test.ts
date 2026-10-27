@@ -91,6 +91,39 @@ describe('planning rules (change requests 2.1, 2.3, 2.4)', () => {
   });
 });
 
+describe('time cost (change request 2.2)', () => {
+  it('every exercise has a time block in sensible ranges', () => {
+    for (const e of exercises) {
+      const t = e.time!;
+      expect(t, e.id).toBeDefined();
+      expect(t.setup_minutes, e.id).toBeGreaterThanOrEqual(0);
+      expect(t.setup_minutes, e.id).toBeLessThanOrEqual(5);
+      expect(t.seconds_per_set, e.id).toBeGreaterThanOrEqual(10);
+      expect(t.seconds_per_set, e.id).toBeLessThanOrEqual(180);
+      expect(t.rest_seconds[0], e.id).toBeLessThanOrEqual(t.rest_seconds[1]);
+      expect(t.rest_seconds[1], e.id).toBeLessThanOrEqual(180);
+      expect(t.per_side, e.id).toBe(e.laterality === 'unilateral');
+    }
+  });
+
+  it('strength rest follows the profile family: isolations 60-90 s, heavy free-weight compounds longest', () => {
+    expect(exercises.find((e) => e.id === 'dumbbell-lateral-raise')!.time!.rest_seconds).toEqual([60, 90]);
+    expect(exercises.find((e) => e.id === 'back-squat')!.time!.rest_seconds).toEqual([120, 180]);
+    expect(exercises.find((e) => e.id === 'back-squat')!.time!.superset_friendly).toBe(false);
+  });
+
+  it('a typical 5-exercise, 15-set session estimates inside 60-90 minutes at the upper rest bound', () => {
+    const ids = ['incline-dumbbell-press', 'chest-supported-row', 'dumbbell-lateral-raise', 'overhead-triceps-extension', 'hammer-curl'];
+    const minutes = ids.reduce((sum, id) => {
+      const t = exercises.find((e) => e.id === id)!.time!;
+      const sides = t.per_side ? 2 : 1;
+      return sum + t.setup_minutes + (3 * t.seconds_per_set * sides + 2 * t.rest_seconds[1]) / 60;
+    }, 0);
+    expect(minutes).toBeGreaterThan(20);
+    expect(minutes).toBeLessThan(90);
+  });
+});
+
 function getCredit(id: string, target: string): number | undefined {
   return exercises.find((e) => e.id === id)?.target_credit?.[target];
 }

@@ -57,6 +57,15 @@ export interface Exercise {
    * Strength records only; read by the logger, not by the Decide engine.
    */
   target_credit?: Record<string, number>;
+  /** Change request 2.2: numeric time cost, so a session can be checked in minutes. */
+  time?: {
+    setup_minutes: number;
+    seconds_per_set: number;
+    rest_seconds: [number, number];
+    /** True for unilateral records: each set is done once per side. */
+    per_side: boolean;
+    superset_friendly: boolean;
+  };
   /** Change request 2.4: sports this exercise carries over to (logger flag). */
   sport_carryover?: 'badminton'[];
   exercise_type: ExerciseType;

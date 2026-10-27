@@ -35,6 +35,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - A heavy, bodyweight-scaled mechanical-tension stimulus for lat width is the goal, with grip and upper-back strength building alongside it.
   less_suitable_when:
@@ -105,6 +111,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The same lat-width stimulus as a pull-up is wanted but with more biceps assistance, often making it easier to reach a growth-effective rep range while still building strength.
   less_suitable_when:
@@ -172,6 +184,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Precise, progressive loading for lat-width growth is wanted without the all-or-nothing jumps bodyweight pulling forces, or a set needs to be pushed closer to failure than a pull-up safely allows.
   less_suitable_when:
@@ -241,6 +259,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The pulldown's precise, progressive loading is wanted with more biceps assistance, often making it easier to push a set closer to failure than the wide pronated version.
   less_suitable_when:
@@ -308,6 +332,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Shoulder or elbow discomfort is what actually ends a set before the lats are meaningfully fatigued — the neutral grip removes that limiter and lets more effort go toward a lat-width stimulus.
   less_suitable_when:
@@ -383,6 +413,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A strong mechanical-tension stimulus for back thickness is wanted while pushing close to failure — removing the trunk-stability demand means the set ends when the back gives out, not the lower back.
   less_suitable_when:
@@ -456,6 +492,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - 'A heavily loaded back-thickness stimulus is the goal, with the hinge itself adding a secondary training demand on the spinal erectors.'
   less_suitable_when:
@@ -528,6 +570,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The same heavy, mechanical-tension-driven row as the overhand version is wanted, shifted more toward the lats and biceps.
   less_suitable_when:
@@ -596,6 +644,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A back-thickness stimulus is wanted without the hinge's spinal-stability demand competing for effort, letting a set be pushed closer to failure.
   less_suitable_when:
@@ -665,6 +719,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Back thickness needs direct work and only a band is available.
     - A low-fatigue row is wanted for extra back volume at home or while travelling.
@@ -740,6 +800,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - A heavy, mechanical-tension-driven row with a fixed bar path is wanted, which can make it easier to push close to failure than a barbell row's grip-width and balance demands allow.
   less_suitable_when:
@@ -808,6 +874,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The single heaviest, most mechanical-tension-driven stimulus available for the whole posterior chain is the goal, and the systemic cost that comes with it can be recovered from.
   less_suitable_when:
@@ -879,6 +951,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The top-of-pull position needs overloading with more mechanical tension than a full deadlift allows, specifically training grip and upper-back strength under heavier-than-usual load.
   less_suitable_when:
@@ -948,6 +1026,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A strong mechanical-tension stimulus per side is wanted, with the free arm and slight trunk rotation allowing a bit more range and stretch than a bilateral row, or a lagging side needs to be brought level with the other.
   less_suitable_when:
@@ -1012,6 +1096,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A stretch-mediated, lat-isolated stimulus that doesn't depend on grip or biceps endurance is wanted, often as a pre-exhaust warm-up or a finisher after heavier pulling.
   less_suitable_when:
@@ -1079,6 +1169,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A stretch-mediated lat stimulus at the top of an overhead arc is wanted, a range compound pulling doesn't reach.
   less_suitable_when:
@@ -1151,6 +1247,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A mechanical-tension, size-focused stimulus for the upper traps specifically is the goal, since rows and pulls only train them indirectly.
   less_suitable_when:
@@ -1212,6 +1314,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A moderate mechanical-tension stimulus specifically for the spinal erectors is wanted, without the systemic fatigue cost of a heavy hinge.
   less_suitable_when:
@@ -1281,6 +1389,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - One side's lat lags or a two-arm pulldown feels uneven, or a pulldown is wanted with the elbow free to travel down the side of the body.
   less_suitable_when:

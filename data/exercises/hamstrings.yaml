@@ -37,6 +37,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Heavy hinge work is wanted that trains the hamstrings and glutes together at a long muscle length.
   less_suitable_when:
@@ -112,6 +118,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The most hamstring-isolated stretch-mediated stimulus this movement family offers is specifically wanted, and the added lower-back demand the straighter legs bring can be tolerated.
   less_suitable_when:
@@ -174,6 +186,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A stretch-biased, mechanical-tension knee-flexion stimulus is wanted that a hinge alone doesn't provide, pushed safely close to failure on a fixed path.
   less_suitable_when:
@@ -237,6 +255,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A knee-flexion, mechanical-tension stimulus is wanted in a shorter-hamstring position than the seated curl provides, for a genuinely different growth emphasis.
   less_suitable_when:
@@ -297,6 +321,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - One of the most demanding eccentric-tension stimuli available for the hamstrings is wanted, commonly cited for both growth and injury-resilience benefits.
   less_suitable_when:
@@ -363,6 +393,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A moderate mechanical-tension hip-extension stimulus specifically for the hamstrings and glutes is wanted, easier to recover from than a heavy hinge, or Romanian deadlifts are grip-limited before the hamstrings are.
   less_suitable_when:
@@ -430,6 +466,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The hamstrings need direct work and only bodyweight and a bench, step or sofa are available.
     - A low-fatigue hamstring exercise is wanted as an accessory to heavier hinges or leg curls.
@@ -507,6 +549,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A hinge is wanted with only a single dumbbell, or with much less spinal load than a barbell RDL.
     - One side's hamstrings or glutes lag behind, or the hips feel uneven under two-leg hinging.

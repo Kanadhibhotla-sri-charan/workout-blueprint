@@ -125,3 +125,20 @@ Full Decide scenario space (50,280), two identical runs:
 ### Measured
 
 Every Decide answer is byte-identical to the Step 1 release (50,280 scenarios, two identical runs).
+
+## Step 3: time cost per exercise (2.2)
+
+Every exercise (182) has a `time` block, derived from its existing prescription so the numbers agree with what the app already prescribes. The rules are in SCHEMA.md › `time`.
+
+| Field | Rule |
+|---|---|
+| `setup_minutes` | 0 bodyweight / wall with low setup; otherwise low 1, medium 2, high 3 |
+| `seconds_per_set` | rep-range midpoint × 3 s + 5 s; holds use the seconds midpoint. Plank 40, side plank 30, Copenhagen 25, carries 40–45; wall calf stretch 75 (two knee positions); wrist stretch 60 (two directions); foam rolling 135 (three areas) |
+| `rest_seconds` | isolation 60–90; compound 90–150; heavy free-weight compound 120–180; training-mode records use their profile's rest |
+| `per_side` | true exactly for unilateral records (41) |
+| `superset_friendly` | false for heavy free-weight compounds, high-setup exercises, and power / agility / conditioning drills |
+
+- **Sources.** Rest follows Singer 2024 (verified): above 60 s helps a little, and beyond 90 s no appreciable difference was found. The longer rest for heavy lifts is for performance, not growth. Seconds per rep is an estimate, **not sourced**.
+- **Sanity check.** A 5-exercise, 15-set upper session estimates 30–38 minutes. That puts a 60-minute session at about 8–9 exercises, or 16–22 sets with a warm-up, consistent with the logger's own figure in 3.2.
+- **Validator and test:** every record must have `time`. Ranges are checked: setup 0–10, seconds 5–300, rest 0–300 with low ≤ high, and `per_side` must match laterality.
+- **Measured:** Decide byte-identical to Step 2.

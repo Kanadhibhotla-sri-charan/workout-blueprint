@@ -36,6 +36,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A heavier, mechanical-tension-driven stimulus for the gastrocnemius is wanted, with a full stretch at the bottom and a hard, paused contraction at the top. Turning the toes slightly out or in shifts a little more emphasis to the inner or outer head respectively.
   less_suitable_when:
@@ -112,6 +118,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A soleus-specific stimulus is wanted that a standing raise mostly misses, or a higher-rep, pump-oriented finisher — the soleus is commonly cited to tolerate and respond well to higher rep ranges and shorter rest than the gastrocnemius.
   less_suitable_when:
@@ -177,6 +189,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Extra calf volume is wanted with minimal added fatigue tacked onto an existing leg session, rather than a dedicated, high-intensity calf-focused set.
   less_suitable_when:
@@ -243,6 +261,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A deep-stretch, slow-eccentric stimulus is wanted that bodyweight alone can deliver, or a lagging side needs to be brought level with the other through focused per-side volume.
   less_suitable_when:
@@ -307,6 +331,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Even lower-leg development and shin resilience are wanted alongside calf size, rather than treating "calves" as only the muscles on the back of the lower leg.
   less_suitable_when:

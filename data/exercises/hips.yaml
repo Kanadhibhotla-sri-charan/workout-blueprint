@@ -37,6 +37,12 @@
   skill_demand: medium
   setup_time: high
   fatigue_cost: medium
+  time:
+    setup_minutes: 3
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The strongest available shortened-position stimulus specifically for the glutes is wanted — by EMG, not necessarily by measured growth (see evidence_notes) — without the spinal loading a hinge adds.
   less_suitable_when:
@@ -100,6 +106,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The RDL's stretch-mediated stimulus is wanted while still learning to control the hinge, since the fixed rail removes the bar-path variable that most often breaks technique down under load.
   less_suitable_when:
@@ -173,6 +185,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A strong per-side, stretch-mediated stimulus for the glutes and hamstrings is specifically wanted, or a side-to-side strength gap needs closing through focused per-leg volume.
   less_suitable_when:
@@ -237,6 +255,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A low-fatigue, pump-oriented glute finisher is wanted late in a session, when heavier compound work has already used up most of the available recovery budget.
   less_suitable_when:
@@ -304,6 +328,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A glute hinge is wanted without loading the spine or grip heavily.
     - Learning the hip hinge before Romanian deadlifts.
@@ -374,6 +404,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A direct mechanical-tension and pump stimulus for hip width and pelvic stability is wanted, which bilateral front-to-back work only trains indirectly.
   less_suitable_when:
@@ -435,6 +471,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - No machine or band is available and the side glutes need direct work.
     - A low-fatigue glute-medius exercise is wanted as a warm-up or finisher alongside squats and hinges.
@@ -501,6 +543,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A direct growth stimulus for the adductors is wanted that squatting patterns only provide as a side effect, or a routine heavy in abduction work needs balancing.
   less_suitable_when:
@@ -558,6 +606,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Hip-flexor strength and size are wanted for running, kicking, or knee-raise work — a specific, secondary role rather than a routine staple.
   less_suitable_when:
@@ -627,6 +681,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - No bench, barbell or machine is available and the glutes need direct work.
     - A low-fatigue glute finisher or warm-up is wanted alongside heavier squats and hinges.
@@ -702,6 +762,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The two-leg glute bridge has become easy and no barbell or hip-thrust setup is available.
     - A low-fatigue glute finisher is wanted that also shows up left-right differences.
@@ -774,6 +840,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 25
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - No adduction machine is available and the adductors need direct work.
     - Groin resilience matters, for example in sports with sprinting, kicking or quick changes of direction.

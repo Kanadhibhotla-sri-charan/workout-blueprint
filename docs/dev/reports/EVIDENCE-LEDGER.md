@@ -102,7 +102,9 @@ Used in `volume-targets.yaml` and the `target_credit` weights (Workout Logger ch
 | Pelland, Remmert, Robinson, Hinson, Zourdos 2026 | Sports Med 56(2):481–505, PMID 41343037 | 67 studies, 2,058 participants: counting indirect sets as 0.5 ("fractional") fitted best; more volume gives more growth with diminishing returns; frequency's effect on growth compatible with negligible | **Matches** (abstract) |
 | Schoenfeld, Grgic, Krieger 2019 | J Sports Sci 37(11):1286–1295, PMID 30558493 | 25 studies: with volume equated, training frequency did not meaningfully change hypertrophy | **Matches** (abstract). For change request 2.1 (frequency as a recovery rule) |
 
-Not sourced: `per_session_max` (a practical coaching ceiling) and the child `volume_share` / `min_share` values (practical biases).
+| Singer, Wolf, Generoso et al. 2024 | Front Sports Act Living 6:1429789, PMID 39205815 | 9 studies, 19 measurements: a small hypertrophy benefit for rest above 60 s; no appreciable difference beyond 90 s | **Matches** (abstract). Used for the `time.rest_seconds` defaults |
+
+Not sourced: `per_session_max` (a practical coaching ceiling), the child `volume_share` / `min_share` values (practical biases), `min_hours_between` (48 h / 24 h), and the seconds-per-rep estimate in `time.seconds_per_set`.
 
 ## Position-tag evidence status (position-tag semantics correction)
 

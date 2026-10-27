@@ -177,6 +177,25 @@ function validateVolume(records) {
         recordIssue(record, `"sport_carryover" must be a list of ${[...SPORTS].join('|')}`);
       }
     }
+    // Change request 2.2: numeric time cost on every exercise.
+    const time = record.time;
+    if (!time || typeof time !== 'object') {
+      recordIssue(record, 'missing "time" (setup_minutes, seconds_per_set, rest_seconds, per_side, superset_friendly)');
+    } else {
+      const inRange = (v, lo, hi) => typeof v === 'number' && v >= lo && v <= hi;
+      if (!inRange(time.setup_minutes, 0, 10)) recordIssue(record, '"time.setup_minutes" must be 0-10');
+      if (!(Number.isInteger(time.seconds_per_set) && inRange(time.seconds_per_set, 5, 300))) {
+        recordIssue(record, '"time.seconds_per_set" must be whole seconds, 5-300');
+      }
+      const rest = time.rest_seconds;
+      if (!(Array.isArray(rest) && rest.length === 2 && rest.every((v) => Number.isInteger(v) && inRange(v, 0, 300)) && rest[0] <= rest[1])) {
+        recordIssue(record, '"time.rest_seconds" must be [low, high] whole seconds, 0-300, low <= high');
+      }
+      if (typeof time.per_side !== 'boolean' || time.per_side !== (record.laterality === 'unilateral')) {
+        recordIssue(record, '"time.per_side" must be true exactly when laterality is unilateral');
+      }
+      if (typeof time.superset_friendly !== 'boolean') recordIssue(record, '"time.superset_friendly" must be true or false');
+    }
     const credit = record.target_credit;
     const isStrength = !record.training_mode;
     const pts = Array.isArray(record.physique_targets) ? record.physique_targets : [];

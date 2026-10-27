@@ -2,6 +2,15 @@
 
 Data changes that matter to apps reading Blueprint (the Workout Logger syncs a snapshot). Each entry lists what changed and any renamed ids. **No id has been renamed so far.**
 
+## 2026-10-27: Time cost per exercise (Logger change request 2.2)
+
+**Added:** a `time` block on all 182 exercises: `setup_minutes`, `seconds_per_set`, `rest_seconds` [low, high], `per_side` and `superset_friendly`. It is derived from each exercise's existing prescription; see SCHEMA.md › `time` for the rules.
+
+- Session estimate: setup + sets × seconds_per_set × (2 if per_side) + rests between sets.
+- Example: incline dumbbell press, chest-supported row, lateral raise, overhead triceps extension and hammer curl at 3 sets each comes to about 30–38 minutes before warm-up.
+
+**Unchanged:** every Decide answer (byte-identical). `setup_time` and `fatigue_cost` remain.
+
 ## 2026-10-27: Planning rules (Logger change requests 2.1, 2.3, 2.4)
 
 **Added (additive; no id renamed):**

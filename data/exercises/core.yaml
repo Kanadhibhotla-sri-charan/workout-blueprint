@@ -26,6 +26,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A genuine mechanical-tension growth stimulus for the abs is wanted, progressing load over time rather than adding reps indefinitely.
   less_suitable_when:
@@ -87,6 +93,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A mechanical-tension ab stimulus is wanted pushed safely to true failure, since the fixed path removes any technique variability that would otherwise limit the load.
   less_suitable_when:
@@ -149,6 +161,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The abs need direct flexion work and no cable, machine or pull-up bar is available.
     - A low-fatigue ab exercise is wanted alongside bracing work such as planks.
@@ -216,6 +234,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A hip-flexor-and-ab growth stimulus is wanted that scales purely through range and leg position, without needing added load.
   less_suitable_when:
@@ -282,6 +306,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Trunk-bracing control and endurance are the goal rather than a growth stimulus — this is a stability tool first, and a beginner-friendly entry point into anti-extension work.
   less_suitable_when:
@@ -345,6 +375,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A real mechanical-tension and eccentric-control stimulus is wanted once planks have stopped delivering one, since moving through a lengthening range under control is a much harder demand than holding a static position.
   less_suitable_when:
@@ -416,6 +452,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Trunk control and stability that transfers to standing, carrying, and single-side loading are the goal — a control-and-durability role more than a primary hypertrophy driver.
   less_suitable_when:
@@ -484,6 +526,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Anti-rotation control is wanted with no band or cable available.
     - A low-fatigue core exercise is wanted as a warm-up or finisher.
@@ -557,6 +605,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Standing trunk-control work that carries over to real-world single-side loading is the goal — a stability-and-durability role more than a primary hypertrophy driver.
   less_suitable_when:
@@ -624,6 +678,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - No cable, band, dumbbell or kettlebell is available and the obliques need direct work.
     - A low-fatigue lateral-trunk exercise is wanted alongside heavier training, or as the bodyweight alternative to a suitcase carry.
@@ -693,6 +753,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A pump-oriented, constant-tension rotational stimulus for the obliques is wanted, alongside anti-rotation work rather than instead of it.
   less_suitable_when:
@@ -762,6 +828,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A rotational stimulus loaded like a free weight is wanted, hardest at the ends of the range rather than held constant like a cable.
   less_suitable_when:

@@ -34,6 +34,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 35
+    rest_seconds: [15, 45]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Upper-back rotation for overhead strokes is wanted, as part of a warm-up or a mobility session.
   less_suitable_when:
@@ -100,6 +106,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 35
+    rest_seconds: [15, 45]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Upper-back rotation is wanted as a warm-up or between sets, with no equipment.
   less_suitable_when:
@@ -166,6 +178,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [15, 30]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Overhead reach and upper-back extension are wanted after training or on a rest day.
   less_suitable_when:
@@ -230,6 +248,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Chest and front-shoulder tightness is the issue, after training or on rest days.
   less_suitable_when:
@@ -298,6 +322,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Overhead reach is limited by tightness down the side of the back, after training or on rest days.
   less_suitable_when:
@@ -363,6 +393,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The back of the hitting shoulder feels tight, after play or on rest days.
   less_suitable_when:
@@ -429,6 +465,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [15, 45]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A shoulder warm-up is wanted before overhead training or court sessions.
   less_suitable_when:
@@ -493,6 +535,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 60
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The forearms feel tight after play, especially on the racket arm.
   less_suitable_when:
@@ -557,6 +605,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Hamstring range is wanted after training or on a rest day, with the back fully supported.
   less_suitable_when:
@@ -621,6 +675,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 75
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The calves feel tight after play, or ankle range for deep lunges is wanted.
   less_suitable_when:
@@ -685,6 +745,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 35
+    rest_seconds: [15, 45]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Inner-thigh range is wanted as part of a warm-up before court sessions or leg training.
   less_suitable_when:
@@ -749,6 +815,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The hips or glutes feel tight after training or on rest days.
   less_suitable_when:
@@ -813,6 +885,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A quick quad stretch is wanted after play or training.
   less_suitable_when:
@@ -880,6 +958,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 50
+    rest_seconds: [15, 45]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A hip warm-up is wanted right before court sessions or leg training.
   less_suitable_when:
@@ -949,6 +1033,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 20
+    rest_seconds: [15, 45]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A single, efficient whole-body warm-up drill is wanted before playing or training.
   less_suitable_when:
@@ -1014,6 +1104,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [15, 45]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A gentle spine warm-up is wanted, or the back feels stiff after playing or sitting.
   less_suitable_when:
@@ -1080,6 +1176,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The back and sides feel tight after play, or a relaxing cool-down stretch is wanted.
   less_suitable_when:
@@ -1144,6 +1246,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Inward rotation of the racket shoulder feels limited, after play or on rest days.
   less_suitable_when:
@@ -1211,6 +1319,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 135
+    rest_seconds: [0, 15]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Muscles feel tight or heavy after play, or as a short start to a warm-up.
   less_suitable_when:

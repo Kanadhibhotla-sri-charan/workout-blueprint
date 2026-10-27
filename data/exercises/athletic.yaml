@@ -35,6 +35,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 0
+    seconds_per_set: 20
+    rest_seconds: [90, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Explosive leg drive from a split stance is wanted with no equipment, early in a session while fresh.
   less_suitable_when:
@@ -104,6 +110,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 0
+    seconds_per_set: 20
+    rest_seconds: [90, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Side-to-side push-off power and single-leg landing control are the goal.
   less_suitable_when:
@@ -168,6 +180,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 20
+    rest_seconds: [90, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Vertical jumping power is the goal and a stable box is available.
   less_suitable_when:
@@ -233,6 +251,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 20
+    rest_seconds: [90, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Quick, reactive ankles are wanted as part of a warm-up or before court work.
   less_suitable_when:
@@ -301,6 +325,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 10
+    rest_seconds: [30, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Quick side-to-side footwork is the goal, as a warm-up or agility block.
   less_suitable_when:
@@ -370,6 +400,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 0
+    seconds_per_set: 10
+    rest_seconds: [30, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Badminton-specific footwork speed and pattern are the goal, on or off court.
   less_suitable_when:
@@ -435,6 +471,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 20
+    rest_seconds: [90, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Landing technique needs building before or alongside jumping drills.
   less_suitable_when:
@@ -508,6 +550,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 30
+    rest_seconds: [60, 120]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Strength and control in the wide side-lunge position are wanted, as used when reaching for a shuttle.
   less_suitable_when:
@@ -578,6 +626,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 20
+    rest_seconds: [90, 180]
+    per_side: true
+    superset_friendly: false
   best_used_when:
     - Single-leg landing control and ankle stability are the goal, as part of a warm-up or power block.
   less_suitable_when:
@@ -643,6 +697,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Hip and ankle range for low positions is wanted, as a warm-up or daily mobility habit.
   less_suitable_when:
@@ -711,6 +771,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 45
+    rest_seconds: [15, 30]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - The front of the hips and thighs feels tight, after court sessions or long periods of sitting.
   less_suitable_when:
@@ -777,6 +843,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [15, 45]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Inner-thigh and hip range in a wide stance is wanted, as a warm-up or mobility drill.
   less_suitable_when:
@@ -841,6 +913,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [15, 45]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Ankle stiffness limits lunge depth or squat depth, or as a warm-up before court work.
   less_suitable_when:
@@ -905,6 +983,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [15, 45]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Hip rotation range is wanted, as a warm-up or daily mobility drill.
   less_suitable_when:
@@ -972,6 +1056,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [20, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Conditioning with light, quick footwork is wanted with minimal equipment.
   less_suitable_when:
@@ -1039,6 +1129,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [20, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Repeated-sprint endurance is wanted and there is open space of 10 to 20 metres.
   less_suitable_when:
@@ -1106,6 +1202,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [20, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Badminton-specific endurance is wanted, on or off court.
   less_suitable_when:
@@ -1174,6 +1276,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [20, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Whole-body conditioning is wanted with no equipment and little space.
   less_suitable_when:
@@ -1242,6 +1350,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [20, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Whole-body conditioning with low impact on the knees and ankles is wanted.
   less_suitable_when:
@@ -1308,6 +1422,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [20, 90]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - Conditioning with no equipment and very little space is wanted.
   less_suitable_when:

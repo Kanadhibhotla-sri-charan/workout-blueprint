@@ -35,6 +35,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The primary mechanical-tension and strength-building stimulus for the front delts is the goal, with the triceps and upper chest sharing a meaningful part of the load.
   less_suitable_when:
@@ -106,6 +112,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - No barbell, dumbbells or machine is available and the front delts need a direct pressing stimulus.
     - A low-fatigue vertical press is wanted in a home or travel session, with a clear progression path (feet elevated, then toward a handstand push-up).
@@ -173,6 +185,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A front-delt set is wanted pushed closer to true failure than could safely be handled unspotted with a free barbell.
   less_suitable_when:
@@ -236,6 +254,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - An overhead press that stays hard at the top of the range is wanted, or a lower-fatigue finisher after a heavier press.
   less_suitable_when:
@@ -299,6 +323,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A front-delt set is wanted pushed to true failure, or into a drop set — removing the balance demand means the last hard reps come from the delts giving out, not a stabilizer losing control of the bar.
   less_suitable_when:
@@ -360,6 +390,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A side-delt-specific mechanical-tension and pump stimulus is wanted that peaks near the top of the range, the position most people mean when picturing lateral raise work.
   less_suitable_when:
@@ -420,6 +456,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A side-delt stimulus is wanted that stays under real tension in the stretched, bottom position — where a dumbbell raise is easiest — for a genuinely different growth emphasis, or to train one side at a time.
   less_suitable_when:
@@ -480,6 +522,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A side-delt pump stimulus is wanted that's safe to push to true failure or a drop set, since there's no momentum or balance available to quietly take over the rep.
   less_suitable_when:
@@ -552,6 +600,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Side delts need direct work and only a band or a bar is available.
     - A heavier, multi-joint side-delt movement is wanted alongside lateral raises.
@@ -622,6 +676,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - An isolated growth stimulus for the rear delts is wanted without adding another heavy pull to the session.
   less_suitable_when:
@@ -686,6 +746,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A rear-delt pump stimulus is wanted that's safe to push to true failure or a drop set, since there's no momentum available to take over the rep.
   less_suitable_when:
@@ -747,6 +813,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A mechanical-tension rear-delt stimulus is wanted with more loadable progression than a fly typically allows, while keeping the resistance angled specifically at the rear delt rather than the traps.
   less_suitable_when:
@@ -812,6 +884,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A free-weight, mechanical-tension rear-delt stimulus is wanted and a bent-over seated position under light-to-moderate load can be held.
   less_suitable_when:
@@ -880,6 +958,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A moderate rear-delt stimulus is wanted alongside rotator-cuff and shoulder-control work in a single movement, rather than programming them separately.
   less_suitable_when:
@@ -943,6 +1027,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Joint durability and controlled rotation strength are the goal as part of general shoulder training — a health-and-resilience role, not a primary size driver.
   less_suitable_when:
@@ -1002,6 +1092,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Scapular control and movement quality are wanted as part of a warm-up or general shoulder health work — a durability role, not a primary size driver.
   less_suitable_when:

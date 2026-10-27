@@ -34,6 +34,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A direct mechanical-tension stimulus for forearm size is wanted, or wrist strength that doesn't depend on grip endurance running out first.
   less_suitable_when:
@@ -101,6 +107,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Plenty of gripping work exists and nothing trains the back of the forearm — this fills a growth and balance gap most routines leave open.
   less_suitable_when:
@@ -173,6 +185,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A forearm-thickness stimulus is wanted that also counts toward elbow-flexion volume, getting two growth roles from one movement.
   less_suitable_when:
@@ -240,6 +258,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A pump-oriented reverse curl is wanted that stays hard at the top of the range, a metabolic-stress stimulus a free weight loses there.
   less_suitable_when:
@@ -305,6 +329,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 45
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Grip is what actually ends a set before the target muscle on pulling work does — this builds the strength-and-endurance capacity to remove that limiter, more than it's meant as a hypertrophy tool in its own right.
   less_suitable_when:
@@ -369,6 +399,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Rotational strength is wanted for sport or grip-related goals — this is a function-and-durability role more than a primary hypertrophy driver.
   less_suitable_when:

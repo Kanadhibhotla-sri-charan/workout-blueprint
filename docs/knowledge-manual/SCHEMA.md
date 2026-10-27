@@ -165,6 +165,22 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Decision-making impact:** none. The Decide engine does not read it; it exists for the Workout Logger (change request 1.3, 2026-10-27). The prose `primary_targets` / `secondary_targets` stay for the UI.
 - **Required for `reviewed`:** no
 
+### `time`
+- **Type:** mapping, required on every record (validator-enforced). Workout Logger change request 2.2.
+- **Fields:**
+  - `setup_minutes` (0–10): getting the station ready. 0 for bodyweight-only low-setup work; otherwise 1, 2 or 3 from `setup_time` low / medium / high.
+  - `seconds_per_set` (whole seconds): one working set. For reps: midpoint of the prescribed range × about 3 s, plus 5 s (mobility and power drills about 4 s per rep). For holds and intervals: midpoint of the seconds range. Isometrics and carries are set individually.
+  - `rest_seconds` [low, high]:
+    - isolation 60–90;
+    - compounds 90–150;
+    - heavy free-weight compounds 120–180;
+    - training-mode records use their profile's rest.
+    - Singer et al. 2024 found a small growth benefit above 60 s and no appreciable difference beyond 90 s, so heavy-lift rest is set longer for performance, not growth.
+  - `per_side`: true exactly when `laterality` is `unilateral` (each set is done once per side, so its time doubles).
+  - `superset_friendly`: false for heavy free-weight compounds, high-setup exercises, and power / agility / conditioning drills.
+- **Decision-making impact:** none (logger only). The qualitative `setup_time` and `fatigue_cost` stay and still drive Decide.
+- **Required for `reviewed`:** no
+
 ### `sport_carryover`
 - **Type:** list of strings, or absent
 - **Allowed values (closed vocabulary):** `badminton`
@@ -365,6 +381,7 @@ One external YouTube execution reference per exercise. The app renders it as a p
 | `secondary_targets` | list | no | open | yes | conditional |
 | `physique_targets` | list | no | IDs, must resolve to `data/programming/physique-targets.yaml` | yes | no |
 | `target_credit` | mapping | strength records with physique targets | IDs (targets and volume groups), weights in (0, 1] | no (logger only) | no |
+| `time` | mapping | yes | numeric ranges (validator) | no (logger only) | no |
 | `sport_carryover` | list | no | closed (`badminton`) | no (logger only) | no |
 | `functional_goals` | list | no | IDs, must resolve to `data/programming/functional-goals.yaml` | yes | no |
 | `aesthetic_characteristics` | list | no | closed (5, Phase 4C) | yes | no |

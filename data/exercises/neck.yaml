@@ -31,6 +31,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 30
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Initial tolerance and control are being built before loaded work — this delivers a modest strength stimulus but is not a primary size driver on its own.
   less_suitable_when:
@@ -96,6 +102,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A genuine mechanical-tension growth stimulus is wanted for the area most responsible for visible neck thickness, once control has already been built through isometric work.
   less_suitable_when:
@@ -160,6 +172,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Neck extension is already trained and a balanced growth stimulus on both sides of the neck is wanted rather than one direction only.
   less_suitable_when:
@@ -223,6 +241,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Complete, symmetric neck development is wanted rather than only the front-to-back directions, often for a sport-specific reason.
   less_suitable_when:

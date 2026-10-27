@@ -32,6 +32,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The primary mechanical-tension, strength-building curl is wanted, to progress load on over time.
   less_suitable_when:
@@ -95,6 +101,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A full supination path through the rep is wanted, or side-to-side differences need spotting.
   less_suitable_when:
@@ -161,6 +173,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Biceps work at a long muscle length is wanted. The extended shoulder position provides it; a standing curl carries little load at the bottom of the range.
   less_suitable_when:
@@ -231,6 +249,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A strict, swing-free mechanical-tension stimulus is wanted late in a session, when standing curls would start to rely on momentum.
   less_suitable_when:
@@ -296,6 +320,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The preacher curl's strict, swing-free stimulus is wanted pushed safely to true failure or a drop set, since the fixed path removes any chance of the bar drifting to help.
   less_suitable_when:
@@ -365,6 +395,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - An arm-thickness stimulus is wanted that a supinated curl mostly misses, since the neutral grip shifts real tension onto the brachialis and brachioradialis instead of the biceps peak.
   less_suitable_when:
@@ -430,6 +466,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A pump-oriented arm-thickness finisher is wanted that stays hard at the top of the range, where a dumbbell hammer curl goes slack.
   less_suitable_when:
@@ -496,6 +538,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Straight hammer curls are already established and a variation with a different line of pull is wanted to keep progressing the same arm-thickness stimulus.
   less_suitable_when:
@@ -561,6 +609,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A pump-oriented curl is wanted that stays hard at the top of the range, a metabolic-stress stimulus a free weight can't deliver there.
   less_suitable_when:
@@ -628,6 +682,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A stricter, more isolated biceps stimulus is wanted that removes the shoulder swing a standard curl can lean on.
   less_suitable_when:
@@ -690,6 +750,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The drag curl's strict path is wanted with a pump-oriented, constant-tension stimulus instead of a free weight's fading top-range load.
   less_suitable_when:
@@ -756,6 +822,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A combined biceps-and-forearm growth stimulus is wanted in one movement, with the slow eccentric half adding real tension the concentric-only lift of a standard curl skips.
   less_suitable_when:
@@ -827,6 +899,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The heaviest, most mechanical-tension-driven triceps stimulus available is the goal, with chest and shoulder work coming along as a secondary benefit.
   less_suitable_when:
@@ -893,6 +971,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 0
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - No barbell, dip bars, cable or dumbbells are available and the triceps need direct pressing work.
     - A triceps-biased press is wanted at the end of a session with little setup or fatigue.
@@ -969,6 +1053,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Triceps work has all been pressing and pushdowns, and what's missing is the long head's strongest stretch-mediated growth stimulus.
   less_suitable_when:
@@ -1039,6 +1129,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A free-weight stretch-mediated stimulus is wanted without the overhead shoulder position's mobility demand.
   less_suitable_when:
@@ -1103,6 +1199,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - A heavy, mechanical-tension-driven triceps stimulus is wanted under a real compound movement rather than an isolation exercise.
   less_suitable_when:
@@ -1165,6 +1267,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A pump-oriented triceps finisher is wanted late in a session, or after pressing has already accumulated fatigue and a lower-fatigue-cost stimulus is what's left to give.
   less_suitable_when:
@@ -1226,6 +1334,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A triceps pump stimulus is wanted pushed safely to true failure without bracing against a cable's pull to help stabilize the movement.
   less_suitable_when:
@@ -1291,6 +1405,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A light, low-fatigue, mind-muscle-connection finisher is wanted rather than a movement meant to add real mechanical tension.
   less_suitable_when:
@@ -1354,6 +1474,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: low
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The long head's strongest stretch position is wanted combined with pump-oriented constant tension, rather than a free weight's fading top-range load.
   less_suitable_when:

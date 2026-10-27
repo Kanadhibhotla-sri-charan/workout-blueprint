@@ -33,6 +33,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - The single heaviest, most mechanical-tension-driven quad-and-glute stimulus available is the goal, with strength as a direct byproduct.
   less_suitable_when:
@@ -103,6 +109,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A quad-and-glute set is wanted pushed closer to true failure than could safely be handled unspotted with a free barbell.
   less_suitable_when:
@@ -168,6 +180,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - A heavy, mechanical-tension squat stimulus is wanted with more of the load specifically directed at the quads than a back squat provides.
   less_suitable_when:
@@ -234,6 +252,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - A squat variation is wanted that trains the adductors directly, or torso length or hip mobility makes a more upright squat more comfortable than a shoulder-width stance.
   less_suitable_when:
@@ -307,6 +331,12 @@
   skill_demand: high
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 30
+    rest_seconds: [120, 180]
+    per_side: false
+    superset_friendly: false
   best_used_when:
     - A maximal-load pull is wanted with real quad and adductor involvement and less lower-back range than a conventional deadlift, or torso or arm length makes the conventional stance's range awkward.
   less_suitable_when:
@@ -369,6 +399,12 @@
   skill_demand: low
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A quad-biased mechanical-tension stimulus is wanted pushed close to failure, without a spotter and without the balance demand of a free squat competing for effort.
   less_suitable_when:
@@ -437,6 +473,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - Heavy quad volume needs accumulating with much less systemic fatigue than a free squat, since the trunk and lower back aren't part of the stimulus.
   less_suitable_when:
@@ -508,6 +550,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: high
+  time:
+    setup_minutes: 2
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A strong per-side, mechanical-tension stimulus for the quads is specifically wanted, or a side-to-side strength gap needs closing.
   less_suitable_when:
@@ -579,6 +627,12 @@
   skill_demand: medium
   setup_time: medium
   fatigue_cost: medium
+  time:
+    setup_minutes: 2
+    seconds_per_set: 40
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Balance, not leg strength, is what's limiting the free-weight version — fixing the bar path lets the actual growth stimulus reach the quads and glutes instead of being capped by wobble.
   less_suitable_when:
@@ -650,6 +704,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A controlled, per-leg mechanical-tension stimulus is wanted without the extra coordination demand of moving between reps.
   less_suitable_when:
@@ -721,6 +781,12 @@
   skill_demand: medium
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - A lunge pattern is wanted that's easier on the front knee, or an easier entry point into lunging than a walking lunge's continuous balance demand.
   less_suitable_when:
@@ -794,6 +860,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: high
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A higher-rep, pump-and-conditioning-oriented per-leg stimulus with athletic carryover is wanted, rather than a controlled mechanical-tension set.
   less_suitable_when:
@@ -866,6 +938,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: true
+    superset_friendly: true
   best_used_when:
     - Single-leg leg work is wanted with only a bench, step or sturdy chair.
     - A single-leg exercise with little skill and little soreness is wanted alongside squats or leg presses.
@@ -936,6 +1014,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The squat pattern is being learned, or a genuine loaded-squat mechanical-tension stimulus is wanted without a rack.
   less_suitable_when:
@@ -1001,6 +1085,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 1
+    seconds_per_set: 35
+    rest_seconds: [90, 150]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A heavier loadable dumbbell squat is wanted than a goblet squat allows, without the front-loaded core-bracing demand.
   less_suitable_when:
@@ -1060,6 +1150,12 @@
   skill_demand: low
   setup_time: low
   fatigue_cost: low
+  time:
+    setup_minutes: 1
+    seconds_per_set: 50
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A targeted, pump-oriented quad finisher is wanted after squatting, or quad volume is wanted that heavy compound recovery limits don't allow.
   less_suitable_when:
@@ -1122,6 +1218,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - A strong stretch-mediated stimulus is wanted specifically for the rectus femoris, in a position no common machine or squat variation reaches.
   less_suitable_when:
@@ -1186,6 +1288,12 @@
   skill_demand: high
   setup_time: low
   fatigue_cost: medium
+  time:
+    setup_minutes: 0
+    seconds_per_set: 40
+    rest_seconds: [60, 90]
+    per_side: false
+    superset_friendly: true
   best_used_when:
     - The quads need direct work and no weights or leg extension machine are available.
     - A deep-knee-bend quad exercise is wanted alongside squats or lunges.
