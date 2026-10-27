@@ -136,3 +136,39 @@ test('a malformed Decide URL falls back to the empty form', async ({ page }) => 
   await expect(page.locator('.decision-result-best')).toHaveCount(0);
   expect(problems).toEqual([]);
 });
+
+test('command palette: Ctrl+K and "/" open it, typing filters, Enter navigates', async ({ page }) => {
+  const problems = guard(page);
+  await page.goto('./');
+  await page.keyboard.press('Control+k');
+  const input = page.getByRole('combobox');
+  await expect(input).toBeFocused();
+  await input.fill('hammer curl');
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/\/exercises\/hammer-curl$/);
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page.locator('.exercise-readout')).toBeVisible();
+
+  await page.keyboard.press('/');
+  await expect(page.getByRole('combobox')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  expect(problems).toEqual([]);
+});
+
+test('Decide brings the answer into view after submitting; a new page starts at the top', async ({ page }) => {
+  const problems = guard(page);
+  await page.goto('./decide?outcome=chest-upper-shelf');
+  await page.getByLabel(/what are you trying to accomplish/i).selectOption('build-base');
+  await page.getByRole('button', { name: /get recommendation/i }).click();
+  await expect(page.locator('#decision-result')).toBeInViewport();
+  await expect(page.locator('#decision-result')).toBeFocused();
+
+  await page.goto('./exercises');
+  await page.mouse.wheel(0, 4000);
+  await page.waitForFunction(() => (globalThis as unknown as { scrollY: number }).scrollY > 500);
+  await page.locator('a.exercise-card-link').last().click();
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => (globalThis as unknown as { scrollY: number }).scrollY)).toBe(0);
+  expect(problems).toEqual([]);
+});

@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
   aestheticOutcomes,
@@ -52,6 +52,14 @@ function formatRange([low, high]: [number, number]): string {
 // utils/decisionUrl.ts), so a refresh, a shared link, or back/forward
 // reproduces it. The result is always computed from the URL; submitting
 // just writes the form's input there.
+function revealResult() {
+  const target = document.getElementById('decision-result');
+  if (!target) return;
+  const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  target.scrollIntoView?.({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  target.focus({ preventScroll: true });
+}
+
 export function DecisionMakerPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.toString();
@@ -61,8 +69,20 @@ export function DecisionMakerPage() {
     ? getAestheticOutcomeById(decoded.input.aestheticOutcome) ?? null
     : null;
 
+  // After a submission, bring the answer into view (it renders below a
+  // long form). Loading a shared link or going back/forward does not.
+  const scrollToResult = useRef(false);
+  useEffect(() => {
+    if (!scrollToResult.current) return;
+    scrollToResult.current = false;
+    revealResult();
+  }, [search]);
+
   function handleDecide(input: DecisionInput) {
     const next = encodeDecisionInput(input);
+    // Same decision again: the URL doesn't change, so reveal it directly.
+    if (next.toString() === search) revealResult();
+    else scrollToResult.current = true;
     // Re-submitting the same decision shouldn't stack a duplicate history entry.
     setSearchParams(next, { replace: next.toString() === search });
   }
@@ -583,7 +603,11 @@ function DecisionWorkspace({
         </button>
       </form>
 
-      {result && <DecisionResultView result={result} aestheticOutcome={resultAestheticOutcome} />}
+      {result && (
+        <div id="decision-result" className="decision-result-anchor" tabIndex={-1} aria-live="polite">
+          <DecisionResultView result={result} aestheticOutcome={resultAestheticOutcome} />
+        </div>
+      )}
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { buildProgramming, getEligibleIntensityTechniques } from '../engine/prog
 import { VideoReference } from '../components/VideoReference';
 import { ModePrescriptionGrid } from '../components/ModePrescriptionGrid';
 import { formatEquipmentOptions } from '../engine/equipment';
+import { ExerciseReadout } from '../components/ExerciseReadout';
 
 export function ExerciseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -57,6 +58,8 @@ export function ExerciseDetailPage() {
           ))}
         </div>
       )}
+
+      <ExerciseReadout exercise={exercise} />
 
       {/* 3: what will I see / what does it help develop */}
       <section className="detail-section mirror-effect-section">
