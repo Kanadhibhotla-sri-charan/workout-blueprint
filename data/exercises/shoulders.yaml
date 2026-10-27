@@ -12,6 +12,12 @@
     - trunk musculature
   physique_targets:
     - front-delt
+  target_credit:
+    front-delt: 1.0
+    triceps: 0.5
+    side-delt: 0.25
+    chest: 0.25
+    upper-pec: 0.25
   movement_patterns:
     - vertical press
   equipment:
@@ -79,6 +85,12 @@
     - upper chest
   physique_targets:
     - front-delt
+  target_credit:
+    front-delt: 1.0
+    triceps: 0.5
+    side-delt: 0.25
+    chest: 0.25
+    upper-pec: 0.25
   movement_patterns:
     - vertical press
   equipment:
@@ -144,6 +156,10 @@
     - triceps
   physique_targets:
     - front-delt
+  target_credit:
+    front-delt: 1.0
+    triceps: 0.5
+    side-delt: 0.25
   movement_patterns:
     - vertical press
   equipment:
@@ -203,6 +219,10 @@
     - triceps
   physique_targets:
     - front-delt
+  target_credit:
+    front-delt: 1.0
+    triceps: 0.5
+    side-delt: 0.25
   movement_patterns:
     - vertical press
   equipment:
@@ -262,6 +282,10 @@
     - triceps
   physique_targets:
     - front-delt
+  target_credit:
+    front-delt: 1.0
+    triceps: 0.5
+    side-delt: 0.25
   movement_patterns:
     - vertical press
   equipment:
@@ -320,6 +344,8 @@
   secondary_targets: []
   physique_targets:
     - side-delt
+  target_credit:
+    side-delt: 1.0
   movement_patterns:
     - shoulder abduction
   equipment:
@@ -378,6 +404,8 @@
   secondary_targets: []
   physique_targets:
     - side-delt
+  target_credit:
+    side-delt: 1.0
   movement_patterns:
     - shoulder abduction
   equipment:
@@ -437,6 +465,8 @@
   secondary_targets: []
   physique_targets:
     - side-delt
+  target_credit:
+    side-delt: 1.0
   movement_patterns:
     - shoulder abduction
   equipment:
@@ -495,6 +525,9 @@
     - upper trapezius
   physique_targets:
     - side-delt
+  target_credit:
+    side-delt: 1.0
+    upper-traps: 0.5
   movement_patterns:
     - shoulder abduction
     - scapular elevation
@@ -567,6 +600,9 @@
     - mid-back
   physique_targets:
     - rear-delt
+  target_credit:
+    rear-delt: 1.0
+    back-thickness: 0.25
   movement_patterns:
     - shoulder horizontal abduction
   equipment:
@@ -634,6 +670,9 @@
     - mid-back
   physique_targets:
     - rear-delt
+  target_credit:
+    rear-delt: 1.0
+    back-thickness: 0.25
   movement_patterns:
     - shoulder horizontal abduction
   equipment:
@@ -691,6 +730,9 @@
     - mid-back
   physique_targets:
     - rear-delt
+  target_credit:
+    rear-delt: 1.0
+    back-thickness: 0.25
   movement_patterns:
     - shoulder horizontal abduction
     - elbow flexion
@@ -751,6 +793,9 @@
     - mid-back
   physique_targets:
     - rear-delt
+  target_credit:
+    rear-delt: 1.0
+    back-thickness: 0.5
   movement_patterns:
     - shoulder extension
     - horizontal abduction
@@ -813,6 +858,9 @@
     - external rotators
   physique_targets:
     - rear-delt
+  target_credit:
+    rear-delt: 1.0
+    back-thickness: 0.5
   movement_patterns:
     - shoulder horizontal abduction
     - external rotation

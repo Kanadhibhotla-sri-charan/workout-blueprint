@@ -44,10 +44,40 @@
 # 5 hips.yaml/hamstrings.yaml exercises whose body_regions actually include
 # hips.
 
+# Volume groups (Workout Logger change request 1.2, 2026-10-27). A group is
+# a volume parent for sub-region targets that a coach plans as one muscle
+# ("chest: 10 sets, bias upper"). Groups are NOT physique targets: they are
+# never recommended or shown in Decide; they exist so volume-targets.yaml
+# and target_credit can name the parent. A target may also have another
+# target as its parent (triceps-long-head -> triceps).
+#
+# Child fields on a target:
+#   parent        a volume group id or another target id
+#   volume_share  the child's suggested share of the parent's weekly volume
+#   min_share     the share the child should not fall below over a week
+# Shares are practical biases (coaching judgement, not sourced figures);
+# the children of one parent add up to at most 1.0 (validator-enforced).
+volume_groups:
+  - id: chest
+    name: Chest
+    parent_region: chest
+    definition: >-
+      The whole pectoralis major, planned as one muscle and biased toward
+      the upper, mid or lower chest through its children's shares.
+  - id: calves
+    name: Calves
+    parent_region: calves
+    definition: >-
+      The gastrocnemius and soleus, planned as one muscle and biased
+      through their shares.
+
 targets:
   - id: upper-pec
     name: Upper Pec
     parent_region: chest
+    parent: chest
+    volume_share: 0.4
+    min_share: 0.3
     definition: >-
       The clavicular (upper) portion of the pectoralis major — the part of
       the chest closest to the collarbone.
@@ -60,6 +90,9 @@ targets:
   - id: mid-pec
     name: Mid Chest
     parent_region: chest
+    parent: chest
+    volume_share: 0.4
+    min_share: 0.2
     definition: >-
       The sternocostal (mid) portion of the pectoralis major — the largest
       portion of the muscle, and the part loaded by default in a flat-angle
@@ -73,6 +106,8 @@ targets:
   - id: lower-pec
     name: Lower Pec
     parent_region: chest
+    parent: chest
+    volume_share: 0.2
     definition: >-
       The lower/costal portion of the pectoralis major, most commonly
       biased via a decline angle or a forward-leaning dip.
@@ -187,6 +222,9 @@ targets:
   - id: triceps-long-head
     name: Triceps — Long-Head Emphasis
     parent_region: arms
+    parent: triceps
+    volume_share: 0.4
+    min_share: 0.33
     definition: >-
       The long head of the triceps specifically, which crosses the
       shoulder joint and is more directly loaded when the arm is trained
@@ -226,6 +264,9 @@ targets:
   - id: gastrocnemius
     name: Gastrocnemius
     parent_region: calves
+    parent: calves
+    volume_share: 0.6
+    min_share: 0.4
     definition: >-
       The two-headed calf muscle that contributes when the knee is
       straight, trained through standing-position ankle plantarflexion.
@@ -238,6 +279,9 @@ targets:
   - id: soleus
     name: Soleus
     parent_region: calves
+    parent: calves
+    volume_share: 0.4
+    min_share: 0.25
     definition: >-
       The calf muscle beneath the gastrocnemius that stays active even
       with the knee bent, trained through seated-position ankle

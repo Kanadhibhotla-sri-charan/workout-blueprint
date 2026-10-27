@@ -13,6 +13,9 @@
   physique_targets:
     - hamstrings
     - gluteus-maximus
+  target_credit:
+    hamstrings: 1.0
+    gluteus-maximus: 1.0
   movement_patterns:
     - hip hinge
     - moderate knee bend
@@ -87,6 +90,9 @@
     - glutes (less than an RDL)
   physique_targets:
     - hamstrings
+  target_credit:
+    hamstrings: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - hip hinge
     - straight-leg execution
@@ -151,6 +157,8 @@
   secondary_targets: []
   physique_targets:
     - hamstrings
+  target_credit:
+    hamstrings: 1.0
   movement_patterns:
     - knee flexion
     - hip flexed
@@ -212,6 +220,8 @@
     - calves
   physique_targets:
     - hamstrings
+  target_credit:
+    hamstrings: 1.0
   movement_patterns:
     - knee flexion
     - hip extended
@@ -269,6 +279,8 @@
   secondary_targets: []
   physique_targets:
     - hamstrings
+  target_credit:
+    hamstrings: 1.0
   movement_patterns:
     - knee flexion
     - eccentric emphasis
@@ -333,6 +345,9 @@
     - spinal erectors (less than the spinal-extension-dominant execution)
   physique_targets:
     - hamstrings
+  target_credit:
+    hamstrings: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - hip extension
     - hip-hinge-dominant execution
@@ -394,6 +409,9 @@
     - glutes
   physique_targets:
     - hamstrings
+  target_credit:
+    hamstrings: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - hip extension
     - heels on a bench, knees nearly straight
@@ -464,6 +482,10 @@
     - gluteus-maximus
   aesthetic_characteristics:
     - lengthened-biased
+  target_credit:
+    hamstrings: 1.0
+    gluteus-maximus: 1.0
+    gluteus-medius-minimus: 0.25
   movement_patterns:
     - hip hinge
     - single-leg stance

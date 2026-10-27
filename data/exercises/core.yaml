@@ -10,6 +10,9 @@
     - obliques
   physique_targets:
     - rectus-abdominis
+  target_credit:
+    rectus-abdominis: 1.0
+    obliques: 0.25
   movement_patterns:
     - trunk flexion
   equipment:
@@ -67,6 +70,9 @@
     - obliques
   physique_targets:
     - rectus-abdominis
+  target_credit:
+    rectus-abdominis: 1.0
+    obliques: 0.25
   movement_patterns:
     - trunk flexion
   equipment:
@@ -125,6 +131,8 @@
     - hip flexors
   physique_targets:
     - rectus-abdominis
+  target_credit:
+    rectus-abdominis: 1.0
   movement_patterns:
     - trunk flexion
     - pelvis curls toward the ribs
@@ -189,6 +197,10 @@
     - grip
   physique_targets:
     - rectus-abdominis
+  target_credit:
+    rectus-abdominis: 1.0
+    obliques: 0.25
+    forearm-flexors: 0.25
   movement_patterns:
     - hip flexion
     - trunk flexion
@@ -252,6 +264,8 @@
     - rectus-abdominis
   functional_goals:
     - core-anti-extension
+  target_credit:
+    rectus-abdominis: 1.0
   movement_patterns:
     - anti-extension isometric
   equipment:
@@ -313,6 +327,8 @@
     - shoulders
   physique_targets:
     - rectus-abdominis
+  target_credit:
+    rectus-abdominis: 1.0
   movement_patterns:
     - anti-extension through range
   equipment:
@@ -374,6 +390,9 @@
     - obliques
   functional_goals:
     - core-anti-rotation
+  target_credit:
+    obliques: 1.0
+    rectus-abdominis: 0.25
   movement_patterns:
     - anti-rotation isometric
   equipment:
@@ -439,6 +458,9 @@
   physique_targets: []
   functional_goals:
     - core-anti-rotation
+  target_credit:
+    obliques: 0.5
+    rectus-abdominis: 0.25
   movement_patterns:
     - anti-rotation isometric
     - alternating hand lifts from a high plank
@@ -505,6 +527,10 @@
     - obliques
   functional_goals:
     - core-anti-lateral-flexion
+  target_credit:
+    obliques: 1.0
+    forearm-flexors: 0.25
+    upper-traps: 0.25
   movement_patterns:
     - anti-lateral flexion under load
   equipment:
@@ -569,6 +595,9 @@
     - obliques
   functional_goals:
     - core-anti-lateral-flexion
+  target_credit:
+    obliques: 1.0
+    gluteus-medius-minimus: 0.25
   movement_patterns:
     - anti-lateral flexion under load
   equipment:
@@ -636,6 +665,9 @@
     - hip musculature
   physique_targets:
     - obliques
+  target_credit:
+    obliques: 1.0
+    rectus-abdominis: 0.25
   movement_patterns:
     - trunk rotation
   equipment:
@@ -695,6 +727,9 @@
     - hip musculature
   physique_targets:
     - obliques
+  target_credit:
+    obliques: 1.0
+    rectus-abdominis: 0.25
   movement_patterns:
     - trunk rotation
   equipment:

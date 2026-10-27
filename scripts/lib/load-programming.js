@@ -172,7 +172,39 @@ function loadDevelopmentPackages() {
   return { catalog: data, fileErrors: [] };
 }
 
+// Loads the volume model (Workout Logger change requests 1.1-1.2):
+// physique-targets.yaml's targets and volume_groups, and
+// volume-targets.yaml. Returned raw; validate-volume.js checks them.
+function loadVolumeModel() {
+  const fileErrors = [];
+  const read = (name) => {
+    const file = path.join(PROGRAMMING_DIR, name);
+    const relFile = path.relative(process.cwd(), file);
+    if (!fs.existsSync(file)) {
+      fileErrors.push(`${relFile}: file not found`);
+      return null;
+    }
+    try {
+      return yaml.load(fs.readFileSync(file, 'utf8'));
+    } catch (err) {
+      fileErrors.push(`${relFile}: malformed YAML — ${err.message}`);
+      return null;
+    }
+  };
+  const targetsFile = read('physique-targets.yaml');
+  const volumeFile = read('volume-targets.yaml');
+  if (volumeFile && !Array.isArray(volumeFile.volume_targets)) {
+    fileErrors.push('data/programming/volume-targets.yaml: expected a top-level "volume_targets" list');
+  }
+  return {
+    targets: (targetsFile && Array.isArray(targetsFile.targets)) ? targetsFile.targets : [],
+    groups: (targetsFile && Array.isArray(targetsFile.volume_groups)) ? targetsFile.volume_groups : [],
+    volumeTargets: (volumeFile && Array.isArray(volumeFile.volume_targets)) ? volumeFile.volume_targets : [],
+    fileErrors,
+  };
+}
+
 module.exports = {
   loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals,
-  loadProgrammingProfiles, loadDevelopmentPackages, PROGRAMMING_DIR,
+  loadProgrammingProfiles, loadDevelopmentPackages, loadVolumeModel, PROGRAMMING_DIR,
 };

@@ -51,6 +51,12 @@ export interface Exercise {
    * it carries — never in physique-target or region answers.
    */
   training_mode?: TrainingMode | null;
+  /**
+   * Workout Logger change request 1.3: credited share of one hard set per
+   * physique target or volume group id (1.0 full, 0.5 partial, 0.25 minor).
+   * Strength records only; read by the logger, not by the Decide engine.
+   */
+  target_credit?: Record<string, number>;
   exercise_type: ExerciseType;
   laterality: Laterality;
   coverage_categories: string[];

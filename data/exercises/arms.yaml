@@ -11,6 +11,9 @@
     - forearms
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
   equipment:
@@ -75,6 +78,9 @@
     - forearms
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
   equipment:
@@ -136,6 +142,9 @@
   secondary_targets: []
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
     - lengthened shoulder position
@@ -198,6 +207,9 @@
     - brachialis
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
     - shortened shoulder position
@@ -266,6 +278,9 @@
     - brachialis
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
     - shortened shoulder position
@@ -327,6 +342,10 @@
     - biceps
   physique_targets:
     - brachialis-arm-thickness
+  target_credit:
+    brachialis-arm-thickness: 1.0
+    biceps: 0.5
+    forearm-extensors: 0.5
   movement_patterns:
     - elbow flexion
     - neutral grip
@@ -392,6 +411,10 @@
     - biceps
   physique_targets:
     - brachialis-arm-thickness
+  target_credit:
+    brachialis-arm-thickness: 1.0
+    biceps: 0.5
+    forearm-extensors: 0.5
   movement_patterns:
     - elbow flexion
     - neutral grip
@@ -453,6 +476,10 @@
     - biceps
   physique_targets:
     - brachialis-arm-thickness
+  target_credit:
+    brachialis-arm-thickness: 1.0
+    biceps: 0.5
+    forearm-extensors: 0.5
   movement_patterns:
     - elbow flexion
     - neutral grip
@@ -513,6 +540,9 @@
     - brachialis
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
   equipment:
@@ -577,6 +607,9 @@
   secondary_targets: []
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
     - elbows drawn behind the torso
@@ -640,6 +673,9 @@
   secondary_targets: []
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
   movement_patterns:
     - elbow flexion
     - elbows drawn behind the torso
@@ -701,6 +737,10 @@
     - wrist extensors (eccentric half)
   physique_targets:
     - biceps
+  target_credit:
+    biceps: 1.0
+    brachialis-arm-thickness: 0.5
+    forearm-extensors: 0.5
   movement_patterns:
     - elbow flexion
     - grip rotation from supinated to pronated
@@ -763,6 +803,11 @@
     - anterior deltoids
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
+    chest: 0.5
+    mid-pec: 0.5
+    front-delt: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -829,6 +874,11 @@
     - anterior deltoids
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
+    chest: 0.5
+    mid-pec: 0.5
+    front-delt: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -893,6 +943,9 @@
   physique_targets:
     - triceps
     - triceps-long-head
+  target_credit:
+    triceps: 1.0
+    triceps-long-head: 1.0
   movement_patterns:
     - elbow extension
     - shoulder flexed (overhead)
@@ -963,6 +1016,9 @@
   secondary_targets: []
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
+    triceps-long-head: 0.5
   movement_patterns:
     - elbow extension
   equipment:
@@ -1028,6 +1084,11 @@
     - anterior deltoids
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
+    chest: 0.5
+    lower-pec: 0.5
+    front-delt: 0.5
   movement_patterns:
     - elbow extension within a vertical-to-horizontal press
   equipment:
@@ -1088,6 +1149,8 @@
   secondary_targets: []
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
   movement_patterns:
     - elbow extension
   equipment:
@@ -1148,6 +1211,8 @@
   secondary_targets: []
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
   movement_patterns:
     - elbow extension
   equipment:
@@ -1205,6 +1270,8 @@
   secondary_targets: []
   physique_targets:
     - triceps
+  target_credit:
+    triceps: 1.0
   movement_patterns:
     - elbow extension
     - shoulder held in extension
@@ -1269,6 +1336,9 @@
   physique_targets:
     - triceps
     - triceps-long-head
+  target_credit:
+    triceps: 1.0
+    triceps-long-head: 1.0
   movement_patterns:
     - elbow extension
     - shoulder flexed (overhead)

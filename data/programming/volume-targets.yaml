@@ -1,0 +1,245 @@
+# Weekly volume per muscle (Workout Logger change request 1.1, 2026-10-27).
+#
+# One entry per physique target, plus one per volume group (chest, calves;
+# see physique-targets.yaml › volume_groups). The logger reads these numbers
+# directly; it should not derive weekly volume from development packages.
+#
+# How to read the numbers
+# - Units: hard sets per calendar week (7 days), counted as CREDITED sets:
+#   each logged hard set × that exercise's target_credit weight for this
+#   target (data/exercises/*.yaml). A bench-press set therefore adds 1.0
+#   to chest and 0.5 to front-delt and triceps.
+# - minimum: a floor for a busy or deload week. About a third of
+#   "efficient", following Bickel et al. 2011 (a one-third dose kept muscle
+#   size in young adults for 32 weeks) and Spiering et al. 2021 (strength
+#   and size maintained with as little as 1 session and 1 set per exercise
+#   per week while intensity is kept). Younger adults only; older adults
+#   needed more in Bickel 2011.
+# - efficient: steady progress at a moderate cost. For the main muscles it
+#   sits at 10, the bottom of global-principles' practical range (10-20).
+#   Schoenfeld et al. 2017 found a graded dose-response, with 10+ weekly
+#   sets tending to beat fewer; Pelland et al. 2026 (67 studies) confirmed
+#   more volume gives more growth with diminishing returns.
+# - priority: a goal muscle pushed hard. Stays within the practical range
+#   (10-20).
+# - Smaller or mostly indirectly trained muscles sit below the global
+#   ranges for minimum / efficient; each such entry says why. The global
+#   ranges describe a muscle being trained directly as a goal.
+# - per_session_max: credited sets for this target in one session above
+#   which extra sets are likely to add more fatigue than growth. A
+#   practical coaching ceiling, NOT a sourced threshold.
+# - indirect_only: true means compound work usually meets "minimum" and
+#   "efficient" without any direct exercise; direct work is only scheduled
+#   when the target is a goal (priority).
+# - volume_from_parent: a child target (a sub-region) has no weekly number
+#   of its own. Its parent's number applies, and the child's volume_share /
+#   min_share in physique-targets.yaml set the bias across the week.
+#
+# Every number is a practical starting point to adjust from, not an exact
+# physiological law (global-principles.yaml › wording_rules). Sources are
+# recorded in docs/dev/reports/EVIDENCE-LEDGER.md.
+#
+# If the logger counts "efficient" over a 14-day cycle rather than per week,
+# the dose halves (10 sets per 14 days is 5 a week, close to "minimum").
+
+volume_targets:
+  # --- groups (parents of sub-region targets) ---
+  - target_id: chest
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults (see header). Upper / mid / lower chest share this
+      number; the bias comes from their shares.
+
+  - target_id: calves
+    weekly_sets: { minimum: 4, efficient: 8, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Efficient sits at the bottom of global-principles' starting range
+      (8-12) because badminton footwork adds a large amount of calf loading
+      outside the gym. Gastrocnemius and soleus share this number.
+
+  # --- chest children ---
+  - target_id: upper-pec
+    volume_from_parent: chest
+  - target_id: mid-pec
+    volume_from_parent: chest
+  - target_id: lower-pec
+    volume_from_parent: chest
+
+  # --- shoulders ---
+  - target_id: front-delt
+    weekly_sets: { minimum: 2, efficient: 6, priority: 12 }
+    per_session_max: 6
+    indirect_only: true
+    rationale: >-
+      Every chest or shoulder press credits the front delt (0.5 for chest
+      presses, 1.0 for overhead presses), so about 12 weekly pressing sets
+      already reach "efficient". Below the global ranges for that reason.
+
+  - target_id: side-delt
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults. Pressing gives the side delt only minor credit
+      (0.25 from overhead presses), so it needs direct lateral-raise work.
+
+  - target_id: rear-delt
+    weekly_sets: { minimum: 2, efficient: 8, priority: 14 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      Rows credit the rear delt a little (0.25 per set), so slightly less
+      direct work is needed than for the side delt. Efficient sits at the
+      bottom of the global starting range (8-12).
+
+  # --- back ---
+  - target_id: lat-width
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults. Rows add 0.5 per set on top of vertical pulls.
+
+  - target_id: back-thickness
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults. Vertical pulls add 0.5 per set on top of rows.
+
+  - target_id: upper-traps
+    weekly_sets: { minimum: 0, efficient: 6, priority: 12 }
+    per_session_max: 6
+    indirect_only: true
+    rationale: >-
+      Deadlifts, rack pulls, carries and upright rows already credit the
+      upper traps, so direct shrugs are only needed when they are a goal.
+      Below the global ranges for that reason.
+
+  # --- arms ---
+  - target_id: biceps
+    weekly_sets: { minimum: 2, efficient: 8, priority: 14 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      Pull-ups, pulldowns and rows credit the biceps (0.25-0.5 per set), so
+      a typical back week already covers part of it. Efficient sits at the
+      bottom of the global starting range (8-12).
+
+  - target_id: brachialis-arm-thickness
+    weekly_sets: { minimum: 2, efficient: 6, priority: 14 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      Every curl (0.5) and every pull (0.25) credits the brachialis, so
+      efficient sits below the global starting range. Priority (14) is
+      reached mainly with hammer and reverse curls.
+
+  - target_id: triceps
+    weekly_sets: { minimum: 2, efficient: 8, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Every press credits the triceps (0.5 per set), so a normal pressing
+      week covers much of "efficient". The long head shares this number
+      through its min_share (a third of triceps work overhead or
+      stretched).
+
+  - target_id: triceps-long-head
+    volume_from_parent: triceps
+
+  # --- core (to be split into flexion / rotation / anti-extension, change 2.4) ---
+  - target_id: rectus-abdominis
+    weekly_sets: { minimum: 2, efficient: 6, priority: 10 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      A small muscle group that also works during heavy compound lifts;
+      6-10 weekly sets is a common practical range. Below the global ranges
+      for that reason.
+
+  - target_id: obliques
+    weekly_sets: { minimum: 0, efficient: 6, priority: 10 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      Same reasoning as the rectus abdominis. Carries and badminton's
+      rotation add further work outside these sets.
+
+  # --- calves children ---
+  - target_id: gastrocnemius
+    volume_from_parent: calves
+  - target_id: soleus
+    volume_from_parent: calves
+
+  # --- hips / legs ---
+  - target_id: gluteus-maximus
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults. Squats, lunges and leg presses credit 0.5 per
+      set, hinges up to 1.0.
+
+  - target_id: gluteus-medius-minimus
+    weekly_sets: { minimum: 0, efficient: 6, priority: 12 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      Single-leg work and side planks credit it a little; badminton's
+      lateral movement also loads it. Below the global ranges for that
+      reason.
+
+  - target_id: adductors
+    weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
+    per_session_max: 6
+    indirect_only: true
+    rationale: >-
+      Squats (0.5) and lunges (0.25) credit the adductors, so a normal leg
+      week usually covers "efficient". The Copenhagen plank is still useful
+      for groin resilience in badminton.
+
+  - target_id: quads
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults.
+
+  - target_id: hamstrings
+    weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
+    per_session_max: 8
+    indirect_only: false
+    rationale: >-
+      Main-muscle defaults. Squats give the hamstrings no credit; hinges and
+      leg curls carry it.
+
+  # --- forearms / neck ---
+  - target_id: forearm-flexors
+    weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
+    per_session_max: 6
+    indirect_only: true
+    rationale: >-
+      Gripping in deadlifts, rows, carries and racket play loads the
+      forearm flexors, so direct wrist curls are only needed when they are a
+      goal.
+
+  - target_id: forearm-extensors
+    weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      Hammer and Zottman curls credit the extensors (0.5), so a few direct
+      sets of reverse curls or reverse wrist curls cover "efficient".
+
+  - target_id: neck-thickness
+    weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
+    per_session_max: 6
+    indirect_only: false
+    rationale: >-
+      A small, optional target; a few direct sets a week are a common
+      practical starting point.

@@ -62,6 +62,8 @@ function main() {
 
   const programming = {
     physiqueTargets: loadYaml('physique-targets.yaml').targets,
+    volumeGroups: loadYaml('physique-targets.yaml').volume_groups,
+    volumeTargets: loadYaml('volume-targets.yaml').volume_targets,
     globalPrinciples: loadYaml('global-principles.yaml'),
     repRanges: loadYaml('rep-ranges.yaml'),
     programmingProfiles: loadYaml('programming-profiles.yaml'),

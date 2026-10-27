@@ -1,0 +1,161 @@
+// Volume-model checks (Workout Logger change requests 1.1-1.3, 2026-10-27):
+// physique-targets.yaml's hierarchy, volume-targets.yaml, and each
+// exercise's target_credit. Returns issues in validate.js's shape.
+const { loadVolumeModel } = require('./load-programming');
+
+const SHARE_TOLERANCE = 0.011; // three children at 0.33 / 0.34 / 0.33
+
+function validateVolume(records) {
+  const issues = [];
+  const { targets, groups, volumeTargets, fileErrors } = loadVolumeModel();
+  for (const fileError of fileErrors) {
+    issues.push({ record: null, category: 'programming-data', message: fileError });
+  }
+  const fileIssue = (file, message) =>
+    issues.push({ record: null, category: 'volume', message: `data/programming/${file} :: ${message}` });
+  const recordIssue = (record, message) =>
+    issues.push({ record, category: 'volume', message: `${record._file} :: ${record.id} :: ${message}` });
+
+  const targetIds = new Set(targets.map((t) => t.id));
+  const groupIds = new Set(groups.map((g) => g.id));
+  const creditIds = new Set([...targetIds, ...groupIds]);
+  for (const id of groupIds) {
+    if (targetIds.has(id)) fileIssue('physique-targets.yaml', `volume group "${id}" reuses a physique target id`);
+  }
+
+  // --- 1.2 hierarchy ---
+  const parentOf = new Map();
+  const childrenOf = new Map();
+  for (const t of targets) {
+    if (t.parent === undefined) {
+      if (t.volume_share !== undefined || t.min_share !== undefined) {
+        fileIssue('physique-targets.yaml', `${t.id} :: volume_share / min_share need a "parent"`);
+      }
+      continue;
+    }
+    if (!creditIds.has(t.parent) || t.parent === t.id) {
+      fileIssue('physique-targets.yaml', `${t.id} :: parent "${t.parent}" is not a volume group or another target`);
+      continue;
+    }
+    parentOf.set(t.id, t.parent);
+    if (!childrenOf.has(t.parent)) childrenOf.set(t.parent, []);
+    childrenOf.get(t.parent).push(t);
+    for (const field of ['volume_share', 'min_share']) {
+      const v = t[field];
+      if (v !== undefined && !(typeof v === 'number' && v > 0 && v <= 1)) {
+        fileIssue('physique-targets.yaml', `${t.id} :: ${field} must be a number in (0, 1], got ${JSON.stringify(v)}`);
+      }
+    }
+    if (typeof t.volume_share === 'number' && typeof t.min_share === 'number' && t.min_share > t.volume_share) {
+      fileIssue('physique-targets.yaml', `${t.id} :: min_share (${t.min_share}) exceeds volume_share (${t.volume_share})`);
+    }
+  }
+  for (const id of parentOf.keys()) {
+    if (parentOf.has(parentOf.get(id))) {
+      fileIssue('physique-targets.yaml', `${id} :: parent "${parentOf.get(id)}" itself has a parent (one level only)`);
+    }
+  }
+  for (const [parent, children] of childrenOf) {
+    for (const field of ['volume_share', 'min_share']) {
+      const sum = children.reduce((acc, c) => acc + (typeof c[field] === 'number' ? c[field] : 0), 0);
+      if (sum > 1 + SHARE_TOLERANCE) {
+        fileIssue('physique-targets.yaml', `children of "${parent}" have ${field} adding up to ${sum.toFixed(2)} (> 1.0)`);
+      }
+    }
+  }
+  for (const id of groupIds) {
+    if (!childrenOf.has(id)) fileIssue('physique-targets.yaml', `volume group "${id}" has no child targets`);
+  }
+
+  // --- 1.1 volume targets ---
+  const seen = new Map();
+  for (const entry of volumeTargets) {
+    const id = entry && entry.target_id;
+    if (!creditIds.has(id)) {
+      fileIssue('volume-targets.yaml', `entry for unknown target or group "${id}"`);
+      continue;
+    }
+    seen.set(id, (seen.get(id) || 0) + 1);
+    if (parentOf.has(id)) {
+      if (entry.volume_from_parent !== parentOf.get(id)) {
+        fileIssue('volume-targets.yaml', `${id} :: a child target must say volume_from_parent: ${parentOf.get(id)}`);
+      }
+      if (entry.weekly_sets !== undefined) {
+        fileIssue('volume-targets.yaml', `${id} :: a child target takes its parent's weekly_sets and must not define its own`);
+      }
+      continue;
+    }
+    const w = entry.weekly_sets || {};
+    const levels = ['minimum', 'efficient', 'priority'];
+    if (!levels.every((k) => Number.isInteger(w[k]) && w[k] >= 0)) {
+      fileIssue('volume-targets.yaml', `${id} :: weekly_sets needs whole-number minimum, efficient and priority`);
+    } else if (!(w.minimum <= w.efficient && w.efficient <= w.priority && w.priority > 0)) {
+      fileIssue('volume-targets.yaml', `${id} :: weekly_sets must satisfy minimum <= efficient <= priority`);
+    } else if (w.priority > 20) {
+      fileIssue('volume-targets.yaml', `${id} :: priority ${w.priority} is above global-principles' practical range (10-20)`);
+    }
+    if (!Number.isInteger(entry.per_session_max) || entry.per_session_max <= 0) {
+      fileIssue('volume-targets.yaml', `${id} :: per_session_max must be a positive whole number`);
+    }
+    if (typeof entry.indirect_only !== 'boolean') {
+      fileIssue('volume-targets.yaml', `${id} :: indirect_only must be true or false`);
+    }
+    if (typeof entry.rationale !== 'string' || entry.rationale.trim().length < 20) {
+      fileIssue('volume-targets.yaml', `${id} :: rationale is missing or too short`);
+    }
+  }
+  for (const id of creditIds) {
+    const count = seen.get(id) || 0;
+    if (count !== 1) {
+      const kind = targetIds.has(id) ? 'physique target' : 'volume group';
+      fileIssue('volume-targets.yaml', `${kind} "${id}" has ${count} entries (expected exactly 1)`);
+    }
+  }
+
+  // --- 1.3 target_credit ---
+  for (const record of records) {
+    const credit = record.target_credit;
+    const isStrength = !record.training_mode;
+    const pts = Array.isArray(record.physique_targets) ? record.physique_targets : [];
+    if (credit === undefined || credit === null) {
+      if (isStrength && pts.length > 0) recordIssue(record, 'strength exercise with physique_targets needs "target_credit"');
+      continue;
+    }
+    if (!isStrength) {
+      recordIssue(record, '"target_credit" is for strength exercises; training-mode records must not carry it');
+      continue;
+    }
+    if (typeof credit !== 'object' || Array.isArray(credit) || Object.keys(credit).length === 0) {
+      recordIssue(record, '"target_credit" must be a non-empty mapping of target id to weight');
+      continue;
+    }
+    for (const [id, weight] of Object.entries(credit)) {
+      if (!creditIds.has(id)) recordIssue(record, `"target_credit" uses unknown id "${id}"`);
+      if (!(typeof weight === 'number' && weight > 0 && weight <= 1)) {
+        recordIssue(record, `"target_credit" weight for "${id}" must be in (0, 1], got ${JSON.stringify(weight)}`);
+      }
+    }
+    for (const pt of pts) {
+      if (!(pt in credit)) recordIssue(record, `physique target "${pt}" is missing from "target_credit"`);
+    }
+    const childSum = new Map();
+    for (const [id, weight] of Object.entries(credit)) {
+      const parent = parentOf.get(id);
+      if (!parent) continue;
+      if (!(parent in credit)) {
+        recordIssue(record, `"target_credit" credits "${id}" but not its parent "${parent}"`);
+        continue;
+      }
+      if (weight > credit[parent]) recordIssue(record, `"target_credit" for "${id}" exceeds its parent "${parent}"`);
+      childSum.set(parent, (childSum.get(parent) || 0) + weight);
+    }
+    for (const [parent, sum] of childSum) {
+      if (sum > credit[parent] + SHARE_TOLERANCE) {
+        recordIssue(record, `"target_credit" children of "${parent}" add up to ${sum.toFixed(2)}, more than the parent's ${credit[parent]}`);
+      }
+    }
+  }
+  return issues;
+}
+
+module.exports = { validateVolume };

@@ -16,6 +16,7 @@ const {
   loadPhysiqueTargets, loadAestheticOutcomes, loadFunctionalGoals,
   loadProgrammingProfiles, loadDevelopmentPackages,
 } = require('./load-programming');
+const { validateVolume } = require('./validate-volume');
 
 // Loaded once at module scope, same treatment as taxonomy.js's constants —
 // data/programming/physique-targets.yaml is the authoritative taxonomy per
@@ -748,6 +749,9 @@ function validate(records) {
       });
     }
   }
+
+  // Volume model (Workout Logger change requests 1.1-1.3).
+  issues.push(...validateVolume(records));
 
   return { issues, duplicateIds, allIds };
 }

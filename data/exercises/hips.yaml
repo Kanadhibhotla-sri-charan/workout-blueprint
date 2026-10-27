@@ -11,6 +11,10 @@
     - quads
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
+    hamstrings: 0.25
+    quads: 0.25
   movement_patterns:
     - hip extension
     - shortened range (hip fully extended)
@@ -79,6 +83,9 @@
     - spinal erectors
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
+    hamstrings: 1.0
   movement_patterns:
     - hip hinge
   equipment:
@@ -140,6 +147,11 @@
     - adductors
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
+    quads: 0.5
+    hamstrings: 0.25
+    adductors: 0.25
   movement_patterns:
     - unilateral hip-dominant
     - long-stance execution
@@ -209,6 +221,8 @@
   secondary_targets: []
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
   movement_patterns:
     - hip extension
   equipment:
@@ -266,6 +280,9 @@
     - hamstrings
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
+    hamstrings: 0.5
   movement_patterns:
     - hip hinge
     - load pulls from behind
@@ -336,6 +353,8 @@
     - gluteus-medius-minimus
   functional_goals:
     - hip-stability
+  target_credit:
+    gluteus-medius-minimus: 1.0
   movement_patterns:
     - hip abduction
   equipment:
@@ -398,6 +417,8 @@
   secondary_targets: []
   physique_targets:
     - gluteus-medius-minimus
+  target_credit:
+    gluteus-medius-minimus: 1.0
   movement_patterns:
     - hip abduction
   equipment:
@@ -464,6 +485,8 @@
     - adductors
   functional_goals:
     - hip-stability
+  target_credit:
+    adductors: 1.0
   movement_patterns:
     - hip adduction
   equipment:
@@ -579,6 +602,9 @@
     - hamstrings
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
+    hamstrings: 0.25
   movement_patterns:
     - hip extension
     - shortened range (hip fully extended)
@@ -653,6 +679,10 @@
     - gluteus medius
   physique_targets:
     - gluteus-maximus
+  target_credit:
+    gluteus-maximus: 1.0
+    hamstrings: 0.25
+    gluteus-medius-minimus: 0.25
   movement_patterns:
     - hip extension
     - shortened range (hip fully extended)
@@ -723,6 +753,9 @@
     - adductors
   functional_goals:
     - hip-stability
+  target_credit:
+    adductors: 1.0
+    obliques: 0.25
   movement_patterns:
     - hip adduction
     - side-plank support

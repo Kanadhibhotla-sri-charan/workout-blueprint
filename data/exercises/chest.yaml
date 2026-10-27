@@ -14,6 +14,11 @@
   aesthetic_characteristics:
     - high-loadable
     - lengthened-biased
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - incline horizontal press
   equipment:
@@ -82,6 +87,11 @@
     - upper-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - incline horizontal press
   equipment:
@@ -147,6 +157,11 @@
     - upper-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - incline horizontal press
   equipment:
@@ -211,6 +226,11 @@
     - upper-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - incline horizontal press
   equipment:
@@ -276,6 +296,11 @@
     - upper-pec
   aesthetic_characteristics:
     - lengthened-biased
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - incline horizontal press
   equipment:
@@ -339,6 +364,11 @@
     - mid-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -407,6 +437,11 @@
     - mid-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -472,6 +507,11 @@
     - mid-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -538,6 +578,11 @@
     - mid-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -599,6 +644,11 @@
     - triceps
   physique_targets:
     - mid-pec
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -660,6 +710,11 @@
     - anterior deltoids
   physique_targets:
     - mid-pec
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
     - continuous shoulder adduction
@@ -719,6 +774,9 @@
   secondary_targets: []
   physique_targets:
     - mid-pec
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
   movement_patterns:
     - shoulder horizontal adduction
   equipment:
@@ -785,6 +843,10 @@
     - upper-pec
   aesthetic_characteristics:
     - lengthened-biased
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.25
   movement_patterns:
     - shoulder horizontal adduction on an incline
   equipment:
@@ -847,6 +909,10 @@
     - anterior deltoids
   physique_targets:
     - lower-pec
+  target_credit:
+    chest: 1.0
+    lower-pec: 1.0
+    front-delt: 0.25
   movement_patterns:
     - shoulder horizontal adduction on a decline
   equipment:
@@ -908,6 +974,9 @@
   secondary_targets: []
   physique_targets:
     - mid-pec
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
   movement_patterns:
     - shoulder horizontal adduction
   equipment:
@@ -970,6 +1039,11 @@
     - upper-pec
     - mid-pec
     - lower-pec
+  target_credit:
+    chest: 1.0
+    upper-pec: 0.33
+    mid-pec: 0.34
+    lower-pec: 0.33
   movement_patterns:
     - shoulder horizontal adduction
   equipment:
@@ -1033,6 +1107,12 @@
     - triceps (long head)
   physique_targets:
     - lower-pec
+  target_credit:
+    chest: 1.0
+    lower-pec: 1.0
+    lat-width: 0.25
+    triceps: 0.25
+    triceps-long-head: 0.25
   movement_patterns:
     - shoulder extension through an overhead arc
   equipment:
@@ -1098,6 +1178,11 @@
   aesthetic_characteristics:
     - high-loadable
     - lengthened-biased
+  target_credit:
+    chest: 1.0
+    lower-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal-to-vertical press
   equipment:
@@ -1163,6 +1248,11 @@
     - mid-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
   equipment:
@@ -1227,6 +1317,11 @@
     - triceps
   physique_targets:
     - upper-pec
+  target_credit:
+    chest: 1.0
+    upper-pec: 1.0
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - incline horizontal press
   equipment:
@@ -1295,6 +1390,12 @@
     - lower-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 0.5
+    lower-pec: 0.5
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
     - decline bench
@@ -1363,6 +1464,12 @@
     - lower-pec
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    chest: 1.0
+    mid-pec: 0.5
+    lower-pec: 0.5
+    front-delt: 0.5
+    triceps: 0.5
   movement_patterns:
     - horizontal press
     - decline bench

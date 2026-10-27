@@ -14,6 +14,11 @@
     - lat-width
   aesthetic_characteristics:
     - vertical-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - vertical pull
     - pronated grip
@@ -79,6 +84,11 @@
     - lat-width
   aesthetic_characteristics:
     - vertical-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.5
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - vertical pull
     - supinated grip
@@ -143,6 +153,11 @@
     - lat-width
   aesthetic_characteristics:
     - vertical-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - vertical pull
     - pronated grip
@@ -207,6 +222,11 @@
     - lat-width
   aesthetic_characteristics:
     - vertical-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.5
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - vertical pull
     - supinated grip
@@ -269,6 +289,11 @@
     - lat-width
   aesthetic_characteristics:
     - vertical-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.5
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - vertical pull
     - neutral grip
@@ -333,6 +358,12 @@
     - back-thickness
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    back-thickness: 1.0
+    lat-width: 0.5
+    rear-delt: 0.25
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - horizontal pull
   equipment:
@@ -405,6 +436,12 @@
     - back-thickness
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    back-thickness: 1.0
+    lat-width: 0.5
+    rear-delt: 0.25
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - horizontal pull
     - pronated grip
@@ -471,6 +508,12 @@
     - lat-width
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.5
+    brachialis-arm-thickness: 0.25
+    rear-delt: 0.25
   movement_patterns:
     - horizontal pull
     - supinated grip
@@ -534,6 +577,12 @@
     - back-thickness
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    back-thickness: 1.0
+    lat-width: 1.0
+    rear-delt: 0.25
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - horizontal pull
   equipment:
@@ -594,6 +643,12 @@
     - back-thickness
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    back-thickness: 1.0
+    lat-width: 0.5
+    rear-delt: 0.25
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - horizontal pull
     - band looped around the feet
@@ -661,6 +716,12 @@
     - back-thickness
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    back-thickness: 1.0
+    lat-width: 1.0
+    rear-delt: 0.25
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - horizontal pull
   equipment:
@@ -727,6 +788,13 @@
     - lats
     - traps
     - grip
+  target_credit:
+    gluteus-maximus: 0.5
+    hamstrings: 0.5
+    quads: 0.25
+    upper-traps: 0.5
+    back-thickness: 0.25
+    forearm-flexors: 0.25
   movement_patterns:
     - hip hinge
   equipment:
@@ -790,6 +858,12 @@
     - hamstrings (less than a full deadlift)
   physique_targets:
     - upper-traps
+  target_credit:
+    upper-traps: 1.0
+    back-thickness: 0.5
+    gluteus-maximus: 0.25
+    hamstrings: 0.25
+    forearm-flexors: 0.25
   movement_patterns:
     - hip hinge
     - partial range
@@ -854,6 +928,12 @@
     - back-thickness
   aesthetic_characteristics:
     - horizontal-pull
+  target_credit:
+    back-thickness: 1.0
+    lat-width: 1.0
+    rear-delt: 0.25
+    biceps: 0.25
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - horizontal pull
   equipment:
@@ -912,6 +992,8 @@
   secondary_targets: []
   physique_targets:
     - lat-width
+  target_credit:
+    lat-width: 1.0
   movement_patterns:
     - shoulder extension
   equipment:
@@ -977,6 +1059,11 @@
     - triceps
   physique_targets:
     - lat-width
+  target_credit:
+    lat-width: 1.0
+    chest: 0.25
+    triceps: 0.25
+    triceps-long-head: 0.25
   movement_patterns:
     - shoulder extension through an overhead arc
   equipment:
@@ -1039,6 +1126,9 @@
     - forearms
   physique_targets:
     - upper-traps
+  target_credit:
+    upper-traps: 1.0
+    forearm-flexors: 0.25
   movement_patterns:
     - scapular elevation
   equipment:
@@ -1104,6 +1194,9 @@
   secondary_targets:
     - glutes
     - hamstrings (less than the hip-hinge-dominant execution)
+  target_credit:
+    gluteus-maximus: 0.25
+    hamstrings: 0.25
   movement_patterns:
     - trunk extension
     - spinal-extension-dominant execution
@@ -1168,6 +1261,11 @@
     - lat-width
   aesthetic_characteristics:
     - vertical-pull
+  target_credit:
+    lat-width: 1.0
+    back-thickness: 0.5
+    biceps: 0.5
+    brachialis-arm-thickness: 0.25
   movement_patterns:
     - vertical pull
     - single arm

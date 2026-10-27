@@ -10,6 +10,10 @@
     - soleus
   physique_targets:
     - gastrocnemius
+  target_credit:
+    calves: 1.0
+    gastrocnemius: 0.7
+    soleus: 0.3
   movement_patterns:
     - ankle plantarflexion
     - knee straight
@@ -83,6 +87,10 @@
     - soleus
   aesthetic_characteristics:
     - bent-knee
+  target_credit:
+    calves: 1.0
+    soleus: 0.8
+    gastrocnemius: 0.2
   movement_patterns:
     - ankle plantarflexion
     - knee bent
@@ -150,6 +158,10 @@
   physique_targets:
     - gastrocnemius
     - soleus
+  target_credit:
+    calves: 1.0
+    gastrocnemius: 0.6
+    soleus: 0.4
   movement_patterns:
     - ankle plantarflexion
   equipment:
@@ -212,6 +224,10 @@
     - gastrocnemius
   functional_goals:
     - ankle-resilience
+  target_credit:
+    calves: 1.0
+    gastrocnemius: 0.7
+    soleus: 0.3
   movement_patterns:
     - unilateral ankle plantarflexion
   equipment:

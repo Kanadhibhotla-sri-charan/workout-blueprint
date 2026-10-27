@@ -9,6 +9,8 @@
   secondary_targets: []
   physique_targets:
     - forearm-flexors
+  target_credit:
+    forearm-flexors: 1.0
   movement_patterns:
     - wrist flexion
   equipment:
@@ -74,6 +76,8 @@
   secondary_targets: []
   physique_targets:
     - forearm-extensors
+  target_credit:
+    forearm-extensors: 1.0
   movement_patterns:
     - wrist extension
   equipment:
@@ -142,6 +146,10 @@
     - brachialis
   physique_targets:
     - forearm-extensors
+  target_credit:
+    forearm-extensors: 1.0
+    brachialis-arm-thickness: 0.5
+    biceps: 0.25
   movement_patterns:
     - elbow flexion
     - pronated grip
@@ -214,6 +222,10 @@
     - brachialis
   physique_targets:
     - forearm-extensors
+  target_credit:
+    forearm-extensors: 1.0
+    brachialis-arm-thickness: 0.5
+    biceps: 0.25
   movement_patterns:
     - elbow flexion
     - pronated grip
@@ -272,6 +284,10 @@
   secondary_targets:
     - traps
     - trunk musculature
+  target_credit:
+    forearm-flexors: 0.5
+    upper-traps: 0.5
+    obliques: 0.25
   movement_patterns:
     - loaded carry
   equipment:

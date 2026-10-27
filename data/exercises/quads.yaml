@@ -15,6 +15,10 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.5
   movement_patterns:
     - squat / knee-dominant
   equipment:
@@ -82,6 +86,10 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.5
   movement_patterns:
     - squat / knee-dominant
   equipment:
@@ -143,6 +151,9 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - squat / knee-dominant
   equipment:
@@ -205,6 +216,10 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    adductors: 0.5
+    gluteus-maximus: 0.5
   movement_patterns:
     - squat / knee-dominant
     - wide stance
@@ -271,6 +286,13 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    adductors: 0.5
+    gluteus-maximus: 0.5
+    hamstrings: 0.25
+    upper-traps: 0.25
+    forearm-flexors: 0.25
   movement_patterns:
     - hip hinge
     - wide stance
@@ -331,6 +353,9 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.25
   movement_patterns:
     - squat / knee-dominant
   equipment:
@@ -394,6 +419,10 @@
     - quads
   aesthetic_characteristics:
     - high-loadable
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.25
   movement_patterns:
     - knee- and hip-dominant press
   equipment:
@@ -454,6 +483,10 @@
     - adductors
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.25
   movement_patterns:
     - unilateral knee-dominant
     - short-stance execution
@@ -527,6 +560,11 @@
     - hip stabilizers
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.25
+    gluteus-medius-minimus: 0.25
   movement_patterns:
     - unilateral knee- and hip-dominant
   equipment:
@@ -586,6 +624,10 @@
     - adductors
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.25
   movement_patterns:
     - unilateral knee-dominant
     - stationary stance
@@ -656,6 +698,9 @@
     - quads
   functional_goals:
     - landing-control
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - unilateral knee-dominant
     - stepping backward
@@ -723,6 +768,9 @@
     - quads
   functional_goals:
     - landing-control
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - unilateral knee-dominant
     - stepping forward continuously
@@ -795,6 +843,9 @@
     - quads
   functional_goals:
     - landing-control
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - unilateral knee-dominant
     - stepping up onto a box
@@ -864,6 +915,9 @@
     - trunk musculature
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
   movement_patterns:
     - squat / knee-dominant
   equipment:
@@ -930,6 +984,10 @@
     - adductors
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
+    gluteus-maximus: 0.5
+    adductors: 0.25
   movement_patterns:
     - squat / knee-dominant
   equipment:
@@ -986,6 +1044,8 @@
   secondary_targets: []
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
   movement_patterns:
     - knee extension
   equipment:
@@ -1044,6 +1104,8 @@
   secondary_targets: []
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
   movement_patterns:
     - knee extension
     - hip extended
@@ -1106,6 +1168,8 @@
   secondary_targets: []
   physique_targets:
     - quads
+  target_credit:
+    quads: 1.0
   movement_patterns:
     - knee extension
     - hips stay extended

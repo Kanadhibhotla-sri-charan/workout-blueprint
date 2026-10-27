@@ -90,6 +90,20 @@ Not attached to any exercise's `evidence_notes`. Thomas 2018 supports the weekly
 | Thomas, Bianco, Paoli, Palma 2018 | Int J Sports Med 39(4):243–254, PMID 29506306, doi 10.1055/s-0044-101146 (NCBI abstract) | Review of 23 studies: weekly stretching time (5 min or more) and weekly frequency were associated with range-of-motion gains; time per session was not. Authors suggest at least 5 days a week and at least 5 min per week of static stretching | **Matches** (abstract). The abstract does not say "per muscle group"; the profile text says "per area" as a practical reading |
 | Lauersen, Bertelsen, Andersen 2014 | Br J Sports Med 48(11):871–877, doi 10.1136/bjsports-2013-092538 (PEDro record 39522) | 25 RCTs, 26,610 participants: strength training RR 0.315 (0.207–0.480); proprioception RR 0.550 (0.347–0.869); stretching RR 0.963 (0.846–1.095), no clear effect | **Matches** (abstract-level). Not about badminton specifically |
 
+### Volume model sources (2026-10-27)
+
+Used in `volume-targets.yaml` and the `target_credit` weights (Workout Logger change requests 1.1–1.3). Checked against NCBI PubMed abstracts.
+
+| Source | Verified identity | Claim used | Result |
+|---|---|---|---|
+| Schoenfeld, Ogborn, Krieger 2017 | J Sports Sci 35(11):1073–1082, PMID 27433992 | 15 studies, 34 groups: graded dose-response between weekly sets and muscle growth; 10+ weekly sets per muscle trended above 5–9 and <5 (P = 0.074) | **Matches** (abstract). The 10+ category effect is a trend, so "efficient = 10" is worded as a starting point |
+| Bickel, Cross, Bamman 2011 | Med Sci Sports Exerc 43(7):1177–1187, PMID 21131862 | After 16 weeks of training, one-third and one-ninth maintenance doses kept muscle size for 32 weeks in young adults (20–35), not in older adults (60–75) | **Matches** (abstract). Used for "minimum ≈ a third of efficient"; stated as young adults only |
+| Spiering, Mujika, Sharp, Foulis 2021 | J Strength Cond Res 35(5):1449–1458, PMID 33629972 | Narrative review: strength and size maintained up to 32 weeks with 1 session and 1 set per exercise per week if intensity is kept (younger populations) | **Matches** (abstract) |
+| Pelland, Remmert, Robinson, Hinson, Zourdos 2026 | Sports Med 56(2):481–505, PMID 41343037 | 67 studies, 2,058 participants: counting indirect sets as 0.5 ("fractional") fitted best; more volume gives more growth with diminishing returns; frequency's effect on growth compatible with negligible | **Matches** (abstract) |
+| Schoenfeld, Grgic, Krieger 2019 | J Sports Sci 37(11):1286–1295, PMID 30558493 | 25 studies: with volume equated, training frequency did not meaningfully change hypertrophy | **Matches** (abstract). For change request 2.1 (frequency as a recovery rule) |
+
+Not sourced: `per_session_max` (a practical coaching ceiling) and the child `volume_share` / `min_share` values (practical biases).
+
 ## Position-tag evidence status (position-tag semantics correction)
 
 SCHEMA now defines `lengthened-` / `shortened-position-emphasis` as where the **external resistance peaks** in the movement's range. Status of the tags examined so far:

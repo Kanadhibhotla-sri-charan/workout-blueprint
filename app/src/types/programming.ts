@@ -12,6 +12,29 @@ export interface PhysiqueTarget {
   parent_region: string;
   definition: string;
   physique_outcome: string;
+  /** Volume parent (a volume group or another target) — change request 1.2. */
+  parent?: string;
+  volume_share?: number;
+  min_share?: number;
+}
+
+/** A volume parent that is not itself a physique target (chest, calves). */
+export interface VolumeGroup {
+  id: string;
+  name: string;
+  parent_region: string;
+  definition: string;
+}
+
+/** Weekly hard sets per target, in credited sets — change request 1.1. */
+export interface VolumeTarget {
+  target_id: string;
+  weekly_sets?: { minimum: number; efficient: number; priority: number };
+  per_session_max?: number;
+  indirect_only?: boolean;
+  rationale?: string;
+  /** Set on child targets instead of weekly_sets. */
+  volume_from_parent?: string;
 }
 
 export interface GlobalPrinciples {
@@ -169,6 +192,8 @@ export interface FunctionalGoal {
 
 export interface ProgrammingData {
   physiqueTargets: PhysiqueTarget[];
+  volumeGroups: VolumeGroup[];
+  volumeTargets: VolumeTarget[];
   globalPrinciples: GlobalPrinciples;
   repRanges: RepRanges;
   programmingProfiles: ProgrammingProfileCatalog;
