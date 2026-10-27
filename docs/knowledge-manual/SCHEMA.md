@@ -152,7 +152,7 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 ### `target_credit`
 - **Type:** mapping of target id → weight, or absent
 - **Required:** yes for every strength record (no `training_mode`) that has `physique_targets`; not allowed on training-mode records. The validator enforces both.
-- **Keys:** physique target ids or volume group ids (`chest`, `calves`; `physique-targets.yaml` › `volume_groups`).
+- **Keys:** physique target ids, volume group ids (`chest`, `calves`; `physique-targets.yaml` › `volume_groups`), or a functional goal that has its own volume entry (`core-anti-extension`).
 - **Weights:** in (0, 1].
   - 1.0: a hard set fully counts for that target.
   - 0.5: a real but partial contribution. This matches the "fractional" counting that fitted the data best in Pelland et al. 2026.
@@ -163,6 +163,13 @@ Every fact below (types, enum values, actual usage counts) was audited against t
 - **Every `physique_targets` entry must appear** in `target_credit`.
 - **Meaning:** weekly volume for a target = sum of logged hard sets × weight. The numbers to compare against are in `data/programming/volume-targets.yaml`.
 - **Decision-making impact:** none. The Decide engine does not read it; it exists for the Workout Logger (change request 1.3, 2026-10-27). The prose `primary_targets` / `secondary_targets` stay for the UI.
+- **Required for `reviewed`:** no
+
+### `sport_carryover`
+- **Type:** list of strings, or absent
+- **Allowed values (closed vocabulary):** `badminton`
+- **Meaning:** the exercise also carries over to that sport (Workout Logger change request 2.4). Set on the anti-rotation and anti-lateral-flexion core exercises: pallof press, plank shoulder tap, suitcase carry, side plank.
+- **Decision-making impact:** none (logger only).
 - **Required for `reviewed`:** no
 
 ### `exercise_type`
@@ -358,6 +365,7 @@ One external YouTube execution reference per exercise. The app renders it as a p
 | `secondary_targets` | list | no | open | yes | conditional |
 | `physique_targets` | list | no | IDs, must resolve to `data/programming/physique-targets.yaml` | yes | no |
 | `target_credit` | mapping | strength records with physique targets | IDs (targets and volume groups), weights in (0, 1] | no (logger only) | no |
+| `sport_carryover` | list | no | closed (`badminton`) | no (logger only) | no |
 | `functional_goals` | list | no | IDs, must resolve to `data/programming/functional-goals.yaml` | yes | no |
 | `aesthetic_characteristics` | list | no | closed (5, Phase 4C) | yes | no |
 | `movement_patterns` | list | yes | first item closed (49), rest open | yes | yes |

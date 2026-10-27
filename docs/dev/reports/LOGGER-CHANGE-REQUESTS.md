@@ -88,3 +88,40 @@ Full Decide scenario space (50,280), two identical runs:
 - **Every recommendation and every piece of answer text is unchanged.**
 - The only difference: the target object inside answers for the six child targets and their outcomes (4,589 answers) now carries `parent` / `volume_share` / `min_share`. With those three keys stripped, the output is byte-identical to live.
 - Nothing in the UI displays them.
+
+## Step 2: planning rules (2.1, 2.3, 2.4)
+
+### 2.1 Frequency as a recovery rule
+
+- **New fields.** Every volume entry with weekly numbers now has `sessions_per_week` ([2, 3] throughout) and `min_hours_between`:
+  - 48 h for most muscles;
+  - 24 h for abs, calves, forearms and neck.
+- **Frequency does not multiply volume.** With volume equated, training frequency made no meaningful difference to muscle growth (Schoenfeld 2019; Pelland 2026, both verified in the ledger). So frequency only spreads the weekly number.
+- **The 48 h / 24 h rule is practical, not sourced.**
+- **Validator:** the upper frequency × `per_session_max` must reach `priority`, so a priority week is always schedulable within the per-session ceiling.
+- **Packages.** The package engine comment, the package file header and the four Phase 5 spec docs now say packages are sample sessions, and that weekly volume comes from `volume-targets.yaml`.
+  - The Build pages still show each package's own "sets/week". It is computed the same way and is unchanged on screen, but is no longer presented as the muscle's weekly target.
+  - That label could be reworded later if wanted.
+
+### 2.3 Priority built into goals
+
+- **`volume_levels` on all 26 aesthetic outcomes:** primary → `priority`, supporting → `efficient`.
+- **Child targets:** the level goes to the parent group, and the child is listed as `bias`. Example: chest-upper-shelf = `chest: priority`, `upper-pec: bias`.
+- Example from the request: arm-side-thickness = `brachialis-arm-thickness: priority`, `triceps: efficient`.
+- **Not added: `preferred_exercises`.** The Decide engine already ranks exercises for every outcome, and many outcomes already carry `exercise_roles`. A second hand-written list would drift from those rankings. The logger can read the Decide ranking, or the outcome's `exercise_roles` where present. A static list can still be added if the logger needs one; it should be generated from the engine, not typed by hand.
+
+### 2.4 Core split into real qualities
+
+| Quality | Volume entry | Main exercises |
+|---|---|---|
+| Flexion | `rectus-abdominis` | crunches, reverse crunch, hanging raise, ab wheel |
+| Rotation / anti-rotation / anti-lateral flexion | `obliques` | woodchop, Russian twist, pallof press, side plank, suitcase carry |
+| Anti-extension | `goal_id: core-anti-extension` (new) | plank, ab-wheel rollout |
+
+- **Numbers:** each has efficient 6, priority 10, at most 6 per session, and 24 h between sessions.
+- **Plank** now credits anti-extension 1.0 and rectus 0.5. The ab wheel credits both at 1.0.
+- **Badminton flag:** the four anti-rotation and anti-lateral-flexion exercises carry `sport_carryover: [badminton]`. This is a coaching judgement; no source shows it improves badminton performance.
+
+### Measured
+
+Every Decide answer is byte-identical to the Step 1 release (50,280 scenarios, two identical runs).

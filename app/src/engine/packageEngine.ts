@@ -35,7 +35,13 @@ export interface ResolvedPackage {
   exercises: ResolvedPackageExercise[];
   /** Sum of each exercise's own `sets` for one session (spec §7's "Session: 3+3+2=8 direct sets"). */
   sessionDirectSets: number;
-  /** sessionDirectSets × frequency.sessions_per_week (spec §7's "Weekly: 16 direct sets") — never separately authored. */
+  /**
+   * Direct sets this package adds in a week if run at its own frequency
+   * (sessionDirectSets × frequency.sessions_per_week). A property of this
+   * sample package only — NOT a muscle's weekly volume target. Weekly volume
+   * per muscle is stated directly in volume-targets.yaml (Workout Logger
+   * change requests 1.1 / 2.1); readers must not derive it from packages.
+   */
   weeklyDirectSets: number;
   targetCoverage: TargetCoverage[];
   rirTypicalRange: [number, number];

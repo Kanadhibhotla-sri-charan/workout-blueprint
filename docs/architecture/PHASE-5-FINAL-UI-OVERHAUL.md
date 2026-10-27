@@ -1,4 +1,7 @@
 # Physique Blueprint — Final UI Overhaul + Phase 5 Production Refinement
+
+> **Update 2026-10-27 (Workout Logger change request 2.1):** weekly volume per muscle is no longer derived from packages as sets × frequency. It is stated directly in `data/programming/volume-targets.yaml`; packages are sample sessions. The text below is kept as the historical spec.
+
 ## Implementation Specification for Claude Code
 
 **Status:** Final implementation instruction  

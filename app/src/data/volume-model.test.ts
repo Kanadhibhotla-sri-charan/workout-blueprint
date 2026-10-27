@@ -9,20 +9,24 @@ describe('volume model', () => {
   const parentOf = new Map(programming.physiqueTargets.filter((t) => t.parent).map((t) => [t.id, t.parent!]));
 
   it('every physique target and volume group has exactly one volume entry', () => {
-    const ids = programming.volumeTargets.map((v) => v.target_id).sort();
+    const ids = programming.volumeTargets.filter((v) => v.target_id).map((v) => v.target_id!).sort();
     expect(ids).toEqual([...targetIds, ...groupIds].sort());
   });
 
   it('children take their parent\'s number; everything else states minimum <= efficient <= priority', () => {
     for (const entry of programming.volumeTargets) {
-      if (parentOf.has(entry.target_id)) {
-        expect(entry.volume_from_parent, entry.target_id).toBe(parentOf.get(entry.target_id));
+      const id = (entry.target_id ?? entry.goal_id)!;
+      if (parentOf.has(id)) {
+        expect(entry.volume_from_parent, id).toBe(parentOf.get(id));
         expect(entry.weekly_sets).toBeUndefined();
       } else {
         const w = entry.weekly_sets!;
-        expect(w.minimum, entry.target_id).toBeLessThanOrEqual(w.efficient);
-        expect(w.efficient, entry.target_id).toBeLessThanOrEqual(w.priority);
-        expect(w.priority, entry.target_id).toBeLessThanOrEqual(programming.globalPrinciples.weekly_volume.practical_range_sets[1]);
+        expect(w.minimum, id).toBeLessThanOrEqual(w.efficient);
+        expect(w.efficient, id).toBeLessThanOrEqual(w.priority);
+        expect(w.priority, id).toBeLessThanOrEqual(programming.globalPrinciples.weekly_volume.practical_range_sets[1]);
+        // 2.1: frequency spreads the number; the top frequency can always reach priority.
+        expect(entry.sessions_per_week![1] * entry.per_session_max!, id).toBeGreaterThanOrEqual(w.priority);
+        expect([24, 48]).toContain(entry.min_hours_between);
       }
     }
   });
@@ -35,7 +39,8 @@ describe('volume model', () => {
   });
 
   it('every strength exercise with a physique target has target_credit, and credits only known ids in (0, 1]', () => {
-    const known = new Set([...targetIds, ...groupIds]);
+    const goalEntries = programming.volumeTargets.filter((v) => v.goal_id).map((v) => v.goal_id!);
+    const known = new Set([...targetIds, ...groupIds, ...goalEntries]);
     for (const exercise of exercises.filter((e) => !e.training_mode && (e.physique_targets ?? []).length > 0)) {
       const credit = exercise.target_credit!;
       expect(credit, exercise.id).toBeDefined();
@@ -52,6 +57,37 @@ describe('volume model', () => {
     expect(getCredit('incline-barbell-press', 'upper-pec')).toBe(1.0);
     expect(getCredit('incline-barbell-press', 'chest')).toBe(1.0);
     expect(getCredit('overhead-triceps-extension', 'triceps-long-head')).toBe(1.0);
+  });
+});
+
+describe('planning rules (change requests 2.1, 2.3, 2.4)', () => {
+  it('every aesthetic outcome states a volume level for each of its targets', () => {
+    for (const outcome of programming.aestheticOutcomes) {
+      const listed = new Set((outcome.volume_levels ?? []).map((v) => v.target_id));
+      for (const t of [...outcome.primary_targets, ...(outcome.supporting_targets ?? [])]) {
+        expect(listed.has(t), `${outcome.id} → ${t}`).toBe(true);
+      }
+    }
+    const arm = programming.aestheticOutcomes.find((o) => o.id === 'arm-side-thickness')!;
+    expect(arm.volume_levels).toEqual([
+      { target_id: 'brachialis-arm-thickness', level: 'priority' },
+      { target_id: 'triceps', level: 'efficient' },
+    ]);
+  });
+
+  it('core is split into flexion, rotation and anti-extension, each at 6-10 sets with 24 h recovery', () => {
+    for (const id of ['rectus-abdominis', 'obliques', 'core-anti-extension']) {
+      const entry = programming.volumeTargets.find((v) => (v.target_id ?? v.goal_id) === id)!;
+      expect(entry.weekly_sets!.efficient, id).toBe(6);
+      expect(entry.weekly_sets!.priority, id).toBe(10);
+      expect(entry.per_session_max, id).toBe(6);
+      expect(entry.min_hours_between, id).toBe(24);
+    }
+  });
+
+  it('anti-rotation and anti-lateral-flexion exercises are flagged as badminton carryover', () => {
+    const flagged = exercises.filter((e) => e.sport_carryover?.includes('badminton')).map((e) => e.id).sort();
+    expect(flagged).toEqual(['pallof-press', 'plank-shoulder-tap', 'side-plank', 'suitcase-carry']);
   });
 });
 

@@ -31,6 +31,16 @@
 # - indirect_only: true means compound work usually meets "minimum" and
 #   "efficient" without any direct exercise; direct work is only scheduled
 #   when the target is a goal (priority).
+# - sessions_per_week: how many sessions to spread the weekly number over.
+#   Frequency does NOT multiply volume: the weekly number comes only from
+#   weekly_sets. With volume equated, training frequency made no
+#   meaningful difference to muscle growth (Schoenfeld et al. 2019; Pelland
+#   et al. 2026), so frequency is chosen to keep each session under
+#   per_session_max and to fit the week. The upper bound × per_session_max
+#   always reaches "priority" (validator-enforced).
+# - min_hours_between: recovery time before the same target is trained
+#   hard again. 48 h for most muscles; 24 h for abs, calves, forearms and
+#   neck, which tolerate closer sessions. A practical rule, NOT sourced.
 # - volume_from_parent: a child target (a sub-region) has no weekly number
 #   of its own. Its parent's number applies, and the child's volume_share /
 #   min_share in physique-targets.yaml set the bias across the week.
@@ -47,6 +57,8 @@ volume_targets:
   - target_id: chest
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults (see header). Upper / mid / lower chest share this
@@ -55,6 +67,8 @@ volume_targets:
   - target_id: calves
     weekly_sets: { minimum: 4, efficient: 8, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
     indirect_only: false
     rationale: >-
       Efficient sits at the bottom of global-principles' starting range
@@ -73,6 +87,8 @@ volume_targets:
   - target_id: front-delt
     weekly_sets: { minimum: 2, efficient: 6, priority: 12 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: true
     rationale: >-
       Every chest or shoulder press credits the front delt (0.5 for chest
@@ -82,6 +98,8 @@ volume_targets:
   - target_id: side-delt
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults. Pressing gives the side delt only minor credit
@@ -90,6 +108,8 @@ volume_targets:
   - target_id: rear-delt
     weekly_sets: { minimum: 2, efficient: 8, priority: 14 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Rows credit the rear delt a little (0.25 per set), so slightly less
@@ -100,6 +120,8 @@ volume_targets:
   - target_id: lat-width
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults. Rows add 0.5 per set on top of vertical pulls.
@@ -107,6 +129,8 @@ volume_targets:
   - target_id: back-thickness
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults. Vertical pulls add 0.5 per set on top of rows.
@@ -114,6 +138,8 @@ volume_targets:
   - target_id: upper-traps
     weekly_sets: { minimum: 0, efficient: 6, priority: 12 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: true
     rationale: >-
       Deadlifts, rack pulls, carries and upright rows already credit the
@@ -124,6 +150,8 @@ volume_targets:
   - target_id: biceps
     weekly_sets: { minimum: 2, efficient: 8, priority: 14 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Pull-ups, pulldowns and rows credit the biceps (0.25-0.5 per set), so
@@ -133,6 +161,8 @@ volume_targets:
   - target_id: brachialis-arm-thickness
     weekly_sets: { minimum: 2, efficient: 6, priority: 14 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Every curl (0.5) and every pull (0.25) credits the brachialis, so
@@ -142,6 +172,8 @@ volume_targets:
   - target_id: triceps
     weekly_sets: { minimum: 2, efficient: 8, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Every press credits the triceps (0.5 per set), so a normal pressing
@@ -152,10 +184,13 @@ volume_targets:
   - target_id: triceps-long-head
     volume_from_parent: triceps
 
-  # --- core (to be split into flexion / rotation / anti-extension, change 2.4) ---
+  # --- core: flexion (rectus-abdominis), rotation / anti-rotation /
+  # anti-lateral flexion (obliques), anti-extension (goal entry below) ---
   - target_id: rectus-abdominis
     weekly_sets: { minimum: 2, efficient: 6, priority: 10 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
     indirect_only: false
     rationale: >-
       A small muscle group that also works during heavy compound lifts;
@@ -165,10 +200,27 @@ volume_targets:
   - target_id: obliques
     weekly_sets: { minimum: 0, efficient: 6, priority: 10 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
     indirect_only: false
     rationale: >-
-      Same reasoning as the rectus abdominis. Carries and badminton's
-      rotation add further work outside these sets.
+      Covers rotation, anti-rotation and anti-lateral flexion. Same
+      reasoning as the rectus abdominis. Carries and badminton's rotation
+      add further work outside these sets.
+
+  # A functional goal (functional-goals.yaml), not a physique target:
+  # anti-extension has no visible physique outcome but is a distinct core
+  # quality (change request 2.4). target_credit may name it.
+  - goal_id: core-anti-extension
+    weekly_sets: { minimum: 0, efficient: 6, priority: 10 }
+    per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
+    indirect_only: false
+    rationale: >-
+      Planks and ab-wheel rollouts. Heavy squats and deadlifts also train
+      the trunk to resist extension, so a few direct sets a week are a
+      common practical amount.
 
   # --- calves children ---
   - target_id: gastrocnemius
@@ -180,6 +232,8 @@ volume_targets:
   - target_id: gluteus-maximus
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults. Squats, lunges and leg presses credit 0.5 per
@@ -188,6 +242,8 @@ volume_targets:
   - target_id: gluteus-medius-minimus
     weekly_sets: { minimum: 0, efficient: 6, priority: 12 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Single-leg work and side planks credit it a little; badminton's
@@ -197,6 +253,8 @@ volume_targets:
   - target_id: adductors
     weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: true
     rationale: >-
       Squats (0.5) and lunges (0.25) credit the adductors, so a normal leg
@@ -206,6 +264,8 @@ volume_targets:
   - target_id: quads
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults.
@@ -213,6 +273,8 @@ volume_targets:
   - target_id: hamstrings
     weekly_sets: { minimum: 4, efficient: 10, priority: 16 }
     per_session_max: 8
+    sessions_per_week: [2, 3]
+    min_hours_between: 48
     indirect_only: false
     rationale: >-
       Main-muscle defaults. Squats give the hamstrings no credit; hinges and
@@ -222,6 +284,8 @@ volume_targets:
   - target_id: forearm-flexors
     weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
     indirect_only: true
     rationale: >-
       Gripping in deadlifts, rows, carries and racket play loads the
@@ -231,6 +295,8 @@ volume_targets:
   - target_id: forearm-extensors
     weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
     indirect_only: false
     rationale: >-
       Hammer and Zottman curls credit the extensors (0.5), so a few direct
@@ -239,6 +305,8 @@ volume_targets:
   - target_id: neck-thickness
     weekly_sets: { minimum: 0, efficient: 4, priority: 10 }
     per_session_max: 6
+    sessions_per_week: [2, 3]
+    min_hours_between: 24
     indirect_only: false
     rationale: >-
       A small, optional target; a few direct sets a week are a common

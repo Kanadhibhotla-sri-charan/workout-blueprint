@@ -1,7 +1,10 @@
 // Volume-model checks (Workout Logger change requests 1.1-1.3, 2026-10-27):
 // physique-targets.yaml's hierarchy, volume-targets.yaml, and each
 // exercise's target_credit. Returns issues in validate.js's shape.
-const { loadVolumeModel } = require('./load-programming');
+const { loadVolumeModel, loadFunctionalGoals, loadAestheticOutcomes } = require('./load-programming');
+
+const LEVELS = new Set(['priority', 'efficient', 'bias']);
+const SPORTS = new Set(['badminton']);
 
 const SHARE_TOLERANCE = 0.011; // three children at 0.33 / 0.34 / 0.33
 
@@ -18,7 +21,14 @@ function validateVolume(records) {
 
   const targetIds = new Set(targets.map((t) => t.id));
   const groupIds = new Set(groups.map((g) => g.id));
-  const creditIds = new Set([...targetIds, ...groupIds]);
+  // Functional goals with their own volume entry (core-anti-extension,
+  // change request 2.4) may also be credited.
+  const { goalIds: functionalGoalIds } = loadFunctionalGoals();
+  const volumeGoalIds = new Set(volumeTargets.filter((v) => v && v.goal_id).map((v) => v.goal_id));
+  for (const id of volumeGoalIds) {
+    if (!functionalGoalIds.has(id)) fileIssue('volume-targets.yaml', `goal_id "${id}" is not a functional goal`);
+  }
+  const creditIds = new Set([...targetIds, ...groupIds, ...volumeGoalIds]);
   for (const id of groupIds) {
     if (targetIds.has(id)) fileIssue('physique-targets.yaml', `volume group "${id}" reuses a physique target id`);
   }
@@ -70,7 +80,15 @@ function validateVolume(records) {
   // --- 1.1 volume targets ---
   const seen = new Map();
   for (const entry of volumeTargets) {
-    const id = entry && entry.target_id;
+    if (entry && entry.target_id && entry.goal_id) {
+      fileIssue('volume-targets.yaml', `an entry names both target_id "${entry.target_id}" and goal_id "${entry.goal_id}"`);
+      continue;
+    }
+    const id = entry && (entry.target_id || entry.goal_id);
+    if (entry && entry.target_id && volumeGoalIds.has(entry.target_id)) {
+      fileIssue('volume-targets.yaml', `"${id}" is a functional goal; use goal_id`);
+      continue;
+    }
     if (!creditIds.has(id)) {
       fileIssue('volume-targets.yaml', `entry for unknown target or group "${id}"`);
       continue;
@@ -97,6 +115,16 @@ function validateVolume(records) {
     if (!Number.isInteger(entry.per_session_max) || entry.per_session_max <= 0) {
       fileIssue('volume-targets.yaml', `${id} :: per_session_max must be a positive whole number`);
     }
+    // Change request 2.1: frequency spreads the weekly number, never multiplies it.
+    const spw = entry.sessions_per_week;
+    if (!(Array.isArray(spw) && spw.length === 2 && spw.every(Number.isInteger) && spw[0] >= 1 && spw[0] <= spw[1] && spw[1] <= 7)) {
+      fileIssue('volume-targets.yaml', `${id} :: sessions_per_week must be [low, high] whole numbers with 1 <= low <= high <= 7`);
+    } else if (Number.isInteger(entry.per_session_max) && Number.isInteger(w.priority) && spw[1] * entry.per_session_max < w.priority) {
+      fileIssue('volume-targets.yaml', `${id} :: ${spw[1]} sessions x per_session_max ${entry.per_session_max} cannot reach priority ${w.priority}`);
+    }
+    if (!(Number.isInteger(entry.min_hours_between) && entry.min_hours_between >= 0 && entry.min_hours_between <= 96)) {
+      fileIssue('volume-targets.yaml', `${id} :: min_hours_between must be whole hours between 0 and 96`);
+    }
     if (typeof entry.indirect_only !== 'boolean') {
       fileIssue('volume-targets.yaml', `${id} :: indirect_only must be true or false`);
     }
@@ -104,7 +132,7 @@ function validateVolume(records) {
       fileIssue('volume-targets.yaml', `${id} :: rationale is missing or too short`);
     }
   }
-  for (const id of creditIds) {
+  for (const id of [...targetIds, ...groupIds]) {
     const count = seen.get(id) || 0;
     if (count !== 1) {
       const kind = targetIds.has(id) ? 'physique target' : 'volume group';
@@ -112,8 +140,43 @@ function validateVolume(records) {
     }
   }
 
+  // --- 2.3 outcome volume levels ---
+  const { outcomes } = loadAestheticOutcomes();
+  for (const outcome of outcomes) {
+    const levels = outcome.volume_levels;
+    if (!Array.isArray(levels) || levels.length === 0) {
+      fileIssue('aesthetic-outcomes.yaml', `${outcome.id} :: needs a non-empty "volume_levels" list`);
+      continue;
+    }
+    const listed = new Map();
+    for (const entry of levels) {
+      const tid = entry && entry.target_id;
+      if (!creditIds.has(tid)) fileIssue('aesthetic-outcomes.yaml', `${outcome.id} :: volume_levels names unknown id "${tid}"`);
+      if (!LEVELS.has(entry && entry.level)) {
+        fileIssue('aesthetic-outcomes.yaml', `${outcome.id} :: level for "${tid}" must be one of ${[...LEVELS].join('|')}`);
+      }
+      listed.set(tid, entry && entry.level);
+    }
+    for (const [tid, level] of listed) {
+      if (level === 'bias' && !(parentOf.has(tid) && listed.has(parentOf.get(tid)))) {
+        fileIssue('aesthetic-outcomes.yaml', `${outcome.id} :: "bias" on "${tid}" needs its parent listed at a volume level`);
+      }
+      if (level !== 'bias' && parentOf.has(tid)) {
+        fileIssue('aesthetic-outcomes.yaml', `${outcome.id} :: child target "${tid}" takes "bias"; put the level on "${parentOf.get(tid)}"`);
+      }
+    }
+    for (const tid of [...(outcome.primary_targets || []), ...(outcome.supporting_targets || [])]) {
+      if (!listed.has(tid)) fileIssue('aesthetic-outcomes.yaml', `${outcome.id} :: target "${tid}" has no volume level`);
+    }
+  }
+
   // --- 1.3 target_credit ---
   for (const record of records) {
+    if (record.sport_carryover !== undefined) {
+      if (!Array.isArray(record.sport_carryover) || record.sport_carryover.some((v) => !SPORTS.has(v))) {
+        recordIssue(record, `"sport_carryover" must be a list of ${[...SPORTS].join('|')}`);
+      }
+    }
     const credit = record.target_credit;
     const isStrength = !record.training_mode;
     const pts = Array.isArray(record.physique_targets) ? record.physique_targets : [];

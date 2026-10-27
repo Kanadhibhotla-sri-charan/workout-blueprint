@@ -121,6 +121,8 @@ const ALL_FIELDS = new Set([
   'training_mode',
   // Workout Logger change request 1.3 (2026-10-27).
   'target_credit',
+  // Workout Logger change request 2.4.
+  'sport_carryover',
 ]);
 
 // How a `verified` video reference was confirmed to match its exercise.

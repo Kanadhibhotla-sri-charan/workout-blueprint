@@ -28,11 +28,18 @@ export interface VolumeGroup {
 
 /** Weekly hard sets per target, in credited sets — change request 1.1. */
 export interface VolumeTarget {
-  target_id: string;
+  /** A physique target or volume group id; absent on goal entries. */
+  target_id?: string;
+  /** A functional goal with its own volume entry (core-anti-extension) — change request 2.4. */
+  goal_id?: string;
   weekly_sets?: { minimum: number; efficient: number; priority: number };
   per_session_max?: number;
   indirect_only?: boolean;
   rationale?: string;
+  /** How many sessions to spread the weekly number over — change request 2.1. */
+  sessions_per_week?: [number, number];
+  /** Recovery before the same target is trained hard again. */
+  min_hours_between?: number;
   /** Set on child targets instead of weekly_sets. */
   volume_from_parent?: string;
 }
@@ -138,7 +145,14 @@ export interface IntensityTechnique {
   suitable_when_stability_demand_at_most: 'low' | 'medium' | 'high';
 }
 
+/** Change request 2.3: the weekly-volume level a target gets when the outcome is a goal. */
+export interface OutcomeVolumeLevel {
+  target_id: string;
+  level: 'priority' | 'efficient' | 'bias';
+}
+
 export interface AestheticOutcome {
+  volume_levels?: OutcomeVolumeLevel[];
   id: string;
   display_name: string;
   region: string;

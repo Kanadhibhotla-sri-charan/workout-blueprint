@@ -36,6 +36,14 @@
 # joins the three golden-slice outcomes in having a real multi-target
 # relationship.
 
+# volume_levels (Workout Logger change request 2.3, 2026-10-27): the
+# weekly-volume level each target gets when this outcome is a goal, read
+# against volume-targets.yaml. "priority" and "efficient" name a level of
+# that target's (or group's) weekly_sets; "bias" marks a child target the
+# parent's volume should lean toward (its volume_share in
+# physique-targets.yaml is the planned share). Derived from
+# primary_targets (priority) and supporting_targets (efficient); a child
+# target's level goes to its parent group.
 outcomes:
   - id: chest-side-projection
     display_name: "Chest looks flat from the side"
@@ -45,6 +53,10 @@ outcomes:
       The chest lacks depth or projection when viewed from the side —
       it doesn't stand out from the torso the way a fuller chest does,
       even if it looks reasonably full from straight on.
+    volume_levels:
+      - { target_id: chest, level: priority }
+      - { target_id: upper-pec, level: bias }
+      - { target_id: lower-pec, level: bias }
     primary_targets:
       - upper-pec
     supporting_targets:
@@ -77,6 +89,9 @@ outcomes:
       The back of the upper arm looks flat or thin when viewed from
       behind, rather than showing visible mass and shape — even if the
       arm looks reasonably full from the front (biceps side).
+    volume_levels:
+      - { target_id: triceps, level: priority }
+      - { target_id: triceps-long-head, level: bias }
     primary_targets:
       - triceps
     supporting_targets:
@@ -108,6 +123,9 @@ outcomes:
       The upper arm looks narrow when viewed from the side — thin
       front-to-back — even if it looks reasonably full from the front
       (biceps view) or back (triceps view) alone.
+    volume_levels:
+      - { target_id: brachialis-arm-thickness, level: priority }
+      - { target_id: triceps, level: efficient }
     primary_targets:
       - brachialis-arm-thickness
     supporting_targets:
@@ -141,6 +159,10 @@ outcomes:
       The chest looks narrow or thin straight-on, lacking the visible
       mass across the front that makes a chest look "full" in a t-shirt
       or a relaxed front pose.
+    volume_levels:
+      - { target_id: chest, level: priority }
+      - { target_id: mid-pec, level: bias }
+      - { target_id: upper-pec, level: bias }
     primary_targets:
       - mid-pec
     supporting_targets:
@@ -170,6 +192,9 @@ outcomes:
       There's no visible fullness just below the collarbone — the
       chest appears to start lower down rather than forming a squared-
       off upper-chest line.
+    volume_levels:
+      - { target_id: chest, level: priority }
+      - { target_id: upper-pec, level: bias }
     primary_targets:
       - upper-pec
     technical_explanation: >-
@@ -192,6 +217,9 @@ outcomes:
     visual_description: >-
       There's no clear line where the chest ends and the abs begin —
       most visible from the side or a lower/decline-angle view.
+    volume_levels:
+      - { target_id: chest, level: priority }
+      - { target_id: lower-pec, level: bias }
     primary_targets:
       - lower-pec
     technical_explanation: >-
@@ -214,6 +242,8 @@ outcomes:
     visual_description: >-
       The shoulders don't create a visible taper from shoulder to
       waist, especially noticeable from the front.
+    volume_levels:
+      - { target_id: side-delt, level: priority }
     primary_targets:
       - side-delt
     technical_explanation: >-
@@ -237,6 +267,8 @@ outcomes:
       The shoulders look developed from the front but flat or
       unfinished from behind or the side, lacking a rounded,
       three-dimensional shape.
+    volume_levels:
+      - { target_id: rear-delt, level: priority }
     primary_targets:
       - rear-delt
     technical_explanation: >-
@@ -260,6 +292,8 @@ outcomes:
       The back doesn't create the visible V-shape from shoulders down
       to the waist — most noticeable from behind or in a relaxed-arm
       front pose.
+    volume_levels:
+      - { target_id: lat-width, level: priority }
     primary_targets:
       - lat-width
     technical_explanation: >-
@@ -284,6 +318,8 @@ outcomes:
       The back looks wide but flat — it doesn't add visible depth from
       the side, and there's little definition between the shoulder
       blades from behind.
+    volume_levels:
+      - { target_id: back-thickness, level: priority }
     primary_targets:
       - back-thickness
     technical_explanation: >-
@@ -309,6 +345,8 @@ outcomes:
       The area where the neck meets the shoulders looks thin or
       undeveloped, rather than sloped and filled-out — visible from
       the front and behind.
+    volume_levels:
+      - { target_id: upper-traps, level: priority }
     primary_targets:
       - upper-traps
     technical_explanation: >-
@@ -335,6 +373,8 @@ outcomes:
     visual_description: >-
       The front of the upper arm lacks visible mass and peak height,
       especially noticeable with the elbow bent (a "flex" pose).
+    volume_levels:
+      - { target_id: biceps, level: priority }
     primary_targets:
       - biceps
     technical_explanation: >-
@@ -357,6 +397,8 @@ outcomes:
     visual_description: >-
       No visible six-pack definition down the front of the midline,
       even with reasonable overall leanness.
+    volume_levels:
+      - { target_id: rectus-abdominis, level: priority }
     primary_targets:
       - rectus-abdominis
     technical_explanation: >-
@@ -379,6 +421,8 @@ outcomes:
     visual_description: >-
       No visible diagonal lines framing the sides of the abdomen —
       the waist looks smooth rather than defined.
+    volume_levels:
+      - { target_id: obliques, level: priority }
     primary_targets:
       - obliques
     technical_explanation: >-
@@ -401,6 +445,8 @@ outcomes:
     visual_description: >-
       The glutes lack visible roundness from behind — they look flat
       rather than full, even when the rest of the legs look developed.
+    volume_levels:
+      - { target_id: gluteus-maximus, level: priority }
     primary_targets:
       - gluteus-maximus
     technical_explanation: >-
@@ -422,6 +468,8 @@ outcomes:
       The glutes don't create a visible "shelf" projecting from the
       lower back when viewed from the side, especially in a standing
       posture.
+    volume_levels:
+      - { target_id: gluteus-maximus, level: priority }
     primary_targets:
       - gluteus-maximus
     technical_explanation: >-
@@ -443,6 +491,8 @@ outcomes:
     visual_description: >-
       There's a visible indentation on the side of the hip (sometimes
       called a "hip dip"), rather than a rounder, fuller side profile.
+    volume_levels:
+      - { target_id: gluteus-medius-minimus, level: priority }
     primary_targets:
       - gluteus-medius-minimus
     technical_explanation: >-
@@ -465,6 +515,8 @@ outcomes:
     visual_description: >-
       The front of the thigh lacks visible mass, even when overall leg
       size looks reasonable from other angles.
+    volume_levels:
+      - { target_id: quads, level: priority }
     primary_targets:
       - quads
     technical_explanation: >-
@@ -489,6 +541,8 @@ outcomes:
       The inner thigh looks flat or thin, changing the leg's overall
       profile from the front, even when the front of the thigh looks
       developed.
+    volume_levels:
+      - { target_id: adductors, level: priority }
     primary_targets:
       - adductors
     technical_explanation: >-
@@ -512,6 +566,8 @@ outcomes:
       The front of the thigh looks like one undifferentiated mass
       rather than showing visible separation and shape just above the
       inner knee (sometimes called quad "sweep" or "teardrop").
+    volume_levels:
+      - { target_id: quads, level: priority }
     primary_targets:
       - quads
     technical_explanation: >-
@@ -546,6 +602,8 @@ outcomes:
     visual_description: >-
       The back of the thigh lacks visible thickness, even when the
       front of the leg (quads) looks developed.
+    volume_levels:
+      - { target_id: hamstrings, level: priority }
     primary_targets:
       - hamstrings
     technical_explanation: >-
@@ -569,6 +627,9 @@ outcomes:
       The calf lacks visible width and the diamond-shaped bulge most
       people picture when they think of a developed calf — most
       visible from behind or the side.
+    volume_levels:
+      - { target_id: calves, level: priority }
+      - { target_id: gastrocnemius, level: bias }
     primary_targets:
       - gastrocnemius
     technical_explanation: >-
@@ -595,6 +656,9 @@ outcomes:
     visual_description: >-
       The lower portion of the calf, closer to the ankle, looks thin
       even when the upper calf has some visible development.
+    volume_levels:
+      - { target_id: calves, level: priority }
+      - { target_id: soleus, level: bias }
     primary_targets:
       - soleus
     technical_explanation: >-
@@ -619,6 +683,8 @@ outcomes:
     visual_description: >-
       The palm-side of the forearm looks thin, most noticeable near
       the elbow with the palm facing up.
+    volume_levels:
+      - { target_id: forearm-flexors, level: priority }
     primary_targets:
       - forearm-flexors
     technical_explanation: >-
@@ -640,6 +706,8 @@ outcomes:
       The back-of-hand side of the forearm looks thin — the side
       that's actually visible when the arm hangs relaxed — even when
       grip strength feels adequate.
+    volume_levels:
+      - { target_id: forearm-extensors, level: priority }
     primary_targets:
       - forearm-extensors
     technical_explanation: >-
@@ -662,6 +730,8 @@ outcomes:
     visual_description: >-
       The neck looks narrow rather than thick, most noticeable from
       the side or behind.
+    volume_levels:
+      - { target_id: neck-thickness, level: priority }
     primary_targets:
       - neck-thickness
     technical_explanation: >-

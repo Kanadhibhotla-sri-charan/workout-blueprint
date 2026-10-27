@@ -1,5 +1,7 @@
 # Phase 5 — All-Round Development Packages + Advanced Visual UI
 
+> **Update 2026-10-27 (Workout Logger change request 2.1):** weekly volume per muscle is no longer derived from packages as sets × frequency. It is stated directly in `data/programming/volume-targets.yaml`; packages are sample sessions. The text below is kept as the historical spec.
+
 Spec: [`docs/architecture/PHASE-5-ALL-ROUND-DEVELOPMENT.md`](../architecture/PHASE-5-ALL-ROUND-DEVELOPMENT.md). Implemented in the order the spec's §26 lays out (5-1 through 5-16), on branch `claude/repo-overview-nnuwoq`, after v1.0.0 was live in production.
 
 ## What changed

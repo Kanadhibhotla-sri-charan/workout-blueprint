@@ -19,12 +19,15 @@
 # else in this dataset models a per-exercise RIR distinction and inventing
 # one here would be a new, unreviewed modeling dimension.
 #
-# `weekly direct volume` is NOT stored here — it is the product of
-# each exercise's own `sets` and the package's `frequency`, computed by
-# the package engine (packageEngine.ts), exactly as spec §7's own worked
-# example computes it ("Session: 3+3+2=8, Frequency: 2x/week, Weekly: 16
-# direct sets"). Storing it separately would duplicate what these two
-# fields already say.
+# A package is a SAMPLE SESSION (its exercises and sets) plus how often it
+# could be run. The "sets/week" the Build pages show is that sample
+# repeated at the package's own frequency (each exercise's `sets` x
+# `frequency`), computed by packageEngine.ts. It is NOT a muscle's weekly
+# volume target: weekly volume per muscle is stated directly in
+# volume-targets.yaml (Workout Logger change requests 1.1 and 2.1, 2026-10-
+# 27), where frequency only spreads the weekly number across sessions and
+# never multiplies it. Apps reading Blueprint should take weekly numbers
+# from volume-targets.yaml, not from these packages.
 
 muscle_groups:
   - id: chest

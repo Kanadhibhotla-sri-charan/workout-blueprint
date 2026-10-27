@@ -265,7 +265,8 @@
   functional_goals:
     - core-anti-extension
   target_credit:
-    rectus-abdominis: 1.0
+    core-anti-extension: 1.0
+    rectus-abdominis: 0.5
   movement_patterns:
     - anti-extension isometric
   equipment:
@@ -329,6 +330,7 @@
     - rectus-abdominis
   target_credit:
     rectus-abdominis: 1.0
+    core-anti-extension: 1.0
   movement_patterns:
     - anti-extension through range
   equipment:
@@ -393,6 +395,8 @@
   target_credit:
     obliques: 1.0
     rectus-abdominis: 0.25
+  sport_carryover:
+    - badminton
   movement_patterns:
     - anti-rotation isometric
   equipment:
@@ -461,6 +465,9 @@
   target_credit:
     obliques: 0.5
     rectus-abdominis: 0.25
+    core-anti-extension: 0.5
+  sport_carryover:
+    - badminton
   movement_patterns:
     - anti-rotation isometric
     - alternating hand lifts from a high plank
@@ -531,6 +538,8 @@
     obliques: 1.0
     forearm-flexors: 0.25
     upper-traps: 0.25
+  sport_carryover:
+    - badminton
   movement_patterns:
     - anti-lateral flexion under load
   equipment:
@@ -598,6 +607,8 @@
   target_credit:
     obliques: 1.0
     gluteus-medius-minimus: 0.25
+  sport_carryover:
+    - badminton
   movement_patterns:
     - anti-lateral flexion under load
   equipment:
